@@ -6617,6 +6617,9 @@ livejournal.com#%#AG_setConstant('begun_new_callbacks', 'undefined');
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/73390
+l2top.ru#?#a[onclick^="this.href=atob"]:upward(1)
+l2top.ru#?#div[class="container"][style="max-width: 100%;"] header ~ div > div.container > div[id]:has(> div[style="display: none !important;"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71557
 015.by#?#.news-grid > div.news-grid__col:not([id]) div[id^="banner-slider-"]:upward(2)
 015.by#?#.news-grid > div.news-grid__col:not([id]) > div.thumbnails[data-bg]:upward(1)
@@ -8318,6 +8321,8 @@ zen.yandex.by,zen.yandex.com,zen.yandex.kz,zen.yandex.ru,zen.yandex.ua#?#.zen-pa
 !------- JS ------------
 !-----------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/73390
+l2top.ru#%#//scriptlet("abort-current-inline-script", "$", "cleanAndEval")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73757
 ain.ua#%#//scriptlet('prevent-window-open', '1', '/\/special\//')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/70205
@@ -8812,6 +8817,8 @@ api.kinomoov.org#%#AG_onLoad(function() { window.flashLayerAdSkipDelay = 1; });
 !------- CSS -----------
 !-----------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/73390
+l2top.ru#$#div[class="container"][style="max-width: 100%;"] header ~ div > div.container { margin-top: 0 !important; }
 ! masterinvest.info - удаление отступа сверху
 masterinvest.info#$#.header { padding: 20px 0 20px 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73250
@@ -11357,6 +11364,7 @@ crazymailing.com,lotzon.pro,novosti-n.org,prokazan.ru,20minut.ua,alnews.com.ua,g
 ! vast ads on anime sites - for example: animego.org, yummyanime.club, etc
 /:\/\/[0-9]?[a-z0-9]{11,}(\.com|\.in\.net)/$xmlhttprequest,domain=aniqit.com|kodik.info|start.u-cdn.top|ustore.bz|u-stream.in
 !
+l2top.ru##a[onclick^="this.href=atob"]
 masterinvest.info##.adbn
 ||wow-game.ru/Comercial/
 ||wow-game.ru/design/img/bg_header-
@@ -15386,7 +15394,6 @@ czx.to##.l-content-wrap > div.l-content > div[style="background: url(http://czx.
 bgoperator.ru##.l-index__side_a > canvas[width="188"][height="312"]
 cy-pr.com##.l-navigation-i > noindex
 jkrasa.ru##.l2
-.l2top.ru^$script
 allkharkov.ua##.lawyer_block
 programmersforum.ru##.layeradv
 namba.kg##.layout-content > #branding
@@ -16233,7 +16240,6 @@ animelend.info##.top-view-post
 ebanoe.it##.top-xata
 splkirov.ru##.top2-banners
 chepetsk.ru##.top480
-l2top.ru##.topAd2
 priluki.in.ua,tut.by##.topAdv
 zdrav.ru##.topAdvertize__wrapper
 maxpark.com,newsland.com##.topBanner
