@@ -7985,6 +7985,7 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 ||cdn.privacy-mgmt.com^$important,domain=promipool.de|android-hilfe.de|wsj.com
 !
 !
+raider.io##.cookie-footer--wrapper
 it-zoom.de###cookieTip
 numero.wiki###myCookieConsent
 mydealz.de#$#.cookies-message { display: none !important; }
@@ -8608,7 +8609,7 @@ moneylo.fr###gatsby-focus-wrapper > div[style*="position: fixed;"][style*="z-ind
 navigium.de#$?##placeholder > div.modal:has(div.modal-header > h5:contains(Cookies)) { display: none!important; }
 navigium.de#$#.modal-backdrop { display: none!important; }
 navigium.de#$#body { overflow: visible!important; }
-xboxdynasty.de,imgur.com,joe.ie,joe.co.uk##.qc-cmp2-container
+raider.io,xboxdynasty.de,imgur.com,joe.ie,joe.co.uk##.qc-cmp2-container
 ethias.be###gdpr-consent-popup
 shop.rangers.co.uk###shopify-section-fixed-message
 hallebessermachen.de#$##wdw-cookie-consent { display: none !important; }
@@ -16265,6 +16266,8 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+interia.pl##.survey-popup-container
+||interia.pl/j/*-surveyPopup-*.js
 troypoint.com##.cp-popup-container
 player.one##.grwf2_backdrop
 player.one##.grwf2-wrapper
@@ -21019,6 +21022,7 @@ aliexpress.ru,aliexpress.com##iframe[src^="https://campaign.aliexpress.com/"]
 ! Working rule, but JS: is.alicdn.com#%#if (typeof localStorage != 'undefined' && localStorage.setItem) { localStorage.setItem('2', '"{\"2USD_coupon_popup\":1}"'); }
 aliexpress.ru,aliexpress.com#$?##newuser-activity-config { remove: true; }
 !
+bloomberg.com###paywall-banner
 fark.com###abPleaBar
 sibnet.ru##.wink_notification__root
 codepile.net##.cp-ad
@@ -21619,6 +21623,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !######### JS tweaks ##########
 !##############################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/73949
+game-kentang.blogspot.com#%#//scriptlet("adjust-setInterval", "", "1000", "0.05")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73685
 gamefront.com#%#//scriptlet('adjust-setTimeout', 'window.location.href', '10000', '0.02')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73691
@@ -22254,7 +22260,7 @@ trucnet.net#%#AG_onLoad(function() { var el=document.querySelector('a[href].btn.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41708
 mtbcut.net#%#AG_onLoad(function() { var el = document.querySelector('a[href].wp-block-button__link'); if(window.location.href.indexOf("/?p=") != -1 && el) { el.click(); } });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41369
-moviesdaweb.blogspot.com#%#AG_onLoad(function(){setTimeout(function(){if("function"===typeof convertstr&&"function"===typeof aesCrypto.decrypt&&-1<window.location.href.indexOf("#?o="))try{window.location=aesCrypto.decrypt(convertstr($.urlParam("o")),convertstr("root"))}catch(a){}},300)});
+game-kentang.blogspot.com,moviesdaweb.blogspot.com#%#AG_onLoad(function(){setTimeout(function(){if("function"===typeof convertstr&&"function"===typeof aesCrypto.decrypt&&-1<window.location.href.indexOf("#?o="))try{window.location=aesCrypto.decrypt(convertstr($.urlParam("o")),convertstr("root"))}catch(a){}},300)});
 windows10mexico.blogspot.com,bestopbook.info,omgmusik.com,ph.samapkstore.com,andronews18.blogspot.com,safe.kangkimin.com,ntsafelink.blogspot.com,ph.tpaste.net,wwwfotografgotlin.blogspot.com,go.myviptuto.com,sdetectives.id,apps2app.com,hulblog.com,pro-bangla.com,citgratis.com,blog.omgmusik.com,blog.omglyrics.com,punasfc.blogspot.com,sflinkmu.blogspot.com,seputarandroid05.blogspot.com,media-blue.blogspot.com,eleventhlevelinteractive.com,apkmaghrab.tk,aice-coffee.blogspot.com#%#AG_onLoad(function(){setTimeout(function(){if("function"===typeof convertstr&&"function"===typeof aesCrypto.decrypt&&-1<window.location.href.indexOf("html#?o="))try{window.location=aesCrypto.decrypt(convertstr($.urlParam("o")),convertstr("root"))}catch(a){}},300)});
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41346
 safelinku.icu#%#!function(){if(-1<window.location.href.indexOf("?url=")){var a=location.href.split("?url=");if(a&&a[1])try{window.location=atob(a[1])}catch(b){}}}();
