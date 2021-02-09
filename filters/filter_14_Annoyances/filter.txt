@@ -81,6 +81,9 @@
 youtube.com,youtube-nocookie.com#%#//scriptlet('set-constant', 'ytInitialPlayerResponse.adPlacements', 'undefined')
 youtube.com,youtube-nocookie.com#%#//scriptlet('set-constant', 'playerResponse.adPlacements', 'undefined')
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/74043
+||vidtech.cbsinteractive.com^$domain=metrolyrics.com
+metrolyrics.com##.video-container-inline
 ! www.wp.pl - unblock scroll while website is loading
 www.wp.pl#%#//scriptlet("prevent-addEventListener", "wheel", "preventDefault")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73851
@@ -112,7 +115,7 @@ u-f.ru##.yt-notice
 ! https://github.com/AdguardTeam/AdguardFilters/issues/70942
 ||psxplanet.ru/forum/clientscript/ny2021/scripts/game_v4.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71104
-as91.online-stars.org##iframe[src="/info_banners.php"]
+anistar.org,anistar.pro,anistar.world,anistar1.org,anistar10.org,anistar11.org,anistar12.org,anistar13.org,anistar2.org,anistar3.org,anistar4.org,anistar5.org,anistar6.org,anistar7.org,anistar8.org,anistar9.org,online-star.org,online-stars.org##iframe[src="/info_banners.php"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71852 - suggested videos
 pcgamer.com###article-body > .future__jwplayer--carousel
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71296
@@ -988,7 +991,7 @@ ivoox.com##body > .fixed-bottom-right
 techradar.com##.omaha-background
 ! https://github.com/AdguardTeam/AdguardFilters/issues/66042
 ! it seems element it Edge Chromium specific
-calendar.google.com,docs.google.com,mail.google.com,news.google.com,drive.google.com##iframe[src^="https://ogs.google.com/widget/callout?prid="]:upward(div[style^="overflow: hidden; position: absolute; top: 0px; width:"])
+calendar.google.com,docs.google.com,mail.google.com,news.google.com,drive.google.com##iframe[src^="https://ogs.google.com/"][src*="/widget/callout?prid="]:upward(div[style^="overflow: hidden; position: absolute; top: 0px; width:"])
 ! google - Search Console promo
 google.*###wmxmsg
 ! google - Chrome banner
@@ -1754,6 +1757,7 @@ bessarabia.ua,football.kulichki.net,jeotermalhaberler.com,glavcom.ua,hindustanti
 ! ###mc_embed_signup
 cachevalleydaily.com,bisnis.com,ilpost.it,bsblog.info,alcoparty.com.ua,codastory.com,informazionefiscale.it,kerch.fm,cinemablend.com,prostofinovo.ru,comss.ru,majorgeeks.com,buhgalter.com.ua,providr.com,24tv.ua,babylonbee.com,dexerto.com,football365.com,menrec.com,netdoktor.de,ottawamatters.com,retail-insider.com,walterfootball.com,wweek.com,zozhnik.ru###mc_embed_signup
 !
+standard.co.uk#?#div[class^="sc-"] > form[action-xhr="/internal-api/newsletter-component/submit"]:upward(1)
 time.com##.newsletter-inline-signup
 windxp.com.ru##.feed_form
 mail.ru#?#.pulse-lenta-layout div.pl_b3:has(> div.pl_n > div.pl_bu > div.pl_fx > div.pl_fz > div.pl_fy > input[placeholder="Оставляй почту и читай лучшее"])
@@ -3561,7 +3565,7 @@ vatanbilgisayar.com##.sc-media
 newschannel9.com##.sd-news-main-footer
 dn.se##.section-sidebar__column > .social-media__section
 fotomac.com.tr##.share
-anistar.org,anistar.world,anistar1.org,anistar10.org,anistar11.org,anistar12.org,anistar13.org,anistar2.org,anistar3.org,anistar4.org,anistar5.org,anistar6.org,anistar7.org,anistar8.org,anistar9.org,online-stars.org,online-star.org##.share-soc
+anistar.org,anistar.pro,anistar.world,anistar1.org,anistar10.org,anistar11.org,anistar12.org,anistar13.org,anistar2.org,anistar3.org,anistar4.org,anistar5.org,anistar6.org,anistar7.org,anistar8.org,anistar9.org,online-star.org,online-stars.org##.share-soc
 vpnmentor.com##.side-follow-wrap
 appleinsider.ru,hi-news.ru##.sidebar-banner-telegram
 webtekno.com##.sidebar-social
@@ -3836,6 +3840,10 @@ skegnessstandard.co.uk#@#.text-ad-links
 ! NoAdBlock (CloudflareApps)
 ! #%#!function(b,a){AG_defineProperty('CloudflareApps.installs',{get:function(){return a instanceof Object&&Object.getOwnPropertyNames(a).forEach(function(c){a[c].appId=='ziT6U3epKObS'&&Object.defineProperty(a[c],'URLPatterns',{value:b})}),a},set:function(b){a=b}})}(Object.seal([/(?!)/]));
 !
+! ai_front anti-adblock
+mobilereset99.com#%#//scriptlet("abort-on-property-write", "ai_front")
+mobilereset99.com##[style*="cursor:"][style*="user-select: none;"][style*="z-index:"]
+!
 ! General anti-adblock rules
 !@@.com/ads.js|$~third-party,domain=~1ppt.com
 /wp-content/*/javascripts/*.passive_display_adblock.js$~third-party
@@ -4038,6 +4046,7 @@ sonichits.com,thepostmillennial.com,muropaketti.com,visajourney.com,dennikn.sk,i
 @@||cdn.ligainsider.de/uploads/elements/*/js/ads.js
 !#safari_cb_affinity
 !
+extreme-down.tv##div[style="display:block;position:relative"] > p.lastpost-header + p[style="color:green;"] > b
 ||ytmp3.eu/*/pagead/js/adsbygoogle.js$script,xmlhttprequest,redirect=googlesyndication-adsbygoogle,important,domain=ytmp3.eu
 balticlivecam.com###ad_block_off
 kinda.media###mdl_adb
@@ -5243,7 +5252,7 @@ wochenanzeiger-muenchen.de##.alert-danger.alert
 bestradio.fm##.adb
 ||cdn.tinypass.com^$domain=autonews.com|cnbc.com
 wydaily.com##.special-message-wrapper
-anistar.org,anistar.world,anistar1.org,anistar2.org,anistar3.org,anistar4.org,anistar5.org,anistar6.org,anistar7.org,anistar8.org,anistar9.org,anistar10.org,anistar11.org,anistar12.org,anistar13.org,online-stars.org,online-star.org##.a-message
+anistar.org,anistar.pro,anistar.world,anistar1.org,anistar10.org,anistar11.org,anistar12.org,anistar13.org,anistar2.org,anistar3.org,anistar4.org,anistar5.org,anistar6.org,anistar7.org,anistar8.org,anistar9.org,online-star.org,online-stars.org##.a-message
 germancarforum.com##.samCodeUnit
 rufilmtv.org##.attentions
 yazarokur.com###errorr[style]
@@ -7669,7 +7678,7 @@ slate.com#@#.ad-container
 /cookie-accept.js
 /cookie-alert.
 /cookie-bandeau.
-/cookie-banner$domain=~bbc.com
+/cookie-banner$domain=~bbc.com|~bbc.co.uk
 /cookie-bar-
 /cookie-bar.
 /cookie-check.js
@@ -8004,6 +8013,9 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 ||cdn.privacy-mgmt.com^$important,domain=promipool.de|android-hilfe.de|wsj.com
 !
 !
+yandex.*##.lc-gdpr
+alumatex.pl#$#html.pum-open-overlay { overflow: auto !important; }
+alumatex.pl#$#.pum-overlay[data-popmake*="rodo"] { display: none !important; }
 kingston.com##.nofication-widget
 pfannen.org##.orakelAdvice
 cekkazan.com.tr##.pum-overlay[data-popmake*="cerez-politikasi"]
@@ -13193,6 +13205,7 @@ digitaltrends.com#%#document.cookie = "CookieConsent=1; path=/";
 gameswelt.de#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("oil_data")){var b=new MutationObserver(function(){var c=document.querySelector("button.as-oil__btn-optin"),a=document.querySelector(".as-js-advanced-settings");c&&a&&(a.click(),setTimeout(function(){var a=document.querySelector(".as-js-btn-deactivate-all");a&&(a.click(),setTimeout(function(){var a=document.querySelector(".as-oil-cpc__right button.as-oil__btn-optin");a&&(a.click(),b.disconnect())},100))},100))});b.observe(document,{childList:!0, subtree:!0});setTimeout(function(){b.disconnect()},3E4)}});
 omni.se#%#document.cookie="psi.show=0; path=/;";
 camping.info#%#document.cookie = "CI_COOKIES_ACCEPTED=true";
+camping.info#%#document.cookie = "CI_COOKIE_CONFIG=[%22required%22%2C%22optional%22]";
 plus.net#%#document.cookie = 'storagePreferences={"necessary":true,"anonymous analytics":false,"performance":false,"essential functional":true,"identifiable analytics":false,"tailoring":false,"non-essential functional":true,"marketing":false};path=/;domain=.plus.net;expires=' + Date() + ';';
 winfuture.mobi#%#sessionStorage.setItem("sdgSeen", true);
 cnet.com,zdnet.com#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("OptanonAlertBoxClosed")){var a=new MutationObserver(function(){var b=document.querySelector("button#onetrust-accept-btn-handler");b&&(b.click(),a.disconnect())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
@@ -13451,6 +13464,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !######### White list. Fixing filtering errors #########
 !#######################################################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/73990
+camping.info#@#.cookie-layer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74146
 @@||quantcast.mgr.consensu.org/choice/*/choice.js$domain=techradar.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74178
@@ -16310,6 +16325,7 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+prowebscraper.com#%#//scriptlet('set-cookie', 'inc_optin_popup_long_hidden-1_417', '1')
 thebetterindia.com##.tbi-exit-intend-popup
 themuse.com#$#.mfe-modal { display: none !important; }
 themuse.com#$#body { overflow: auto !important; }
@@ -21074,6 +21090,7 @@ aliexpress.ru,aliexpress.com##iframe[src^="https://campaign.aliexpress.com/"]
 ! Working rule, but JS: is.alicdn.com#%#if (typeof localStorage != 'undefined' && localStorage.setItem) { localStorage.setItem('2', '"{\"2USD_coupon_popup\":1}"'); }
 aliexpress.ru,aliexpress.com#$?##newuser-activity-config { remove: true; }
 !
+nzherald.co.nz##.premium-toaster
 mozilla.org##.mzp-c-sticky-promo
 cryptocompare.com###big-info-section-top
 bloomberg.com###paywall-banner
@@ -21682,7 +21699,7 @@ uniqueten.net,ultraten.net#%#//scriptlet("adjust-setInterval", "wpsafe", "", "0.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74031
 dlfiles.online#%#//scriptlet("adjust-setTimeout", "Tick", "", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74297
-elil.cc#%#//scriptlet('adjust-setInterval', 'timer', '1000', '0.02')
+elil.cc#%#//scriptlet('adjust-setInterval', 'timer', '1000', '0.6')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73949
 game-kentang.blogspot.com#%#//scriptlet("adjust-setInterval", "", "1000", "0.05")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73685
