@@ -81,6 +81,8 @@
 youtube.com,youtube-nocookie.com#%#//scriptlet('set-constant', 'ytInitialPlayerResponse.adPlacements', 'undefined')
 youtube.com,youtube-nocookie.com#%#//scriptlet('set-constant', 'playerResponse.adPlacements', 'undefined')
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/74464
+simsdom.com#?#button ~ div[id] > div[id] div[class$="promoted"]:upward(2)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74143
 nono.games##.telegram__wraper
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74043
@@ -526,7 +528,7 @@ belaruspartisan.by#?#.left_block > div:has(> a[href="https://t.me/belaruspartisa
 dobreprogramy.pl##.wppwidget > #Player0.FloatingPlayer.floating
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52501#issuecomment-606636283
 ! sk-ip.tech,linkdrop.net,zoom-link.com,educationvilla.xyz - annoyances text
-ccurl.net,fotodovana.com,sk-ip.tech,linkdrop.net##.blog-item
+shrinkforearn.in,ccurl.net,fotodovana.com,sk-ip.tech,linkdrop.net##.blog-item
 ccurl.net,linkdrop.net,zoom-link.com,educationvilla.xyz,techsapparel.com##.banner
 zoom-link.com,educationvilla.xyz##form#link-view > ol
 techsapparel.com##form#link-view > ol > *:not([class])
@@ -8020,6 +8022,7 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 ||cdn.privacy-mgmt.com^$important,domain=promipool.de|android-hilfe.de|wsj.com
 !
 !
+simsdom.com###policies
 yatego.com###ycwBg
 yatego.com###ycwMo
 kinopoisk.ru#?#body > div:has(> div[class^="sc-"] > div[data-id="popup"] > table td[data-id="types-content"] > div[data-id="common"] > div[class^="sc-"] > a[href="https://yandex.ru/legal/cookies_policy/"])
@@ -13508,6 +13511,8 @@ mydealz.de#@#.cookies-message
 @@||gdpr-wrapper.privacymanager.io/gdpr/*/gdpr-liveramp.js$domain=kinuskikissa.fi
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73736
 cnbc.com#@##onetrust-consent-sdk
+! https://github.com/AdguardTeam/AdguardFilters/issues/74028
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=ru.wargaming.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73271
 versteigerungspool.de#@##cookie-consent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73395
@@ -15226,6 +15231,7 @@ blog.goo.ne.jp##.app_induction
 m.hurriyet.com.tr##a[href="https://link-to.app/egazete-banner"] > img
 zona.plus##div[id="zona-android"]
 mobi.yahoo.com###header-2-GoldenGate-Proxy
+uteka.ru##.app-qr-code-popover
 uteka.ru##.mobile-apps
 vprok.ru#$#.fo-mobile-app-popup { display: none!important; }
 vprok.ru#$#body { overflow: visible!important; }
@@ -16432,6 +16438,10 @@ jeotermalhaberler.com#$#.modal-backdrop { display: none!important; }
 jeotermalhaberler.com#$#body { overflow: visible!important; }
 glavkniga.ru##.popup_banner_area
 rent.591.com.tw##.accreditPop
+mojanorwegia.pl#$#.newLayerOuter { display: none !important; }
+mojanorwegia.pl#$#.modMnNewLayerBack { display: none !important; }
+mojanorwegia.pl#$#.filter-blur { filter: none !important; }
+mojanorwegia.pl#$#body { overflow: visible !important; }
 vanityfair.com##.persistent-bottom
 zuketcreation.net,zuketcreation.com##.ccw_plugin.chatbot
 spaziogames.it#$##bio_ep { display: none!important; }
@@ -21726,6 +21736,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !######### JS tweaks ##########
 !##############################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/74360
+safelink.omglyrics.com#%#//scriptlet("adjust-setInterval", "#timer", "", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73948
 douploads.net#%#//scriptlet('adjust-setTimeout', 'seconds', '', '0.02')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74255
@@ -22413,11 +22425,8 @@ ultimedia.com#%#AG_defineProperty('dtkPlayer.infos.autoplay', {value: "no"});
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36619
 direct-link.net#%#AG_onLoad(function(){if(window.location.href.match(/https?:\/\/direct-link\.net\/\d+\//)){var a=document.body.textContent.match(/window\.location\.href = \("([\s\S]*?)"\);/);if(a&&a[1])location=a[1];}});
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35608
-hulblog.com#%#!function(){if(-1<location.pathname.indexOf("/viewlink.html")){var b64dest=location.href.split("viewlink.html?url=");if(b64dest&&b64dest[1]){location=atob(b64dest[1]);}}}();
 url.hulblog.com#%#AG_onLoad(function(){if(window.location.href.match(/url\.hulblog.com\/[a-zA-Z\d]+$/)){var a=document.body.textContent.match(/clearInterval\(counter\);[\s\S]*?"href='([\s\S]*?)'/);if(a&&a[1])location=a[1];}});
-omgmusik.com#%#!function(){if(-1<location.pathname.indexOf("/goto.html")){var b64dest=location.href.split("goto.html?url=");if(b64dest&&b64dest[1]){location=atob(b64dest[1]);}}}();
-omglyrics.com#%#!function(){if(-1<location.pathname.indexOf("/godl.html")){var b64dest=location.href.split("godl.html?url=");if(b64dest&&b64dest[1]){location=atob(b64dest[1]);}}}();
-hulblog.com,omgmusik.com,omglyrics.com#%#!function(){if(-1<window.location.href.indexOf("/?url=aHR0c")){var a=location.href.split("/?url=");if(a&&a[1])try{window.location=atob(decodeURIComponent(a[1]))}catch(b){}}}();
+huljjang.com,hulblog.com,omgmusik.com,omglyrics.com#%#!function(){if(-1<window.location.href.indexOf("?url=aHR0c")){var a=location.href.split("?url=");if(a&&a[1])try{window.location=atob(decodeURIComponent(a[1]))}catch(b){}}}();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35379
 hexafile.net#%#AG_onLoad(function(){if(window.location.href.match(/hexafile\.net\/[a-zA-Z\d]+$/)){var a=document.body.textContent.match(/\("\.link-content"\)\,[\s\S]*?="(https?:\/\/[\s\S]*?)"/);if(a&&a[1])location=a[1];}});
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35141
