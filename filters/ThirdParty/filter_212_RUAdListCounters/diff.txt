@@ -8,8 +8,12 @@
 ||yastatic.net/yandex-video-player-iframe-api-bundles-stable/*?adsdk-try=$empty
 ! Rule "4pda.*##html[style] > body :not(div) ~ :not(div)[class][id][style]:style(background-image: none !important)" converted to: "4pda.*#$#html[style] > body :not(div) ~ :not(div)[class][id][style] { background-image: none !important }"
 4pda.*##html[style] > body :not(div) ~ :not(div)[class][id][style]:style(background-image: none !important)
+! Rule "4pda.*##html[style] > body div.holder-no-hidden:style(margin-bottom: 10px !important)" converted to: "4pda.*#$#html[style] > body div.holder-no-hidden { margin-bottom: 10px !important }"
+4pda.*##html[style] > body div.holder-no-hidden:style(margin-bottom: 10px !important)
 ! 4pda.*#$#html[style] > body :not(div) ~ :not(div)[class][id][style] { background-image: none !important } is excluded by "#$#" in exclusions-low.txt
 4pda.*#$#html[style] > body :not(div) ~ :not(div)[class][id][style] { background-image: none !important }
+! 4pda.*#$#html[style] > body div.holder-no-hidden { margin-bottom: 10px !important } is excluded by "#$#" in exclusions-low.txt
+4pda.*#$#html[style] > body div.holder-no-hidden { margin-bottom: 10px !important }
 ! Invalid selector:
 joyreactor.cc,pornreactor.cc,reactor.cc#?#+js(abort-on-property-read.js, Joyreactor.show_ads)
 ! Invalid selector:
@@ -56,8 +60,6 @@ mail.yandex.*#?#+js(set-constant.js, Object.prototype.changeLinkHref, noopFunc)
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.loaderVer, noopFunc)
 ! Invalid selector:
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.useAbdBundle, false)
-! Invalid selector:
-4pda.*#?#+js(abort-current-inline-script.js, setTimeout, removeAttribute)
 Error: "Unknown modifier: queryprune=|" in the rule: "&ymclid=$document,queryprune=|,domain=~ozon.onelink.me"
 &ymclid=$document,queryprune=|,domain=~ozon.onelink.me
 Error: "Unknown modifier: queryprune=|" in the rule: "/story/*?lang=$document,queryprune=|,domain=yandex.*"
