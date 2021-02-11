@@ -97,6 +97,12 @@ capital.fr#@#.plainAd
 @@||bilan.ch^$generichide
 !--------------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/74312
+@@||allfoot.info^$generichide
+@@||pubdirecte.com/script/banniere.php
+@@#/ad_$image,domain=allfoot.info
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||streamonsport.info^$generichide
 ! https://forum.adguard.com/index.php?threads/40753/
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,important,domain=lecourrier-du-soir.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=lecourrier-du-soir.com
@@ -640,6 +646,10 @@ laprovence.com$$script[wildcard="*((false?*https:*:document.location.protocol)+*
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+streamonsport.info,allfoot.info###html3
+streamonsport.info##img[alt="bannière publicitaire"]
+streamonsport.info##a[href^="/go"][href*=".php?e="][rel="nofollow"]
+||cdn.allsportsflix.top/scripts/nwm-fp.min.js
 lalanguefrancaise.com##div[style="min-height:260px;text-align:center;"]
 lalanguefrancaise.com##.custom-html-widget > div[style="min-height:250px;"]
 lalanguefrancaise.com##div[style="min-height:600px;text-align:right;"]
