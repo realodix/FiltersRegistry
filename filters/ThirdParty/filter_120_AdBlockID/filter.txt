@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 21.042.765
+! OriginalVersion: 21.043.729
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 11 Feb 2021 12:45 UTC
+! Last modified: 12 Feb 2021 12:09 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 !
@@ -780,6 +780,10 @@ _GIF1200x120-
 ###adsground
 ###adsic435
 ###adsic728
+###adsimgatas
+###adsimgbawah
+###adsimgkanan
+###adsimgkiri
 ###adsimgxatas
 ###adsimgxatas2
 ###adsimgxatass
@@ -943,6 +947,10 @@ _GIF1200x120-
 ###iklanbawahpos
 ###iklanbesar
 ###iklancontainer
+###iklanimgatas
+###iklanimgbawah
+###iklanimgkanan
+###iklanimgkiri
 ###iklankecil
 ###iklanlayang
 ###iklanpanjang
@@ -1171,6 +1179,10 @@ _GIF1200x120-
 ##.adsbyrunactive
 ##.adscontent
 ##.adsgen1
+##.adsimgatas
+##.adsimgbawah
+##.adsimgkanan
+##.adsimgkiri
 ##.adsimgs
 ##.adsimgxatas
 ##.adsimgxatass
@@ -1726,6 +1738,10 @@ _GIF1200x120-
 ##.iklandetail
 ##.iklanhead
 ##.iklanheader
+##.iklanimgatas
+##.iklanimgbawah
+##.iklanimgkanan
+##.iklanimgkiri
 ##.iklankecil
 ##.iklanlamprotv
 ##.iklanlayang
@@ -2646,6 +2662,7 @@ _400x700cm.$image,domain=pelopor9.com
 _640x320_$image,domain=ruparupa.com
 !
 -ads-$image,domain=newsbalikpapan.com
+-ads.$image,domain=respublika.id
 -adv-$image,domain=realitasonline.id
 -banner$image,domain=fajar.co.id
 -banner-$image,domain=beritasulteng.com|bisablog.com|blockchainmedia.id|dailypost.id|gatra.com|indoaviation.asia|islampos.com|manadoline.com|pewarta-indonesia.com|presmedia.id|speednews-manado.com|studentpreneur.co|totabuan.news
@@ -2776,6 +2793,7 @@ _iklan*$image,domain=sorotmakassar.com
 ||hariankepri.com^*/banner-$image
 ||hariankepri.com^*/iklan-$image
 ||harianmemokepri.com^*/banner-$image
+||heraldmakassar.com^*/iklan-$image
 ||hotabis.com/wp-content/uploads/*.gif$image
 ||hxfile.co/images/banner_$image
 ||idfl.*/assets/js/adst.js$script,~third-party
@@ -2959,6 +2977,7 @@ _iklan*$image,domain=sorotmakassar.com
 ||teropongsenayan.com^*/banner/$image
 ||teropongsulut.com^*/iklan-$image
 ||timur-online.com^*/iklan-$image
+||tokcernews.com/images/banner_$image
 ||topikindonesia.id^*/iklan-$image
 ||totabuan.co^*/banner-$image
 ||totabuan.news^*/banner-$image
@@ -3008,7 +3027,7 @@ gardapapua.com##img[width="1200"][height="1200"]
 beritamorut.com,beritaterbit.com,bogoronline.com,dayaknews.com,gardapapua.com,inputrakyat.co.id,kliksumatera.com,lutim-news.com,obor-nusantara.com,rakyatsulsel.co,suarahukum-news.com,suaramasyarakatindonesia.com,sumateranews.co.id##img[width="1280"][height="1280"]
 inputrakyat.co.id##img[width="2560"][height="2560"]
 inibogor.com##img[width="292"][height="292"]
-beritalutim.com,bogorchannel.id,radarmalaka.com##img[width="300"][height="300"]
+beritalutim.com,bogorchannel.id,palembangbaru.com,radarmalaka.com,sriwijayamedia.com,suaramasyarakatindonesia.com##img[width="300"][height="300"]
 batarapos.com,penatimor.com##img[width="400"][height="400"]
 koranbanjar.net##img[width="420"][height="420"]
 penatimor.com##img[width="550"][height="550"]
@@ -3318,9 +3337,9 @@ situsjodoh.com##center a[target="_blank"] img
 kontan.co.id##div[id^="div-Topregular-"]
 acehekspres.com##div[itemtype^="https://schema.org/WPAdBlock"] > img
 harianrakyatbengkulu.com##iframe[width="560"][height="315"]
-penamerdeka.com##img[alt*="ads"]
+penamerdeka.com,respublika.id##img[alt*="ads" i]
 kabarviral79.com,tabloidjubi.com##img[alt*="adv" i]
-atjehdaily.id,baliekbis.com,beritaplano.com,corongrakyat.co.id,detikglobalnews.com,djournalist.com,integritasmedia.com,lintasperistiwa.com,liputanntb.com,manadotoday.co.id,metrobatam.com,munadi.id,smartcitymakassar.com,soalkakita.com,sumselnian.com,teropongsulut.com##img[alt*="banner" i]
+atjehdaily.id,baliekbis.com,beritaplano.com,corongrakyat.co.id,detikglobalnews.com,djournalist.com,integritasmedia.com,kabarboltim.com,lintasperistiwa.com,liputanntb.com,manadotoday.co.id,metrobatam.com,munadi.id,smartcitymakassar.com,soalkakita.com,suarasulut.com,sumselnian.com,teropongsulut.com##img[alt*="banner" i]
 bentengsumbar.com,bogornews.com,lintasperistiwa.com,mediakendari.com,nasionalnews.id,sulselsatu.com,sumselindependen.com,zonasultra.com##img[alt*="iklan" i]
 swaragamafm.com##img[alt="ad"]
 sakanews.com##img[alt="your ads" i]
@@ -3456,7 +3475,12 @@ kailipost.com##img[width="1233"][height="1600"]
 bogorupdate.com##img[width="1240"][height="1748"]
 kailipost.com##img[width="1241"][height="1595"]
 annews.co.id##img[width="1250"][height="1250"]
+kalselpos.com##img[width="1257"][height="767"]
+mediasatu.co##img[width="1260"][height="1890"]
+kalselpos.com##img[width="1260"][height="766"]
+kalselpos.com##img[width="1267"][height="769"]
 terasmaluku.com##img[width="1268"][height="1280"]
+kalselpos.com##img[width="1270"][height="643"]
 delegasi.com##img[width="1275"][height="1875"]
 beritaterbit.com##img[width="1280"][height="1128"]
 rakyatsumbar.id##img[width="1280"][height="1150"]
@@ -3466,7 +3490,7 @@ sulselnet.com##img[width="1280"][height="199"]
 goldennews.co.id##img[width="1280"][height="208"]
 goldennews.co.id##img[width="1280"][height="210"]
 halosumsel.co.id,haluankepri.com##img[width="1280"][height="213"]
-metrobatam.com##img[width="1280"][height="224"]
+metrobatam.com,suaramasyarakatindonesia.com##img[width="1280"][height="224"]
 samuderakepri.co.id##img[width="1280"][height="240"]
 gebraknusantara.co.id,metrobatam.com,papuabaratoke.com##img[width="1280"][height="256"]
 sasambonews.com##img[width="1280"][height="260"]
@@ -3487,20 +3511,33 @@ suaramasyarakatindonesia.com##img[width="1280"][height="425"]
 penatimor.com,samotamedia.com##img[width="1280"][height="426"]
 wartatransparansi.com##img[width="1280"][height="427"]
 infokepahiang.com##img[width="1280"][height="471"]
+kalselpos.com##img[width="1280"][height="491"]
 nusantaratimur.com##img[width="1280"][height="573"]
 infosultra.id##img[width="1280"][height="585"]
 soppeng.today##img[width="1280"][height="589"]
 kliksumatera.com##img[width="1280"][height="638"]
 prosesnews.id##img[width="1280"][height="639"]
 annews.co.id,beritamerdekaonline.com,pedomanbengkulu.com,sultengterkini.com##img[width="1280"][height="640"]
+kalselpos.com##img[width="1280"][height="647"]
 senentangnews.com##img[width="1280"][height="648"]
 annews.co.id##img[width="1280"][height="649"]
+kalselpos.com##img[width="1280"][height="656"]
 annews.co.id##img[width="1280"][height="699"]
 portalsulutnews.com,sulselnet.com##img[width="1280"][height="720"]
-digtara.com##img[width="1280"][height="767"]
+kalselpos.com##img[width="1280"][height="747"]
+kalselpos.com##img[width="1280"][height="757"]
+digtara.com,kalselpos.com##img[width="1280"][height="767"]
 kriminal.co##img[width="1280"][height="768"]
+kalselpos.com##img[width="1280"][height="769"]
+kalselpos.com##img[width="1280"][height="774"]
 annews.co.id##img[width="1280"][height="776"]
 berandanusantara.com,suara-ntt.com##img[width="1280"][height="780"]
+kalselpos.com##img[width="1280"][height="781"]
+kalselpos.com##img[width="1280"][height="782"]
+kalselpos.com##img[width="1280"][height="785"]
+kalselpos.com##img[width="1280"][height="788"]
+kalselpos.com##img[width="1280"][height="790"]
+kalselpos.com##img[width="1280"][height="793"]
 potret24.com##img[width="1280"][height="798"]
 akurasinews.com##img[width="1280"][height="800"]
 inilahsultra.com##img[width="1280"][height="852"]
@@ -3521,8 +3558,9 @@ inimedanbung.com##img[width="1456"][height="150"]
 mediaseruni.co.id##img[width="1470"][height="2024"]
 sendapaleba.com##img[width="149"][height="300"]
 media-baru.com##img[width="1500"][height="435"]
+suaramasyarakatindonesia.com##img[width="1538"][height="400"]
 bogorchannel.id##img[width="158"][height="300"]
-inspirasikawanua.com##img[width="160"][height="600"]
+inspirasikawanua.com,mediasatu.co##img[width="160"][height="600"]
 kliksumatera.com##img[width="1600"][height="2272"]
 kailipost.com##img[width="1600"][height="417"]
 protapriau.com##img[width="1600"][height="534"]
@@ -3782,6 +3820,7 @@ rakyatsulsel.co##img[width="595"][height="780"]
 bogornetwork.com##img[width="595"][height="842"]
 sekilasindonesia.id##img[width="596"][height="1280"]
 topsatu.com##img[width="600"][height="1057"]
+beritatangsel.com##img[width="600"][height="150"]
 lampungcentral.com##img[width="600"][height="328"]
 notif.id##img[width="600"][height="600"]
 kabarrakyat.id,obor-nusantara.com##img[width="600"][height="800"]
@@ -3913,6 +3952,7 @@ zonamerah.net##img[width="720"][height="576"]
 annews.co.id##img[width="720"][height="581"]
 annews.co.id##img[width="720"][height="589"]
 annews.co.id##img[width="720"][height="710"]
+annews.co.id##img[width="720"][height="742"]
 penatimor.com##img[width="720"][height="888"]
 karyanasional.com##img[width="720"][height="899"]
 expossumbar.com,zonamerah.net##img[width="720"][height="900"]
@@ -3992,6 +4032,8 @@ penatimor.com##img[width="740"][height="925"]
 penatimor.com##img[width="740"][height="931"]
 penatimor.com##img[width="740"][height="948"]
 penatimor.com##img[width="740"][height="987"]
+fokusaktual.co.id##img[width="741"][height="1024"]
+kalselpos.com##img[width="741"][height="1280"]
 annews.co.id##img[width="743"][height="666"]
 haluanriau.co##img[width="748"][height="400"]
 riau.haluan.co##img[width="750"][height="1029"]
@@ -4070,7 +4112,7 @@ delegasi.com##img[width="866"][height="1280"]
 suaramasyarakatindonesia.com##img[width="872"][height="1280"]
 acehekspres.com##img[width="873"][height="1048"]
 inilahsultra.com##img[width="874"][height="1240"]
-teropongsulut.com##img[width="875"][height="1125"]
+fokusaktual.co.id,teropongsulut.com##img[width="875"][height="1125"]
 gardaasakota.com##img[width="876"][height="449"]
 bogoronline.com##img[width="877"][height="1240"]
 gardapapua.com##img[width="881"][height="221"]
@@ -4081,7 +4123,9 @@ hariansinggalang.co.id##img[width="897"][height="1280"]
 rakyatsulsel.co##img[width="899"][height="1048"]
 suaramandiri.co##img[width="900"][height="1008"]
 suaramandiri.co##img[width="900"][height="1187"]
+kalselpos.com##img[width="900"][height="1200"]
 protapriau.com##img[width="900"][height="177"]
+heraldmakassar.com##img[width="900"][height="232"]
 heraldmakassar.com##img[width="900"][height="280"]
 annews.co.id##img[width="900"][height="300"]
 protapriau.com##img[width="901"][height="267"]
@@ -4114,10 +4158,10 @@ riauterkini.com##img[width="950"][height="250"]
 annews.co.id##img[width="950"][height="399"]
 inikata.com##img[width="957"][height="1280"]
 realitalampung.com##img[width="959"][height="320"]
-hantaran.co,kliksumatera.com,lintasberita.id,mediamerdeka.co,mediasembilan.co.id##img[width="960"][height="1280"]
+hantaran.co,kalselpos.com,kliksumatera.com,lintasberita.id,mediamerdeka.co,mediasembilan.co.id##img[width="960"][height="1280"]
 zonamerah.net##img[width="960"][height="602"]
 bogoronline.com,swarakaltim.com##img[width="962"][height="1280"]
-hariankepri.com,kailipost.com,sultengterkini.com##img[width="970"][height="250"]
+berandanusantara.com,hariankepri.com,kailipost.com,sultengterkini.com##img[width="970"][height="250"]
 kailipost.com,sultengterkini.com##img[width="970"][height="291"]
 jubi.co.id##img[width="970"][height="342"]
 kepridays.co.id##img[width="970"][height="973"]
@@ -4130,7 +4174,7 @@ berandanusantara.com##img[width="986"][height="1280"]
 protapriau.com##img[width="989"][height="153"]
 semarakpost.com##img[width="990"][height="1242"]
 bogoronline.com##img[width="991"][height="1272"]
-inikata.com##img[width="995"][height="1280"]
+fokusaktual.co.id,inikata.com##img[width="995"][height="1280"]
 kanalkalimantan.com##img[width="999"][height="380"]
 tempo.co##video[width="468"][height="60"]
 ! Aside & Widget
@@ -11180,5 +11224,5 @@ m.liputan6.com#@##back-to-top
 !
 ! https://github.com/realodix/AdBlockID/issues/467
 @@/social-sharing-$script,domain=axe.com
-! Checksum: RF8GHE0GYu7QWCLbZFzoag
+! Checksum: ITksuq93kpRuiWjdwqfP7w
 
