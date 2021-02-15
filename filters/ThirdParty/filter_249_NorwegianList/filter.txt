@@ -1,7 +1,7 @@
 !
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! OriginalVersion: 14February2021v1
+! OriginalVersion: 15February2021v2
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! 🇳🇴: Denne listen dekker nettsteder for Norge, Danmark, Island, Færøyene, Grønland, Schleswig-Holsteins danske minoritet, og samebefolkningen. For mere informasjon, detaljer, hjelpemidler, og andre lister jeg har laget, gå til https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#norsk
@@ -671,8 +671,6 @@ _300x500pix$domain=rykindribe.dk,image
 /resources/dfp/*$app=no.nettavisen.phonegap.na
 ||finn.no^$app=no.bt
 contentMarketing$app=no.sol
-||jula.no^$removeparam=gclsrc
-||norsktipping.no$removeparam=WT.mc_id
 !#endif
 ! 🇳🇴: ——— Tomme restebokser som EasyList har etterlatt ———
 ! 🇩🇰: ——— Tomme restebokser, som EasyList har efterladt ———
@@ -1466,6 +1464,7 @@ _980banner_
 ! 🇳🇴🏞: ——— Tomme skiljeboksar ———
 ! 🇮🇸: ——— Tóma skilirammar ———
 ! 🇬🇧: ——— Empty divider spaces ———
+! Was supposed to be synced often with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/EmptyPaddingRemover.txt, which has not been the case.
 ##.skille
 icelandreview.com,bir.no,medier24.no,knr.gl,nutiminn.is#?#p:has-text(/^\xA0$/)
 allers.no,steigan.no##.vc_empty_space
@@ -1710,6 +1709,18 @@ nettavisen.no###topover
 @@||bildeler.name^$generichide
 @@||reservedele.name^$generichide
 !#endif
+! 🇳🇴: Fjerner overflødige deler av URL-er for å gjøre dem kortere og lettere å dele
+! 🇬🇧: Removing unnecessary parts to make URLs shorter and easier to share
+! Infrequently synced with https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt
+$removeparam=utm_id,domain=elkjop.no|elgiganten.dk
+||cdon.$removeparam=g
+||deal.no^$removeparam=ref
+||digitalimpuls.no^$removeparam=WebSiteMapNodeID
+||jula.no^$removeparam=gclsrc
+||netonnet.no^$removeparam=dclid
+||norsktipping.no$removeparam=WT.mc_id
+||p3.no^$removeparam=draftsforfriends
+||tv2.no^$removeparam=r
 !#if !adguard
 ! 🇳🇴: Oppføringer som også er tilstede i «AdGuards hovedfilter / AdGuard Base Filter», for de som bruker ABP og AdBlock, eller som ikke har tatt seg bryet å bruke 8 sekunder på å skru den på i uBlock Origin.
 ! 🇩🇰: Opføringer som også er tilstede i «AdGuard Basisfilter / AdGuard Base Filter», for de der bruger ABP og AdBlock, eller der ikke har tatt seg bryd at bruge 8 sekunder på at abonnere på den i uBlock Origin.
@@ -2033,6 +2044,24 @@ sofabold.dk##.centerMgfx
 5.39.217.206$network
 5.39.221.180$network
 193.148.70.153$network
+! 🇳🇴: Falske nettapoteker
+! 🇬🇧: Fake online pharmacies
+||*-med.footeo.com^$document
+||*medisin*.over-blog.com^$document
+||alphaapotek.com^$document
+||bedsteapoteksverige.com^$document
+||garantere-apotek.com^$document
+||godtdsamaritansk.com^$document
+||helsehjelp.over-blog.com^$document
+||jensapoteker.com^$document
+||kjop-palitelige-medisiner.com^$document
+||kobconcerta54mgonlineidanmark.wordpress.com^$document
+||konstantleverans.blogspot.com^$document
+||marson.footeo.com^$document
+||nkwana-medstore.com^$document
+||sikkertapotek.com^$document
+||sobrilleverandoridanmark.wordpress.com^$document
+||xanax*.over-blog.com^$document
 ! 🇬🇧: Copied over from DNS-BH Malware Domains and verified to actually be malicious (as that list has a whole lot of false positives)
 ||desidert.no^
 ||brigitteheilmann.dk^
