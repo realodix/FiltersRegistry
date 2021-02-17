@@ -4,10 +4,23 @@
 ! Description: Filter composed of several other filters (AdGuard Base filter, Social media filter, Tracking Protection filter, Mobile ads filter, EasyList, EasyPrivacy, etc) and simplified specifically to be better compatible with DNS-level ad blocking.
 ! Homepage: https://github.com/AdguardTeam/AdguardSDNSFilter
 ! License: https://github.com/AdguardTeam/AdguardSDNSFilter/blob/master/LICENSE
-! Last modified: 2021-02-17T12:03:11.503Z
+! Last modified: 2021-02-17T16:07:18.529Z
 !
 ! Compiled by @adguard/hostlist-compiler v1.0.8
 !
+!
+! Source name: AdGuard Base filter ad servers
+! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/EnglishFilter/sections/adservers.txt
+!
+!
+! Section contains list of advertising networks
+!
+! The rules with hints are at the end of file
+!
+!! https://a.bestcontentitem.top/warp/*?r=
+!
+||glassmilheart.com^
+||feyl4mh5to.com^
 ||expendituredefeated.com^
 ||seektravelingdiffident.com^
 ||kumteerg.com^
@@ -17158,6 +17171,9 @@ vkcdnservice.appspot.com^
 ! ||mobileapptracking.com^ - don't block this domain with all subdomains. https://forum.adguard.com/index.php?threads/23917/
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/74651
+! com.opera.app.newslite
+||s.adx.opera.com^
 ! Apps by Ketchapp
 ||ketchapp.org^
 ||cdn-ketchapp.akamaized.net^
@@ -18539,7 +18555,6 @@ vkcdnservice.appspot.com^
 ||directrix.ru^
 ||easytarget.ru^
 ||effectivemeasure.net^
-||emsecure.net^
 ||erkaseriilan.com.tr^
 ||erotop.lv^
 ||extremetracking.com^
@@ -19658,8 +19673,6 @@ t.yesware.com
 ||track.nifty.com^
 ||tracking.epicgames.com^
 ||t*.zcvh.net^
-||app.adjust.net.in^
-||app.adjust.world^
 ||d3nq5jrakcyw1w.cloudfront.net^
 ||tracking.netdoktor.at^
 ||targeting.tbt.arcpublishing.com^
@@ -20444,6 +20457,7 @@ charlestownwyllie.oaklawnnonantum.com^
 ||track.appsflyer.com^
 !+ NOT_PLATFORM(ios, ext_safari, ext_android_cb)
 !
+||events.claspws.tv^
 ||tracking-receiver.prod-general.stocard-backend.com^
 ||metrics.happycolor.app^
 ||digianalytics.airtel.in^
@@ -39625,8 +39639,6 @@ adbetnet.com
 @@||forum.notebookreview.com^|
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/199
 @@||radiofrance.targetspot.com^|
-! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/187
-@@||pathe.emsecure.net^|
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/190
 @@||awin1.com^|
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/185
