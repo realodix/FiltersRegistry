@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 21.053.359
+! OriginalVersion: 21.053.693
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 22 Feb 2021 05:59 UTC
+! Last modified: 22 Feb 2021 11:33 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 !
@@ -2728,6 +2728,7 @@ _GIF1200x120-
 ||doathair.com^$third-party
 ||e553bcf717698d33.com^$third-party
 ||e702fa7de9d35c37.com^$third-party
+||eergithi.com^$third-party
 ||etoads.net^$third-party
 ||f369a60bf483bcc9.com^$third-party
 ||forumiklan.com^$third-party
@@ -4592,8 +4593,7 @@ grid.id##.banner-r
 bobo.grid.id,cewekbanget.grid.id,hai.grid.id,nakita.grid.id,nova.grid.id,sajiansedap.grid.id##.latest_items:nth-of-type(11)
 bobo.grid.id,cewekbanget.grid.id,hai.grid.id,nakita.grid.id,nova.grid.id,sajiansedap.grid.id##.latest_items:nth-of-type(4)
 grid.id##[id^="afdf-"]
-!
-! OTOMOTIF
+! Otomotif
 adventuriderz.com###ac-belowpost
 mobilwow.com###add
 mobilwow.com###bottombanner
@@ -4615,7 +4615,8 @@ otomotifzone.com##a[rel="noopener noreferrer"] > img
 anangcozz.com##a[rel="noopener"] > img
 maniakmotor.com,otomotifmax.com##a[target="_blank"] > img
 !
-! Mobile
+! MOBILE
+! -----------------------------------------------------------------------------
 tribunnewswiki.com###adsoutofpage-premiumTopframe
 tribunnews.com,tribunnewswiki.com###anchorads
 pickybest.id###fixedban
@@ -4649,12 +4650,12 @@ bola-okezone-com.cdn.ampproject.org,celebrity-okezone-com.cdn.ampproject.org,eco
 m.akurat.co#$#body { padding-top: 0!important; }
 ! *** abid:src/extended.adbl ***
 ! AD REINSERTION
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 tribunnews.com#%#//scriptlet('ubo-acis.js', 'Math', '="\x')
 bolasport.com#%#//scriptlet('ubo-acis.js', 'document.addEventListener', 'iframe-network')
 !
 ! COSMETIC FILTER OPERATORS
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 arenabola.id##.col-lg-3:-abp-contains(Ads)
 sindonews.com##.ctn-mid li:-abp-contains(Sponsored)
 arenasmartphone.com##.entry-content > div:-abp-contains(Adv)
@@ -10871,18 +10872,34 @@ kaskus.co.id###thread_post_list > [id^="moderated-"]:-abp-contains(Post ini tela
 m.kaskus.co.id##.threadDetail .kaskus-tv-iframe
 m.kaskus.co.id##[id^="postdeleted"]
 !
-! GENERAL
-ainamulyana.blogspot.com,banjirembun.com,cumirproduction.blogspot.com,kucingmania.net,njongeblog.blogspot.com#%#//scriptlet('ubo-ra.js', 'oncontextmenu|ondragstart|onkeydown|onmousedown|onselectstart|style', 'body')
+! POPUP & OVERLAY
+! -----------------------------------------------------------------------------
+tirto.id###bkgOverlay
+kuotamedia.net,paketinternet.net,ponselsoak.com###bukafpop
+tirto.id###delayedPopup
+borneonews.co.id###lipsus-popup
+tirto.id##.backgroundOverlay
+rajawarta.com,timikaexpress.com##.cm-popup-modal
+kompaslampung.com##.jqbox_innerhtml
+kanalkalimantan.com##.lepopup-popup-container
+kanalkalimantan.com##.lepopup-popup-overlay
+indotimur.com##.popup-transparent
+lampungcentral.com##.pum-overlay
+seputarforex.com##.show.modal-backdrop
+/wp-content/plugins/cm-pop-up-banners/*$domain=suaramandiri.co
+/wp-content/plugins/popup-builder/*$script,domain=bacaan.id|papuatoday.com|sindomanado.com|suluttimes.com
 !
-! ANTI-RIGHT-CLICK
-! --------------------------------------------------------------
+bacaan.id,papuatoday.com,sindomanado.com,suluttimes.com#%#//scriptlet('ubo-acis.js', 'SGPopup')
+!
+! ANTI-RIGHT CLICK & ANTI-SELECT
+! -----------------------------------------------------------------------------
+ainamulyana.blogspot.com,banjirembun.com,cumirproduction.blogspot.com,kucingmania.net,njongeblog.blogspot.com#%#//scriptlet('ubo-ra.js', 'oncontextmenu|ondragstart|onkeydown|onmousedown|onselectstart|style', 'body')
+! RIGHT CLICK
 1001tutorial.com,banjirembun.com,beritasampit.co.id,blogsecond.com,ciriseo.net,ilmumemikatwanita.com,isrul.com,kabarrakyat.id,kherysuryawan.id,psikologicinta.com,radiokucing.com,teraa.net#%#//scriptlet('ubo-acis.js', 'document.oncontextmenu')
 mahirngoding.blogspot.com,nomis.id,radarbengkuluonline.com,websiteedukasi.com#%#//scriptlet('ubo-aeld.js', 'contextmenu')
 ardra.biz,blog-dnz.com,daftarhewan.com,debgameku.com,guru-id.com,myhewan.com,nusramedia.com,tipssehatcantik.com,wartaterkini.news#%#//scriptlet('ubo-aopr.js', 'document.oncontextmenu')
 /ZaloSec/chuotphai/*$script
-!
-! ANTI-SELECT
-! --------------------------------------------------------------
+! SELECT
 larantukagypsum.com#$##post-wrapper { user-select: text !important; -webkit-touch-callout: default !important; }
 amtread.com,bisablog.com,boss-ant.blogspot.com,daftarhewan.com,heyriad.com,myhewan.com,ninoartikel.com,rencanamu.id,strukturkode.blogspot.com,suatekno.id,suckittrees.com,suryadhi.web.id,warunginter.net#$#* { user-select: text !important; -webkit-touch-callout: default !important; }
 daftarhewan.com,ilmumemikatwanita.com,kabarrakyat.id,myhewan.com,nusramedia.com,psikologicinta.com,teraa.net,tipssehatcantik.com,yunoya.id#%#//scriptlet('ubo-acis.js', 'disableSelection', 'reEnable')
@@ -10900,64 +10917,46 @@ belajarmembuatwebsite.com,blogsecond.com,elmu-blog.blogspot.com,igniel.com,inblo
 nusramedia.com#$#html { user-select: text !important; -webkit-touch-callout: default !important; }
 !
 ! ANTI-COPY
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 nomis.id#%#//scriptlet('ubo-aeld.js', 'copy')
 wartaterkini.news#%#//scriptlet('ubo-aopr.js', 'disable_copy')
 !
 ! ANTI-SAFELINK
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 kuyhaa-me.com#%#//scriptlet('ubo-aopr.js', 'protected_links')
 !
 ! FAKE BUTTON
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 gigapurbalingga.net##.entry-content center button.user
 kuyhaa-me.com##[type="image"][src*="/sd.png"]
 mazterize.co,mazterize.com##center:nth-of-type(1)
 mazterize.co,mazterize.com##center:nth-of-type(2)
 kuyhaa.net##iframe[width="420"][height="100"]
 !
-! POPUP & OVERLAY
-! --------------------------------------------------------------
-tirto.id###bkgOverlay
-kuotamedia.net,paketinternet.net,ponselsoak.com###bukafpop
-tirto.id###delayedPopup
-borneonews.co.id###lipsus-popup
-tirto.id##.backgroundOverlay
-rajawarta.com,timikaexpress.com##.cm-popup-modal
-kompaslampung.com##.jqbox_innerhtml
-kanalkalimantan.com##.lepopup-popup-container
-kanalkalimantan.com##.lepopup-popup-overlay
-indotimur.com##.popup-transparent
-lampungcentral.com##.pum-overlay
-seputarforex.com##.show.modal-backdrop
-/wp-content/plugins/cm-pop-up-banners/*$domain=suaramandiri.co
-/wp-content/plugins/popup-builder/*$script,domain=bacaan.id|papuatoday.com|sindomanado.com|suluttimes.com
-!
-bacaan.id,papuatoday.com,sindomanado.com,suluttimes.com#%#//scriptlet('ubo-acis.js', 'SGPopup')
 ! CONTENT EMBED
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 grid.id##.videoPlaylistPlugClass-carousel
 ||ivideosmart.com/ivsplayer/$script,domain=bolasport.com|brilio.net|feedme.id|geeq.id|genpi.co|grid.id|idntimes.com|jubi.co.id|kompas.com|kontan.co.id|styl.id|sulselsatu.com|tempo.co|~video.tempo.co
 ||ivideosmart.com/ivxplayer/$script,domain=grid.id|kompas.com
 !
 ! PRIVACY
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 ||analytics.s.id^$third-party
 ||c.lazada.co.id/t/v.gif?__t=
 ||ivstracker.net^$third-party
 ||log.viva.co.id/iframe^
 ! MINER
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 ! https://github.com/realodix/AdBlockID/issues/392
 ||filmindonesia2020.blogspot.com^$third-party
 ! *** abid:src/packages/comic.adbl ***
 ! SPECIFIC BLOCK
-! --------------------------------------------------------------
+! ----------------------------------------------------------------------------------------
 .gif$image,domain=kombatch.com
 /iklan.$script,domain=komiku.co.id
 ||mangaku.link/*.gif$image
 ! SPECIFIC HIDE
-! --------------------------------------------------------------
+! ----------------------------------------------------------------------------------------
 mangacanblog.com,mangakita.net###btm_banner
 mangaid.click###catfish
 sektekomik.com###close-teaser
@@ -10969,7 +10968,7 @@ kumpulmanga.org##.kzl
 mangacanblog.com##.mas_tamvan
 !
 ! ANNOYANCE
-! --------------------------------------------------------------
+! ----------------------------------------------------------------------------------------
 ! Overlay
 komiku.co.id###Notifikasi
 ! Pop-Up
@@ -10977,16 +10976,11 @@ mangaindo.web.id#%#//scriptlet('ubo-acis.js', 'Math', 'zfgloaded')
 manhwaland.xyz#%#//scriptlet('ubo-acis.js', 'SGPopup')
 komikstation.com,manhwaid.co,manhwaindo.com,manhwaland.xyz,westmanga.info#%#//scriptlet('ubo-acis.js', 'document.querySelectorAll', 'popMagic')
 mangakita.net,westmanga.info#%#//scriptlet('ubo-window.open-defuser.js')
-!
-! ANTI-SELECT
-! --------------------------------------------------------------
+! Anti Select
 mangaku.pro#$#* { user-select: text !important; -webkit-touch-callout: default !important; }
-!
-! ANTI-RIGHT-CLICK
-! --------------------------------------------------------------
+! Anti Right Click
 !
 ! ANTI-ADBLOCK
-! --------------------------------------------------------------
 mangaindo.web.id,meganebuk.net#%#//scriptlet('ubo-aopr.js', 'anOptions')
 bacamanhwa.net,kombatch.com,komikcast.com,komikindo.web.id,komikmoe.my.id,mangasusu.world,manhwaid.co,manhwaid.me#%#//scriptlet('ubo-nobab.js')
 !
@@ -10998,7 +10992,7 @@ komiku.co.id#@##banner_ad
 ! Empty Ads Placeholders
 ! *** abid:src/packages/movie.adbl ***
 ! SPECIFIC BLOCK
-! --------------------------------------------------------------
+! ----------------------------------------------------------------------------------------
 .gif$image,domain=conan.id|layarfilm21.live|neumanga.tv|nontondrama.me|tancap88.me
 /banner-$image,domain=maxnime.com|neonime.moe|neonime.vip
 ||jwplayer21.com/images/*.gif$image
@@ -11012,7 +11006,7 @@ komiku.co.id#@##banner_ad
 ||sharemydrive.xyz/iframe/content.php$subdocument
 !
 ! SPECIFIC HIDE
-! --------------------------------------------------------------
+! ----------------------------------------------------------------------------------------
 ! IndoXX1 Closed (domain masih aktif)
 ! https://github.com/realodix/AdBlockID/issues/57
 103.194.171.75##.bnner
@@ -11092,8 +11086,31 @@ downloadbatch.net##.widget:-abp-contains(Advertisement)
 149.28.158.117##.appupig
 melongfilm.org##.ipprtcnt
 !
+! ANTI-ADBLOCK
+! -----------------------------------------------------------------------------
+daizurin.com,shinobijawi.id,tohaboy.web.id,zonachina21.blogspot.com#%#//scriptlet('ubo-acis.js', 'addEventListener', 'DOMNodeRemoved')
+animekuro.net,kurofansubs.xyz#%#//scriptlet('ubo-acis.js', 'eval', 'ignielAdBlock')
+nanidrama.com,nezunime.com#%#//scriptlet('ubo-acis.js', 'jQuery', 'ai_adb')
+soranime.site#%#//scriptlet('ubo-aopr.js', 'KillAdBlock')
+subindo.stream#%#//scriptlet('ubo-aopr.js', 'absda')
+aibouanime.site,aibouanime.xyz,blackavelic.com,kudonime.xyz,mikanime.com,onbatch.my.id,otaku.tekloggers.com,xizuanime.blogspot.com#%#//scriptlet('ubo-aopr.js', 'adBlockDetected')
+filmboxoffice.web.id,maachanime.com,neosubs.net,tohaboy.web.id#%#//scriptlet('ubo-aopr.js', 'anOptions')
+animecracks.com#%#//scriptlet('ubo-aopr.js', 'mdpDeBlocker')
+animee.xyz#%#//scriptlet('ubo-aopr.js', 'mdpDeBlockerDestroyer')
+aksensei.com,doramaflix.com,drakoric.com,dramaencode.com,dramazon.id,driverays.com,fmoviez.org,kiminime.com,kiranime.pw,pahe.stream,shirainime.com#%#//scriptlet('ubo-nobab.js')
+oploverz.in#%#//scriptlet('ubo-nostif.js', 'nextFunction', '450')
+anidraw.net#%#//scriptlet('ubo-set.js', 'config.adblock', 'null')
+!
+@@/ads.$script,domain=negumo.com
+@@/adsbygoogle.$domain=dl.nesia.my.id
+@@/pagead2.$script,domain=nekopoi.web.id|tokubatch.com
+!
+/ads-poi.$image,domain=nekopoi.web.id
+/ads-poi2.$image,domain=nekopoi.web.id
+||animekompi.web.id/*/antiblocker$image
+!
 ! ANNOYANCE
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 /download-button.$image,domain=anime-indo.id|cinema-xx1.com|lndoxxi.com
 ! Pop-Up & Overlay
 139.99.120.222,fb21.club,fb21.tv#%#//scriptlet('ubo-aopr.js', '$', '#myModalSingle')
@@ -11103,7 +11120,7 @@ animeindo.fun#%#//scriptlet('ubo-aopr.js', 'Popper')
 movie-xx1.com#%#//scriptlet('ubo-aopr.js', 'document.querySelectorAll', 'popMagic')
 ganool21.co#%#//scriptlet('ubo-aopr.js', 'popup_custom_data')
 oploverz.in#%#//scriptlet('ubo-nostif.js', 'popup')
-103.194.171.18,111.90.150.31,162.213.249.103,193.164.131.42,204.48.22.58,dutafilm.guru,efek.stream,fb21.club,filmonlineindo.com,indxxi.vip,komikcast.com,komikstation.com,mangaku.pro,negumo.com,nontonsub.top,subindo.stream#%#//scriptlet('ubo-window.open-defuser.js')
+103.194.171.18,111.90.150.31,162.213.249.103,193.164.131.42,204.48.22.58,dutafilm.guru,efek.stream,fb21.club,filmonlineindo.com,indxxi.vip,komikcast.com,komikstation.com,mangaku.pro,nanidrama.com,negumo.com,nontonsub.top,subindo.stream#%#//scriptlet('ubo-window.open-defuser.js')
 !
 *$popup,domain=awnime.net
 /js/swal.$script,domain=hakamovie.cc|hakamovie.xyz
@@ -11135,44 +11152,16 @@ narashika.cc##.popbox
 ! Fake Button
 91.230.121.24,91.230.121.37##.idmuvi-social-share
 ||nekonime.com^*/download-sekarang-$image
-!
-! ANTI-ADBLOCK
-! --------------------------------------------------------------
-daizurin.com,shinobijawi.id,tohaboy.web.id,zonachina21.blogspot.com#%#//scriptlet('ubo-acis.js', 'addEventListener', 'DOMNodeRemoved')
-animekuro.net,kurofansubs.xyz#%#//scriptlet('ubo-acis.js', 'eval', 'ignielAdBlock')
-nezunime.com#%#//scriptlet('ubo-acis.js', 'jQuery', 'ai_adb')
-soranime.site#%#//scriptlet('ubo-aopr.js', 'KillAdBlock')
-subindo.stream#%#//scriptlet('ubo-aopr.js', 'absda')
-aibouanime.site,aibouanime.xyz,blackavelic.com,kudonime.xyz,mikanime.com,onbatch.my.id,otaku.tekloggers.com,xizuanime.blogspot.com#%#//scriptlet('ubo-aopr.js', 'adBlockDetected')
-filmboxoffice.web.id,maachanime.com,neosubs.net,tohaboy.web.id#%#//scriptlet('ubo-aopr.js', 'anOptions')
-animecracks.com#%#//scriptlet('ubo-aopr.js', 'mdpDeBlocker')
-animee.xyz#%#//scriptlet('ubo-aopr.js', 'mdpDeBlockerDestroyer')
-aksensei.com,doramaflix.com,drakoric.com,dramaencode.com,dramazon.id,driverays.com,fmoviez.org,kiminime.com,kiranime.pw,nanidrama.com,pahe.stream,shirainime.com#%#//scriptlet('ubo-nobab.js')
-oploverz.in#%#//scriptlet('ubo-nostif.js', 'nextFunction', '450')
-anidraw.net#%#//scriptlet('ubo-set.js', 'config.adblock', 'null')
-!
-@@/ads.$script,domain=negumo.com
-@@/adsbygoogle.$domain=dl.nesia.my.id
-@@/pagead2.$script,domain=nekopoi.web.id|tokubatch.com
-!
-/ads-poi.$image,domain=nekopoi.web.id
-/ads-poi2.$image,domain=nekopoi.web.id
-||animekompi.web.id/*/antiblocker$image
-!
-! ANTI-SAFELINK
-! --------------------------------------------------------------
+! Anti Safelink
 animebatch.web.id,anitoki.web.id,daizurin.com,drakorku.my.id,hakanime.com,soranime.top#%#//scriptlet('ubo-acis.js', 'auto_safelink')
 maxnime.com,nimegami.com,yukinime.com#%#//scriptlet('ubo-aopr.js', 'go_url')
 anitoki.com,nekonime.video#%#//scriptlet('ubo-aopr.js', 'protected_links')
 !
 aibou.xyz,aksensei.com,cgvindo.vip#%#//scriptlet('ubo-ra.js', 'oncontextmenu|ondragstart|onkeydown|onmousedown|onselectstart|style', 'body')
-! ANTI-RIGHT-CLICK
-! --------------------------------------------------------------
+! Anti Right Click
 144.91.98.14#%#//scriptlet('ubo-aeld.js', '/^(?:contextmenu|selectstart)$/')
 maachanime.com,wibudesu.com#%#//scriptlet('ubo-aopw.js', 'nocontext')
-!
-! ANTI-SELECT
-! --------------------------------------------------------------
+! Anti Select
 maachanime.com,wibudesu.com#%#//scriptlet('ubo-acis.js', 'disableSelection', 'reEnable')
 144.91.98.14#%#//scriptlet('ubo-set.js', 'document.onselectstart', 'noopFunc')
 malasngeblog.com#$#.post-body { user-select: text !important; -webkit-touch-callout: default !important; }
@@ -11180,7 +11169,7 @@ wawang.id#$#.post-outer { user-select: text !important; -webkit-touch-callout: d
 wibudesu.com#$#html { user-select: text !important; -webkit-touch-callout: default !important; }
 ! *** abid:src/packages/sl_anti-adblock.adbl ***
 ! SAFE LINK - ANTI-ADBLOCK
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 ! https://github.com/gorhill/uBlock/wiki/Resources-Library
 leafpro.website,plantqo.website#%#//scriptlet('ubo-acis.js', 'addEventListener', 'DOMNodeRemoved')
 cararoot.id,liveshootv.com,miuiku.com,safeku.com,sekilastekno.com,sportif.id#%#//scriptlet('ubo-acis.js', 'eval', 'ignielAdBlock')
@@ -11237,7 +11226,7 @@ earnload.co,fodz.xyz,glory-link.com,gpmojo.co,memoo.xyz,shortearn.eu,shorten.sh,
 cararoot.id,liveshootv.com,sekilastekno.com###ignielAdBlock
 !
 ! EMPTY ADS PLACEHOLDERS
-! --------------------------------------------------------------
+! ----------------------------------------------------------------------------------------
 ambyar.info,intercelestial.com,linegee.net,sweetlantern.com###externalinject-gpt-passback-container
 ambyar.info,intercelestial.com,linegee.net,sweetlantern.com###externalinject-gpt-passback-iframe
 elsfile.org,hexafile.net,link.kangapip.com,proapkmod.com,wikiall.org##.adsbygoogle
@@ -11246,11 +11235,11 @@ intercelestial.com,sweetlantern.com##.idblog-floatbanner
 absolutesmmpanel.com##.wmg-vb-container
 !
 ! WHITELIST
-! --------------------------------------------------------------
+! ----------------------------------------------------------------------------------------
 @@/abdiusu/project-safelink-viomagz/*/safelink-ViomagzV3.2-2tombol$script,third-party
 ! *** abid:src/packages/sl_anti-safelink.adbl ***
 ! SAFE LINK - ANTI-SAFELINK
-! --------------------------------------------------------------
+! ----------------------------------------------------------------------------------------
 -safelink/*$script,third-party
 /ABSafelink.$script,third-party
 /autosafe3.$script,third-party
@@ -11394,7 +11383,7 @@ movienear.me##[href^="https://bit.ly/"] > img
 cararoot.id##img[border="0"][src*="blogspot.com"]
 !
 ! ANNOYANCE
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 ! Abort Blur Event
 ceesty.com#%#//scriptlet('ubo-set.js', 'app.options.timerPageVisibilityChecking', 'false')
 apk.miuiku.com,apk.sportif.id,cararoot.id,droidtamvan.me,encurta.eu,get4link.xyz,icutlink.com,lewat.club,liveshootv.com,luangusaha.com,modebaca.com,oceantech.xyz,onlinecorp.me,p4link.com,sekilastekno.com,semawur.com,stfly.io#%#//scriptlet('ubo-set.js', 'blurred', 'false')
@@ -11458,7 +11447,7 @@ apkgezegeni.com#%#//scriptlet('ubo-nofab.js')
 ! ------------------------------------------------------------!
 ! *** abid:src/anti-adblock.adbl ***
 ! SCRIPTLETS
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 dropshipin.id#%#//scriptlet('ubo-acis.js', '$', 'ads')
 dafideff.com#%#//scriptlet('ubo-acis.js', 'addEventListener', 'google_ad_client')
 kuliahkomputer.com,liputanberita21.com,winmahdi.com#%#//scriptlet('ubo-acis.js', 'eval', 'ignielAdBlock')
@@ -11478,7 +11467,7 @@ menantisenja.com#%#//scriptlet('ubo-set.js', 'adblock', '1')
 selebsquad.com#%#//scriptlet('ubo-set.js', 'config.adblock', 'null')
 !
 ! SPECIFIC
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 nabire.net#@#.adsbygoogle
 aplikasipc.com#@#.afs_ads
 mi-globe.com#@#.an-advert-banner
@@ -11502,7 +11491,7 @@ teknoding.com##kbd
 @@/pagead2.$script,domain=bloggerku.com|unduh.in
 !
 ! GENERIC HIDE
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 @@||carmudi.co.id^$generichide
 @@||cintamobil.com^$generichide
 @@||contohblog.com^$generichide
@@ -11517,7 +11506,7 @@ balipost.com##.paralax_div
 /antiblockersjoss.$image
 !
 ! GENERAL BLOCK
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 /blockadblock.$script,domain=~firefaucet.win
 !
 -adblock-notice-
@@ -11589,7 +11578,7 @@ _adblock_killer.
 @@/pasang-google-$image
 @@/pasang-iklan-$image
 !
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 jualo.com#@#.ad-title
 baliadvertiser.biz#@#.ads-carousel
 iklandb.com,iklanin.info#@#.afs_ads
@@ -11628,7 +11617,7 @@ iklanpopuler.com,sebariklanbaris.net,ziyata.com#@#[src*="/iklan/"]
 @@||resolusiweb.com/img/$~third-party
 @@||ziyata.com/upload/$~third-party
 !
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43376
 m.liputan6.com#@##back-to-top
 ! https://github.com/uBlockOrigin/uAssets/issues/1018
@@ -11640,10 +11629,10 @@ m.liputan6.com#@##back-to-top
 ! https://github.com/realodix/AdBlockID/issues/41
 @@/gtm.js$script,domain=tokopedia.com
 !
-! --------------------------------------------------------------
+! -----------------------------------------------------------------------------
 ! Memperbaiki kerusakan karena Fanboy’s Annoyance
 !
 ! https://github.com/realodix/AdBlockID/issues/467
 @@/social-sharing-$script,domain=axe.com
-! Checksum: ZWrIQPmWGcLGQLc0KB5v1A
+! Checksum: WP0HprDp1LrW63E3+HWocw
 
