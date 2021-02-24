@@ -81,6 +81,8 @@
 youtube.com,youtube-nocookie.com#%#//scriptlet('set-constant', 'ytInitialPlayerResponse.adPlacements', 'undefined')
 youtube.com,youtube-nocookie.com#%#//scriptlet('set-constant', 'playerResponse.adPlacements', 'undefined')
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/75547
+||api.goodjob.life/me/permissions/search^$replace=/("hasSearchPermission"):false/\$1:true/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/75116
 myfin.by##.tg-discussion
 ! https://github.com/AdguardTeam/AdguardFilters/issues/75536
@@ -8120,6 +8122,7 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 ||cdn.privacy-mgmt.com^$important,domain=promipool.de|android-hilfe.de|wsj.com
 !
 !
+stripe.com##.Notification[data-js-id="CookieSettingsNotification"]
 pepper.pl#$#body { overflow: auto !important; }
 pepper.pl#?##main > footer ~ .popover:has(> div > .cookies-message)
 jobs.ch##div[data-cy="cookie-banner"]
@@ -11098,7 +11101,7 @@ jagex.com##.c-cookie-consent
 ria.com##.c-notifier-container
 check24.de##.c24-cookie
 jaybirdsport.com##.cGDPR_Notice_Community
-formel1.de##.cc-window[aria-label="cookieconsent"]
+linkvertise.com,formel1.de##.cc-window[aria-label="cookieconsent"]
 tf1.fr##.ccbar
 coinkeeper.me##.ck-landing__personal-data-block
 reviews.org##.cl_gdpr_banner
