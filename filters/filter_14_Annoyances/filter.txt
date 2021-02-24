@@ -81,6 +81,8 @@
 youtube.com,youtube-nocookie.com#%#//scriptlet('set-constant', 'ytInitialPlayerResponse.adPlacements', 'undefined')
 youtube.com,youtube-nocookie.com#%#//scriptlet('set-constant', 'playerResponse.adPlacements', 'undefined')
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/75116
+myfin.by##.tg-discussion
 ! https://github.com/AdguardTeam/AdguardFilters/issues/75536
 jma.go.jp###jma_ad_config_button
 ! https://forum.adguard.com/index.php?threads/41671/
@@ -8118,6 +8120,9 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 ||cdn.privacy-mgmt.com^$important,domain=promipool.de|android-hilfe.de|wsj.com
 !
 !
+pepper.pl#$#body { overflow: auto !important; }
+pepper.pl#?##main > footer ~ .popover:has(> div > .cookies-message)
+jobs.ch##div[data-cy="cookie-banner"]
 ||comnuan.com/cmnn/cookieBubble.min.js
 promobit.com.br##.pr-cookie-modal
 comparethemarket.com##body.consent-modal-open::after
@@ -9532,7 +9537,6 @@ sm-pc.de,camping-freizeitbedarf.de,breparat.de,superstreusel.de##.lightbox-backd
 ||pikio.pl/desktop/static/js/jscookie.js
 vetz.vet##.cookie-information-wrap
 checkmk.de###checkmkCookieNotice
-pepper.pl##.tGrid-row > #softMessages-list.softMessages-list--bottom
 selfhacked.com##.njt-gdpr
 fightthenewdrug.org#$#html.pum-open-overlay { overflow: visible!important; }
 fightthenewdrug.org#$#body[data-smooth-scrolling="0"] { overflow: visible!important; }
@@ -13215,6 +13219,7 @@ consent.finanzen.net,privacy.wunderweib.de,consent2.ksta.de,consent2.express.de,
 privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 !
+pepper.pl#%#//scriptlet('set-cookie', 'cookie_policy_agreement', '3')
 coding.ms#%#//scriptlet('set-cookie', 'cookieRequestDisabled', '1')
 videogameschronicle.com#%#(function(){-1===document.cookie.indexOf("CookieControl")&&(document.cookie='CookieControl={"necessaryCookies":["wordpress_*","wordpress_logged_in_*","CookieControl"],"optionalCookies":{"functional_cookies":"accepted"}}')})();
 multiplayer.it#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var a=new MutationObserver(function(){var b=document.querySelector("button.iubenda-cs-accept-btn");if(b){ var timerId = setInterval(() => b.click(), 30); setTimeout(() => { clearInterval(timerId); }, 500); }});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},3E4)}});
@@ -13674,6 +13679,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !######### White list. Fixing filtering errors #########
 !#######################################################
 !
+! pepper.pl - incorrect blocking
+pepper.pl#@#.cookies-message
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71570
 @@||cdn.privacy-mgmt.com/wrapper/tcfv2/v1/gdpr/native-message$domain=businessinsider.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/75671
@@ -15407,6 +15414,7 @@ bleacherreport.com##.smart_banner
 m.auto.ru#$#.PromoHeaderChose { display: none!important; }
 m.auto.ru#$#.page_mobile { position: static!important; overflow: visible!important }
 tut.by##.popup-app
+myfin.by##.app-top
 s.tabelog.com##.p-webtoapp-banner
 myanimelist.net##div[data-text="Get the App"]
 myanimelist.net##.app
@@ -15439,7 +15447,6 @@ ecosia.org##.serp-cta-wrapper
 m.economictimes.com###footer_banner
 m.economictimes.com###footer ~ a[href^="https://play.google.com/store/apps/details"][href*="&utm_campaign=floating_pwa"]
 investing.com##.mobile-apps
-myfin.by##div.app-top
 bankbazaar.com###mobileAppStickyFooter
 translate.ru##.download-mobile
 m.jpnn.com##.download_apps
@@ -16582,6 +16589,8 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+myfin.by#$#.credit-modal { display: none!important; }
+myfin.by#$#body { overflow: visible!important; }
 nytimes.com##.MAG_web_anon_all_monthly-sale-dock-MKT_anon_subscribe_dock
 ||hbr.org/resources/js/components/overlay-intromercial/
 fastweb.it##.smcx-modal-survey
