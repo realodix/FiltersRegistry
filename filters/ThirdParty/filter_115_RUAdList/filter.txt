@@ -1,8 +1,8 @@
 !
-! Checksum: 439FEc6WqjR6Z+OQyo8/BA
-! OriginalVersion: 202102241650
+! Checksum: 3+YdA6IAKDImPZ5CEBbJPA
+! OriginalVersion: 202102242050
 ! Title: RU AdList + CSS Fixes
-! Last modified: 24 Feb 2021 16:50 UTC
+! Last modified: 24 Feb 2021 20:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -4178,6 +4178,7 @@ _tizers.
 ||39ee28f1ea2b0.com^$third-party
 ||3afe039fa4f1e.com^$third-party
 ||3b9xj.ru^$third-party
+||3cdn.ru^$third-party
 ||3d0d44f099.com^$third-party
 ||3ff081a2035.com^$third-party
 ||3h3hl.ru^$third-party
@@ -15331,6 +15332,7 @@ vokrug.tv##.sidebar > :not([class])
 eftwiki.ru##.sidebar > a[href][target="_blank"]
 ru-minecraft.ru##.sidebar > a[href][target="_blank"][rel="nofollow"] > img
 cheline.com.ua#?#.sidebar > aside:-abp-has(> .textwidget:empty)
+sovsport.ru##.sidebar > div:not([class])[style^="background: #ea0035;"]
 blizzardheroes.ru##.sidebar > div[class^="block"]
 vakhta-job.ru##.sidebar > div[style]
 nnovosti.info##.sidebar > div[style^="width:"]
@@ -17422,7 +17424,7 @@ gdespaces.com,spac.me,spac1.com,spac1.me,spac1.net,spaces-blogs.com,spaces.im#?#
 drive2.ru#?#div[class]:-abp-has(> div > div > .drom-logo)
 2gis.ru#?#div[class]:-abp-has(> div[class] > [class]:-abp-contains(/^Организации рядом$|^Похожие организации$/))
 novayagazeta.ru#?#div[class]:-abp-has(> div[style^="display"] ~ div > div[id*="adfox_"])
-www.kinopoisk.ru##div[class]:first-child > div[class*=" "] > div[id]:first-child ~ style[nonce] + div[class]:last-child
+www.kinopoisk.ru##div[class]:first-child > div[class*=" "] > div[id]:first-child ~ style[nonce] ~ div[class]:last-child
 echo.msk.ru##div[class]:first-child > div[class*=" "]:first-child > div + style + div[class*=" "]
 echo.msk.ru##div[class]:first-child > div[class*=" "]:first-child > style + div[class*=" "]
 ytvideo.ru##div[class][data-aid]
@@ -18084,6 +18086,7 @@ sarov.info##iframe[data-src*="/reklama."]
 obozrevatel.com##iframe[id^="google"]
 ek.ua,m.ua##iframe[name*="banner"]
 qrz.ru##iframe[src*="//ads.qrz.ru/"]
+www.kinopoisk.ru##iframe[src*="//kinopoisk-ru.clstorage.net/"]
 prodota.ru##iframe[src*="//prodota.ru/templates/"]
 x-minus.in##iframe[src*="/assets/rkl/"]
 newstube.ru##iframe[src*="/b/iframe?id="]
@@ -20268,6 +20271,7 @@ igdz1.ru^$script,domain=igdz.ru
 ||kinopleera.net/js/replace_
 ||kinopod.ru/branding/
 ||kinopod.ru/show/
+||kinopoisk-ru.clstorage.net^$subdocument,domain=www.kinopoisk.ru
 ||kinopoisk-ru.naydex.net^$subdocument,domain=www.kinopoisk.ru
 ||kinored.club^*/player_field.png
 ||kinorom.com/img/binfon.
@@ -25516,6 +25520,7 @@ livesport.ws##body > div:not([id]):not([class]) + div:not([id]):not([class]) + d
 livesport.ws#$?#body { padding-top: 0 !important }
 ! ---
 lostfilm.run,lostfilm.tv,lostfilm.tw#$?#.footer { background: #1c1e1f !important; color: #fff !important }
+lostfilm.run,lostfilm.tv,lostfilm.tw#$?#.lf_need_help { z-index: 10!important }
 lostfilm.run,lostfilm.tv,lostfilm.tw#$?#.lstfml .footer .links a { color: #fff !important }
 lostfilm.run,lostfilm.tv,lostfilm.tw##body > * > div[style^="padding-top"]
 lostfilm.run,lostfilm.tv,lostfilm.tw##body > a[onclick]
@@ -27008,8 +27013,7 @@ websdr.space#%#//scriptlet('ubo-no-setInterval-if.js', 'clientHeight', '1000')
 websdr.space#@#*
 wowskill.ru#%#//scriptlet('ubo-nano-setInterval-booster.js', 'p')
 www.goha.ru#%#//scriptlet('ubo-set-constant.js', 'checkVip', 'true')
-www.kinopoisk.ru#%#//scriptlet('ubo-abort-on-property-read.js', 'Object.prototype.getGlobalVariable')
-www.kinopoisk.ru#%#//scriptlet('ubo-abort-on-property-read.js', 'Object.prototype.isLongExperiment')
+www.kinopoisk.ru#%#//scriptlet('ubo-abort-on-property-read.js', 'Object.prototype.getManager')
 yandex.by,yandex.kz,yandex.ru,yandex.ua,yandex.uz##body > .serp_js_inited .serp-list > .serp-item:has(:scope > div > div > .label_theme_direct)
 yandex.by,yandex.kz,yandex.ru,yandex.ua,yandex.uz##body[class*="b-page"] .main.widgets :not(div) :not(div) > div[class] > div[class] > style:not(div) + div[class]:not([class*="widget"])
 yandex.by,yandex.kz,yandex.ru,yandex.ua,yandex.uz#$#body[class*="b-page"] .main.widgets :not(div) :not(div) > div[class] > div[class] { height: auto !important }
