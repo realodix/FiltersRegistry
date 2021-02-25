@@ -103,6 +103,9 @@ sudya-dredd.ru#%#//scriptlet("abort-current-inline-script", "stopPrntScr")
 sudya-dredd.ru#$?#body > style:contains(::selection) { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74927
 ||cdn.tinypass.com/api/tinypass.min.js$domain=seekingalpha.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/75446
+mixsoft.org##center > a[href^="https://mixsoft.org/"][target="_blank"]
+mixsoft.org###footer-widgets
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74745
 earncoin.site##.box-main > div.faq
 earncoin.site##.short div.row > div.text-center > div.content
@@ -3776,7 +3779,7 @@ rp5.ru,rp5.ua,rp5.by,rp5.kz,rp5.co.uk#$?##content > div > div[id]:has(> ins.adsb
 !
 ! rambler with side-projects: autorambler.ru,wmj.ru,passion.ru,eda.ru,quto.ru,rns.online,championat.com,gazeta.ru,lenta.ru
 !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)
-letidor.ru,autorambler.ru,wmj.ru,motor.ru,passion.ru,quto.ru,eda.ru,rns.online,championat.com,gazeta.ru,lenta.ru,rambler.ru#%#//scriptlet("abort-on-property-write", "Object.prototype.getPlaceSelectorByBannerId")
+afisha.ru,letidor.ru,autorambler.ru,wmj.ru,motor.ru,passion.ru,quto.ru,eda.ru,rns.online,championat.com,gazeta.ru,lenta.ru,rambler.ru#%#//scriptlet("abort-on-property-write", "Object.prototype.getPlaceSelectorByBannerId")
 !#endif
 rambler.ru#$#.ad.ad-banner.adbanner.nav-ad.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display: block !important; }
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
@@ -5607,6 +5610,7 @@ postimees.ee#$#.adblock-notif { display: none !important; }
 postimees.ee#%#//scriptlet('remove-class', 'cookie-paywall-visible', 'article[class^="root"]')
 !
 !#safari_cb_affinity(general)
+pirlotvonlinehd.com#@#.adsBox
 mc-at.org#@#.showads
 @@||marriedgames.com.br/wp-content/cache/*/js/advertising-*.js
 @@||lavocedimanduria.it/TemplateLive/app/assets/js/prebid-ads.js
