@@ -222,6 +222,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||visilabs.com^$third-party
 ||visilabs.net^$third-party
 !
+||ad-spire.net^
 ||f-counter.net^$third-party
 ||moshimo.com^$third-party
 ||counter.monkeybanana3.com^
@@ -8481,6 +8482,12 @@ link.gmapp*.net$image
 ||hh.ru/analytics^
 ! End: cnet.com trackers
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/75799
+!#if (adguard_app_windows || adguard_app_mac || adguard_app_android)
+||cdn.optimizely.com^$redirect=nooptext,domain=alaskaair.com
+||cdn.appdynamics.com/adrum$redirect=nooptext,domain=alaskaair.com
+||alaskaair.com/javascripts/adrum.js$redirect=nooptext,domain=alaskaair.com
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53722
 ||google-analytics.com/analytics.js$important,domain=unique-tutorials.info|getintopc.com|solvetube.site|tech-platform.info
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43140
