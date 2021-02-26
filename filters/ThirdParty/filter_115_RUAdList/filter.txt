@@ -1,8 +1,8 @@
 !
-! Checksum: QwBOpnGk6xVfj/W8e9dVyA
-! OriginalVersion: 202102261650
+! Checksum: K0ZtdJZIkXMmrJspM1fYcg
+! OriginalVersion: 202102262050
 ! Title: RU AdList + CSS Fixes
-! Last modified: 26 Feb 2021 16:50 UTC
+! Last modified: 26 Feb 2021 20:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -17285,6 +17285,8 @@ gdz-putina.fun,gdzputina.net#?#div:-abp-has(> img[src*="/oops"])
 rp5.am,rp5.by,rp5.co.nz,rp5.co.uk,rp5.kz,rp5.lt,rp5.lv,rp5.md,rp5.ru,rp5.ua#?#div:-abp-has(> ins)
 draug.ru#?#div:-abp-has(> script:-abp-contains(snowsrc))
 football.kulichki.net#?#div:-abp-has(> table > tbody a[href*="kulichki.com/advert"])
+sdamgia.ru##div:first-child > [class*=" "] > style ~ [class*=" "]
+sdamgia.ru##div:first-child > [class*=" "] ~ style ~ [class*=" "]
 tomat-pomidor.com##div:not([id]):not([class])[style^="min-height:"]
 vz.ru##div:not([id])[style*="margin"][style*="width: 240px"]
 dtf.ru,tjournal.ru,vc.ru##div[air-module="module.boosterPromo"]
@@ -17422,8 +17424,6 @@ gdespaces.com,spac.me,spac1.com,spac1.me,spac1.net,spaces-blogs.com,spaces.im#?#
 drive2.ru#?#div[class]:-abp-has(> div > div > .drom-logo)
 2gis.ru#?#div[class]:-abp-has(> div[class] > [class]:-abp-contains(/^Организации рядом$|^Похожие организации$/))
 novayagazeta.ru#?#div[class]:-abp-has(> div[style^="display"] ~ div > div[id*="adfox_"])
-sdamgia.ru##div[class]:first-child > [class*=" "] > style ~ [class*=" "]
-sdamgia.ru##div[class]:first-child > [class*=" "] ~ style ~ [class*=" "]
 www.kinopoisk.ru##div[class]:first-child > div[class*=" "] > div[id]:first-child ~ style[nonce] ~ div[class]:last-child
 echo.msk.ru##div[class]:first-child > div[class*=" "]:first-child > div + style + div[class*=" "]
 echo.msk.ru##div[class]:first-child > div[class*=" "]:first-child > style + div[class*=" "]
@@ -17714,6 +17714,7 @@ nnm-club.lib,nnm-club.me,nnmclub.ro,nnmclub.to##div[id][style^="display:"][style
 vgae.ru##div[id][style^="min-height:100px;"]
 vgae.ru##div[id][style^="min-height:250px;"]
 sdamgia.ru##div[id][style^="width:"][style*="159"]
+sdamgia.ru##div[id][style^="width:"][style*="160"]
 ivbb.ru##div[id^="ADS_"]
 1tv.ru,2mm.ru,auto.vesti.ru,ctc.ru,f1news.ru,irr.ru,probirka.org,sobesednik.ru,sportbox.ru,tjournal.ru,tvc.ru##div[id^="AdFox_banner"]
 dorognoe.ru,europaplus.ru,radio7.ru,retrofm.ru,sportfm.ru##div[id^="AdwolfBanner240x400_"]
@@ -20272,7 +20273,7 @@ igdz1.ru^$script,domain=igdz.ru
 ||kinopleera.net/js/replace_
 ||kinopod.ru/branding/
 ||kinopod.ru/show/
-||kinopoisk-ru.clstorage.net^$subdocument,domain=www.kinopoisk.ru
+||kinopoisk-ru.clstorage.net^**?/$subdocument,domain=www.kinopoisk.ru
 ||kinored.club^*/player_field.png
 ||kinorom.com/img/binfon.
 ||kinosalo.com/player/*.php?*referer=
@@ -21949,6 +21950,7 @@ adblockmetrics.ru,antiadblock.ru,better-games.ru,clickscloud.net,disk-space.ru,f
 ||mashintop.ru^$xmlhttprequest,domain=mashintop.ru
 ||news.ru^$csp=script-src 'self' * data:
 ||paperdoc.ru^$xmlhttprequest,domain=paperdoc.ru
+||piterskie-zametki.ru^*#$xmlhttprequest,domain=piterskie-zametki.ru
 ||politros.com^$xmlhttprequest,domain=politros.com
 ||shtrafsud.ru^$xmlhttprequest,domain=shtrafsud.ru
 ||tele.ru^$xmlhttprequest,domain=tele.ru
@@ -23767,7 +23769,6 @@ xn--112-5cd3baof9c5c.xn--p1ai#@#.wrapad
 @@/728x90.$image,domain=gbsmp.ru
 @@/GFC/branding/*$domain=citi.com|citibank.com
 @@/^https://ads.red/$popup
-@@/^https?://kinopoisk-ru\.clstorage\.net\/[^\s]+/dist\/embed\.html\?frameId=frame+\d{5,6}$/$subdocument,domain=www.kinopoisk.ru
 @@/adbox.$domain=adbox.one
 @@/adfox.$script,domain=alfabank.ru|megafon.ru
 @@/adfox.reload_code.$domain=rg.ru
