@@ -516,6 +516,8 @@ smarthomearea.de#@#.an-advert-banner
 tv5unis.ca#?#div[style="min-height: 0px;"] > div[class^="css-"] > div[class^="css-"] > div[data-m32-ad]:upward(2)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69716
 moneyvox.fr#$?#.habpage { remove: true; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/76272
+11anim.com#?#div[class^="pub"]:contains(adsbygoogle)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67995
 zdnet.fr#?#.river > article.item:has(> div[class] > section#sponsoredItemtop)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67604
@@ -574,6 +576,8 @@ jeuxvideo.com#?#.list-actu-home > li[-ext-has='span.officiel']
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/76272
+11anim.com#%#//scriptlet("abort-on-property-read", "zoneSett")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73015
 reflectim.fr#%#//scriptlet('set-constant', 'aEteAffiche', 'true')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/72800
@@ -661,6 +665,7 @@ laprovence.com$$script[wildcard="*((false?*https:*:document.location.protocol)+*
 !--------------------------------------------------------!
 !
 neogeo-system.com##.inner a[onclick*="'shift'"][target="_blank"]
+||11anim.com/ctag*.js
 ddaynormandy.forumgaming.fr###main-content a[onclick*="'shift'"][target="_blank"]
 streamonsport.info,allfoot.info###html3
 streamonsport.info##img[alt="bannière publicitaire"]
