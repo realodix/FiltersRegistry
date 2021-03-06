@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 06March2021v1
+! OriginalVersion: 06March2021v3
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -15,6 +15,7 @@ tekniikanmaailma.fi##.NoAdBlocker_main
 ! -----SPECIFIC FILTERS END-----
 ! -----NETWORK FILTERS-----
 ||damoh.katsomo.fi/$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
+||freewheel-jitt.sanoma.fi/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
 ! -----NETWORK FILTERS END-----
 ! -----SCRIPTS-----
 aamulehti.fi,satakunnankansa.fi,valkeakoskensanomat.fi,nokianuutiset.fi,janakkalansanomat.fi,kmvlehti.fi,jamsanseutu.fi,suurkeuruu.fi,kankaanpaanseutu.fi,rannikkoseutu.fi,tyrvaansanomat.fi,merikarvialehti.fi,sydansatakunta.fi#%#//scriptlet('ubo-nostif.js', 'adblockDetected', '0')
@@ -749,7 +750,7 @@ iltalehti.fi#?#div:not(.sub-category-unikulma):not(.sub-category-rahapuhe):not(.
 iltalehti.fi#?#div[class="card "]:-abp-has([class="alennuskoodi-column-embed"])
 ! Sanoma Oyj video ads
 ||com-wakedynamite-production-publish.s3.amazonaws.com/publish/$media
-||dwk14raokkwxv.cloudfront.net/sanomafi/media/*.mp4$media
+||dwk14raokkwxv.cloudfront.net/sanomafi/media/*.mp4
 ||freewheel-jitt.sanoma.fi/*.mp4
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media
 ||nelonenmedia.fi/ads/$media
@@ -779,10 +780,12 @@ murha.info#@#.adsbox
 !#if !ext_ublock
 !#if !adguard
 ||damoh.katsomo.fi/*$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
+||freewheel-jitt.sanoma.fi/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
 !#endif
 !#endif
-! appears when blocking:
-||mobiili.fi/wp-content/themes/mobiilitheme/images/small-loading.gif$image
+! appears when blocking ads:
+||mobiili.fi/wp-content/themes/mobiilitheme/images/small-loading.gif
+ruutu.fi##.RuutuPlayer__Error-sc-1o2b3la-0
 ! To fix the opening of dna.fi / cdon.fi product links on hinta.fi
 @@||adform.net^$~third-party
 @@||tradedoubler.com^$~third-party
@@ -798,7 +801,7 @@ murha.info#@#.adsbox
 @@||photour.net^$elemhide
 @@||power.fi/Umbraco/Api/Tracking/TrackOrder$xmlhttprequest,domain=power.fi
 @@||radiosun.fi/wp-content/uploads/2020/09/Ylojarven-keilahalli-300x250-1.jpg
-@@||tags.tiqcdn.com/utag/sanoma-fi/lifestyle/prod/utag.js$script,domain=hyvaterveys.fi
+@@||tags.tiqcdn.com/utag/sanoma-fi/*/utag.js
 @@||telsu.fi/dyn2?setref=nauris$subdocument,domain=nauris.fi
 @@||uk.cdn-net.com/cc.js$script,domain=power.fi
 anna.fi#@#.sponsored-content
