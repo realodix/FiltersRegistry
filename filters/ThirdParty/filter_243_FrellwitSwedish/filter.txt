@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-03-07 20:05:40 CET
+! Last modified: 2021-03-08 18:30:38 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -28,6 +28,8 @@
 .space/?domain=grabbers.info$all
 /aab/tv4play$redirect=noopjs,script,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 /aftonbladet/crypt/?lpkey$all
+/casinoguide$all,domain=aftonbladet.se
+/casinokollen$all,domain=aftonbladet.se
 /expressen/crypt/?lpkey$all
 /google-analytics-for-wordpress$important,script
 /google-analytics-premium$important,script
@@ -306,6 +308,7 @@ villalivet.se##a:has-text(/sponsra/i):upward(3)
 vinbanken.se#$#.fancybox-lock { overflow-y: auto !important; }
 voister.se##.voister .brief:has(.voister .campaign-vignette)
 voodoofilm.org##.content-news:has(span[id*="Sponsored"])
+wellness.se##[id^="adPlacement"]:upward(1)
 www.aftonbladet.se#%#//scriptlet('ubo-aeld.js', 'mousemove', 'g()')
 www.aftonbladet.se#%#//scriptlet('ubo-nosiif.js', 'e.ping()')
 www.aftonbladet.se#%#//scriptlet('ubo-nosiif.js', 'e.reportVisibility()')
@@ -320,7 +323,6 @@ www.svd.se#%#//scriptlet('ubo-aopr.js', 'navigator.sendBeacon')
 www.svd.se#%#//scriptlet('ubo-aopr.js', 'Tracker')
 youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||aftonbladet.se.senaste.$document
-||aftonbladet.se/kampanj/casinoguide$all
 ||amazon-adsystem.com^$third-party,important,domain=bilresaieuropa.se
 ||best-prizes-now.*^$all
 ||biowebb-data.*.amazonaws$important,third-party
@@ -338,7 +340,7 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||ssl.p.jwpcdn.com^*/freewheel.js$important,script,domain=eurosport.se
 ||ssl.p.jwpcdn.com^*/gapro.js$important,script,domain=freeride.se|happyride.se|ilikeradio.se
 ||ssl.p.jwpcdn.com^*/googima.js$important,script,domain=laget.se
-||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=aftonbladet.se|axess.se|cdn.jwplayer.com|embed.futuresportsmedia.com|eurosport.se|fasttrack.webstream.dk|fotbolldirekt.se|freeride.se|happyride.se|hockeysverige.se|ilikeradio.se|innebandymagazinet.se|laget.se|maharajah.se|moviezine.se|muscles.se|nyheteridag.se|streamio.com|svd.se|tv.nu
+||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=aftonbladet.se|axess.se|cdn.jwplayer.com|embed.futuresportsmedia.com|eurosport.se|fasttrack.webstream.dk|fotbolldirekt.se|freeride.se|happyride.se|hockeysverige.se|ilikeradio.se|innebandymagazinet.se|laget.se|maharajah.se|moviezine.se|muscles.se|nyheteridag.se|streamio.com|svd.se|tv.nu|wellness.se
 ||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=aftonbladet.se|eurosport.se|freeride.se|happyride.se
 ||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=moviezine.se
 !#if env_chromium
@@ -1205,6 +1207,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /wp-content/uploads/*unibet$image
 /wp-json/wpstatistics/*$xmlhttprequest
 /wpbm-banners/*$image
+/www.wellness.se\/cnp-assets\/[0-9]+./$script
 /www/images/*$domain=elektronikforumet.com
 /xhr-ads.min.js$script
 /zad.js$domain=nordic.ign.com
@@ -2004,6 +2007,7 @@ yelp.se##.js-cookie-iframe
 ||citygate.se^*/statistics$xmlhttprequest
 ||ck.page^$third-party
 ||cmatch.idg.se^
+||cmp.wellness.se^
 ||cms.catena.media/js/cm-tracking.$script
 ||collect.breakit.se^
 ||compricer.se^$third-party
