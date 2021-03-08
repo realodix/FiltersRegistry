@@ -1,12 +1,12 @@
 !
-! Checksum: CYE+sM365yEhdJqvqfiVGQ
+! Checksum: 7sFSLW9QcWuiTcHJF6Dc3Q
 ! Title: Polskie Filtry Elementów Irytujących
 ! Polish Annoyance Filters
 ! Codename: Annoyance - Main
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
-! Last modified: Sun, 07 Mar 2021, 21:56 UTC+01
-! OriginalVersion: 2021.3.7.3
+! Last modified: Sun, 07 Mar 2021, 22:36 UTC+01
+! OriginalVersion: 2021.3.7.5
 ! Expires: 2 days
 ! Najnowsza wersja zawsze na: https://github.com/PolishFiltersTeam/PolishAnnoyanceFilters
 ! Zgłoszenia:
@@ -14,7 +14,7 @@
 !   GitHub => https://github.com/PolishFiltersTeam/PolishAnnoyanceFilters/issues
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Copyright © 2021 Polish Filters Team
-! Aktualizacja: nie, 07 mar 2021, 21:56 UTC+01
+! Aktualizacja: nie, 07 mar 2021, 22:36 UTC+01
 !
 !
 ! Newslettery (nie popupy)
@@ -4128,8 +4128,7 @@ endo.pl##.contact-container
 enfamil.pl##.float-chat
 eobuwie.com.pl###open-chat
 epodreczniki.pl##.send-suggestion-btn
-eskarock.pl##.messenger
-eska.pl,senatkomorki.pl##.messenger
+eska.pl,eskarock.pl,senatkomorki.pl##.messenger
 eskk.pl##.ckontakt
 etoto.pl###sbChatMinimizedIdle
 eurobank.pl##.reviews
@@ -6034,8 +6033,8 @@ polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com###pafdetec
 !@ Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies i EasyList/AdGuard Base!
 !@ Collaborators: MajkiIT, F4z, xxcriticxx, blocker999, hawkeye116477, krystian3w
 !@ Homepage: https://www.certyficate.it/
-!@ Version: 2021.3.7.2
-!@ Last modified: Sun, 07 Mar 2021, 21:56 UTC+01
+!@ Version: 2021.3.7.4
+!@ Last modified: Sun, 07 Mar 2021, 22:36 UTC+01
 !@ Expires: 2 days
 !@ Support:
 !@   Email => errors@certyficate.it
@@ -6046,7 +6045,7 @@ polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com###pafdetec
 !@ License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0)
 !@ Copyright © 2021 Certyficate IT & Polish Filters Team
 !@ Najnowsza wersja zawsze na: https://www.certyficate.it/adblock/
-!@ v.2021.3.7.2 aktualizacja: nie, 07 mar 2021, 21:56 UTC+01
+!@ v.2021.3.7.4 aktualizacja: nie, 07 mar 2021, 22:36 UTC+01
 !@
 !@
 !@ Specyficzne reguły ukrywające
@@ -7075,6 +7074,7 @@ gog.com##[floating-banner-id="cookies"]
 goin.pl##body > div[style="color:white;background:black;padding:5px;"]
 gokf.gda.pl###zgoda_cookie
 gokom.eu###gokom-cookies
+goldenline.pl##body:not(.modal-open):not([style]) #profiling-agreement, body:not(.modal-open):not([style]) .modal-backdrop
 goldwell.com##.js-PrivacyNotice
 golfparkspoland.pl###infoCookieWrapper
 gomez.pl##.window-police
@@ -9677,6 +9677,7 @@ gg.pl#@#body > div:nth-of-type(2) > div
 !@
 !@ Bugi Kiboke
 al.to,combat.pl#@##app > div:first-child > div
+goldenline.pl#@#.cookie-modal:not(body):not(html):not(.in):not(.mfp-hide)
 kpcen-torun.edu.pl#@##cookieModal:not(.countryCookieModalContainer):not(.idcac)
 pl#@##catapult-cookie-bar
 pl#@#.ccc-widget:not(body):not(html)
@@ -10780,7 +10781,7 @@ delikarta.pl###cookieModal
 dkms.pl#$#.cc-window-active { overflow: auto !important; }
 dkms.pl##.cc-window[aria-label]
 dm.pgi.gov.pl###ispmodal, .modal-backdrop, .jquery-modal
-dobrapogoda24.pl#%#//scriptlet('ubo-ra.js', 'class', 'body[class="modal-open"] stay')
+dobrapogoda24.pl#%#//scriptlet('ubo-ra.js', 'class', 'body[class="modal-open"]', 'stay')
 dobrapogoda24.pl,repostuj.pl###rodo-modal, .modal-backdrop
 dobrzemieszkaj.pl###axn
 dobrzemieszkaj.pl#$#.nlOpen { overflow: auto !important; }
@@ -10836,6 +10837,8 @@ giantfabryczna.pl,liv-cycling.com###cookiePopupModal, .modal-backdrop
 gitara-sklep.pl#$#body { padding-top: 0 !important; }
 gmina-aleksandrow.pl###g_toplayer
 goldenline.pl###profiling-agreement, .modal-backdrop
+goldenline.pl###react-portals:has(.cookie-modal)
+goldenline.pl,sklepyinfo.pl#$#body[style*="overflow"] { overflow: auto !important; }
 google.com,google.pl#%#//scriptlet('ubo-aeld.js', 'DOMContentLoaded', 'CONSENT')
 gryonline.wp.pl,tv.pudelek.pl#%#//scriptlet('ubo-set.js', 'wp_no_consent_screen', 'true')
 handluj.com,tarnobrzeg.info###rodo-message, .modal-backdrop
@@ -11037,7 +11040,6 @@ serialowa.pl#$#html.pum-open { overflow: auto !important; }
 serwis.currenda.pl#$#div { margin-top: auto !important; }
 silesiacitycenter.com.pl###consent-modal, .modal-backdrop
 sklepdlalekarza.com##.basicLightbox
-sklepyinfo.pl#$#body[style*="overflow"] { overflow: auto !important; }
 sklepyinfo.pl###modal1.modal, .modal-overlay
 sklep.polcalc.pl###welcomeModal, .modal-backdrop
 sklep.polcalc.pl#$#.modal-open { overflow-y: auto !important; padding-right: 0 !important; }
