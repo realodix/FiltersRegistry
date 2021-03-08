@@ -110,7 +110,7 @@ Please learn more about translating our products here: https://kb.adguard.com/en
 ## How to build
 
 ```
-npm install
+yarn install
 ```
 
 Run the following command:
