@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-03-09 10:58:53 CET
+! Last modified: 2021-03-10 09:40:27 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -185,6 +185,7 @@ klart.se#%#//scriptlet('ubo-rc.js', 'mega-loading')
 klart.se##.content-box-list__item:has(.ad-text:has-text(/annons/i))
 kokaihop.se#$?#.cookieBarWrapper { remove: true; }
 kokaihop.se#$#body { overflow-y: auto !important; }
+komponentkoll.se##img[src*="/promo/"]:upward(1)
 konsolnyheter.se#%#//scriptlet('ubo-acis.js', 'addEvent', 'oncopy')
 konsolnyheter.se#%#//scriptlet('ubo-acis.js', 'disableSelection')
 konsolnyheter.se#%#//scriptlet('ubo-acis.js', 'show_popup')
@@ -339,21 +340,18 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=noopjs,script,domain=aletorget.se|alingsastorget.se|almhulttorget.se|alvestatorget.se|amaltorget.se|angelholmtorget.se|arbogatorget.se|arvikatorget.se|askersundtorget.se|avestatorget.se|bastadtorget.se|bengtsforstorget.se|bjuvtorget.se|bodentorget.se|bollebygdtorget.se|bollnastorget.se|borastorget.se|borlangetorget.se|botkyrkatorget.se|bromollatorget.se|eksjotorget.se|enkopingtorget.se|eskilstunatorget.se|eslovtorget.se|fagerstatorget.se|falkenbergtorget.se|falkopingtorget.se|faluntorget.se|filipstadtorget.se|flentorget.se|forshagatorget.se|gallivaretorget.se|gavletorget.se|gislavedstorget.se|goteborgtorget.se|gotenetorget.se|gotlandtorget.se|hagforstorget.se|hallsbergtorget.se|hallstahammartorget.se|halmstadtorget.se|haningetorget.se|harnosandtorget.se|harrydatorget.se|hassleholmtorget.se|hebytorget.se|hedemoratorget.se|helsingborgtorget.se|herrljungatorget.se|hoforstorget.se|hoganastorget.se|hoortorget.se|horbytorget.se|huddingetorget.se|hudiksvalltorget.se|hultsfredtorget.se|hyltetorget.se|jonkopingtorget.se|kalixtorget.se|kalmartorget.se|karlshamntorget.se|karlskogatorget.se|karlskronatorget.se|karlstadtorget.se|katrineholmtorget.se|kavlingetorget.se|kiltorget.se|kirunatorget.se|klippantorget.se|kopingtorget.se|kramforstorget.se|kristianstadtorget.se|kristinehamntorget.se|krokomtorget.se|kumlatorget.se|kungalvtorget.se|kungsbackatorget.se|laholmtorget.se|landskronatorget.se|leksandtorget.se|lidkopingtorget.se|ljungbytorget.se|ljusdaltorget.se|ludvikatorget.se|luleatorget.se|lundtorget.se|lyckseletorget.se|lysekiltorget.se|malmotorget.se|mariestadstorget.se|markarydtorget.se|marktorget.se|moratorget.se|nackatorget.se|nassjotorget.se|norrtaljetorget.se|nybrotorget.se|nykopingtorget.se|nynashamntorget.se|olandtorget.se|olofstromtorget.se|orebrotorget.se|ornskoldsvikstorget.se|orusttorget.se|osbytorget.se|oskarshamntorget.se|ostersundtorget.se|osthammartorget.se|partilletorget.se|piteatorget.se|ronnebytorget.se|saffletorget.se|salatorget.se|sandvikentorget.se|sigtunatorget.se|simrishamntorget.se|sjobotorget.se|skaratorget.se|skellefteatorget.se|skovdetorget.se|skuruptorget.se|soderhamntorget.se|sodertaljetorget.se|sollefteatorget.se|sollentunatorget.se|solnatorget.se|solvesborgtorget.se|staffanstorptorget.se|stenungsundtorget.se|stockholmtorget.se|strangnastorget.se|stromstadtorget.se|sundsvalltorget.se|sunnetorget.se|svenljungatorget.se|tabytorget.se|tanumtorget.se|tidaholmtorget.se|tierptorget.se|timratorget.se|tingsrydtorget.se|tjorntorget.se|tomelillatorget.se|torsbytorget.se|tranastorget.se|tranemotorget.se|trelleborgtorget.se|trollhattantorget.se|trosatorget.se|uddevallatorget.se|ulricehamntorget.se|umeatorget.se|uppsalatorget.se|vallentunatorget.se|vanersborgtorget.se|varatorget.se|varbergtorget.se|varnamotorget.se|vasterastorget.se|vasterviktorget.se|vaxjotorget.se|vellingetorget.se|vetlandatorget.se|vimmerbytorget.se|ystadtorget.se
 ||s.arclk.net/tr?$all
 ||ssl.p.jwpcdn.com^*/freewheel.js$important,script,domain=eurosport.se
-||ssl.p.jwpcdn.com^*/gapro.js$important,script,domain=freeride.se|happyride.se|ilikeradio.se
-||ssl.p.jwpcdn.com^*/googima.js$important,script,domain=laget.se
-||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=aftonbladet.se|axess.se|cdn.jwplayer.com|embed.futuresportsmedia.com|eurosport.se|fasttrack.webstream.dk|fotbolldirekt.se|freeride.se|happyride.se|hockeysverige.se|ilikeradio.se|innebandymagazinet.se|laget.se|maharajah.se|moviezine.se|muscles.se|nyheteridag.se|streamio.com|svd.se|tv.nu|wellness.se
-||ssl.p.jwpcdn.com^*/sharing.js$important,script,domain=aftonbladet.se|eurosport.se|freeride.se|happyride.se
+||ssl.p.jwpcdn.com^*/jwpsrv.js$important,script,domain=aftonbladet.se|axess.se|cdn.jwplayer.com|embed.futuresportsmedia.com|eurosport.se|fasttrack.webstream.dk|freeride.se|happyride.se|laget.se|moviezine.se|streamio.com|svd.se|wellness.se
 ||ssl.p.jwpcdn.com^*/vast.js$important,script,domain=moviezine.se
 !#if env_chromium
 proffs.se#$#*::-webkit-scrollbar-thumb { background: #5e5e5e !important; border: 64px none #ffffff !important; border-radius: 0px !important; }
 proffs.se#$#*::-webkit-scrollbar { display: unset !important; }
 nyadagbladet.se#%#//scriptlet('ubo-acis.js', 'OneSignal')
 newsvoice.se,nyadagbladet.se#%#//scriptlet('ubo-acis.js', 'exactmetrics_scroll_tracking_load')
-binero.se,boktugg.se,carup.se,dagensanalys.se,dinbyggare.se,ettgottskratt.se,exakt24.se,humorbibeln.se,i-chalmers.se,kvalitetsmagasinet.se,kvartal.se,ladok.se,lakartidningen.se,lchfarkivet.se,miljo-utveckling.se,mobilanyheter.net,newsner.com,rikatillsammans.se,sportbibeln.se,sportpanelen.se,telekomidag.se,trafiksakerhet.se,vdtidningen.se,villalivet.se,zeinaskitchen.se#%#//scriptlet('ubo-acis.js', 'monsterinsights_frontend')
+boktugg.se,carup.se,dagensanalys.se,dinbyggare.se,ettgottskratt.se,exakt24.se,humorbibeln.se,kvartal.se,lakartidningen.se,newsner.com,sportbibeln.se,sportpanelen.se,trafiksakerhet.se,villalivet.se,zeinaskitchen.se#%#//scriptlet('ubo-acis.js', 'monsterinsights_frontend')
 di.se#%#//scriptlet('ubo-nosiif.js', 'runAdBlockPaywall', '1000')
-bastad.se,brpsystems.se,fysikstugan.se,gdpr.se,heleneholmsif.se,historiskahem.se,melodifestivalklubben.se,newsvoice.se,nyadagbladet.se,pppress.se,thorengruppen.se,trafikskola.se,utslappsratt.se#%#//scriptlet('ubo-set.js', 'em_track_user', 'false')
-bastad.se,brpsystems.se,fysikstugan.se,gdpr.se,heleneholmsif.se,historiskahem.se,melodifestivalklubben.se,newsvoice.se,nyadagbladet.se,pppress.se,thorengruppen.se,trafikskola.se,utslappsratt.se#%#//scriptlet('ubo-set.js', 'exactmetrics_frontend', 'undefined')
-binero.se,boktugg.se,carup.se,dagensanalys.se,dinbyggare.se,ettgottskratt.se,exakt24.se,humorbibeln.se,i-chalmers.se,kvalitetsmagasinet.se,kvartal.se,ladok.se,lakartidningen.se,lchfarkivet.se,miljo-utveckling.se,mobilanyheter.net,newsner.com,rikatillsammans.se,sportbibeln.se,sportpanelen.se,telekomidag.se,trafiksakerhet.se,vdtidningen.se,villalivet.se,zeinaskitchen.se#%#//scriptlet('ubo-set.js', 'mi_track_user', 'false')
+bastad.se,fysikstugan.se,heleneholmsif.se,historiskahem.se,melodifestivalklubben.se,newsvoice.se,nyadagbladet.se,pppress.se,thorengruppen.se,trafikskola.se,utslappsratt.se#%#//scriptlet('ubo-set.js', 'em_track_user', 'false')
+bastad.se,fysikstugan.se,heleneholmsif.se,historiskahem.se,melodifestivalklubben.se,newsvoice.se,nyadagbladet.se,pppress.se,thorengruppen.se,trafikskola.se,utslappsratt.se#%#//scriptlet('ubo-set.js', 'exactmetrics_frontend', 'undefined')
+boktugg.se,carup.se,dagensanalys.se,dinbyggare.se,ettgottskratt.se,exakt24.se,humorbibeln.se,kvartal.se,lakartidningen.se,newsner.com,sportbibeln.se,sportpanelen.se,trafiksakerhet.se,villalivet.se,zeinaskitchen.se#%#//scriptlet('ubo-set.js', 'mi_track_user', 'false')
 ||prod-adops-proxy.dnitv.net^$redirect=nooptext,domain=discoveryplus.se
 !#endif
 !#if !env_chromium
@@ -1243,7 +1241,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 @@||happyride.se/img/admarket/$~third-party
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=atl.nu|ekuriren.se|gamereactor.se|kkuriren.se|screen9.com|sn.se|strengnastidning.se
 @@||js.createsend1.com/js/jquery
-@@||mparticle.com^*/login$domain=discoveryplus.se
 @@||sdk.pulse.schibsted.com/loader.min.js$domain=special.aftonbladet.se
 _jquery.blockUI.$domain=fssweden.se
 aapl.se,digilar.se,hrnytt.se,ljuskultur.se,omvarlden.se,svenskfotboll.se##.cookies
@@ -1374,7 +1371,7 @@ brinkenbakar.se##.elementor-popup-modal
 brollopsmagasinet.se,bussmagasinet.se,customerinsider.se,exakt24.se,maklarvarlden.se,startaochdriva.se##a[target="_blank"]
 brollopsmagasinet.se,bussmagasinet.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se,nyhetersto.se,svenskbyggtidning.se##a.gofollow[data-track]
 brollopstorget.se,familjeliv.se##.ad_right
-bukefalos.se,thaisnack.se##.u-bottomFixer
+bukefalos.se,friaordet.org,husbilsklubben.se,rollspel.nu,thaisnack.se##.u-bottomFixer
 bussmagasinet.se###page > div:not(.left):not(.right)
 bussmagasinet.se###titlebanner
 byggahus.se###svartalistan-login-required-overlay
@@ -1600,7 +1597,6 @@ hockeynews.se##[class*="ad-style"], [id^="outsider-"], .ad-mob-container, #mobil
 hrbloggen.se,hypeline.se##[class^="ad_"]
 hungrig.nu##.ui-widget-overlay, .ui-dialog
 husbil.se,husvagn.se,karlskrona.com,karlstad.com,noje.se,stockholm.com##.ui-optin-wrapper
-husbilsklubben.se##.u-bottomFixer
 hypeline.se##.sponsrad_ruta
 icagruppen.se##.cookieInfo
 icagruppen.se##div[ng-show*="isUiDisabled"]
@@ -1645,7 +1641,6 @@ koket.se##div[class*="recipe_sponsored"] div[class*="recipe_sourceImageDesktop"]
 kolozzeum.com##td[width="305"]
 kommunal.se###modalBackdrop, #modalContent
 komponentkoll.se##.gdpr-wide
-komponentkoll.se##.plsDontBlockThx ~ *
 konsolnyheter.se##.t3-topbanner
 kulturbloggen.com,schack.se##.sidebar .widget_custom_html
 kungalvsposten.se,kungsbackaposten.se,lokaltidningensto.se,molndalsposten.se##.wp-slot-layout-article-native, .native-div, [data-html*="ad-container"]
@@ -1989,7 +1984,7 @@ yelp.se##.js-cookie-iframe
 ||cdn.advisible.com/accl$script
 ||cdn.advisible.com/adk$third-party
 ||cdn.axiell.com^*/cookie-disclaimer.$script
-||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|discoveryplus.se|findit.se|flashscore.se|fotbollskanalen.se|hastnet.se|ikea.com|koket.se|manpower.se|nvp.se|recept.se|tv4.se|tv4play.se
+||cdn.cookielaw.org^$script,domain=cartoonnetwork.se|discoveryplus.se|eurosport.se|findit.se|flashscore.se|fotbollskanalen.se|hastnet.se|ikea.com|koket.se|manpower.se|nvp.se|recept.se|tv4.se|tv4play.se
 ||cdn.iubenda.com/iubenda.$script
 ||cdn.livechatinc.com/tracking.$script
 ||cdn.svenskalag.se/img/sponsors$image
