@@ -27,6 +27,7 @@ This repository contains the known filters subscriptions available to AdGuard us
     * `subscriptionUrl` - default filter subscription URL
     * `tags` - a list of tags (see tags description below)
     * `trustLevel` - level of trust (see trust levels description below)
+    * `platforms` - the list of platforms to compile the filter for. If you need to compile the filter for all platforms remove this property.
 
         ##### Trust levels:
         * `low` - default level, if "trustLevel" property is not configured at all.
@@ -53,7 +54,8 @@ This repository contains the known filters subscriptions available to AdGuard us
       "recommended",
       "reference:2"
       ],
-      "trustLevel": "full"
+      "trustLevel": "full",
+      "platforms": ["windows", "mac", "android", "ext_ublock"]
     }
     ```
 
