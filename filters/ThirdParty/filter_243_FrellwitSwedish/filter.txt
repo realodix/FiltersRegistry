@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-03-10 09:40:27 CET
+! Last modified: 2021-03-11 11:45:16 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -94,7 +94,7 @@ byggipedia.se##aside .textwidget:has-text(/sponsr|samarbetspartners/i)
 byggvarlden.se,hotellorestaurang.se#%#//scriptlet('ubo-acis.js', 'm3_r', 'Math.floor')
 bytbil.com#$#html,body { overflow: auto !important; }
 cannabis.se#%#//scriptlet('ubo-aopw.js', 'Cookies')
-cannabis.se,egoinas.se,enkelteknik.se,fysikstugan.se,hamnen.se,ljudochbild.se#%#//scriptlet('ubo-acis.js', 'ai_front')
+cannabis.se,egoinas.se,enkelteknik.se,fysikstugan.se,hamnen.se,ljudochbild.se,tidningen.djurskyddet.se#%#//scriptlet('ubo-acis.js', 'ai_front')
 cornucopia.cornubot.se##.FeaturedPost:has(a:has-text(/^Reklam/i))
 cornucopia.cornubot.se##.FeaturedPost:has-text(/i samarbete med/i)
 cornucopia.cornubot.se##.post:has(i:has-text(/reklam/i))
@@ -285,7 +285,8 @@ swedroid.se#$?#li.Notice:has(a[target="_blank"]) { remove: true; }
 tasteline.com#$#.popup { overflow: auto !important; }
 tasteline.com##li.article:has(.category:has-text(/samarbete/i))
 teknifik.se##.post:has(.sponsor)
-teknikensvarld.se#$#.t-single.-content-hide .entry-content, .t-single.-content-hide .entry-content .paywall-gradient-overlay { height: auto !important; overflow: visible !important; }
+teknikensvarld.se#$#.article__body__preview::before { background: none !important; }
+teknikensvarld.se#$#.article__body__preview { height: auto !important; overflow: visible !important; }
 teknikveckan.se##.grid-item:has(.pill:has-text(/spons/i))
 tennisportalen.se##.td-pb-row [class*="td-pb-span"]:has(h4:has-text(/spons/i))
 thelocal.se##.panel:has(div[class$="panel-label"]:has-text(/sponsor/i))
@@ -295,8 +296,6 @@ tidningenglobal.se##span:has-text(/annons/i):upward(.elementor-widget-wrap)
 tidningenridsport.se#$#.entry-content { display: initial !important; }
 tjanstebilen.se##.post-item:has(.sponsored-article)
 totallyorebro.se,totallystockholm.se#$?#[class*="tot-content-preview-container"]:has(a[href*="casino"]) { remove: true; }
-tradera.com##.react-modal:has([data-gdpr-modal])
-tradera.com##[id^="adsense-shopping"]:upward(1)
 trendenser.se##.post_feed_post:has(.sponsor-info)
 tv2.no#%#//scriptlet('ubo-acis.js', 'TV2', 'questback')
 tvdags.se##.article-list__item:has(.sponsor)
@@ -320,7 +319,6 @@ www.dn.se#%#//scriptlet('ubo-ra.js', 'data-auto-play')
 www.dn.se#$#body { position: unset !important; }
 www.expressen.se#%#//scriptlet('ubo-acis.js', 'Bau', 'preloadAds')
 www.expressen.se#%#//scriptlet('ubo-set.js', 'detect', 'noopFunc')
-www.svd.se#%#//scriptlet('ubo-acis.js', 'SvD', 'preDefineAd')
 www.svd.se#%#//scriptlet('ubo-aopr.js', 'navigator.sendBeacon')
 www.svd.se#%#//scriptlet('ubo-aopr.js', 'Tracker')
 youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
@@ -413,8 +411,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -846,7 +844,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /img/bettingstugan.
 /img/compricer$image,domain=ekonominyheter.se
 /infinite-ads.js
-/infopeek.min.js$domain=svd.se
 /initLogging$script,domain=dn.se|teknikensvarld.se
 /inlist-InlistSponsored$domain=pricerunner.se
 /isbanner/ib.js
@@ -1094,7 +1091,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /se-wordpress-newsletters
 /se-wordpress-sunt
 /seenthis-hub/*$script
-/selections/native$xmlhttprequest,domain=svd.se
 /sg_reklam$domain=svampguiden.com
 /sh404sefsocial/*$script
 /share-buttons$script,domain=gardets.nu
@@ -1301,8 +1297,7 @@ alltomhif.se##.sek-module-inner a[target="_blank"]
 alltomhif.se,lyckasmedbakning.nu,mat-meny.se,pinkprogramming.se,restaurangilse.se,rikakvinnor.se,soja.se,tonyhatefnejad.se##.preloader
 alltommat.se,alltomtradgard.se,damernasvarld.se,skonahem.com,teknikensvarld.se##.teaser__third-party
 alltommat.se,di.se,dn.se,familyliving.se,privataaffarer.se##.teaser-native
-alltommat.se,familyliving.se,privataaffarer.se##a.teaser[href*="/annonssamarbete/"]
-alltommat.se,familyliving.se,privataaffarer.se##a.teaser[href*="/promotion/"]
+alltommat.se,familyliving.se,privataaffarer.se##a.teaser[href*="/annonssamarbete/"], a.teaser[href*="/promotion/"]
 alltomstockholm.se##.panorama_top,.ad-mark-rotated,[class^="insider_"],.outsider-container,[class*="ad_container"],.interstitial-background
 alltomstockholm.se,fotbollskanalen.se##.article-share
 alpresor.se###toast-container
@@ -1735,7 +1730,6 @@ opulens.se###secondary
 opulens.se##.mailpoet_form
 orebronyheter.com###top-wrapper
 oru.se##.modal-cookieform
-paf_ad_teaser$domain=privataaffarer.se
 pcgamer.se##.main-container > div.vc_row:last-child
 pcgamer.se##a[href*="casino.com"]
 pingpong.se##.l-preloader
@@ -1803,15 +1797,7 @@ spray.se##[class^="ads-"], [class*="article-casino"]
 startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"]
 studocu.com##[data-test-selector="the-cookie-banner"]
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
-svd.se###AdSplashOverlayWindow
-svd.se###mega-ad-wrapper
-svd.se##.AdWrapper
-svd.se##.Container--ad
-svd.se##.ContentLayout-extraColumnAd
-svd.se##.ContentLayout-mainColumn > figure[data-postmessage-command="iframe.resize"]
-svd.se##.Teaser-adLabel, .Teaser--fullAdLabel
-svd.se##.theme-Native
-svd.se##div[data-controller="newslettersubscription"]
+svd.se###mega-ad-wrapper, .Container--ad, .theme-Native
 svenskafans.com##.puff__ad-heading
 svenskfast.se##.cookie-law__wrapper
 svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, a[target="_blank"][rel="noopener noreferrer"]
@@ -1831,10 +1817,10 @@ swehockey.se##[class*="-reklam"], .sif-sponsorer
 sysidan.se##.adscolumn
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
 tasteline.com##.popup-overlay
-teknikensvarld.se##.paywall-gradient-overlay
 tekniksmart.se##.code-block, main > div:last-child:not(:only-child)
 testfakta.se##.row-uppdragstest
 thelocal.se##.section-sponsored
+tidningen.djurskyddet.se##.ai-track
 tidningenglobal.se##.elementor-image a[target="_blank"]
 tidningenridsport.se###captive
 tidningenridsport.se##.subscribe_now_popup
@@ -1847,7 +1833,6 @@ tkj.se###text-19, #text-23, #text-25, #text-32, #custom_html-2, #custom_html-3, 
 totallyorebro.se,totallystockholm.se##a[href*="casino"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta
 totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"], .content-overlay--black
 tradera.com##ads-takeover
-tradera.com##react-adslot
 tripadvisor.se##[class$="banner_ad"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
 turistmal.se###col_right
@@ -2013,7 +1998,7 @@ yelp.se##.js-cookie-iframe
 ||cookieinfoscript.com^$third-party
 ||cookienotice.co^$third-party
 ||cookiepolicy.peytz.dk^$third-party
-||cookiepro.com^$third-party,domain=aktiespararna.se|birthday.se|friendsarena.se|fz.se|hastnet.se|sd.se|spela.se|sweclockers.com
+||cookiepro.com^$third-party,domain=aktiespararna.se|birthday.se|djurskyddet.se|friendsarena.se|fz.se|hastnet.se|sd.se|spela.se|sweclockers.com
 ||cornucopia.cornubot.se/js/cookie
 ||createsend.com^$third-party
 ||createsend1.com^$third-party
@@ -2379,7 +2364,6 @@ yelp.se##.js-cookie-iframe
 ||susnet.se/susnetstat.js$script
 ||sv.picmix.com/sw.js
 ||sv.picmix.com^$csp=worker-src 'none'
-||svd.se^*/native-article$~third-party,xmlhttprequest
 ||svenskafans.com/menu-logo/bottom
 ||svenskarecept.se/pwa-register-sw.js
 ||svenskfotboll.se/ui/dist/js/ai.
