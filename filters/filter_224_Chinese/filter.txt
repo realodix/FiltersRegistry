@@ -414,6 +414,8 @@ csdn.net#?##feedlist_id > li:has(> div[id^="kp_box_"])
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/77387
+exoav.com#%#//scriptlet('abort-on-property-read', 'exoNoExternalUI38djdkjDDJsio96')
 ! 85st.com popup on click
 85st.com#%#//scriptlet('prevent-window-open')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67191
@@ -460,6 +462,10 @@ _click*(com?
 !
 ! Section contains rules for specific websites
 !
+||exoav.com/nb/nt.js
+||vs1.exo01.xyz^$image,third-party
+exoav.com##.place
+exoav.com##.table
 ||70url.com/aiaike/bood.js$domain=yingwangtv.com
 jable.tv###site-content > div.container > section.pb-3.pb-e-lg-40.text-center
 cool3c.com##div[id^="gpt-c3c_all_side_"]
