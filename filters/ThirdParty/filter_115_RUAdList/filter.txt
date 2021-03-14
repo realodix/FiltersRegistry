@@ -1,8 +1,8 @@
 !
-! Checksum: jj+M1iW6xo9K64pNt5+DoA
-! OriginalVersion: 202103140850
+! Checksum: 9XJBB21s4R5llFz5/iTuVQ
+! OriginalVersion: 202103141250
 ! Title: RU AdList + CSS Fixes
-! Last modified: 14 Mar 2021 08:50 UTC
+! Last modified: 14 Mar 2021 12:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -11821,6 +11821,7 @@ oper.ru###container > div[style]
 sql-tutorial.ru###container > div[style] > script + style ~ ul
 tophotels.ru###container > span[id^="advbroker_place_"]
 agilerussia.ru###container > style + ul[class]
+mmo13.ru###container2
 kosmetista.ru###content > .b-under-menu
 superhumor.ru,voffka.com###content > .blog
 kak-prosto.net###content > .container
@@ -12864,7 +12865,6 @@ bhf.su##.ad_sponsor_banner_forum
 center.bz##.ad_sponsor_newbanner_forum
 autotraveler.ru##.ad_yad
 autogeek.com.ua##.adace-slideup-slot-wrap
-mmo13.ru##.adaptive
 vmo24.ru##.adaptive_banners
 stroi-help.ru##.adaptive_image_2000
 allcrimea.net##.adavia
@@ -16798,6 +16798,7 @@ cyclone-soft.com,gameshake.ru,hide-info.pro##a[href^="/engine/dude/index/leech_o
 maw.ru##a[href^="/ent.php"]
 stena.ee##a[href^="/external"] > img
 gdetoedet.ru,loadtorrentfilm.com,torrentikofilm.com,uzum.tv##a[href^="/go"]
+lektsii.org,megaobuchalka.ru,studopedia.net,studopedia.org,studopedia.ru,studopedia.su##a[href^="/go"][href*=".php"][target="_blank"]
 bdsmplaneta.com,vozbuzhdaet.com##a[href^="/go.php"]
 pornoboss.tv##a[href^="/go.php?id="]
 kg-portal.ru##a[href^="/go.php?url=https://"]
@@ -17763,6 +17764,7 @@ bel.ru,bitpump.ru,chem21.info,enovosty.com,pl.com.ua,propozitsiya.com,snow-motio
 propozitsiya.com##div[id*="bunner"]
 drom.ru,newsvl.ru,vl.ru##div[id*="candy"]
 akipress.org##div[id*="company"]
+mmo13.ru##div[id*="games-adaptive"]
 linux.org.ru##div[id*="interpag"]
 sat-digest.com##div[id*="nu_ban"]
 altapress.ru##div[id*="partner"]
@@ -20620,7 +20622,7 @@ igdz1.ru^$script,domain=igdz.ru
 ||mixnews.lv/uploads/banners/
 ||mixsoft.org/yandexbrowser.js
 ||mlfun.org.ua/mlbanners/
-||mmo13.ru/download/content/*/image_*.jpg|$image
+||mmo13.ru/download/content/*/00/image_*.jpg$image
 ||mmogamez.info^*/pagebgtop.
 ||mmogamez.ru/asda/
 ||mmogamez.ru/assets/templates/Standart/images/mmogamez.
@@ -25680,7 +25682,8 @@ gamma.mirtesen.ru#$?#.aggregator-page { pointer-events: none !important; opacity
 mk.ru#$?#div[class^="Banner_right"] { margin-bottom: 0 !important; padding-bottom: 0 !important }
 ! ---
 mmo13.ru#$?##page > * { pointer-events: auto !important }
-mmo13.ru#$?##page { pointer-events: none !important; background-image: none !important }
+mmo13.ru#$?##page > div:nth-child(-n+2):not(#top):not(#content_shift) { padding-top: 0 !important }
+mmo13.ru#$?##page { pointer-events: none !important; background-image: none !important; background-color: inherit !important }
 ! ---
 more.tv,videomore.ru##button.info-bar__subscription
 ! ---
@@ -25981,21 +25984,18 @@ stalker-mods.clan.su,stalker-mods.su,stalkerportaal.ru#$?##timer_2 { display: bl
 stopgame.ru###preroll_mediaplayer
 stopgame.ru#$?#div[id^="videoplayer_"][class^="iframe_wrapper"] { display: block !important }
 ! ---
-stratege.ru###body_box_label #wrapper > #content > div:empty
-stratege.ru###body_box_label #wrapper > #content ~ :not(#footer)
-stratege.ru###body_box_label #wrapper > #footer > div[id]:not(.wrapper)
-stratege.ru#$?##body_box_label > [class]:not([style]):not([title]) { background-image: none !important; background-color: #dbdbdb !important }
-stratege.ru###body_box_label > [class]:not([title]) > style + [id]:not([class]):not(#wrapper)
-stratege.ru#$?##globalcontent { padding-top: 0 !important }
-stratege.ru###xs-link
-stratege.ru###xs-top-echo
-stratege.ru#$?#.above_body > #header { margin-top: 0 !important }
-stratege.ru#$?#.above_body { margin-bottom: auto !important }
-stratege.ru##.tlpf_info_box
-stratege.ru##body:not(#body_box_label) > [id*="footer"]:not(#footer):not(#footer_morecopyright)
-stratege.ru##body:not(#body_box_label) > style ~ div[id]:not([class]):not([title]):not([id*="footer"]):not(:nth-last-child(-n+5)) > style + div[id]:not(#globalcontent)
-stratege.ru#$?#body:not(#body_box_label) > style ~ div[id]:not([class]):not([title]):not([id*="footer"]):not(:nth-last-child(-n+5)) { background-image: none !important; background-color: #dbdbdb !important }
-stratege.ru##div[class][id$="_content"] > div:not([id]):not([class]) > [class^="alelt_"][class$="_info"]
+stratege.ru##body[id*="body_box"] #wrapper > #content > [id]:empty
+stratege.ru##body[id*="body_box"] #wrapper > #content ~ :not([id*="footer"])
+stratege.ru##body[id*="body_box"] .tlpf_info_box
+stratege.ru##body[id*="body_box"] > div:not([id]):not([class]) > div > style + [id]:not([class]):not(#wrapper)
+stratege.ru#$?#body[id*="body_box"] > div:not([id]):not([class]) > div { background-image: none !important; background-color: #dbdbdb !important }
+stratege.ru##body[id*="body_box"] div[class][id$="_content"] > div:not([id]):not([class]) > [class^="alelt_"][class$="_info"]
+! forum
+stratege.ru#$?#body:not([id*="body_box"]) #globalcontent { margin-top: 0 !important }
+stratege.ru#$?#body:not([id*="body_box"]) .above_body { margin-bottom: auto !important }
+stratege.ru##body:not([id*="body_box"]) > style ~ div ~ :not([title]):not([id*="footer"]):not(:nth-last-child(-n+5))
+stratege.ru##body:not([id*="body_box"]) > style ~ div:not([title]):not([id*="footer"]):not(:nth-last-child(-n+5)) > style + div[id]:not(#globalcontent)
+stratege.ru#$?#body:not([id*="body_box"]) > style ~ div:not([title]):not([id*="footer"]):not(:nth-last-child(-n+5)) { background-image: none !important; background-color: #dbdbdb !important }
 ! ---
 stravy.net#$?#.right-sidebar { margin-top: 0 !important; overflow: hidden !important }
 ! ---
