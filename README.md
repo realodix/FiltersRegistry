@@ -30,7 +30,11 @@ This repository contains the known filters subscriptions available to AdGuard us
         * `low` — only low-risk rule types are allowed; defaults to **low** if trust level is not configured at all
         * `high` — trusted third-party filter lists; some particular rules from there are still permited
         * `full` — all types of filter rules are allowed; only AdGuard filter lists have full trust at the moment
-    * `platforms` — [the list of platforms](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#platform-and-not_platform-hints) to compile the filter for. If you need to compile the filter for all platforms remove this property.
+    * `platformsIncluded` — [the list of platforms](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#platform-and-not_platform-hints) to compile the filter for, e.g. `["mac", "windows", "android"]`. If you need to compile the filter for all platforms remove this property
+    * `platformsExcluded` — [the list of platforms](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#platform-and-not_platform-hints) to skip while filter compiling, e.g. `["ios", "ext_safari"]`. If you need to compile the filter for all platforms remove this property
+
+    > Note please that both `platformsIncluded` and `platformsExcluded` should not be set in filter's metadata simultaneously.
+
     <details>
       <summary>Metadata example</summary>
 
