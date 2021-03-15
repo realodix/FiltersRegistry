@@ -41,7 +41,7 @@ This repository contains the known filters subscriptions available to AdGuard us
     ```json
     {
       "filterId": 2,
-      "name": "AdGuard Base Filter",
+      "name": "AdGuard Base filter",
       "description": "EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.",
       "timeAdded": 1404115015843,
       "homepage": "https://kb.adguard.com/en/general/adguard-ad-filters#english",
@@ -56,7 +56,7 @@ This repository contains the known filters subscriptions available to AdGuard us
         "reference:2"
       ],
       "trustLevel": "full",
-      "platforms": [
+      "platformsIncluded": [
         "windows",
         "mac",
         "android",
