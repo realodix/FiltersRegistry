@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 08March2021v5
+! OriginalVersion: 16March2021v1
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -16,6 +16,7 @@ tekniikanmaailma.fi##.NoAdBlocker_main
 ! -----NETWORK FILTERS-----
 ||damoh.katsomo.fi/$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
 ||freewheel-jitt.sanoma.fi/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
+||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media,redirect=noopmp3-0.1s,domain=ruutu.fi
 ! -----NETWORK FILTERS END-----
 ! -----SCRIPTS-----
 aamulehti.fi,satakunnankansa.fi,valkeakoskensanomat.fi,nokianuutiset.fi,janakkalansanomat.fi,kmvlehti.fi,jamsanseutu.fi,suurkeuruu.fi,kankaanpaanseutu.fi,rannikkoseutu.fi,tyrvaansanomat.fi,merikarvialehti.fi,sydansatakunta.fi#%#//scriptlet('ubo-nostif.js', 'adblockDetected', '0')
@@ -782,6 +783,7 @@ murha.info#@#.adsbox
 !#if !adguard
 ||damoh.katsomo.fi/*$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
 ||freewheel-jitt.sanoma.fi/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
+||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media,redirect=noopmp3-0.1s,domain=ruutu.fi
 !#endif
 !#endif
 ! appears when blocking ads:
@@ -821,8 +823,6 @@ tjareborg.fi#@#.push-container
 @@||images.sprinklecontent.com^$image,domain=como.fi|episodi.fi|fum.fi|inferno.fi|rumba.fi|rytmi.com|soundi.fi|tilt.fi
 @@||widgets.spklw.com/v1/$xmlhttprequest,domain=como.fi|episodi.fi|fum.fi|inferno.fi|rumba.fi|rytmi.com|soundi.fi|tilt.fi
 @@||widgets.sprinklecontent.com/v2/$script,xmlhttprequest,domain=como.fi|episodi.fi|fum.fi|inferno.fi|rumba.fi|rytmi.com|soundi.fi|tilt.fi
-! https://github.com/easylist/easylist/pull/6156
-@@||tracking.lengow.com^$~third-party
 ! https://github.com/easylist/easylist/pull/6316
 taloon.com#@##gdprpopup
 ! https://github.com/easylist/easylist/pull/6885
