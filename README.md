@@ -16,30 +16,32 @@ This repository contains the known filters subscriptions available to AdGuard us
 
     Filter metadata. Includes name, description, etc.
 
-    * `filterId` - unique filter identifier (integer);
-    * `name` - filter name. Can be localized (we'll cover it later);
-    * `description` - filter description;
-    * `timeAdded` - time when this filter was added to the registry. Milliseconds since January 1, 1970. You can exec `new Date().getTime()` in the browser console to get the current time;
-    * `homepage` - filter website/homepage;
-    * `expires` - filter's default expiration period;
-    * `displayNumber` - this number is used when AdGuard sorts available filters (GUI);
-    * `groupId` - group identifier (see groups description below);
-    * `subscriptionUrl` - default filter subscription URL
-    * `tags` - a list of tags (see tags description below)
-    * `trustLevel` - level of trust (see trust levels description below)
+    * `filterId` — unique filter identifier (integer)
+    * `name` — filter name; can be localized
+    * `description` — filter description
+    * `timeAdded` — time when this filter was added to the registry; milliseconds since January 1, 1970; you can exec `new Date().getTime()` in the browser console to get the current time
+    * `homepage` — filter website/homepage
+    * `expires` — filter's default expiration period
+    * `displayNumber` — this number is used when AdGuard sorts available filters (GUI)
+    * `groupId` — [group](#groups) identifier
+    * `subscriptionUrl` — default filter subscription URL
+    * `tags` — a list of [tags](#tags)
+    * `trustLevel` — level of trust which describe [allowed and permited rules types](https://github.com/AdguardTeam/FiltersCompiler/tree/master/src/main/utils/trust-levels); possible values:
+        * `low` — only low-risk rule types are allowed; defaults to **low** if trust level is not configured at all
+        * `high` — trusted third-party filter lists; some particular rules from there are still permited
+        * `full` — all types of filter rules are allowed; only AdGuard filter lists have full trust at the moment
+    * `platformsIncluded` — [the list of platforms](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#platform-and-not_platform-hints) to compile the filter for, e.g. `["mac", "windows", "android"]`. If you need to compile the filter for all platforms remove this property
+    * `platformsExcluded` — [the list of platforms](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#platform-and-not_platform-hints) to skip while filter compiling, e.g. `["ios", "ext_safari"]`. If you need to compile the filter for all platforms remove this property
 
-        ##### Trust levels:
-        * `low` - default level, if "trustLevel" property is not configured at all.
-        * `high` - trusted third-party filter lists. Some particular rules from there are allowed.
-        * `full` - all types of filter rules are allowed. Only AdGuard filters have full trust at the moment.
+    > Note please that both `platformsIncluded` and `platformsExcluded` should not be set in filter's metadata simultaneously.
 
-        [Full list of trust levels exclusions settings](https://github.com/AdguardTeam/FiltersCompiler/tree/master/src/main/utils/trust-levels)
+    <details>
+      <summary>Metadata example</summary>
 
-    Metadata example:
-    ```javascript
+    ```json
     {
       "filterId": 2,
-      "name": "English Filter",
+      "name": "AdGuard Base filter",
       "description": "EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.",
       "timeAdded": 1404115015843,
       "homepage": "https://kb.adguard.com/en/general/adguard-ad-filters#english",
@@ -49,13 +51,20 @@ This repository contains the known filters subscriptions available to AdGuard us
       "subscriptionUrl": "https://filters.adtidy.org/extension/chromium/filters/2.txt",
       "tags": [
         "purpose:ads",
-      "reference:101",
-      "recommended",
-      "reference:2"
+        "reference:101",
+        "recommended",
+        "reference:2"
       ],
-      "trustLevel": "full"
+      "trustLevel": "full",
+      "platformsIncluded": [
+        "windows",
+        "mac",
+        "android",
+        "ext_ublock"
+      ]
     }
     ```
+    </details>
 
 - `revision.json`
 
@@ -68,44 +77,38 @@ This repository contains the known filters subscriptions available to AdGuard us
 - `diff.txt`
 
   Build log that contains excluded and converted rules with an explanation.
+### <a id="tags"></a> Tags
 
-### Tags
+Every filter can be marked by a number of tags. Every tag metadata listed in `/tags/metadata.json`.
 
-Every filter can be marked by a number of tags. `/tags/metadata.json` contains every tag metadata.
+<details>
+  <summary>Example</summary>
 
-Example:
-```
-  {
+```json
+{
     "tagId": 1,
     "keyword": "purpose:ads"
   },
 ```
+</details>
 
-* `lang:*` tags
+Possible tags:
+* `lang:*` — for language-specific filters; one or multiple lang-tags can be used. For instance, AdGuard Russian filter is marked with the `lang:ru` tag.
 
-  Language-specific filters are marked with one or multiple `lang:` tags. For instance, AdGuard Russian filter is marked with the `lang:ru` tag.
+* `purpose:*` — determines filters purposes; multiple purpose-tags can be used for one filter list. For instance, `List-KR` is marked with both `purpose:ads` and `purpose:privacy`.
 
-* `purpose:*` tags
+* `recommended` — for low-risk filter lists which are recommended to use in their category. The category is determined by the pair of the `lang:*` and `purpose:*` tags.
 
-  Determines filters purposes. Please note, that a filter can have multiple purposes. For instance, `List-KR` is marked with both `purpose:ads` and `purpose:privacy`.
+* `obsolete` — for abandoned filter lists; filter's metadata with this tag will be excluded from `filters.json` and `filters_i18n.json`.
+### <a id="groups"></a> Groups
 
-* `recommended` tag
-
-  Filters that are recommended to use in their category. The category is determined by the pair of the `lang:` and `purpose:` tags.
-
-* `obsolete` tag
-
-  Filter's metadata with this tag will be excluded from filters.json and filters_i18n.json.
-
-### Groups
-
-`/groups/metadata.json` - filters groups metadata. Each filter should belong to one of the groups.
+`/groups/metadata.json` — filters groups metadata. Each filter should belong to one of the groups.
 
 ## Filters localization
 
-You can translate filters here: https://crowdin.com/project/adguard-applications/en#/miscellaneous
+If you want to help with filters translations, you can join us on Crowdin: https://crowdin.com/project/adguard-applications/en#/miscellaneous/filters-registry
 
-Please learn more about translating our products here: https://kb.adguard.com/en/general/adguard-translations
+Please learn more about translating our products: https://kb.adguard.com/en/general/adguard-translations
 
 ## How to build
 
