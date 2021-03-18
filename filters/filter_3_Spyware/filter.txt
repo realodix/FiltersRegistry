@@ -4581,6 +4581,7 @@ nethunt.com/api/v1/track/email/$image
 ! Disabled in DNS filter
 ||telemetry.mozilla.org^
 !
+||clicks.wawlabs.com^
 ||stat.5-tv.ru^
 ||log.zingnews.vn^
 ||logcol.kyobobook.co.kr^
@@ -10662,6 +10663,7 @@ _tracking.php?b=
 ||adc.nine.com.au/?token=$redirect=nooptext,important,domain=9now.com.au
 ||googleadservices.com/pagead/conversion_async.js$redirect=noopjs,domain=ffm.to,important
 !
+||collector.wawlabs.com/epttavm.js
 ||za.zalo.me/v*/brp?fts=
 ||za.zalo.me/v*/w/_zaf.gif
 ||freexcafe.com/js/analytics.js
@@ -13231,6 +13233,9 @@ link.gmapp*.net$image
 ! https://github.com/AdguardTeam/CoreLibs/issues/1306
 ||rover.ebay.$image,object,script,badfilter
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/77565
+@@||cdn.segmentify.com^$domain=pttavm.com
+@@||gandalf.segmentify.com^$domain=pttavm.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/77266
 @@||jsonip.com/?callback=$domain=hotelforex.com
 ! https://forum.adguard.com/index.php?threads/www-viu-com.42285/
