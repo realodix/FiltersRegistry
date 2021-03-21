@@ -1,8 +1,8 @@
 !
-! Checksum: hxqGviQrDtHuTr1A2tgabg
-! OriginalVersion: 202103211250
+! Checksum: yFFhzd/omNVPGmrWz1pjig
+! OriginalVersion: 202103211650
 ! Title: RU AdList: Counters
-! Last modified: 21 Mar 2021 12:50 UTC
+! Last modified: 21 Mar 2021 16:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -903,12 +903,18 @@ auto.ru#?#div:matches-css-before(content: /Реклама/) ~ div
 inoreader.com##div[id^="leaderboard_ad"] > *
 radioprofusion.com##footer > .counter
 lostfilm.tv,lostfilm.tw##img[width="1"][height="1"]
+rambler.*##[data-blocks="rec_block"]
+rambler.*##body[style*="position:"] > #pushwoosh + div:not([id])
+rambler.*##body[style*="position:"] > script[async] ~ div:not([id]):not([class])
+rambler.*##body[style*="position:"] > script[src] + div:not([id])
+rambler.*##body[style*="position:"] > script[src] ~ [id]:empty + div:not([id])
 www.rambler.*###main > div[class]:not([id]) > :first-child[style]:not(div):not([class]):not([id])
 ||browserleaks.com/proxy$csp=script-src 'unsafe-inline'
 ||google-analytics.com^$domain=cdnvideo.ru|igromania.ru|rambler.ru
 ||googletagmanager.com/gtm.js$domain=dtf.ru|gazeta.ru|lifehacker.ru|livejournal.com|motor.ru|nur.kz|rambler.ru|rutube.ru|tjournal.ru|tut.by|vc.ru
 ||kp.yandex.net/images/bnnr/brand/$domain=www.kinopoisk.ru
 ||kp.yandex.net/js/brand$domain=www.kinopoisk.ru
+||rcm.rambler.ru^$redirect=nooptext,domain=rambler.ru
 ! yandex
 /^https?://mail\.yandex\.[^\s]{125,}/$redirect=nooptext,script,~third-party
 /^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$redirect=nooptext,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz
