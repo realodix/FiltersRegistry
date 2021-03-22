@@ -407,6 +407,10 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/73212
+torrentarsivi.*#@#.adsBanner
+torrentarsivi.*#$##wrapfabtest { height: 1px !important; }
+torrentarsivi.*###eazy_ad_unblocker_holder
 ! https://github.com/AdguardTeam/AdguardFilters/issues/72435
 hacoos.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "adblock")
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=nooptext,domain=hacoos.com
@@ -1511,7 +1515,7 @@ duslerkulup.com#%#//scriptlet("abort-current-inline-script", "document.onclick",
 ! modalads - #%#//scriptlet('set-cookie', 'modalads', 'yes')
 bursahaberdar.com,isvecgundemi.com,kgrt.net,halk54.com,eskisehirhaber.com,haberlisin.com#%#//scriptlet('set-cookie', 'modalads', 'yes')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73212
-torrentarsivi.com#%#//scriptlet("prevent-addEventListener", "", "getPopupTarget")
+torrentarsivi.*#%#//scriptlet("prevent-addEventListener", "", "getPopupTarget")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/72637
 contentx.me#%#//scriptlet("prevent-window-open")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/72404
@@ -2738,6 +2742,10 @@ yemektarifleri.org,lifebursa.com,mshowto.org,macizlee1.com,macizlee.ne,dunyaatla
 ! ###adStarter
 fullhdfilmcibaba.com,720pizlemek.com,1080pfilmizle.net,fullhdfilmcidayi.com,hdfilmizledayi.com,720-pizleme.com,fullhdfilmizlebaba.com,evrenselfilmlerim.net###adStarter
 !
+almanyabulteni.de##div[id^="block-sidebarreklam"]
+almanyabulteni.de##.sidebar-reklam:not(#block-sosyalmedyasidebar)
+almanyabulteni.de###block-videoreklam
+almanyabulteni.de##.ads-ab-dynamic
 aksarayhaber68.com##.Reklam_001
 ||konhaber.com/sahifeler/rkl/
 temizsozluk.com.tr##a[rel^="sponsored"]
@@ -6826,6 +6834,7 @@ yemektekeyifvar.com,ttf.org.tr,perakende.org,akyazihaber.com,futbolarena.com,yer
 teknotimi.com##.adv0
 arkeolojikhaber.com,iha.com.tr##.advbox
 ahaber.com.tr##.advertItem
+gazeteyenigun.com.tr##.advertisement > a:not([href="https://gazeteyenigun.com.tr/gazete-arsiv"])
 guncelgazete.com,ihavideo.com.tr,mygaziantep.com,gazikent27.com,yenienerji.com,yenisokegazetesi.com,paramedya.com.tr,enpolitik.com,emlakkulisi.com,kocaelifikir.com,arabam.com,cepde.net,web.tv##.advertisement
 uplifers.com##.ajdg_bnnrwidgets
 pcteknik.net##.alt1 > span[style*="width: 337px; height: 281px;"]
