@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 21March2021v1
+! OriginalVersion: 22March2021v1
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -15,8 +15,9 @@ tekniikanmaailma.fi##.NoAdBlocker_main
 ! -----SPECIFIC FILTERS END-----
 ! -----NETWORK FILTERS-----
 ||damoh.katsomo.fi/$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
-||freewheel-jitt.sanoma.fi/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
+||freewheel-jitt.sanoma.fi^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media,redirect=noopmp3-0.1s,domain=ruutu.fi
+||sanoma-prod.integration-x.com^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
 ! -----NETWORK FILTERS END-----
 ! -----SCRIPTS-----
 aamulehti.fi,satakunnankansa.fi,valkeakoskensanomat.fi,nokianuutiset.fi,janakkalansanomat.fi,kmvlehti.fi,jamsanseutu.fi,suurkeuruu.fi,kankaanpaanseutu.fi,rannikkoseutu.fi,tyrvaansanomat.fi,merikarvialehti.fi,sydansatakunta.fi#%#//scriptlet('ubo-nostif.js', 'adblockDetected', '0')
@@ -779,8 +780,9 @@ murha.info#@#.adsbox
 !#if !ext_ublock
 !#if !adguard
 ||damoh.katsomo.fi/*$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
-||freewheel-jitt.sanoma.fi/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
+||freewheel-jitt.sanoma.fi^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media,redirect=noopmp3-0.1s,domain=ruutu.fi
+||sanoma-prod.integration-x.com^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
 !#endif
 !#endif
 ! appears when blocking ads:
