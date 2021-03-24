@@ -5663,9 +5663,6 @@ wss://s.zmctrack.net/
 ://s.zmctrack.net^$websocket
 ||zmctrack.net^$third-party
 @@://s.zmctrack.net/z|$xmlhttprequest,third-party
-!+ NOT_PLATFORM(ext_ff)
-||mail.ukr.net/desktop/js/compiled.js$domain=mail.ukr.net,replace=/\(function\(\){!function\(a\,b\,c\,d\){var/\(function\(\){!function\(a\,b\,c\,d\){return;/
-!
 ! for `zmctrack` if iframe isn't in ShadowRoot
 forumodua.com#$?#head > iframe[name] { remove: true; }
 strana.ua#$?#body > iframe[style="display:none"] { remove: true; }
@@ -21756,8 +21753,8 @@ auto.ru##.LayoutSidebar__content > div[class$="_container"] > *:not(div):not(spa
 !
 !
 ! kinopoisk.ru
+kinopoisk.ru##div[class^="styles_contentContainer__"] > div[class^="styles_pending__"][data-tid]
 kinopoisk.ru##.selection-list > div[style^="min-width:"][style*="1px"]
-kinopoisk.ru##div[class*="-kinopoisk-media-container_pending"]
 kinopoisk.ru##.njawcy__container
 kinopoisk.ru##.top-banner-container
 kinopoisk.ru##.media-post-page > div[style="min-height:250px"]
@@ -22140,8 +22137,8 @@ bender/_bender*.js$script,replace=/this\.removeShadowBlockers\(\);/true; return;
 !
 !
 !### Temporary ###
-! https://github.com/AdguardTeam/AdguardFilters/issues/51326
-@@||4pda.ru/amp/$extension
+! https://github.com/AdguardTeam/AdguardFilters/issues/77368#issuecomment-805366080
+@@||kinopoisk.ru^$extension
 ! https://forum.adguard.com/index.php?threads/30754/
 ! Remove after CoreLibs version release
 @@||oxax.tv^$content
