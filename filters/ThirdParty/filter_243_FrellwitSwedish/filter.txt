@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-03-23 16:19:08 CET
+! Last modified: 2021-03-25 10:42:04 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -175,6 +175,7 @@ kamrat.com#%#//scriptlet('ubo-set.js', 'trap', 'noopFunc')
 kiacarclub.se##.sidebar-block:has-text(/annons|sponsor/i)
 kimura.se##article:has(#storknapp:has-text(/^till kampanj/i))
 kimura.se##article:has(img[src$="/sponsrad.png"])
+kingsizemag.se##a:has(.disclaimer-tag-img)
 kittad.se##.kittad-label-sponsored:upward(li)
 klart.se#%#//scriptlet('ubo-rc.js', 'mega-loading')
 klart.se##.content-box-list__item:has(.ad-text:has-text(/annons/i))
@@ -272,6 +273,7 @@ startaochdriva.se##.latest-post:has(a[href*="/sponsrat"])
 studocu.com#$##page-container { user-select: auto !important; }
 studocu.com#$#.new-viewer-wrapper .p2hv { pointer-events: auto !important; }
 svampguiden.com##.panel:has(.label-sponsor)
+svensk-seo.se#%#//scriptlet('ubo-noeval.js')
 svenskjakt.se#%#//scriptlet('ubo-acis.js', 'body_class_list')
 sverigespringer.se##.cd-sidebar-item, .cd-news-card:has(.cd-card-bar:has-text(/annons/i))
 swedroid.se##.article:has(span:has-text(/sponsr/i))
@@ -1605,8 +1607,7 @@ katerinamagasin.se##.adv-area, #right-areas, a[href*=".casino"], body > div.code
 kenzas.se##article[data-text*="In collaboration with"]
 kiacarclub.se##.forumlist-main-inner > div[style]
 kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"]
-kingsizemag.se##a[href*="/redir/"][target="_blank"]
-kingsizemag.se##div#video-overlay
+kingsizemag.se##div#video-overlay, div.sidebar_frame
 kittad.se###header-top
 klart.se###overlay, .gdpr-onboarding-container
 knulla.se###cookie-popup
