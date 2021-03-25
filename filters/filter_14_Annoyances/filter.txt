@@ -83,6 +83,9 @@ youtube.com,youtube-nocookie.com#%#//scriptlet('set-constant', 'playerResponse.a
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/78435
+m.sobaka.ru##.b-head-banner
+m.sobaka.ru##.b-main-menu__banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78228
 tvn24.pl#%#//scriptlet("json-prune", "options.auto_play")
 ! egotter.com private window detection
@@ -8317,7 +8320,7 @@ academictimes.com###euPopup
 macrium.com###MacriumCookieJarApp
 cyan.com###cookii-overlay
 cacaushow.com.br,slamjam.com,federalpremium.com,fossil.com###consent-tracking
-metro.co.uk##body > div[data-project="mol-fe-cmp"][style^="z-index: 100"]
+metro.co.uk##body > div[data-project="mol-fe-cmp"][style^="z-index: 100"] > div[class^="tooltip_"]
 pesc.ru##.deal-cookie
 somemorias.com.br###cookiesPoliticaPrivacidade
 circle.ms##.cookie_grayL
@@ -8597,7 +8600,8 @@ mrspeedy.co###agree-to-use-cookies
 toggl.com##div[class*="-CookieWarningRoot"]
 mega.io,mega.nz#$#.cookie-dialog { display: none !important; }
 mega.io,mega.nz#$#.fm-dialog-overlay { display: none !important; }
-mega.io,mega.nz#$#.overlayed .scroll-block { filter: none!important; -webkit-filter: none!important; }
+mega.io,mega.nz#$#.overlayed .scroll-block { filter: none !important; -webkit-filter: none !important; }
+mega.io,mega.nz#$#.overlayed .main-blur-block { filter: none !important; -webkit-filter: none !important; }
 tcm.com##.universal-footer__ribbon
 ||assets.uchi.ru/assets/check_cookies$script
 infranken.de#$#body { overflow: visible !important; }
@@ -10016,7 +10020,7 @@ radeberger.com##.cookieabfrage
 montiemare.de#$##cookieNotice { display: none !important; }
 montiemare.de#$#.modal-open { overflow: visible !important; }
 montiemare.de#$##cookieNotice + .modal-backdrop { display: none! important; }
-cbsnews.com,mastercard.com.tr,comicbook.com,gamespot.com,cnet.com,zdnet.com###ot-sdk-btn
+vmware.com,cbsnews.com,mastercard.com.tr,comicbook.com,gamespot.com,cnet.com,zdnet.com###ot-sdk-btn
 expediagroup.com##.gdpr-wrap
 expedia.at,expedia.be,expedia.dk,expedia.fi,expedia.fr,expedia.ie,expedia.it,expedia.nl,expedia.no,expedia.es,expedia.se,expedia.ch,expedia.co.uk,expedia.de###gdpr-consent-banner
 expedia.at,expedia.be,expedia.dk,expedia.fi,expedia.fr,expedia.ie,expedia.it,expedia.nl,expedia.no,expedia.es,expedia.se,expedia.ch,expedia.co.uk,expedia.de##.uitk-gdpr-banner
@@ -16993,6 +16997,8 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+scribd.com#$#.wrapper { display: none !important; }
+scribd.com#$#body { overflow: visible !important; }
 hankyung.com#%#//scriptlet('prevent-window-open', '1', 'popup')
 ||gadget.pico.tools^$domain=arktimes.com
 wallstreetmojo.com#$#.pum-overlay[data-popmake*="auto-popup-for-free-ib-courses-videos-desktop"] { display: none!important; }
@@ -17016,6 +17022,7 @@ opencritic.com###nn_player_wrapper
 stocksregister.com##.cpro-overlay
 nordvpn.com##div[id^="popup_"]
 nordvpn.com##.modal-backdrop
+proficientblogging.com##.cpro-overlay
 hagebau.de##.Lightbox-box
 studwork.org#$#.base-modal { display: none !important; }
 studwork.org#$#.base-modal__shadow { display: none !important; }
@@ -22595,6 +22602,10 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !######### JS tweaks ##########
 !##############################
 !
+! https://github.com/uBlockOrigin/uAssets/issues/8744
+abhaydigitalmarketer.com#%#//scriptlet("adjust-setInterval", "countdown", "", "0.02")
+! https://github.com/AdguardTeam/AdguardFilters/issues/78304
+bildirim.eu#%#//scriptlet("set-constant", "Notification", "undefined")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78325
 down.mdiaload.com,down.fast-down.com#%#//scriptlet("adjust-setTimeout", "tick", "1000", "0.02")
 ! android-apk.org -> aapks.com timer boost
