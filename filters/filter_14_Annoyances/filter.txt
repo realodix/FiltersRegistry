@@ -83,6 +83,9 @@ youtube.com,youtube-nocookie.com#%#//scriptlet('set-constant', 'playerResponse.a
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/76193
+||content.jwplatform.com^$domain=techradar.com
+techradar.com##.future__jwplayer--carousel
 ! owlcation.com - remove floating player
 owlcation.com#%#//scriptlet('remove-class', 'jw-flag-floating', '.m-video-player--frame-container .jwplayer.jw-flag-floating')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78435
@@ -1823,6 +1826,7 @@ kosicednes.sk,tinyprojects.dev,cambio16.com,voxukraine.org,pnas.org,cachevalleyd
 !
 nytimes.com##.expanded-dock
 soydemac.com##.sidebar-subscripcion
+vermangasporno.com#?##fooside > div.col-md-4:has(> div.textwidget > form#feedburner)
 gazin.com.br##section[class^="styles__SectionNewsletterPromocoes-"]
 aeon.co##.newsletter-signup
 masfrandy.com##.berlangganan-box
@@ -4187,6 +4191,7 @@ boston.com#@#.postad
 !
 @@||noen.at/ads.html
 ||atc.studybreakmedia.com/modules/abb^
+titulky.com#%#//scriptlet("set-constant", "showBanner600", "true")
 thehouseofportable.com##div[class] > [onclick^="dispi("]
 thehouseofportable.com##body > #modalDisclaimer + #htp
 thehouseofportable.com##body > #modalDisclaimer + [style^="display: block;"]:not([class]):not([id])
@@ -5697,6 +5702,7 @@ postimees.ee#$#.adblock-notif { display: none !important; }
 postimees.ee#%#//scriptlet('remove-class', 'cookie-paywall-visible', 'article[class^="root"]')
 !
 !#safari_cb_affinity(general)
+@@||titulky.com/js/reklama.$~third-party
 community-z.com#@#.ad-placements
 imleagues.com#@#.AdSense
 @@||imleagues.com/spa/ads/show_ads.js
