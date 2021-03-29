@@ -1791,8 +1791,7 @@ mail.ru#?#body > div.tooltip:has(div.m-push-notifications__buttons)
 ||pogoda.mail.ru/*/ct-push-notifications/ct-push-notifications.xml.js
 !
 ! App banners
-cloud.mail.ru##div[class^="portal-promo-manager"]
-cloud.mail.ru##div[class^="portal-promo-manager"] ~ div[onclick="this.querySelector('a').click();"]
+cloud.mail.ru##.b-tooltip_tariff-promo
 ! popups
 ! theme popup
 e.mail.ru###theme-currency-notify
@@ -8257,6 +8256,7 @@ margreiter-shop.de##.ec-notices__wrap
 soydemac.com##.machete_cookie_container
 sentinelone.com###cookie-message-panel
 cafeyn.co###cookiesStrip
+perlego.com##div[aria-label="cookie banner"]
 ||elefacts.de/js/cookie-consent-*.js
 seameliabeachresort.com##.cookieText
 povarprofi.ru##.spCookieNotice
@@ -8285,6 +8285,10 @@ smythstoys.com#$#body { overflow: visible!important; }
 ||moneysavingexpert.com/cookie-consent-v*/msmCookieConsent.js
 reifendirekt.de###cookie-diss
 hagebau.de##.js-cookie-hint
+atnews.gr##cookie-law-info-again
+atnews.gr#$#.cli-modal-backdrop { display: none !important; }
+atnews.gr#$##cookie-law-info-bar { display: none !important; }
+atnews.gr#$#body { overflow: visible !important; }
 ||boschwiperblades.com/assets/cookie-popup/bosch-privacy-settings-*.min.js
 servicebund.de###social-opt-in
 fosspost.org###cookiebanner-root
@@ -14016,6 +14020,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !######### White list. Fixing filtering errors #########
 !#######################################################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/78237
+@@||static2.mfbcdn.net/assets/global/plugins/cookie-consent/js/cookieconsent.min.js$domain=myfxbook.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78715
 @@||eurosportplayer.com/cms/articles/cookie-banner
 eurosportplayer.com#@##cookie-banner
@@ -14035,6 +14041,8 @@ heute.at#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78159
 ntv.com.tr#@##onetrust-consent-sdk
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=ntv.com.tr
+! https://github.com/AdguardTeam/AdguardFilters/issues/78339
+atnews.gr#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/77956
 metro.de#@#.cookie-container
 metro.de#@#.cookie-disclaimer:not(body)
