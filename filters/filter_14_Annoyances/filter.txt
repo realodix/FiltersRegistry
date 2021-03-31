@@ -8555,7 +8555,6 @@ blog.trakt.tv##body > div[id="root"] ~ script +div:not([class]):not([id]) > div[
 simsdom.com###policies
 yatego.com###ycwBg
 yatego.com###ycwMo
-kinopoisk.ru#?#body > div:has(> div[class^="sc-"] > div[data-id="popup"] > table td[data-id="types-content"] > div[data-id="common"] > div[class^="sc-"] > a[href="https://yandex.ru/legal/cookies_policy/"])
 inbox.lt###cmp-widget-wrapper
 ||msendpointmgr.com/wp-content/plugins/responsive-cookie-consent/includes/js/scripts.js
 foxford.ru###cc_container
@@ -21468,9 +21467,11 @@ login.yahoo.co.jp###ads
 ! banner https://kakaku.com/item/J0000034135/?lid=pc_prbox01_pc_J0000034135
 ||kakaku.com/script/itemview/RdmReviewAd.js
 kakaku.com#?#.alignC > div.mTop10 > div[style="border:1px solid #ccc;"]:contains(-PR-)
-! https://github.com/AdguardTeam/AdguardFilters/issues/67637#issuecomment-768913292
-kinopoisk.ru#?#iframe.yandex_music:upward(div.media-post-embed)
-kinopoisk.ru##.media-page-layout__trailer-promo
+! https://github.com/AdguardTeam/AdguardFilters/issues/77368#issuecomment-810495081
+www.kinopoisk.ru#$?#header[style*="header-height"] > div[class]:has(> a[href*="kinopoisk_selfpromo"]) { display: none !important; }
+www.kinopoisk.ru#$?#header[style*="header-height"] > div[class]:has(> a[href*="kinopoisk_selfpromo"]) + div[class] { margin-top: 0 !important; }
+! kinopoisk.ru#?#iframe.yandex_music:upward(div.media-post-embed)
+! kinopoisk.ru##.media-page-layout__trailer-promo
 ! https://github.com/AdguardTeam/AdguardFilters/issues/72673
 barchart.com##.bc-premier-ads-block
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71748
