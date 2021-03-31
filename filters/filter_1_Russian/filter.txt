@@ -5058,6 +5058,12 @@ pornobit.mobi#%#//scriptlet('prevent-setTimeout', 'innerText', '2000')
 @@||pornobit.mobi/player/player_ads.html
 pornobit.mobi#@#.ads-iframe
 !#endif
+! https://github.com/AdguardTeam/AdguardFilters/issues/78268
+websdr.space#%#//scriptlet("prevent-setTimeout", "5e3", "7000")
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+@@||an.yandex.ru/meta/$domain=websdr.space
+@@||an.yandex.ru/system/context.js$domain=websdr.space
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76277
 kakoysegodnyaprazdnik.ru#%#//scriptlet("prevent-addEventListener", "load", "window.google_jobrunner")
 !#if (adguard_app_ios || adguard_ext_android_cb)
@@ -5278,8 +5284,6 @@ hitline.org.ua##.bantop
 @@/googleads.g.doubleclick.net/[a-z0-9]*$/$xmlhttprequest,domain=cdntelesee.com|cdnpotok.com|only-tv.org
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51177
 @@||eu-vast.vertamedia.com/vmap?aid=$domain=inter.ua
-! https://github.com/AdguardTeam/AdguardFilters/issues/51704
-@@||websdr.space/assets/js/adblock.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51401
 q32.ru#%#//scriptlet("abort-current-inline-script", "jQuery", "adblock-checker")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51020
@@ -7136,6 +7140,7 @@ online-stars.org#?#body > div:has(> a[href^="https://r.advg.agency/"])
 games-xxx.com#?##sidebar div.block:has(> h4:contains(/Очень горяченькое|Друзья Сайта/))
 marieclaire.ua#?#.content > div[class] > div[id]:contains(загрузка...)
 ferra.ru#?#div[class]:has(> h3:contains(Рекомендуем ещё))
+websdr.space#?##wrapper div.card > div.card-body > div.text-center div[id^="yandex_rtb"]:upward(div.card)
 rambler.ru#?#div[itemid="#articleBody"] > div[class]:has(> div > div > div[id^="adfox-"])
 x-true.info#?#.block_header:contains(Также по теме)
 tkrasnodar.ru#?#.elementor-widget-wrap > div.elementor-element:has(> div.elementor-widget-container > div.elementor-shortcode > div[id^="tkras-"] > div[id^="yandex_rtb_"])
