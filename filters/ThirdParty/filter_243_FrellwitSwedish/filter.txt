@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-03-31 11:34:25 CEST
+! Last modified: 2021-04-01 10:36:15 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -132,6 +132,7 @@ finansliv.se#%#//scriptlet('ubo-aopw.js', 'nwlettersignupcheck')
 findit.se#%#//scriptlet('ubo-set.js', 'testPrebid', 'noopFunc')
 firstclassmagazine.se##a:has(.feat-cat:has-text(/annons/i))
 fiskejournalen.se#%#//scriptlet('ubo-rc.js', 'no-scroll')
+flashback.org#%#//scriptlet('ubo-nostif.js', '#top-banner-container')
 fokus.se#$#[id^="entry-content-post"], [id^="entry-content-related"] { height: 100% !important; }
 foretagande.se##article:has(.sponsored-text)
 forum.macworld.se,idg.se#$#.idgcp__layer--active, .idgcp__layer--active body { overflow: initial !important; }
@@ -406,8 +407,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -845,6 +846,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /headerbidding.js
 /helios/multiad_jquery.$script
 /hemmafixbloggen/includes/events-tracker
+/hotjar/hotjar.script.js
 /HSSAnalyticsUtils.js
 /html5videovastplugin.$domain=skidspar.se
 /hyperion-feature-ads
@@ -1894,6 +1896,7 @@ yelp.se##.js-cookie-iframe
 ||allsvenskan.se/allsvenskan-script-min.js
 ||amazonaws.com/adn-tag/$script
 ||amazonaws.com/metapic-cdn/*/metapic.
+||amazonaws.com/pfe_im/js/prod/pcc/s_code.js
 ||ana.tunnl.com^
 ||analytics-sdk.yle.fi^$script
 ||analytics.ozzi.io^$third-party
@@ -2050,7 +2053,7 @@ yelp.se##.js-cookie-iframe
 ||eteppy.com^
 ||europe-west1-bonnier-big-data.cloudfunctions.net^$third-party
 ||evertiq.se/bximg/
-||evidon.com^$third-party,domain=morningstar.se|mtv.se|tripadvisor.se
+||evidon.com^$third-party,domain=fasting.nu|morningstar.se|mtv.se|tripadvisor.se
 ||evt-api.ntm.eu/api/*/datacollector
 ||execute-api.eu-west-1.amazonaws.com/live/analytics/$xmlhttprequest
 ||existenz.se/img/o/
