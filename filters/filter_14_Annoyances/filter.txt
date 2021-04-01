@@ -94,6 +94,8 @@ rmnt.ru##a[href="https://zen.yandex.ru/rmnt"]
 techradar.com##.future__jwplayer--carousel
 ! owlcation.com - remove floating player
 owlcation.com#%#//scriptlet('remove-class', 'jw-flag-floating', '.m-video-player--frame-container .jwplayer.jw-flag-floating')
+! https://github.com/AdguardTeam/AdguardFilters/issues/78706
+blog.hootsuite.com##.content-upgrade--popup-variant
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78657
 vpnranks.com###hb-strip
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78435
@@ -1833,6 +1835,7 @@ revouninstaller.com,logincasino.com,borsagundem.com,officelife.media,kod.ru,mast
 ! ###mc_embed_signup
 kosicednes.sk,tinyprojects.dev,cambio16.com,voxukraine.org,pnas.org,cachevalleydaily.com,bisnis.com,ilpost.it,bsblog.info,alcoparty.com.ua,codastory.com,informazionefiscale.it,kerch.fm,cinemablend.com,prostofinovo.ru,comss.ru,majorgeeks.com,buhgalter.com.ua,providr.com,24tv.ua,babylonbee.com,dexerto.com,football365.com,menrec.com,netdoktor.de,ottawamatters.com,retail-insider.com,walterfootball.com,wweek.com,zozhnik.ru###mc_embed_signup
 !
+citywire.co.uk##.alert-registration
 finextra.com##.module--signup
 eastbaytimes.com##.newsletter-simple
 eastbaytimes.com##.Mg2-newsletter-inline_notif_mng
@@ -8279,7 +8282,12 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 ||cdn.privacy-mgmt.com^$important,domain=promipool.de|android-hilfe.de|wsj.com
 !
 !
+openreach.com##.floating-cookie-policy
 formula1.com###cookie-banner
+geborgenschlafen.de#$#.js--modal { display: none !important; }
+geborgenschlafen.de#$#.js--overlay { display: none !important; }
+geborgenschlafen.de#$?#html { overflow: visible !important; }
+geborgenschlafen.de#$?#body { overflow: visible !important; }
 finextra.com##.section--cookie-policy
 similarsites.com##div[class^="PrivacyNotification_"]
 store.steampowered.com###cookiePrefPopup
@@ -12979,9 +12987,9 @@ qastack.it#$#body { overflow: auto !important; }
 qastack.it#$##cookies-consent { display: none !important; }
 qastack.it#$##cookies-consent ~ div.modal-backdrop { display: none !important; }
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/74191
-!+ PLATFORM(ext_ff, ext_safari)
-twitter.com#?#main > div[class] > div[class] > div[class] > div[dir="auto"] > a[href$="/twitter-cookies"]:upward(2)
+! https://github.com/AdguardTeam/AdguardFilters/issues/75585#issuecomment-811823586
+!+ PLATFORM(ext_safari)
+twitter.com#?##layers div[class^="css-"] div[dir] > a[href$="/rules-and-policies/twitter-cookies"]:upward(2)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69173
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 ~www.expo-ip.com,expo-ip.com##.modal-backdrop
@@ -17166,6 +17174,7 @@ banki.ru#$?#body > div:has(> div[class] > div[style="width: 650px;"] h4:contains
 banki.ru#$#body { overflow: visible!important; }
 hobokengirl.com##.fd-form-popup
 gazin.com.br##div[class^="styles__WhatsAppWrap-"]
+blog.hootsuite.com##.exit-intent-modal
 scribd.com#$#.wrapper { display: none !important; }
 scribd.com#$#body { overflow: visible !important; }
 hankyung.com#%#//scriptlet('prevent-window-open', '1', 'popup')
