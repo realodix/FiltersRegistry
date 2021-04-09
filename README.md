@@ -77,6 +77,7 @@ This repository contains the known filters subscriptions available to AdGuard us
 - `diff.txt`
 
   Build log that contains excluded and converted rules with an explanation.
+
 ### <a id="tags"></a> Tags
 
 Every filter can be marked by a number of tags. Every tag metadata listed in `/tags/metadata.json`.
