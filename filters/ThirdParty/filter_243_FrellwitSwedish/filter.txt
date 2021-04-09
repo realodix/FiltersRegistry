@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-04-08 10:18:57 CEST
+! Last modified: 2021-04-09 09:55:37 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -280,6 +280,7 @@ svenskjakt.se#%#//scriptlet('ubo-acis.js', 'body_class_list')
 sverigespringer.se##.cd-sidebar-item, .cd-news-card:has(.cd-card-bar:has-text(/annons/i))
 swedroid.se##.article:has(span:has-text(/sponsr/i))
 swedroid.se#$?#li.Notice:has(a[target="_blank"]) { remove: true; }
+synonymer.se#%#//scriptlet('ubo-cookie-remover.js', '/^ev_did|ev_sid/')
 tasteline.com#$#.popup { overflow: auto !important; }
 tasteline.com##li.article:has(.category:has-text(/samarbete/i))
 teknifik.se##.post:has(.sponsor)
@@ -2238,6 +2239,7 @@ yelp.se##.js-cookie-iframe
 ||onetrust.com^$third-party,domain=lantmannen.se|yougov.se
 ||onrender.com/tracker.js
 ||opinionstage.com/assets/autoengage.$script
+||optmn.cloud/hb/
 ||optnmnstr.com^$third-party
 ||opulens.se^$csp=worker-src 'none'
 ||organicfruitapps.com/analytics$image
