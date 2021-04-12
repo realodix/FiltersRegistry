@@ -6,16 +6,27 @@
 ! Attention: check if these rules are removed after update this filter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53365
 ! ||digikala.com^$third-party
-! https://github.com/AdguardTeam/AdguardFilters/issues/60229
-! ##*[class$="_ads"]:not(body):not(input)
-! ~flickr.com##*[class$="-ads"]:not(body):not(input)
 !
-! *web&utm_campaign
+! ##*[class$="_ads"]:not(body):not(input)
+! ##*[class$="_ads"]:not(body):not(input)
+! ##*[class^="ads-"]:not(body):not(input)
+! ##*[class^="ads_"]:not(body):not(input)
+! ##*[id$="_ads"]:not(body):not(input)
+! ##*[id^="ads_"]:not(body):not(input)
+! *Mobile&utm_medium
 ! *utm_medium
 ! *utm_source
-! *Mobile&utm_medium
+! *web&utm_campaign
+! /ads.$script,image
+! find without domains, by selector
+! ~accuweather.com##*[id*="sponsor"]:not(body):not(input)
+! ~flickr.com##*[class$="-ads"]:not(body):not(input)
+! ~flickr.com##*[class$="-ads"]:not(body):not(input)
+! ~gamespot.com,~megaupload.com##*[class*="_ad_"]:not(body):not(input)
+! ~mobile01.com##*[id$="-ads"]:not(body):not(input)
+! ~slideboom.com##*[class*="advertisement"]:not(body):not(input)
 !
-! [Adblock Plus 2.0]
+[Adblock Plus 2.0]
 ! Title: Adblock-Persian list
 ! Expires: 4 days (update frequency)
 ! ---------- Generic Blocking Rules ----------
@@ -47,7 +58,6 @@ _468x120
 .ir/laser*.*gif
 /Adver/
 /image/ad/*
-/ads.$script,image
 120_240
 468x60
 170x70
@@ -409,6 +419,7 @@ _vps-banner*.gif
 ||cloob.com^$third-party
 ||chare.in^$third-party
 ||dabi.ir$~third-party
+||digikala.com^$third-party
 ||delearia.org^$third-party
 ||dude-club.com^$third-party
 ||bezoodi.com^$third-party
@@ -857,17 +868,7 @@ saveinter.net##HTML
 ##.home_adv
 ###pbAds
 ###pbTopAds
-##*[id^="ads_"]:not(body):not(input)
-##*[id$="_ads"]:not(body):not(input)
-##*[class^="ads_"]:not(body):not(input)
-##*[class^="ads-"]:not(body):not(input)
 ###PopUpFad
-!
-~accuweather.com##*[id*="sponsor"]:not(body):not(input)
-~slideboom.com##*[class*="advertisement"]:not(body):not(input)
-~gamespot.com,~megaupload.com##*[class*="_ad_"]:not(body):not(input)
-~mobile01.com##*[id$="-ads"]:not(body):not(input)
-~t-mobile.co.uk,~channel4.com,~amusingplanet.com,~apple.com,~sportsdirect.com,~burningcamel.com,~prosperitybanktx.com,~repubblica.it,~mail.google.com##.ads
 !
 us.mg5.mail.yahoo.com##P[align="center"]
 36ohk6dgmcd1n.yom.mail.yahoo.net###yui_3_2_0_5_13102684919344953
