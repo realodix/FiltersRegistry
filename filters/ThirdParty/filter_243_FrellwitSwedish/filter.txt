@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-04-12 11:32:31 CEST
+! Last modified: 2021-04-13 19:59:29 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -63,6 +63,7 @@ alltomburgare.se##.newscolumn:has(a[href$="/sponsrat/"])
 alltommat.se##.teaser:has(.teaser-label:has-text(/annonssamarbete/i))
 alltommat.se,alltomtradgard.se,damernasvarld.se,expressen.se,skonahem.com,teknikensvarld.se##.teaser:has(.teaser__bottom--ad-marker)
 alltommat.se,alltomtradgard.se,damernasvarld.se,skonahem.com,teknikensvarld.se#%#//scriptlet('ubo-acis.js', 'ExpressenAnalytics', 'push')
+alltomosby.se,espressomedia.se##.penci-block-vc:has([href*="casino"])
 arbetaren.se##.text-sm:has-text(/annons/i):upward(a)
 arvikanyheter.se,dalslanningen.se,filipstadstidning.se,fryksdalsbygden.se,hjotidning.se,karlskogatidning.se,kt.se,mariestadstidningen.se,nkp.se,nlt.se,nwt.se,provinstidningen.se,saffletidningen.se,sla.se,varmlandsaffarer.se,vf.se#%#//scriptlet('ubo-acis.js', 'nwtThirdParties')
 arvikanyheter.se,dalslanningen.se,filipstadstidning.se,fryksdalsbygden.se,hjotidning.se,karlskogatidning.se,kt.se,mariestadstidningen.se,nkp.se,nlt.se,nwt.se,provinstidningen.se,saffletidningen.se,sla.se,varmlandsaffarer.se,vf.se#%#//scriptlet('ubo-cookie-remover.js', 'page-views')
@@ -114,6 +115,8 @@ djungeltrumman.se#%#//scriptlet('ubo-nano-sib.js', 'dt_fullpage_ad')
 djungeltrumman.se##.item:has(.label-post:has-text(/spons/i))
 dromhemochtradgard.se##.native-wrapper:upward(1)
 duochjobbet.se##.editor_content.post:has(p:has-text(/^annons/i))
+ehandelstips.se##[href*="/author/sponsradeartiklar/"]:upward(article)
+ehandelstips.se##[href*="/author/sponsradeartiklar/"]:upward(li)
 elle.se##section.c-native_banner:upward(2)
 etc.se#%#//scriptlet('ubo-set.js', 'Drupal.behaviors.lock_article', 'undefined')
 ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se##.ssp_divider:has(.sponsored-bar)
@@ -136,6 +139,7 @@ finansliv.se#%#//scriptlet('ubo-aopw.js', 'nwlettersignupcheck')
 findit.se#%#//scriptlet('ubo-set.js', 'testPrebid', 'noopFunc')
 firstclassmagazine.se##a:has(.feat-cat:has-text(/annons/i))
 fiskejournalen.se#%#//scriptlet('ubo-rc.js', 'no-scroll')
+fiskejournalen.se##.fisher-pinned-post-title.sponsored:upward(1)
 flashback.org#%#//scriptlet('ubo-nostif.js', '#top-banner-container')
 fokus.se#$#[id^="entry-content-post"], [id^="entry-content-related"] { height: 100% !important; }
 foretagande.se##article:has(.sponsored-text)
@@ -167,6 +171,7 @@ hockeymagasinet.com#%#//scriptlet('ubo-rc.js', 'modal-open')
 hrnytt.se##article:has(.sponsored-article)
 ibnytt.se##.widget:has(h3:has-text(Speltips))
 idg.se#%#//scriptlet('ubo-nostif.js', 'gFail')
+idg.se##[data-styled="SpLabel"]:upward(article)
 interiorbyvanessa.se##.post:has-text(I annonssamarbete med)
 isabellalowengrip.se##.post:has(em:has-text(/^i samarbete med/i))
 isabellalowengrip.se,matplatsen.net#$?#article:has(em:has-text(/i samarbete med/i)) { remove: true; }
@@ -853,7 +858,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /fusionadloader.$script
 /ga_cookie_track.js$script
 /GA_EEC$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
-/gdpr/*$domain=capdesign.se|husbilskompisar.se|momondo.se|rotter.se|se.laowl.com|visitlulea.se
+/gdpr/*$domain=borattforum.se|capdesign.se|husbilskompisar.se|momondo.se|rotter.se|se.laowl.com|visitlulea.se
 /get.aspx?AdSlotID$script
 /getnative$xmlhttprequest,domain=di.se
 /glimr-static$domain=~klart.se
@@ -1035,6 +1040,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /plugins/newsner-lead-tracking/*
 /plugins/notificationx$script
 /plugins/ns-facebook-pixel-for-wp/*
+/plugins/ocean-cookie-notice$script,domain=ff.se
 /plugins/onesignal-free-web-push-notifications/*
 /plugins/optin-cat-elite-wp/*$script
 /plugins/page-views-count/*
@@ -1214,7 +1220,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /wp-content/uploads/*.js?ver$script,domain=nyadagbladet.se
 /wp-content/uploads/*/public/assets/js/advanced.js$script
 /wp-content/uploads/*annons$image
-/wp-content/uploads/*banner$image,domain=alltomhif.se|brollopsmagasinet.se|bussmagasinet.se|customerinsider.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|marsta.nu|polistidningen.se|sff.nu|sportpanelen.se|turismnytt.se|vardfokus.se|viralsweden.com
+/wp-content/uploads/*banner$image,domain=alltomhif.se|borattforum.se|brollopsmagasinet.se|bussmagasinet.se|customerinsider.se|danstidningen.se|guldkanalen.se|katerinamagasin.se|ljuskultur.se|marsta.nu|polistidningen.se|sff.nu|sportpanelen.se|turismnytt.se|vardfokus.se|viralsweden.com
 /wp-content/uploads/*betfair$image
 /wp-content/uploads/*bethard$image
 /wp-content/uploads/*betting$image,domain=hockeybladet.nu|kulturbloggen.com|newsvoice.se|nyadagbladet.se
@@ -1385,6 +1391,7 @@ blocket.se###placement_panorama, .blocket-placement, div[style="height: 240px;"]
 bokadirekt.se##.home-banner, img[alt*="banner"]
 booli.se###app > div:last-child
 booli.se###outer
+borattforum.se,brollopsmagasinet.se,bussmagasinet.se,nyhetersto.se,svenskbyggtidning.se##a.gofollow[data-track]
 borskollen.se##[id^="borskollen_small"],[id^="borskollen_large"],.featured-link
 borsvarlden.com##.sponsored-articles-container,.nav-sep-blink,.annons-label,.index-side-banner-wrapper
 bosidan.ax##.ad-li
@@ -1393,8 +1400,7 @@ branschkoll.se##div[id^="brans-"]
 bravenewbusiness.se##.site-information-container
 breakit.se##.videoAd, .js-video-ad
 breakit.se##[class*="sponsored"]
-brinkenbakar.se,nyadagbladet.se##.elementor-popup-modal
-brollopsmagasinet.se,bussmagasinet.se,nyhetersto.se,svenskbyggtidning.se##a.gofollow[data-track]
+brinkenbakar.se,ff.se,nyadagbladet.se##.elementor-popup-modal
 bukefalos.se,friaordet.org,husbilsklubben.se,rollspel.nu,thaisnack.se##.u-bottomFixer
 bussmagasinet.se###page > div:not(.left):not(.right)
 bussmagasinet.se###titlebanner
