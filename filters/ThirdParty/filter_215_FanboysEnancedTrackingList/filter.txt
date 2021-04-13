@@ -11,7 +11,7 @@
 ! In no event shall Fanboy List, or the list author be liable for any indirect, direct, punitive, special, incidental, or consequential damages whatsoever.
 ! By downloading or viewing, or using this list, you are accepting these terms and the license.
 !
-&referer=$image,script,domain=~digitaltrends.com|~sportdiver.com|~gismeteo.ru|~vuokraovi.com|~24ur.com|~cdon.dk|~cdon.fi|~cdon.no|~cdon.se|~ratp.fr|~skype.com
+&referer=$image,script,domain=~ice.hockey|~digitaltrends.com|~sportdiver.com|~gismeteo.ru|~vuokraovi.com|~24ur.com|~cdon.dk|~cdon.fi|~cdon.no|~cdon.se|~ratp.fr|~skype.com
 -coremetrics-
 -CoreMetrics.
 -elqImg.
@@ -333,6 +333,10 @@ _webtrends_
 _wtBase.js
 _wtbaseV2.
 _wtInit.js
+! Remove Floc checks by websites when using Chrome
+!#if env_chromium
+!#endif
+!
 ! Fingerprinting
 ||academy.com/webcontent/
 ||att.com/public/
@@ -393,7 +397,7 @@ healthline.com##.window-wrapper
 ! https://middycdn-a.akamaihd.net/bootstrap/bootstrap.js (From tennis365.com)
 ||akamaihd.net/bootstrap/bootstrap.js
 ! favicon tracking
-/favicon.ico$image,third-party,domain=~apple.com|~douban.com|~bahn.de|~winfuture.de|~bt.com|~ebay.com.au|~ebay.com|~ebay.co.uk|~go.com|~github.com|~microsoft.com|~stackexchange.com|~stackoverflow.com|~askubuntu.com|~reddit.com|~4chan.org|~twitter.com|~live.com|~espn.com|~yahoo.com
+/favicon.ico$image,third-party,domain=~streameast.live|~apple.com|~douban.com|~bahn.de|~winfuture.de|~bt.com|~ebay.com.au|~ebay.com|~ebay.co.uk|~go.com|~github.com|~microsoft.com|~stackexchange.com|~stackoverflow.com|~askubuntu.com|~reddit.com|~4chan.org|~twitter.com|~live.com|~espn.com|~yahoo.com
 ! push notifications test filter
 ##.open.pushModal
 !
@@ -461,6 +465,8 @@ nautil.us###adpayload
 ||washingtonpost.com^*/pwapi-proxy.min.js
 ! UBo-specific blocks
 newrepublic.com###pwPopups
+spectator.co.uk##.MeterBanner-module__banner
+stripes.com###pelcro-app
 stripes.com##.pelcro-prefix-view
 theatlantic.com###paywall
 !
@@ -1588,42 +1594,6 @@ wbur.org#@#.adsbox
 @@||vip.townnews.com^$script,domain=stltoday.com
 stltoday.com##.social-share-link
 stltoday.com##.tnt-ads-container
-! kinja.com
-@@||avclub.com^$generichide
-@@||deadspin.com^$generichide
-@@||earther.com^$generichide
-@@||gizmodo.com^$generichide
-@@||jalopnik.com^$generichide
-@@||jezebel.com^$generichide
-@@||kinja.com^$generichide
-@@||lifehacker.com^$generichide
-@@||splinternews.com^$generichide
-@@||theroot.com^$generichide
-! theroot.com
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com###sharingfooter
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com###taboola-below-article-thumbnails
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.contained-ad-container
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.contained-ad-shaft
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.footer-social
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.js_ad-dynamic
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.js_ad-top-banner
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.js_contained-ad-container
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.mezzanine
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.newsletter-subscribe
-! cnet.com
-! @@||cnet.com^$generichide
-cnet.com###gdpr_area
-cnet.com###googleplus
-cnet.com##.ad-incontent-ad-plus-billboard-top
-cnet.com##.ad-mpu-plus-top
-cnet.com##.skybox-collapseBtn.skybox-closeBtn
-cnet.com##.social-inner
-cnet.com##.socialSharing
-cnet.com##.type-native
-cnet.com##div[id^="leader-top-"]
-cnet.com##div[id^="nav-ad-"]
-cnet.com#@#.trc_elastic
-cnet.com#@#div[id^="trc_wrapper_"]
 ! doridro.net
 @@||doridro.net^$generichide
 ! indianhotcomics.com
@@ -2899,6 +2869,7 @@ xkorean.net##a[href*="&aff_id"]
 @@||aarp.net/etc/aarp/statics/global/js/omniture*.js
 @@||abcnews.com/assets/flash/kdp/omniturePlugin.swf
 @@||abcotvs.net^*/analytics/VideoHeartbeat.min.js
+@@||accounts.google.com/gsi/client$script,domain=jiji.co.ke
 @@||adobe.com/uber/js/*s_code
 @@||adobe.com/www.adobe.com/uber/js/pdc_s_code.js
 @@||adziff.com/pcmag/images/zd_footer_logo.png$image,domain=extremetech.com

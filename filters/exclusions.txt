@@ -41,6 +41,12 @@ $popup,~third-party
 !***  ! Issue link
 !***  `exclusion`
 !
+!
+!### Anti-adblock baits ###
+! all filters
+/^##\.adsbox$/
+/^##\.afs_ads$/
+!
 !### Easylist ###
 ! 
 ! fixing prime video app: https://uploads.adguard.com/2020-10-04_03.18.16.jpg
@@ -57,6 +63,7 @@ $popup,~third-party
 /^##\.adsbox$/
 /adframe.
 ! Excluding Google Contributor anti-adblock baits
+/^##\[class\^="div-gpt-ad"\]$/
 /^##div\[class\^="div-gpt-ad"\]$/
 /^##\.div-gpt-ad$/
 ! https://github.com/easylist/easylist/commit/e2efe2c3686cf6192f4e2d6a944ebe092c06f27a
@@ -153,7 +160,7 @@ $popup,domain=aflamsexnek.com|
 !### Liste FR ###
 ! Too wide rules
 +Popunder+$popup
-/^https?:\/\/(www\.)?([a-z0-9]{3,10}\.)?[a-z0-9]{5,20}\.(click|co|com|bid|net|online|top|club)\/([a-z0-9]{2,3}\/){3}[a-f0-9]{32}\.js$/$script,xmlhttprequest
+/^https?:\/\/(www\.)?([a-z0-9]{3,10}\.)?[a-z0-9]{5,25}\.(click|co|club|com|bid|date|download|men|net|network|online|party|pw|racing|review|site|space|stream|top|trade|webcam|website|win|xyz)\/([a-z0-9]{2,3}\/){3}[a-f0-9]{32}\.js$/$script,xmlhttprequest
 -Block-ads-
 /click/*$subdocument
 =adblock_

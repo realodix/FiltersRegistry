@@ -1,3 +1,5 @@
+! Rule "rambler.*,~www.rambler.*#?#.pub_300x250.text-ad-links.adbanner.ad.text_ad.pub_728x90.text-ad.nav-ad.text-ads.textAd.ad-banner.text_ads.pub_300x250m:style(display: block !important)" converted to: "rambler.*,~www.rambler.*#$?#.pub_300x250.text-ad-links.adbanner.ad.text_ad.pub_728x90.text-ad.nav-ad.text-ads.textAd.ad-banner.text_ads.pub_300x250m { display: block !important }"
+rambler.*,~www.rambler.*#?#.pub_300x250.text-ad-links.adbanner.ad.text_ad.pub_728x90.text-ad.nav-ad.text-ads.textAd.ad-banner.text_ads.pub_300x250m:style(display: block !important)
 ! Rule "/^https?://mail\.yandex\.[^\s]{125,}/$empty,script,~third-party" converted to: "/^https?://mail\.yandex\.[^\s]{125,}/$redirect=nooptext,script,~third-party"
 /^https?://mail\.yandex\.[^\s]{125,}/$empty,script,~third-party
 ! Rule "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$empty,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz" converted to: "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$redirect=nooptext,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz"
@@ -67,7 +69,9 @@ mail.yandex.*#?#+js(set-constant.js, Object.prototype.changeLinkHref, noopFunc)
 Error: "Unknown pseudo class: +js(abort-on-stack-trace.js, Object.prototype.ypParams, stackDepth:4)" in the rule: "~yandex.net,yandex.*#?#+js(abort-on-stack-trace.js, Object.prototype.ypParams, stackDepth:4)"
 ~yandex.net,yandex.*#?#+js(abort-on-stack-trace.js, Object.prototype.ypParams, stackDepth:4)
 ! Invalid selector:
-~yandex.net,yandex.*#?#+js(json-prune.js, rtb seatbid)
+~yandex.net,yandex.*#?#+js(json-prune.js, direct rtb seatbid)
+! Invalid selector:
+~yandex.net,yandex.*#?#+js(remove-attr, data-counter, .serp-list a)
 ! Invalid selector:
 ~yandex.net,yandex.*#?#+js(set-constant.js, __AAB__, false)
 ! Invalid selector:
@@ -82,6 +86,8 @@ Error: "Unknown pseudo class: +js(abort-on-stack-trace.js, Object.prototype.ypPa
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.loaderVer, noopFunc)
 ! Invalid selector:
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.useAbdBundle, false)
+Error: "Unknown modifier: queryprune=|fbclid" in the rule: "&fbclid=$document,queryprune=|fbclid"
+&fbclid=$document,queryprune=|fbclid
 Error: "Unknown modifier: queryprune=|" in the rule: "&ymclid=$document,queryprune=|,domain=~ozon.onelink.me"
 &ymclid=$document,queryprune=|,domain=~ozon.onelink.me
 Error: "Unknown modifier: queryprune=|" in the rule: "/story/*?lang=$document,queryprune=|,domain=yandex.*"
@@ -92,6 +98,8 @@ Error: "Unknown modifier: queryprune=|clid" in the rule: "?clid=$document,queryp
 ?clid=$document,queryprune=|clid,domain=yandex.*
 Error: "Unknown modifier: queryprune=|" in the rule: "?commercial=$document,queryprune=|,domain=ria.com"
 ?commercial=$document,queryprune=|,domain=ria.com
+Error: "Unknown modifier: queryprune=|fbclid" in the rule: "?fbclid=$document,queryprune=|fbclid"
+?fbclid=$document,queryprune=|fbclid
 Error: "Unknown modifier: queryprune=|from" in the rule: "?from=$document,queryprune=|from,domain=3dnews.ru|7days.ru|autonews.ru|rbc.ru|sportrbc.ru"
 ?from=$document,queryprune=|from,domain=3dnews.ru|7days.ru|autonews.ru|rbc.ru|sportrbc.ru
 Error: "Unknown modifier: queryprune=|" in the rule: "?r_audience=$document,queryprune=|,domain=ria.com"
@@ -124,8 +132,8 @@ Error: "Unknown modifier: queryprune=|" in the rule: "?ymclid=$document,querypru
 ?ymclid=$document,queryprune=|
 Error: "Unknown modifier: queryprune=|" in the rule: "from=*_portal&lang=$document,queryprune=|,domain=yandex.*"
 from=*_portal&lang=$document,queryprune=|,domain=yandex.*
-Error: "Unknown modifier: queryprune=|utm_" in the rule: "utm_$document,xmlhttprequest,queryprune=|utm_,domain=4pda.ru|auto.ru|autonews.ru|championat.com|esquire.ru|gazeta.ru|goha.ru|instagram.com|interfax.ru|ivi.ru|kommersant.ru|kp.by|kp.kg|kp.kz|kp.md|kp.ru|kurs.com.ua|lenta.ru|livejournal.com|m24.ru|mail.ru|moslenta.ru|motor.ru|newstube.ru|nv.ua|rambler.ru|rbc.ru|rg.ru|ria.com|riafan.ru|rt.com|rueconomics.ru|sovsport.ru|sportrbc.ru|sports.ru|svpressa.ru|tass.ru|tribuna.com|tut.by|tvzvezda.ru|vz.ru|www.1tv.ru"
-utm_$document,xmlhttprequest,queryprune=|utm_,domain=4pda.ru|auto.ru|autonews.ru|championat.com|esquire.ru|gazeta.ru|goha.ru|instagram.com|interfax.ru|ivi.ru|kommersant.ru|kp.by|kp.kg|kp.kz|kp.md|kp.ru|kurs.com.ua|lenta.ru|livejournal.com|m24.ru|mail.ru|moslenta.ru|motor.ru|newstube.ru|nv.ua|rambler.ru|rbc.ru|rg.ru|ria.com|riafan.ru|rt.com|rueconomics.ru|sovsport.ru|sportrbc.ru|sports.ru|svpressa.ru|tass.ru|tribuna.com|tut.by|tvzvezda.ru|vz.ru|www.1tv.ru
+Error: "Unknown modifier: queryprune=|utm_" in the rule: "utm_$document,xmlhttprequest,queryprune=|utm_,domain=4pda.ru|auto.ru|autonews.ru|championat.com|esquire.ru|gazeta.ru|goha.ru|instagram.com|interfax.ru|ivi.ru|iz.ru|kommersant.ru|kp.by|kp.kg|kp.kz|kp.md|kp.ru|kurs.com.ua|lenta.ru|livejournal.com|m24.ru|mail.ru|moslenta.ru|motor.ru|newstube.ru|nv.ua|rambler.ru|rbc.ru|rg.ru|ria.com|riafan.ru|rt.com|rueconomics.ru|sovsport.ru|sport-express.ru|sportrbc.ru|sports.ru|svpressa.ru|tass.ru|tribuna.com|tut.by|tvzvezda.ru|vz.ru|wtftime.ru|www.1tv.ru"
+utm_$document,xmlhttprequest,queryprune=|utm_,domain=4pda.ru|auto.ru|autonews.ru|championat.com|esquire.ru|gazeta.ru|goha.ru|instagram.com|interfax.ru|ivi.ru|iz.ru|kommersant.ru|kp.by|kp.kg|kp.kz|kp.md|kp.ru|kurs.com.ua|lenta.ru|livejournal.com|m24.ru|mail.ru|moslenta.ru|motor.ru|newstube.ru|nv.ua|rambler.ru|rbc.ru|rg.ru|ria.com|riafan.ru|rt.com|rueconomics.ru|sovsport.ru|sport-express.ru|sportrbc.ru|sports.ru|svpressa.ru|tass.ru|tribuna.com|tut.by|tvzvezda.ru|vz.ru|wtftime.ru|www.1tv.ru
 Error: "Unknown modifier: queryprune=|utm_" in the rule: "utm_source=horoscopes$document,xmlhttprequest,queryprune=|utm_"
 utm_source=horoscopes$document,xmlhttprequest,queryprune=|utm_
 Error: "Unknown modifier: queryprune=|utm_" in the rule: "utm_source=hotline$document,queryprune=|utm_"

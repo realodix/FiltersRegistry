@@ -30,8 +30,8 @@ This repository contains the known filters subscriptions available to AdGuard us
         * `low` — only low-risk rule types are allowed; defaults to **low** if trust level is not configured at all
         * `high` — trusted third-party filter lists; some particular rules from there are still permited
         * `full` — all types of filter rules are allowed; only AdGuard filter lists have full trust at the moment
-    * `platformsIncluded` — [the list of platforms](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#platform-and-not_platform-hints) to compile the filter for, e.g. `["mac", "windows", "android"]`. If you need to compile the filter for all platforms remove this property
-    * `platformsExcluded` — [the list of platforms](https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#platform-and-not_platform-hints) to skip while filter compiling, e.g. `["ios", "ext_safari"]`. If you need to compile the filter for all platforms remove this property
+    * `platformsIncluded` — [the list of platforms](https://kb.adguard.com/general/how-to-create-your-own-ad-filters#platform-and-not_platform-hints) to compile the filter for, e.g. `["mac", "windows", "android"]`. If you need to compile the filter for all platforms remove this property
+    * `platformsExcluded` — [the list of platforms](https://kb.adguard.com/general/how-to-create-your-own-ad-filters#platform-and-not_platform-hints) to skip while filter compiling, e.g. `["ios", "ext_safari"]`. If you need to compile the filter for all platforms remove this property
 
     > Note please that both `platformsIncluded` and `platformsExcluded` should not be set in filter's metadata simultaneously.
 
@@ -44,7 +44,7 @@ This repository contains the known filters subscriptions available to AdGuard us
       "name": "AdGuard Base filter",
       "description": "EasyList + AdGuard English filter. This filter is necessary for quality ad blocking.",
       "timeAdded": 1404115015843,
-      "homepage": "https://kb.adguard.com/en/general/adguard-ad-filters#english",
+      "homepage": "https://kb.adguard.com/general/adguard-ad-filters#english",
       "expires": "4 days",
       "displayNumber": 1,
       "groupId": 1,
@@ -77,6 +77,7 @@ This repository contains the known filters subscriptions available to AdGuard us
 - `diff.txt`
 
   Build log that contains excluded and converted rules with an explanation.
+
 ### <a id="tags"></a> Tags
 
 Every filter can be marked by a number of tags. Every tag metadata listed in `/tags/metadata.json`.
@@ -108,7 +109,7 @@ Possible tags:
 
 If you want to help with filters translations, you can join us on Crowdin: https://crowdin.com/project/adguard-applications/en#/miscellaneous/filters-registry
 
-Please learn more about translating our products: https://kb.adguard.com/en/general/adguard-translations
+Please learn more about translating our products: https://kb.adguard.com/general/adguard-translations
 
 ## How to build
 

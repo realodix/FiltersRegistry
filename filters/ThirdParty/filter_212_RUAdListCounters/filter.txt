@@ -1,8 +1,8 @@
 !
-! Checksum: GsUD6Mf/C5Eniys85/xTKA
-! OriginalVersion: 202103160850
+! Checksum: 0Mry15RkkgeXD7jiLiNjJg
+! OriginalVersion: 202104130850
 ! Title: RU AdList: Counters
-! Last modified: 16 Mar 2021 08:50 UTC
+! Last modified: 13 Apr 2021 08:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -222,6 +222,7 @@ _pagespeed_beacon?
 ||analysis.fi^$third-party
 ||analytics.getaim.info^$third-party
 ||analytics.goha.info^
+||analytics.google.com/g/collect?
 ||analytics.tiktok.com^
 ||anti-ban.ucoz.ru^$third-party
 ||api-analytics.rozetka.com.ua/js/exponea.min.js
@@ -394,7 +395,9 @@ _pagespeed_beacon?
 ||goha.ru^*&geodata=
 ||google-analytics.com/collect?
 ||google-analytics.com/r/collect?
+||google.*/ads/ga-audiences?v=
 ||googleadservices.com^$third-party
+||googleoptimize.com^$third-party
 ||googletagmanager.com/gtag/$third-party,domain=~zakon.kz
 ||gostats.$third-party
 ||goto.kz/img.php?
@@ -453,6 +456,7 @@ _pagespeed_beacon?
 ||ipify.org^$third-party
 ||ipinfo.io^$third-party
 ||iplis.ru^$third-party
+||iplookup.vvdev.ru^$third-party
 ||j.uralweb.ru/
 ||join.com.ua/count.cgi?
 ||jsblom.com^$third-party
@@ -509,6 +513,7 @@ _pagespeed_beacon?
 ||mobtop.ru^$third-party
 ||mokuz.ru/vipcounter/
 ||monitorus.ru^$third-party
+||more-data.ru^$third-party
 ||mozilla.net^*/webtrends/
 ||mpianalytics.com^$third-party
 ||msecnd.net/scripts/a/ai.0.js
@@ -582,7 +587,6 @@ _pagespeed_beacon?
 ||reqapi.ru^$third-party
 ||retailrocket.ru^$third-party,domain=~auchan.ru
 ||revolvermaps.com^$third-party
-||ria.ru/js/counter.js
 ||riamedia.com.ua/assets/js/tracker.js
 ||richaudience.com^$third-party
 ||rover.ebay.com^$image,object,script
@@ -634,6 +638,7 @@ _pagespeed_beacon?
 ||spylog.ru^$third-party
 ||spywap.net/ct/
 ||st.onlygip.tech^$third-party
+||stat.5-tv.ru^
 ||stat.adlabs.ru^
 ||stat.eagleplatform.com^
 ||stat.media^$third-party
@@ -878,6 +883,8 @@ games-pc.top,rustorka.com,rustorka.innal.top,rustorka.net,rustorka.top,rustorka2
 fastpic.ru###picContainer > img
 happy-hack.ru#?##side_right > .block_r:-abp-has(noindex > center)
 animedub.ru#@#*
+rambler.ru##._3S8wP > div:first-child + div
+inoreader.com#@#.ad_title
 inoreader.com##.ad_title > a
 militaryreview.su##.bbanerr
 ingrus.net##.bcounts
@@ -886,6 +893,7 @@ yakusubstudio.home-forum.com,yakusubstudio.ru##.contbaner
 segodnya.ua##.counters
 rambler.ru##.disableAdvButton__container
 ok.ru#?#.feed-list > .feed-w:-abp-has(.feed_ava ~ div div > [class] ~ [class] ~ [class] ~ [class] ~ [class] ~ [class])
+virtualbrest.ru#?#.footer [id]:-abp-has(> b)
 sinoptik.ua##.liveinternet
 samlab.ws##.main > #footer ~ table
 radioprofusion.com##.revolvermaps
@@ -895,24 +903,30 @@ freehd.com.ua,hdreactor.club,hdreactor.su#?#.sidebar > .menu-wrap > .menu-head:-
 @@/adsense.png|$image,domain=freeopenvpn.org
 @@||inoreader.com^$generichide
 @@||www.inoreader.com/adv/$domain=www.inoreader.com
+rambler.ru##[data-blocks="top_news_block"] ~ div[style="margin-bottom:15px"]
 animedub.ru##a[href="https://animedub.ru/adblock.html"]
 auto.ru#?#div:matches-css-before(content: /Реклама/)
 auto.ru#?#div:matches-css-before(content: /Реклама/) ~ div
 inoreader.com##div[id^="leaderboard_ad"] > *
 radioprofusion.com##footer > .counter
 lostfilm.tv,lostfilm.tw##img[width="1"][height="1"]
+rambler.*##[data-blocks="rec_block"]
+rambler.*,~www.rambler.*#$?#.pub_300x250.text-ad-links.adbanner.ad.text_ad.pub_728x90.text-ad.nav-ad.text-ads.textAd.ad-banner.text_ads.pub_300x250m { display: block !important }
 www.rambler.*###main > div[class]:not([id]) > :first-child[style]:not(div):not([class]):not([id])
+www.rambler.*##body[style*="position:"] > script[src] + div:not([id])
 ||browserleaks.com/proxy$csp=script-src 'unsafe-inline'
 ||google-analytics.com^$domain=cdnvideo.ru|igromania.ru|rambler.ru
-||googletagmanager.com/gtm.js$domain=dtf.ru|gazeta.ru|lifehacker.ru|livejournal.com|motor.ru|nur.kz|rambler.ru|rutube.ru|tjournal.ru|tut.by|vc.ru
+||googletagmanager.com/gtm.js$domain=censor.net|dtf.ru|gazeta.ru|lifehacker.ru|livejournal.com|motor.ru|nur.kz|rambler.ru|rutube.ru|tjournal.ru|tut.by|vc.ru
 ||kp.yandex.net/images/bnnr/brand/$domain=www.kinopoisk.ru
 ||kp.yandex.net/js/brand$domain=www.kinopoisk.ru
+||rcm.rambler.ru^$domain=rambler.ru
 ! yandex
 /^https?://mail\.yandex\.[^\s]{125,}/$redirect=nooptext,script,~third-party
 /^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$redirect=nooptext,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz
 @@/^https?://yandex\.ru\/turbo[^\s]+(dni24\.com|fishki\.net|news\.ru|publy\.ru|tsargrad\.tv)/$csp=script-src
 mail.yandex.*##.ns-view-mail-pro-left-column-button
 mail.yandex.*##.PSHeader-Pro
+newssearch.yandex.*##.news-advert__column
 tv.yandex.*##.recommended-ott
 yandex.*###bk-container
 yandex.*##.b-statcounter + div[class] > div[id][class]
@@ -925,7 +939,7 @@ yandex.*##body[class*="b-page"] .widgets[role="main"] :not(div) :not(div) :not(d
 yandex.*##body[class*="b-page"] .widgets[role="main"] :not(div) :not(div) :not(div) > div[class]:not([class*="widget"]) > div[class]:not([class*="widget"]) a[href^="https://yastatic.net/www/_/"]
 yandex.*##body[class*="b-page"] .widgets[role="main"] :not(div) :not(div) :not(div) > div[class]:not([class*="widget"]) > div[class]:not([class*="widget"]) a[href^="https://yastatic.net/www/_/"] ~ div
 yandex.*##div > .banner-root ~ .page-root > #page div[class^="_"] > div > script + section div[class^="_"] > [data-id] + div[class^="_"]:not([data-id]) > div:first-child
-yandex.*##div.media-grid__row[data-blockname="infinity_zen"] .feed__row .card-wrapper_anny
+yandex.*##div.media-grid__row[data-blockname="infinity_zen"] .feed__item > div[class^="card-wrapper"][class*=" "]:not([style])
 yandex.*##div[class*="-navigation-menu__"] + div[class] > [class*="__row"] > div[class*="__col"]:last-child
 yandex.*##div[class*="-navigation-menu__"] ~ div div[class*="_banger"]
 yandex.*##div[class*="turbo-advert_type_"]
@@ -935,8 +949,6 @@ yandex.*#?#.mg-page-layout[class*="sport"] .mg-page-layout-item:-abp-has(> .mg-p
 yandex.*#?#.mg-page-layout[class*="sport"] .mg-page-layout-item:-abp-has(> span > .mg-page-layout-item__card > div[class*="_type_"])
 yandex.*#?#body > .serp_js_inited .serp-list > .serp-item:-abp-has(> div > h2 > [data-event-required])
 yandex.*#?#div[class*="-navigation-menu__"] ~ div div[class*="__col"]:-abp-has(> div[class*="_type_"] > div[class*="loader"] + div[id]:empty)
-zen.yandex.*##.feed__row .card-wrapper_anny
-zen.yandex.*#?#.feed > .feed__row:-abp-has(.cutify-text-view)
 ||strm.yandex.ru/get/$script,domain=yandex.ru|yastatic.net
 ||strm.yandex.ru/get/*?sid=*&vsid=
 ||yastatic.net/*/front-maps-static/*/chunks/promo/$redirect=nooptext
