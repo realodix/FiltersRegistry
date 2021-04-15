@@ -1,8 +1,8 @@
 !
-! Checksum: t0TvDmyemJ8WHwNPlVnV2A
-! OriginalVersion: 202104150450
+! Checksum: S+t/D3m23Jm34FwHnUBQTA
+! OriginalVersion: 202104150850
 ! Title: RU AdList + CSS Fixes
-! Last modified: 15 Apr 2021 04:50 UTC
+! Last modified: 15 Apr 2021 08:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -17527,7 +17527,7 @@ gdespaces.com,spac.me,spac1.com,spac1.me,spac1.net,spaces-blogs.com,spaces.im#?#
 drive2.ru#?#div[class]:-abp-has(> div > div > .drom-logo)
 2gis.ru#?#div[class]:-abp-has(> div[class] > [class]:-abp-contains(/^Организации рядом$|^Похожие организации$/))
 novayagazeta.ru#?#div[class]:-abp-has(> div[style^="display"] ~ div > div[id*="adfox_"])
-www.kinopoisk.ru##div[class]:first-child > div[class*=" "] > div:first-child + i + div[class*=" "]:last-child
+www.kinopoisk.ru##div[class]:first-child > div[class*=" "] > div:first-child + :not(div) + div[class*=" "]:last-child
 echo.msk.ru##div[class]:first-child > div[class*=" "]:first-child > div + style + div[class*=" "]
 echo.msk.ru##div[class]:first-child > div[class*=" "]:first-child > style + div[class*=" "]
 ytvideo.ru##div[class][data-aid]
@@ -18197,7 +18197,6 @@ sarov.info##iframe[data-src*="/reklama."]
 obozrevatel.com##iframe[id^="google"]
 ek.ua,m.ua##iframe[name*="banner"]
 qrz.ru##iframe[src*="//ads.qrz.ru/"]
-www.kinopoisk.ru##iframe[src*="//kinopoisk-ru.clstorage.net/"][marginheight]
 prodota.ru##iframe[src*="//prodota.ru/templates/"]
 x-minus.in##iframe[src*="/assets/rkl/"]
 newstube.ru##iframe[src*="/b/iframe?id="]
@@ -20414,7 +20413,6 @@ lada.kz/uploads/banners/
 ||kinopleera.net/js/replace_
 ||kinopod.ru/branding/
 ||kinopod.ru/show/
-||kinopoisk-ru.clstorage.net^**#$subdocument,domain=www.kinopoisk.ru
 ||kinored.club^*/player_field.png
 ||kinorom.com/img/binfon.
 ||kinosalo.com/player/*.php?*referer=
@@ -26379,6 +26377,7 @@ mail.ru##body > .grid .news-item_tgb
 mail.ru##body > .grid .rectangle-banner
 mail.ru##body > .grid > div[class^="grid"][class*="__header"] > .toolbar
 mail.ru##body > .zeropixel ~ * .balloon
+mail.ru##body > .zeropixel ~ * .new-tgb-wrap
 mail.ru##body > .zeropixel ~ * .rectangle-banner
 mail.ru##body > .zeropixel ~ * .searchContainer ~ .ssr-main ~ div[class] ~ div[class]
 mail.ru##body > .zeropixel ~ * .searchContainer ~ .tabs + div[class] ~ div

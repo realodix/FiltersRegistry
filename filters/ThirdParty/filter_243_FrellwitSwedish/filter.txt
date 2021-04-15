@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-04-13 19:59:29 CEST
+! Last modified: 2021-04-15 10:04:16 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -322,6 +322,7 @@ wellness.se##[id^="adPlacement"]:upward(1)
 wellness.se##p:has-text(/^kommersiellt innehåll/i):upward(a)
 wellness.se##p:has-text(/^kommersiellt innehåll/i):upward(article)
 www.aftonbladet.se#%#//scriptlet('ubo-aeld.js', 'mousemove', 'g()')
+www.aftonbladet.se#%#//scriptlet('ubo-aeld.js', 'pageshow', 'useBeacon')
 www.aftonbladet.se#%#//scriptlet('ubo-nosiif.js', 'e.ping()')
 www.aftonbladet.se#%#//scriptlet('ubo-nosiif.js', 'e.reportVisibility()')
 www.aftonbladet.se#%#//scriptlet('ubo-nostif.js', 'onerror', '1000')
@@ -803,6 +804,10 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /bmbDfpUtils.$script
 /bmbFusionUtils.$script
 /bnrscr?$domain=cleannet.se|dagenshandel.se|entreprenad.com|food-supply.se|foodnet.se|fri-kopenskap.se|habit.se|kemivarldenbiotech.se|lifesciencesweden.se|medtechmagazine.se|motormagasinet.se|packnet.se|plastnet.se|processnet.se|recyclingnet.se|rt-forum.se|skyddosakerhet.se|transportnet.se|uochd.se|verkstaderna.se|woodnet.se
+/bundles/comscore$domain=expressen.se
+/bundles/exp-analytics$domain=expressen.se
+/bundles/ga-$script,domain=expressen.se
+/bundles/parsely$domain=expressen.se
 /buttonizer$domain=macken.xyz
 /cecado/advisible.js
 /census.js?bust=release
@@ -849,6 +854,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /evidon*.js$domain=morningstar.se
 /ext/phpbb/ads/*
 /ezoic$domain=temadagar.se
+/flex-mag/js/dfp.js
 /fokus-banners.js$domain=fokus.se
 /fokus-paywall.js$domain=fokus.se
 /forum/images/_banners
@@ -1377,6 +1383,7 @@ barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,kristianstadsbladet.se,ol
 battrenyheter.se##.gbnan, .abnan-single, a[href*="bettingsidor"]
 battrestadsdel.se###top-banner-mobile, #HideBanner, .apd-text, .apds_main, .entry-priomaker, [class^="dls-"]
 battrestadsdel.se,casinoexpo.se,flashback.se,leta.se###top-banner
+beernews.se##.cookie-consent-wrapper
 bettips.se##.bettips-am
 bettips.se##.top-banner
 bicycling.se,runnersworld.se##.modal-plus, .modal-backdrop, .footer-newsletter
