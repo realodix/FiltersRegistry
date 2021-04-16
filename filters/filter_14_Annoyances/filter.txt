@@ -4253,6 +4253,7 @@ repubblica.it,gigazine.net,androidpolice.com,17track.net,telegram.hr,apkmirror.c
 lyrics.az,deckshop.pro,estadao.com.br,enmimaquinafunciona.com,sonichits.com,thepostmillennial.com,muropaketti.com,visajourney.com,dennikn.sk,ixbt.com,encuentra24.com,cuerpomente.com,clara.es,punchng.com,zacks.com,kadinlarkulubu.com,pinknews.co.uk,newsru.com,livejournal.com,tecmundo.com.br,rap.ru,abcnyheter.no##body div.fc-ab-root
 !#if (adguard_app_ios || adguard_ext_android_cb)
 !#safari_cb_affinity(general)
+@@||gizbot.com^$generichide
 @@||jn.pt^$generichide
 @@||mytuner-radio.com^$generichide
 @@||supersoluce.com^$generichide
@@ -8376,6 +8377,9 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+sedus.com#$#body.no-scroll { overflow-y: visible !important; }
+sedus.com#$#.cc-window-blocker { display: none !important; }
+justjoin.it###root > header + div[class^="MuiBox-root-"]
 asianpaints.com##.cookie-pop-wrap
 acm.org##body .cookiePolicy-popup
 neilpatel.com###bottom-bar
@@ -9411,7 +9415,7 @@ mercadolivre.com.br###cookieDisclaimerBanner
 numero.com##.component-cookie-bar
 coloros.com##.privacyTips
 fei.org###modal-gdpr
-ifsamerkezi.com##.cdk-overlay-container cookie-notice
+s01.pl,ifsamerkezi.com##.cdk-overlay-container cookie-notice
 kermi.de###legalCookieLayer
 ooma.com#$#html { overflow: auto !important; }
 ooma.com#$#.gdpr_cookie_overlay { display: none !important; }
@@ -14313,6 +14317,10 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !######### White list. Fixing filtering errors #########
 !#######################################################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/80445
+@@||cdnjs.cloudflare.com/ajax/libs/cookieconsent*/cookieconsent.min.$domain=sedus.com
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+sedus.com#@#.cc-window[aria-label="cookieconsent"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79616
 tweakers.net#@#.cookieNotice:not(body):not(html)
 ! atlasbiomed.com - incorrect blocking
