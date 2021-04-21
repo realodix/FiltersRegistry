@@ -124,6 +124,8 @@ jetleech.net###linkform > center > a[href="skype:jetleech.com?add"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78435
 m.sobaka.ru##.b-head-banner
 m.sobaka.ru##.b-main-menu__banner
+! https://github.com/AdguardTeam/AdguardFilters/issues/80462
+odysee.com##.file-page__secondary-content > div > div.notice-message
 ! https://github.com/AdguardTeam/AdguardFilters/issues/80281
 nickles.de#%#//scriptlet('set-constant', 'Nickles.Consent.show', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78228
@@ -132,6 +134,8 @@ tvn24.pl#%#//scriptlet("json-prune", "options.auto_play")
 egotter.com#%#//scriptlet('abort-on-property-read', 'SecretModeDetector')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76406
 ||cdn.viqeo.tv/js/vq_starter.js$domain=coop-land.ru
+! https://github.com/AdguardTeam/AdguardFilters/issues/79892
+ownedcore.com###site-header > div > div[style="text-align:center;"] > a[rel="nofollow"][target="_blank"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76893
 gds.it###oggiinedicola
 ! https://github.com/AdguardTeam/AdguardFilters/pull/76879
@@ -1869,6 +1873,7 @@ fparf.ru,revouninstaller.com,logincasino.com,borsagundem.com,officelife.media,ko
 ! ###mc_embed_signup
 kosicednes.sk,tinyprojects.dev,cambio16.com,voxukraine.org,pnas.org,cachevalleydaily.com,bisnis.com,ilpost.it,bsblog.info,alcoparty.com.ua,codastory.com,informazionefiscale.it,kerch.fm,cinemablend.com,prostofinovo.ru,comss.ru,majorgeeks.com,buhgalter.com.ua,providr.com,24tv.ua,babylonbee.com,dexerto.com,football365.com,menrec.com,netdoktor.de,ottawamatters.com,retail-insider.com,walterfootball.com,wweek.com,zozhnik.ru###mc_embed_signup
 !
+pikabu.ru##.email-block
 freepress.net##.join-us
 nytimes.com##div[data-scp="newsletter"]
 nytimes.com###__next > div[data-arachne="slc_edit_singular_link"] + div[class]
@@ -4382,8 +4387,9 @@ insider.com#$#div[class="tp-modal"][style="z-index: 300050; display: block;"] ~ 
 insider.com#$#html > body.tp-modal-open { overflow: auto !important; }
 eldiario.es##.adblock-banner
 desktophut.com##.ads
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=studopedia.info
-||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,important,domain=studopedia.info
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,important,domain=studopedia.net|studopedia.su|studopedia.org|studopedia.ru|studopedia.com.ua|lektsii.org
+! Incase of DNS Filtering
+studopedia.net,studopedia.su,studopedia.org,studopedia.ru,studopedia.com.ua,lektsii.org#%#//scriptlet("set-constant", "adsbygoogle.loaded", "true")
 extreme-down.tv##div[style="display:block;position:relative"] > p.lastpost-header + p[style="color:green;"] > b
 ||ytmp3.eu/*/pagead/js/adsbygoogle.js$script,xmlhttprequest,redirect=googlesyndication-adsbygoogle,important,domain=ytmp3.eu
 balticlivecam.com###ad_block_off
@@ -4393,7 +4399,7 @@ schwaebische.de##.goodies
 community-z.com#@#.ad-placement
 myfxbook.com#%#//scriptlet('set-cookie', 'lastAdBlockerMessageDisplayedDate', '1')
 client.googiehost.com##.banner
-/:\/\/studopedia\.(org|su)\/\w{32}.js/$domain=studopedia.org|studopedia.su
+/:\/\/studopedia\.(org|su)\/\w{32}.js/$domain=studopedia.net|studopedia.su|studopedia.org|studopedia.ru|studopedia.com.ua|lektsii.org
 pornorips.com#?#h1 > span:contains(AddBlocker)
 cablegratis.online##.alert-danger
 deepfun.net##div[id^="fwin_banadblock"]
@@ -5786,7 +5792,6 @@ stadt-bremerhaven.de##.deadblocker-header-bar
 sports.ru#%#(function(){try{ if("undefined"!=typeof localStorage){var a={date:(new Date).toString(),time:(new Date).getTime(),data:!0};localStorage.setItem("sports:views:anti-adblock:shower",JSON.stringify(a))}}catch(ex) {}})();
 bloomberg.com###adBlockerContainer
 ||lugasat.org.ua/media/js/abDetector.min.js
-2gis.ru##.dashboard__promo
 2ip.ru##div[id^="notification-"]
 @@||agar.io/js/*.js
 @@||am15.net/ab-detector/ads.js
@@ -6423,6 +6428,7 @@ gazzetta.it#%#//scriptlet("set-constant", "adv_openx_oas_ads", "true")
 ! Common safari_cb_affinity(general)
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
 !#safari_cb_affinity(general)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=studopedia.net
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=mifirm.net
 @@||niuhuskies.com/components/js/analytics.js$domain=niuhuskies.com
 reviewmeta.com#@#.adsbygoogle
@@ -9904,7 +9910,7 @@ tproger.ru###cookie-notice-wrapper
 tsb.org.tr,otomatikbes.info###pop-capsul
 liquidtelecom.com###lqt-cookie-app
 singtel.com##.ux-consent-banner
-allods.mail.ru,store.my.games##.ph-cookies
+allods.mail.ru,my.games##.ph-cookies
 autodesk.nl,autodesk.hu,autodesk.it,autodesk.dk,autodesk.de,autodesk.cz,autodesk.be,autodesk.es,autodesk.fr,autodesk.co.uk##.adsk-gdpr-footer-wrapper
 yvesrocher.com.tr##.privacy-manager
 bitwarden.com##.osano-cm-window
@@ -16297,6 +16303,7 @@ pinterest.*##div[data-test-id="header"] div[style^="background-color: rgba(255, 
 pinterest.*##div[data-test-id="footer"] div[style="max-width: 264px;"]
 hindustantimes.com##.openAppButton
 india.com##.open-app
+flipkart.com#?#div[class*=" "] > div[class]:has(> div > img[src*="flipkart_app_icon-"])
 microsoftedgewelcome.microsoft.com##.mobile-banner__unexpanded
 zeenews.india.com##.appdownloadbanner
 bhaskar.com,divyabhaskar.co.in#?#div[class][style^="position:"] > div[class]:has(> a[href^="https://play.google.com/store/apps/details?id=com.ak.ta."])
@@ -17573,6 +17580,7 @@ techmeme.com###nlsb
 kompas.com##.root > div.dark-fixed
 alibabacloud.com##.btn-survey
 multishare.cz##.left-layout-buttons
+odysee.com##.nudge
 economictimes.indiatimes.com###budgetBtmBaner
 navbharattimes.indiatimes.com##.top-stories-modal
 navbharattimes.indiatimes.com##.topStorieswrap
@@ -18940,7 +18948,6 @@ m.re-store.ru##.exponea-banner
 pastebin.com###float-box-frame
 ||electric-house.ru/yved/script.js
 teknobaze.com##.penci-rlt-popup
-2gis.ru##.promoBottomTooltip
 mobil.krone.at##.social-toolbar
 ||openssource.biz/*/popups/
 openssource.biz##.link_telegramm
@@ -22204,9 +22211,10 @@ nero.com###fancybox-wrap
 nero.com###fancybox-overlay
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44364
 freiepresse.de###aboBanner
-! https://github.com/AdguardTeam/AdguardFilters/issues/44090
+! https://github.com/AdguardTeam/AdguardFilters/issues/80042
 flipkart.com##div[data-id][style] > div[data-tkid^="en_"]
 flipkart.com#?#div[style] > div[class*="col-"] > div[class] > div[data-id][style]:has(> div[data-tkid^="en_"])
+flipkart.com#?#div[class^="css-"] > div:has(> div[dir]:contains(/^AD$/))
 ! golem.de - abo
 golem.de##.section-gpure
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43586
