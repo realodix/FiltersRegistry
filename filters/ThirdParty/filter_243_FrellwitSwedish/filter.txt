@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-04-22 09:33:19 CEST
+! Last modified: 2021-04-23 09:20:26 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -180,7 +180,7 @@ jamtlandstidning.se##.elementor-widget-sidebar:has(li[id^=media_image-1])
 jamtlandstidning.se##.elementor-widget-wrap:has(h2:has-text(/^Annonser$/))
 jamtlandstidning.se##.elementor-widget-wrap:has(img[src*=-annons-])
 jamtlandstidning.se##.elementor-widget:has(h2:has-text(/^Annons$/))
-jawcloud.co,polistidningen.se,streamio.com#%#//scriptlet('ubo-aeld.js', 'contextmenu')
+jawcloud.co,konsolnyheter.se,polistidningen.se,streamio.com#%#//scriptlet('ubo-aeld.js', 'contextmenu')
 justwannahavefun.se##.teaser:has(.sub-title:has-text(/sponsrat/i))
 kamrat.com#%#//scriptlet('ubo-set.js', 'showAds', 'false')
 kamrat.com#%#//scriptlet('ubo-set.js', 'trap', 'noopFunc')
@@ -193,10 +193,9 @@ klart.se#%#//scriptlet('ubo-rc.js', 'mega-loading')
 klart.se##.content-box-list__item:has(.ad-text:has-text(/annons/i))
 kokaihop.se#$?#.cookieBarWrapper { remove: true; }
 kokaihop.se#$#body { overflow-y: auto !important; }
-komponentkoll.se##img[src*="/promo/"]:upward(1)
-konsolnyheter.se#%#//scriptlet('ubo-acis.js', 'addEvent', 'oncopy')
 konsolnyheter.se#%#//scriptlet('ubo-acis.js', 'disableSelection')
 konsolnyheter.se#%#//scriptlet('ubo-acis.js', 'show_popup')
+konsolnyheter.se#%#//scriptlet('ubo-set.js', 'document.body.oncopy', 'noopFunc')
 kultwatch.se#$#.js-preloader > .document, .js-preloader > .hero-section { opacity: 1 !important; visibility: visible !important; }
 kwiss.me##.square-item:has(.qz-quiz-sponsored)
 lajvo.se##.postCard:has-text(/bonusar|casino|betting/i)
@@ -927,6 +926,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /lay/js/background$domain=gamereactor.se
 /lazyad-loader.$script
 /lazyload-ad.$script
+/lbxjquery.dfp.$domain=ljudochbild.se
 /leeads_takeover$script
 /linkpulse/*$script
 /links/*casino*.$domain=emocore.se
@@ -1000,7 +1000,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /plugins/convertplug/*
 /plugins/convertpro/*
 /plugins/cookie-bar/*
-/plugins/cookie-law-info/*$domain=carup.se|gilla.se|hockeybladet.nu|nyadagbladet.se|temadagar.se
+/plugins/cookie-law-info/*$domain=carup.se|gilla.se|hockeybladet.nu|ljudochbild.se|nyadagbladet.se|temadagar.se
 /plugins/cookie-notice/*
 /plugins/cookie_consent/*$script
 /plugins/cresta-social-share-counter-pro/*
@@ -1539,7 +1539,7 @@ filmtipset.se##.row.news > div[style^="border"]:last-of-type
 firstclassmagazine.se###leader-wrap, #rpwe_widget-2
 fiskejournalen.se,jaktjournalen.se##.fisher-takeover-container
 flamman.se##.Banner
-flashback.org###top-banner-container
+flashback.org###top-banner-container, #top-banner-wrapper
 flashscore.se##.boxOverContent--a
 flm.nu##.spons
 flygtorget.se###PreHeader
