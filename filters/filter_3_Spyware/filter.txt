@@ -5093,7 +5093,6 @@ nethunt.com/api/v1/track/email/$image
 ||log.deutschegrammophon.com^
 ||log.mappy.net^
 ||log.newsvine.com^
-||log.optimizely.com^
 ||log.player.cntv.cn/stat.html?
 ||log.snapdeal.com^
 ||log.thevideo.me^
@@ -6114,7 +6113,6 @@ charlestownwyllie.oaklawnnonantum.com^
 ||d5i9o0tpq9sa1.cloudfront.net^
 ||d6jkenny8w8yo.cloudfront.net^
 ||d81mfvml8p5ml.cloudfront.net^
-||d8rk54i4mohrb.cloudfront.net^
 ||d9lq0o81skkdj.cloudfront.net^
 ||daq0d0aotgq0f.cloudfront.net^
 ||d3alqb8vzo7fun.cloudfront.net^
@@ -19574,6 +19572,11 @@ $cookie=cto_bidid
 $cookie=_pubcid
 $cookie=pbjs-unifiedid
 !
+! BrightFunnel
+! Used to identify unique users and for analytics.
+$cookie=bf_lead
+$cookie=bf_visit
+!
 !
 !
 !------------------------------
@@ -20137,6 +20140,10 @@ $cookie=pbjs-unifiedid
 ! https://github.com/AdguardTeam/CoreLibs/issues/1306
 ||rover.ebay.$image,object,script,badfilter
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/80838
+||googletagmanager.com/gtm.js$script,redirect=googletagmanager-gtm,domain=asicstr.com
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||googletagmanager.com/gtm.js$domain=asicstr.com
 ! https://github.com/easylist/easylist/pull/7713
 @@||line-scdn.net/*/torimochi.js/$script,domain=demae-can.com
 ! https://github.com/easylist/easylist/pull/7600
@@ -20498,7 +20505,7 @@ nnmclub.ro,nnm-club.t0r.xyz,nnm-club-me.appspot.com,nnm-club.lib,nnm-club.me,nnm
 @@||googletagmanager.com/gtm.js$domain=thecompanion.app
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79410
 ! https://github.com/AdguardTeam/AdguardFilters/issues/63801
-@@||rtoaster.jp^$script,domain=animate-onlineshop.jp|lexus.jp|peachjohn.co.jp|rtoaster.com|rurubu.jp|shop.hikaritv.net|melonbooks.co.jp
+@@||rtoaster.jp^$script,domain=animate-onlineshop.jp|brainpad.co.jp|lexus.jp|peachjohn.co.jp|rurubu.jp|shop.hikaritv.net|melonbooks.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/63828#issuecomment-693360254
 @@||googletagmanager.com/gtm.js$domain=sport1.de
 ! https://github.com/uBlockOrigin/uAssets/issues/7899
