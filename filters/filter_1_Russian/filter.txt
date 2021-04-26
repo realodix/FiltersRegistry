@@ -6740,6 +6740,8 @@ livejournal.com#%#AG_setConstant('begun_new_callbacks', 'undefined');
 !
 ! Extended CSS rules
 !
+! myshows.me beta background ad
+beta.myshows.me#?#div[id="__layout"] > .DefaultLayout > a.DefaultLayout-promo:remove()
 ! sports.ru ad background
 sports.ru#$?##branding-layout > div.page-layout:not(:has(> *)) { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73390
@@ -11508,6 +11510,8 @@ crazymailing.com,lotzon.pro,novosti-n.org,prokazan.ru,20minut.ua,alnews.com.ua,g
 ! vast ads on anime sites - for example: animego.org, yummyanime.club, etc
 /:\/\/[0-9]?[a-z0-9]{11,}(\.com|\.in\.net)/$xmlhttprequest,domain=aniqit.com|kodik.info|start.u-cdn.top|ustore.bz|u-stream.in
 !
+beta.myshows.me##div[id^="clickioadunit"]
+beta.myshows.me##div[id="__layout"] > .DefaultLayout > a.DefaultLayout-promo
 motor.ru##div[data-render-state] > div[id^="block-id-"][id$="-container"]
 sm.news##.it_news_adf
 allmbs.ru##div[id^="adSenSe_"]
@@ -22462,7 +22466,7 @@ allkeyshop.com#@#.banner-search
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51971
 @@||tiver.ru/ads/filter-search
 ! myshows.me - self-promo content, not ad
-@@||myshows.me/shared/img/fe/svg/buy_pro/pro_hide_advertise.svg
+@@/pro_hide_advertise.svg$domain=myshows.me
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71662
 vashadvokat-msk.ru#@#.adv_link
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52051
