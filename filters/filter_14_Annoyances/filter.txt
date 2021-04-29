@@ -83,6 +83,9 @@ youtube.com,youtube-nocookie.com#%#//scriptlet('set-constant', 'playerResponse.a
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/81352
+centurylink.net##div[id^="sc_"][id*="top"] + div.single-cube_pieces_top-border_topBorder
+centurylink.net##div[class*="Banner"] + div.single-cube_pieces_top-border_topBorder
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81306
 down.mdiaload.com##a.btn-dow[href^="https://down.mdiaload.com/download"][href$=".html"]
 down.mdiaload.com##.download-option-btn > button > a[href^="https://down.mdiaload.com/download"][href$=".html"]
@@ -4404,6 +4407,8 @@ animesonglyrics.com,lyrics.az,deckshop.pro,estadao.com.br,enmimaquinafunciona.co
 boston.com#@#.postad
 !#safari_cb_affinity
 !
+derivative-calculator.net##.support-me
+derivative-calculator.net#%#//scriptlet("abort-current-inline-script", "document.write", "ag_adBlockerDetected")
 cyberpedia.su###divtext > p[style="color:red;"]
 cyberpedia.su#%#//scriptlet('set-constant', 'adsbygoogle.loaded', 'true')
 scantrad.net#%#//scriptlet("set-constant", "canRunAds", "true")
@@ -8535,6 +8540,7 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+eltima.com##.float-message__wrap
 7labs.io###consent-popup
 every-tuesday.com###et-gdpr-popup
 hek.de###colorbox
@@ -17757,6 +17763,7 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+centurylink.net##.video-widgets-v2_video-hero_fromBottomRight
 10web.io##.entry-content > div[id^="ctablocks_scrollbox_"]
 forward.com#%#//scriptlet('set-cookie', '_pc_signed_up', 'true')
 forward.com###piano_wrapper
@@ -24594,12 +24601,14 @@ siyasetcafe.com#$#body.body-prevent { -webkit-touch-callout: default!important; 
 jucagototranslations.fukou-da.net,quotev.com,nontongratis88.live,freecourser.com#$#body * { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 fmoviez.org#$#html { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 9docu.org,template.city,teepr.com,unisinav.com,amigurumi.today,thememazing.com,chiaseapk.com,dzelectronic.com#$#body { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
-samuraiscan.com,activationkeys.co,world4.eu,elektrikmen.com,wartaterkini.news,iptv4best.com,sysnettechsolutions.com,aihristdreamtranslations.com,audioreview.m1001.coreserver.jp,hulkpop.com#$#body.unselectable { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
+lazytranslations.com,samuraiscan.com,activationkeys.co,world4.eu,elektrikmen.com,wartaterkini.news,iptv4best.com,sysnettechsolutions.com,aihristdreamtranslations.com,audioreview.m1001.coreserver.jp,hulkpop.com#$#body.unselectable { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 droidtk.com#$#body[data-protect="true"] { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 procrackerz.org,chapterupdates.com,babelnovel.com,katzen-fieber.de,xn--80aaxitdbjk.xn--p1ai,toptech360.com,devicespecifications.com,apkinstaller.com,androidmtk.com,serial-key.com,sjcrack.com,themeslide.com,openssource.biz,kinogo-net-2017.ru,kinogo-online.online,kino-zal.net,lavka-invaitov.ru#$#body * { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 !+ NOT_PLATFORM(windows, mac, android, ext_ff)
 quotev.com#$#body #res_area ::selection { background-color: #3297FD!important; }
 !--- JS ----
+lazytranslations.com#%#//scriptlet("abort-on-property-read", "disable_copy")
+lazytranslations.com#%#//scriptlet("abort-current-inline-script", "document.oncontextmenu")
 theasianparent.com#%#//scriptlet("abort-on-property-read", "disableselect")
 globaledu.jp#%#//scriptlet('remove-attr', 'oncontextmenu|onselectstart', 'body')
 globaledu.jp#%#//scriptlet("abort-current-inline-script", "document.oncontextmenu")
