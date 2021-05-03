@@ -4,8 +4,8 @@
 ! Homepage: https://kadantiscam.netlify.app
 ! Title: KAD - Przekręty
 ! Description: Filtry chroniące przed różnymi zagrożeniami w polskiej sieci, takimi jak wirusy, fałszywe sklepy i subskrypcje SMS. Dodatkowo zawierają one wpisy stworzone przez CERT Polska, legalniewsieci.pl, KNF i inne zespoły.
-! Last modified: Sun, 02 May 2021, 23:55 UTC+02
-! OriginalVersion: 2021.5.2.3
+! Last modified: Mon, 03 May 2021, 13:05 UTC+02
+! OriginalVersion: 2021.5.3.0
 ! Expires: 2 days
 ! Licencja: CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
 ! GitHub: https://github.com/PolishFiltersTeam/KAD
@@ -3972,6 +3972,7 @@
 ||grille.biz^$all
 ||grille.live^$all
 ||gromans.com.pl^$all
+||grools.xyz^$all
 ||grupoeq.com^$all
 ||gruzja.cyou^$all
 ||gsmplay.net^$all
@@ -4291,6 +4292,7 @@
 ||inpost.help^$all
 ||inpost.kontospls.bar^$all
 ||inpost.kontospls.store^$all
+||inpost.kontospl.cam^$all
 ||inpost.life^$all
 ||inpost.link^$all
 ||inpost.live^$all
@@ -4300,8 +4302,10 @@
 ||inpost.order-pl.art^$all
 ||inpost.page^$all
 ||inpost.pay-web.site^$all
+||inpost.pl-safebuy.work^$all
 ||inpost.pl-savedcashes.club^$all
 ||inpost.pl-savedmoney.icu^$all
+||inpost.pl-savedmoney.shop^$all
 ||inpost.pl-savedmoney.work^$all
 ||inpost.pl-*.*^$document
 ||inpost.polka-oferta.cyou^$all
@@ -4847,6 +4851,7 @@
 ||magnumbd.com^$all
 ||mahjongline.com^$all
 ||mail-confirmation-process.glitch.me^$all
+||mail.inpost.cam^$all
 ||makanaliabadian.ir^$all
 ||make-by-yourown.com^$all
 ||malgorzata423.pl^$all
@@ -4868,6 +4873,7 @@
 ||mandfs.top^$all
 ||manistan.com^$all
 ||manvspixel.pl^$all
+||marabu.xyz^$all
 ||maralgel.pro^$all
 ||marano-pl.com^$all
 ||marcofama.it^$all
@@ -5686,6 +5692,7 @@
 ||olx.doreczanie.pl^$all
 ||olx.doreczenle.pl^$all
 ||olx.dostawa-161334260.site^$all
+||olx.dostawa-1619355631.site^$all
 ||olx.dostawa-pl.*^$all
 ||olx.dostawa-secure.com^$all
 ||olx.dostawa.*^$all
@@ -5716,6 +5723,9 @@
 ||olx.pay-otrymac.store^$all
 ||olx.pay-safe.store^$all
 ||olx.pink^$all
+||olx.pl-safebuyed.icu^$all
+||olx.pl-safebuys.icu^$all
+||olx.pl-safebuy.work^$all
 ||olx.pl-savedmoney.shop^$all
 ||olx.pl-savedmoney.work^$all
 ||olx.pl-*.*^$document
@@ -5723,6 +5733,7 @@
 ||olx.pl.merchants-pay.pw^$all
 ||olx.pl.oferta-payment.date^$all
 ||olx.pl.oferta-payment.life^$all
+||olx.pl.oferta-payment.stream^$all
 ||olx.pl.pay-mercnant.pw^$all
 ||olx.pl.transfers-id.space^$all
 ||olx.pl.transport-pr.pw^$all
@@ -7751,6 +7762,7 @@
 ||uslugatopgry.5p.pl^$all
 ||uslugitopgry.5p.pl^$all
 ||uslugitransportowe-warszawa.pl^$all
+||ustawtogdziekolwiek.site^$all
 ||usterkiwloclawek.za.pl^$all
 ||uswiadomsobiebizznes.site^$all
 ||uusms.org^$all
@@ -8633,8 +8645,9 @@ kadantiscam.netlify.com,kadantiscam.netlify.app###kadetect
 !#endif
 !#if !ext_ublock
 kadantiscam.netlify.com,kadantiscam.netlify.app###kadguard
-!/^https?:\/\/([0-9]{4,10}|[a-z0-9]{9,32})\.[a-z-]{6,16}(\.(com|net))?\.pl/$document
+!/^https?:\/\/[a-z0-9]{9,32}\.[a-z-]{6,16}(\.(com|net))?\.pl/$document
 *$document,domain=104.248.94.172
+/^https?:\/\/[0-9]{4,10}\.[a-z-]{6,16}(\.(com|net))?\.pl/$document
 /^https?:\/\/([\w]{1,4}\.)(\w+)?-?pocztex.*\d+-?(polska)?\.[\w]{2,14}/$all,domain=~pocztex.pl,badfilter
 /^https?:\/\/([\w]{1,4}\.)(\w+)?-?pocztex.*\d+-?(polska)?\.[\w]{2,14}/$all,domain=~pocztex.pl|~google.*|~duckduck.*
 /^https?:\/\/([\w]{1,4}\.)?(\w+)?\.\w+-?pocztex(\d+)?\.[\w]{2,14}/$all,domain=~pocztex.pl,badfilter
