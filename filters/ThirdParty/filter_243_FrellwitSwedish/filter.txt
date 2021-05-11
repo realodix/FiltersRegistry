@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-05-08 11:57:31 CEST
+! Last modified: 2021-05-11 16:23:00 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -267,6 +267,7 @@ professionalsecrets.se#%#//scriptlet('ubo-acis.js', '$', 'fancybox')
 pussad.se#$#html.g1-popup-visible { overflow: initial !important; }
 qx.se##.col-4:has(script)
 qx.se##.qxa-container:upward(1)
+realtid.se##.field-item:has-text(/partner content/i):upward(article)
 realtid.se#$#.modal-open { overflow: unset !important; }
 receptcentralen.se##.post:has-text(/casino/i)
 se.azrhymes.com#%#//scriptlet('ubo-nostif.js', '.info-center')
@@ -427,8 +428,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1430,8 +1431,7 @@ bosidan.ax##.ad-li
 brafiler.se###header-banner
 branschkoll.se##div[id^="brans-"]
 bravenewbusiness.se##.site-information-container
-breakit.se##.videoAd, .js-video-ad
-breakit.se##[class*="sponsored"]
+breakit.se##[class*="sponsored"], .videoAd, .js-video-ad
 brinkenbakar.se,ff.se,nyadagbladet.se##.elementor-popup-modal
 bukefalos.se,friaordet.org,husbilsklubben.se,rollspel.nu,thaisnack.se##.u-bottomFixer
 bussmagasinet.se###page > div:not(.left):not(.right)
@@ -1793,7 +1793,7 @@ rastaochdalla.se##.widget_advertise
 ratsit.se##.promo
 ravarumarknaden.se###header > div > div.last
 realm667.com#@##redim-cookiehint
-realtid.se##.block.industry-news-1
+realtid.se##.block.industry-news-1, .bottom-banner
 realtid.se##.modal, .modal-backdrop
 receptcentralen.se###text-9
 reseguiden.se##.adsbox-wrapper
