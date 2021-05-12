@@ -83,6 +83,8 @@ youtube.com,youtube-nocookie.com#%#//scriptlet('set-constant', 'playerResponse.a
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/82800
+bream2008.narod.ru###contentBlock > div[style*="line-height:30px; font-size:12px;"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82706
 mag2.com##.in_alm
 mag2.com###text-18
@@ -8625,6 +8627,10 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+markenbaumarkt24.de##body .klaro .cookie-notice:not(#style_important)
+gartenappel.de###cookie_hinweis_wf
+weekli.de##.cookie-privacy-container
+beto-holz.de,bauzentrum-struth.de,heidkaemper.de###wt_cookieconsent
 ozdilekteyim.com##.anonymous-consent-banner
 americanairlines.com.au##.aa_optoutmulti-cookie-policy
 lattmann.de#$#body { overflow: visible !important; }
@@ -8729,7 +8735,7 @@ jiosaavn.com##.c-toast
 hoeffner.de##.consentForm__container
 apondo.de###cookie-message ~ #footer::after
 ford.de##div[class^="cookie-disclaimer-"]
-buchszene.de,hosterz.de##.sp-dsgvo-popup-overlay
+baustoffmarkt-gruppe.de,buchszene.de,hosterz.de##.sp-dsgvo-popup-overlay
 fh-muenster.de###matomo-wrapper
 nurolmakina.com.tr##.cookie_policy_bar
 aufladen.de###ConsentCookie
@@ -9073,7 +9079,7 @@ smythstoys.com#$#.modal-backdrop { display: none!important; }
 smythstoys.com#$#body { overflow: visible!important; }
 ||moneysavingexpert.com/cookie-consent-v*/msmCookieConsent.js
 reifendirekt.de###cookie-diss
-hagebau.de##.js-cookie-hint
+werkerswelt.de,hagebau.de##.js-cookie-hint
 atnews.gr##cookie-law-info-again
 atnews.gr#$#.cli-modal-backdrop { display: none !important; }
 atnews.gr#$##cookie-law-info-bar { display: none !important; }
@@ -10913,7 +10919,7 @@ mynewsdesk.com###accept-page-cookies
 gethatch.com##.consently-bar
 boschcarservice##.cookiemanager
 bundeswehr.de##.c-privacy-protection-banner
-tiendeo.com.tr###cookiesModal_bottom
+tiendeo.de,tiendeo.com,tiendeo.com.tr###cookiesModal_bottom
 mammut.com##.mm-cookie-bar
 frohe-zukunft.de##.pn_notebox
 tp-link.com##.cookie-used-note
@@ -14306,6 +14312,7 @@ consent.familie.de,consent.kino.de,cmp.motorsport-magazin.com,sp-consent.stuttga
 privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 !
+onlineshop-baumarkt.de#%#//scriptlet('set-cookie', 'mnd-cookie-accepted-wwwonlineshopbaumarktde1', '1')
 lego.com#%#AG_onLoad(function(){if(!document.cookie.includes("LEGO_COOKIE_SETTINGS")){var g=new MutationObserver(function(){if(document.cookie.includes("AGE_GATE")){setTimeout(function(){var b=document.querySelector('button[data-test="cookie-necessary-button"]');b&&b.click()},200)}});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1e5)}});
 lego.com#%#//scriptlet('set-cookie', 'kids.cookieacceptance', 'true')
 baby-sweets.de#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("cookiePreferences")){setTimeout(function(){var a=document.querySelector("input.cookie-consent--save-button");a&&a.click()},1e3)}});
@@ -14886,6 +14893,9 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !######### White list. Fixing filtering errors #########
 !#######################################################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/82515
+@@||static.weekli.systems/www/min/f/www/js/privacy/*.css$domain=weekli.de
+@@||static.weekli.systems/www/min/f/www/js/jquery/jquery-*.min.js$domain=weekli.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82435
 !+ PLATFORM(ios, ext_android_cb)
 karlknauer.de#@#.cc-window[aria-label="cookieconsent"]
@@ -16823,6 +16833,7 @@ amp-reddit-com.cdn.ampproject.org##.AppSelectorModal__body
 reddit.com#$#.XPromoPopup { display: none!important; }
 reddit.com#$#body.scroll-disabled { overflow: visible!important; position: static!important; }
 !
+||cdn.jsdelivr.net/gh/dsx0095/thcdn/statics/js/layer/layer.js$domain=tv.ci
 finanswebde.com##.prouser.fcbluebg
 ||tver.jp/img/sd_to_app_banner.png
 admin.blog.fc2.com##.gtm-h_bnr
@@ -18744,9 +18755,9 @@ secretmag.ru##a[href="https://forms.gle/x8sPLVhY7g8F2J6t6"]
 novomundo.com.br###MODAL_lead--PCDescontoFrete
 novomundo.com.br###MODAL_lead--PCDescontoFrete ~ div.modal-backdrop
 moyo.ua##.popupbanners
-wizcase.com#$##bio_ep { display: none!important; }
-wizcase.com#$##bio_ep_bg { display: none!important; }
-wizcase.com#$#body { overflow: visible!important; }
+maerklinshop.de,wizcase.com#$##bio_ep { display: none!important; }
+maerklinshop.de,wizcase.com#$##bio_ep_bg { display: none!important; }
+maerklinshop.de,wizcase.com#$#body { overflow: visible!important; }
 lancashiretelegraph.co.uk###bottom-expandable-wrapper
 lancashiretelegraph.co.uk###piano-message
 fastweb.it###stdSticky

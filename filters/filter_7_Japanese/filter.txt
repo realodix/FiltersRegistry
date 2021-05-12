@@ -411,6 +411,8 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://games.softgames.com/games/aquablitz/gamesites/4217/locale/ja
+@@||games.softgames.com/assets/advertisement.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83022
 ouminews.net#$#.ad_unit.ad-unit.text-ad.text_ad.pub_300x250 { display: block !important; }
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
@@ -897,6 +899,7 @@ momon-ga.com#?#.repo-title:has(> strong)
 !-------------------
 !
 ! skip in-game ads
+minigame.aeriagames.jp#%#//scriptlet('adjust-setTimeout', 'aeriaGamesAdCountDown', '', '0.02')
 game.nicovideo.jp#%#//scriptlet('adjust-setTimeout', 'u(!0)', '5000')
 game.nicovideo.jp#%#//scriptlet('adjust-setTimeout', '[native code]', '15000')
 ! popup
@@ -941,6 +944,8 @@ avgle.com#%#AG_onLoad(function() { closeAd(); });
 !-------CSS---------
 !-------------------
 !
+! https://minigame.aeriagames.jp/games/top/ae-tpgs-043
+minigame.aeriagames.jp#$##aeriaGamesCenterAd { display: none!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79889
 pokemon-matome.net#$##content11 { padding-top:0 !important; }
 pokemon-matome.net#$##wrap-main { padding-top:0 !important; }
@@ -1059,6 +1064,14 @@ bengo4.com,zigsow.jp,navitime.com,cazual.tv,crank-in.net,mantan-web.jp,millymill
 !
 ||feed.mikle.com^$domain=blog.livedoor.jp|crx7601.com|fate-rpg.jp|gadgetlife2ch.blomaga.jp|gtoys.blog.fc2.com|h1g.jp|hdouga.com|ibarakinews.jp|obutu.com|totalwar.doorblog.jp|xn--bckadddb2a0d4dnc8dwhngdtb58aya0l4a2om843g5npczp7dwh5g.com|xn--cckea5a6cidcbh6ce7ghug17a2ge3aht3nwigef51658aw7kd.com
 !
+||play.gamepix.com/player/ads/
+gamepix.com###ColumnAdv
+gamepix.com###SquareBanner1
+gamepix.com##.GamePix-Games-Ads
+||games.softgames.com/modules/p2-ads-client.js
+games.softgames.com##div[style^="position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index:"][style$="background-color: rgba(0,0,0,.8);"]
+play.softgames.com##.wl-ad-container
+play.neos-easygames.com,ycp.synk-casualgames.com###bottom_block.td
 trafficnews.jp##.side-column-float
 mitok.info###custom_html-75
 mitok.info##.entry_footer_ads
