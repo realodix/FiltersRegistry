@@ -894,8 +894,12 @@ momon-ga.com#?#.repo-title:has(> strong)
 ##a[href^="http://ad2.trafficgate.net/"]
 ##a[href^="http://www.rssad.jp/"]
 ##div[class^="google-2ad"]
-!+ PLATFORM(ext_ublock)
+!
+! uBO specific
+!#if (ext_ublock)
+*##._popIn_recommend_article_ad
 *##.ise-ad.csw-content-box
+!#endif
 
 !---------------------------------------------------------------------------!
 !-------------- General javascript, CSS and HTML extensions ----------------!
@@ -1071,6 +1075,11 @@ bengo4.com,zigsow.jp,navitime.com,cazual.tv,crank-in.net,mantan-web.jp,millymill
 !
 ||feed.mikle.com^$domain=blog.livedoor.jp|crx7601.com|fate-rpg.jp|gadgetlife2ch.blomaga.jp|gtoys.blog.fc2.com|h1g.jp|hdouga.com|ibarakinews.jp|obutu.com|totalwar.doorblog.jp|xn--bckadddb2a0d4dnc8dwhngdtb58aya0l4a2om843g5npczp7dwh5g.com|xn--cckea5a6cidcbh6ce7ghug17a2ge3aht3nwigef51658aw7kd.com
 !
+gtoys.blog.fc2.com###outline > table[bgcolor="#ffffff"]
+gtoys.blog.fc2.com###p6tittle
+gtoys.blog.fc2.com##.customplugin1_title
+gtoys.blog.fc2.com##.customplugin1_title + div[style^="height:270px;"]
+gtoys.blog.fc2.com##.customplugin3_title
 mainichikirei.jp##.ad-banner-rectangle
 mainichikirei.jp##.ad-super-banner-bottom
 trafficnews.jp##.affiliate_link
