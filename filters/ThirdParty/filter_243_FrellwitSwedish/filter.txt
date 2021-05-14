@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-05-12 07:29:24 CEST
+! Last modified: 2021-05-14 08:40:19 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -143,7 +143,8 @@ firstclassmagazine.se##a:has(.feat-cat:has-text(/annons/i))
 fiskejournalen.se#%#//scriptlet('ubo-rc.js', 'no-scroll')
 fiskejournalen.se##.fisher-pinned-post-title.sponsored:upward(1)
 flashback.org#%#//scriptlet('ubo-nostif.js', '#top-banner-container')
-fokus.se#$#[id^="entry-content-post"], [id^="entry-content-related"] { height: 100% !important; }
+fokus.se#$#.mediaconnect-protected-content, .mediaconnect-protected-content--show { max-height: unset !important; overflow: unset !important; }
+fokus.se#$#.mediaconnect-protected-content::after { background: unset !important; }
 foretagande.se##article:has(.sponsored-text)
 forum.macworld.se,idg.se#$#.idgcp__layer--active, .idgcp__layer--active body { overflow: initial !important; }
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement:has(.c-label--sponsored)
@@ -303,6 +304,7 @@ teknikensvarld.se#$#.article__body__preview::before { background: none !importan
 teknikensvarld.se#$#.article__body__preview { height: auto !important; overflow: visible !important; }
 teknikveckan.se##.grid-item:has(.pill:has-text(/spons/i))
 tennisportalen.se##.td-pb-row [class*="td-pb-span"]:has(h4:has-text(/spons/i))
+thelocal.se##.article-content-member-type:has-text(/partner content/i):upward(.article-block)
 thelocal.se##.panel:has(div[class$="panel-label"]:has-text(/sponsor/i))
 themoviefreak.se#%#//scriptlet('ubo-acis.js', 'animate')
 themoviefreak.se#%#//scriptlet('ubo-ra.js', 'oncontextmenu')
@@ -428,8 +430,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -872,8 +874,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /ezoic$domain=temadagar.se
 /fixed-panorama$domain=fiskejournalen.se|jaktjournalen.se
 /flex-mag/js/dfp.js
-/fokus-banners.js$domain=fokus.se
-/fokus-paywall.js$domain=fokus.se
 /forum/images/_banners
 /forum/img/banners
 /forumannons.$image,script,subdocument
@@ -908,7 +908,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /isbanner/ib.js
 /javascript_nbenhadverts/*
 /jquery-eu-cookie-law-popup.$script
-/js/abd.js$domain=fokus.se
 /js/acceptCookies.
 /js/adLocker.
 /js/aller-ads
@@ -924,9 +923,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /js/intelecom.tracker
 /js/mtiFontTrackingCode.
 /js/OneSignal.js
-/js/personalization.js$domain=fokus.se
 /js/sifo.js
-/js/social-sharing.js$domain=fokus.se
 /js/sticky-mobile-ad.
 /js/userneeds.
 /js/webtrekk
@@ -1057,6 +1054,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /plugins/mashshare$script
 /plugins/mashshare-google-analytics/*
 /plugins/material-admin/visitor-stats$script
+/plugins/mediaconnect$domain=fokus.se
 /plugins/metro-affiliate/*$script
 /plugins/mitti-oath-cmpi-js/*
 /plugins/ml-adverts/*$script
@@ -1554,8 +1552,7 @@ flashscore.se##.boxOverContent--a
 flm.nu##.spons
 flygtorget.se###PreHeader
 fn.se,kb.se###cookie
-fokus.se##.social-sharing
-fokus.se,sverigeskonsumenter.se###cookie-box
+fokus.se##.Cookie-notice
 folkbladet.nu,vk.se##.vkmui-Text--grey
 folkbladet.nu,vk.se##[class^="adContainer"], div[class^="bordersAndShadows"] > div[style^="min-height"]:only-child
 foodfolder.se###myModal
@@ -1854,6 +1851,7 @@ svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, a[target="_blank"][r
 svenskorientering.se###RightDiv
 svensktgolfforum.se##[data-ad-id]
 svensktidskrift.se###bannercolumn
+sverigeskonsumenter.se###cookie-box
 sverigesnatur.org##div[id^="sverigesNaturPopup"]
 sverigespringer.se##.cd-desktop-banner
 svt.se###nyh_cookie-message,#svtmat_cookie,section.nyh_share
