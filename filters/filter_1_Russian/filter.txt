@@ -6754,8 +6754,6 @@ livejournal.com#%#AG_setConstant('begun_new_callbacks', 'undefined');
 !
 ! Extended CSS rules
 !
-! myshows.me beta background ad
-beta.myshows.me#?#div[id="__layout"] > .DefaultLayout > a.DefaultLayout-promo:remove()
 ! sports.ru ad background
 sports.ru#$?##branding-layout > div.page-layout:not(:has(> *)) { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73390
@@ -8989,6 +8987,8 @@ api.kinomoov.org#%#AG_onLoad(function() { window.flashLayerAdSkipDelay = 1; });
 !------- CSS -----------
 !-----------------------
 !
+! beta.myshows.me - top empty space removing
+beta.myshows.me#$#.DefaultLayout-main { margin-top: 0!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/80309
 lordfilm-lord.club#$#.wrap { padding-top: 0 !important; }
 ! sports.ru - for apps. Sometimes banner is not hidden on the main page
