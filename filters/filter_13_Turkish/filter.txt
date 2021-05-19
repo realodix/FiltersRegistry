@@ -412,6 +412,9 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/83318
+coinotag.com###kanews-modal-adblock
+coinotag.com#%#//scriptlet("set-constant", "kan_vars.adblock", "undefined")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/80636
 cnnturk.com#%#//scriptlet("set-constant", "AdblockDetector", "undefined")
 @@||cnnturk.com//assets/dist/js/300x250_dfp.js
@@ -975,6 +978,7 @@ vizyonfilmizle.tv#$?#.fancybox-overlay-fixed[-ext-has="> div"] { display: none!i
 vizyonfilmizle.tv#$?#.fancybox-lock body[-ext-has="> div"] { overflow: visible!important; }
 vizyonfilmizle.tv#$?#html[-ext-has="> body"] { overflow: visible!important; }
 !
+ajansspor.com#?#.container .none-margin-tablet > .margin-top--30 > .center__row > div[id^="category-"] > script:contains(defineSlot):upward(3)
 patilim.com#?#.row > .col-lg-4 > .user-widget > .widget-body > .adsbygoogle:upward(2)
 sonperiyot.com#?#aside:has(> h4 > span:contains(SPONSOR))
 koinfinans.com#?#.td-ss-main-sidebar > aside.widget:has(> h4.block-title > span:contains(Reklam))
@@ -2779,6 +2783,8 @@ yemektarifleri.org,lifebursa.com,mshowto.org,macizlee1.com,macizlee.ne,dunyaatla
 ! ###adStarter
 fullhdfilmcibaba.com,720pizlemek.com,1080pfilmizle.net,fullhdfilmcidayi.com,hdfilmizledayi.com,720-pizleme.com,fullhdfilmizlebaba.com,evrenselfilmlerim.net###adStarter
 !
+ajansspor.com###header + .center__row--top
+coinotag.com##.kanews-banner
 eminellere.com##tr[class^="satir_link"][class*="_reklam"]
 ||static.haber8.pro/reklam8.js
 diziyo10.net##center > a[target="_blank"]
@@ -7624,6 +7630,8 @@ driverdestek.com##.adsbygoogle
 !------ White list. Fixing filtration errors (false-positive)---------------!
 !---------------------------------------------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/83360
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=haberglobal.com.tr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83272
 patilim.com#@#.single-ads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82237
