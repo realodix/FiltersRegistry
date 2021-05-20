@@ -1,8 +1,8 @@
 !
-! Checksum: GiEKSBA86iNbZz8KAIN1kQ
-! OriginalVersion: 202105201250
+! Checksum: fjWn/4YO3zHYArtAzjpLSg
+! OriginalVersion: 202105201650
 ! Title: RU AdList + CSS Fixes
-! Last modified: 20 May 2021 12:50 UTC
+! Last modified: 20 May 2021 16:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -7653,6 +7653,7 @@ _tizers.
 ||marcomobili.ru^$third-party
 ||margadoncat.com^$third-party
 ||mark-media.com.ua^$third-party
+||marketplacepro.ru^$third-party
 ||markhab.ru^
 ||marmuzhi.ru^$third-party
 ||martakava.ru^
@@ -13700,6 +13701,7 @@ journal-off.info##.bwrbs[style^="padding:8px"]
 mail.inbox.lv##.bxS-leftbar
 mail.inbox.lv##.bxS-text_link
 tsn.ua##.c-aside-embed
+drive2.ru##.c-dv-p
 tomat-pomidor.com##.cPost + script + center
 piccy.info##.c[width="300"]
 boxnews.com.ua##.caf0c6
@@ -14446,6 +14448,7 @@ rz.com.ua##.journal_top_baner
 news.turizm.ru##.jq_turoperator_adv_items
 mo4movin.dyndns.org##.jqmOverlay
 mo4movin.dyndns.org##.jqmWindow
+drive.ru##.js-adv-widget
 e1.ru##.js-article-section-auto
 megalyrics.ru##.js-banner
 nat-geo.ru##.js-banner-stretch
@@ -16331,7 +16334,7 @@ gdz4you.com##[data-controller="SearchInputController"] ~ .well-container
 banki.ru##[data-currency-list] > [data-widget-row]
 banki.ru##[data-dfp-container]
 briefly.ru##[data-disclaimer*="Реклама"]
-basaru.net.ru,lexxs.us,topfile.tj,torrent-sv.ru##[data-dlebclicks]
+basaru.net.ru,lexxs.us,topfile.tj,torrent-sv.ru,weblance.com.ua##[data-dlebclicks]
 progrib.ru##[data-href*="adbl"]
 myukraina.com.ua##[data-link*="goo.gl"]
 woman.ru##[data-name*="Banner"]
@@ -18829,7 +18832,7 @@ echo.msk.ru##div[id^="div-gpt-ad-"]
 echo.msk.ru##div[id^="smi_teaser_"]
 ! -----------------------------------------------------------------------------
 ! *** advblock/specific_block.txt ***
-! CSP filters
+! CSP and Header filters
 /^https?://[^\s]+\.lentainform\.com/[^\s]{150,}/$csp=script-src
 /^https?://[^\s]+\.nahnews\.org/[^\s]{150,}/$csp=script-src
 /^https?://[^\s]+\.politexpert\.net/[^\s]{150,}/$csp=script-src
@@ -25440,6 +25443,7 @@ drahelas.ru#$?#.navbar_notice { position: fixed !important; transform: scale(0) 
 draug.ru###timer_1
 draug.ru#$?##timer_2 { display: block !important }
 ! ---
+drive2.com,drive2.ru#$?#.article ~ div:not(:last-child) { min-height: 0 !important; padding-top: unset !important; padding-bottom: unset !important; box-shadow: inherit !important }
 drive2.com,drive2.ru##.c-dv-container
 drive2.com,drive2.ru##.c-pager + div[class]:last-child
 drive2.com,drive2.ru##.dv-post-header
@@ -25448,7 +25452,7 @@ drive2.com,drive2.ru##.offer[itemtype="http://schema.org/Product"] + div
 drive2.com,drive2.ru##.offer[itemtype="http://schema.org/Product"] + div + div
 drive2.com,drive2.ru##[itemtype="http://schema.org/Review"] + div[class$="content"] ~ div[class]:last-child > div[class$="content"]:first-child + div
 drive2.com,drive2.ru#$?#[itemtype="http://schema.org/Review"] + div[class$="content"] ~ div[class]:last-child > div[class$="content"]:first-child:not(:only-child) { max-width: unset !important }
-drive2.com,drive2.ru##[itemtype="http://schema.org/Review"] + div[class$="content"] ~ div[class]:not(:last-child)
+drive2.com,drive2.ru#$?#[itemtype="http://schema.org/Review"] + div[class$="content"] ~ div[class]:not(:last-child) { min-height: 0 !important; padding-top: unset !important; padding-bottom: unset !important; box-shadow: inherit !important }
 drive2.com,drive2.ru#$?#[itemtype^="http://schema.org/"] ~ div[data-role][data-target] + div ~ div:last-child > div:first-child:not(:only-child) { max-width: unset !important }
 drive2.com,drive2.ru##div[class$="content"] ~ div[data-role][data-target] + div
 drive2.com,drive2.ru##div[class*="--content article "] + div
@@ -25457,9 +25461,9 @@ drive2.com,drive2.ru##div[class*="--content article "] + div ~ div:last-child > 
 drive2.com,drive2.ru#$?#div[class*="--content article "] + div ~ div:last-child > div:first-child:not(:only-child) { max-width: unset !important }
 drive2.com,drive2.ru##div[itemtype="http://schema.org/BlogPosting"] ~ div:last-child > div:first-child + div[class]
 drive2.com,drive2.ru#$?#div[itemtype="http://schema.org/BlogPosting"] ~ div:last-child > div:first-child:not(:only-child) { max-width: unset !important }
-drive2.com,drive2.ru##div[itemtype="http://schema.org/BlogPosting"] ~ div:not(:last-child)
+drive2.com,drive2.ru#$?#div[itemtype="http://schema.org/BlogPosting"] ~ div:not(:last-child) { min-height: 0 !important; padding-top: unset !important; padding-bottom: unset !important; box-shadow: inherit !important }
 drive2.com,drive2.ru##div[itemtype^="http://schema.org/"] ~ div[data-role][data-target] + div ~ div:last-child > div:first-child + div[class]
-drive2.com,drive2.ru##div[itemtype^="http://schema.org/"] ~ div[data-role][data-target] ~ div:not(:last-child)
+drive2.com,drive2.ru##div[itemtype^="http://schema.org/"] ~ div[data-role][data-target] + div:not(:last-child)
 ! ---
 driveroff.net##body > #right
 driveroff.net#$?#body > #right ~ .middle { margin-right: 4px !important }
