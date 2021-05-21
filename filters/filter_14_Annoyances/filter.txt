@@ -4181,7 +4181,8 @@ www.rambler.ru#?#main header ~ div div[class]:has(> div[class] > div[id]:empty)
 ! rambler.ru - leftovers (new interface)
 weekend.rambler.ru#$?#div[data-blocks^="cluster_"] > div:matches-css(height: 240px) { remove: true; }
 sport.rambler.ru,www.rambler.ru#?#div[class] > script:not([src]) ~ div[class] > div:first-child div:has(> div[style^="height:"] > div div[id]:empty)
-horoscopes.rambler.ru#?##root > div[class]:has(div[class] > div[id] > script:contains(/if\s?\(!window\..*"status":/))
+horoscopes.rambler.ru#?##root > div[class]:has(div > div[id] > script:contains(/if\s?\(!window\..*"status":/))
+horoscopes.rambler.ru#?##root > div div > div[style*="block"]:upward(2)
 news.rambler.ru,auto.rambler.ru,kino.rambler.ru,finance.rambler.ru,weekend.rambler.ru,doctor.rambler.ru,travel.rambler.ru,woman.rambler.ru,sport.rambler.ru#?##rootWrapper > div[class]:has(div[class] > div[id] > script:contains(/if\s?\(!window\..*"status":/))
 news.rambler.ru,auto.rambler.ru,kino.rambler.ru,finance.rambler.ru,weekend.rambler.ru,doctor.rambler.ru,travel.rambler.ru,woman.rambler.ru,sport.rambler.ru#?#div[data-blocks] > div[class] div[class]:has(> div > div[class] > div[style*="block"])
 auto.rambler.ru,kino.rambler.ru,finance.rambler.ru,weekend.rambler.ru,doctor.rambler.ru,travel.rambler.ru,woman.rambler.ru,sport.rambler.ru#?#div[data-blocks] ~ div[class] div[class]:has(> div > div[class] > div[style*="block"])
@@ -8701,6 +8702,7 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+widiba.it##.wd-cookies
 allsmo.com##.ls-alert-msg > div[id^="ls-alert-msg-id-"]
 futbol.pl##.js-cp-box
 studytonight.com###liveToast
@@ -18321,6 +18323,9 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+protect-link.biz#$#body { overflow: auto !important; }
+protect-link.biz#$#div[aria-labelledby="myModalLabel"] { display: none !important; }
+protect-link.biz#$#div[aria-labelledby="myModalLabel"] ~ div.modal-backdrop { display: none !important; }
 scamadviser.com#$##marketing-popup-overlay { display: none !important; }
 scamadviser.com#$#body { overflow: auto !important; }
 journaldev.com##.moOptinForm
@@ -23653,6 +23658,7 @@ experts-exchange.com##.interceptBackgroundBlocker
 experts-exchange.com##.adBanner-comment
 experts-exchange.com##.ctaSolutionStickyWrapper
 !
+in.news.yahoo.com###module-featurebar
 rlsbb.ru##.information
 ruhrnachrichten.de##.topOfferContainer
 ruhrnachrichten.de##img[title="BVB-Abo"]
