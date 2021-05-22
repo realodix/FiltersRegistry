@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-05-20 08:20:24 CEST
+! Last modified: 2021-05-22 08:41:14 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -212,7 +212,7 @@ lesscarbs.se###mid section.elementor-section:has(a[href*="/annonssamarbete/"])
 lexbase.se#%#//scriptlet('ubo-cookie-remover.js', 'lmt')
 linnherbertsson.se##.content:has(.sponsored-container)
 listor.se##article:has(a[href*="/annons/"])
-ljudochbild.se#$#.entry-content-wrap { max-height: unset !important; overflow: initial !important; }
+ljudochbild.se#$#.entry-content-wrap, .hideaway { max-height: unset !important; overflow: initial !important; height: unset !important; }
 lwcdn.com#%#//scriptlet('ubo-aeld.js', '/^(?:adBlocker|contextmenu)$/')
 majanilssonlindelof.com##article:has(.has-text-align-center:has-text(/samarbete med/i))
 maklarvarlden.se##.td-post-category:has-text(/spons/i):upward(2)
@@ -347,6 +347,7 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||best-prizes-now.*^$all
 ||biowebb-data.*.amazonaws$important,third-party
 ||byggkonsult.org^$all
+||delivery.youplay.se/load.js?*&ap=true$removeparam=/^ap/,script
 ||fast.fonts.net/t/1.css$redirect=nooptext,domain=pbswisstools.com
 ||google-analytics.com^$important,domain=aftonbladet.se|tradera.com|xxl.se
 ||googletagmanager.com^$important,domain=tradera.com|xxl.se
@@ -1574,7 +1575,7 @@ fotbolltransfers.com##div[class^="ad"], a[href^="https://ads."]
 fotosidan.se##.subArticlesponsored, div[style="width:300px;float:right;"], div[style="float:right;width:300px;"]
 fplus.se,nvp.se##[class^="banner"]
 fragbite.se##.cookieBar
-fragbite.se##.tn, .zooKeeper, #scraper
+fragbite.se##.tn, .zooKeeper, #scraper, .subHeadSponsors
 framtid.se###customer-link-container
 framtid.se###siteflash
 freeride.se##img[src*="/sponsor/"] + br + .boxlogo
