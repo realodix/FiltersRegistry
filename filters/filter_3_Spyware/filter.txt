@@ -80,6 +80,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82132
 connect.de#%#//scriptlet("abort-on-property-read", "trConfig")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/80625
+tweakers.net#%#//scriptlet('prevent-addEventListener', '/trackerRefresh|trackerRestore/')
+tweakers.net#%#//scriptlet('set-constant', 'tweakersConfig.wtConfig.scriptUrl', '')
 tweakers.net#%#//scriptlet('abort-current-inline-script', 'AbStats', 'trackId')
 tweakers.net#%#//scriptlet('abort-on-property-read', 'GlobalSnowplowNamespace')
 tweakers.net#%#//scriptlet('set-constant', 'WebTrekkClickMap', 'noopFunc')
@@ -4609,6 +4611,8 @@ nethunt.com/api/v1/track/email/$image
 ! Disabled in DNS filter
 ||telemetry.mozilla.org^
 !
+||appsanalytics.appideas.it^
+||api-adservices.apple.com^
 ||analytics.atlassian.com^
 ||trackdb.go3.tv^
 ||collector.rn.de^
@@ -16800,6 +16804,7 @@ _tracking.php?b=
 !
 /analytics.js$domain=bataryapil.com|journey.com.tr|tozlu.com|elleshoes.com|freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|partifabrik.com
 !
+||tweakers.net/*/event-tracking/
 ||ajinomoto.co.jp/shared_file/js/header_log.js
 ||ajinomoto.co.jp/shared_file/js/log.js
 ||bilanx.dtto.com/*/configs
