@@ -1,5 +1,13 @@
 ! Rule "rambler.*,~www.rambler.*#?#.pub_300x250.text-ad-links.adbanner.ad.text_ad.pub_728x90.text-ad.nav-ad.text-ads.textAd.ad-banner.text_ads.pub_300x250m:style(display: block !important)" converted to: "rambler.*,~www.rambler.*#$?#.pub_300x250.text-ad-links.adbanner.ad.text_ad.pub_728x90.text-ad.nav-ad.text-ads.textAd.ad-banner.text_ads.pub_300x250m { display: block !important }"
 rambler.*,~www.rambler.*#?#.pub_300x250.text-ad-links.adbanner.ad.text_ad.pub_728x90.text-ad.nav-ad.text-ads.textAd.ad-banner.text_ads.pub_300x250m:style(display: block !important)
+! Rule "razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div > div[style*="height:"][style*="width:"]:style(width: 100% !important)" converted to: "razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div > div[style*="height:"][style*="width:"] { width: 100% !important }"
+razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div > div[style*="height:"][style*="width:"]:style(width: 100% !important)
+! Rule "razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[class][style^="top: "] ~ div[class]:not([style]):style(right: -100% !important)" converted to: "razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[class][style^="top: "] ~ div[class]:not([style]) { right: -100% !important }"
+razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[class][style^="top: "] ~ div[class]:not([style]):style(right: -100% !important)
+! Rule "razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[style*="px;"]:style(width: 100% !important)" converted to: "razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[style*="px;"] { width: 100% !important }"
+razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[style*="px;"]:style(width: 100% !important)
+! Rule "razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"]:style(width: 100% !important)" converted to: "razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] { width: 100% !important }"
+razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"]:style(width: 100% !important)
 ! Rule "/^https?://mail\.yandex\.[^\s]{125,}/$empty,script,~third-party" converted to: "/^https?://mail\.yandex\.[^\s]{125,}/$redirect=nooptext,script,~third-party"
 /^https?://mail\.yandex\.[^\s]{125,}/$empty,script,~third-party
 ! Rule "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$empty,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz" converted to: "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$redirect=nooptext,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz"
@@ -52,6 +60,8 @@ horoscopes.rambler.*#?#+js(set-constant.js, Object.prototype.needShowAlicePopup,
 lena-miro.ru,levik.blog,livejournal.*,olegmakarenko.ru,shakko.ru,varlamov.*#?#+js(set-constant.js, Object.prototype.Begun, undefined)
 ! Invalid selector:
 nova.rambler.*#?#+js(abort-on-property-read.js, Object.prototype.AdvManager)
+! Invalid selector:
+razlozhi.*#?#+js(no-setTimeout-if.js, X-Set-Adblock)
 ! Invalid selector:
 www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#+js(json-prune.js, Blocks)
 ! Invalid selector:
