@@ -1,8 +1,8 @@
 !
-! Checksum: bMKoa9bfx04/jI6XDY15Fw
-! OriginalVersion: 202105251250
+! Checksum: z40QlCB844XaMTl6iXOTuw
+! OriginalVersion: 202105251650
 ! Title: RU AdList + CSS Fixes
-! Last modified: 25 May 2021 12:50 UTC
+! Last modified: 25 May 2021 16:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -13057,6 +13057,7 @@ acer-a500.ru,rabota-kovrov.ru,sosnovskij.ru##.advs
 hdzilla.me,noi.md##.adw
 tmbw.ru##.adwidget
 burdastyle.ru##.aff-offers
+theuk.one##.afterpost-teaser-x
 ktonanovenkogo.ru##.ag-adv-container
 3mv.ru##.agregator_R
 iz-kirpicha.su##.ah-content > [class]:empty
@@ -16370,6 +16371,9 @@ liveresult.ru##[data-target*="nus"]
 drive2.ru##[data-target^="drom_"]
 youla.ru##[data-test-component="AdCardHolder"]
 adme.ru#?#[data-test-id$="-recommended"] div[class*=" _"]:-abp-has(> div[class] > div[class]:empty)
+echo.msk.ru##[data-title="Эхо Москвы"] > div:first-child
+echo.msk.ru##[data-title="Эхо Москвы"] > script:first-child + div
+echo.msk.ru##[data-title="Эхо Москвы"] div[id]:not([class]):first-child
 echo.msk.ru##[data-title] center
 1fnl.ru##[data-tizer-id="partners"]
 historyrusedu.ru##[data-uk-grid-match*="target"]
@@ -17503,6 +17507,7 @@ salonav.com#?#div:-abp-has(> .mom-ads-wrap)
 selomoe.ru#?#div:-abp-has(> .title_also:-abp-contains(Партнерский контент))
 forumhouse.ru#?#div:-abp-has(> [class$="relap-block"])
 obozrevatel.com#?#div:-abp-has(> [data-bk-name])
+echo.msk.ru#?#div:-abp-has(> [id*="svoboda"])
 draug.ru#?#div:-abp-has(> [id^="yandex_rtb"])
 photofuneditor.com#?#div:-abp-has(> [src*="pagead2."])
 reshebnik.com#?#div:-abp-has(> [src="/img/blocked.png"])
@@ -17525,6 +17530,7 @@ fragrantica.ru#?#div:-abp-has(> sup)
 football.kulichki.net#?#div:-abp-has(> table > tbody a[href*="kulichki.com/advert"])
 sdamgia.ru##div:first-child > [class*=" "] > style ~ [class*=" "]
 sdamgia.ru##div:first-child > [class*=" "] ~ style ~ [class*=" "]
+echo.msk.ru##div:first-child > div[style^="width: "][style*="%; height:"]
 tomat-pomidor.com##div:not([id]):not([class])[style^="min-height:"]
 vz.ru##div:not([id])[style*="margin"][style*="width: 240px"]
 dtf.ru,tjournal.ru,vc.ru##div[air-module="module.boosterPromo"]
@@ -17679,6 +17685,7 @@ mk.ru,prnt.sc##div[class][style*="important"]
 echo.msk.ru##div[class][style=""]
 sdamgia.ru##div[class][style=""] center > div[id]
 rlocman.ru##div[class][style="background-color:#fcfcee;padding:10px"]
+puzzleheap.ru##div[class][style^="height:"][id]:empty
 vse42.ru##div[class][style^="min-height:"][style*="display: flex; width: 100%"]
 echo.msk.ru##div[class][style^="overflow: visible"]
 news.pn##div[class][style^="width:"][style$="300px;"]
@@ -18259,6 +18266,7 @@ megaobuchalka.ru##div[style="width: 80%; align-items: center;"] > center
 forum.gov-zakupki.ru##div[style="width: 970px; height: 90px;"]
 ubr.ua##div[style="width:100%; height:280px;"]
 www.afisha.ru##div[style="width:143px;height:24px"]:empty
+echo.msk.ru##div[style="width:236px;height:100px;"][id]
 softobase.com##div[style="width:336px; height:280px;"]
 for-ua.com##div[style="width:540px;height:90px;overflow:hidden;display:block;margin-top:10px"]
 au.ru##div[style="width:728px;height:90px;"]
@@ -18283,7 +18291,7 @@ rivne.media##div[style^="margin-bottom"] > a[href][onclick]
 freesoft.ru##div[style^="margin-left:"] > a[href="#"]
 smart-lab.ru##div[style^="min-height: 250px;"][style*="font-size: 0;"]
 liveposts.ru##div[style^="min-height: 700px;"]
-echo.msk.ru##div[style^="padding:"][style$="px 0px 0px 0px;"]
+echo.msk.ru##div[style^="padding:"][style*="0px 0px 0px;"]
 1pnz.ru##div[style^="position: relative; width: 230px; height: 400px"]
 lostfilmstv.com##div[style^="promo"]
 kinonews.ru##div[style^="text-align:"][style$="center;height:300px;"]
@@ -19916,6 +19924,7 @@ lada.kz/uploads/banners/
 ||cqham.ru/at_banner_
 ||cqham.ru/atk.gif
 ||cqham.ru/forum/ad/
+||criteo.^$domain=echo.msk.ru
 ||crmonline.ru/images/banners/
 ||ctnews.ru/storage/ad/
 ||ctv7.ru/bns-manual/
@@ -20258,7 +20267,7 @@ lada.kz/uploads/banners/
 ||gig-torrent.ru/templates/GTR/images/bn
 ||gigantporno.com/wk.php
 ||gimp.nas2.net/img/rek/
-||giraff.io^$script,domain=mk.ru
+||giraff.io^$script,domain=echo.msk.ru|mk.ru
 ||girlstop.info/jstt/
 ||githubusercontent.com^$domain=vk.com
 ||gjs.astrovedus.com/
@@ -27291,7 +27300,7 @@ dynamo.kiev.ua,epravda.com.ua,football.ua,isport.ua,liga.net,pravda.com.ua,www.i
 dynamo.kiev.ua,epravda.com.ua,football.ua,isport.ua,liga.net,pravda.com.ua,www.i.ua#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelector', '/banner/')
 eagleplatform.com#%#//scriptlet('ubo-set-constant.js', 'Object.prototype.autoplay', 'null')
 eagleplatform.com#%#//scriptlet('ubo-set-constant.js', 'player.options.scroll', 'false')
-echo.msk.ru#%#//scriptlet('ubo-cookie-remover.js', '/bltsr/')
+echo.msk.ru#%#//scriptlet('ubo-cookie-remover.js', '/altrs|bltsr/')
 echo.msk.ru,web-shpargalka.ru#%#//scriptlet('ubo-abort-on-property-read.js', 'Date.prototype.toUTCString')
 eksmo.ru##.fancybox-container:has([src*="/smv/popup/"])
 electric-house.ru#%#//scriptlet('ubo-abort-on-property-read.js', 'ads')

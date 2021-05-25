@@ -1702,8 +1702,8 @@ dynamo.kiev.ua,epravda.com.ua,football.ua,isport.ua,liga.net,pravda.com.ua,www.i
 eagleplatform.com##+js(set-constant, Object.prototype.autoplay, null)
 ! Rule "eagleplatform.com##+js(set-constant, player.options.scroll, false)" converted to: "eagleplatform.com#%#//scriptlet('ubo-set-constant.js', 'player.options.scroll', 'false')"
 eagleplatform.com##+js(set-constant, player.options.scroll, false)
-! Rule "echo.msk.ru##+js(cookie-remover, /bltsr/)" converted to: "echo.msk.ru#%#//scriptlet('ubo-cookie-remover.js', '/bltsr/')"
-echo.msk.ru##+js(cookie-remover, /bltsr/)
+! Rule "echo.msk.ru##+js(cookie-remover, /altrs|bltsr/)" converted to: "echo.msk.ru#%#//scriptlet('ubo-cookie-remover.js', '/altrs|bltsr/')"
+echo.msk.ru##+js(cookie-remover, /altrs|bltsr/)
 ! Rule "echo.msk.ru,web-shpargalka.ru##+js(abort-on-property-read, Date.prototype.toUTCString)" converted to: "echo.msk.ru,web-shpargalka.ru#%#//scriptlet('ubo-abort-on-property-read.js', 'Date.prototype.toUTCString')"
 echo.msk.ru,web-shpargalka.ru##+js(abort-on-property-read, Date.prototype.toUTCString)
 ! Rule "electric-house.ru##+js(abort-on-property-read, ads)" converted to: "electric-house.ru#%#//scriptlet('ubo-abort-on-property-read.js', 'ads')"
@@ -2112,6 +2112,8 @@ www.ukr.net##a[href][id$="op"][style]:not(#id):style(display: block !important; 
 www.ukr.net##div[class^="fuel-"][class$="-banner"]:not(#id):style(display: block !important; pointer-events: none !important; opacity: 0 !important; height: 0 !important)
 ! Rule "gismeteo.by,gismeteo.kz,gismeteo.md,gismeteo.ru##+js(abort-on-property-read, Object.prototype.scriptsViaXhr)" converted to: "gismeteo.by,gismeteo.kz,gismeteo.md,gismeteo.ru#%#//scriptlet('ubo-abort-on-property-read.js', 'Object.prototype.scriptsViaXhr')"
 gismeteo.by,gismeteo.kz,gismeteo.md,gismeteo.ru##+js(abort-on-property-read, Object.prototype.scriptsViaXhr)
+Error: "Unknown modifier: header=content-type=text/javascript" in the rule: "||echo.msk.ru^$header=content-type=text/javascript"
+||echo.msk.ru^$header=content-type=text/javascript
 Error: "Unknown modifier: header=content-type=text/javascript" in the rule: "||liveinternet.ru^$header=content-type=text/javascript"
 ||liveinternet.ru^$header=content-type=text/javascript
 Error: "Unknown modifier: redirect-rule=32x32.png" in the rule: "*$image,redirect-rule=32x32.png,domain=www.ukr.net"
