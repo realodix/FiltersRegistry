@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-05-25 06:55:06 CEST
+! Last modified: 2021-05-26 07:24:53 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -111,6 +111,7 @@ di.se#%#//scriptlet('ubo-nostif.js', '#triggerModal')
 di.se#%#//scriptlet('ubo-ra.js', 'data-auto-play,,stay')
 di.se#%#//scriptlet('ubo-set.js', 'getAdblockerStatus', 'noopFunc')
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se#%#//scriptlet('ubo-acis.js', 'showConsentDlg')
+dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##.carousel-caption:has(.vicky-category-label:has-text(/spons/i))
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##.vicky-post-whitebox:has(.vicky-whitebox-label-text:has-text(/spons/i))
 djungeltrumman.se#%#//scriptlet('ubo-nano-sib.js', 'dt_fullpage_ad')
 djungeltrumman.se##.item:has(.label-post:has-text(/spons/i))
@@ -180,6 +181,8 @@ idg.se##[data-styled="SpLabel"]:upward(article)
 interiorbyvanessa.se##.post:has-text(I annonssamarbete med)
 isabellalowengrip.se##.post:has(em:has-text(/^i samarbete med/i))
 isabellalowengrip.se,matplatsen.net#$?#article:has(em:has-text(/i samarbete med/i)) { remove: true; }
+it-finans.se#%#//scriptlet('ubo-acis.js', 'mdpUnGrabber')
+it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##aside:has(.widget-title:has-text(/annons/i))
 jamtlandstidning.se##.elementor-widget-sidebar:has(li[id^=media_image-1])
 jamtlandstidning.se##.elementor-widget-wrap:has(h2:has-text(/^Annonser$/))
 jamtlandstidning.se##.elementor-widget-wrap:has(img[src*=-annons-])
@@ -433,8 +436,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1658,6 +1661,7 @@ innebandy.se##[class*="banner-container"]
 intersport.*#@#.cookie-banner:not(body):not(html)
 ipo.se##.tag-sponsrad
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^="gtag"]
+it-halsa.se,it-pedagogen.se,it-retail.se##.penci-wrap-gprd-law
 jaktjournalen.se##.activate-notifications-container.shown
 jaktplay.se##.jaktplay-ad
 jaktsidan.se###ipsLayout_mainArea > iframe
@@ -1856,7 +1860,7 @@ svd.se###mega-ad-wrapper, .Container--ad, .theme-Native
 svenskafans.com##.puff__ad-heading
 svenskfast.se##.cookie-law__wrapper
 svenskgolf.se##.partnerCard, .partnerContent
-svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, a[target="_blank"][rel="noopener noreferrer"]
+svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, a[target="_blank"][rel="noopener noreferrer"], a > img[width="300"][height="250"]
 svenskorientering.se###RightDiv
 svensktgolfforum.se##[data-ad-id]
 svensktidskrift.se###bannercolumn
@@ -1904,7 +1908,6 @@ varldenshaftigaste.se##[id*="annons"], #getFixed
 varldenshistoria.se##.campaign-teaser-show
 veterinarmagazinet.se##.nyhet-ad
 vi.se##.cookieNotification
-via.tt.se##.footer__notification
 viafree.se##.pause-ad-container, .pause-ad, .ad-click-through
 vibilagare.se##a[href^="/partnermaterial/"]
 viivilla.se###product-area
