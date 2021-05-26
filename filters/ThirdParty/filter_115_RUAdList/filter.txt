@@ -1,8 +1,8 @@
 !
-! Checksum: z40QlCB844XaMTl6iXOTuw
-! OriginalVersion: 202105251650
+! Checksum: 1xY04iTNUStPm9HOJGMlcQ
+! OriginalVersion: 202105260050
 ! Title: RU AdList + CSS Fixes
-! Last modified: 25 May 2021 16:50 UTC
+! Last modified: 26 May 2021 00:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -4707,6 +4707,8 @@ _tizers.
 ||aj2021.online^$third-party
 ||aj2113.online^$third-party
 ||aj2171.online^$third-party
+||aj2178.online^$third-party
+||aj2204.online^$third-party
 ||aj2313.online^$third-party
 ||ajaxbig.ru^$third-party
 ||ajnetli.info^$third-party
@@ -15627,6 +15629,7 @@ armflot.ru#?#.sp-column > .sp-module:-abp-has([id*="ScriptRoot"])
 serialrussian.ru##.sp-container
 hi.dn.ua,slavinfo.dn.ua##.sp-module-content > div[class=""][style=""]
 forum.taxiservice.com.ua##.sp_block script[src*="pagead2."] ~ a
+kinofilm.co##.sp_darkvids
 theins.ru##.spacer_400
 stroi-help.ru#?#.span4 > .block_name_pink:-abp-contains(Реклама)
 stroi-help.ru#?#.span4 > .block_name_pink:-abp-contains(Реклама) + .sidebar_block
@@ -16405,6 +16408,7 @@ kakprosto.ru##[id*="-offers-block"]
 cools.biz,cools.dj,get-tune.cc,intermusic.name,iplayer.info,ipleer.fm,k1news.ru,kolesa.kz,market4game.ru,mp3cc.biz,mp3iq.com,vmuzice.me,yellowpages.uz##[id*="Banner"]
 espreso.tv##[id*="ScriptRoot"]:not(.news-block-magick)
 liveinternet.ru,livejournal.com##[id*="_R-A-"]
+sdamgia.ru##[id*="_R-A-"]:empty
 liveangarsk.ru##[id*="abovecontent"]
 floomby.ru##[id*="adsPlace"]
 sia.ru##[id*="banana"]
@@ -17193,6 +17197,7 @@ altai4u.com##a[href^="https://play.google.com/store/apps/details?id="]
 allboxing.ru,izvestia.ru,lifenews.ru,topwar.ru##a[href^="https://relap.io/"][data-ad-link]
 softodrom.ru##a[href^="https://rosecatalog.ru"]
 netschool-edu22-info.ru##a[href^="https://rusfond.ru/"]
+sdamgia.ru##a[href^="https://sboard.online"]
 shazoo.ru##a[href^="https://shazoo.ru/click/"]
 fireiser.org##a[href^="https://shorte.st/"]
 qaru.site##a[href^="https://studwork.org"]
@@ -17528,8 +17533,6 @@ rp5.am,rp5.by,rp5.co.nz,rp5.co.uk,rp5.kz,rp5.lt,rp5.lv,rp5.md,rp5.ru,rp5.ua#?#di
 draug.ru#?#div:-abp-has(> script:-abp-contains(snowsrc))
 fragrantica.ru#?#div:-abp-has(> sup)
 football.kulichki.net#?#div:-abp-has(> table > tbody a[href*="kulichki.com/advert"])
-sdamgia.ru##div:first-child > [class*=" "] > style ~ [class*=" "]
-sdamgia.ru##div:first-child > [class*=" "] ~ style ~ [class*=" "]
 echo.msk.ru##div:first-child > div[style^="width: "][style*="%; height:"]
 tomat-pomidor.com##div:not([id]):not([class])[style^="min-height:"]
 vz.ru##div:not([id])[style*="margin"][style*="width: 240px"]
@@ -17955,7 +17958,6 @@ lalamus.cc,superhumor.ru,voffka.com##div[id*="teaser"]
 flowtation.ru##div[id*="tizer"]
 1tv.ru,4pda.to,artem-kashkanov.ru,astrakhan-24.ru,baraholka.onliner.by,bigpicture.ru,energyfm.ru,galya.ru,gotovim-doma.ru,multitran.ru,qip.ru,telegraf.com.ua,vputilkovo.ru##div[id*="yandex_ad"]
 dv-gazeta.info#?#div[id] > [class]:-abp-contains(/^Новости партнеров/)
-sdamgia.ru##div[id]:first-child > [id] > [id]
 gorodrabot.ru##div[id]:not([class]):not([style])[aria-hidden="true"]
 kidpuz.ru,prohondroz.ru##div[id][block-id]
 progipertoniyu.ru##div[id][block-id][style]
@@ -18298,8 +18300,6 @@ kinonews.ru##div[style^="text-align:"][style$="center;height:300px;"]
 wallegend.net##div[style^="text-align:center;line-height:0;display:block;height:"]
 echo.msk.ru##div[style^="width: "][style$="%; height: 100%;"]
 e-reading.club##div[style^="width:"] > noindex
-sdamgia.ru##div[style^="width:"][style*="159"]
-sdamgia.ru##div[style^="width:"][style*="160"]
 echo.msk.ru##div[style^="width:"][style*="height:"][style*="."]
 vse-shutochki.ru##div[style^="width:100%; height:280px; padding:"]
 appstudio.org##div[style^="width:100%; height:90px;"]
@@ -26212,7 +26212,10 @@ sc2tv.ru#$?#.body--brranding > .content { margin-top: unset !important }
 sc2tv.ru#$?#html:not(#id) > body:not(#id) .body--brranding > * { pointer-events: auto !important }
 sc2tv.ru#$?#html:not(#id) > body:not(#id) .body--brranding { pointer-events: none !important }
 ! ---
+sdamgia.ru#$?#.PageLayout-Main > section ~ div[class*=" "] > div { height: auto !important }
 sdamgia.ru##.wrapper > div[class] > [style*="red;"][style*="font-size:"]
+sdamgia.ru#$?#aside > div[class]:first-child { height: auto !important }
+sdamgia.ru##div[style="height: 205px;margin: 0 auto;"]
 ! ---
 season-var.net#$?##main-wrapper { top: 0 !important }
 ! ---
@@ -27355,6 +27358,7 @@ joyreactor.cc,pornreactor.cc,reactor.cc#%#//scriptlet('ubo-abort-on-property-rea
 kakprosto.ru#%#//scriptlet('ubo-abort-on-property-write.js', 'window.yaProxy')
 kakprosto.ru#%#//scriptlet('ubo-cookie-remover.js', 'yadb')
 kaztorka.org#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.createElement', 'Math.random')
+kinofilm.co#%#//scriptlet('ubo-abort-on-property-read.js', 'ClickUndercookie')
 krolik.biz#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.createElement')
 kurs.com.ua#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.documentElement.clientWidth')
 l2top.ru#%#//scriptlet('ubo-abort-current-inline-script.js', '$', 'get')
