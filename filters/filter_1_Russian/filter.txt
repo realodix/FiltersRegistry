@@ -7190,6 +7190,7 @@ argumenti.ru#?#.online_top > ul > li:has(> p > a[href^="https://news.mirtesen.ru
 coronavirus-monitor.ru#?#.entry-content > div[style]:has(> ins.adsbygoogle)
 coronavirus-monitor.ru#?#.entry-content > center:has(> div[style] > div.mk-ad-container)
 !
+gidonline.fun###container > div#side:has(> div[style="height:1440px"])
 etalongame.com#?#.code-block:has(> div[class] div[id^="adfox_"])
 29.ru#?#div > div[id^="div-gpt-ad-"]:upward(1)
 wmj.ru,moslenta.ru#?#div[class] > h3.heading:contains(/^Рекомендуем ещё/)
@@ -9026,7 +9027,7 @@ rebenok.by#$#.brand-div-cont { padding-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74237
 peterburg2.ru#$#body > div[class="a"] { background: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73390
-l2top.ru#$#div[class="container"][style="max-width: 100%;"] header ~ div > div.container { margin-top: 0 !important; }
+l2top.ru#$#div[class="container"][style="max-width: 100%;"] header ~ div > div.container > div[id] + div[class] { margin-top: 0 !important; }
 ! masterinvest.info - удаление отступа сверху
 masterinvest.info#$#.header { padding: 20px 0 20px 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73250
@@ -11557,6 +11558,8 @@ crazymailing.com,lotzon.pro,novosti-n.org,prokazan.ru,20minut.ua,alnews.com.ua,g
 ! vast ads on anime sites - for example: animego.org, yummyanime.club, etc
 /:\/\/[0-9]?[a-z0-9]{11,}(\.com|\.in\.net)/$xmlhttprequest,domain=aniqit.com|kodik.info|start.u-cdn.top|ustore.bz|u-stream.in
 !
+gidonline.fun###myShowBlock1
+gidonline.fun###s-side
 theoryandpractice.ru##a[href^="http://kampus.team/"] > img
 smartpress.by##body div.top-box
 xlib.info##.box-before-closing
@@ -11851,7 +11854,6 @@ sber-zvuk.com##div[class^="CustomAdBanner"]
 nvworld.ru##figure[style*="min-height:280px;"][style*="z-index:1000!important;"]
 19216811.ru##.recl
 akket.com###interesting_articles_google
-.l2top.ru^$script
 ackordofmine.ru##table[height="180px"][width="100%"][align="center"]
 ||abo.media/upload/branding/$domain=popasnaya.city
 popasnaya.city##div[class^="mc-branding"]
@@ -11865,7 +11867,6 @@ russkoeporno.mobi##.full-bns-block
 russkoeporno.mobi##.brs-block
 russkoeporno.mobi##.video-wide-br
 wow-game.ru##.main-panel__announce > div.main-panel__logo:not([style^="background-image:"])
-l2top.ru##a[onclick^="this.href=atob"]
 masterinvest.info##.adbn
 ||wow-game.ru/Comercial/
 ||wow-game.ru/design/img/bg_header-
@@ -21021,6 +21022,11 @@ www.ex.ua/*/index.css
 ||ру-порно.com/teasernet/
 ||скачатьофис.рф/*.php?q=$script
 ||форум-мебельщиков.рф/banner/
+!
+.l2top.ru/*/|
+.l2top.ru/*/bnB?type=
+.l2top.ru^$script
+l2top.ru##a[onclick^="this.href=atob"]
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83251
 ! frequently changed domain
