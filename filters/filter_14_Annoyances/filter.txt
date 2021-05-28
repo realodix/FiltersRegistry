@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/pull/83911
+blog.naver.com#%#//scriptlet('set-constant', 'rightClickOpenYn', 'false')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82715#issuecomment-847745704
 google.*#%#(function() { try { if ("undefined" != typeof localStorage) { window.localStorage.setItem("gtButterbarDismissalExpiry", ((new Date).getTime() + 6048E5).toString()) } } catch (ex) {} })();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83731
@@ -354,8 +356,8 @@ colta.ru#?##right > p:contains(/Подписывайтесь|Рассылка/)
 budzma.by##.top-baner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67439
 snob.ru##.entry__telegram
-! https://github.com/AdguardTeam/AdguardFilters/issues/67287
-thecode.media##.promo
+! https://github.com/AdguardTeam/AdguardFilters/issues/84089
+thecode.media##.praktikum-link
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67233
 habr.com###our-partners
 m.habr.com##.tm-block_sponsors
@@ -4195,6 +4197,7 @@ rp5.ru,rp5.ua,rp5.by,rp5.kz,rp5.co.uk,rp5.md#$?##content > div > div[id]:has(> i
 @@||adservice.google.*/adsid/integrator.js$domain=m.rp5.ru|m.rp5.ua|m.rp5.by|m.rp5.kz|m.rp5.co.uk|rp5.md
 !#endif
 !
+! echo.msk.ru
 echo.msk.ru##div.first[style]
 echo.msk.ru##*:not(div)[class] > div[style^="overflow:"]
 echo.msk.ru##div[style="padding: 10px 0px 0px;"]:empty
@@ -4203,6 +4206,8 @@ echo.msk.ru#?#*:not(div)[class] > div[style^="overflow:"] ~ div[class]:not(:has(
 echo.msk.ru#$?#.header_top:not(:has(> .wrapper)) { margin-top: -30px !important; }
 echo.msk.ru#%#//scriptlet("set-constant", "Object.prototype.hasShadowDomSupport", "undefined")
 echo.msk.ru#%#//scriptlet("set-constant", "Object.prototype.BannerDirect", "undefined")
+!+ PLATFORM(android)
+echo.msk.ru#$?#span > div[role]:has(> div[class] > section.content) { margin-top: 0 !important; }
 !
 ! rambler with side-projects: autorambler.ru,wmj.ru,passion.ru,eda.ru,quto.ru,rns.online,championat.com,gazeta.ru,lenta.ru
 !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)
