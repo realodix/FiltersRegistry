@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/83768
+costcotravel.com#$#html[style="opacity: 0;"] { opacity: 1 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/pull/83911
 blog.naver.com#%#//scriptlet('set-constant', 'rightClickOpenYn', 'false')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82715#issuecomment-847745704
@@ -8763,6 +8765,10 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+cadillac.ru##div[class^="ut_cookie_privacy"]
+techbone.net#$#body { overflow: auto !important; padding-right: 0 !important; }
+techbone.net#$##cookie_banner { display: none !important; }
+techbone.net#$##cookie_banner ~ div.modal-backdrop { display: none !important; }
 stream-park.ru,pharmeconom.ru,mlg.ru,online-knigi.com,2x2tv.ru##.bottom__cookie-block
 germany.travel#$#body.consent-overlay { overflow: auto !important; }
 germany.travel#$#.consent { display: none !important; }
@@ -15181,6 +15187,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !######### White list. Fixing filtering errors #########
 !#######################################################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/84016
+techbone.net#@##cookie_banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83662
 @@||swiftnav.com/sites/all/modules/contrib/eu_cookie_compliance/js/jquery.cookie-*.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83805
