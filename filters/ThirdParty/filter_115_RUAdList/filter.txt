@@ -1,8 +1,8 @@
 !
-! Checksum: ZkUdQLOFzGgsACYf700o6Q
-! OriginalVersion: 202106011900
+! Checksum: kYxx45AX11SnQeQnZOMH+A
+! OriginalVersion: 202106012050
 ! Title: RU AdList + CSS Fixes
-! Last modified: 01 Jun 2021 19:00 UTC
+! Last modified: 01 Jun 2021 20:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -3549,6 +3549,7 @@ _tizers.
 ||smi2.net^$third-party,domain=~smi2.ru
 ||smi2.ru^$third-party
 ||smi2.tv^$third-party
+||smi24.kz^$third-party
 ||smiar.ru^
 ||smigid.ru^$third-party
 ||smile32.ru^$third-party
@@ -13404,8 +13405,10 @@ bazar.kp.by##.banner_list
 kriminal.tv##.banner_long
 allmoldova.com##.banner_main
 metronews.ru##.banner_margin
+mix.tn.kz##.banner_mix_left
 ittour.com.ua##.banner_modal
 cpasee.com##.banner_rekl
+mix.tn.kz##.banner_right
 f1news.ru##.banner_sidebar
 express-prigorod.ru##.banner_slider
 kriminal.tv##.banner_small
@@ -14417,6 +14420,7 @@ pnp.ru##.infoblock > div[style="height: 900px;"]
 gorodkiev.com.ua##.infolinks
 aces.gg##.infopanel_left
 uaspectr.com##.information__image
+mix.tn.kz##.informer
 point.md##.informer-widget
 gazeta.ua##.informer.double
 sinoptik.com.ru,sinoptik.ua##.informerTop
@@ -18349,6 +18353,7 @@ kinonews.ru##div[style^="text-align:"][style$="center;height:300px;"]
 wallegend.net##div[style^="text-align:center;line-height:0;display:block;height:"]
 echo.msk.ru##div[style^="width: "][style$="%; height: 100%;"]
 e-reading.club##div[style^="width:"] > noindex
+bin.ua##div[style^="width:"][style*="240px;"][style*="height:"]
 echo.msk.ru##div[style^="width:"][style*="height:"][style*="."]
 vse-shutochki.ru##div[style^="width:100%; height:280px; padding:"]
 appstudio.org##div[style^="width:100%; height:90px;"]
@@ -20906,6 +20911,8 @@ lada.kz/uploads/banners/
 ||mix.tj/uploads/formula
 ||mix.tj/uploads/magnit
 ||mix.tj/uploads/parimatch/
+||mix.tn.kz/ajax/getBanner/
+||mix.tn.kz/mix/js/loader.js
 ||mixnews.lv/images*/brand/
 ||mixnews.lv/uploads/banners/
 ||mixsoft.org/yandexbrowser.js
@@ -21626,6 +21633,7 @@ lada.kz/uploads/banners/
 ||shaggyimg.pro^*.php$script
 ||shaiba.kz//images/bg/
 ||shaiba.kz/images/bg/
+||shaiba.kz/images/imprt_imgs/
 ||shansonline.ru/images/banners/2019/
 ||shazoo.ru/*_desktop_banner.$image
 ||sheee.co.il/js/walla.js
@@ -21851,6 +21859,10 @@ lada.kz/uploads/banners/
 ||telekomza.ru/wp-content/uploads/$object
 ||telik.top^*randomator.js
 ||telspravochnik.com/src/$script
+||tengrinews.kz/ajax/getBanners
+||tengrinews.kz/js/banners-init.js
+||tengrinews.kz/js/header-bidding.js
+||tengrinews.kz/js/loader.js
 ||teremok.org.ua/partner/images/
 ||ternopillive.com.ua^*/brend_reclama.
 ||terrikon.com/i/ad/
@@ -22103,6 +22115,7 @@ lada.kz/uploads/banners/
 ||vlasti.net/ext/uploads/
 ||vlasti.net/img/branding/
 ||vmeste.xyz/vast/
+||vokrugsveta.ua/wp-content/*/img/banner_
 ||volgo-mame.ru/partner/
 ||volgowarez.ru/engine/classes/js/init.js|
 ||volnorez.com/static/backscreen/
@@ -23565,7 +23578,6 @@ theonion.ru###bodypopup
 goodhouse.ru,samsebevoin.ru,westnews.info###cboxOverlay
 fishki.net###chrome_popup
 dnepr24.com.ua,gazeta.zp.ua,goodhouse.ru,kherson.net.ua,kr24.com.ua,nikolaev24.com.ua,odessa.net.ua,samsebevoin.ru,westnews.info###colorbox
-tengrinews.kz###container > div[id^="search_"]
 olx.ua###div-gpt-listing-full-screen-container
 gitarkin.ru###dropin
 velosipedinfo.ru###dynamic-to-top
@@ -25422,6 +25434,8 @@ bestpersons.ru#$?##userTabs { float: none !important }
 ! ---
 www.bigmir.net#$?#body > #header { top: 0 !important }
 www.bigmir.net#$?#body > .page { padding-top: 144px !important }
+! ---
+bin.ua#$?#div[style="position:absolute;left:0px;top:0px;width:240px;margin-top:660px"] { position: relative !important; margin-top: auto !important }
 ! ---
 binmovie.org#$?##content { top: 0 !important; left: 0 !important; width: 100% !important; margin-left: 0 !important }
 ! ---
@@ -27494,7 +27508,7 @@ scrin.org#%#//scriptlet('ubo-abort-on-property-read.js', 'windowprops')
 scrin.org#%#//scriptlet('ubo-remove-attr.js', 'onclick', 'a')
 sdamgia.ru#%#//scriptlet('ubo-abort-on-property-read.js', 'Object.prototype.parseBlockId')
 sdamgia.ru#%#//scriptlet('ubo-cookie-remover.js', '/^adb/')
-shaiba.kz#%#//scriptlet('ubo-abort-current-inline-script.js', '$', 'show1xbetFullScreen')
+shaiba.kz#%#//scriptlet('ubo-abort-current-inline-script.js', '$', '1xbet')
 shazoo.ru#$#body { background: initial !important }
 shazoo.ru#$?#html:not(#id) > body:not(#id):has(> .headerContainer:matches-css-before(background-color: rgb(15, 17, 18))) { background-color: rgb(38 43 46) !important }
 shazoo.ru#$?#html:not(#id) > body:not(#id):has(> .headerContainer:matches-css-before(background-color: rgb(255, 255, 255))) { background-color: rgb(243, 245, 246) !important }
