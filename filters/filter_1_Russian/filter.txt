@@ -8609,7 +8609,7 @@ androidtop.net#%#//scriptlet("adjust-setInterval", "countdown", "", "0.02")
 zikurat.media#%#//scriptlet('prevent-window-open', '0', 'zikurat.media')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56102#issuecomment-633917168
 !+ NOT_PLATFORM(windows, mac, android, ext_ff)
-hdrabbit.ru#%#//scriptlet("set-constant", "Object.prototype.timeToHoldAds", "0")
+forallkino.ru,hdrabbit.ru#%#//scriptlet("set-constant", "Object.prototype.timeToHoldAds", "0")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55487
 oxax.tv#%#//scriptlet('prevent-window-open')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55271
@@ -11431,6 +11431,7 @@ ucoz.ru/informer/
 !
 ! Новостные тизерки
 !
+||smi24.kz^$third-party
 ||virtonnews.com^$third-party
 ||top-js-metrics.top.my.ua^$third-party
 ||static.wi-fi.ru/landings/widget/$third-party
@@ -11577,6 +11578,7 @@ crazymailing.com,lotzon.pro,novosti-n.org,prokazan.ru,20minut.ua,alnews.com.ua,g
 ! vast ads on anime sites - for example: animego.org, yummyanime.club, etc
 /:\/\/[0-9]?[a-z0-9]{11,}(\.com|\.in\.net)/$xmlhttprequest,domain=aniqit.com|kodik.info|start.u-cdn.top|ustore.bz|u-stream.in
 !
+||tengrinews.kz/ajax/getBanners
 ||player.twitch.tv/js/embed/v1.js$domain=wago.io
 wago.io##.embed-player
 ||xn-----8kcrqilbdemdcgxntc3b9jpae.xn--p1ai/uploads/banner-
@@ -22337,7 +22339,7 @@ tjournal.ru##.b-adv-300x500
 ! Block vk ads(they are hidden, but visible in some reports)
 ||vk.com/al_feed.php?queue$replace=/-ads_experiment;rb://
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57021
-/play/js/FWDEVPlayer.my.js$replace=/adsVideoSourcePath:"[a-zA-Z0-9]+"/adsVideoSourcePath:""/,domain=hdrabbit.ru|kinowinx.ru
+/play/js/FWDEVPlayer.my.js$replace=/adsVideoSourcePath:"[a-zA-Z0-9]+"/adsVideoSourcePath:""/,domain=hdrabbit.ru|kinowinx.ru|forallkino.ru
 ! razlozhi.ru - удаление отступа справа
 ||razlozhi.ru/*/css/styles.css$replace=/body\._\w+_\d?{margin-right:240px/body{margin-right:0px/
 ! wasd.tv - preroll ads
