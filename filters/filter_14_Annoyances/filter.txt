@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/84232
+||youtube.com/embed/$domain=eksisozluk.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83699
 viva.ua##.telegram-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/84256
@@ -8343,6 +8345,7 @@ slate.com#@#.ad-container
 !######### General URL blocking rules ##################
 !#######################################################
 !
+||consentmanager.firststars.io^$third-party
 /cm4all.com.widgets.CookiePolicy/show.
 /emh_cookiebanner/*
 ||up-cookiemon.wavecdn.net^$third-party
@@ -8799,7 +8802,11 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
-friedrichskoog.de##.dsgvo-consent--popup
+emiratesholidays.com##body .accept-cookies-banner
+werkzeugstore24.de##.e3n_cookiebanner
+drei-zinnen.info##div[class^="cookie-banner-tm"]
+suedtirol.info###js-cybot-cookiebot-placeholder
+oberharz.de,friedrichskoog.de##.dsgvo-consent--popup
 comstern.de###cookit
 continental.com#$#body { overflow: auto !important; }
 continental.com#$#.js-cookie-consent { display: none !important; }
@@ -13245,7 +13252,7 @@ dailymotion.com##div[class^="Header__gdpr"]
 atresplayer.com,eskago.pl,pcgamesn.com,trueachievements.com,tvcatchup.com##div[class^="app_gdpr"]
 giphy.com##div[class^="flash-message__MessageWrapper-"]
 dplay.es,dplay.dk##div[class^="pageContainer-"] > dialog[class^="notification-"]
-klinikum-ingolstadt.de,schlaf-experten.com,meindl.de,annehornemann.de,afd.de,afdbundestag.de##div[data-borlabs-cookie-wrap]
+baltrum.de,klinikum-ingolstadt.de,schlaf-experten.com,meindl.de,annehornemann.de,afd.de,afdbundestag.de##div[data-borlabs-cookie-wrap]
 dailymail.co.uk##div[data-cmp-no-consent]
 schiphol.nl##div[data-component="cookie-notification"]
 gmx.net,web.de##div[data-cookielayer-init]
