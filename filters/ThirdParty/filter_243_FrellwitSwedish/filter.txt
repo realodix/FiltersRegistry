@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-06-02 11:45:55 CEST
+! Last modified: 2021-06-03 10:36:03 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -286,6 +286,8 @@ shortcut.se##.employer:has(.sponsored)
 shortcut.se##article:has(.sponsored)
 so-rummet.se##.link-list-item:has(img[src*="sponsrad"])
 so-rummet.se##.view-nya-lankar-front:has(h3:has-text(/annonser/i))
+sportbladetplay.se##[class^="CookieConsentPopup"]:upward(.ui.page.dimmer)
+sportbladetplay.se#$#body.dimmed { overflow:unset!important }
 sporthalsa.se##h4:has-text(veckans produkt):upward(3)
 spray.se#$#body { -webkit-user-select: text !important; user-select: text !important; }
 startaochdriva.se##.latest-post:has(a[href*="/sponsrat"])
@@ -430,8 +432,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1835,9 +1837,9 @@ smhi.se##.polopolyNotification
 spanaren.se##.textwidget a[target="blank"] img
 spelagratis.se##.sidebar-right, .ad_header + p
 sportbilen.se###text-4
-sportbladetplay.se,sportexpressenplay.se##[class^="CookieConsentPopup"]
 sportbloggare.com##.partners-box, .cube-bonus-list
 sportexpressenplay.se##[class^="BauProvider"]
+sportexpressenplay.se##[class^="CookieConsentPopup"]
 sporthalsa.se##.header_top, #media_image-2
 sporthalsa.se##a[href*="/annonsering"]
 sportpanelen.se###text-html-widget-3
