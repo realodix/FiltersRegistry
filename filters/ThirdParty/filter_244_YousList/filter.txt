@@ -3,7 +3,7 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! OriginalVersion: 20210603
+! OriginalVersion: 20210607
 ! General element hiding rules
 ##amp-ad
 ##amp-embed.ad_cnt
@@ -239,6 +239,7 @@
 ##iframe[src*="//js.hnscom.com/etc/hns/hnsIframe_"][src$=".html"]
 ##iframe[src*="//js.newsmobile.co.kr/inbnet_listing_banner.html"]
 ##iframe[src*="//jtpress.kr/ShareMaxBanner"][src*=".php"]
+##iframe[src*="//kitweb.tadapi.info/network/act/bjc.php"]
 ##iframe[src*="//kitweb.tadapi.info/network/adapi.php"]
 ##iframe[src*="//kn.acrosspf.com/delivery.ad"]
 ##iframe[src*="//landing.dailyissue.co.kr/adv/3dpop.html"]
@@ -1552,8 +1553,10 @@
 ||kbench.com/m_article_right_box.php^$domain=m.kbench.com
 ||keyword.ad4989.co.kr^
 ||khan.co.kr/ad/
+||kitweb.tadapi.info/network/act/bjc.php^
 ||kitweb.tadapi.info/network/adapi.php^
 ||kitweb2.tadapi.info/network/adapi.js.php^
+||kitweb2.tadapi.info/network/adapi_ns.js.php^
 ||kmib.co.kr/cp/realclick/
 ||kn.acrosspf.com/delivery.ad^
 ||kodcad.kr/ad/
@@ -2357,6 +2360,8 @@ accessonline.com##div.ads-wrapper
 accessonline.com##div.floating-ads
 adp.issuepoll.net##ul>li[onclick^="javascript:goAd("]
 ads1.issuepoll.co.kr##ul>li[onclick^="javascript:goAd("]
+adtcs-w.tistory.com##div.article-view div[style="float:right;margin:0 0 10px 10px;width:300px;height:250px"]
+adtcs-w.tistory.com##div.article-view div[style="text-align:center;margin:10px 0 10px 0;clear:both"]
 adweek.com##div.htl-ad
 adweek.com##div.htl-ad-wrapper
 afbbs.afreecatv.com##div#div_video_ad_banner
@@ -2542,6 +2547,8 @@ b.hatena.ne.jp##div.js-right-top-native-ad
 bam78co.com##div#banner_bottom_center
 baskino.co##div#b-mtbcbar__container
 baskino.co##div.skin-block
+bbc.co.uk##div[amp-access="toggles.ads.enabled"]
+bbc.co.uk##div[data-e2e="advertisement"]
 bbs.ruliweb.com##div#ti3
 bbs.ruliweb.com##div.board_main_top>div.right_wrapper
 bbs.ruliweb.com##div.nbp_container
@@ -3245,6 +3252,8 @@ ent.joseilbo.com##li.rank_banner
 entermedia.co.kr##div#listingBannerContainer
 entermedia.co.kr##div.ad-template
 entertain.v.daum.net##div.shopad_entertain
+enuri.com##div.ad_powerlink
+enuri.com##div.ad_powershopping
 eomisae.co.kr##main#main div.col-md-9 center>div[style="border:1px solid #dedede; text-align:center; padding-top:15px; padding-bottom:15px; background-color: white;"]
 eomisae.co.kr##main#main div.col-md-9 center>div[style="border:1px solid #dedede; text-align:center; padding-top:15px; padding-bottom:15px; background: #fff;"]
 esports.dailygame.co.kr##div#talklink_chatAd
@@ -4971,6 +4980,11 @@ m.star.mt.co.kr##div#content>div[style="text-align:center"]
 m.star.mt.co.kr##div.bxcn4[style="background:none;"]
 m.star.mt.co.kr##section.bxcn4>div[style="overflow:hidden; margin:10px -10px 0; height:240px;"]
 m.star.mt.co.kr##section.bxcn4>div[style="overflow:hidden; margin:2px -10px 0; height:234px;"]
+m.star.ytn.co.kr,m.ytn.co.kr##div#float_bottom
+m.star.ytn.co.kr,m.ytn.co.kr##div.newsview_ad_bnr
+m.star.ytn.co.kr,m.ytn.co.kr##div.text_ad_type_1
+m.star.ytn.co.kr,m.ytn.co.kr##div.text_ad_type_2
+m.star.ytn.co.kr,m.ytn.co.kr##li.ad_area
 m.tf.co.kr##div#banner
 m.tf.co.kr##div#mobon5mb_ad
 m.tf.co.kr##div#waveAd
@@ -5081,11 +5095,6 @@ m.yna.co.kr##aside.aside-text02
 m.yna.co.kr##aside.aside-text03
 m.yna.co.kr##div.amp-ad-container
 m.yonhapnewstv.co.kr##div#main_banner
-m.ytn.co.kr##div#float_bottom
-m.ytn.co.kr##div.newsview_ad_bnr
-m.ytn.co.kr##div.text_ad_type_1
-m.ytn.co.kr##div.text_ad_type_2
-m.ytn.co.kr##li.ad_area
 m.zbn.donga.com##iframe[src^="/banner/ad_cauly_hotnews.asp"]
 m.zdnet.co.kr##body>div[style="padding:50px 0px 0px 0px;"]
 m.zdnet.co.kr##div#ad_div_bottom
@@ -5374,7 +5383,6 @@ mtn.co.kr##div.adBanner430
 mtn.co.kr##div.adBanner_list
 mtn.co.kr##div.adbanner_sponsor
 mtn.co.kr##div.mtnLiveAdbanner
-munanhan.tistory.com##div.tt_adsense_bottom
 munanhan.tistory.com##div[data-widget_id="goP2aklQ"]
 munanhan.tistory.com##ins[data-ad-slot="6227358368"]
 munanhan.tistory.com##ins[data-ad-slot="8449432364"]
@@ -5461,8 +5469,11 @@ net.hr##div.banner
 net.hr##div.banner_adsense
 newdaily.co.kr##div#ad1
 newdaily.co.kr##div#iw_ad4
+newdaily.co.kr##div.iwm_ba
 newdaily.co.kr##div.iwm_bip
 newdaily.co.kr##div.nd-news-ad-bottom
+newdaily.co.kr##div.popup-ad-fixed-wrap
+newdaily.co.kr##section.nd-news-body>div.clearfix[style="margin: 10px !important; float: right;"]
 newgrounds.com##div#afrc_skin
 newgrounds.com##div[class^="ng-ad-container-"]
 news.bizwatch.co.kr##ul.ad_bizwatch_right
@@ -6529,6 +6540,8 @@ timeforum.co.kr##iframe[src^="/banner/iframe_rotate/"][src*=".html"]
 tip.daum.net##div#viewBottomAdWrapper
 tistory.com##div.ad250
 tistory.com##div.ad250_outter
+tistory.com##div.tt_adsense_bottom
+tistory.com##div.tt_adsense_top
 tkor.onl##div.bn
 tkor.onl##div.main_top_bann
 tkor.onl##div.mobile_banner
@@ -6552,6 +6565,7 @@ todayan.com##ins[data-ad-slot="9363616788"]
 todayhumor.co.kr##div.contentContainer>div[style="margin-bottom:10px;text-align:left;;padding-bottom:0px"]
 todayhumor.co.kr##div.under_ad_div
 todayhumor.co.kr##td.list_ad
+todaykorea.co.kr##div.ad-template
 todaykorea.co.kr##div.banner_aside02
 todaykorea.co.kr##iframe[src^="http://www.todaykorea.co.kr/include/adsense.php"]
 togetter.com##div.ad_footer_overlay
