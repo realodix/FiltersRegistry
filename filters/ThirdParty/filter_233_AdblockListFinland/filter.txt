@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 09June2021v1
+! OriginalVersion: 11June2021v3
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -166,7 +166,7 @@ ampparit.com##div[class*="ticker"]
 ampparit.com##div[class="nettiauto-newslist-banner"]
 anna.fi###native_text_wrapper
 anna.fi##.kaupalliset
-anna.fi##.widget_nativearticles
+anna.fi,kaksplus.fi##.widget_nativearticles
 anna.fi##div.grid__item_tn-1-2
 arcticinsider.com##a[href*="bannerTrack"]
 arvopaperi.fi##div#skyscraper-height-div > div > aside > div > div > a[href^="/kumppaniblogit/"]
@@ -190,6 +190,9 @@ bomber.fi###rt-sidebar-b
 brbikers.com##a[href*="tema.fi"]
 como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,rytmi.com,soundi.fi,tilt.fi##div[data-recommendation-type="ad"]
 dailyfinland.fi##.wrepper.mx-auto > .row[style="margin-bottom:20px"]
+dawn.fi##[style="margin:-15px -15px 15px -15px;text-align:center; min-height: 250px;"]
+dawn.fi##[style="margin:-15px -15px 15px -15px;text-align:center; min-height: 300px;"]
+dawn.fi#?#div[style="text-align: center; font-size: 0.7em;margin-bottom:15px"]:-abp-contains(Mainos)
 deitti.net##.ad-article
 demokraatti.fi##div[class^="AdStyles__Wrapper"]
 demokraatti.fi##div[class^="OrderMagazinestyles__Container"]
@@ -296,7 +299,8 @@ is.fi##div.sadblob-loading
 is.fi#?#article:-abp-has( > header > h2 span:-abp-contains(Alennuskoodit))
 jatkoaika.com##div[class="block block-block"]
 juoksufoorumi.fi##.noAdsCell
-kaksplus.fi###adscarousel-feed
+kaksplus.fi##.placeholder
+kaksplus.fi#?#.owl-item:-abp-has(.portal__commercial)
 kaleva.fi###outstream-container
 kaleva.fi###paraati-ad-grid
 kaleva.fi###puff-container
@@ -818,6 +822,7 @@ ruutu.fi##.RuutuPlayer__Error-sc-1o2b3la-0
 ! Lowe's list and Easyprivacy prevents opening thread replys via email
 @@||click.redditmail.com^$~third-party
 !#if env_mobile
+dawn.fi#?#.ui-body-inherit.ui-li-static:-abp-has(#dawn_mobile-content)
 kotiliesi.fi##.placeholder
 !#endif
 ! -----UNSORTED END-----
