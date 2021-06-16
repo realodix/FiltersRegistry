@@ -5057,7 +5057,7 @@ sythe.org#$#a[href^="https://www.sythe.org/redir.php?"] > img[src^="//img.sythe.
 @@||amazonaws.com/ads/ad-300x250.png|$domain=dzone.com
 @@||multics.eu/comunidad/js/*.js
 @@||smokingmeatforums.com/js/*/generic-ad.js
-rangerboard.com,multics.eu,smokingmeatforums.com#%#//scriptlet("abort-current-inline-script", "$", "!document.getElementById(btoa")
+babiato.co,rangerboard.com,multics.eu,smokingmeatforums.com#%#//scriptlet("abort-current-inline-script", "$", "!document.getElementById(btoa")
 yourhowto.net#$#.advert { height: 301px !important; position: absolute !important; top: -99999px !important; }
 rutab.net#%#//scriptlet("abort-current-inline-script", "$", "adv")
 @@||utopia.de/advertisement.js
@@ -6373,6 +6373,13 @@ vladan.fr#@#.text_ads
 ||lindenhurstsneads.doyondeville.com^$script,third-party
 ||willseyvillefingerville.polaccafaison.com^$script,third-party
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/85350
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+!#safari_cb_affinity(general)
+@@||babiato.co^$generichide
+babiato.co##.adsbygoogle
+!#safari_cb_affinity
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/66216
 !#if (adguard_ext_firefox || adguard_ext_opera || adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
 @@||spolecznosci.mgr.consensu.org/js/*.json$domain=shinden.pl
@@ -8859,7 +8866,7 @@ tilki.net,mustafabukulmez.com,konuneydi.com,ozgunbilgi.com,bilisimogretmeni.com,
 ! ##.avia-cookie-consent
 kernsgalabau.de,octopus-itsm.com,sosort.org,bogaziciyonetim.istanbul,drivers.plus,readymade-furniture.de,schieb.de,my-digital-home.de,celesta-schiedmayer.de,sheerid.com,vantec.de,anlegen-in-immobilien.de##.avia-cookie-consent
 ! ##.policy
-platinonline.com,1923haber.com,sakarya360.com,trendoa.com,emlaknews.com.tr,cagingazetesi.com.tr,davahaber.com,tv360.com.tr,sonsaat.com.tr,pusuhaber.net,kesinkarar.com,antalyaz.com,alem.com.tr,noktabursa.com.tr,onhaber.net,bbnhaber.com.tr,1cloud.ru,sahrahaber.com,dha.com.tr,star.com.tr,aksam.com.tr,teknoburada.net,gunes.com,guvenilirhaber.com,gaste.org,genmedya.com,tvnet.com.tr,nethaber.com.tr,hatayzafer.com.tr,antalyahakkinda.com,ulakci.com,mavikocaeli.com.tr,alfabank.ru,dirilispostasi.com,teknolojioku.com##.policy
+ligradyo.com.tr,platinonline.com,1923haber.com,sakarya360.com,trendoa.com,emlaknews.com.tr,cagingazetesi.com.tr,davahaber.com,tv360.com.tr,sonsaat.com.tr,pusuhaber.net,kesinkarar.com,antalyaz.com,alem.com.tr,noktabursa.com.tr,onhaber.net,bbnhaber.com.tr,1cloud.ru,sahrahaber.com,dha.com.tr,star.com.tr,aksam.com.tr,teknoburada.net,gunes.com,guvenilirhaber.com,gaste.org,genmedya.com,tvnet.com.tr,nethaber.com.tr,hatayzafer.com.tr,antalyahakkinda.com,ulakci.com,mavikocaeli.com.tr,alfabank.ru,dirilispostasi.com,teknolojioku.com##.policy
 ! ###cookie
 lvr.de,ostsee.de,klinik-langenfeld.lvr.de,klinik-koeln.lvr.de,leitz-cloud.com,leib-immobilien.de,activex.com.tr,evyap.com.tr,kobiety.pl,straganzdrowia.pl,e-tesettur.com.tr,suzuki.ch,arkomen.com,deutsches-ausschreibungsblatt.de,negozi.fastweb.it,gaboras.com.tr,sygic.com,turkey.astonmartindealers.com,add0n.com,8gunhaber.com,proglib.io,antonimy.net,gamedot.pl,sosyorol.com,teamquest.pl,stema.istore.pl,findeks.com,kube.no,makownia.com,sklep.xerima.com.pl,vitra.com.tr###cookie
 ! 'contributor.google.com' cookie consent
@@ -8888,6 +8895,7 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+awg-mode.de##.page-warning_cookies
 topocentras.lt###cookie-consent-block
 medtronic-diabetes.ru##.cookies-disclaimer-wrapper
 tulodz.pl###modalCookies
@@ -14954,6 +14962,7 @@ cmp.bunte.de,consent.familie.de,consent.kino.de,cmp.motorsport-magazin.com,sp-co
 privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 !
+shpock.com#%#AG_onLoad(function(){var a=new MutationObserver(function(){var b=document.querySelector('button[data-testid="primaryCta"]');b&&b.click()});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E3)});
 greens-efa.eu#%#//scriptlet("set-cookie", "ZEDWCC", "5")
 kasuwa.de#%#//scriptlet('set-cookie-reload', 'cc_main', '1')
 chartoo.de,chartoo.com#%#document.cookie = "ypo=39; path=/;";
