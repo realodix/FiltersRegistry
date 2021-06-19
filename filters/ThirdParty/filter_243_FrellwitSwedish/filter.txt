@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-06-18 07:16:37 CEST
+! Last modified: 2021-06-19 12:05:36 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -51,6 +51,7 @@ aftonbladet.se##aside > div:has(h3:has-text(/^annons/i))
 aftonbladet.se##section > div:has(h3:has-text(/^annons/i))
 airam.fi#$#.body-fixed { position: unset !important; }
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,pctidningen.se,popularhistoria.se#$?#li:has(.content-label:has-text(/annons/i)) { remove: true; }
+aktuellsakerhet.se#$?#.td-slider > .td_module_slide:has-text(/reklamsamarbete/i) { remove: true; }
 alicestenlof.com,annicaenglund.se,ellinorlofgren.se,linnherbertsson.se,pricerunner.se#$#.noscroll { overflow: initial !important; }
 alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,kungalvsposten.se,kungsbackaposten.se,lokaltidningensto.se,lwcdn.com,molndalsposten.se,stromstadstidning.se,ttela.se#%#//scriptlet('ubo-json-prune.js', 'autoplay players.*.ga acl.ads players.*.autoplay')
 alkompis.se#$#.cdk-global-scrollblock { overflow-y: initial !important; position: unset !important; }
@@ -155,6 +156,7 @@ futsalmagasinet.se##.td_block_wrap:has(span:has-text(/annonserat innehåll/i))
 fz.se##.card:has(.article-sponsored)
 fz.se##.fp-carousel .fpci-kicker:has-text(/^sponsr/i):upward(.fpc-item)
 gamereactor.se###grtvbelt_Sponsored:upward(1)
+gamereactor.se#%#//scriptlet('ubo-ra.js', 'data-autoplay', 'video', 'stay')
 gbgfotboll.se#$#body { overflow: initial !important; }
 globalportalen.org,svenskjakt.se#%#//scriptlet('ubo-ra.js', 'autoplay')
 goon.se##.cpt-collab-text-ct1:has-text(/samarbete|annons/i):upward(.cpt-alm-main)
@@ -184,6 +186,7 @@ jawcloud.co,konsolnyheter.se,polistidningen.se,streamio.com#%#//scriptlet('ubo-a
 justwannahavefun.se##.teaser:has(.sub-title:has-text(/sponsrat/i))
 kamrat.com#%#//scriptlet('ubo-set.js', 'showAds', 'false')
 kamrat.com#%#//scriptlet('ubo-set.js', 'trap', 'noopFunc')
+karinrahm.se#$#.thb-page-transition-on { opacity:1!important }
 kiacarclub.se##.sidebar-block:has-text(/annons|sponsor/i)
 kimura.se##article:has(#storknapp:has-text(/^till kampanj/i))
 kimura.se##article:has(img[src$="/sponsrad.png"])
@@ -426,8 +429,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1667,6 +1670,7 @@ jusek.se##.l-advertisement, .m-adform, .m-splash
 kalender.se##.day-nav ~ a:not([href*="kalender.se"])
 kamerabild.se,mobil.se##.storan, .Partner
 kamrat.com###kadDiv, div[style="margin:25px 0;max-width:255px!important;"], #scrollAdj ~ *
+karinrahm.se##.tag-adtraction
 kartor.eniro.se##.e-banner
 katerinamagasin.se##.adv-area, #right-areas, a[href*=".casino"], body > div.code-block
 kenzas.se##article[data-text*="In collaboration with"]
