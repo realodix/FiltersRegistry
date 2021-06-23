@@ -30,6 +30,8 @@ razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/defaul
 &fbclid=$document,queryprune=|fbclid
 ! Rule "&ymclid=$document,queryprune=|,domain=~ozon.onelink.me" converted to: "&ymclid=$document,removeparam=|,domain=~ozon.onelink.me"
 &ymclid=$document,queryprune=|,domain=~ozon.onelink.me
+! Rule "/*&sid=$document,queryprune=|sid,domain=nnm-club.lib|nnm-club.me|nnmclub.ro|nnmclub.to" converted to: "/*&sid=$document,removeparam=|sid,domain=nnm-club.lib|nnm-club.me|nnmclub.ro|nnmclub.to"
+/*&sid=$document,queryprune=|sid,domain=nnm-club.lib|nnm-club.me|nnmclub.ro|nnmclub.to
 ! Rule "/?from=RCM-$document,xmlhttprequest,queryprune,domain=rambler.ru" converted to: "/?from=RCM-$document,xmlhttprequest,removeparam,domain=rambler.ru"
 /?from=RCM-$document,xmlhttprequest,queryprune,domain=rambler.ru
 ! Rule "/story/*?lang=$document,queryprune=|,domain=yandex.*" converted to: "/story/*?lang=$document,removeparam=|,domain=yandex.*"
@@ -46,8 +48,8 @@ razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/defaul
 ?cpc=*show-uid=$document,queryprune=|,domain=market.yandex.*
 ! Rule "?fbclid=$document,queryprune=|fbclid" converted to: "?fbclid=$document,removeparam=|fbclid"
 ?fbclid=$document,queryprune=|fbclid
-! Rule "?from=$document,queryprune=|from,domain=3dnews.ru|7days.ru|autonews.ru|rbc.ru|sportrbc.ru" converted to: "?from=$document,removeparam=|from,domain=3dnews.ru|7days.ru|autonews.ru|rbc.ru|sportrbc.ru"
-?from=$document,queryprune=|from,domain=3dnews.ru|7days.ru|autonews.ru|rbc.ru|sportrbc.ru
+! Rule "?from=$document,queryprune=|from,domain=3dnews.ru|7days.ru|autonews.ru|ntv.ru|rbc.ru|sportrbc.ru" converted to: "?from=$document,removeparam=|from,domain=3dnews.ru|7days.ru|autonews.ru|ntv.ru|rbc.ru|sportrbc.ru"
+?from=$document,queryprune=|from,domain=3dnews.ru|7days.ru|autonews.ru|ntv.ru|rbc.ru|sportrbc.ru
 ! Rule "?nid=*show-uid=$document,queryprune=|,domain=market.yandex.*" converted to: "?nid=*show-uid=$document,removeparam=|,domain=market.yandex.*"
 ?nid=*show-uid=$document,queryprune=|,domain=market.yandex.*
 ! Rule "?r_audience=$document,queryprune=|,domain=ria.com" converted to: "?r_audience=$document,removeparam=|,domain=ria.com"
@@ -124,6 +126,10 @@ utm_source=yxnews$document,queryprune=|
 utm_source=yxsport$document,queryprune=|
 ! Rule "||aliexpress.*.html?spm=$document,queryprune=|,domain=aliexpress.com|aliexpress.ru" converted to: "||aliexpress.*.html?spm=$document,removeparam=|,domain=aliexpress.com|aliexpress.ru"
 ||aliexpress.*.html?spm=$document,queryprune=|,domain=aliexpress.com|aliexpress.ru
+! Rule "||imdb.com/*pf_rd_$document,queryprune=|pf_rd_,domain=imdb.com" converted to: "||imdb.com/*pf_rd_$document,removeparam=|pf_rd_,domain=imdb.com"
+||imdb.com/*pf_rd_$document,queryprune=|pf_rd_,domain=imdb.com
+! Rule "||imdb.com/*ref_=$document,queryprune=|ref,domain=imdb.com" converted to: "||imdb.com/*ref_=$document,removeparam=|ref,domain=imdb.com"
+||imdb.com/*ref_=$document,queryprune=|ref,domain=imdb.com
 ! Rule "||mail.ru^*exp_id=$document,queryprune=|,domain=mail.ru" converted to: "||mail.ru^*exp_id=$document,removeparam=|,domain=mail.ru"
 ||mail.ru^*exp_id=$document,queryprune=|,domain=mail.ru
 ! Rule "||mail.ru^*frommail=1$document,queryprune=|frommail=1,domain=mail.ru" converted to: "||mail.ru^*frommail=1$document,removeparam=|frommail=1,domain=mail.ru"
@@ -212,6 +218,8 @@ Error: "$removeparam rules are not compatible with some other modifiers" in the 
 &fbclid=$document,removeparam=|fbclid
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "&ymclid=$document,removeparam=|,domain=~ozon.onelink.me"
 &ymclid=$document,removeparam=|,domain=~ozon.onelink.me
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/*&sid=$document,removeparam=|sid,domain=nnm-club.lib|nnm-club.me|nnmclub.ro|nnmclub.to"
+/*&sid=$document,removeparam=|sid,domain=nnm-club.lib|nnm-club.me|nnmclub.ro|nnmclub.to
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/?from=RCM-$document,xmlhttprequest,removeparam,domain=rambler.ru"
 /?from=RCM-$document,xmlhttprequest,removeparam,domain=rambler.ru
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/story/*?lang=$document,removeparam=|,domain=yandex.*"
@@ -228,8 +236,8 @@ Error: "$removeparam rules are not compatible with some other modifiers" in the 
 ?cpc=*show-uid=$document,removeparam=|,domain=market.yandex.*
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?fbclid=$document,removeparam=|fbclid"
 ?fbclid=$document,removeparam=|fbclid
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?from=$document,removeparam=|from,domain=3dnews.ru|7days.ru|autonews.ru|rbc.ru|sportrbc.ru"
-?from=$document,removeparam=|from,domain=3dnews.ru|7days.ru|autonews.ru|rbc.ru|sportrbc.ru
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?from=$document,removeparam=|from,domain=3dnews.ru|7days.ru|autonews.ru|ntv.ru|rbc.ru|sportrbc.ru"
+?from=$document,removeparam=|from,domain=3dnews.ru|7days.ru|autonews.ru|ntv.ru|rbc.ru|sportrbc.ru
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?nid=*show-uid=$document,removeparam=|,domain=market.yandex.*"
 ?nid=*show-uid=$document,removeparam=|,domain=market.yandex.*
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?r_audience=$document,removeparam=|,domain=ria.com"
@@ -306,6 +314,10 @@ Error: "$removeparam rules are not compatible with some other modifiers" in the 
 utm_source=yxsport$document,removeparam=|
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||aliexpress.*.html?spm=$document,removeparam=|,domain=aliexpress.com|aliexpress.ru"
 ||aliexpress.*.html?spm=$document,removeparam=|,domain=aliexpress.com|aliexpress.ru
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||imdb.com/*pf_rd_$document,removeparam=|pf_rd_,domain=imdb.com"
+||imdb.com/*pf_rd_$document,removeparam=|pf_rd_,domain=imdb.com
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||imdb.com/*ref_=$document,removeparam=|ref,domain=imdb.com"
+||imdb.com/*ref_=$document,removeparam=|ref,domain=imdb.com
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||mail.ru^*exp_id=$document,removeparam=|,domain=mail.ru"
 ||mail.ru^*exp_id=$document,removeparam=|,domain=mail.ru
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||mail.ru^*frommail=1$document,removeparam=|frommail=1,domain=mail.ru"
