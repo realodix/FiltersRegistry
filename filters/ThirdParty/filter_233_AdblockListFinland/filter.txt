@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 23June2021v5
+! OriginalVersion: 24June2021v1
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -93,6 +93,7 @@ _mainosnappi.
 ##.advertorial-teaser
 ##.bottomads
 ##.card--native
+##.dfpBoxBottom
 ##.keskimainos
 ##.mainokset
 ##.mainokset_oikea
@@ -133,10 +134,10 @@ _mainosnappi.
 ##div[class="ad-banner"]
 ##div[class="ad-wrapper"]
 ##div[class="block-ad"]
-##div[id*="AdContainer"]
 ##div[id="commercial-carousel"]
 ##div[id^="ads-content-bottom"]
 ##td[class="adbanner"]
+~nettimokki.com##div[id*="AdContainer"]
 ! -----GENERAL FILTERS END-----
 ! -----SPECIFIC FILTERS-----
 aamulehti.fi##div.adContainer
@@ -664,10 +665,12 @@ www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.huge-banner
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.inh_banner_nl
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.leftAdvDiv
+www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.listing:not(.tricky_link_listing)
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com##.quick-search__banner
 www.nettimarkkina.com##[class="center"][style="padding-top:15px;"]
 www.nettimarkkina.com#?#.right_rpt_block:-abp-has(#vif_right_banner)
 www.nettimokki.com##div.nc_r_banner
+www.nettimoto.com###smallViewHouseBanner
 www.suomi24.fi##.asp
 www.suomi24.fi##div[class^="Vaalikone__HeaderAdWrapper"]
 www.suomi24.fi#?#p:-abp-has(+ p + .asp)
@@ -882,3 +885,6 @@ tjareborg.fi#@#.push-container
 ##.sponsored-article
 ! https://github.com/easylist/easylist/pull/7774
 timma.fi#@##cookieConsentModal
+! https://github.com/easylist/easylist/pull/8177
+danskebank.fi#@##cookie-text
+danskebank.fi#@#.cookie-consent-banner
