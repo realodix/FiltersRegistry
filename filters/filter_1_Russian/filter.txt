@@ -6794,8 +6794,6 @@ l2top.ru#?#div[class="container"][style="max-width: 100%;"] header ~ div > div.c
 ! https://github.com/AdguardTeam/AdguardFilters/issues/71557
 015.by#?#.news-grid > div.news-grid__col:not([id]) div[id^="banner-slider-"]:upward(2)
 015.by#?#.news-grid > div.news-grid__col:not([id]) > div.thumbnails[data-bg]:upward(1)
-! gamebomb.ru - ad background
-gamebomb.ru#$?#body > noscript ~ div[id] > div[id]:has(> div[id="content"]) { background: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67424
 !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)
 kino-teatr.ru#?##root div[class^="relap-"]:contains(РЕКОМЕНДУЕТ) div[class^="relap-"] > div[style]:has(div[class^="relap-"] > div:contains(Реклама))
@@ -7316,6 +7314,7 @@ tsn.ua#?#article > aside:has(> div.c-aside > div.c-aside__embed > div.js-dynamic
 kino-teatr.ru#$?#div[class^="relap-"] > div[style^="width: 25"]:has(a[href^="https://relap.io/r?r="]) { remove: true; }
 otzovik.com#?#.product-list > table > tbody > tr.item.sortable:has(h3 > a[href^="http://yabs.yandex.ru/"])
 opennet.ru#?#td[align="right"] > center:has(> ins.adsbygoogle)
+gamebomb.ru#?#ins.adsbygoogle:upward(1)
 allcalc.ru#?#.content > div[style]:has(> div[id^="yandex_rtb"])
 azov-sea.info#?#tr > td[valign="top"]:has(> div[style] > h1:contains(Реклама))
 nkj.ru#$?#div[class^="relap-"] > div[style^="width: 33.3"]:has(a[href^="https://relap.io/r?r="]) { remove: true; }
@@ -8927,8 +8926,6 @@ detano.ru#%#Object.defineProperty(window, 'ref', { get: function() { return "www
 46.30.46.35#%#Object.defineProperty(window, 'MTretCKed', { get: function() { return false; } });
 ! https://forum.adguard.com/index.php?threads/14966/
 forum.militarist.ua#%#Object.defineProperty(document, 'write', { get: function() { return {}; } });
-! gamebomb.ru - удаление кликабельности
-gamebomb.ru#%#AG_onLoad(function() { jQuery(function() { jQuery('#content').unbind('click'); }); });
 ! https://forum.adguard.com/index.php?threads/14306/
 small-games.info#%#(function() { window.open_ = window.open; var w_open = window.open, regex = /cityadspix.com/; window.open = function(a, b) { if (typeof a !== 'string' || !regex.test(a)) { w_open(a, b); } }; })();
 ! https://forum.adguard.com/index.php?threads/9356/
@@ -10264,11 +10261,6 @@ fast-torrent.ru#$##container { margin-top: 0!important; }
 fast-torrent.ru#$#body { background: none!important;}
 ! newstudio.tv - удаление отступа сверху
 newstudio.tv#$#body {padding-top: 0!important; }
-! gamebomb.ru - удаление фонового изображения, отступа сверху, исправление курсора
-gamebomb.ru#$#body { background-color: #303030!important; }
-gamebomb.ru#$##content.site-max-width { margin-top: 0!important; }
-gamebomb.ru#$#body > div[id^="wrapper"] >div[id] { background: none!important; }
-gamebomb.ru#$##content { cursor: default!important; }
 ! brofilms.ru - удаление отступа сверху
 brofilms.ru#$##header { margin-bottom: 0!important; }
 ! sc2tv.ru - убираем пустоту от баннера
@@ -10522,7 +10514,6 @@ forum.na-svyazi.ru$$td[height="70"][align="center"]
 fotomag.com.ua$$script[tag-content="#promo_rotator"][max-length="4000"]
 fotomag.com.ua$$script[tag-content="show_code"][max-length="500"]
 fresh.org.ua$$a[rel="nofollow"]
-gamebomb.ru$$script[tag-content="checkEventPosition"][max-length="4000"]
 gameboss.ru$$div[class="top10"][tag-content="header-discount"]
 gig-file.com$$div[class="block"][tag-content="реклама"]
 gitaristy.at.ua$$script[tag-content="Banner"]
@@ -12319,8 +12310,6 @@ pogoda.by##a[href^="https://clck.ru/"]
 pogoda.by##a[href="http://www.202.by/"]
 tribuna.com##.banner__annotation
 animedub.ru##a[href^="https://r.advg.agency/"]
-||gamebomb.ru/images/cod2.jpg
-gamebomb.ru##a[href^="https://ad.adriver.ru/"]
 uznayvse.ru##.topadcategory
 uznayvse.ru##.ad336х280_desk
 uznayvse.ru##.direct_stat
@@ -12897,7 +12886,6 @@ tuningkod.ru##.tuningkod-code-block.prma-count
 ||sobaka.ru/assets/*/bannersApi.js
 sobaka.ru##.b-post-blocks__tgb-banner
 sobaka.ru##.b-body-brand-banner
-gamebomb.ru##.antblock
 prelest.com##.block300x600
 prelest.com###block-gnezdo
 prelest.com###block-googlepodstatey
@@ -13464,7 +13452,6 @@ biletyplus.ru##.content-items > div > a.fsrp-bphotels-block
 biletyplus.ru##.gAd_tickets
 rsute.ru##.grey-sidebar > article[class] + h4
 pcportal.org##body > style + [class] > a[target="_blank"][rel="nofollow"] > div[style]
-gamebomb.ru##div[id^="wrapper"] > div > div[id="header"] + div[style]
 ||partner.ozon.ru/widgets/$third-party
 ||jobs.staya.vc/widget?$third-party
 ||football.by/images/b1/
@@ -15047,7 +15034,6 @@ cmlt.ru##.an-pic-top-container
 thequestion.ru##.annonser__container
 bessarabiaua.media##.announces
 thequestion.ru##.answers > div[style$="height: 90px; overflow:hidden;"]
-gamebomb.ru##.antiblock
 charivne.info##.aphorism
 mobiltelefon.ru,planet-today.ru##.aport-informer-wrap
 predanie.ru##.archiveBanner.long
@@ -20770,7 +20756,7 @@ www.ex.ua/*/index.css
 ||static.kinoafisha.info/static/css/illumination/*/main.css
 ||static.therussiantimes.com/clck/tiz*.
 ||static.videonow.ru/contentroll/vn_browser_container.js$domain=film.ru|life.ru|medialeaks.ru|rusnovosti.ru|sport-express.ru|sports.ru|tvzvezda.ru
-||static.videonow.ru^$domain=7days.ru|cosmo.ru|dni.ru|esquire.ru|film.ru|gamebomb.ru|graziamagazine.ru|igromania.ru|kakprosto.ru|kino-teatr.ru|ntsk.ru|rbc.ru|russian.rt.com|sports.ru|newsland.com|rtvi.com|spayte.ru
+||static.videonow.ru^$domain=7days.ru|cosmo.ru|dni.ru|esquire.ru|film.ru|graziamagazine.ru|igromania.ru|kakprosto.ru|kino-teatr.ru|ntsk.ru|rbc.ru|russian.rt.com|sports.ru|newsland.com|rtvi.com|spayte.ru
 ||static.wi-fi.ru/banners/
 ||static.wi-fi.ru/mtt/banners
 ||static.zakon.kz/static_zakon/img/branding_
