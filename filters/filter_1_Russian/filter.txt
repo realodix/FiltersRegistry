@@ -5959,14 +5959,14 @@ api.yadoma.tv#@#.ad_content
 hdgo.cx###hdplayer-btn.linkbtn
 hdgo.cx###hdplayer-linktxt.linktxt
 ! rustorka.com
-naylo.top,rustorka.com,rustorka.net,rustorkacom.lib,tapochek.net#%#//scriptlet("set-constant", "antiadblock", "undefined")
+naylo.top,rustorka.com,rustorka.net,rustorkacom.lib#%#//scriptlet("abort-current-inline-script", "checkCookie", "var _0x")
+!
+tapochek.net#%#//scriptlet("set-constant", "antiadblock", "undefined")
+! naylo.top,rustorka.com,rustorka.net,rustorkacom.lib,tapochek.net#%#//scriptlet("set-constant", "antiadblock", "undefined")
 !$cookie=/^u_count|^st\d+|adblock|gophp/,domain=naylo.top|rustorka.com|rustorka.net|rustorkacom.lib|tapochek.net
-!naylo.top,rustorka.com,rustorka.net,rustorkacom.lib,tapochek.net#%#AG_removeCookie('/^u_count|^st\d+|adblock|gophp/');
-! rustorka.com - fixing first click
-!+ PLATFORM(windows, mac, android)
-naylo.top,rustorka.com,rustorka.net,rustorkacom.lib,tapochek.net#%#Object.defineProperty(window, 'b0', { value: null });
-!+ NOT_PLATFORM(windows, mac, android)
-naylo.top,rustorka.com,rustorka.net,rustorkacom.lib,tapochek.net#%#//scriptlet("set-constant", "window.b0", "null")
+! tapochek.net - fixing first click
+tapochek.net#%#//scriptlet("set-constant", "window.b0", "null")
+!naylo.top,rustorka.com,rustorka.net,rustorkacom.lib,tapochek.net#%#//scriptlet("set-constant", "window.b0", "null")
 ! drahelas.ru
 drahelas.ru#@#.forumAd
 drahelas.ru#$#.forumAd { height: 1px!important; }
@@ -8595,13 +8595,6 @@ prostoporno.*#%#//scriptlet('prevent-window-open')
 bessporno.me#%#//scriptlet("prevent-window-open")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61803
 xporno.xxx#%#document.cookie = "pu_count=1";
-! https://github.com/AdguardTeam/AdguardFilters/issues/58647
-rustorka.com,rustorka.net,rustorkacom.lib,rustorka.top,naylo.top#%#//scriptlet("abort-current-inline-script", "_createClass", "var _typeof=typeof Symbol===")
-rustorka.com,rustorka.net,rustorkacom.lib,rustorka.top,naylo.top#%#//scriptlet('prevent-setTimeout', 'wait_start', '1000')
-! https://github.com/AdguardTeam/AdguardFilters/issues/61143
-naylo.top,rustorka.com,rustorka.net,rustorkacom.lib,tapochek.net#%#document.cookie = "opt_js=opt_js; path=/;";
-! https://github.com/AdguardTeam/AdguardFilters/issues/79063
-naylo.top,rustorka.com,rustorka.net,rustorkacom.lib,rustorka.com,rustorka.net#%#document.cookie = "opt_js2=opt_js2; path=/;";
 ! sc2tv.ru - branding
 sc2tv.ru#%#//scriptlet('remove-class', 'body--brranding', 'peka-app > div.body--brranding')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61999
@@ -8697,6 +8690,13 @@ alterera.org#%#//scriptlet("abort-current-inline-script", "document.referrer", "
 alterera.org#%#AG_abortInlineScript(/google/, 'document.referrer');
 ! popups - `ads_script`
 tapochek.net,sht.at.ua,rustorka.com,rustorka.net,rustorkacom.lib,rustorka.top,naylo.top,kinosvit.tv,kinosvit.net,fanofnfs.3dn.ru#%#//scriptlet("abort-on-property-read", "ads_script")
+! https://github.com/AdguardTeam/AdguardFilters/issues/58647
+!rustorka.com,rustorka.net,rustorkacom.lib,rustorka.top,naylo.top#%#//scriptlet("abort-current-inline-script", "_createClass", "var _typeof=typeof Symbol===")
+!rustorka.com,rustorka.net,rustorkacom.lib,rustorka.top,naylo.top#%#//scriptlet('prevent-setTimeout', 'wait_start', '1000')
+! https://github.com/AdguardTeam/AdguardFilters/issues/61143
+!naylo.top,rustorka.com,rustorka.net,rustorkacom.lib,tapochek.net#%#document.cookie = "opt_js=opt_js; path=/;";
+! https://github.com/AdguardTeam/AdguardFilters/issues/79063
+!naylo.top,rustorka.com,rustorka.net,rustorkacom.lib,rustorka.com,rustorka.net#%#document.cookie = "opt_js2=opt_js2; path=/;";
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44512
 !+ NOT_PLATFORM(windows, mac, android)
 porno-incest.net#%#//scriptlet("prevent-window-open")
