@@ -1720,7 +1720,8 @@ youtube-nocookie.com,youtube.com##.ytp-cards-teaser
 ! YouTube video annotations
 ~studio.youtube.com,youtube-nocookie.com,youtube.com##.ytp-ce-element
 ~studio.youtube.com,youtube-nocookie.com,youtube.com##.ytp-pause-overlay
-! https://github.com/AdguardTeam/AdguardFilters/issues/28271#issuecomment-454325128
+! https://github.com/AdguardTeam/AdguardFilters/issues/84042#issuecomment-867585547
+m.youtube.com##ytm-paid-content-overlay-renderer
 youtube-nocookie.com,youtube.com##.ytp-paid-content-overlay
 ! https://forum.adguard.com/index.php?threads/11119/
 youtube-nocookie.com,youtube.com###yt-lang-alert-container
@@ -8521,6 +8522,7 @@ slate.com#@#.ad-container
 !######### General URL blocking rules ##################
 !#######################################################
 !
+||legalmonster.com^$third-party
 /dynamic_avia/avia-footer-scripts-$script
 ||consentmanager.firststars.io^$third-party
 /cm4all.com.widgets.CookiePolicy/show.
@@ -8979,6 +8981,9 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+puratos.co.jp#$##cookieBannerModal { display: none!important; }
+puratos.co.jp#$#.modal-backdrop { display: none!important; }
+puratos.co.jp#$#body.modal-open { overflow: auto!important; }
 sozialministerium.at###cookiebanner-wrapper
 omelete.com.br###lgpd-wrapper
 nikkeimm.co.jp##.c-cookiePolicy
@@ -13548,7 +13553,7 @@ mein-glueck.de##.c-cookiesBox
 mirror.co.uk##.captify-widget
 gsp.ro##.center-gdpr
 forbes.pl,onet.pl,pclab.pl##.cmp-app_gdpr
-businessinsider.in,gadgetsnow.com,indiatimes.com##.consent-popup
+madamecoco.com,businessinsider.in,gadgetsnow.com,indiatimes.com##.consent-popup
 inexchange.se##.consentBanner
 tempmailaddress.com##.container > footer.text-center.hidden-xs
 downdetector.ru##.container[style="display: block;"]
@@ -15793,6 +15798,12 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !######### White list. Fixing filtering errors #########
 !#######################################################
 !
+! www.skyscanner.jp link to cookie policy
+skyscanner.*#@#body #cookie-policy
+!#if (adguard_app_ios || adguard_ext_safari || adguard_ext_android_cb)
+puratos.co.jp#@#.cookie-banner:not(body):not(html)
+puratos.co.jp#@##cookieInfo
+!#endif
 ! link to privacy policy
 sora-nishiki.com#@##privacypolicy
 ! https://github.com/AdguardTeam/AdguardFilters/issues/86245
@@ -19243,6 +19254,7 @@ diets.ru##.dayrecipes_p
 diets.ru##div[onclick="closeDailyRecipesPopup()"]
 codecademy.com###branded-banner
 x-art.com##.promo-bar
+madamecoco.com##.vl-popup-container
 dyxs11.com,dianyingim.com##.popup-tips
 dyxs11.com,dianyingim.com##.shortcuts-mobile-overlay
 linkedin.com##.lynda-cta-banner
@@ -19266,6 +19278,7 @@ irishtimes.com#$#.mfp-wrap { display: none!important; }
 irishtimes.com#$#.mfp-bg { display: none!important; }
 irishtimes.com#$#html { overflow: visible !important; }
 irishtimes.com#$#body { overflow: visible !important; }
+cozumpark.com###check-also-box
 news.com.au###nca-behavioural-banner-wrapper
 fashn.de##.blockOverlay
 mindtools.com#$##propositionModal { display: none !important; }
@@ -19275,6 +19288,8 @@ collegedunia.com#$#.modal-backdrop { display: none !important; }
 tjournal.ru,dtf.ru,vc.ru##.dstr-unit
 goimports.com.br###btnwhatsapp
 boohoo.com##.js-floating-promo
+mailbrew.com#$#body > div[style^="position: fixed; top: 0px; left: 0px; width: 100%;"] { display: none !important; }
+mailbrew.com#$#body { overflow: visible !important; }
 brax.com###oc-newsletter
 groupon.de###subscribe_modal_container
 groupon.de###spotlight
@@ -19292,6 +19307,10 @@ schmuckrausch.de##div[id^="nltk_popup_"]
 schmuckrausch.de#$?#body > div.fancybox-overlay:has(> div.fancybox-wrap > div.fancybox-skin > div.fancybox-outer > div.fancybox-inner > div.newsletter) { display: none!important; }
 schmuckrausch.de#$#body { overflow: visible!important; }
 schmuckrausch.de#$#html { overflow: visible!important; }
+dvdfab.cn##.inq-box
+dvdfab.cn##.resource-inquiry
+dvdfab.cn##.fixed-down
+dvdfab.cn###float-banner-wrap
 diemer.de#$?#div[data-app] > div[class^="such_"] >  div:has( > div[class^="such_"] > div[class^="such_"] > section > aside[aria-label="Newsletter"]) { display: none!important; }
 diemer.de#$#body { position: static!important; overflow: visible!important; }
 baur.de###fragment-search > div[class^="styles__Wrapper-fragment-search__"] > div#sheet[style="height: 44px;"]
