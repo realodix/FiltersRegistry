@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-06-25 10:59:19 CEST
+! Last modified: 2021-06-28 14:33:46 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -219,6 +219,10 @@ maklarvarlden.se##.td-pulldown-size:has-text(/spons/i):upward(3)
 maklarvarlden.se##article:has(.sponsored-inlist)
 matspar.se#%#//scriptlet('ubo-json-prune.js', 'payload.ads campaigns.*')
 matspar.se#$#.overflow-hidden { overflow-y: initial !important; }
+medibok.se#%#//scriptlet('ubo-acis.js', 'show_msg')
+medibok.se#%#//scriptlet('ubo-noeval-if.js', 'Math.round')
+medibok.se#$?#noscript:has-text(mdp-deblocker-js-disabled) { remove: true; }
+medibok.se#$?#style:has-text(body * :not) { remove: true; }
 mestmotor.se#$##piano { opacity: 1 !important; }
 mestmotor.se#%#//scriptlet('ubo-ra.js', 'onclick', '[onclick^="ANAL"]')
 metrojobb.se##.headlines__block:has(.ad-header)
@@ -1064,6 +1068,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /plugins/its-cookies/*$script
 /plugins/jetpack/_inc/build/widgets/eu-cookie-law/*$script
 /plugins/jnews-social-share/*$script
+/plugins/koko-analytics
 /plugins/lbg-audio8-html5-radio_ads
 /plugins/leaky-paywall$domain=driva-eget.se
 /plugins/likebtn-like-button/*
@@ -1244,6 +1249,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /videojs.ima.$script,domain=gamereactor.se
 /view-resources/public/*/js/dfp.
 /view_count/view.php$xmlhttprequest
+/villalivet.se\/wp-content\/uploads\/[0-9]+/$script,domain=villalivet.se
 /wdg/iab-active$script
 /wdg_cookie_bar
 /wds_nyhetsbrev_popup
@@ -1738,6 +1744,7 @@ maklarvarlden.se##.hustle-popup
 marsta.nu##.outsider, .panel--naringsliv
 matklubben.se##.notification.cookies
 matspar.se##div[style="z-index: 2000;"],div[style="z-index: 2000;"] + div
+medibok.se##.annonsmellandiv, .annonssidadiv
 megafonen.se##[data-article-sponsored="true"], .content-main-adwrapper, .campaign-sidebar
 merinfo.se##article[data-customer]
 mestmotor.se##.panel-native, a[href*="/artiklar/partner/"]
@@ -1917,6 +1924,7 @@ viivilla.se###product-area
 viivilla.se##.afubar-top, .native-ad-md, .sp-article
 viivilla.se##.overlay-bottom
 viktvaktarna.se##div[class*="GDPRBanner"]
+villalivet.se##.mtsnb, .villalivet-target
 vimedbarn.se##.annonsinlagg
 vinbanken.se##.push-to-newsletter, .fancybox-overlay
 vinbanken.se##.top-add, .sidebar-adds, .spons-content
