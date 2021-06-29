@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/86372
+aagmaal.com##a[href="https://t.me/maalsite"] > img
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85939
 interfax.by##img[width="970"][height="250"]
 ! native ad links
@@ -15170,6 +15172,7 @@ cmp-sp.lvz.de#%#AG_onLoad(function(){if(window.location.href.includes("consentUU
 privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 !
+calameo.com#%#//scriptlet('set-cookie', 'ckn', '1')
 swisscom.ch#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("CONSENTMGR")){var a=new MutationObserver(function(){var b=document.querySelector('.sdx-container button.button--primary');b&&b.click()});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
 mycinema.pro#%#document.cookie="CONSENT=230524NN; path=/;";
 godbolt.org#%#AG_onLoad(function() { setTimeout(function() { var el = document.querySelector('#alert button.close'); if(el) el.click(); }, 1500); });
@@ -15819,6 +15822,9 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !######### White list. Fixing filtering errors #########
 !#######################################################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/87007
+calameo.com#@#.cookie-content
+calameo.com#@#.cookies
 ! www.skyscanner.jp link to cookie policy
 skyscanner.*#@#body #cookie-policy
 !#if (adguard_app_ios || adguard_ext_safari || adguard_ext_android_cb)
