@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/85939
+interfax.by##img[width="970"][height="250"]
 ! native ad links
 tsuiran.jp#?##pickup-box > article img[src^="/image/pr/"]:upward(article)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85982
@@ -2046,6 +2048,9 @@ css-tricks.com##.footer-form-wrap
 fashn.de###newsletter_layer
 foxnews.com##.promo-newsletter
 wired.com##.newsletter-subscribe-form
+analyticsindiamag.com#?#.post-content > h2:contains(Subscribe)
+analyticsindiamag.com#?#.post-content > h5:has(> a[href^="https://t.me/joinchat/"][target="_blank"])
+analyticsindiamag.com#%#AG_onLoad(function() { document.body.innerHTML = document.body.innerHTML.replace(/Get the latest updates and relevant offers by sharing your email\./g, ""); });
 eg.ru##.feed_sub
 300mbfilms.ws###sidebar > #text-15
 promondo.de##.nl-bar
@@ -2150,6 +2155,7 @@ searchenginewatch.com##.ab--subscribe
 nationalreview.com##.aside-newsletter
 nationalreview.com##.inline-newsletter-subscribe
 coursevania.com#?##main div.vc_row:has(> div.wpb_column div.widget_mailchimp)
+melomovie.com##.c-docNotification
 lamoda.pl##.min-h-newsletter
 asiaone.com##div[class^="ao-newsletter"]
 novaescola.org.br###formNewsLetter
@@ -19224,6 +19230,7 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+newyorker.com##.paywall-registration-gate-container
 ||misumi-ec.com/operation/floating_bnr/
 penguinrandomhouse.com##.sgnup
 mcqslearn.com##.fbox-background
@@ -22984,10 +22991,6 @@ dooralei.ru#$#body { overflow: visible!important; }
 dooralei.ru#$#div[id^="mt_popup"] { display: none!important; }
 ! https://forum.adguard.com/index.php?threads/14633/
 facebook.com##.aclb > div._4b-b
-!
-hi-fi.ru#$#.arcticmodal-container { display: none!important; }
-hi-fi.ru#$#.arcticmodal-overlay { display: none!important; }
-hi-fi.ru#$#body { overflow: auto!important; }
 !
 twgreatdaily.com#$#.body.modal-open { overflow: visible!important; }
 twgreatdaily.com#$#.modal-backdrop.fade { display: none!important; }
