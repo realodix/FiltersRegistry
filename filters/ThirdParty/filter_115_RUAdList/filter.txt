@@ -1,8 +1,8 @@
 !
-! Checksum: ZZq/ikfJP1vinNPLD13zZQ
-! OriginalVersion: 202107021250
+! Checksum: OyL4jcoHHuRI/1C8VM1MkQ
+! OriginalVersion: 202107021650
 ! Title: RU AdList + CSS Fixes
-! Last modified: 02 Jul 2021 12:50 UTC
+! Last modified: 02 Jul 2021 16:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -23217,6 +23217,7 @@ quto.ru##div[id^="partner_news_"]
 rambler.ru##.article__banner
 rambler.ru##.article__partners
 rambler.ru##.article__read-also
+rambler.ru##.banner--container
 rambler.ru##.comments__partners
 rambler.ru##.finance__banner
 rambler.ru##.finance__partners
@@ -26183,16 +26184,16 @@ lostfilm.info,lostfilm.run,lostfilm.tv,lostfilm.tw,lostfilm.uno,lostfilm.win,los
 ! ---
 lostfilmhd.ru#$?##wrap { background-image: none !important }
 ! ---
+rambler.ru#$?##bigColumn script + div[class] > div[style^="height"] * { height: inherit !important }
+rambler.ru#$?##bigColumn script + div[class] > div[style^="height"] > div { position: initial !important; transform: none !important; width: inherit !important }
+rambler.ru#$?##bigColumn script + div[class] > div[style^="height"] { width: inherit !important; height: inherit !important }
 rambler.ru#$?#.commercial-branding > div[class][style^="order:"] div { min-height: 0 !important }
 rambler.ru#$?#[data-blocks] div[class]:empty { min-height: 0 !important }
-rambler.ru#$?#[itemid="#articleBody"] > script + div[class] > div[style^="height"] * { height: inherit !important }
-rambler.ru#$?#[itemid="#articleBody"] > script + div[class] > div[style^="height"] > div { position: initial !important; transform: none !important; width: inherit !important }
-rambler.ru#$?#[itemid="#articleBody"] > script + div[class] > div[style^="height"] { width: inherit !important; height: inherit !important }
 horoscopes.rambler.ru#$?#a[data-horo$="::button"] { width: auto !important }
 rambler.ru#$?#body[style*="position:"] { position: unset !important }
 mail.rambler.ru##div[class*="WithRightBarWrapper"] > div[class*="AutoAppContainer"] ~ *
 mail.rambler.ru#$?#div[class*="WithRightBarWrapper"] > div[class*="AutoAppContainer"] { max-width: 100% !important }
-horoscopes.rambler.ru#$?#div[class]:empty { min-height: 0 !important }
+horoscopes.rambler.ru#$?#div[class] { min-height: 0 !important }
 nova.rambler.ru##div[class^="DirectMKB__root"]
 www.rambler.ru#$?#div[style*="margin-bottom"] > div[style^="height:"] { height: auto !important }
 www.rambler.ru#$?#div[style^="height:"][style*="300px"] { background-color: transparent !important }
@@ -26374,6 +26375,7 @@ podrobno.uz#$?#body { overflow: auto !important }
 ! ---
 politobzor.net#$?#.banner { height: 90px !important }
 ! ---
+pornolab.biz,pornolab.cc,pornolab.lib,pornolab.net#$?#.site-logo { max-height: 90px !important; width: auto !important }
 pornolab.biz,pornolab.cc,pornolab.lib,pornolab.net##[id*="adbloc"]
 ! ---
 pornreactor.cc#$?##background { background: #6d1700 !important; padding-top: 0 !important }
