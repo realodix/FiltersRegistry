@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-07-02 09:19:17 CEST
+! Last modified: 2021-07-03 10:08:44 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -42,7 +42,7 @@
 99mac.se##.nitem:has(a[href="/arkiv/kategori/annons"])
 99mac.se##a[href*="annons-"]:upward(.carousel-item)
 accentmagasin.se#%#//scriptlet('ubo-nostif.js', 'n.modal')
-affarsliv.com,affarslivgotland.se,affarsvarlden.se,alekuriren.se,allas.se,arvikanyheter.se,baaam.se,babyhjalp.se,barometern.se,blt.se,bt.se,byrum.se,cafe.se,corren.se,dalslanningen.se,ekuriren.se,elle.se,eposten.se,expressen.se,femina.se,filipstadstidning.se,folkbladet.se,fragbite.se,frida.se,fryksdalsbygden.se,goteborgdirekt.se,gotland.net,hant.se,helagotland.se,hjotidning.se,ibnytt.se,karlskogatidning.se,kindaposten.se,kingmagazine.se,kkuriren.se,klackspark.com,kristianstadsbladet.se,kt.se,kuriren.nu,lwcdn.com,mariestadstidningen.se,mestmotor.se,mitti.se,modette.se,mvt.se,nkp.se,nlt.se,norran.se,norrbottensaffarer.se,nsd.se,nsk.se,nt.se,nwt.se,nyheter24.se,olandsbladet.se,ostrasmaland.se,provinstidningen.se,pt.se,realtid.se,recept.se,saffletidningen.se,skanesport.se,skd.se,sla.se,smp.se,sn.se,strengnastidning.se,svenskanamn.se,svenskdam.se,svenskgolf.se,sverigespringer.se,sydostran.se,thelocal.se,trelleborgsallehanda.se,unt.se,ut.se,varmlandsaffarer.se,vasterastidning.se,vf.se,viivilla.se,vimmerbytidning.se,vt.se,vxonews.se,youplay.se,ystadsallehanda.se#%#//scriptlet('ubo-json-prune.js', 'autoplay')
+affarsliv.com,affarslivgotland.se,affarsvarlden.se,alekuriren.se,allas.se,arvikanyheter.se,baaam.se,babyhjalp.se,barometern.se,blt.se,bt.se,byrum.se,cafe.se,corren.se,dalslanningen.se,ekuriren.se,elle.se,eposten.se,expressen.se,femina.se,filipstadstidning.se,folkbladet.se,fragbite.se,frida.se,fryksdalsbygden.se,golfing.se,goteborgdirekt.se,gotland.net,hant.se,helagotland.se,hjotidning.se,ibnytt.se,karlskogatidning.se,kindaposten.se,kingmagazine.se,kkuriren.se,klackspark.com,kristianstadsbladet.se,kt.se,kuriren.nu,lwcdn.com,mariestadstidningen.se,mestmotor.se,mitti.se,modette.se,mvt.se,nkp.se,nlt.se,norran.se,norrbottensaffarer.se,nsd.se,nsk.se,nt.se,nwt.se,nyheter24.se,olandsbladet.se,ostrasmaland.se,provinstidningen.se,pt.se,realtid.se,recept.se,saffletidningen.se,skanesport.se,skd.se,sla.se,smp.se,sn.se,strengnastidning.se,svenskanamn.se,svenskdam.se,svenskgolf.se,sverigespringer.se,sydostran.se,thelocal.se,trelleborgsallehanda.se,unt.se,ut.se,varmlandsaffarer.se,vasterastidning.se,vf.se,viivilla.se,vimmerbytidning.se,vt.se,vxonews.se,youplay.se,ystadsallehanda.se#%#//scriptlet('ubo-json-prune.js', 'autoplay')
 affarsstaden.se#%#//scriptlet('ubo-acis.js', 'jQuery', 'adblockdetect')
 aftonbladet.se###main > div > div > div:has(h3:has-text(/^annons/i))
 aftonbladet.se#$?#[data-ad-subtype]:upward(1) { min-height:unset!important }
@@ -104,6 +104,7 @@ dagensjuridik.se##.card--muted:has(strong:has-text(/^senaste nytt från våra pa
 darkside.se#%#//scriptlet('ubo-set.js', 'kod', 'undefined')
 datormagazin.se##.td_module_wrap:has(a[href*="/annons/"])
 datormagazin.se##a:has-text(/^annons/i)
+designbase.se##.is_sponsored:upward(.article-item)
 di.se#%#//scriptlet('ubo-acis.js', 'Di', 'initAds')
 di.se#%#//scriptlet('ubo-nostif.js', '#triggerModal')
 di.se#%#//scriptlet('ubo-ra.js', 'data-auto-play,,stay')
@@ -494,6 +495,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ##.category-annonssamarbete:not(body):not(html)
 ##.category-om-samarbeten:not(body):not(html)
 ##.category-samarbeten:not(body):not(html)
+##.category-sponsrad:not(body):not(html)
 ##.category-sponsrade-inlagg:not(body):not(html)
 ##.category-sponsrade-reklaminlagg:not(body):not(html)
 ##.category-sponsrat-content:not(body):not(html)
@@ -778,6 +780,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /adblog/hit$domain=byggahus.se
 /adn/adn-setup.$script
 /adnami/macro/*$script
+/adnuntius_top_scroll/*
 /ads-dm.js
 /ads.article.js
 /ads.for.me/jsa?$script
@@ -1511,6 +1514,7 @@ dekra.de#@##cookie-banner
 deliquate.se##.ajax_loader
 deliquate.se##[id^="ads300"], [id^="linkcat-"]
 delupe.se###preloader
+designbase.se###page-cookies
 devote.se,familjeliv.se##div[style*="height: 244px;"]
 di.se##.di_panorama-wrapper, .site-header__panorama, .di_panorama__isAdLabel, .discount-box, .campaign-ad-box, .di_start__teaser-placeholder, .di_teaser-flak-planbokskoll, .di_teaser-flak-container--native, .native-box, .bandit-box__teaser--native, a[href*="/brandstudio"]
 di.se##.di_start__teaser-placeholder[data-content-url*="/ads/"]
@@ -1680,6 +1684,7 @@ innebandy.se##[class*="banner-container"]
 ipo.se##.tag-sponsrad
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^="gtag"]
 it-halsa.se,it-pedagogen.se,it-retail.se##.penci-wrap-gprd-law
+itseniorerna.se##.tm-preload
 jaktjournalen.se##.activate-notifications-container.shown
 jaktplay.se##.jaktplay-ad
 jaktsidan.se###ipsLayout_mainArea > iframe
