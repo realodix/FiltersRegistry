@@ -3497,6 +3497,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! Admiral domains
 ! These domains are used for tracking purposes according to the data that is being sent there.
 ! More info: https://getadmiral.com/products/measure
+||shakegoldfish.com^$third-party
 ||livelylaugh.com^$third-party
 ||hystericalcloth.com^$third-party
 ||caringcast.com^$third-party
@@ -21102,6 +21103,12 @@ $app=com.miui.analytics
 ! https://github.com/AdguardTeam/CoreLibs/issues/1306
 ||rover.ebay.$image,object,script,badfilter
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/87216
+||googletagmanager.com/gtm.js$script,redirect=googletagmanager-gtm,domain=cwtv.com
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+@@||googletagmanager.com/gtm.js$domain=cwtv.com
+@@||google-analytics.com/analytics.js$domain=cwtv.com
+!#endif
 ! girlsnews.tv - fix search
 @@||googletagmanager.com/gtm.js$script,domain=girlsnews.tv
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85885
