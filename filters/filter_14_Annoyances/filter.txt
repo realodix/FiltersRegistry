@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/86963
+itech.co.ua##a[href="https://t.me/ITechNewsUa"] > img
 ! https://github.com/AdguardTeam/AdguardFilters/issues/86574
 testbook.com##a[class*="banner-link"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/86611
@@ -1879,18 +1881,19 @@ avia.yandex.by,avia.yandex.kz,avia.yandex.ua,bilet.yandex.com.tr,flights.yandex.
 !
 ! Yandex.Music
 ! Anti-adblock message
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##div.notify > div.deco-tooltip_notify.notify_shown
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua#$#.notify__message { position: absolute!important; left: -3000px!important; }
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.notify__message
+music.yandex.*##div.notify > div.deco-tooltip_notify.notify_shown
+music.yandex.*#$#.notify__message { position: absolute!important; left: -3000px!important; }
+music.yandex.*##.notify__message
 ! Mobile app
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua#%#document.cookie = "phone-banner_shown=1; path=/;";
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.d-overhead-mobile__content_app
+music.yandex.*##.install-app-popup
+music.yandex.*#%#document.cookie = "phone-banner_shown=1; path=/;";
+music.yandex.*##.d-overhead-mobile__content_app
 ! Subscription Яндекс+
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.crackdown-popup.popup_modal
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.payment-plus-popup
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.deco-pane-overlay
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.teaser-nonmusic
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##a.teaser__content[href="https://music.yandex.ru/family-plus"] > img.teaser__img
+music.yandex.*##.crackdown-popup.popup_modal
+music.yandex.*##.payment-plus-popup
+music.yandex.*##.deco-pane-overlay
+music.yandex.*##.teaser-nonmusic
+music.yandex.*##a.teaser__content[href="https://music.yandex.ru/family-plus"] > img.teaser__img
 ! Yandex.News
 yandex.*##.news-navigation-menu__wrapper ~ div[data-log-id*="fu-"]
 yandex.md,yandex.by,yandex.com,yandex.com.tr,yandex.fr,yandex.kz,yandex.ru,yandex.ua##.tooltip_theme_promo.auth-popup_js_inited
@@ -1899,18 +1902,18 @@ yandex.md,yandex.by,yandex.com,yandex.com.tr,yandex.fr,yandex.kz,yandex.ru,yande
 ! Anti-adblock message
 radio.yandex.by,radio.yandex.kz,radio.yandex.ru,radio.yandex.ua##.notify
 ! Disable ads(bottom)
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua#$#.bar-below { position: absolute!important; left: -3000px!important; }
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.bar-below
+music.yandex.*#$#.bar-below { position: absolute!important; left: -3000px!important; }
+music.yandex.*##.bar-below
 ! Disable ads(sidebar)
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.no-ads
+music.yandex.*##.no-ads
 ! Mobile apps
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua#$#.button-store_all { position: absolute!important; left: -3000px!important; }
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.button-store_all
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.app-sms
+music.yandex.*#$#.button-store_all { position: absolute!important; left: -3000px!important; }
+music.yandex.*##.button-store_all
+music.yandex.*##.app-sms
 ! Promo (dogs)
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##a[href="/contest/dogmoroz"]
+music.yandex.*##a[href="/contest/dogmoroz"]
 ! Paid subscription
-music.yandex.com,music.yandex.by,music.yandex.kz,music.yandex.ru,music.yandex.ua##.subscription-hint
+music.yandex.*##.subscription-hint
 !
 ! Yandex.Недвижимость
 ! Баннер с новостройками
@@ -2025,7 +2028,8 @@ searchengineland.com,sport.segodnya.ua,vokrugsveta.ru,censor.net,fizzicseducatio
 ! ###mc_embed_signup
 latestlaws.com,todayifoundout.com,mobidea.com,honeysanime.com,circuitdigest.com,worldhistory.org,bizreport.com,wristreview.com,kosicednes.sk,tinyprojects.dev,cambio16.com,voxukraine.org,pnas.org,cachevalleydaily.com,bisnis.com,ilpost.it,bsblog.info,alcoparty.com.ua,codastory.com,informazionefiscale.it,kerch.fm,cinemablend.com,prostofinovo.ru,comss.ru,majorgeeks.com,buhgalter.com.ua,providr.com,24tv.ua,babylonbee.com,dexerto.com,football365.com,menrec.com,netdoktor.de,ottawamatters.com,retail-insider.com,walterfootball.com,wweek.com,zozhnik.ru###mc_embed_signup
 !
-salonsecret.ru##div[class^="SubscribeBanner_root__"]
+vesti.ua#?#.singleMainContent > p.warning:has(> a[href="https://vesti.ua/email_newsletters"])
+salonsecret.ru##div[class*="SubscribeBanner_root__"]
 sportrbc.ru##.news-bar
 foreignpolicy.com##.newsletter-signup-and-ads
 objectivequiz.com###ccr-sidebar-newslater
@@ -9058,6 +9062,7 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+editorsmanual.com##.edm-cookie-notice
 fivepost.ru##.cookieNotification_container
 fedex.com##.fxg-alert__fdx_cookie_notice
 oficinadanet.com.br##.pop-user-data
@@ -19339,6 +19344,7 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+salonsecret.ru##a[class^="Support_whatsapp__"]
 salonsecret.ru##.LP-tools
 fivepost.ru#$#.modal { display: none!important; }
 fivepost.ru#$#.modal-backdrop { display: none!important; }
@@ -26454,7 +26460,7 @@ filerio.in#%#//scriptlet("adjust-setTimeout", "tick()", "", "0.02")
 retrostic.com#%#//scriptlet("adjust-setInterval", "timeLeft--", "", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53145
 ! '#%#//scriptlet("set-constant", "blurred", "false")'
-lucidcam.com,paid4.link,clikern.com,musicc.xyz,pix4link.com,go.zolomix.in,zipurls.com,theblissempire.com,linkadshield.xyz,xfiles.io,upfiles.com,pcprogramasymas.com,crixurl.com,zshort.cc,freehottip.com,filezipa.com,arab-chat.club,dz-linkk.com,newshour.pw,paidthe.site,cslink.in,jp88.xyz,shortenmm.cf,shrink.icu,bevru.club,bitlinks.pw,hoastie.com,arurio.club,fclcc.com,ptc.wtf,tei.ai,exey.io,url4cut.xyz,birdurls.com,mfk-shorter.com,claimfreebits.com,allcryptoz.net,shrlink.top,webshort.in,coinsparty.mcrypto.club,zshort.io,btcads24.com,eririo.club,nerdy.vn,jameeltips.us,seg-ashort1a-ma.tk,payskip.org,freshi.site,coinlyhub.com,yxoshort.com,pewgame.com,sanos.xyz,cookuve.com,shrinkzzy.link,srek.net,shrinke.me,earnflies.com,foxseotools.com,oncehelp.com,earnwithshortlink.com,enrt.eu,tui.click,adfloz.co,shrx.in,short.food-royal.com,adpop.me,galaxy-link.space,link.ltc24.com,kiiw.icu,vshort.link,adnit.xyz,fwarycash.moviestar.fun,linkebr.com,bloggingguidance.com,smoner.com,charexempire.com,cut-fly.com,gplinks.co,mynewshub.in,adomainscan.com,bitmos.co.in,linkshorts.*,cuts-url.com,gainbtc.click,profitlink.info,artipedia.id,gonety.com,viraloc.com,beautyram.info,cashearn.cc,go2.surf,cryptoads.space,adcorto.me,modapk.link,minilinks.in,holaurl.com,adbl.live,gplinks.co,miklpro.com,kutt.io,sanoybonito.club,adwork.us,afly.pro,cutlink.link,uplinks.in,dulinks.co,short88.com,pngit.live,exe.app,adsrt.click,adcorto.xyz,shortbled.com,cuturl.in,shorttey.link,womenhaircolors.review,srts.me,paidtomoney.com,rubtech.xyz,lite-link.xyz,apkshrt.com,linkshorts.me,joska.xyz,androidnougatapk.com,pureshort.link,ashort1a.xyz,recipestutorials.com,droplink.co,tawiia.com,exy.ai,100count.net,lite-link.com,bdnewsx.com,eio.io,short-cash2.xyz,mealip.com,earnfasts.com,linksfire.co,giscr.ac.th,internewstv.com,ivn3.com,pslfive.com,bigb0ss.net,fedaro.me,linksly.co,illink.net,coin.mg,trinddz.com,proshort.gq,ilinks.in,shorttey.org,techupme.com,projecto2.xyz,bitfly.io,earnguap.com,news.techrfour.com,shortzzy.in,asiashort.link,imagenesderopaparaperros.com,c-ut.com,toroox.com,saungfirmware.id,shrinkme.in,fir3.net,xz2.xyz,softairbay.com,link1s.net,cashurl.in,doctor-groups.com,bitcoinly.in,clk.ink,abdeo8.com,apksvip.com,gibit.xyz,claimcrypto.cc,shortenbuddy.com,btcdot.xyz,pkr.pw,shrinkbtc.cc,todaynewspk.win,manikusa.com,cut.my.id,linkmit.us,try2link.net,stfly.me,dz4win.com,real-sky.com,bolssc.com,short2.cash,fx4vip.com,fcdot.lc,cutdl.xyz,shrinkurl.org,mediumarticles.com,asupload.com,exee.io,srt.leechpremium.link,adsrt.live,shorter.fun,cheappath.com,fcc.lc,shorthitz.com,savelink.site,linkshorten.xyz,sk-ip.tech,tmearn.com,pozvi.icu,samapro.me,adsy.pw,owllink.net,mondainai.moe,2ota.com,popimed.com,cut4fun.com,aii.sh,sekilastekno.com,miuiku.com,articlix.com,intothelink.com,newstomat.com,pingit.link,slink.bid,7r6.com,loptelink.vip,iir.ai,biroads.com,win10.vn,rozfly.com,mitly.us,adsrt.net,afly.us,bitconews.net,tii.ai,linkviet.xyz,coredp.com,linkrex.net,bit-url.com,adsrt.org,bestearnonline.com,dutchycorp.ovh,gamesrs.com,shorten.sh,shotly.io,ouofly.com,clicksbee.com,shorterall.com,dutchycorp.space,linkshrnk.com,linkad.in,fc.lc,adslinkfly.online,shrinkme.io#%#//scriptlet("set-constant", "blurred", "false")
+go.gets4link.com,lucidcam.com,paid4.link,clikern.com,musicc.xyz,pix4link.com,go.zolomix.in,zipurls.com,theblissempire.com,linkadshield.xyz,xfiles.io,upfiles.com,pcprogramasymas.com,crixurl.com,zshort.cc,freehottip.com,filezipa.com,arab-chat.club,dz-linkk.com,newshour.pw,paidthe.site,cslink.in,jp88.xyz,shortenmm.cf,shrink.icu,bevru.club,bitlinks.pw,hoastie.com,arurio.club,fclcc.com,ptc.wtf,tei.ai,exey.io,url4cut.xyz,birdurls.com,mfk-shorter.com,claimfreebits.com,allcryptoz.net,shrlink.top,webshort.in,coinsparty.mcrypto.club,zshort.io,btcads24.com,eririo.club,nerdy.vn,jameeltips.us,seg-ashort1a-ma.tk,payskip.org,freshi.site,coinlyhub.com,yxoshort.com,pewgame.com,sanos.xyz,cookuve.com,shrinkzzy.link,srek.net,shrinke.me,earnflies.com,foxseotools.com,oncehelp.com,earnwithshortlink.com,enrt.eu,tui.click,adfloz.co,shrx.in,short.food-royal.com,adpop.me,galaxy-link.space,link.ltc24.com,kiiw.icu,vshort.link,adnit.xyz,fwarycash.moviestar.fun,linkebr.com,bloggingguidance.com,smoner.com,charexempire.com,cut-fly.com,gplinks.co,mynewshub.in,adomainscan.com,bitmos.co.in,linkshorts.*,cuts-url.com,gainbtc.click,profitlink.info,artipedia.id,gonety.com,viraloc.com,beautyram.info,cashearn.cc,go2.surf,cryptoads.space,adcorto.me,modapk.link,minilinks.in,holaurl.com,adbl.live,gplinks.co,miklpro.com,kutt.io,sanoybonito.club,adwork.us,afly.pro,cutlink.link,uplinks.in,dulinks.co,short88.com,pngit.live,exe.app,adsrt.click,adcorto.xyz,shortbled.com,cuturl.in,shorttey.link,womenhaircolors.review,srts.me,paidtomoney.com,rubtech.xyz,lite-link.xyz,apkshrt.com,linkshorts.me,joska.xyz,androidnougatapk.com,pureshort.link,ashort1a.xyz,recipestutorials.com,droplink.co,tawiia.com,exy.ai,100count.net,lite-link.com,bdnewsx.com,eio.io,short-cash2.xyz,mealip.com,earnfasts.com,linksfire.co,giscr.ac.th,internewstv.com,ivn3.com,pslfive.com,bigb0ss.net,fedaro.me,linksly.co,illink.net,coin.mg,trinddz.com,proshort.gq,ilinks.in,shorttey.org,techupme.com,projecto2.xyz,bitfly.io,earnguap.com,news.techrfour.com,shortzzy.in,asiashort.link,imagenesderopaparaperros.com,c-ut.com,toroox.com,saungfirmware.id,shrinkme.in,fir3.net,xz2.xyz,softairbay.com,link1s.net,cashurl.in,doctor-groups.com,bitcoinly.in,clk.ink,abdeo8.com,apksvip.com,gibit.xyz,claimcrypto.cc,shortenbuddy.com,btcdot.xyz,pkr.pw,shrinkbtc.cc,todaynewspk.win,manikusa.com,cut.my.id,linkmit.us,try2link.net,stfly.me,dz4win.com,real-sky.com,bolssc.com,short2.cash,fx4vip.com,fcdot.lc,cutdl.xyz,shrinkurl.org,mediumarticles.com,asupload.com,exee.io,srt.leechpremium.link,adsrt.live,shorter.fun,cheappath.com,fcc.lc,shorthitz.com,savelink.site,linkshorten.xyz,sk-ip.tech,tmearn.com,pozvi.icu,samapro.me,adsy.pw,owllink.net,mondainai.moe,2ota.com,popimed.com,cut4fun.com,aii.sh,sekilastekno.com,miuiku.com,articlix.com,intothelink.com,newstomat.com,pingit.link,slink.bid,7r6.com,loptelink.vip,iir.ai,biroads.com,win10.vn,rozfly.com,mitly.us,adsrt.net,afly.us,bitconews.net,tii.ai,linkviet.xyz,coredp.com,linkrex.net,bit-url.com,adsrt.org,bestearnonline.com,dutchycorp.ovh,gamesrs.com,shorten.sh,shotly.io,ouofly.com,clicksbee.com,shorterall.com,dutchycorp.space,linkshrnk.com,linkad.in,fc.lc,adslinkfly.online,shrinkme.io#%#//scriptlet("set-constant", "blurred", "false")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53141
 4shared.com#%#(function(){-1==document.cookie.indexOf("exUserId")&&(document.cookie="exUserId=1; domain=.4shared.com; path=/;")})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/52771
