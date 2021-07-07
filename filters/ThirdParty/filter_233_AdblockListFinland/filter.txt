@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 05July2021v2
+! OriginalVersion: 06July2021v2
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -29,6 +29,9 @@ www.suomi24.fi#$#div[width="50%"] + div[width="50%"] + [width="50%"] + div[class
 ||freewheel-jitt.sanoma.fi^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media,redirect=noopmp3-0.1s,domain=ruutu.fi
 ||sanoma-prod.integration-x.com^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
+! -----CNAME FILTERS FOR FIREFOX-----
+||cds.*.hwcdn.net^$script,domain=apteekkari.fi
+! -----CNAME FILTERS FOR FIREFOX END-----
 ! -----NETWORK FILTERS END-----
 ! -----SCRIPTS-----
 aamulehti.fi,satakunnankansa.fi,valkeakoskensanomat.fi,nokianuutiset.fi,janakkalansanomat.fi,kmvlehti.fi,jamsanseutu.fi,suurkeuruu.fi,kankaanpaanseutu.fi,rannikkoseutu.fi,tyrvaansanomat.fi,merikarvialehti.fi,sydansatakunta.fi#%#//scriptlet('ubo-nostif.js', 'adblockDetected', '0')
@@ -187,6 +190,7 @@ anna.fi##.kaupalliset
 anna.fi##div.grid__item_tn-1-2
 anna.fi#?#.grid__item_1:-abp-has( > [id^="dfp__native-card"])
 anna.fi,kaksplus.fi##.widget_nativearticles
+apteekkari.fi#?#.container:-abp-contains(MAINOS (TEKSTI JATKUU ALLA))
 arcticinsider.com##a[href*="bannerTrack"]
 aromilehti.fi##.ad-paper-order
 arvokisat.com,eurheilu.org,herkkusuut.com,laliiga.com,leijonat.com,nainen.com,nhlsuomi.com,sketsi.net,suomif1.com,suomifutis.com,suomikiekko.com,suomikoris.com,suomiurheilu.com,susijengi.com,valioliiga.com,viikonloppu.com##div[class*="post"] > hr, hr ~ *:not(aside)
@@ -304,6 +308,8 @@ huuto.net##div.grid-element-container-hintaseuranta.grid-element-container
 huuto.net##div.search-grid-ad-container.ad
 hymy.fi##.grid--dfp-slots
 hymy.fi##[href="http://www.finswingers.com/"]
+iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi###paraati-ad-grid
+iijokiseutu.fi,kaleva.fi,koillissanomat.fi,lapinkansa.fi,pyhajokiseutu.fi,raahenseutu.fi,rantalakeus.fi,siikajokilaakso.fi##.-ad1.-ad.sidebar__column-item
 ilkkapohjalainen.fi###ad-jattiboksi2
 ilkkapohjalainen.fi##.ads__wrapper--jattiboksi
 ilmastointilaitteet.com##.boxi
@@ -327,10 +333,9 @@ juoksufoorumi.fi##.noAdsCell
 kaksplus.fi##.placeholder
 kaksplus.fi#?#.owl-item:-abp-has(.portal__commercial)
 kaleva.fi###outstream-container
-kaleva.fi###paraati-ad-grid
 kaleva.fi###puff-container
-kaleva.fi##.-ad1.-ad.sidebar__column-item
 kaleva.fi##.ad-container
+kaleva.fi##.right-now-widget__item--commercial
 kaleva.fi##div[class="lyta-lazy-load"]
 kaleva.fi#?#.m-contentListItemThumb:-abp-has( > div > div > div[class^="m-contentListItemThumb__advertisement"])
 kaleva.fi#?#.m-managedListing__column:-abp-has( > div > div > div > div[class^="m-contentListItem__advertisement"])
@@ -389,7 +394,6 @@ kuvaton.com##[href^="https://www.kasinokaverit.com/"]
 kuvaton.com##[href^="https://www.lainaovi.fi/"]
 lapinkansa.fi###content1-container
 lapinkansa.fi###outstream-container
-lapinkansa.fi###paraati-ad-grid
 lapinkansa.fi#?#div[class="m-contentListItemThumb -ctx-frontpage-now -level-1"]:-abp-has( > div > div > [class^="m-contentListItemThumb__advertisement"])
 lapinkansa.fi#?#div[class="m-managedListing__column -ctx-index -level-1 -cols-2"]:-abp-has( > div > div > div > div[class^="m-contentListItem__advertisement"])
 lbaanijakuva.fi##.adremark
@@ -531,7 +535,6 @@ puheenaiheet.fi##div[class="wpb_wrapper"]
 puheenvuoro.uusisuomi.fi,vapaavuoro.uusisuomi.fi##.side-list.commercial-blog-studio
 puheenvuoro.uusisuomi.fi,vapaavuoro.uusisuomi.fi##a[class*="commercial-blog-card"]
 puskaradio.net##.all-adds
-raahenseutu.fi##[id="paraati-ad-grid"]
 raahenseutu.fi##div[id="outstream"]
 radiopori.fi##div[class*="simpleads"]
 radiopori.fi##div[id*="mainospaikka"]
