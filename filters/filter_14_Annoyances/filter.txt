@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/87223
+/\/(support_banner.*|sidebar-your-brand-on-your-links.*|sidebar-how-to-build-a-brand|sidebar-stop-using-generic-links.*)\.(jpg|png)/$domain=rebrandly.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/86963
 itech.co.ua##a[href="https://t.me/ITechNewsUa"] > img
 ! https://github.com/AdguardTeam/AdguardFilters/issues/86574
@@ -2028,6 +2030,7 @@ searchengineland.com,sport.segodnya.ua,vokrugsveta.ru,censor.net,fizzicseducatio
 ! ###mc_embed_signup
 latestlaws.com,todayifoundout.com,mobidea.com,honeysanime.com,circuitdigest.com,worldhistory.org,bizreport.com,wristreview.com,kosicednes.sk,tinyprojects.dev,cambio16.com,voxukraine.org,pnas.org,cachevalleydaily.com,bisnis.com,ilpost.it,bsblog.info,alcoparty.com.ua,codastory.com,informazionefiscale.it,kerch.fm,cinemablend.com,prostofinovo.ru,comss.ru,majorgeeks.com,buhgalter.com.ua,providr.com,24tv.ua,babylonbee.com,dexerto.com,football365.com,menrec.com,netdoktor.de,ottawamatters.com,retail-insider.com,walterfootball.com,wweek.com,zozhnik.ru###mc_embed_signup
 !
+telerik.com#?#div[data-placeholder-label="EmptyWrapper"] ~ section.Section:has(> div.container button[type="submit"])
 news.ru##.subscription-in-socials
 vesti.ua#?#.singleMainContent > p.warning:has(> a[href="https://vesti.ua/email_newsletters"])
 salonsecret.ru##div[class*="SubscribeBanner_root__"]
@@ -3903,7 +3906,7 @@ brain.com.ua##.subscribe_newsletters
 aif.ru##.subscribe_wid
 banglachotikahinii.com##.subscribebox
 softikbox.com##.subscribers-form
-metaratings.ru,starhit.ru,busfor.ua,brighteon.com,championat.com,goodhouse.ru,ichip.ru,irk.ru,thepostmillennial.com,skidochnik.com.ua##.subscription
+glasswire.com,metaratings.ru,starhit.ru,busfor.ua,brighteon.com,championat.com,goodhouse.ru,ichip.ru,irk.ru,thepostmillennial.com,skidochnik.com.ua##.subscription
 liberation.fr##.subscription-bloc
 miamiherald.com##.subscription-cta-widget
 esquire.ru,popmech.ru,warhead.su##.subscription_block
@@ -9063,6 +9066,11 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+maler-discount24.de##.cin_cookie_notification
+gusti-leder.de#$#.mnd-cookie-modal { display: none !important; }
+gusti-leder.de#$#.mnd-cookie-modal + .is--open { display: none !important; }
+gusti-leder.de#$#.js--overlay-relative { overflow: visible !important; }
+gusti-leder.de#$#.no--scroll { overflow: visible !important; }
 oanhanguera.com.br##.banner_rodape_informando_cookies
 editorsmanual.com##.edm-cookie-notice
 fivepost.ru##.cookieNotification_container
@@ -18017,6 +18025,8 @@ amp-reddit-com.cdn.ampproject.org##.AppSelectorModal__body
 reddit.com#$#.XPromoPopup { display: none!important; }
 reddit.com#$#body.scroll-disabled { overflow: visible!important; position: static!important; }
 !
+glasswire.com##.glasswire-android
+glasswire.com##.try-glasswire
 geekdashboard.com##.textwidget > .section--download
 geekdashboard.com##a[href^="https://www.geekdashboard.com/app"]
 fortnitetracker.com##.trn-site-appbar
@@ -19347,6 +19357,9 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+developer.chrome.com##announcement-banner
+elie.net##.signup-right
+glasswire.com###subscription-modal
 b.hatena.ne.jp#$#.bookmark-guest-guide-modal { display: none!important; }
 b.hatena.ne.jp#$#.modal-overlay { display: none!important; }
 b.hatena.ne.jp#$#body.is-overlay { overflow: auto!important; }
@@ -25129,6 +25142,7 @@ experts-exchange.com##.ctaSolutionStickyWrapper
 theguardian.com##.contributions__adblock
 ||contributions.guardianapis.com^
 !
+blog.rebrandly.com##.post-inner-banner-image
 fonelab.com##.product.green
 opencritic.com#?#.carousel-v2 > div.carousel-card-v2:has(> div.text-center > div > img[src$="/y4m2jFYdCK0LTPB4nsRE9lYZVGfu56TbNpBqIGa0pqp58yiVw6V5Xisi22Kd1LO3uAkPAx5xPJaTEo.jpg"])
 meduza.io##div[data-testid="donates-teaser"]
