@@ -77,6 +77,9 @@
 ! https://www.eff.org/deeplinks/2021/03/googles-floc-terrible-idea
 #%#//scriptlet('set-constant', 'Document.prototype.interestCohort', 'undefined')
 !
+! unito.life infinite call to keentracking
+unito.life#%#//scriptlet('abort-current-inline-script', 'KeenTracking')
+unito.life$$script[tag-content="KeenTracking"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/86115
 notonthehighstreet.com#%#//scriptlet('set-constant', 'window.DD_RUM.init', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/82132
@@ -239,6 +242,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 !||i.snssdk.com/log/*
 !||i.snssdk.com/slardar/sdk.js
 !
+||analytics.chase.com^
 ||scripttags.jst.ai^
 ||trace21.dsb-ebusiness.com^$third-party
 ||adjust.com^$third-party
@@ -17840,6 +17844,7 @@ _tracking.php?b=
 !
 /analytics.js$domain=bataryapil.com|journey.com.tr|tozlu.com|elleshoes.com|freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|partifabrik.com
 !
+||jsdelivr.net/npm/keen-tracking@*/keen-tracking.min.js
 ||visumo.jp/MediaManagement/WebApi/PageView?
 ||low-ya.com/duplicate-ga-cookie
 ||qgraph.io/dist/aiqua-wp.js
