@@ -45,8 +45,7 @@ We may add third-party filters to AdGuard Filters Registry. When making a decisi
     * `groupId` — [group](#groups) identifier
     * `subscriptionUrl` — default filter subscription URL
     * `tags` — a list of [tags](#tags)
-    ### <a id="trustLevel"></a>
-    * `trustLevel` — level of trust which describe [allowed and permited rules types](https://github.com/AdguardTeam/FiltersCompiler/tree/master/src/main/utils/trust-levels); possible values:
+    * <a id="trustLevel"></a> `trustLevel` — level of trust which describe [allowed and permited rules types](https://github.com/AdguardTeam/FiltersCompiler/tree/master/src/main/utils/trust-levels); possible values:
         * `low` — only low-risk rule types are allowed; defaults to **low** if trust level is not configured at all
         * `high` — trusted third-party filter lists; some particular rules from there are still permited
         * `full` — all types of filter rules are allowed; only AdGuard filter lists have full trust at the moment
