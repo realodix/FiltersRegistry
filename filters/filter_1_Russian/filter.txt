@@ -9721,8 +9721,9 @@ wotafaq.com#$#div.qa-headerr { height: 50px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/11772
 oper.ru#$##wrapper { background: none!important; }
 ! kg-portal.ru - удаление брендированного фона, отступа сверху
-kg-portal.ru#$#.ten_topbar + div[class]:not([class^="content"]):not([class^="ten_"]):not([class^="footer_"]):not([id]) { height: 164px !important; }
 kg-portal.ru#$#body { background: inherit!important; }
+!+ NOT_PLATFORM(android)
+kg-portal.ru#$#.ten_topbar + div[class]:not([class^="content"]):not([class^="ten_"]):not([class^="footer_"]):not([id]) { height: 164px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/12051
 rbkgames.com#$#.modal-open { overflow: visible!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/10816
@@ -11644,6 +11645,8 @@ crazymailing.com,lotzon.pro,novosti-n.org,prokazan.ru,20minut.ua,alnews.com.ua,g
 !
 !
 !
+arka.am##div[style="clear:both; position:relative; height: 210px; display:block;"]
+arka.am##script[src*="/ru-n4p/"] + div[class^="r"]
 kino-teatr.ru##.view_online_block
 epub3.livejournal.com##.typelist-widget ~ div.j-beta-adv
 ||proekt.by/banners/
