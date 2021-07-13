@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! sponsor page at the end of video
+||nicoad.nicovideo.jp/v1/contents/video/*/thanks?
 ! https://github.com/AdguardTeam/AdguardFilters/issues/87856
 ||sputnik.by/files/tgparser/sputnik_by.html
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88112
@@ -9129,6 +9131,10 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+solintel.com.br###lgpd_dialog
+solintel.com.br###lgpd_floating
+portal.epost.de##app-cookie-policy-notification
+redhat.com###redhat-cookie-privacy-banner
 splenda.com.tr,imago-images.de##.cookieMsg
 emea.flow.microsoft.com###cookie-banner-auth-container
 shop.philips.ru##.test-mode__wrap
@@ -15676,7 +15682,7 @@ vrhs.de#%#AG_onLoad(function() {if (!document.cookie.includes("cookieConsent")) 
 jokers.de,weltbild.de#%#document.cookie="dsgvo=basic; path=/;";
 rumbletalk.com#%#//scriptlet('remove-class', 'intro', 'body.intro')
 reuters.com#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("OptanonAlertBoxClosed")){var a=new MutationObserver(function(){var b=document.querySelector("#onetrust-consent-sdk"),c=document.querySelector("#onetrust-consent-sdk #cookie-preferences button.ot-pc-refuse-all-handler");b&&c&&(a.disconnect(),c.click(),b.style="display: none !important;")});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
-bloomberg.com#%#AG_onLoad(function() {if (!document.cookie.includes("euconsent-v2")) {var g = new MutationObserver(function() {var b = document.querySelector('.message-component > button[aria-label^="Yes"]');var c = document.querySelector('html');b && b.click();c && c.style.setProperty('overflow', 'visible', 'important');c && c.style.setProperty('position', 'static', 'important');});g.observe(document, {childList: !0,subtree: !0});setTimeout(function() {g.disconnect()}, 1E4)}});
+bloomberg.com#%#AG_onLoad(function() {if (!document.cookie.includes("euconsent-v2")) {var g = new MutationObserver(function() {var b = document.querySelector('.message-component > button[title^="Yes"]');var c = document.querySelector('html');b && b.click();c && c.style.setProperty('overflow', 'visible', 'important');c && c.style.setProperty('position', 'static', 'important');});g.observe(document, {childList: !0,subtree: !0});setTimeout(function() {g.disconnect()}, 1E4)}});
 independent.com.mt#%#//scriptlet('set-cookie', 'ShowCookiePolicy', 'False')
 formula1.com#%#AG_onLoad(function(){if(!document.cookie.includes("cmapi_cookie_privacy")){var a=new MutationObserver(function(){var b=document.querySelector("#cookie-banner"),c=document.querySelector("#cookie-banner button#truste-consent-button");b&&c&&(a.disconnect(),b.style="display: none !important;",c.click())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
 standard.co.uk,vi.nl,tumblr.com#%#AG_onLoad(function() {if (!document.cookie.includes("euconsent-v2")) {var g = new MutationObserver(function() {var b = document.querySelector('.qc-cmp2-summary-buttons > button[mode="primary"]');b && b.click();});g.observe(document, {childList: !0,subtree: !0});setTimeout(function() {g.disconnect()}, 1E4)}});
@@ -19527,6 +19533,7 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+redhat.com##.subscribe-sidebar
 bandt.com.au#$#.modal-backdrop { display: none !important; }
 bandt.com.au#$##myModal { display: none !important; }
 bandt.com.au#$#body.modal-open { overflow: auto !important; }
