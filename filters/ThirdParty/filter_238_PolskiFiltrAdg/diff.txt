@@ -1,13 +1,5 @@
-! dniwolne.eu##^.axv is excluded by "##^" in exclusions.txt
-dniwolne.eu##^.axv
-! dniwolne.eu##^.axv is excluded by "##^" in exclusions.txt
-dniwolne.eu##^.axv
 ! @@/adframe.js$script,domain=kobieceporady.pl|allekoszyk.pl|samouczek.info|aranzujemy.pl|mondeoklubpolska.pl is excluded by "/adframe." in exclusions.txt
 @@/adframe.js$script,domain=kobieceporady.pl|allekoszyk.pl|samouczek.info|aranzujemy.pl|mondeoklubpolska.pl
-! filmweb.pl##^script:has-text(adblockDisplayInformation.):has-text(/[\w\W]{8000,50000}/) is excluded by "##^" in exclusions.txt
-filmweb.pl##^script:has-text(adblockDisplayInformation.):has-text(/[\w\W]{8000,50000}/)
-! filmweb.pl##^script:has-text(plusAdblock):has-text(/[\w\W]{4000,10000}/) is excluded by "##^" in exclusions.txt
-filmweb.pl##^script:has-text(plusAdblock):has-text(/[\w\W]{4000,10000}/)
 ! Rule "/js/adblock.js$script,redirect=nofab.js,domain=gorlice.in|limanowa.in|sacz.in,important" converted to: "/js/adblock.js$script,redirect=prevent-fab-3.2.0,domain=gorlice.in|limanowa.in|sacz.in,important"
 /js/adblock.js$script,redirect=nofab.js,domain=gorlice.in|limanowa.in|sacz.in,important
 ! Rule "acmilan.com.pl##+js(set-constant.js, showAds, true)" converted to: "acmilan.com.pl#%#//scriptlet('ubo-set-constant.js', 'showAds', 'true')"
@@ -294,6 +286,10 @@ zspnr1.lowicz.pl##+js(setInterval-defuser.js, seead)
 filmweb.pl#@#+js(setTimeout-defuser.js, notDetected)
 ! Rule "filmweb.pl#@#+js(abort-current-inline-script.js, decodeURIComponent, newAdblockBoardDisplayed)" converted to: "filmweb.pl#@%#//scriptlet('ubo-abort-current-inline-script.js', 'decodeURIComponent', 'newAdblockBoardDisplayed')"
 filmweb.pl#@#+js(abort-current-inline-script.js, decodeURIComponent, newAdblockBoardDisplayed)
+! Rule "filmweb.pl##^script:has-text(adblockDisplayInformation.):has-text(/[\w\W]{8000,50000}/)" converted to: "filmweb.pl$$script[tag-content="adblockDisplayInformation.):has-text(/[\w\W]{8000,50000}/"][max-length="262144"]"
+filmweb.pl##^script:has-text(adblockDisplayInformation.):has-text(/[\w\W]{8000,50000}/)
+! Rule "filmweb.pl##^script:has-text(plusAdblock):has-text(/[\w\W]{4000,10000}/)" converted to: "filmweb.pl$$script[tag-content="plusAdblock):has-text(/[\w\W]{4000,10000}/"][max-length="262144"]"
+filmweb.pl##^script:has-text(plusAdblock):has-text(/[\w\W]{4000,10000}/)
 ! Rule "filmweb.pl##+js(abort-current-inline-script.js, IRI, Adblock)" converted to: "filmweb.pl#%#//scriptlet('ubo-abort-current-inline-script.js', 'IRI', 'Adblock')"
 filmweb.pl##+js(abort-current-inline-script.js, IRI, Adblock)
 ! Rule "magazyn.wp.pl##body > [class]:style(filter: none!important;)" converted to: "magazyn.wp.pl#$#body > [class] { filter: none!important; }"
@@ -312,6 +308,8 @@ magazyn.wp.pl##body > [class]:style(filter: none!important;)
 pilot.wp.pl#@#+js(set-constant, WP.gaf.loadBunch, noopFunc)
 ! Invalid selector:
 zambrow.org##+js(abort-current-inline-script.js,document.getElementById, block)
+! Invalid selector:
+dniwolne.eu##^.axv
 Error: "$redirect modifier is invalid" in the rule: "||googlesyndication.com^$script,redirect=googlesyndication.com/adsbygoogle.js,domain=darmowa-tv.ws"
 ||googlesyndication.com^$script,redirect=googlesyndication.com/adsbygoogle.js,domain=darmowa-tv.ws
 ! Invalid selector:
@@ -320,6 +318,8 @@ Error: "$redirect modifier is invalid" in the rule: "||pagead2.googlesyndication
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=soisk.pl,redirect=googlesyndication.com/adsbygoogle.js,important
 ! Invalid selector:
 zambrow.org##+js(abort-current-inline-script.js,document.getElementById, block)
+! Invalid selector:
+dniwolne.eu##^.axv
 Error: "$redirect modifier is invalid" in the rule: "||googlesyndication.com^$script,redirect=googlesyndication.com/adsbygoogle.js,domain=darmowa-tv.ws"
 ||googlesyndication.com^$script,redirect=googlesyndication.com/adsbygoogle.js,domain=darmowa-tv.ws
 ! Invalid selector:

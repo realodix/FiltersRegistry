@@ -10787,6 +10787,7 @@ zoo.bydgoszcz.com###NewsShow, .modal-backdrop
 !#endif
 !#if cap_html_filtering
 !@ >>>>>>>> https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/sections/adblock_social_list/uBO_AG/popupy_html.txt + popupy_html.txt
+bartek.com.pl$$script[tag-content="popupNewsletter"][max-length="262144"]
 !@ <<<<<<<< https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/sections/adblock_social_list/uBO_AG/popupy_html.txt + popupy_html.txt
 !#endif
 !#if !ext_ublock
@@ -11136,6 +11137,7 @@ zalando.pl##.js_z-mask-smartbanner.z-mask-smartbanner
 !download.net.pl##.box-news-detail .details dt:style(display: block !important; float: left; padding: 0 5px 0 0;)
 !m.youtube.com##+js(aeld, visibilitychange, [native code])
 !pomponik.pl##+js(nano-remove-elements-onready.js, a[class="common-header__interia-back-button"])
+!pomponik.pl##^div[class="topbar-container"], a[class="common-header__interia-back-button"]
 !spolem.katowice.pl##html > body:style(overflow-x: visible !important;)
 !/^https:\/\/(www\.)?youtube(-nocookie)?\.com\/embed\/.*autoplay=1/$3p,frame,object,redirect=click2load.html:10,domain=~pinger.pl|pl|~wykop.pl
 /^https:\/\/(www\.)?youtube(-nocookie)?\.com\/embed\/.*autoplay=1/$removeparam=autoplay,domain=~pinger.pl|pl
@@ -11148,6 +11150,7 @@ komputerswiat.pl#$##ks_breaking_news { position: absolute !important; left: -300
 newonce.radio#%#//scriptlet('ubo-ra.js', 'href', '[rel="shortcut icon"][href$=".gif"]')
 !#endif
 !#if cap_html_filtering
+!www.google.com,www.google.pl##^div.irc-nic.irc-igr.rg_ic.rg_bx:has( > div > div > div:has-text(Podobne wyszukiwania))
 !#endif
 !#if !env_firefox
 cs-harnas.pl,djlive.pl,gearbest.com,jaguar.pl,kwit.pl,progrupa.com,przeswietl.pl,seniorka-z-plecakiem.pl,sparta.com.pl,start.me#$#body::-webkit-scrollbar { all: initial !important; }
@@ -11865,6 +11868,16 @@ openpli.org##body > div:not([id]):not([class])
 !#endif
 !#endif
 !#if cap_html_filtering
+dworzec.kielce.pl$$script[tag-content=".popup-aholic97"][max-length="262144"]
+eobuwie.com.pl$$script[tag-content="technologii cookies"][max-length="262144"]
+e-legnickie.pl$$script[tag-content="polityka-cookies"][max-length="262144"]
+jbzd.*,jbzdy.*$$script[tag-content="quantcast.mgr.consensu.org/cmp.js"][max-length="262144"]
+lubimyczytac.pl$$script[tag-content="rodoConsent"][max-length="262144"]
+muzeumazji.pl$$script[tag-content="doRODO"][max-length="262144"]
+okazik.pl$$script[tag-content="#cookie-dialog"][max-length="262144"]
+openpli.org$$script[tag-content="gdpr-accepted"][max-length="262144"]
+www.google.com,www.google.pl$$script[tag-content="consentCookiePayload"][max-length="262144"]
+!autostrada-a2.pl##^#rodo-box, #cookielaw-box
 !#endif
 !#if !cap_user_stylesheet
 autokult.pl,fotoblogia.pl,gadzetomania.pl,komorkomania.pl#$#.cookie-disclaimer { visibility: hidden !important; }

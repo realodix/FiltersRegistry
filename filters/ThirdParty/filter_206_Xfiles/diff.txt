@@ -18,10 +18,6 @@ http://www.adtiger.de/adframe.php
 http://www.posizionamento.com/phpAdsNew/adframe.php
 ! fullstuff.net###banner_ad is excluded by "/###banner_ad$/" in exclusions.txt
 fullstuff.net###banner_ad
-! bergamonews.it##^script:has-text(checkForAdBlocker) is excluded by "##^" in exclusions.txt
-bergamonews.it##^script:has-text(checkForAdBlocker)
-! bergamonews.it##^script:has-text(request_ads) is excluded by "##^" in exclusions.txt
-bergamonews.it##^script:has-text(request_ads)
 ! ##.adsbox is excluded by "/^##\.adsbox$/" in exclusions.txt
 ##.adsbox
 ! ##.adsbox is excluded by "/^##\.adsbox$/" in exclusions.txt
@@ -56,6 +52,10 @@ sfr.fr##+js(aopr, _oEa)
 teamskeet.com##+js(set, $.tstracker, noopFunc)
 ! Rule "||vidtech.cbsinteractive.com^*/tracking/$script,redirect=noop.js,important" converted to: "||vidtech.cbsinteractive.com^*/tracking/$script,redirect=noopjs,important"
 ||vidtech.cbsinteractive.com^*/tracking/$script,redirect=noop.js,important
+! Rule "bergamonews.it##^script:has-text(checkForAdBlocker)" converted to: "bergamonews.it$$script[tag-content="checkForAdBlocker"][max-length="262144"]"
+bergamonews.it##^script:has-text(checkForAdBlocker)
+! Rule "bergamonews.it##^script:has-text(request_ads)" converted to: "bergamonews.it$$script[tag-content="request_ads"][max-length="262144"]"
+bergamonews.it##^script:has-text(request_ads)
 ! Rule "://api.*/lib/native.wasm$3p" converted to: "://api.*/lib/native.wasm$third-party"
 ://api.*/lib/native.wasm$3p
 ! Rule "||arc.io/widget.js$script,3p" converted to: "||arc.io/widget.js$script,third-party"
