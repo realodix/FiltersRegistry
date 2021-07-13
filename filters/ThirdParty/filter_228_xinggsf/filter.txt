@@ -1,9 +1,9 @@
 !
 ! title: 乘风 广告过滤规则
-! OriginalVersion: 202102021
+! OriginalVersion: 202105121
 ! Expires: 2 days
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
-@@*$domain=taobao.com|alipay.com|suning.com|vmall.com|etao.com|tmall.com|paipai.com|jd.com|jd.hk|i.qq.com|my.csdn.net
+!@@*$domain=taobao.com|alipay.com|suning.com|vmall.com|etao.com|tmall.com|paipai.com|jd.com|jd.hk|i.qq.com|my.csdn.net
 !--------------------------百度----------------------------------
 @@||bdstatic.com/static/common/widget/ui/admanager/$script,domain=image.baidu.com
 @@||cpro.baidustatic.com/cpro/ui/cm.js
@@ -17,6 +17,7 @@
 ||f11.baidu.com/
 ||iwanad.baidu.com/
 ||pos.baidu.com/
+||sp0.baidu.com/$third-party
 ||spcode.baidu.com/
 ||cbjs.baidu.com/
 ||cbjslog.baidu.com/
@@ -39,7 +40,7 @@ v.baidu.com##div[videoadv],a[href^="http://g.youxi.v.baidu."]
 www.baidu.com##div.c-container:has(a[data-landurl])
 zhidao.baidu.com###left-promotion,#ui-tooltip-0,div.cms-slide.cms-slide-optimus,div.wgt-bottom-ask,div.cms-slide.cms-slide-lazy
 !--贴吧---
-tiebac.baidu.com,tieba.baidu.com,jump.bdimg.com,jump2.bdimg.com##div[ad-dom-img],#thread_list>li:not(.j_thread_list):not(.thread_top_list_folder)
+tiebac.baidu.com,tieba.baidu.com,jump.bdimg.com,jump2.bdimg.com##div[ad-dom-img],#thread_list>li:not(.j_thread_list):not(.thread_top_list_folder),div[data-rank]
 @@||tb1.bdstatic.com/??/tb/_/*/ad_$script
 ||tb1.bdstatic.com/??/tb/_/game_iframe_common_$script
 ||tb1.bdstatic.com/??/tb/_/game_rank_in_head_$script
@@ -77,6 +78,7 @@ tiebac.baidu.com,tieba.baidu.com,jump.bdimg.com,jump2.bdimg.com##div[ad-dom-img]
 *coinhive.min.js^$script
 ||coin-hive.com/
 ||coinhive-manager.com/
+he2d.comhnjls.com.cn
 dlads.cn
 dmvbdfblevxvx.com
 adservice.google.com
@@ -84,20 +86,20 @@ adservice.google.com
 ||googlesyndication.com
 ||google-analytics.com
 gshtrl.top
-he2d.com
+iclickcdn.com
 ||irs01.
 ||x.jd.com/
 u-x.jd.com
 mediav.com
 q1qfc323.com
 sdqoi2d.com
+tanx.com
 @@||s.click.taobao.com^$third-party,popup
 ||union.
 ||vamaker.com/$third-party
 */vamaker/
 wrating.com
-~ziodslzz.zez##.ad,div.ad960-90,div.ad-side,table.adtable,div.a_mu,div.a_h,div.ad_pic,div.wp.a_f,div.wp.a_t,div.a_pb,div.a_pt,div.a_pr,div.a_cn,#ggPar,#side-ad,#preAdContent,div.adbox
-~google.com##.adsbygoogle,.ads
+~ziodslzz.net##.ad,div.ad960-90,div.ad-side,table.adtable,div.a_mu,div.a_h,div.ad_pic,div.wp.a_f,div.wp.a_t,div.a_pb,div.a_pt,div.a_pr,div.a_cn,#ggPar,#side-ad,#preAdContent,div.adbox
 ||com/ads
 *_350_330.$image
 */html/click/
@@ -316,6 +318,8 @@ mail.163.com,mail.126.com##.emailSuggest,#theme,.gWel-bottom
 |data:text/plain$popup,domain=music.163.com
 !-------------------新浪--------------------
 ||sinaimg.cn/unipro/$domain=~video.sina.com.cn|~weibo.com
+||sinaimg.cn/crop.$domain=~video.sina.com.cn|~weibo.com
+||n.sinaimg.cn/tech/zcapp$image
 ||sina.com.cn/iframe/76/$subdocument
 ||sina.com.cn/litong/
 ||adbox.sina.com.cn/
@@ -330,6 +334,11 @@ mail.163.com,mail.126.com##.emailSuggest,#theme,.gWel-bottom
 ||sax.sina.
 blog.sina.cn##div.item_hide+div,#pl-blog-artad
 ||dmp.sina.cn/
+!-------------------sohu.com--------------------
+tuijian.sogou.com
+track.sohu.com
+fpb.sohu.com
+qpb.sohu.com
 !-------------------ifeng.com--------------------
 ifeng.com##.slide_popo_modal,div[class^=pao_],div[class^=adList],div[class^=adbox],div[class^=FNewRAvtLisBox],body>div.Avt02,#picTxt~*,div.topAd
 ||ifeng.com/a_if/$subdocument
@@ -349,8 +358,9 @@ ifeng.com##.slide_popo_modal,div[class^=pao_],div[class^=adList],div[class^=adbo
 ||ifengimg.com/9252$script
 ||ifengimg.com/*yingguang$script
 ||ifengimg.com/*/embed$script
+x0.ifengimg.com
 ||y2.ifengimg.com/xingzhao/JS/bsgspecial.js$script
-v.ifeng.com##.vAdbox,div.vAdImg,div.newAdImg,div.ad300,div.ad1000,div.vPlayerAdbox,div.main+.scrollcol
+v.ifeng.com##.vAdbox,div.vAdImg,div.newAdImg,div.ad300,div.ad1000,div.vPlayerAdbox,div.main+.scrollcol,#js_videopause_container
 @@||ifengimg.com/*/ad.js
 !-------------------小说站点-----------------------
 @@||qidian.gtimg.com/*/qd/js/component/ad_strategies.$script
@@ -418,10 +428,9 @@ ithome.com##.categoryimg,#hd_float,#side_func,#con>#tt5>div,div.related_buy,li.s
 ||ithome.com/file/js/money/
 ||www.ithome.com/json/hot/$subdocument
 jb51.net##.clearfix.mtb10:first-child,div.r300>.idc3,#txtlink,div.topimg,#param.content-box+div,#xgd+dd
-||dm.jb51.net/
-||bdjs.jb51.net/$script
+jscode.jbzj.com
+zyzj360.com
 ||files.jb51.net/image/$image
-||img.jb51.net/images/sl/$image
 jianshu.com###note-fixed-ad-container
 ||jianshu.io/assets/web/*-ads-$image
 juejin.im##.banner,.wechat-banner
@@ -481,6 +490,8 @@ u8.hujiang.com
 www.hao123.com##div#ecom,div.widget-topbanner,A.link.download,#shortcut-box,#shortcut-box~*,div[monkey=yixing],.siye,#leftbannerv2
 iciba.com##div[class|=ad],div.newpc-entry
 ||cdn.iciba.com/web/co/ci/$image
+! bbs.nga.cn
+g1.tagtic.cn
 qiushibaike.com##div.shopwindow
 ||3.ssqzj.com/
 ||galaxy.sogoucdn.com/galaxy/
@@ -1008,6 +1019,7 @@ trade.mtime.com
 */inner_center1
 */intf/bbs_expert
 */js/1.htm$subdocument
+@@||wago.io/js/118.$script
 */js/118.
 */js/22.$subdocument
 */js/3000.
@@ -1168,18 +1180,16 @@ admin5.com##.float_both,div.sherry_ad1,div.specialBox,.content_right_ad
 ||168.it168.com$script
 ||17173.com/if/$subdocument
 ! title: 乘风 视频广告过滤规则
-! OriginalVersion: 202101251
+! OriginalVersion: 202105021
 ! Expires: 2 days
 ! Homepage: http://bbs.kafan.cn/thread-1866845-1-1.html
 v.youku.com##.control-phonewatch,#right-title-ad-banner
+youku.com#%#//scriptlet('ubo-aeld.js', 'dblclick', 'ykplayer.switchFullscreen')
 !v.youku.com##+js(nano-stb)
 ||atm.youku.com/
 ||cibntv.net/youku/$media
 ||valipl.cp31.ott.cibntv.net/$media
-|https://static.youku.com/index/js/ikuAdapterNew.js
 |https://js.ykimg.com/youku/dist/js/lib/ikuAdapterNew.js
-!||ykimg.com/material/$image
-!youku.com##.ad-wrap
 ||sealine.youku.com/yk/*callback=adpagesdk$script
 iqiyi.com##div[data-adzone],#block-V
 !iqiyi.com##+js(nano-sib)
@@ -1187,24 +1197,29 @@ iqiyi.com#%#//scriptlet('ubo-set.js', 'Object.prototype.parseXML', 'noopFunc')
 !||t7z.cupid.iqiyi.com/show$script,important
 ||static.iqiyi.com/js/common/mars_v.js$script
 ||iqiyipic.com/image/20*_100000$image
-qq.com##.mod_ad
+||ssports.iqiyi.com/json/shop/shopInfo
+show.ssports.com
+qq.com##.mod_ad, .txp_ad
+v.qq.com,sports.qq.com#%#//scriptlet('ubo-json-prune.js', 'ad', 'vinfo')
 v.qq.com,sports.qq.com#%#//scriptlet('ubo-nano-sib.js', '\u5012\u8ba1\u65f6')
 @@||video.qq.com/fcgi-bin/
 ||mark.l.qq.com/fcgi-bin/get_video_mark_all?idlist=
-||adss.video.qq.com/
 ||gtimg.com/qqlive/
-||miaozhen.com/
-||reachmax.cn/
-||tencentmind.com/
-||xtgreat.com/
+miaozhen.com
+reachmax.cn
+scorecardresearch.com
+tencentmind.com
+xtgreat.com
 bilibili.com##.gg-floor-module,#slide_ad,#slide_ad+a[data-target-url]
 ||api.bilibili.com/x/web-show/res/loc?pf=$~script
 ||hdslb.com/bfs/sycp/creative_img/$image
 acfun.cn##.pause-display-container,#ad-comment,#ad-player-view
 ||aixifan.com/static/*/appGuide/
 cctv.com###bgAd_div
+cctv.com,ddrk.me#%#//scriptlet('ubo-aeld.js', 'dblclick', 'isImmediatePropagationStopped')
 ||imall.cctv.com/$subdocument
 ||bjcathay.com/
+!||player.cntv.cn/h5vod/$script
 pptv.com##div[id^=afp_],div[id$=-afp],#video-download-game
 ||synacast.com
 ||de.as.pptv.com^
@@ -1250,24 +1265,41 @@ huya.com###hy-ad,#hy-ab,#huya-ab
 */preroll/$media,domain=91porn.com
 ||91p20.space^
 ||waust.at^
-||www.dililitv.com/*.php?ad=$script
+dililitv.cc,lzvod.net#%#//scriptlet('ubo-aeld.js', 'dblclick', 'dp.fullScreen.request')
+||www.dililitv.cc/*.php?ad=$script
 js.dilidd.com
+dililitv.cc,hmtv.me,imeiju.io#%#//scriptlet('ubo-acis.js', 'Object.defineProperty', 'location.href')
 dyjihe.com##.tempWrap
 haitur.com,haicaoys.com##.dplayer-web-fullscreen-fix .float-box
 haitur.com#$#.container { max-width:90%!important;width:90%!important }
 haitur.com#$#.left-content { width:77%!important }
-dyjihe.com,hehua.net,imomoe.*,kakadm.com,milimili.tv,qiqidongman.com,vodxc.in#%#//scriptlet('ubo-ra.js', 'target', 'a[href^="/"]')
+imomoe.*,xiamov.com,xxdm8.com#%#//scriptlet('ubo-ra.js', 'target', 'base[target]')
+dyjihe.com,haicaoys.com,haitur.com,imomoe.*,kakadm.com,milimili.tv,qiqidongman.com,vodxc.in#%#//scriptlet('ubo-ra.js', 'target', 'a[href^="/"]')
 ||alicdn.com/$image,domain=api.xiaomingming.org
 imomoe.*###adl,#adr
-yatu.tv###loadtop,[id^=myas],#myds1,#daohang
+yatu.tv##.dplayer-web-fullscreen-fix #tburl,#loadtop,[id^=myas],#myds1,#daohang
+yatu.tv#%#//scriptlet('ubo-set.js', 'document.oncontextmenu', 'null')
 ||tracker.$xmlhttprequest,websocket,script,ping
 3z9e.cn
+7nsc.cn
+7b6l2j.cn
 anquanzhuomian.com
 ch-hr12333.com
 g1c5.com
 ieeod0.com
 fourier.taobao.com
 v4dwkcv.com
+weizhenwx.com
 youle55.com
-||www.yatu.tv/image/*.gif^$image
-||www.yatu.tv/m/images/$image
+bmbaike.cn
+buzx53.cn
+cqqc3.com
+dacedsfa.cn
+qdwght.com
+quickapp.cn
+xcsci.cn
+xixiqiu.com
+xv5b.com
+xz6d.com
+||www.yatu.tv:88/image/*.gif^$image
+||www.yatu.tv:88/m/images/$image

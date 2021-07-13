@@ -14,7 +14,6 @@
 $inline-script
 $inline-font
 ,inline-script
-##^
 ! Excluding redirect instructions
 ! $redirect= - processed by trust-levels
 ! ,redirect= - processed by trust-levels
@@ -41,8 +40,17 @@ $popup,~third-party
 !***  ! Issue link
 !***  `exclusion`
 !
+!
+!### Anti-adblock baits ###
+! all filters
+/###banner_ad$/
+/^##\.adsbox$/
+/^##\.afs_ads$/
+!
 !### Easylist ###
-! 
+!
+! Moved to Tracking Protection filter
+||adjust.com^$third-party
 ! fixing prime video app: https://uploads.adguard.com/2020-10-04_03.18.16.jpg
 /^/ad24/\*$/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/55609
@@ -56,6 +64,10 @@ $popup,~third-party
 /^##\.myTestAd$/
 /^##\.adsbox$/
 /adframe.
+! Excluding Google Contributor anti-adblock baits
+/^##\[class\^="div-gpt-ad"\]$/
+/^##div\[class\^="div-gpt-ad"\]$/
+/^##\.div-gpt-ad$/
 ! https://github.com/easylist/easylist/commit/e2efe2c3686cf6192f4e2d6a944ebe092c06f27a
 ! Excluding the rule which breaks youtube embedded video player
 ||youtube.com/get_video_info?$domain=youtube.com
@@ -149,8 +161,9 @@ $popup,domain=aflamsexnek.com|
 !
 !### Liste FR ###
 ! Too wide rules
+##a[href*=".taobao.com/"]
 +Popunder+$popup
-/^https?:\/\/(www\.)?([a-z0-9]{3,10}\.)?[a-z0-9]{5,20}\.(click|co|com|bid|net|online|top|club)\/([a-z0-9]{2,3}\/){3}[a-f0-9]{32}\.js$/$script,xmlhttprequest
+/^https?:\/\/(www\.)?([a-z0-9]{3,10}\.)?[a-z0-9]{5,25}\.(click|co|club|com|bid|date|download|men|net|network|online|party|pw|racing|review|site|space|stream|top|trade|webcam|website|win|xyz)\/([a-z0-9]{2,3}\/){3}[a-f0-9]{32}\.js$/$script,xmlhttprequest
 -Block-ads-
 /click/*$subdocument
 =adblock_
@@ -236,6 +249,7 @@ _campaign=$popup
 !###########################
 !
 !### xinggsf ###
+/##\.adsbygoogle,\.ads$/
 */market-$script
 ! https://github.com/xinggsf/Adblock-Plus-Rule/issues/23
 ||acs.$domain=~youku.com|~tudou.com
@@ -244,6 +258,11 @@ _campaign=$popup
 !### NoCoin Filter List ###
 ||github.io^$third-party,xmlhttprequest,domain=~facebook.com|~gametactic.org|~github.com|~github.io|~tumblr.com|~wottactic.com
 !###########################
+!
+!### Hungarian filter ###
+! https://github.com/AdguardTeam/AdguardFilters/issues/84173
+/^##\.ad$/
+!###############
 !
 !----- TEMPORARY -----
 !----- TEMPORARY -----

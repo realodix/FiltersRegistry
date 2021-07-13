@@ -6,12 +6,12 @@
 ! License: http://creativecommons.org/licenses/by/3.0/
 ! Homepage: http://www.fanboy.co.nz/
 ! Reporting Issues: https://github.com/ryanbr/fanboy-adblock/issues
-! !
+!
 ! Legal stuff (T&C's).
 ! In no event shall Fanboy List, or the list author be liable for any indirect, direct, punitive, special, incidental, or consequential damages whatsoever.
 ! By downloading or viewing, or using this list, you are accepting these terms and the license.
 !
-&referer=$image,script,domain=~digitaltrends.com|~sportdiver.com|~gismeteo.ru|~vuokraovi.com|~24ur.com|~cdon.dk|~cdon.fi|~cdon.no|~cdon.se|~ratp.fr|~skype.com
+&referer=$image,script,domain=~ice.hockey|~digitaltrends.com|~sportdiver.com|~gismeteo.ru|~vuokraovi.com|~24ur.com|~cdon.dk|~cdon.fi|~cdon.no|~cdon.se|~ratp.fr|~skype.com
 -coremetrics-
 -CoreMetrics.
 -elqImg.
@@ -333,6 +333,10 @@ _webtrends_
 _wtBase.js
 _wtbaseV2.
 _wtInit.js
+! Test to fix youtube ads
+||music.youtube.com^$csp=worker-src 'none'
+||www.youtube.com^$csp=worker-src 'none'
+!
 ! Fingerprinting
 ||academy.com/webcontent/
 ||att.com/public/
@@ -343,6 +347,7 @@ _wtInit.js
 ||discover.com/staticweb/
 ||discovercard.com/clientlibs/
 ||eddiebauer.com/resource/
+||fandango.com/resource/
 ||finishline.com/fufhpqdn/
 ||fredmeyer.com/kkhepdqgay/
 ||groupon.com/resource/
@@ -376,7 +381,7 @@ healthline.com##.window-wrapper
 ! videocardz.com
 ! wccftech.com
 ! utag
-@@||tags.tiqcdn.com/utag/*/utag.js$script,domain=mediaset.it|cbsnews.com|bleacherreport.com|cnet.com|mediaset.it|politico.com
+@@||tags.tiqcdn.com/utag/*/utag.js$script,domain=welt.de|mediaset.it|cbsnews.com|bleacherreport.com|cnet.com|mediaset.it|politico.com
 ||tags.tiqcdn.com/utag/$script
 ! Youtube test scripts
 ||youtube-nocookie.com/api/stats/ads?
@@ -392,7 +397,7 @@ healthline.com##.window-wrapper
 ! https://middycdn-a.akamaihd.net/bootstrap/bootstrap.js (From tennis365.com)
 ||akamaihd.net/bootstrap/bootstrap.js
 ! favicon tracking
-/favicon.ico$image,third-party,domain=~apple.com|~douban.com|~bahn.de|~winfuture.de|~bt.com|~ebay.com.au|~ebay.com|~ebay.co.uk|~go.com|~github.com|~microsoft.com|~stackexchange.com|~stackoverflow.com|~askubuntu.com|~reddit.com|~4chan.org|~twitter.com|~live.com|~espn.com|~yahoo.com
+/favicon.ico$image,third-party,domain=~streameast.live|~apple.com|~douban.com|~bahn.de|~winfuture.de|~bt.com|~ebay.com.au|~ebay.com|~ebay.co.uk|~go.com|~github.com|~microsoft.com|~stackexchange.com|~stackoverflow.com|~askubuntu.com|~reddit.com|~4chan.org|~twitter.com|~live.com|~espn.com|~yahoo.com|~jit.si
 ! push notifications test filter
 ##.open.pushModal
 !
@@ -459,6 +464,10 @@ nautil.us###adpayload
 ||wallkit.net^$third-party
 ||washingtonpost.com^*/pwapi-proxy.min.js
 ! UBo-specific blocks
+newrepublic.com###pwPopups
+spectator.co.uk##.MeterBanner-module__banner
+stripes.com###pelcro-app
+stripes.com##.pelcro-prefix-view
 theatlantic.com###paywall
 !
 .gsqx2fkx78q.$script,domain=goal.com
@@ -471,6 +480,7 @@ theatlantic.com###paywall
 ###topstuff > #wmxmsg
 ##.spnf_ticker
 ##iframe[src^="https://isupportjournalism.com/"][style]
+@@||thepiratebay.org/cdn-cgi/challenge-platform/$~third-party
 @@||thepiratebay.org^*/details.js|
 @@||thepiratebay.org^*/effects.js|
 @@||thepiratebay.org^*/prototype.js|
@@ -686,6 +696,7 @@ youporn.com###adblock_1
 ||ooyala.com/3rdparty/visible_measures_
 ||p.d.*.com/v1/$third-party
 ||p.w.*.com/s/$xmlhttprequest,stylesheet
+||painel.otzads.net^$third-party
 ||preferences.truste.com^$third-party
 ||privacy-policy.truste.com^$third-party
 ||pubnub.com/time/*uuid=$third-party
@@ -1585,42 +1596,6 @@ wbur.org#@#.adsbox
 @@||vip.townnews.com^$script,domain=stltoday.com
 stltoday.com##.social-share-link
 stltoday.com##.tnt-ads-container
-! kinja.com
-@@||avclub.com^$generichide
-@@||deadspin.com^$generichide
-@@||earther.com^$generichide
-@@||gizmodo.com^$generichide
-@@||jalopnik.com^$generichide
-@@||jezebel.com^$generichide
-@@||kinja.com^$generichide
-@@||lifehacker.com^$generichide
-@@||splinternews.com^$generichide
-@@||theroot.com^$generichide
-! theroot.com
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com###sharingfooter
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com###taboola-below-article-thumbnails
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.contained-ad-container
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.contained-ad-shaft
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.footer-social
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.js_ad-dynamic
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.js_ad-top-banner
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.js_contained-ad-container
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.mezzanine
-kinja.com,lifehacker.com,gizmodo.com,deadspin.com,theroot.com,jalopnik.com,earther.com,splinternews.com,jezebel.com,avclub.com##.newsletter-subscribe
-! cnet.com
-! @@||cnet.com^$generichide
-cnet.com###gdpr_area
-cnet.com###googleplus
-cnet.com##.ad-incontent-ad-plus-billboard-top
-cnet.com##.ad-mpu-plus-top
-cnet.com##.skybox-collapseBtn.skybox-closeBtn
-cnet.com##.social-inner
-cnet.com##.socialSharing
-cnet.com##.type-native
-cnet.com##div[id^="leader-top-"]
-cnet.com##div[id^="nav-ad-"]
-cnet.com#@#.trc_elastic
-cnet.com#@#div[id^="trc_wrapper_"]
 ! doridro.net
 @@||doridro.net^$generichide
 ! indianhotcomics.com
@@ -2896,6 +2871,7 @@ xkorean.net##a[href*="&aff_id"]
 @@||aarp.net/etc/aarp/statics/global/js/omniture*.js
 @@||abcnews.com/assets/flash/kdp/omniturePlugin.swf
 @@||abcotvs.net^*/analytics/VideoHeartbeat.min.js
+@@||accounts.google.com/gsi/client$script,domain=jiji.co.ke
 @@||adobe.com/uber/js/*s_code
 @@||adobe.com/www.adobe.com/uber/js/pdc_s_code.js
 @@||adziff.com/pcmag/images/zd_footer_logo.png$image,domain=extremetech.com
@@ -2991,6 +2967,7 @@ xkorean.net##a[href*="&aff_id"]
 @@||interflora.co.uk/kernel/coremetrics/eluminate.js
 @@||iocdn.coremetrics.com^$domain=boscovs.com
 @@||itworld.com/elqNow/$script
+@@||jorito.net^*/1pixel.gif$~third-party
 @@||js.nyt.com/js/app/analytics/wtbase.js$domain=nytimes.com
 @@||jsonline.com/templates/Proxy.api?
 @@||juniper.net/elqNow/$script
@@ -3049,6 +3026,7 @@ xkorean.net##a[href*="&aff_id"]
 @@||poste.it/cerca-app/js/app/webtrends_service.js$script,~third-party
 @@||pricegrabber.com/js/combine.js.php?*=s_code_h.
 @@||pricegrabber.com/js/combine.js.php?*_js_code.
+@@||pwt.soundcloud.com/static/sc/*/pagespeed.js$script,domain=secure.soundcloud.com
 @@||quill.com/js/Omniture/quill_s_code.js?
 @@||rentals.com/assets/*webtrends-
 @@||rentals.com/javascripts/primedia-webtrends-

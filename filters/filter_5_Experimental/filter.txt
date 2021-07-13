@@ -142,6 +142,7 @@
 ! smartJSONParseOverride('adPlacements', [], /.*/);
 ! smartJSONParseOverride('playerAds', [], /.*/);
 ! youtube-nocookie.com,youtube.com#%#(function(){var overrideObject=function(obj,propertyName,overrideValue){var overriden=false;for(var key in obj)if(obj.hasOwnProperty(key)&&key===propertyName){obj[key]=overrideValue;overriden=true}else if(obj.hasOwnProperty(key)&&typeof obj[key]==="object")if(overrideObject(obj[key],propertyName,overrideValue))overriden=true;return overriden};var smartJSONParseOverride=function(propertyName,overrideValue,reStack){var realParse=JSON.parse;JSON.parse=function(text,reviver){var obj=realParse(text,reviver);if(!obj)return obj;var stackTrace=(new Error).stack;if(reStack.test(stackTrace))if(overrideObject(obj,propertyName,overrideValue));return obj}};smartJSONParseOverride("adPlacements",[],/.*/);smartJSONParseOverride("playerAds",[],/.*/)})();
+
 !
 ! Rules that are restricted to one or more domains.
 ! This section contain any type of rule grouped by domain.
@@ -243,6 +244,9 @@
 ! Rules which are restricted to one or more domains.
 ! This section contain any type of rule grouped by domain.
 !
+!+ PLATFORM(android, ios, ext_android_cb)
+/^https?:\/\/yandex\.(by|kz|ru|ua|uz)\/images\/_[a-z]{4}\/[a-z0-9]{8,}\/.*\/[a-zA-Z0-9_\-]{150,}/$xmlhttprequest,~third-party
+
 !
 ! Whitelist
 !
@@ -266,6 +270,7 @@
 ! Mobile advertising networks known rotator domains
 ! Used to show ads in mobile apps and websites
 !
+reddit.com##.CommentsPage > article[id][class][style*="z-index: 1;"]
 !#endif
 !
 ! Filters for adguard without safari
@@ -279,7 +284,7 @@
 ! Mobile advertising networks known rotator domains
 ! Used to show ads in mobile apps and websites
 !
-
+reddit.com##.CommentsPage > article[id][class][style*="z-index: 1;"]
 !-------------------------------------------------------------------!
 !---------------------- Dangerous rules ----------------------------!
 !-------------------------------------------------------------------!
@@ -289,10 +294,10 @@
 !
 !################## For advertisement ##################
 !
-! VAST video ads
-!+ NOT_PLATFORM(windows, mac, android, ext_ff)
-||damoh.*.de^$redirect=nooptext,domain=pcgames.de|t-online.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/64754
-||video-weaver.*.hls.ttvnw.net/v*/playlist/*.m3u8$replace=/#EXT-X-DATERANGE:ID="stitched-ad[\s\S]*(#EXT-X-PROGRAM-DATE-TIME)(?![\s\S]*?#EXTINF:\d\.\d+\,live)[\s\S]*|(#EXT-X-DATERANGE:ID="stitched-ad[\s\S]*?(#EXT-X-PROGRAM-DATE-TIME)([\s\S]*?(#EXTINF:\d\.\d+\,live)))/\$5/
+! ||video-weaver.*.hls.ttvnw.net/v*/playlist/*.m3u8$replace=/#EXT-X-DATERANGE:ID="stitched-ad[\s\S]*(#EXT-X-PROGRAM-DATE-TIME)(?![\s\S]*?#EXTINF:\d\.\d+\,live)[\s\S]*|(#EXT-X-DATERANGE:ID="stitched-ad[\s\S]*?(#EXT-X-PROGRAM-DATE-TIME)([\s\S]*?(#EXTINF:\d\.\d+\,live)))/\$5/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/63128
 tumblr.com###base-container div[style="height:0;display:flex;flex-direction:column;overflow:hidden"] + div:not([class]):not([id]) > div[class]:not([data-id]):not([class*=" "])
+!
+!################## For tracking ##################
+||uim.tifbs.net/js/2048.js

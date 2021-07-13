@@ -32,8 +32,10 @@ media.cms.markiza.sk##+js(set, settings.ads, false)
 media.joj.sk##+js(set, settings.ads, false)
 ! Rule "media.joj.sk##+js(set, Rmp.params.genderSelectionUrl, undefined)" converted to: "media.joj.sk#%#//scriptlet('ubo-set.js', 'Rmp.params.genderSelectionUrl', 'undefined')"
 media.joj.sk##+js(set, Rmp.params.genderSelectionUrl, undefined)
-! Rule "mobilenet.cz,fzone.cz,fdrive.cz##+js(aopr, App.adBlock)" converted to: "mobilenet.cz,fzone.cz,fdrive.cz#%#//scriptlet('ubo-aopr.js', 'App.adBlock')"
-mobilenet.cz,fzone.cz,fdrive.cz##+js(aopr, App.adBlock)
+! Rule "mobilenet.cz,fzone.cz,fdrive.cz##+js(set, App.adBlock.check, noopFunc)" converted to: "mobilenet.cz,fzone.cz,fdrive.cz#%#//scriptlet('ubo-set.js', 'App.adBlock.check', 'noopFunc')"
+mobilenet.cz,fzone.cz,fdrive.cz##+js(set, App.adBlock.check, noopFunc)
+! Rule "mobilenet.cz,fzone.cz,fdrive.cz##+js(set, App.positions.init, noopFunc)" converted to: "mobilenet.cz,fzone.cz,fdrive.cz#%#//scriptlet('ubo-set.js', 'App.positions.init', 'noopFunc')"
+mobilenet.cz,fzone.cz,fdrive.cz##+js(set, App.positions.init, noopFunc)
 ! Rule "||mrezadosa.com^$3p" converted to: "||mrezadosa.com^$third-party"
 ||mrezadosa.com^$3p
 ! Rule "navratdoreality.cz##+js(aeld, ended)" converted to: "navratdoreality.cz#%#//scriptlet('ubo-aeld.js', 'ended')"
@@ -54,12 +56,16 @@ sauto.cz##+js(nano-stb, vendor-load, 3000)
 sector.sk,kinema.sk###frs:style(margin-top: 100px !important;)
 ! Rule "search.seznam.cz,clanky.seznam.cz##.Result--organic:not(:has([data-dot-data])):remove()" converted to: "search.seznam.cz,clanky.seznam.cz#$?#.Result--organic:not(:has([data-dot-data])) { remove: true; }"
 search.seznam.cz,clanky.seznam.cz##.Result--organic:not(:has([data-dot-data])):remove()
+! Rule "sreality.cz##+js(nosiif, checkRods)" converted to: "sreality.cz#%#//scriptlet('ubo-nosiif.js', 'checkRods')"
+sreality.cz##+js(nosiif, checkRods)
 ! Rule "super.cz##+js(ra, style, body)" converted to: "super.cz#%#//scriptlet('ubo-ra.js', 'style', 'body')"
 super.cz##+js(ra, style, body)
 ! Rule "svetandroida.cz##+js(aopr, detectAdBlocker)" converted to: "svetandroida.cz#%#//scriptlet('ubo-aopr.js', 'detectAdBlocker')"
 svetandroida.cz##+js(aopr, detectAdBlocker)
-! Rule "titulky.com##+js(acis, $, head)" converted to: "titulky.com#%#//scriptlet('ubo-acis.js', '$', 'head')"
-titulky.com##+js(acis, $, head)
+! Rule "titulky.com##+js(ra, style, div[id^="head"])" converted to: "titulky.com#%#//scriptlet('ubo-ra.js', 'style', 'div[id^="head"]')"
+titulky.com##+js(ra, style, div[id^="head"])
+! Rule "titulky.com##+js(set, showBanner600, true)" converted to: "titulky.com#%#//scriptlet('ubo-set.js', 'showBanner600', 'true')"
+titulky.com##+js(set, showBanner600, true)
 ! Rule "titulky.com##+js(aeld, load)" converted to: "titulky.com#%#//scriptlet('ubo-aeld.js', 'load')"
 titulky.com##+js(aeld, load)
 ! Rule "titulky.com##+js(aopr, onload)" converted to: "titulky.com#%#//scriptlet('ubo-aopr.js', 'onload')"
@@ -78,8 +84,8 @@ youradio.cz##+js(nofab)
 ||redirector.gvt1.com/videoplayback/id/$media,domain=youradio.cz,redirect=noop-1s.mp4
 ! Rule "zing.cz##div.jeg_topbar:style(margin-bottom: 0px !important;)" converted to: "zing.cz#$#div.jeg_topbar { margin-bottom: 0px !important; }"
 zing.cz##div.jeg_topbar:style(margin-bottom: 0px !important;)
-! Rule "zive.cz##+js(acis, $, zivfull)" converted to: "zive.cz#%#//scriptlet('ubo-acis.js', '$', 'zivfull')"
-zive.cz##+js(acis, $, zivfull)
+! Rule "zive.cz##+js(acis, $, rdt)" converted to: "zive.cz#%#//scriptlet('ubo-acis.js', '$', 'rdt')"
+zive.cz##+js(acis, $, rdt)
 ! Rule "@@||seznamzpravy.cz^$ghide" converted to: "@@||seznamzpravy.cz^$generichide"
 @@||seznamzpravy.cz^$ghide
 ! Rule "*$xhr,redirect-rule=nooptext,domain=seznamzpravy.cz" converted to: "*$xmlhttprequest,redirect-rule=nooptext,domain=seznamzpravy.cz"
@@ -88,6 +94,8 @@ zive.cz##+js(acis, $, zivfull)
 *$xhr,redirect-rule=nooptext,domain=seznamzpravy.cz,badfilter
 ! Rule "@@.png$xhr,domain=seznamzpravy.cz" converted to: "@@.png$xmlhttprequest,domain=seznamzpravy.cz"
 @@.png$xhr,domain=seznamzpravy.cz
+! Rule "seznamzpravy.cz##+js(nosiif, checkRods)" converted to: "seznamzpravy.cz#%#//scriptlet('ubo-nosiif.js', 'checkRods')"
+seznamzpravy.cz##+js(nosiif, checkRods)
 ! Rule "idnes.cz,novinky.cz,aktualne.cz,sport.aktuality.sk,reflex.cz,zive.cz,mobilmania.cz,e15.cz,blesk.cz,ahaonline.cz,super.cz,auto.cz,maminka.cz,autorevue.cz,vareni.cz,osobnosti.cz,sport.cz,lidovky.cz,iprima.cz,kupi.cz,kinobox.cz,cnews.cz,zeny.cz,expres.cz,tiscali.cz,sport.cz,extra.cz,onetv.cz,dama.cz,g.cz,chip.cz,mojecelebrity.cz,spisovatele.cz,modnipeklo.cz,info.cz,lupa.cz,karaoketexty.cz,hnonline.sk,emimino.cz,vitalion.cz,mojezdravi.cz,abicko.cz,arome.cz,labuznik.cz,fights.cz,nasepenize.cz,euro.cz,televizeseznam.cz##+js(acis, atob)" converted to: "idnes.cz,novinky.cz,aktualne.cz,sport.aktuality.sk,reflex.cz,zive.cz,mobilmania.cz,e15.cz,blesk.cz,ahaonline.cz,super.cz,auto.cz,maminka.cz,autorevue.cz,vareni.cz,osobnosti.cz,sport.cz,lidovky.cz,iprima.cz,kupi.cz,kinobox.cz,cnews.cz,zeny.cz,expres.cz,tiscali.cz,sport.cz,extra.cz,onetv.cz,dama.cz,g.cz,chip.cz,mojecelebrity.cz,spisovatele.cz,modnipeklo.cz,info.cz,lupa.cz,karaoketexty.cz,hnonline.sk,emimino.cz,vitalion.cz,mojezdravi.cz,abicko.cz,arome.cz,labuznik.cz,fights.cz,nasepenize.cz,euro.cz,televizeseznam.cz#%#//scriptlet('ubo-acis.js', 'atob')"
 idnes.cz,novinky.cz,aktualne.cz,sport.aktuality.sk,reflex.cz,zive.cz,mobilmania.cz,e15.cz,blesk.cz,ahaonline.cz,super.cz,auto.cz,maminka.cz,autorevue.cz,vareni.cz,osobnosti.cz,sport.cz,lidovky.cz,iprima.cz,kupi.cz,kinobox.cz,cnews.cz,zeny.cz,expres.cz,tiscali.cz,sport.cz,extra.cz,onetv.cz,dama.cz,g.cz,chip.cz,mojecelebrity.cz,spisovatele.cz,modnipeklo.cz,info.cz,lupa.cz,karaoketexty.cz,hnonline.sk,emimino.cz,vitalion.cz,mojezdravi.cz,abicko.cz,arome.cz,labuznik.cz,fights.cz,nasepenize.cz,euro.cz,televizeseznam.cz##+js(acis, atob)
 ! Rule "idnes.cz,novinky.cz,aktualne.cz,sport.aktuality.sk,reflex.cz,zive.cz,mobilmania.cz,e15.cz,blesk.cz,ahaonline.cz,super.cz,auto.cz,maminka.cz,autorevue.cz,vareni.cz,osobnosti.cz,sport.cz,lidovky.cz,iprima.cz,kupi.cz,kinobox.cz,cnews.cz,zeny.cz,expres.cz,tiscali.cz,sport.cz,extra.cz,onetv.cz,dama.cz,g.cz,chip.cz,mojecelebrity.cz,spisovatele.cz,modnipeklo.cz,info.cz,lupa.cz,karaoketexty.cz,hnonline.sk,emimino.cz,vitalion.cz,mojezdravi.cz,abicko.cz,arome.cz,labuznik.cz,fights.cz,nasepenize.cz,euro.cz,televizeseznam.cz##+js(acis, String.fromCharCode)" converted to: "idnes.cz,novinky.cz,aktualne.cz,sport.aktuality.sk,reflex.cz,zive.cz,mobilmania.cz,e15.cz,blesk.cz,ahaonline.cz,super.cz,auto.cz,maminka.cz,autorevue.cz,vareni.cz,osobnosti.cz,sport.cz,lidovky.cz,iprima.cz,kupi.cz,kinobox.cz,cnews.cz,zeny.cz,expres.cz,tiscali.cz,sport.cz,extra.cz,onetv.cz,dama.cz,g.cz,chip.cz,mojecelebrity.cz,spisovatele.cz,modnipeklo.cz,info.cz,lupa.cz,karaoketexty.cz,hnonline.sk,emimino.cz,vitalion.cz,mojezdravi.cz,abicko.cz,arome.cz,labuznik.cz,fights.cz,nasepenize.cz,euro.cz,televizeseznam.cz#%#//scriptlet('ubo-acis.js', 'String.fromCharCode')"
@@ -102,9 +110,5 @@ Error: "Unknown modifier: ~object-subrequest" in the rule: ".cz/ads/$~object-sub
 indian-tv.cz,nerdfix.cz##a:matches-css-after(content: /r/i):upward(2) > *:nth-child(-n+2)
 ! Invalid selector:
 indian-tv.cz,nerdfix.cz##a:has-text(/reklama/i):upward(2) > *:nth-child(-n+2)
-Error: "Unknown modifier: redirect-rule=1x1.gif" in the rule: "*$image,redirect-rule=1x1.gif,domain=seznamzpravy.cz"
+Error: "$redirect modifier is invalid" in the rule: "*$image,redirect-rule=1x1.gif,domain=seznamzpravy.cz"
 *$image,redirect-rule=1x1.gif,domain=seznamzpravy.cz
-Error: "Unknown modifier: redirect-rule=nooptext" in the rule: "*$xmlhttprequest,redirect-rule=nooptext,domain=seznamzpravy.cz"
-*$xmlhttprequest,redirect-rule=nooptext,domain=seznamzpravy.cz
-Error: "Unknown modifier: redirect-rule=nooptext" in the rule: "*$xmlhttprequest,redirect-rule=nooptext,domain=seznamzpravy.cz,badfilter"
-*$xmlhttprequest,redirect-rule=nooptext,domain=seznamzpravy.cz,badfilter
