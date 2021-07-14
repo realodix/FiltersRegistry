@@ -4802,6 +4802,10 @@ forums.rusmedserv.com,vsthouse.ru,primpogoda.ru,gitjournal.tech#%#//scriptlet("a
 ! livejournal.com, razlozhi.ru
 ! LiveJournal blogs with separate domains
 ! vadimrazumov.ru, levik.blog, varlamov.ru, lena-miro.ru, olegmakarenko.ru, periskop.su
+!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)
+razlozhi.ru#$#body > div[style*="background: url("][style*="/default/bg.png"] > div[style$="px;"] { width: 100% !important }
+razlozhi.ru#$#body > div[style*="background: url("][style*="/default/bg.png"] > div[style^="top:"] ~ div[class]:not([style]) { left: 100% !important; }
+!#endif
 !#if (!ext_ublock)
 shakko.ru,vadimrazumov.ru,levik.blog,varlamov.ru,lena-miro.ru,olegmakarenko.ru,periskop.su,livejournal.com#%#//scriptlet("abort-on-property-read", "Object.prototype.showAd")
 razlozhi.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.initTime')
@@ -27249,15 +27253,16 @@ quotev.com#$#body #res_area ::selection { background-color: #3297FD!important; }
 !
 !--- JS ----
 !
+webtoons.com#%#//scriptlet('remove-attr', 'onselectstart|ondragstart|oncontextmenu', 'img[class="_images"]')
 expertology.ru#%#//scriptlet('abort-on-property-write', 'document.oncopy')
 deepl.com#%#//scriptlet("set-constant", "Object.prototype.getFooterText", "undefined")
 electricalvoice.com#%#//scriptlet("abort-on-property-write", "image_save_msg")
 foodnavigator.com#%#//scriptlet("set-constant", "wrbm_gb.copyAlert", "undefined")
 brunch.co.kr#%#//scriptlet('prevent-addEventListener', 'keydown')
 minepuls.tistory.com#%#//scriptlet('remove-attr', 'onselectstart|ondragstart|oncontextmenu|onpaste|oncopy', 'body')
-webtoon.daum.net,brunch.co.kr,page.kakao.com,fmkorea.com#%#//scriptlet('prevent-addEventListener', 'contextmenu')
-webtoon.daum.net,page.kakao.com,fmkorea.com#%#//scriptlet('prevent-addEventListener', 'dragstart')
-fmkorea.com#%#//scriptlet('prevent-addEventListener', 'selectstart')
+webtoons.com,webtoon.daum.net,brunch.co.kr,page.kakao.com,fmkorea.com#%#//scriptlet('prevent-addEventListener', 'contextmenu')
+webtoons.com,webtoon.daum.net,page.kakao.com,fmkorea.com#%#//scriptlet('prevent-addEventListener', 'dragstart')
+webtoons.com,fmkorea.com#%#//scriptlet('prevent-addEventListener', 'selectstart')
 semesters.in#%#//scriptlet('set-constant', 'disableEnterKey', 'noopFunc')
 semesters.in#%#//scriptlet('set-constant', 'disable_copy', 'noopFunc')
 semesters.in#%#//scriptlet('set-constant', 'disable_copy_ie', 'noopFunc')
