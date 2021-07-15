@@ -4540,13 +4540,14 @@ rambler.ru#@#.text-ads
 rambler.ru#@#.text-ad-links
 !#safari_cb_affinity
 !#endif
+top100.rambler.ru##body > noscript ~ iframe[src^="https://id.rambler.ru/"] + div[style^="position:"]
 ! rambler.ru - leftovers on the main page
 www.rambler.ru#?#.commercial-branding div[class]:has(> div[class][style^="height:"]):not(:has(> a[href*="rambler.ru/"]))
 www.rambler.ru#?#main header ~ div div[class]:has(> div[class] > div[id] > script:contains(/^if\s?\(!window\..*{"status":/))
 www.rambler.ru#?#main header ~ div div[class]:has(> div[class] > div[id]:empty)
 ! rambler.ru - leftovers (new interface)
 www.rambler.ru#?#script:not([src]) ~ div[class] > div:first-child div:has(> div[style^="height:"] > div div[id]:empty)
-news.rambler.ru#$?##root div[data-blocks] > div[class] div[data-rnet]:upward(2) { min-height: 0 !important; }
+news.rambler.ru,kino.rambler.ru,sport.rambler.ru,auto.rambler.ru,finance.rambler.ru,woman.rambler.ru,weekend.rambler.ru,travel.rambler.ru,doctor.rambler.ru#$?##root div[data-blocks] > div[class] div[data-rnet]:upward(2) { min-height: 0 !important; }
 rambler.ru#$##root div[data-blocks] div:not([aria-label]):empty { min-height: 0 !important; }
 rambler.ru#$#div[data-blocks="top_news_block"] ~ div[class] > div:not([id]):first-child div[class] > div[class]:empty { min-height: 0 !important; }
 horoscopes.rambler.ru#?##root > div[class]:has(div > div[id] > script:contains(/if\s?\(!window\..*"status":/))
@@ -12482,7 +12483,7 @@ ulule.com###react-ulule-header > div[class="sc-gojNiO gBoKcs"]
 xlbygg.se##.cookievarning-wrap:not(body):not(html)
 tvguide.com##body > div[x-enc][id^="-m_"][class^="-"]
 appledaily.com###div-GDPR-message
-opetkart.com.tr,opet.com.tr##.fixed_cerez
+opetfuchs.com.tr,opetkart.com.tr,opet.com.tr##.fixed_cerez
 bhub.com.ua##.policy-cookies
 ee.co.uk#$#.cookie-banner__wrapper { display: none!important; }
 ee.co.uk#$#body { overflow: visible!important; position: unset!important; padding-right: 0!important; }
@@ -24349,6 +24350,8 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 !
 ! Fixing the issues
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/88236
+@@||d2r1yp2w7bby2u.cloudfront.net/js/a.js$domain=lottiefiles.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/80209
 !+ PLATFORM(ios, ext_safari)
 @@||doc.dovecot.org/configuration_manual/push_notification/
