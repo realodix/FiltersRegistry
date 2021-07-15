@@ -133,6 +133,8 @@
 ! Eimg.jp
 ||adingo.jp.eimg.jp^
 !
+||blogroll.click^
+||ad-nex.com^$third-party
 ||js.winc-ad.com^
 ||cdn.neppa-ad.com^
 ||affil.jp^$third-party
@@ -816,9 +818,9 @@ blog.shinobi.jp#?#div.EntryTitle:has(a[href=""]:contains([PR]))
 fightingirl.com#?#article > section:has(img[src^="http://koukoku."])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/58879
 moeimg.net#?##main-2 > .post:has(> .pc_ad:only-child)
-! https://github.com/AdguardTeam/AdguardFilters/issues/58587
-weathernews.jp#?#.block:has([id^=div-gpt-ad])
-weathernews.jp#?#.block:has(script[src$="/yads.js"])
+! https://github.com/AdguardTeam/AdguardFilters/issues/88333
+weathernews.jp#?##main > section.block > div[style] > div[id^="div-gpt-ad"]:upward(2)
+weathernews.jp#?##sub > section.block > div[style^="width:100%; margin:0 auto"]:upward(1)
 ejje.weblio.jp#?#.mainBlock > #ejje2ndDicRecommendAdId:upward(1)
 ejje.weblio.jp#?#.mainBlock > .flex-rectangle-ads-frame:upward(1)
 ejje.weblio.jp#?#.sideBlock:has([id$=AdId])
@@ -1207,6 +1209,8 @@ iza.ne.jp#$#.sideFixedWrapper { position: relative!important; }
 .jp/ufo/$script,third-party
 .jp/Zen?
 /__sys__inactive_message.js
+/ad/js/sp_side.js
+/ad/js/tokimeki_af.js
 /ad?cid=
 /ad_bomb/*
 /ad_parts.
@@ -1219,12 +1223,15 @@ iza.ne.jp#$#.sideFixedWrapper { position: relative!important; }
 /advalue_
 /banimg/*
 /images/tamakuri
+/js/ad/sp_trend_tt.js
+/js/ad/sp_tt_$script,~third-party
 /js/dlvRequest.
 /js/dlvRequest_
 /js/fix_ad.js?
 /js/ulizahtml5-advertising.
 /parts/ad/*
 /random_ad/random_ad.js
+/sp_overlay_320_50.js
 /TextAD1.
 /top/head_bnr
 /openstrap/js/meerkat_side_double_ad.js
@@ -1266,6 +1273,9 @@ news24.jp,michill.jp,fnn.jp,bengo4.com,zigsow.jp,navitime.com,cazual.tv,crank-in
 !
 ||feed.mikle.com^$domain=blog.livedoor.jp|crx7601.com|fate-rpg.jp|gadgetlife2ch.blomaga.jp|gtoys.blog.fc2.com|h1g.jp|hdouga.com|ibarakinews.jp|obutu.com|totalwar.doorblog.jp|xn--bckadddb2a0d4dnc8dwhngdtb58aya0l4a2om843g5npczp7dwh5g.com|xn--cckea5a6cidcbh6ce7ghug17a2ge3aht3nwigef51658aw7kd.com
 !
+||ero-mangalife.com/life.$subdocument
+av-sharing.com,okazurand.net##.affiliate-api-widget
+dougle.one##.ad_3rec
 macsoft.jp##.side-topad > .widget_text
 utaten.com##.footerBanner
 utaten.com##div[id^="JP_uta_"]
@@ -2833,7 +2843,8 @@ news.goo.ne.jp##.gn-partition.sp-padding15
 heartlife-matome.com##.arttop
 gamejksokuhou.com##.side_amazon
 getnews.jp##.custom-html-widget > center > a[target="_blank"] > img
-moeimg.net##div[id^="side"] > .widget-area > .widget-container
+moeimg.net###sp_list_recommend_frame + div.pc_only > div.pc_only.post:first-child
+moeimg.net##.pc_ad
 h723.blog.fc2.com##div[align="left"]
 h723.blog.fc2.com##div[align="left"] + div[style]
 h723.blog.fc2.com##.plugin1_outline:first-of-type
