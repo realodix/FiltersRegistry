@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-07-15 10:55:47 CEST
+! Last modified: 2021-07-16 10:33:17 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -52,7 +52,8 @@ aftonbladet.se##section > div:has(h3:has-text(/^annons/i))
 airam.fi#$#.body-fixed { position: unset !important; }
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,pctidningen.se,popularhistoria.se#$?#li:has(.content-label:has-text(/annons/i)) { remove: true; }
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamhalle.se,fastighetsnytt.se,market.se,resume.se##.slot-panorama:upward(1)
-aktuellsakerhet.se#$?#.td-slider > .td_module_slide:has-text(/reklamsamarbete/i) { remove: true; }
+aktuellsakerhet.se##.td-adspot-title-span:upward(1)
+aktuellsakerhet.se##a[href*="reklamsamarbete"]:upward(.td_block_wrap)
 alicestenlof.com,annicaenglund.se,ellinorlofgren.se,linnherbertsson.se,pricerunner.se#$#.noscroll { overflow: initial !important; }
 alingsastidning.se,bohuslaningen.se,gp.se,hallandsposten.se,hn.se,kungalvsposten.se,kungsbackaposten.se,lokaltidningensto.se,lwcdn.com,molndalsposten.se,stromstadstidning.se,ttela.se#%#//scriptlet('ubo-json-prune.js', 'autoplay players.*.ga acl.ads players.*.autoplay')
 alkompis.se#$#.cdk-global-scrollblock { overflow-y: initial !important; position: unset !important; }
@@ -112,6 +113,7 @@ di.se#%#//scriptlet('ubo-ra.js', 'data-auto-play,,stay')
 di.se#%#//scriptlet('ubo-set.js', 'getAdblockerStatus', 'noopFunc')
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se#%#//scriptlet('ubo-acis.js', 'showConsentDlg')
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##.carousel-caption:has(.vicky-category-label:has-text(/spons/i))
+dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##.featurette:has(.vicky-video-infobox-label:has-text(/spons/i))
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##.vicky-post-whitebox:has(.vicky-whitebox-label-text:has-text(/spons/i))
 djungeltrumman.se#%#//scriptlet('ubo-nano-sib.js', 'dt_fullpage_ad')
 djungeltrumman.se##.item:has(.label-post:has-text(/spons/i))
@@ -1391,6 +1393,8 @@ aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,pctidningen.se
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,pctidningen.se,popularhistoria.se##.scroll-message
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamhalle.se,fastighetsnytt.se,market.se,resume.se###__next > div[class^="css-"]:last-child
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamhalle.se,fastighetsnytt.se,market.se,resume.se##a[href^="/annons/"], a[href^="/native/"], .slot-module, .slot-articlemodule
+aktuellsakerhet.se##.front-slider-reklamsamarbete, .category-gastkronika-reklamsamarbete
+aktuellsakerhet.se##.td-a-rec
 alandsradio.ax,automobil.se,bike.se,byggnyheter.se,caroftheyear.se,cgi.se,dagensfastigheter.se,dagensnaringsliv.se,endurobloggen.se,energinyheter.se,fof.se,hsr.se,husbilhusvagn.se,industrinyheter.se,infrastrukturnyheter.se,inredningsnyheter.se,jarnvagsnyheter.se,kantarsifo.se,klassiker.nu,kommunal.se,kyrkanstidning.se,metallerochgruvor.se,mopedgaraget.se,papperochmassa.se,plastikoperationsforum.se,publikt.se,realtid.se,riksettan.net,sandaren.se,sjofart.ax,so-rummet.se,solenerginyheter.se,sportochfritidsnyheter.se,spraktidningen.se,stockholmsbyggnyheter.se,testfakta.se,transportochlogistik.se,ungforetagsamhet.se,vibilagare.se,viktvaktarna.se,vindkraftsnyheter.se###sliding-popup
 aldrenytt.se##div[id*="aldrenytt-"], .aldrenytt-adlabel, .aldrenytt-adlabel ~ a
 alekuriren.se###widget_code-6
@@ -1692,7 +1696,7 @@ hemtrevligt.se,tidningenhalsa.se,utemagasinet.se,vagabond.se###facebookSlideIn
 hippson.se##.presentedby, .presentedby ~ *
 hippson.se##.sponsorpuff
 hitta.se###__next > div[class^="style_notification"]
-hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"]
+hitta.se##[class*="dummyAd"], [class*="StyledAdSlot"], [data-bind*="Ad"], div[class^="GraphicAd_"], [class*="adContainer"]
 hitta.se##[class^="styleManual_mainContentBox"] > div[style^="min-height"]:first-of-type
 hitta.se##[data-trackimp], .integration-txt, .section-details--alb
 hittahem.se##.user-consent.active
