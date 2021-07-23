@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-07-22 09:34:09 CEST
+! Last modified: 2021-07-23 13:30:13 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -327,6 +327,7 @@ teknikensvarld.se#$#.article__body__preview::before { background: none !importan
 teknikensvarld.se#$#.article__body__preview { height: auto !important; overflow: visible !important; }
 tekniknytt.se##.label:has-text(/samarbete|annons|reklam|presenteras av/i):upward(a)
 teknikveckan.se##.grid-item:has(.pill:has-text(/spons/i))
+temperatur.nu##.holidAds:upward(1)
 tennisportalen.se##.td-pb-row [class*="td-pb-span"]:has(h4:has-text(/spons/i))
 thelocal.se##.article-content-member-type:has-text(/partner content/i):upward(.article-block)
 thelocal.se##.panel:has(div[class$="panel-label"]:has-text(/sponsor/i))
@@ -1341,9 +1342,9 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ?action=get_banners$domain=djungeltrumman.se
 ?url=*impse.tradedoubler.com$image
 @@/ad-block-detection-script$domain=blocket.se
-@@/ad.php$script,~third-party,domain=99mac.se|skogstok.se|temperatur.nu
+@@/ad.php$script,~third-party,domain=99mac.se|skogstok.se
 @@/admin-ajax.php?action=archive_grid$~third-party,domain=cykla.se
-@@/adserver.$script,~third-party,domain=fotosidan.se|grannar.se|utsidan.se
+@@/adserver.$script,~third-party,domain=fotosidan.se|utsidan.se
 @@/advertisement*.js$script,domain=dn.se
 @@/advertisment.js$script,~third-party,domain=wappare.se
 @@/aff/images/*$image,domain=alltforforaldrar.se
@@ -1668,7 +1669,6 @@ google.se##mobile-promo
 goteborgdirekt.se,mitti.se,vasterastidning.se##.profile-native
 goteborgsgolfaren.se##.sgpb-popup-overlay, #sgpb-popup-dialog-main-div-wrapper
 gotlandswebben.se##.header-ads-wrapper
-grannar.se##.cookiebox, .revive, .offert-promobox
 grillbloggen.nu##.rstbox
 grontvader.se##app-cookies
 hallbyhandboll.se,skiljebosk.nu##.cookiePush
@@ -2113,7 +2113,7 @@ yelp.se##.js-cookie-iframe
 ||cdn.svenskalag.se/img/sponsors$image
 ||churnkit.com^$third-party
 ||cision.com^$third-party
-||citygate.se^$~image,third-party,domain=~familj.se|~tillminne.se
+||citygate.se^$~image,third-party,domain=~familj.se|~lokus.se|~tillminne.se
 ||citygate.se^*/googleaccount$xmlhttprequest
 ||citygate.se^*/mainads$xmlhttprequest
 ||citygate.se^*/statistics$xmlhttprequest
