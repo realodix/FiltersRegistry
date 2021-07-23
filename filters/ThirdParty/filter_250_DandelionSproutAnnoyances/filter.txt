@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 08July2021v2-Beta-Compilation
+! OriginalVersion: 23July2021v1-Beta-Compilation
 ! Expires: 3 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs
@@ -519,7 +519,7 @@ zuche.com###indexmovePopularize
 zuche.com##.zc-ban-new-app
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 22July2021v2-Beta
+! OriginalVersion: 23July2021v3-Beta
 ! Expires: 5 days
 ! Description: Most anti-malware lists are pretty big and can cover a 5- or 6-digit amount of specific domains. But my list hereby claims to remove more than 25% of all known malware sites with just a 2-digit amount of entries. This is mostly done by blocking top-level domains that have become devastatingly abused by spammers, usually because they allowed for free and uncontrolled domain registrations. There's also additional categories that cover unusual malware and phishing domains that very few other lists seem to cover.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1237,7 +1237,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||justinstalledpanel.com^$all
 ||lazyfox.icu^$all
 ||monk.monster^$all
-||n0ne.cyou
 ||n0ne.cyou^$all
 ||oppen.icu^$all
 ||pens.monster^$all
@@ -1341,7 +1340,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||sandraglebova.space^$all
 ||sanyaimmink.icu^$all
 ||sareeellereypenland.casa^$all
-||savinareinwaldsteffen.site^all
+||savinareinwaldsteffen.site^$all
 ||scarlettlaycatherina.site^$all
 ||shannonmanfredoctave.site^$all
 ||shaynefrancklynwynne.site^$all
@@ -1452,9 +1451,9 @@ toorgle.net##.join
 ||unofficialtwrp.com^$document
 ||androidweblog.com^$document
 ||hardreset.info^$document
+!#if false
 ! ——— If you run a webserver of any sort, and you get incoming requests to resolve these domains, that's rarely a good sign for that requestor's intentions ———
 ! If you use AdGuard Home ≥v0.106.3, I warmly recommend manually pasting these entries into Settings → DNS Settings → Disallowed domains
-!#if false
 ||version.bind^
 ||hostname.bind^
 |pizzaseo.com^
@@ -1467,10 +1466,6 @@ toorgle.net##.join
 ||lavrov.in^
 ||fe18.ru^
 |1x1.cz^
-!#endif
-! ——— Zero-width spaces/hyphens in lookalike domains ———
-! uBO support is removed until https://github.com/uBlockOrigin/uBlock-issues/issues/1146 is resolved
-!#if !ext_ublock
 !#endif
 ! ——— Since I very, very often have to go from "raw.githubusercontent.com" to "github.com" by means of manual address bar highlighting, I feel I could need some kind of protection insurance in case I highlight 2mm off-course one day. ———
 ||githubus.com^
@@ -1551,7 +1546,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 22July2021v2-Beta
+! OriginalVersion: 23July2021v3-Beta
 ! Expires: 5 days
 ! Description: Most anti-malware lists are pretty big and can cover a 5- or 6-digit amount of specific domains. But my list hereby claims to remove more than 25% of all known malware sites with just a 2-digit amount of entries. This is mostly done by blocking top-level domains that have become devastatingly abused by spammers, usually because they allowed for free and uncontrolled domain registrations. There's also additional categories that cover unusual malware and phishing domains that very few other lists seem to cover.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -2272,7 +2267,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||justinstalledpanel.com^$redirect=nooptext,important
 ||lazyfox.icu^$redirect=nooptext,important
 ||monk.monster^$redirect=nooptext,important
-||n0ne.cyou
 ||n0ne.cyou^$redirect=nooptext,important
 ||oppen.icu^$redirect=nooptext,important
 ||pens.monster^$redirect=nooptext,important
@@ -2376,7 +2370,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||sandraglebova.space^$redirect=nooptext,important
 ||sanyaimmink.icu^$redirect=nooptext,important
 ||sareeellereypenland.casa^$redirect=nooptext,important
-||savinareinwaldsteffen.site^all
+||savinareinwaldsteffen.site^$redirect=nooptext,important
 ||scarlettlaycatherina.site^$redirect=nooptext,important
 ||shannonmanfredoctave.site^$redirect=nooptext,important
 ||shaynefrancklynwynne.site^$redirect=nooptext,important
@@ -2487,9 +2481,9 @@ toorgle.net##.join
 ||unofficialtwrp.com^$document
 ||androidweblog.com^$document
 ||hardreset.info^$document
+!#if false
 ! ——— If you run a webserver of any sort, and you get incoming requests to resolve these domains, that's rarely a good sign for that requestor's intentions ———
 ! If you use AdGuard Home ≥v0.106.3, I warmly recommend manually pasting these entries into Settings → DNS Settings → Disallowed domains
-!#if false
 ||version.bind^
 ||hostname.bind^
 |pizzaseo.com^
@@ -2502,10 +2496,6 @@ toorgle.net##.join
 ||lavrov.in^
 ||fe18.ru^
 |1x1.cz^
-!#endif
-! ——— Zero-width spaces/hyphens in lookalike domains ———
-! uBO support is removed until https://github.com/uBlockOrigin/uBlock-issues/issues/1146 is resolved
-!#if !ext_ublock
 !#endif
 ! ——— Since I very, very often have to go from "raw.githubusercontent.com" to "github.com" by means of manual address bar highlighting, I feel I could need some kind of protection insurance in case I highlight 2mm off-course one day. ———
 ||githubus.com^
@@ -4983,6 +4973,7 @@ _Cursor1.png^
 !#if !env_mobile
 !#if !env_legacy
 !#if !env_safari
+!#if !adguard_app_mac
 ! Title: 🈺 Japanese Text Softener
 ! OriginalVersion: 08July2021v1-Alpha
 ! Expires: 6 days
@@ -5004,6 +4995,7 @@ store.playstation.com#$#html[lang=ja] a { font-family: "Segoe UI", "Calibri", "V
 store.playstation.com#$#html[lang=ja] strong { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
 store.playstation.com#$#html[lang=ja] dd { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
 store.playstation.com#$#html[lang=ja] span { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+!#endif
 !#endif
 !#endif
 !#endif
