@@ -1878,9 +1878,9 @@ market.yandex.by,market.yandex.kz,market.yandex.ru,market.yandex.ua##.footer-sub
 ! Promotions (at the top)
 market.yandex.by,market.yandex.kz,market.yandex.ru,market.yandex.ua##.head-banner
 m.market.yandex.by,m.market.yandex.kz,m.market.yandex.ru,m.market.yandex.ua##.w-head-banner
-market.yandex.*##div[data-apiary-widget-id="/headBanner"]
+market.yandex.*##div[data-zone-name="HeadBanner"]
 ! Promotions (at the main page)
-market.yandex.*##div[data-apiary-widget-name="@MarketNode/MediaGallery"]
+market.yandex.*##div[data-zone-data*="bannerUrl"]:not([data-zone-name="deals-banner"])
 ! Subscription (popup)
 market.yandex.by,market.yandex.kz,market.yandex.ru,market.yandex.ua##.n-settings-notifications-popup
 ! KP subscription
@@ -4989,6 +4989,7 @@ hgtv.com#@#.showads
 !
 !
 !
+init.engineer##.alert-dismissible
 innsalzach24.de,bgland24.de#$##id-wf-abo { display: none!important; }
 innsalzach24.de,bgland24.de#$#body { overflow: visible!important; }
 audiotag.info###dclaim
@@ -25652,6 +25653,7 @@ experts-exchange.com##.ctaSolutionStickyWrapper
 theguardian.com##.contributions__adblock
 ||contributions.guardianapis.com^
 !
+timesofindia.indiatimes.com##.article_content br ~ a[href^="https://timesofindia.indiatimes.com/most-searched-products/"]
 analytics.twitter.com##.home-columns div[data-type="advertiser"]
 byjus.com#?#.sidebar > div.bgc-white:has(> div.relatedlinks-widget)
 wikipedia.org##.cn-fundraising
@@ -26421,6 +26423,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !######### JS tweaks ##########
 !##############################
 !
+! littlebyte.net - skip timer
+littlebyte.net#%#//scriptlet("adjust-setInterval", "freeRemind", "", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88701
 blyts.net#%#//scriptlet("adjust-setInterval", "contador", "", "0.02")
 blyts.net#%#AG_onLoad(function(){setTimeout(function(){if("string"===typeof gurl&&"string"===typeof links){var a=document.createElement("form");a.setAttribute("method","post");a.setAttribute("id","hash");a.setAttribute("action",gurl);var b=document.createElement("input");b.setAttribute("type","hidden");b.setAttribute("name","hash");b.setAttribute("value",links);a.appendChild(b);document.querySelector("body").appendChild(a);(a=document.querySelector("form#hash"))&&a.submit()}},300)});
