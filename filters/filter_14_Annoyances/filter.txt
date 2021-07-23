@@ -1650,7 +1650,7 @@ uploadocean.com##.down1_holder > div[style$="padding-top:10px; float:left; width
 ! https://forum.adguard.com/index.php?threads/14699/
 ||mir-avto-moto.ru^$domain=spec-komp.com
 ! cnet.com - popup player with autoplay
-cnet.com#%#AG_onLoad(function(){ AG_removeElementBySelector('div.featuredVideo'); });
+cnet.com#$?#.stickyColumn + div[data-video-player] .videoPlayer { remove: true; }
 ! https://forum.adguard.com/index.php?threads/14586/
 thenextweb.com##.ica-wrapper
 ! serial.kz - предложение добавить сайт в закладки
@@ -5707,7 +5707,9 @@ simply-hentai.com##.detect-message
 capfriendly.com##.g_flbrd_ad
 capfriendly.com##.g_lbrd_top_cont
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=yellowbridge.com
-yellowbridge.com#%#AG_onLoad(function() { AG_removeElementBySelector('#pgHeaderM, #pgSkyM, #pgFooterM'); });
+yellowbridge.com#$?##pgHeaderM { remove: true; }
+yellowbridge.com#$?##pgSkyM { remove: true; }
+yellowbridge.com#$?##pgFooterM { remove: true; }
 angroid.gr#@#.an-advert-banner
 angroid.gr#@#.an-sponsored
 @@||eestatic.com/assets_js/dyn/adsbygoogle.js$domain=elespanol.com
@@ -6843,7 +6845,7 @@ filmix.ac,filmix.tech,filmix.zone##.social-counters
 ! aternos.org
 ! aternos.org$$script[tag-content="Function(atob(""Y29uc"][min-length="4000"][max-length="7000"]
 ! aternos.org#%#!function(){window.pbjs={cmd:{push:function(){}},adUnits:function(){}};window.snhb={globalSettings:{},startAuction:function(){}};window.pbjsChunk=()=>{}}();
-aternos.org#%#AG_onLoad(function() { setTimeout(function() { AG_removeElementBySelector('.ad-label'); }, 300); });
+aternos.org#$?#.ad-label { remove: true; }
 aternos.org##.ad.responsive-skyscraper
 @@||aternos.org^$generichide
 aternos.org#@##adUnit
