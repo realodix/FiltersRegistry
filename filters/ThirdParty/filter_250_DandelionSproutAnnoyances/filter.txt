@@ -518,7 +518,7 @@ zuche.com###indexmovePopularize
 zuche.com##.zc-ban-new-app
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 24July2021v1-Beta
+! OriginalVersion: 26July2021v1-Beta
 ! Expires: 5 days
 ! Description: Most anti-malware lists are pretty big and can cover a 5- or 6-digit amount of specific domains. But my list hereby claims to remove more than 25% of all known malware sites with just a 2-digit amount of entries. This is mostly done by blocking top-level domains that have become devastatingly abused by spammers, usually because they allowed for free and uncontrolled domain registrations. There's also additional categories that cover unusual malware and phishing domains that very few other lists seem to cover.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1364,6 +1364,9 @@ zombooru.com##a[href="http://www.hard55.com"]
 ! https://movsb.0x0.st/users/mia
 ||vid.me^$third-party
 ||5starhdporn.com^$subdocument,third-party
+! https://github.com/DandelionSprout/adfilt/issues/228
+||helooworld.us^$all
+||rockcabs247.in^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -4199,7 +4202,7 @@ www.m.vk.com$badfilter
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 25July2021v1-Beta
+! OriginalVersion: 27July2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -4245,8 +4248,6 @@ $removeparam=dclid
 ! https://www.apple.com/no/shop/product/MD463ZM/A/thunderbolt-til-gigabit-ethernet-adapter?afid=p239%7C1405819&cid=aos-no-aff-ir (15/11/2020)
 ! https://www.proshop.dk/HyperX-Predator-RGB-ram?cid=64e93f7a-cee2-44d9-911a-37f3eafd7b5f (23/01/2021)
 $removeparam=afid
-! Can NOT be made generic (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
-$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com
 ! https://www.digitalimpuls.no/WebPages/Produkt/ProduktInfo.aspx?plid=75672&WebSiteMapNodeID=1000001 (15/11/2020)
 $removeparam=WebSiteMapNodeID
 ! https://cdon.no/elektronikk/apple-thunderbolt-to-gigabit-ethernet-adapter-nettverksadapter-thunderbolt-gigabit-ethernet-p54223599?country=NO&g=20364854 (15/11/2020)
@@ -4254,15 +4255,8 @@ $removeparam=WebSiteMapNodeID
 ! https://clips.twitch.tv/HotGenerousBearHeyGirl?tt_content=player_title&tt_medium=clips_embed
 $removeparam=tt_content
 $removeparam=tt_medium
-! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
-! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
-$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi
 ! https://www.tv2.no/a/10534772?referral=tv2v (27/11/2020)
-||tv2.no^$removeparam=referral
-! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
-! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
-! Can NOT be made generic (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com
+$removeparam=referral,domain=tv2.no|spotify.com
 ! https://www.elgiganten.dk/product/lyd-hi-fi/hovedtelefoner/WH1000XM3B/sony-tradlose-around-ear-hovedtelefoner-wh-1000xm3-sort?scid=Pricecomparison8084162610 (27/11/2020)
 $removeparam=scid
 ! https://salming.com/sv-se/produkter/p/1099805-0416/salming-oval-fusion?trackID=79064280 (27/11/2020)
@@ -4305,8 +4299,6 @@ $removeparam=dartycid
 ! https://steamcdn-a.akamaihd.net/steam/apps/1293120/ss_260369d8b0c8ab69e3a5a66f78174af4319c4acb.jpg?t=1607504533 (11/12/2020)
 $removeparam=bbaid
 $removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com
-! https://archive.org/donate/?origin=email-2020eoyappl2smdnrfnl-v1
-||archive.org^$removeparam=origin
 ! https://blog.archive.org/matching-gifts/?iax=typage
 ||archive.org^$removeparam=iax
 ! https://www.paypal.com/myaccount/transaction/details/7CY16898V3123435J?v=1&utm_unptid=&ppid=RT000016&cnac=NO&rsta=no_NO(nb-NO)&cust=&unptid=&calc=24c08e54728d&unp_tpcid=null&page=main%3Aemail%3ART000016&pgrp=main%3Aemail&e=cl&mchn=em&s=ci&mail=sys&appVersion=1.26.0&xt=
@@ -4338,12 +4330,12 @@ $removeparam=_nc_sid
 ! https://www.tipsbladet.dk/nyhed/superliga/cv-afviser-traenerskifte-jeg-har-ikke-talt-med-kristian?eblink=artikel (14/12/2020)
 $removeparam=eblink
 ! https://www.tv2.no/?r=refresh (16/12/2020)
-||tv2.no$removeparam=r
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-987226
 ! https://contabo.com/?show=vps&utm_source=cj&utm_medium=affiliate&utm_campaign=vps&source=affiliate&AID=12454632&PID=8533995&SID=&CJEVENT=1999e98a465411eb825b03900a180510 (25/12/2020)
 $removeparam=AID
 $removeparam=CJEVENT
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-969819
-$removeparam=aid,domain=adguard.com
+$removeparam=aid,domain=adguard.com|booking.com
 ! https://account.microsoft.com/?refd=www.microsoft.com
 $removeparam=refd
 ! https://www.humblebundle.com/?hmb_source=navbar (09/01/2021)
@@ -4385,7 +4377,6 @@ $removeparam=hashb
 $removeparam=hashc
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 $removeparam=irgwc
-$removeparam=tid,domain=~mirrored.to
 $removeparam=clickid
 ! https://www.alibaba.com/toprankedsellers/index.html?spm=a2700.8293689.0.0.2ce267afXoR8Ya&cardId=15000000051127726082&topOfferIds=62108344908&categoryIds=44&tracelog=from_home_category (01/03/2021)
 $removeparam=spm
@@ -4416,7 +4407,7 @@ $removeparam=snr
 ! https://www.bing.com/search?q=hello&sp=-1&pq=hello&sk=&sc=8-5&qs=n (04/03/2021)
 ||bing.com^$removeparam=sp
 ||bing.com^$removeparam=sc
-||bing.com^$removeparam=sk
+$removeparam=sk,domain=bing.com|aliexpress.*
 ||bing.com^$removeparam=qs
 ! https://www.trouw.nl/nieuws/het-draagvlak-in-crisistijd-doet-premier-rutte-bijna-zweven-maar-hij-kan-ook-hard-vallen~bf367a86/?referrer=https%3A%2F%2Fwww.theguardian.com%2Fworld%2Fcommentisfree%2F2021%2Fmar%2F04%2Fcovid-derailed-great-hope-dutch-far-right-thierry-baudet (05/03/2021)
 $removeparam=referrer,domain=~f4map.com|~deviantart.com
@@ -4547,7 +4538,6 @@ $removeparam=wpa_plmt
 $removeparam=wpa_aduid
 $removeparam=aff_key
 $removeparam=sscid
-||banggood.com^$removeparam=SSAID
 $removeparam=rmmds
 $removeparam=act_poa
 $removeparam=utmid
@@ -4586,7 +4576,6 @@ $removeparam=custlixnkid
 $removeparam=akmClientCountry
 ||banggood.com^$removeparam=p
 $removeparam=pk_campaign
-||booking.com^$removeparam=aid
 $removeparam=hss_channel
 $removeparam=mktids
 $removeparam=mc_tc
@@ -4647,7 +4636,6 @@ $removeparam=hsCtaTracking
 ||microsoft.com^$removeparam=headerid
 ||microsoft.com^$removeparam=/^AAAA/
 $removeparam=affId
-||proicc.com^$removeparam=tblci
 ||babbel.com^$removeparam=bsc
 ||babbel.com^$removeparam=btp
 $removeparam=tblci
@@ -4663,11 +4651,10 @@ $removeparam=wt.mc_id
 $removeparam=twitchReferral
 ! ||www.google.*/search?$removeparam=client (Breaks search-term suggestions)
 $removeparam=/^shared/,domain=seura.fi|suomenkuvalehti.fi|kotiliesi.fi|tekniikanmaailma.fi|anna.fi|rakennusmaailma.fi
-$removeparam=origin,domain=yle.fi|flaticon.com|drop.com|symbolab.com
+$removeparam=origin,domain=yle.fi|flaticon.com|drop.com|symbolab.com|archive.org
 $removeparam=elqTrackId
 ||discshop.fi^$removeparam=/^ad/
 ||hammacher.com^$removeparam=promo
-||keepersecurity.com^$removeparam=campaignid
 ! https://www.netflix.com/watch/80057171?trackId=14170056&tctx=2%2C0%2Cad3cd321-a42b-461e-81d3-b18c51559559-25047246%2Ce7fede3c-e54d-4941-9849-8fb5d51dbada_37683809X10XX1622546150880%2Ce7fede3c-e54d-4941-9849-8fb5d51dbada_ROOT%2C
 ||netflix.com^$removeparam=trackId
 $removeparam=tctx
@@ -4709,17 +4696,17 @@ $removeparam=campaignid
 $removeparam=mkref
 ||play.google.com^$removeparam=shortlink
 ||play.google.com^$removeparam=pid
-||audible.$removeparam=ref
 ||audible.$removeparam=source_code
 ||audible.$removeparam=ipRedirectFrom
 ||audible.$removeparam=ipRedirectOriginalURL
+! https://www.webhallen.com/se/product/290554-ASUS-TPM-M-R2-0-Module?ref=adtraction&epi=cyDowRclgCfa
+||audible.$removeparam=ref,domain=audible.*|webhallen.no
 $removeparam=refer_code
 $removeparam=loc
 $removeparam=acampID
 ||google.$removeparam=prds
 $removeparam=pj_creativeid
 $removeparam=pj_publisherid
-||spotify.com^$removeparam=referral
 ||boson.com^$removeparam=eid
 ||dustdeal.nl^$removeparam=tracker
 $removeparam=track_campaignid
@@ -4742,14 +4729,11 @@ $removeparam=extcmp
 ! https://www.staypro.no/?at_gd=2B9E397233E3B6D5EF466E3BC0AC42F1885D8A50
 $removeparam=at_gd
 ! https://fernerjacobsen.no/?epi=STS-SHP--FernerJacobsen-Logo%7Cxid%3Afr1624121412114eah
-||fernerjacobsen.no^$removeparam=epi
+$removeparam=epi,domain=fernerjacobsen.no|webhallen.com
 ! https://www.gamerevolution.com/guides/685650-windows-11-tpm-2-0-pc-cant-run-install?amp (No one on fast networks really likes AMP, least of all uBlock Origin + 'Firefox for Android' users; 25/06/2021)
 $removeparam=amp
 ! https://inews.co.uk/opinion/matt-hancock-health-bill-huge-row-no10-boris-johnson-1067703?_gl=1*1l47swq*_ga*OUp3WnF6dklkRHNVaHBfaDJmUnFHSkR5VFBtMzV5enpSWk1XUENzWlNENGg2VmdQZHZoRVFfV3BmNXV2ZjREYQ
 $removeparam=_gl
-! https://www.webhallen.com/se/product/290554-ASUS-TPM-M-R2-0-Module?ref=adtraction&epi=cyDowRclgCfa
-||webhallen.com^$removeparam=ref
-||webhallen.com^$removeparam=epi
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-895430
 $removeparam=gtmtrack
 ! https://www.hs.fi/talous/art-2000006474289.html?share=095cb51bfd3619323ff183dd633ae8ab
@@ -4792,22 +4776,17 @@ $removeparam=Osocial
 ||hp.com^$removeparam=jumpid
 ! https://www.nytimes.com/2008/12/16/sports/othersports/16beckey.html?adxnnl=1&adxnnlx=1257549224-XSk5v9i4LDrKlVwQmlgO8A&
 $removeparam=/^adxnnl/
-! https://blog.jetbrains.com/kotlin/2021/06/kotlin-features-survey-edition-2/?mkt_tok=NDI2LVFWRC0xMTQAAAF9-3GNOHYuxznbVfWFJwaLccIFxZDcCoVn3_IUPwxq_RTzesK-rXihOxgp71Zz10Pas3LnxiN048toSrAP2Miqq858ZZZg6PMPH0KaOYbu-lQfkA
-||jetbrains.com^$removeparam=mkt_tok
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-972519
 ||aliexpress.$removeparam=/^aff_/
 ||aliexpress.$removeparam=tt
-||aliexpress.$removeparam=sk
 ||aliexpress.$removeparam=terminal_id
 $removeparam=tmLog
 $removeparam=aem_p4p_detail
 $removeparam=algo_exp_id
-||primevideo.com^$removeparam=ref_
 $removeparam=mkt_tok
 $removeparam=/^amp;/
 $removeparam=/^WT.z_/
 $removeparam=/^WT.v_/
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-987226
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1004671
 $removeparam=ampcid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1015504
@@ -4826,6 +4805,19 @@ $removeparam=MID
 ||bbc.$removeparam=at_custom3
 ||bbc.$removeparam=at_custom4
 ||bbc.$removeparam=at_campaign
+! ——— Can never be made generic ———
+! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
+$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com
+! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
+! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
+! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
+$removeparam=ref,domain=amazon.*|deal.no|expo.io|udemy.com|reddit.com|brave.com|facebook.com|arvopaperi.fi|twitch.tv|mikrobitti.fi|tivi.fi|tekniikkatalous.fi|talouselama.fi|kauppalehti.fi|uusisuomi.fi|mediuutiset.fi|sketch.com|etsy.com|geeksforgeeks.org|hs.fi|bitwarden.com|is.fi|github.io|spiegel.de|kansanuutiset.fi|bestbuy.com|shopping.google.*|target.com|bing.com|motouutiset.fi|telsu.fi|idenati.com|blogit.fi|suomi24.fi|scandinavianphoto.fi|github.com|dell.com
+! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
+! (e.g. mirrored.to, tunnistautuminen.suomi.fi)
+||comixology.$removeparam=tid
+! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
+! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
+$removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
 ||amazon.$removeparam=th
