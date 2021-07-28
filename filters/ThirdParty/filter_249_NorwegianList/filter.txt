@@ -1,7 +1,7 @@
 !
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! OriginalVersion: 20July2021v1
+! OriginalVersion: 26July2021v1
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -315,6 +315,11 @@ tipsbladet.dk##main > section.l-padding-top-lg
 dagens.dk#?#.col-300 > .wrapper-sticky:has(a[href*=casino])
 dagbladet.no##main > div[class^=Row-] > div[class^=Column-]:last-of-type
 startsiden.no##div[class*=partnerWidgetContainer]
+nocc.no##.forsideReklame2
+nocc.no##.forsideReklame
+nocc.no##.forsideInnhold
+campingportalen.no###block-annonse-blokk1
+skaunnytt.no##.sb-widget
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -740,6 +745,7 @@ _300x500pix$domain=rykindribe.dk,image
 ||cms.sona.fo/ads^
 ||r7.fo/lysing^
 ||aftenposten.no/seksjon/dist/ads-$script
+||nocc.no/System_Promoteringssaker^
 !#if false
 @@||vgtv.no$generichide
 !#endif
@@ -1009,10 +1015,8 @@ fiskeribladet.no##div[id^=banner_billboard1_]
 fiskeribladet.no##div[id^=banner_billboard1_] + .hide_on_print
 fl-arena.de##.content_right_medium_rect_ad_box
 fl-arena.de##.do_not_print.article_teaser_no_border
-fla.de###top-banner
 fla.de##.adsenseblock
 fla.de##.font-robotoregular.font10
-fla.de##.index-banner
 fla.de##div[data-glade]
 flatpanels.dk###sb-site > .hidden-xs.container
 flatpanels.dk##.hidden-xs.forsideboks2
@@ -1763,7 +1767,7 @@ finn.no#@##ad-content
 ! 🇬🇧: ——— Tries to make the web browser load files in HTTPS, if the website itself doesn't automatically redirect from HTTP to its HTTPS version ———
 ! Credit to https://raw.githubusercontent.com/Cybo1927/Hosts/master/Anti/Anti%2520Third-Party%2520HTTP for showing me the existence of this particular CSP command.
 ! Though in all fairness, you'd get better results from using https://github.com/ilGur1132/Smart-HTTPS as your main solution for these kinds of HTTPS upgrades.
-$csp=upgrade-insecure-requests,domain=skessuhorn.is|sporttv.is|bobilverden.no|win-xp.no
+$csp=upgrade-insecure-requests,domain=skessuhorn.is|sporttv.is|bobilverden.no|win-xp.no|geo.ngu.no|lofotenlinks.no|windowsnett.no|selstad.no|turnforening.no|ernaeringsradet.no|frigg.no|studentvelferd.no|luster.kommune.no|ugk.no|drs.dk|dsmu.dk|92grp.dk|kuntzanimation.dk
 ! 🇳🇴: Anti-'CPU-massakrering'
 ! 🇮🇸: And-örgjörvislatrun
 ! 🇬🇧: Anti-'CPU slaughtering'
@@ -2002,6 +2006,7 @@ sofabold.dk##.centerMgfx
 ||norskposten.com^$document
 ||oslo-tannlegene.no^$document
 ||y6.no^$all
+||havfruen4220.dk^$all
 !+ NOT_OPTIMIZED
 /?finn.no/login$document
 ! 🇳🇴: Som nevnt i diverse nyhetsartikler om svindelsider
@@ -2235,6 +2240,15 @@ sofabold.dk##.centerMgfx
 !
 !#if env_mobile
 !#endif
+!
+!#if env_chromium
+!#if env_safari
+!+ NOT_OPTIMIZED
+! OriginalVersion: 21July2021v1-Extension
+fla.de###top-banner
+fla.de##.index-banner
+!#endif
+!#endif
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
 ! 🇩🇰: ——— Vinduesviskere for betalte artikler (så de sidste par linjer i en forhåndsvisning ikke falder ud) ———
@@ -2283,7 +2297,7 @@ vg.no##div[data-test-tag=timestamp] + p + div::before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 15June2021v1-Extension
+! Last updated: 25July2021v1-Extension
 dagensbyggeri.dk#%#//scriptlet('ubo-std.js', '()', '2500')
 eurosport.*#%#//scriptlet('ubo-aeld.js', 'contextmenu')
 techstart.dk#%#//scriptlet('ubo-set.js', 'adblock', 'false')
@@ -2306,3 +2320,5 @@ gamereactor.*$$script[onError="adblockEnabled()"]
 ##div[style^="bottom: 0px;"][style*="width: 10"][style*="z-index: 2147"]
 ! https://github.com/uBlockOrigin/uAssets/issues/8648
 connery.dk#%#//scriptlet('ubo-set.js', 'adblockerAlert', 'noopFunc')
+! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/305
+no#%#//scriptlet('ubo-ra.js', 'class', '.dfp-loaded')
