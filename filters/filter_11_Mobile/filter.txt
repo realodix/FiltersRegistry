@@ -1271,8 +1271,10 @@ westseattleblog.com#@#.header-ad
 !
 ! m.winfuture.de - Tarif ad and amazon ad
 m.winfuture.de#?##main > h2:has(> a:contains(/für unter [0-9]{1,2} Euro/))
-m.winfuture.de#?##main h2:has(> a:contains(/Nur heute\:/))
+m.winfuture.de#?##main h2:has(> a:contains(/Nur heute\:|Nur diese Woche\:/))
 m.winfuture.de#?##main > h2:has(> a[href*="special/"][href*="/angebote/"])
+!! m.winfuture.de/special/X/
+m.winfuture.de#?#body > h2:has(> a:contains(/Nur heute\:|Nur diese Woche\:|Nur für [0-9]{1,} Tage|Jetzt reduziert\:/))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/87208
 drive2.ru#?#.l-container > div.c-block--mh:has(> div[id^="adfox_"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88468
@@ -2446,6 +2448,9 @@ o2.pl,onet.pl,whathifi.com,amp.n-tv.de,dni.ru,independent.co.uk,komputerswiat.pl
 ! ##.inline-ad-container
 theinventory.com,avclub.com,clickhole.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kotaku.com,lifehacker.com,splinternews.com,theinventory.com,theonion.com,theroot.com,thetakeout.com##.inline-ad-container
 !
+m.winfuture.de##body > h2[style="display: none !important;"] + .teaser
+m.winfuture.de##body > h2[style="display: none !important;"] + .teaser + .clearfix
+m.winfuture.de##body > div[align="center"]
 vivud.com##.player-spot
 vivud.com##.player-spot__title
 ||vivud.com/iframe/MOBILE_TOP_PLAYER/
