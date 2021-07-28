@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-07-27 07:26:49 CEST
+! Last modified: 2021-07-28 09:23:00 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -136,6 +136,7 @@ expressen.se##.teaser:has(a[href*="/kampanj."])
 expressen.se##.teaser:has(a[href*="/lanapengar."])
 expressen.se##.teaser:has(a[href*="/rabattkoder."])
 expressen.se##.teaser:has(a[href*="/spel.expressen.se"])
+expressen.se##.vignette--svg + a[href*="teknikensvarld."]:upward(.teaser)
 familjeliv.se#$?##articleContainer:has(.articleSuperTitle:has-text(/annons/i)) { remove: true; }
 familjeliv.se#$?#li.flm-kampanj { remove: true; }
 familjeliv.se#$?#li:has(a[href*="/kampanj/"]) { remove: true; }
@@ -465,8 +466,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1927,6 +1928,7 @@ svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, a[target="_blank"][r
 svenskorientering.se###RightDiv
 svensktgolfforum.se##[data-ad-id]
 svensktidskrift.se###bannercolumn
+sverigesingenjorer.se##.cookie-layer
 sverigeskonsumenter.se###cookie-box
 sverigesnatur.org##div[id^="sverigesNaturPopup"]
 sverigespringer.se##.cd-desktop-banner
