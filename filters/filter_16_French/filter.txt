@@ -367,7 +367,7 @@ nordpresse.be#@#.an-sponsored
 ! https://github.com/AdguardTeam/AdguardFilters/issues/19723
 @@||jetanime.co/assets/js/advertisement.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18974
-ultimate-catch.eu#%#AG_abortInlineScript(/adback/, 'document.getElementById');
+ultimate-catch.eu#%#//scriptlet("abort-current-inline-script", "document.getElementById", "adback")
 ||static.criteo.net/js/px.js^$redirect=nooptext,important,domain=ultimate-catch.eu
 ||cas.criteo.com/delivery/ajs.php^$redirect=nooptext,important,domain=ultimate-catch.eu
 !+ PLATFORM(ios, ext_android_cb)
@@ -426,7 +426,7 @@ atlasweb.net#@#.an-sponsored
 k-gen.fr#@#.an-advert-banner
 k-gen.fr#@#.an-sponsored
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7704
-liens-telechargement.com#%#AG_abortInlineScript(/Ad Blocker/, 'jQuery');
+liens-telechargement.com#%#//scriptlet("abort-current-inline-script", "jQuery", "Ad Blocker")
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb)
 @@||liens-telechargement.com^$generichide
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb)
@@ -613,9 +613,9 @@ streamgeo.net#%#AG_defineProperty('dtGonza.playeradstime', {value: -1});
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30968
 actu17.fr#%#//scriptlet("abort-on-property-write", "td_ad_background_click_link")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/25619
-mac4ever.com#%#AG_abortInlineScript(/\(\(false\?"https:":document\.location\.protocol\)\+"\/\/"\+/, 'document.getElementsByTagName');
+mac4ever.com#%#//scriptlet('abort-current-inline-script', 'document.getElementsByTagName', '/\(\(false\?"https:":document\.location\.protocol\)\+"\/\/"\+/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/25407
-laprovence.com#%#AG_abortInlineScript(/\(\(false\?"https:":document\.location\.protocol\)\+"\/\/"\+/, 'document.getElementsByTagName');
+laprovence.com#%#//scriptlet('abort-current-inline-script', 'document.getElementsByTagName', '/\(\(false\?"https:":document\.location\.protocol\)\+"\/\/"\+/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/13192
 jacquieetmicheltv.net#%#var _st = window.setTimeout; window.setTimeout = function(a, b) { if(!/target_url/.test(a)){ _st(a,b);}};
 ! https://forum.adguard.com/index.php?threads/22023/
