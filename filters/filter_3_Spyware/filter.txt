@@ -77,6 +77,8 @@
 ! https://www.eff.org/deeplinks/2021/03/googles-floc-terrible-idea
 #%#//scriptlet('set-constant', 'Document.prototype.interestCohort', 'undefined')
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/89237
+aena.es#%#//scriptlet("set-constant", "window.digitalChange", "noopFunc")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89198
 home-learn.co.kr#%#//scriptlet("set-constant", "eglc", "noopFunc")
 home-learn.co.kr#%#//scriptlet("set-constant", "eglc.op", "noopFunc")
@@ -20191,7 +20193,6 @@ $app=com.miui.analytics
 ||amptrack-dailymail-co-uk.cdn.ampproject.org^
 ||metrics-cbslocal-com.cdn.ampproject.org^
 ||startappservice.com/tracking/
-||counter.hdvb.info^
 ||tracking-server-prod-1.zenmxapps.com^
 ||config.uca.cloud.unity3d.com^
 ||api.uca.cloud.unity3d.com^
@@ -20445,6 +20446,9 @@ $app=com.miui.analytics
 ! https://github.com/AdguardTeam/CoreLibs/issues/1306
 ||rover.ebay.$image,object,script,badfilter
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/89237
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||googletagmanager.com/gtm.js$domain=aena.es
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89445
 @@||disaportal.gsi.go.jp/maps/js/counter.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88978
