@@ -518,7 +518,7 @@ zuche.com###indexmovePopularize
 zuche.com##.zc-ban-new-app
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 29July2021v3-Beta
+! OriginalVersion: 30July2021v1-Beta
 ! Expires: 5 days
 ! Description: Most anti-malware lists are pretty big and can cover a 5- or 6-digit amount of specific domains. But my list hereby claims to remove more than 25% of all known malware sites with just a 2-digit amount of entries. This is mostly done by blocking top-level domains that have become devastatingly abused by spammers, usually because they allowed for free and uncontrolled domain registrations. There's also additional categories that cover unusual malware and phishing domains that very few other lists seem to cover.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -6212,6 +6212,14 @@ toorgle.net##.join
 !#if false
 192.243.59.0/24
 !#endif
+! rule34hentai.net when uBlock Filters and AdGuard Base are turned off
+||eivbjsegbino.com^$all
+||mczahprdql.com^$all
+||jpjmpqaupc.com^$all
+||xhrxmbqixobk.com^$all
+||qocvicklgcgr.com^$all
+||qrclevrfjw.com^$all
+||ijwtkojhc.com^$all
 ! ——— Gobshite copypasted Android rooting "guides" (often with fake titles) that bricked two of my phones ———
 ! Most of the guides haven't even accounted for how modern phones have replaced the recovery environment with an extra boot environment, leading to very critical Fastboot commands not working and/or bricking the phone.
 ||unofficialtwrp.com^$document
@@ -13853,7 +13861,7 @@ m4uhd.net##.quality
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 27July2021v2-Beta
+! OriginalVersion: 29July2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -14456,6 +14464,8 @@ $removeparam=MID
 ||bbc.$removeparam=at_custom3
 ||bbc.$removeparam=at_custom4
 ||bbc.$removeparam=at_campaign
+! https://homemcr.org/production/the-war-of-the-worlds/?dm_i=6OM7%2CA1RR%2C21FCIX%2C17EEV%2C1
+||homemcr.org$removeparam=dm_i
 ! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
 $removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com
