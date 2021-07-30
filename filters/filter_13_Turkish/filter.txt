@@ -416,6 +416,10 @@
 !
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/89380
+telegramgruplari.com#%#//scriptlet("abort-on-property-read", "detectAdBlock")
+!+ PLATFORM(ios, ext_android_cb)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=telegramgruplari.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88835
 @@||miuitr.info/img/getbanner.cfm
 miuitr.info#%#//scriptlet("set-constant", "adb", "false")
@@ -998,6 +1002,8 @@ vizyonfilmizle.tv#$?#.fancybox-overlay-fixed[-ext-has="> div"] { display: none!i
 vizyonfilmizle.tv#$?#.fancybox-lock body[-ext-has="> div"] { overflow: visible!important; }
 vizyonfilmizle.tv#$?#html[-ext-has="> body"] { overflow: visible!important; }
 !
+telegramgruplari.com#?#.columns.is-multiline > .column > center > amp-ad:upward(2)
+telegramgruplari.com#?#.columns.is-multiline > .column > .card-sl > .sponsorlu:upward(2)
 aksiyon.com.tr#?#.card.bg-body > h4.text-warning:contains(Sponsor)
 ogznet.com#?#.sidebar > .widget > .adsbygoogle:upward(1)
 anamurekspres.com#?#body > .container > .row + .shadow1 > .header_big_advert:upward(1)
@@ -2740,6 +2746,7 @@ yemektarifleri.org,lifebursa.com,mshowto.org,macizlee1.com,macizlee.ne,dunyaatla
 ! ###adStarter
 fullhdfilmcibaba.com,720pizlemek.com,1080pfilmizle.net,fullhdfilmcidayi.com,hdfilmizledayi.com,fullhdfilmizlebaba.com###adStarter
 !
+telegramgruplari.com##amp-carousel[aria-label="Reklam Alanı"]
 patronlardunyasi.com##div[style="width:100%; text-align:center; margin-top:10px; display:block;"]
 siyahfilmizle.com###main-content > a[target="_blank"] > img
 ||siyahfilmizle.com/wp-content/uploads/*/pskin-min.webp
