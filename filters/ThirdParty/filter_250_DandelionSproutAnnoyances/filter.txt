@@ -518,7 +518,7 @@ zuche.com###indexmovePopularize
 zuche.com##.zc-ban-new-app
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 30July2021v2-Beta
+! OriginalVersion: 30July2021v3-Beta
 ! Expires: 5 days
 ! Description: Most anti-malware lists are pretty big and can cover a 5- or 6-digit amount of specific domains. But my list hereby claims to remove more than 25% of all known malware sites with just a 2-digit amount of entries. This is mostly done by blocking top-level domains that have become devastatingly abused by spammers, usually because they allowed for free and uncontrolled domain registrations. There's also additional categories that cover unusual malware and phishing domains that very few other lists seem to cover.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -801,8 +801,8 @@ addons.mozilla.org#?#li.SearchResult:-abp-contains(Adblocker.Global)
 ||speedtest.com^$document
 ||kelkoogroup.net^$all
 ! ——— Frequently used to infiltrate and maliciously redirect sites, e.g. ToonBarn ———
-||ppc.netnet44.net^$document
-||tncrun.net^$document
+||ppc.netnet44.net^$all
+||tncrun.net^$all
 ||amanda.*.net^$document
 ||sarah.*.net^$document
 ||pamela.*.net^$document
@@ -810,21 +810,21 @@ addons.mozilla.org#?#li.SearchResult:-abp-contains(Adblocker.Global)
 ||katie.*.net^$document
 ||emily.*.net^$document
 ||54.174.156.141^$document
-||lucretius-ada.com^$document
-||tango-deg.com^$document
-||ezekiel-sam.com^$document
-||franciscus-ful.com^$document
-||hippolyte-hag.com^$document
-||india-abc.com^$document
-||leontius-eli.com^$document
-||mohini-ger.com^$document
-||nethaneel-has.com^$document
-||ortrun-adi.com^$document
-||paramonos-oha.com^$document
-||paula-secundinus.com^$document
-||photios-raj.com^$document
-||proserpina-zeb.com^$document
-||ieronimus-kay.com^$document
+||lucretius-ada.com^$all
+||tango-deg.com^$all
+||ezekiel-sam.com^$all
+||franciscus-ful.com^$all
+||hippolyte-hag.com^$all
+||india-abc.com^$all
+||leontius-eli.com^$all
+||mohini-ger.com^$all
+||nethaneel-has.com^$all
+||ortrun-adi.com^$all
+||paramonos-oha.com^$all
+||paula-secundinus.com^$all
+||photios-raj.com^$all
+||proserpina-zeb.com^$all
+||ieronimus-kay.com^$all
 ||fredagty.com^$document
 ||lordagty.com^$document
 ||madagty.com^$document
@@ -836,13 +836,13 @@ addons.mozilla.org#?#li.SearchResult:-abp-contains(Adblocker.Global)
 ||34.230.160.215^$document
 ||3.226.8.132^$document
 ||3.216.243.46^$document
-||roamingclicks.com^$document
+||roamingclicks.com^$all
 ! Source: demonoid.pw
-||veremund-hon.com^$document
+||veremund-hon.com^$all
 ! Source: desidert.no
-||collectfasttracks.com^$document
+||collectfasttracks.com^$all
 ! Source: vn-zoom.com
-||ttnrd.com^$document
+||ttnrd.com^$all
 ||amanda.*.com^$document
 ||katie.*.com^$document
 ||briana.*.com^$document
@@ -851,12 +851,12 @@ addons.mozilla.org#?#li.SearchResult:-abp-contains(Adblocker.Global)
 ||54.152.245.247^$document
 ||3.90.125.85^$document
 ! Various ex-affiliate links at www.zombooru.com
-||track.vcdc.com^$document
-||track.tkbo.com^$document
-||track.traffic.club^$document
+||track.vcdc.com^$all
+||track.tkbo.com^$all
+||track.traffic.club^$all
 ||lasvegas-vacations.net^$document
 ||ndsplitter.com^$document
-||ns1.trafficclub.com^$document
+||ns1.trafficclub.com^$all
 ||satcom1.co.uk^$document
 ||splitter.microxml.net^$document
 ||94.130.185.237^$document
@@ -888,7 +888,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 /scan-update-and-protect-your-browser.html$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61755
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61743
-/://(www\.)?cunt[a-z]{3,8}\.com(/|$)/
+/://(www\.)?cunt[a-z]{3,8}\.com(/|$)/$document,popup
 ! https://github.com/easylist/easylist/issues/6111
 ||watch-video.net^$all
 ||code-zp.com^$all
@@ -6222,6 +6222,10 @@ toorgle.net##.join
 ||qocvicklgcgr.com^$all
 ||qrclevrfjw.com^$all
 ||ijwtkojhc.com^$all
+! Googling Aksel Hennie (Results for prior week) in late July 2021
+||okmx.org^$all
+||nickswheels.com^$all
+||spizzicopizza.net^$all
 ! ——— Gobshite copypasted Android rooting "guides" (often with fake titles) that bricked two of my phones ———
 ! Most of the guides haven't even accounted for how modern phones have replaced the recovery environment with an extra boot environment, leading to very critical Fastboot commands not working and/or bricking the phone.
 ||unofficialtwrp.com^$document
@@ -6309,8 +6313,6 @@ toorgle.net##.join
 ! ——— Spam in comment sections across the internet about "working" from "home" ———
 ! ——— Upgrades HTTP requests to HTTPS on sites that don't do it automatically ———
 $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|ufl.edu|oecd.org|bu.edu|wikidot.com|alternativenation.net
-! ——— Good sites used to scan domains for malware or ads, and which should/must be allowlisted to avoid having entries in various filterlists interfere with their scanning ———
-@@||siteadvisor.com/sitereport.html^
 ! ——— Offline-only apps trying to phone home ———
 !#if adguard
 ! https://fosspost.org/audacity-is-now-a-spyware/
@@ -6329,7 +6331,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 30July2021v2-Beta
+! OriginalVersion: 30July2021v3-Beta
 ! Expires: 5 days
 ! Description: Most anti-malware lists are pretty big and can cover a 5- or 6-digit amount of specific domains. But my list hereby claims to remove more than 25% of all known malware sites with just a 2-digit amount of entries. This is mostly done by blocking top-level domains that have become devastatingly abused by spammers, usually because they allowed for free and uncontrolled domain registrations. There's also additional categories that cover unusual malware and phishing domains that very few other lists seem to cover.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -6612,8 +6614,8 @@ addons.mozilla.org#?#li.SearchResult:-abp-contains(Adblocker.Global)
 ||speedtest.com^$document
 ||kelkoogroup.net^$redirect=nooptext,important
 ! ——— Frequently used to infiltrate and maliciously redirect sites, e.g. ToonBarn ———
-||ppc.netnet44.net^$document
-||tncrun.net^$document
+||ppc.netnet44.net^$redirect=nooptext,important
+||tncrun.net^$redirect=nooptext,important
 ||amanda.*.net^$document
 ||sarah.*.net^$document
 ||pamela.*.net^$document
@@ -6621,21 +6623,21 @@ addons.mozilla.org#?#li.SearchResult:-abp-contains(Adblocker.Global)
 ||katie.*.net^$document
 ||emily.*.net^$document
 54.174.156.141$network
-||lucretius-ada.com^$document
-||tango-deg.com^$document
-||ezekiel-sam.com^$document
-||franciscus-ful.com^$document
-||hippolyte-hag.com^$document
-||india-abc.com^$document
-||leontius-eli.com^$document
-||mohini-ger.com^$document
-||nethaneel-has.com^$document
-||ortrun-adi.com^$document
-||paramonos-oha.com^$document
-||paula-secundinus.com^$document
-||photios-raj.com^$document
-||proserpina-zeb.com^$document
-||ieronimus-kay.com^$document
+||lucretius-ada.com^$redirect=nooptext,important
+||tango-deg.com^$redirect=nooptext,important
+||ezekiel-sam.com^$redirect=nooptext,important
+||franciscus-ful.com^$redirect=nooptext,important
+||hippolyte-hag.com^$redirect=nooptext,important
+||india-abc.com^$redirect=nooptext,important
+||leontius-eli.com^$redirect=nooptext,important
+||mohini-ger.com^$redirect=nooptext,important
+||nethaneel-has.com^$redirect=nooptext,important
+||ortrun-adi.com^$redirect=nooptext,important
+||paramonos-oha.com^$redirect=nooptext,important
+||paula-secundinus.com^$redirect=nooptext,important
+||photios-raj.com^$redirect=nooptext,important
+||proserpina-zeb.com^$redirect=nooptext,important
+||ieronimus-kay.com^$redirect=nooptext,important
 ||fredagty.com^$document
 ||lordagty.com^$document
 ||madagty.com^$document
@@ -6649,13 +6651,13 @@ addons.mozilla.org#?#li.SearchResult:-abp-contains(Adblocker.Global)
 34.230.160.215$network
 3.226.8.132$network
 3.216.243.46$network
-||roamingclicks.com^$document
+||roamingclicks.com^$redirect=nooptext,important
 ! Source: demonoid.pw
-||veremund-hon.com^$document
+||veremund-hon.com^$redirect=nooptext,important
 ! Source: desidert.no
-||collectfasttracks.com^$document
+||collectfasttracks.com^$redirect=nooptext,important
 ! Source: vn-zoom.com
-||ttnrd.com^$document
+||ttnrd.com^$redirect=nooptext,important
 ||amanda.*.com^$document
 ||katie.*.com^$document
 ||briana.*.com^$document
@@ -6665,12 +6667,12 @@ addons.mozilla.org#?#li.SearchResult:-abp-contains(Adblocker.Global)
 35.172.40.232$network
 3.90.125.85$network
 ! Various ex-affiliate links at www.zombooru.com
-||track.vcdc.com^$document
-||track.tkbo.com^$document
-||track.traffic.club^$document
+||track.vcdc.com^$redirect=nooptext,important
+||track.tkbo.com^$redirect=nooptext,important
+||track.traffic.club^$redirect=nooptext,important
 ||lasvegas-vacations.net^$document
 ||ndsplitter.com^$document
-||ns1.trafficclub.com^$document
+||ns1.trafficclub.com^$redirect=nooptext,important
 ||satcom1.co.uk^$document
 ||splitter.microxml.net^$document
 94.130.185.237$network
@@ -6702,7 +6704,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 /scan-update-and-protect-your-browser.html$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61755
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61743
-/://(www\.)?cunt[a-z]{3,8}\.com(/|$)/
+/://(www\.)?cunt[a-z]{3,8}\.com(/|$)/$document,popup
 ! https://github.com/easylist/easylist/issues/6111
 ||watch-video.net^$redirect=nooptext,important
 ||code-zp.com^$redirect=nooptext,important
@@ -12038,6 +12040,10 @@ toorgle.net##.join
 ||ijwtkojhc.com^$redirect=nooptext,important
 216.21.13.14$network
 216.21.13.15$network
+! Googling Aksel Hennie (Results for prior week) in late July 2021
+||okmx.org^$redirect=nooptext,important
+||nickswheels.com^$redirect=nooptext,important
+||spizzicopizza.net^$redirect=nooptext,important
 ! ——— Gobshite copypasted Android rooting "guides" (often with fake titles) that bricked two of my phones ———
 ! Most of the guides haven't even accounted for how modern phones have replaced the recovery environment with an extra boot environment, leading to very critical Fastboot commands not working and/or bricking the phone.
 ||unofficialtwrp.com^$document
@@ -12125,8 +12131,6 @@ toorgle.net##.join
 ! ——— Spam in comment sections across the internet about "working" from "home" ———
 ! ——— Upgrades HTTP requests to HTTPS on sites that don't do it automatically ———
 $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|ufl.edu|oecd.org|bu.edu|wikidot.com|alternativenation.net
-! ——— Good sites used to scan domains for malware or ads, and which should/must be allowlisted to avoid having entries in various filterlists interfere with their scanning ———
-@@||siteadvisor.com/sitereport.html^
 ! ——— Offline-only apps trying to phone home ———
 !#if adguard
 ! https://fosspost.org/audacity-is-now-a-spyware/
@@ -12658,7 +12662,7 @@ deezer.com#?#.page-alerts:-abp-has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:-abp-has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 13July2021v1
+! OriginalVersion: 30July2021v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -12883,6 +12887,7 @@ tumblr.com##div[class][style^="background: rgb(124, 92, 255); "]:only-of-type
 deviantart.com##div[style] > div[class^=_] + div:not([class^=_]):nth-of-type(2):last-of-type
 deviantart.com#$?#div[style*="wixmp.com/"] { filter: none !important }
 deviantart.com##div[style*="wixmp.com/"]::before
+deviantart.com##div[style^="width:"] > div[class]:nth-of-type(2):last-of-type
 ! ——————————————————————————————————————————————————————————————————————
 ! Below are entries that I borrowed from «Strappazzon's Annoyances filter list», which is maintained by https://github.com/Strappazzon at https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Annoyances.txt, and which is licenced under MIT.
 ! Amazon
