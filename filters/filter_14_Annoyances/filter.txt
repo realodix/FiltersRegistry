@@ -8807,6 +8807,7 @@ slate.com#@#.ad-container
 !######### General URL blocking rules ##################
 !#######################################################
 !
+||webcache.datareporter.eu/c/*/banner.js
 ||cdn.userdatatrust.com^$third-party
 ||ccm19.de^$third-party
 ||legalmonster.com^$third-party
@@ -9273,6 +9274,10 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+arubanetworks.com###aruba_cookie_privacy_popup
+rcodezero.at,nic.at,issgesund.de,datareporter.eu###dr_blocking_div
+l-bank.de#$##bmLayerCookies { display: none !important; }
+l-bank.de#$#body[style*="overflow"] { overflow: visible !important; padding-right: 0 !important; }
 uni-goettingen.de###cookie_banner_footer
 mercadolibre.*###newCookieDisclaimerBanner
 outdoor-broker.de#$#.no-scroll { overflow: visible !important; }
@@ -10019,7 +10024,7 @@ ocean-archive.org###privacyPolicyPopUp
 sachsen-fernsehen.de#$#body { overflow: visible !important; }
 sachsen-fernsehen.de#$#.cmms_cookie_consent_manager { display: none !important; }
 rhein-kreis-neuss.de##.rkn-row-footer-cookie-notice
-mainz.de,marburg-biedenkopf.de,bottrop.de,duisburg.de,bonn.de##.SP-CookieUsageNotification
+rhein-sieg-kreis.de,mainz.de,marburg-biedenkopf.de,bottrop.de,duisburg.de,bonn.de##.SP-CookieUsageNotification
 staedteregion-aachen.de##.dbayCookieSelect
 ||kzv-lsa.de/bundles/*/cookie_advice.js
 stepstone.de###GDPRConsentManagerContainer
@@ -10590,7 +10595,7 @@ theshoregame.com##.nk-cookie-alert
 academictimes.com###euPopup
 macrium.com###MacriumCookieJarApp
 cyan.com###cookii-overlay
-skagen.com,cacaushow.com.br,slamjam.com,federalpremium.com,fossil.com###consent-tracking
+kadewe.de,skagen.com,cacaushow.com.br,slamjam.com,federalpremium.com,fossil.com###consent-tracking
 metro.co.uk##body > div[data-project="mol-fe-cmp"][style^="z-index: 100"] > div[class^="tooltip_"]
 pesc.ru##.deal-cookie
 somemorias.com.br###cookiesPoliticaPrivacidade
@@ -15774,6 +15779,7 @@ cmp-sp.lvz.de#%#AG_onLoad(function(){if(window.location.href.includes("consentUU
 privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 !
+mediaset.it#%#AG_onLoad(function(){{var a=new MutationObserver(function(){var b=document.querySelector('button[class^="bdcp_button-accetto"]');b&&(b.click())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
 moebel-fundgrube.de#%#//scriptlet('set-cookie', 'cookie-preference', '1')
 app.scre.io#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("cookieConsent", "1") } } catch (ex) {} })();
 bilyoner.com#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("desktop/isCookieBannerShowed", "true") } } catch (ex) {} })();
@@ -16459,6 +16465,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ! @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=epicgames.com|toteraz.pl|natgeotv.com|midomi.com|bethesda.net|volksfreund.de|kawasaki.com|foxchannels.com.tr|ga.de|shop.mango.com|kralmuzik.com.tr|westernunion.com|roastmarket.de|new.cappex.com|vimeo.com|heute.at|ntv.com.tr|wargaming.net|metacritic.com|gq-magazine.co.uk|viafree.dk|viafree.fi|viafree.no|viafree.se|glamour.de|cbsnews.com
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/89843
+mediaset.it#@##iubenda-cs-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89783
 outdoor-broker.de#@##cookie-disclaimer
 outdoor-broker.de#@#.cookie-disclaimer:not(body)
@@ -20233,7 +20241,6 @@ shop.pistenbully.com#$#body { overflow: auto !important; }
 kachimai.jp###js-footer-banner
 browserstack.com##.floating-banner
 jacobinmag.com###mailing-list-popup
-mediaset.it##.video-floating-container
 uptime.com#$##receive-alerts-modal-partial { display: none!important; }
 uptime.com#$#.modal-backdrop { display: none!important; }
 uptime.com#$#body { overflow: visible!important; }
@@ -27818,7 +27825,7 @@ egloos.com,novel.naver.com#%#//scriptlet('remove-attr', 'onselectstart|ondragsta
 knightnoscanlation.com#%#//scriptlet("abort-current-inline-script", "document.addEventListener", "contextmenu")
 blisseyhusband.in#%#//scriptlet("abort-on-property-read", "sccopytext")
 blisseyhusband.in#%#//scriptlet("abort-on-property-read", "contentprotector")
-blisseyhusband.in,kapiert.de,verdragonball.online#%#//scriptlet("prevent-addEventListener", "contextmenu", "preventDefault")
+my.pcloud.com,blisseyhusband.in,kapiert.de,verdragonball.online#%#//scriptlet("prevent-addEventListener", "contextmenu", "preventDefault")
 my-expert.ru,bimiacg.net,solidfile.net,promocode99.in,downloadtutorials.net,nawalakarsa.id,tecnomusic-evolution.com,jpopsingles.eu,wartaterkini.news,pcprogramasymas.net,tistory.com,hunter-xhunter.com,ghostspectre.the-ninja.jp,slothjuns.net,eduardo-monica.com,apkspurefile.com,foxaholic.com,koreanaddict.net,omgkpop.top,gamegame.kr,eoreuni.com,jstranslations1.com,animeuniverse.it,baltasar5010purohentai.com,securitypcsoluciones.blogspot.com,unisinav.com,aihristdreamtranslations.com,tipslab.info,indcit.com,semi168.net,semi168.club,audio-sound-premium.com,filmboxoffice.web.id,kakpishem.ru,manhwa-manga41.bid,manhwa-manga42.bid,manhwa-manga43.bid,manhwa-manga44.bid,manhwa-manga45.bid,manhwa-manga46.bid,manhwa-manga47.bid,manhwa-manga.bid,teepr.com,texte.work,sysnettechsolutions.com,reinodekovel.com,elektrikmen.com,world4.eu,activationkeys.co,secondlifetranslations.com,samuraiscan.com,globaledu.jp,lazytranslations.com#%#//scriptlet("abort-current-inline-script", "document.oncontextmenu")
 gamefinity.id#%#//scriptlet("set-constant", "onload", "null")
 gamefinity.id#%#//scriptlet('prevent-addEventListener', '/^key/', 'wpccpDisable')
