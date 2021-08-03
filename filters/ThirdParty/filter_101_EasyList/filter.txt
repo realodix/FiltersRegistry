@@ -1,7 +1,7 @@
 !
-! OriginalVersion: 202108021338
+! OriginalVersion: 202108030441
 ! Title: EasyList
-! Last modified: 02 Aug 2021 13:38 UTC
+! Last modified: 03 Aug 2021 04:41 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -53,7 +53,6 @@
 &adstrade=
 &adstype=
 &AdType=
-&adunit=
 &adunits=$xmlhttprequest
 &adurl=
 &adv_keywords=
@@ -875,6 +874,7 @@
 /?addyn|*
 /?adv_partner
 /?advideo/*
+/?affiliateId=*&realDomain=
 /?view=ad
 /_/ads/*
 /_30/ads/*
@@ -8789,6 +8789,7 @@ _980x100.
 .engine?PlacementId=$popup
 .net/adx.php?$popup
 /?a_aid=*&$popup
+/?affiliateId=*&realDomain=$popup
 /?cver=0&refer$popup
 /?cver=1&refer$popup
 /?ip=*&zoneid=$popup
@@ -51546,9 +51547,7 @@ menstennisforums.com#@#.top_ads
 !
 /^https?:\/\/.*techpowerup\.com\/[a-z0-9\d\D].{1,3}\/.{3,7}/$image,domain=techpowerup.com
 /^https?:\/\/.*tpucdn\.com\/[a-z0-9\d\D]{1,2}\/[a-z0-9\d\D]{2,9}\./$image,domain=techpowerup.com
-/^https?:\/\/.*tpucdn\.com\/[a-z0-9\d\D]{1,}\/[a-z0-9]{4,9}\./$image,domain=techpowerup.com
-! coincodex.com
-|https://$script,subdocument,third-party,domain=coincodex.com
+/^https?:\/\/.*tpucdn\.com\/[a-z0-9\d\D]{4,}\/[a-z0-9\d\D]{4,9}\./$image,domain=techpowerup.com
 ! prebid specific
 ||bustle.com^*/prebid-
 ||dw.com/js/advertisement/
@@ -51588,9 +51587,6 @@ menstennisforums.com#@#.top_ads
 ! Torrent/Pirate sites /sw.js
 /^https?:\/\/.*\/.*(sw[0-9a-z._-]{1,6}|\.notify\.).*/$script,domain=123films.cc|1337x.to|animekisa.tv|anonfiles.com|aparat.cam|bdupload.asia|bitfly.io|cashurl.in|clk.ink|cloudvideo.tv|cocomanhua.com|downloadpirate.com|filmix.co|filmlinks4u.is|flashx.pw|fmovies.taxi|fmovies.world|getlink.pro|igg-games.com|indishare.org|linksly.co|megaup.net|mixdrop.co|mp3-convert.org|newser.com|nutritioninsight.com|ouo.press|powvideo.net|powvldeo.cc|primewire.sc|sendit.cloud|sendspace.com|shrinke.me|shrinkhere.xyz|solarmovie.to|uiz.io|up-load.io|upload.ac|uploadever.com|uploadproper.net|uploadrive.com|uplovd.com|upstream.to|userscloud.com|v96-surf.com|vev.red|vidbull.tv|videobin.co|vidlox.me|vidop.icu|vidoza.co|vidoza.net|vidtomp3.com|vidup.io|vumoo.life|watchtvseries.video|xtgem.com|xtits.com|yourbittorrent2.com|zippyshare.com
 /^https?:\/\/.*\/sw.js?.[a-zA-Z0-9%]{50,}/$script,~third-party
-! filerio.in
-$script,third-party,domain=filerio.in
-@@||maxcdn.bootstrapcdn.com^$script,domain=filerio.in
 ! vidoza.net
 $image,script,subdocument,third-party,xmlhttprequest,domain=heapfiles.com|vidoza.co|vidoza.net
 @@$generichide,domain=heapfiles.com|vidoza.co|vidoza.net
@@ -51602,26 +51598,6 @@ $image,script,subdocument,third-party,xmlhttprequest,domain=heapfiles.com|vidoza
 ! govid.co
 $script,third-party,xmlhttprequest,domain=govid.co
 @@||ajax.googleapis.com/ajax/libs/$script,domain=govid.co
-! Imagetwist/Imagenpic/Imageshimage
-@@||imagenpic.com/jquery-*.js
-@@||imagenpic.com/jquery.*.js
-@@||imagenpic.com/xupload.js
-@@||imageshimage.com/jquery-*.js
-@@||imageshimage.com/jquery.*.js
-@@||imageshimage.com/xupload.js
-@@||imagetwist.com/bootstrap.min.js
-@@||imagetwist.com/clipboard.min.js
-@@||imagetwist.com/jquery-*.js
-@@||imagetwist.com/jquery.*.js
-@@||imagetwist.com/swfobject.js
-@@||imagetwist.com/xupload.js
-@@||imagetwist.com/ZeroClipboard.js
-||imagenpic.com^$script,~third-party
-||imagenpic.com^$~third-party,xmlhttprequest
-||imageshimage.com^$script,~third-party
-||imageshimage.com^$~third-party,xmlhttprequest
-||imagetwist.com^$script,~third-party
-||imagetwist.com^$~third-party,xmlhttprequest
 ! canyoublockit.com
 @@||akamaiedge.net^$domain=canyoublockit.com
 @@||cloudflare.com^$script,stylesheet,domain=canyoublockit.com
@@ -51642,38 +51618,12 @@ $script,stylesheet,third-party,xmlhttprequest,domain=up-4ever.com|up-4ever.org
 @@||connect.facebook.net^$script,domain=up-4ever.com|up-4ever.org
 @@||fonts.googleapis.com^$stylesheet,domain=up-4ever.com|up-4ever.org
 @@||maxcdn.bootstrapcdn.com^$stylesheet,domain=up-4ever.com|up-4ever.org
-! vshare.eu
-$script,stylesheet,third-party,xmlhttprequest,domain=vshare.eu
-@@||ajax.googleapis.com^$script,domain=vshare.eu
-@@||cdnjs.cloudflare.com^$script,domain=vshare.eu
-@@||fluidplayer.com^$script,stylesheet,domain=vshare.eu
-@@||fonts.googleapis.com^$stylesheet,domain=vshare.eu
-@@||lp.longtailvideo.com^$script,domain=vshare.eu
-@@||netdna.bootstrapcdn.com^$stylesheet,domain=vshare.eu
-@@||vjs.zencdn.net^$script,domain=vshare.eu
-||vshare.eu/javascripts/script.js
-||vshare.eu/service-worker.js
-||vshare.eu^$subdocument,~third-party
-! filmlinks4u.is
-|http://$script,third-party,xmlhttprequest,domain=filmlinks4u.is
-|https://$script,third-party,xmlhttprequest,domain=filmlinks4u.is
 ! embedscr.to
 |http://$script,third-party,xmlhttprequest,domain=embedscr.to|embedsr.to|iembedrip.com
 |https://$script,third-party,xmlhttprequest,domain=embedscr.to|embedsr.to|iembedrip.com
 ! urlcash.net
 |http://$script,xmlhttprequest,domain=urlcash.net
 |https://$script,xmlhttprequest,domain=urlcash.net
-! animepahe.com
-$image,script,stylesheet,subdocument,third-party,xmlhttprequest,domain=animepahe.com
-@@||cloudflare.com^$script,third-party,domain=animepahe.com
-@@||fonts.googleapis.com^$stylesheet,domain=animepahe.com
-@@||jsdelivr.net^$script,stylesheet,subdocument,third-party,xmlhttprequest,domain=animepahe.com|kwik.cx
-@@||kwik.cx^$script,stylesheet,subdocument,xmlhttprequest,domain=animepahe.com|kwik.cx
-@@||nextstream.org^$xmlhttprequest,domain=animepahe.com|kwik.cx
-! multiup.org
-@@||cdn.multiup.org/assets/js.js$script,domain=multiup.eu
-|http://$script,third-party,xmlhttprequest,domain=multiup.eu|multiup.org
-|https://$script,third-party,xmlhttprequest,domain=multiup.eu|multiup.org
 ! gelbooru.com
 @@||gelbooru.com^$generichide
 ||gelbooru.com*/license.$script
@@ -51683,24 +51633,6 @@ $image,script,stylesheet,subdocument,third-party,xmlhttprequest,domain=animepahe
 $image,script,stylesheet,subdocument,third-party,xmlhttprequest,domain=vidtodo.com|vidtodoo.com
 @@||vidtodo.com^$image,script,stylesheet,xmlhttprequest,domain=vidtodo.com|vidtodoo.com
 @@||vidtodoo.com^$image,script,stylesheet,xmlhttprequest,domain=vidtodo.com|vidtodoo.com
-! Putlocker
-@@||ajax.googleapis.com^$script,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||apis.google.com^$script,subdocument,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||cdnjs.cloudflare.com^$script,stylesheet,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||cloudflare.com/ajax/libs/$stylesheet,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||connect.facebook.net^$script,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||disqus.com/embed.js$domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||disquscdn.com^$domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||gomo.to/movie/$subdocument,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||gstatic.com^$domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||image.tmdb.org^$image,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||jsdelivr.net^$script,stylesheet,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||jwpcdn.com^$script,stylesheet,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||loadshare.org^$domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||vidsrc.me/embed/$subdocument,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-@@||youtube.com/embed/$subdocument,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-|http://$script,stylesheet,third-party,xmlhttprequest,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
-|https://$script,stylesheet,third-party,xmlhttprequest,domain=putlocker.actor|putlocker.style|putlocker.to|putlockers.mn|putlockers.movie
 ! bc.vc
 |http://$script,third-party,xmlhttprequest,domain=bc.vc
 |https://$script,third-party,xmlhttprequest,domain=bc.vc
@@ -51709,44 +51641,14 @@ $image,script,stylesheet,subdocument,third-party,xmlhttprequest,domain=vidtodo.c
 @@||s1-adfly.com/show.php?$subdocument,third-party,domain=adf.ly
 |http://$third-party,domain=adf.ly|s1-adfly.com
 |https://$third-party,domain=adf.ly|s1-adfly.com
-! linkdrop.net
-|http://$script,third-party,xmlhttprequest,domain=linkdrop.net
-|https://$script,third-party,xmlhttprequest,domain=linkdrop.net
-! tamilyogi.cc
-$script,third-party,xmlhttprequest,domain=tamilyogi.cc|tamilyogi.vip
 ! damimage.com, imagedecode.com, imageteam.org
 $media,domain=damimage.com|imagedecode.com|imageteam.org
 |http://$image,script,third-party,xmlhttprequest,domain=damimage.com|imagedecode.com|imageteam.org
 |https://$image,script,third-party,xmlhttprequest,domain=damimage.com|imagedecode.com|imageteam.org
-||imgskull.com^$xmlhttprequest
-! Imgclick / Imgdew / Imgkings.com / Imgoutlet / Imgrock / Imgtown / Imgtrex / etc
-||imgadult.com/anex/
-||imgadult.com^$subdocument
-||imgtaxi.com/anex/
-||imgtaxi.com/ea/
-||imgtaxi.com^$subdocument
-||imgwallet.com/anex/
-||imgwallet.com/ea/
-! rlslog.net
-|http://$script,third-party,xmlhttprequest,domain=rlslog.net
-|https://$script,third-party,xmlhttprequest,domain=rlslog.net
-! imgcandy.net
-|http://$image,script,third-party,xmlhttprequest,domain=imgcandy.net
-|https://$image,script,third-party,xmlhttprequest,domain=imgcandy.net
-||imgcandy.net/fad/$script
 ! abcvideo.cc
 $script,third-party,xmlhttprequest,domain=abcvideo.cc
 @@||assets.hcaptcha.com/captcha/$script,subdocument,domain=abcvideo.cc
 @@||hcaptcha.com^*/api.js$script,domain=abcvideo.cc
-! uptobox.com
-@@||ajax.googleapis.com^$script,domain=uptobox.com|uptostream.com
-@@||googleapis.com/js/sdkloader/ima3.js$script,domain=uptobox.com|uptostream.com
-@@||googletagmanager.com/gtag/js$script,domain=uptobox.com|uptostream.com
-@@||gstatic.com^$script,domain=uptobox.com|uptostream.com
-@@||platform.twitter.com/widgets.js$domain=uptobox.com|uptostream.com
-@@||uptostream.com^$generichide
-|http://$script,third-party,xmlhttprequest,domain=uptobox.com|uptostream.com
-|https://$script,third-party,xmlhttprequest,domain=uptobox.com|uptostream.com
 ! Fembed
 ||fembed.com/revenue
 ! flashx
@@ -51790,8 +51692,6 @@ javascript:$popup,domain=pirateproxy.live|thehiddenbay.com|thepiratebay.org
 ||thepiratebay.$script,domain=pirateproxy.live|thehiddenbay.com|thepiratebay.org
 ||thepiratebay.*/static/$subdocument
 ||thepiratebay10.org/static/js/UYaf3EPOVwZS3PP.js
-! bluemediafiles.com
-$popup,subdocument,third-party,xmlhttprequest,domain=bluemediafiles.com
 ! Yavli.com
 /^https?:\/\/(.+?\.)?allthingsvegas\.com\/[a-zA-Z]{7,18}\//
 /^https?:\/\/(.+?\.)?aupetitparieur\.com\/[a-z]{5,18}\//
