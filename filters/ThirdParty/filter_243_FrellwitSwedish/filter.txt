@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-08-07 13:06:59 CEST
+! Last modified: 2021-08-08 08:34:41 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -277,6 +277,7 @@ omni.se,omniekonomi.se#%#//scriptlet('ubo-aeld.js', 'omniPulseLoaded')
 omni.se,omniekonomi.se#$#.header-banner--regular, .app-banner { --banner-offset: 0 !important; }
 omni.se,omniekonomi.se##a[href*="article-ad-"]:upward(.resource--link)
 oru.se#$#.no-scroll { overflow: initial !important; }
+outsidesweden.se##div[style^="font-size: 0.7"]:has-text(Annons:):upward(1)
 partillevaxer.se,vasterasvaxer.se##.elementor-widget-heading:has-text(/annons/i)
 partillevaxer.se,vasterasvaxer.se##.elementor-widget-heading:has-text(/annons/i) + .elementor-widget-image
 partillevaxer.se,vasterasvaxer.se##.elementor-widget-heading:has-text(/annons/i) + .elementor-widget-image + div
@@ -716,6 +717,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ##div.wppasrotate
 ##div[class^="holid_desktop"]
 ##div[class^="sqs-cookie-banner"]
+##div[data-advadstrackbid]
 ##div[id^="ad_insider"]
 ##div[id^="matchads-"]
 ##footer .ui-optin-wrapper
@@ -2076,6 +2078,7 @@ yelp.se##.js-cookie-iframe
 ||axess.se^*/track-views
 ||axier.se/i/commercials/
 ||back.famebloggers.com/bloggerfy/tracker$script,subdocument
+||bannerboo.com^$third-party
 ||bannerutbyte.se^$third-party
 ||barnebys.sh/js/btag
 ||bcm.interactives.dk/script/
