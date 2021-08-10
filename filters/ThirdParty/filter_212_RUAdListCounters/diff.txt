@@ -99,6 +99,8 @@ mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua,mail.yandex.uz,mail.
 ! Invalid selector:
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype._hasAdblock, noopFunc)
 ! Invalid selector:
+~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.adConfig, false)
+! Invalid selector:
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.getHoneypot, null)
 ! Invalid selector:
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.getYaads, null)
@@ -110,12 +112,18 @@ mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua,mail.yandex.uz,mail.
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.los, null)
 ! Invalid selector:
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.useAbdBundle, false)
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "&feature=emb_imp_woyt$document,removeparam=|feature=emb_imp_woyt,domain=youtube.com"
-&feature=emb_imp_woyt$document,removeparam=|feature=emb_imp_woyt,domain=youtube.com
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "&feature=emb_$document,removeparam=|feature=emb_,domain=youtube.com"
+&feature=emb_$document,removeparam=|feature=emb_,domain=youtube.com
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "&ymclid=$document,removeparam=|,domain=~ozon.onelink.me"
 &ymclid=$document,removeparam=|,domain=~ozon.onelink.me
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".com/?_ga=$document,removeparam=|"
 .com/?_ga=$document,removeparam=|
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".htm?spm=$document,removeparam=|,domain=aliexpress.*|~my.aliexpress.*|~thirdparty.aliexpress.*|~track.aliexpress.*|~trade.aliexpress.*"
+.htm?spm=$document,removeparam=|,domain=aliexpress.*|~my.aliexpress.*|~thirdparty.aliexpress.*|~track.aliexpress.*|~trade.aliexpress.*
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".html?gps-id=$document,removeparam=|,domain=aliexpress.*"
+.html?gps-id=$document,removeparam=|,domain=aliexpress.*
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".html?pdp_ext_f=$document,removeparam=|,domain=aliexpress.*"
+.html?pdp_ext_f=$document,removeparam=|,domain=aliexpress.*
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".html?spm=$document,removeparam=spm,domain=aliexpress.*"
 .html?spm=$document,removeparam=spm,domain=aliexpress.*
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".net/?_ga=$document,removeparam=|"
@@ -182,6 +190,8 @@ Error: "$removeparam rules are not compatible with some other modifiers" in the 
 ?ymclid=$document,removeparam=|
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "aff_fcid=$document,removeparam=|,domain=aliexpress.*"
 aff_fcid=$document,removeparam=|,domain=aliexpress.*
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "algo_pvid=$document,removeparam=|,domain=aliexpress.*"
+algo_pvid=$document,removeparam=|,domain=aliexpress.*
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "fbclid=$document,removeparam=fbclid"
 fbclid=$document,removeparam=fbclid
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "frm=$document,removeparam=|frm,domain=mail.ru"

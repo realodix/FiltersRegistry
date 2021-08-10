@@ -1,8 +1,8 @@
 !
-! Checksum: Cu2m7JFGYTT4h7D5vKy+Fg
-! OriginalVersion: 202107260450
+! Checksum: fTel95Yb0C9Miod5u6jPvA
+! OriginalVersion: 202108100850
 ! Title: RU AdList: Counters
-! Last modified: 26 Jul 2021 04:50 UTC
+! Last modified: 10 Aug 2021 08:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -190,10 +190,10 @@ _pagespeed_beacon?
 ##img[title="bigmir)net TOP 100"]
 !
 ! = Общие блокировки (и с использованием имени доменов) =========================
+//stats.myangular.life^$third-party
 /redir/stat/*$domain=autonews.ru|rbc.ru|sportrbc.ru
 |http://li.ru^$third-party,~subdocument
 |http://pr-cy.$third-party
-||0001.best^$third-party
 ||1l-hit.mail.ru^
 ||1pagerank.com^$third-party
 ||2ip.ru^$third-party,~subdocument
@@ -308,7 +308,7 @@ _pagespeed_beacon?
 ||cloudfront.me/metrika/watch
 ||cloudfront.net/metrika/watch
 ||cloudfront.pro/metrika/watch
-||clustrmaps.com^$third-party
+||clustrmaps.com^$third-party,domain=~80-e.ru
 ||cntstat.com^$third-party
 ||codingjungle.net^$third-party
 ||collector.apester.com^$third-party
@@ -589,6 +589,7 @@ _pagespeed_beacon?
 ||pixel.everesttech.net^
 ||pixel.mathtag.com^
 ||planetanovosti.com/stat/
+||plwork.net/stats_all
 ||popular-tracker.brainly.com^$third-party
 ||prchecker.info/getpr.php?
 ||prcy.$third-party
@@ -710,11 +711,11 @@ _pagespeed_beacon?
 ||statistics.wibiya.com^$third-party
 ||statok.net/image/
 ||statpipe.ru^$third-party
+||stats-repl.myangular.life^$third-party
 ||stats.1internet.tv^
 ||stats.g.doubleclick.net^
 ||stats.indextools.com^
 ||stats.internet-yadro.com^
-||stats.myangular.life^$third-party
 ||stats.qmerce.com^
 ||stats.seedr.ru^
 ||stats.serpads.com^$third-party
@@ -790,8 +791,10 @@ _pagespeed_beacon?
 ||ulogin-stats.ru^$third-party
 ||ulogin.ru^*stats.
 ||ulogix.ru^$third-party
+||unblockia.com^$third-party
 ||unioin.com^$third-party
 ||uptime.ru^$third-party
+||ura.news/mi_stat.php
 ||url-sub.ru^$third-party
 ||ustat.pro^$third-party
 ||utro.ru/utro_images/*empty.gif?
@@ -842,6 +845,7 @@ _pagespeed_beacon?
 ||ymetrica.com^$third-party
 ||ymetrica1.com^$third-party
 ||youtorrents.net/button.php?
+||zcvh.net/*/ws|$websocket
 ||zero.kz/c.php?
 ||zoomby.ru/s/pixel?
 !
@@ -944,6 +948,7 @@ ingrus.net##.bcounts
 uniongang.net,uniongang.org#?#.block:-abp-has(> .block-title:-abp-contains(Счётчики))
 kanobu.ru##.c-liveinternet
 yakusubstudio.home-forum.com,yakusubstudio.ru##.contbaner
+80-e.ru##.copyright ~ .copyright
 segodnya.ua##.counters
 rambler.ru##.disableAdvButton__container
 ok.ru#?#.feed-list > .feed-w:-abp-has(.feed_ava ~ div div > [class] ~ [class] ~ [class] ~ [class] ~ [class] ~ [class])
@@ -970,6 +975,8 @@ auto.ru#?#div:matches-css-before(content: /Реклама/) ~ div
 inoreader.com##div[id^="leaderboard_ad"] > *
 radioprofusion.com##footer > .counter
 lostfilm.tv,lostfilm.tw##img[width="1"][height="1"]
+nova.rambler.*##div[class^="DirectMKB"]
+nova.rambler.*##section > article[class^="DirectNew"]
 rambler.*##[data-blocks="rec_block"]
 rambler.*,~www.rambler.*#$?#.pub_300x250.text-ad-links.adbanner.ad.text_ad.pub_728x90.text-ad.nav-ad.text-ads.textAd.ad-banner.text_ads.pub_300x250m { display: block !important }
 razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div > div[style*="height:"][style*="width:"] { width: 100% !important }
@@ -996,13 +1003,13 @@ tv.yandex.*##.recommended-ott
 yandex.*###bk-container
 yandex.*##.b-statcounter + div[class] > div[id][class]
 yandex.*##.dist-popup
-yandex.*##.news-top-rubric-heading > span:only-child
 yandex.*##.turbo-embed_market_widget
 yandex.*##[class*="segment__container"] > div > [class^="card "][class*="_"]
 yandex.*##body[class*="b-page"] .widgets[role="main"] :not(div) :not(div) :not(div) > div[class]:not([class*="widget"]) > div[class]:not([class*="widget"]) > div[class]:not([class*="widget"]):not([class^="services"]):not([class*="search"]):not([class*="home"])
 yandex.*##body[class*="b-page"] .widgets[role="main"] :not(div) :not(div) :not(div) > div[class]:not([class*="widget"]) > div[class]:not([class*="widget"]) a[href^="https://yastatic.net/www/_/"]
 yandex.*##body[class*="b-page"] .widgets[role="main"] :not(div) :not(div) :not(div) > div[class]:not([class*="widget"]) > div[class]:not([class*="widget"]) a[href^="https://yastatic.net/www/_/"] ~ div
 yandex.*##div > .banner-root ~ .page-root > #page div[class^="_"] > div > script + section div[class^="_"] > [data-id] + div[class^="_"]:not([data-id]) > div:first-child
+yandex.*##div ~ .news-top-rubric-heading > h1:only-child:if-not(> a)
 yandex.*##div[class*="-header"] ~ div[id*="page"] > div > div[class*="__"] + div[class] > [class*="__row"] > div[class*="__col"]:last-child
 yandex.*##div[class*="-header"] ~ div[id*="page"] div[class*="_banger"]
 yandex.*##div[class*="-header"] ~ div[id*="page"] div[class*="_banner_"]
@@ -1079,5 +1086,3 @@ $removeparam=utm_referrer
 $removeparam=utm_source
 $removeparam=utm_term
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/43031
-@@||mail.yandex.*/api/v*/bar/counters?
