@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 10August2021v4
+! OriginalVersion: 11August2021v2
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -8,7 +8,7 @@
 ! Raportoi mainoksenestoon liittyvistä ongelmista tai estämättömistä mainoksista täällä / Please report adblocking related issues or unblocked ads at:
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues
 ! -----SPECIFIC FILTERS-----
-afterdawn.com,download.fi#$##ad-top-banner-placeholder { min-height: 0px !important }
+afterdawn.com,download.fi,edukas.fi#$##ad-top-banner-placeholder { min-height: 0px !important }
 etn.fi#$#tbody > tr > td[style="width:468px"][valign="top"] { width: unset !important }
 feissarimokat.com##div[style="background: rgb(246, 66, 100) none repeat scroll 0% 0%; color: rgb(255, 255, 255); padding: 20px;"]
 hardware.fi#$#.top-ad-space { min-height: 0 !important }
@@ -220,6 +220,7 @@ auto1.fi,ilmainensanakirja.fi,nauris.fi,telsu.fi,testeri.fi##[href^="/clk"]
 autotalli.com###topBanner
 basso.fi##div[id^="BannerBlock"]
 bbs.io-tech.fi##[class~="structItem--thread"][data-author="Mainos"]
+bbs.io-tech.fi#?#div.node-extra:-abp-contains(Mainos)
 bbs.io-tech.fi#?#li.block-row:-abp-contains(Mainos)
 bittiraha.fi###cm-banner
 blogit.fi###pb_top
@@ -942,7 +943,6 @@ kotiliesi.fi##.placeholder
 @@||telsu.fi/dyn2?setref=nauris$subdocument,domain=nauris.fi
 @@||uk.cdn-net.com/cc.js$script,domain=power.fi
 anna.fi#@#.sponsored-content
-download.fi#@##ad-top-banner-placeholder
 etuovi.com#@#.rss-feed
 hs.fi#@#.mainokset
 hs.fi#@#.mainos
@@ -969,3 +969,5 @@ tjareborg.fi#@#.push-container
 @@||inpref.s3.amazonaws.com^$script,domain=kauppahalli24.fi
 ! https://github.com/easylist/easylist/pull/8511
 @@||static.jaatama.fi/thumbs/images/fb-$image
+! https://github.com/easylist/easylist/pull/8630
+download.fi,edukas.fi#@##ad-top-banner-placeholder
