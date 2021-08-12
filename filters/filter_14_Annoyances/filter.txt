@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! notion.so - annoyance
+notion.so##.spacer + div.signup-wrap
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90258
 laprovence.com$$meta[http-equiv="refresh"][content="180"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90090
@@ -590,7 +592,9 @@ eurosport.ru#?#.col-content div[class] > div[class]:has(> a[data-testid="infogra
 eurosport.ru#?#.col-content div[class] > div[class]:has(> a[data-testid="infographic-link"]) + p
 ! https://github.com/AdguardTeam/AdguardFilters/issues/59905
 dijiasist.com##.st-widget-area > div.widget_st_social_profiles
+! https://github.com/AdguardTeam/AdguardFilters/issues/90572
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34115#issuecomment-497969885
+www.wp.pl#%#!function(){if(decodeURIComponent(location.href).startsWith("https://www.wp.pl/?s=portal.abczdrowie.pl")||decodeURIComponent(location.href).startsWith("https://www.wp.pl/?s=parenting.pl"))try{var a=(new URL(window.location.href)).searchParams.get("s");location.replace("https://"+a)}catch(b){}}();
 wp.pl#%#!function(){if(decodeURIComponent(location.href).startsWith("https://www.wp.pl/?s=https://"))try{var a=(new URL(window.location.href)).searchParams.get("s");location.replace(a)}catch(b){}}();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/58862
 ||cdn.viqeo.tv/embed?playerId=$domain=mail.ru
@@ -2092,6 +2096,7 @@ vz.ru,searchengineland.com,sport.segodnya.ua,vokrugsveta.ru,censor.net,fizzicsed
 !
 ###mc_embed_signup
 !
+5mod.ru##.subscr-lazydev
 trashbox.ru##.div_social_2021_block
 programme-television.org###subcribeNewsletter
 ahrefs.com##.subscr-fright
@@ -5131,6 +5136,7 @@ hgtv.com#@#.showads
 !
 !
 !
+cdn.cinema-24.net##.advice_inf > div[style="text-align: center;"] > br + span[style="color: #fff;"]
 ||it-actual.ru/wp-content/themes/iconic-one/js/dscr.js
 iteramos.com##a[href^="https://brightdata.grsm.io/ae-"] > img
 iteramos.com#%#//scriptlet("set-constant", "googlefc.getAdBlockerStatus", "noopFunc")
@@ -9359,6 +9365,7 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+omio.com#?#body > div[class^="app-container-"]:has(> div[class^="wrapper-"] h2[class]:contains(cookies))
 kremer-pigmente.com###cclayer
 wuerzburg.de###klaro > div.klaro > div.cookie-notice
 rauch.cc##div[class*="js-cookie-note"]
@@ -16357,8 +16364,8 @@ cdn.privacy-mgmt.com#%#AG_onLoad(function(){if(window.self!==window.top&&documen
 cmp.focus.de#%#AG_onLoad(function(){if(window.location.href.includes("consentUUID")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button[title*="Einstellungen"]');b&&b.click();},1000);setTimeout(function() {var c = document.querySelectorAll(".is-checked"); c.forEach(function(c){c&&c.click();}); }, 800);});setTimeout(function() { var d = document.querySelector('button[title*="speichern"]'); if(d) { d.click(); } }, 800); g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},5E4)}});
 cmp.autobild.de#%#AG_onLoad(function(){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button[title*="Einstellungen"][class^="message-component"]');b&&b.click();},1E3);});setTimeout(function(){ var c=document.querySelectorAll(".page-action"); c[0]&&c[0].click(); },1E3);setTimeout(function(){ var d=document.querySelectorAll(".is-checked"); d.forEach(function(d){d.click(); }); }, 1E3);setTimeout(function(){var e=document.querySelector('button[title*="lehnen"]'); e&&e.click(); },1E3);g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1E4)});
 cmp.chip.de#%#AG_onLoad(function(){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button[title*="Einstellungen"][class^="message-component"]');b&&b.click();},1E3);});setTimeout(function(){ var c=document.querySelectorAll(".page-action"); c[0]&&c[0].click(); },1E3);setTimeout(function(){ var d=document.querySelectorAll(".is-checked"); d.forEach(function(d){d.click(); }); }, 1E3);setTimeout(function(){var e=document.querySelector('button[title*="speichern"]'); e&&e.click(); },1E3);g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1E4)});
-wetransfer.com#%#AG_onLoad(function() { var a=new MutationObserver(function() {var a=document.querySelector(".welcome__button--decline");if(a) {a.click();a.disconnect()}});a.observe(document,{childList:!0,subtree:!0});});
-wetransfer.com#%#AG_onLoad(function() { var a=new MutationObserver(function() {var a=document.querySelector(".transfer__button");if(a) {a.click();a.disconnect()}});a.observe(document,{childList:!0,subtree:!0});});
+wetransfer.com#%#AG_onLoad(function() { var a=new MutationObserver(function() {var e=document.querySelector(".welcome__button--decline");if(e) {e.click();a.disconnect()}});a.observe(document,{childList:!0,subtree:!0});});
+wetransfer.com#%#AG_onLoad(function() { var a=new MutationObserver(function() {var e=document.querySelector(".transfer__button");if(e) {e.click();a.disconnect()}});a.observe(document,{childList:!0,subtree:!0});});
 numerama.com#%#document.cookie="euconsent-v2=1";
 workis.online#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("workisCookiePolicy", "true") } } catch (ex) {} })();
 vaillant.be#%#//scriptlet("set-constant", "Object.prototype.cookiewarning", "noopFunc")
@@ -18668,6 +18675,7 @@ online-life.cc#?#div[style="height:10px;"] ~ div.block_title[-ext-contains="НА
 !
 !--- Ads ---
 !
+filmitorrent.proxyrooms.com##div[onclick^="window.open"][onclick*="vpnoffers.info/"]
 xanimehub.com#?##sidebar > section.widget > h2.widget-title:contains(SPONSER):upward(1)
 xanimehub.com##a[href^="https://gadlt.nl/"]
 xanimehub.com##.wps-player__happy-inside
