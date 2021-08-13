@@ -1,14 +1,24 @@
 ! ||104.248.94.172^$all is excluded by "||104." in exclusions.txt
 ||104.248.94.172^$all
-! kamilassurma.com##^script:has-text(/wwig=.*btoa/) is excluded by "##^" in exclusions.txt
-kamilassurma.com##^script:has-text(/wwig=.*btoa/)
 ! Rule "||gloryone.pl^$frame,domain=tictac.pl" converted to: "||gloryone.pl^$subdocument,domain=tictac.pl"
 ||gloryone.pl^$frame,domain=tictac.pl
-! Rule "!download.komputerswiat.pl##div[id]:has( > .big.dl_button.download_link:not([href*="//files-download.playpc.pl/"]))::after:style(content: 'Uwaga aystent pobierania próbuje się załadować' !important;)" converted to: "!download.komputerswiat.pl#$?#div[id]:has( > .big.dl_button.download_link:not([href*="//files-download.playpc.pl/"]))::after { content: 'Uwaga aystent pobierania próbuje się załadować' !important; }"
-!download.komputerswiat.pl##div[id]:has( > .big.dl_button.download_link:not([href*="//files-download.playpc.pl/"]))::after:style(content: 'Uwaga aystent pobierania próbuje się załadować' !important;)
-! Rule "kadantiscam.netlify.com,kadantiscam.netlify.app##+js(set-constant.js, kadetect, true)" converted to: "kadantiscam.netlify.com,kadantiscam.netlify.app#%#//scriptlet('ubo-set-constant.js', 'kadetect', 'true')"
-kadantiscam.netlify.com,kadantiscam.netlify.app##+js(set-constant.js, kadetect, true)
-! kadantiscam.netlify.com,kadantiscam.netlify.app#%#//scriptlet('ubo-set-constant.js', 'kadetect', 'true') is excluded by "#%#//scriptlet" in exclusions-low.txt
-kadantiscam.netlify.com,kadantiscam.netlify.app#%#//scriptlet('ubo-set-constant.js', 'kadetect', 'true')
+! Rule "||znany-lekarz.pl^$doc" converted to: "||znany-lekarz.pl^$document"
+||znany-lekarz.pl^$doc
+! Rule "instalki.pl##a[href*="?dm"]:style(pointer-events: none !important; font-size: 0 !important;)" converted to: "instalki.pl#$#a[href*="?dm"] { pointer-events: none !important; font-size: 0 !important; }"
+instalki.pl##a[href*="?dm"]:style(pointer-events: none !important; font-size: 0 !important;)
+! Rule "instalki.pl##a[href*="?dm"]::before:style(font-size: 23px !important; content: "WYBIERZ Z LISTY" !important;)" converted to: "instalki.pl#$#a[href*="?dm"]::before { font-size: 23px !important; content: "WYBIERZ Z LISTY" !important; }"
+instalki.pl##a[href*="?dm"]::before:style(font-size: 23px !important; content: "WYBIERZ Z LISTY" !important;)
+! Rule "tyfloswiat.pl##^responseheader(location)" converted to: "||tyfloswiat.pl^$removeheader=location"
+tyfloswiat.pl##^responseheader(location)
+! Rule "kadantiscam.netlify.com,kadantiscam.netlify.app##+js(set, kadetect, true)" converted to: "kadantiscam.netlify.com,kadantiscam.netlify.app#%#//scriptlet('ubo-set.js', 'kadetect', 'true')"
+kadantiscam.netlify.com,kadantiscam.netlify.app##+js(set, kadetect, true)
+! instalki.pl#$#a[href*="?dm"] { pointer-events: none !important; font-size: 0 !important; } is excluded by "#$#" in exclusions-low.txt
+instalki.pl#$#a[href*="?dm"] { pointer-events: none !important; font-size: 0 !important; }
+! instalki.pl#$#a[href*="?dm"]::before { font-size: 23px !important; content: "WYBIERZ Z LISTY" !important; } is excluded by "#$#" in exclusions-low.txt
+instalki.pl#$#a[href*="?dm"]::before { font-size: 23px !important; content: "WYBIERZ Z LISTY" !important; }
+! kadantiscam.netlify.com,kadantiscam.netlify.app#%#//scriptlet('ubo-set.js', 'kadetect', 'true') is excluded by "#%#//scriptlet" in exclusions-low.txt
+kadantiscam.netlify.com,kadantiscam.netlify.app#%#//scriptlet('ubo-set.js', 'kadetect', 'true')
+! Invalid selector:
+dobreprogramy.pl#?#[href="/blad/404"]:has-text(naszego poradnika):upward(4) > div:nth-of-type(-n+3)
 Error: "Unknown modifier: doc" in the rule: "*$doc,domain=104.248.94.172"
 *$doc,domain=104.248.94.172

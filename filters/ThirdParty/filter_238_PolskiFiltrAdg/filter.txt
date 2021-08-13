@@ -1,28 +1,28 @@
 !
 ! Title: Polish Anti Adblock Filters
 ! Oficjalne polskie filtry przeciwko alertom o Adblocku
-! Last modified: 31 March 2021
+! Last modified: 16 May 2021
 ! Expires: 2 days
-! OriginalVersion: 2021033101
+! OriginalVersion: 2021051601
 ! Support:
 !   Github >> https://github.com/olegwukr/polish-privacy-filters/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2021
-! v.2021033101 aktualizacja: sr, 31 marca 2021, 15:05:00
+! v.2021051601 aktualizacja: nie, 16 maja 2021, 12:15:00
 !
 !
 !-----------------------Integration of supplement lists for uBlock & AdGuard-----------------------!
 !#if ext_ublock
 ! Title: Polish Anti Adblock Filters - supplement for uBlock Origin
 ! Oficjalne polskie filtry przeciwko alertom o Adblocku - uzupelnienie dla uBlock Origin
-! Last modified: 19 March 2021
+! Last modified: 5 May 2021
 ! Expires: 2 days
-! OriginalVersion: 2021031901
+! OriginalVersion: 2021050501
 ! Support:
 !   Github >> https://github.com/olegwukr/polish-privacy-filters/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2021
-! v.2021031901 aktualizacja: ptk, 19 marca 2021, 05:05:00
+! v.2021050501 aktualizacja: sr, 5 maja 2021, 21:45:00
 !
 !
 ! Adblock
@@ -136,10 +136,10 @@ temi.pl#%#//scriptlet('ubo-nostif.js', 'mdpDeBlocker')
 ! magazyn.wp.pl
 !#if cap_user_stylesheet
 !magazyn.wp.pl##div:has(div > img[src*="NDM0MzY2YSUsUjtJdklsMG8KbxkpWhE3OVRvVntHbH5vHyQXOFUrN2JRLBh2XCcmY0AjHXtP"])
-!magazyn.wp.pl#$#body { overflow: auto !important; }
-!magazyn.wp.pl#$#body [class] { filter: none !important; }
+!magazyn.wp.pl##body:style(overflow: auto !important;)
+!magazyn.wp.pl##body [class]:style(filter: none !important;)
 !#endif
-!magazyn.wp.pl#$#body [class] { filter: none !important; }
+!magazyn.wp.pl##body [class]:style(filter: none !important;)
 !magazyn.wp.pl##+js(overlay-buster.js)
 !pudelek.pl,film.wp.pl,finanse.wp.pl,gwiazdy.wp.pl,kobieta.wp.pl,ksiazki.wp.pl,magazyn.wp.pl,moto.wp.pl,opinie.wp.pl,tech.wp.pl,wiadomosci.wp.pl##+js(set-constant, Object.prototype.isBlocked, false)
 !pudelek.pl,film.wp.pl,finanse.wp.pl,gwiazdy.wp.pl,kobieta.wp.pl,ksiazki.wp.pl,magazyn.wp.pl,moto.wp.pl,opinie.wp.pl,tech.wp.pl,wiadomosci.wp.pl##+js(set-constant, Object.prototype.aggressiveAB, false)
@@ -192,18 +192,25 @@ wyklady.org#%#//scriptlet('ubo-nobab.js')
 !
 ! synonimy.pl
 synonimy.pl#%#//scriptlet('ubo-set-constant.js', 'showAddbockerMsg', 'noopFunc')
+!
+! elektroda.pl
+elektroda.pl##section a:not([href*="elektroda.pl/"]):not([href*="/rtvforum/"]):not(.fancybox):not(.postlink) img[src^="https://obrazki.elektroda.pl/"]
+elektroda.pl###main .col-md-8 a:not([href*="elektroda.pl/"]) img[src^="https://static.elektroda.pl/"]
+elektroda.pl###main .col-md-8 form[action*="//"][action*="m"][action*="."]:upward(.col-md-8 > div)
+elektroda.pl#%#//scriptlet('ubo-no-setTimeout-if.js', 'adBlockTest', '100')
+www.elektroda.pl#%#//scriptlet('ubo-set-constant.js', 'loadElementBlock', 'noopFunc')
 !#endif
 !#if adguard
 ! Title: Polish Anti Adblock Filters - supplement for Adguard
 ! Oficjalne polskie filtry przeciwko alertom o Adblocku - uzupelnienie dla Adguard
-! Last modified: 13 February 2021
+! Last modified: 26 May 2021
 ! Expires: 2 days
-! OriginalVersion: 2021021301
+! OriginalVersion: 2021052601
 ! Support:
 !   Github >> https://github.com/olegwukr/polish-privacy-filters/issues
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright (C) 2021
-! v.2021021301 aktualizacja: sob, 13 lutego 2021, 16:15:00
+! v.2021052601 aktualizacja: sr, 26 maj 2021, 20:30:00
 !
 !
 ! Adblock
@@ -317,10 +324,10 @@ temi.pl#%#//scriptlet('ubo-nostif.js', 'mdpDeBlocker')
 ! magazyn.wp.pl
 !#if cap_user_stylesheet
 !magazyn.wp.pl##div:has(div > img[src*="NDM0MzY2YSUsUjtJdklsMG8KbxkpWhE3OVRvVntHbH5vHyQXOFUrN2JRLBh2XCcmY0AjHXtP"])
-!magazyn.wp.pl#$#body { overflow: auto !important; }
-!magazyn.wp.pl#$#body [class] { filter: none !important; }
+!magazyn.wp.pl##body:style(overflow: auto !important;)
+!magazyn.wp.pl##body [class]:style(filter: none !important;)
 !#endif
-!magazyn.wp.pl#$#body [class] { filter: none !important; }
+!magazyn.wp.pl##body [class]:style(filter: none !important;)
 !magazyn.wp.pl##+js(overlay-buster.js)
 !pudelek.pl,film.wp.pl,finanse.wp.pl,gwiazdy.wp.pl,kobieta.wp.pl,ksiazki.wp.pl,magazyn.wp.pl,moto.wp.pl,opinie.wp.pl,tech.wp.pl,wiadomosci.wp.pl##+js(set-constant, Object.prototype.isBlocked, false)
 !pudelek.pl,film.wp.pl,finanse.wp.pl,gwiazdy.wp.pl,kobieta.wp.pl,ksiazki.wp.pl,magazyn.wp.pl,moto.wp.pl,opinie.wp.pl,tech.wp.pl,wiadomosci.wp.pl##+js(set-constant, Object.prototype.aggressiveAB, false)
@@ -370,6 +377,16 @@ karmopedia.pl#%#//scriptlet('ubo-nostif.js', 'showAdblockImage', '2000')
 wyklady.org#%#//scriptlet('ubo-nobab.js')
 !
 ! soisk.pl
+!
+! synonimy.pl
+synonimy.pl#%#//scriptlet('ubo-set-constant.js', 'showAddbockerMsg', 'noopFunc')
+!
+! elektroda.pl
+elektroda.pl##section a:not([href*="elektroda.pl/"]):not([href*="/rtvforum/"]):not(.fancybox):not(.postlink) img[src^="https://obrazki.elektroda.pl/"]
+elektroda.pl###main .col-md-8 a:not([href*="elektroda.pl/"]) img[src^="https://static.elektroda.pl/"]
+elektroda.pl###main .col-md-8 form[action*="//"][action*="m"][action*="."]:upward(.col-md-8 > div)
+elektroda.pl#%#//scriptlet('ubo-no-setTimeout-if.js', 'adBlockTest', '100')
+www.elektroda.pl#%#//scriptlet('ubo-set-constant.js', 'loadElementBlock', 'noopFunc')
 !
 ! geekweek.pl
 #if env_adguard
@@ -432,6 +449,7 @@ histmag.org###adBlock
 ikorektor.pl###adb
 imged.pl##.m-puppies-detector
 infoship.pl,infoair.pl,infobike.pl,infotram.pl,inforail.pl,transinfo.pl,infobus.pl###popup_adblock
+instrukcjapdf.pl###quads-myModal
 ipon.pl##.alert-warning
 jbzdy.com.pl,jbzdy.pl,kwejk.pl,piwniczkamemow.pl,eszkola.pl,dobreprogramy.pl,interia.pl,kwantowo.pl,katowickisport.pl,imeds.pl,pl.aleteia.org,overwatch.pl,jackcaleib.com,waw4free.pl,dziwneobrazki.pl,fm.tuba.pl,hentai-online.pl,epainfo.pl,bajeczki.org,tvbraniewo24.pl,anime-odcinki.pl,bh-res.pl,scentre.pl,towideo.pl,cypr24.eu,cdahd.co,player.radiozet.pl,meloradio.pl,antyradio.pl,chillizet.pl,radioplus.pl,tarnowska.tv#@#.pub_300x250
 jbzdy.com.pl,jbzdy.pl,kwejk.pl,piwniczkamemow.pl,eszkola.pl,dobreprogramy.pl,interia.pl,kwantowo.pl,katowickisport.pl,imeds.pl,pl.aleteia.org,overwatch.pl,jackcaleib.com,waw4free.pl,dziwneobrazki.pl,fm.tuba.pl,hentai-online.pl,epainfo.pl,bajeczki.org,tvbraniewo24.pl,anime-odcinki.pl,bh-res.pl,scentre.pl,towideo.pl,cypr24.eu,cdahd.co,player.radiozet.pl,meloradio.pl,antyradio.pl,chillizet.pl,radioplus.pl,tarnowska.tv#@#.pub_300x250m
@@ -617,7 +635,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 !
 !3#---------------------------------Anti Adblock Rules whitelist filters----------------------------------!
 @@/wp-content/*/plugins/dh-anti-adblocker$script
-@@*$generichide,domain=break.pl|handballnews.pl|angielskieespresso.pl|dayz.pl|go4free.pl|meteomodel.pl|polski-sport.pl|wyborcza.pl|esarena.eu|queer.pl|wysokieobcasy.pl|eduzabawy.com|zadanie.pl|waw4free.pl|listatv.pl
+@@*$generichide,domain=break.pl|handballnews.pl|angielskieespresso.pl|dayz.pl|go4free.pl|meteomodel.pl|polski-sport.pl|wyborcza.pl|esarena.eu|queer.pl|wysokieobcasy.pl|eduzabawy.com|zadanie.pl|waw4free.pl|listatv.pl|calcoolator.pl
 @@/Scripts/ads.js$script,domain=www.reklama.pl
 @@/^(https|http):\/\/a-o\.ninja\/[0-9a-zA-z-]{10,200}\.js/$script
 @@/ads.css$domain=trojmiasto.pl
@@ -698,7 +716,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 @@||gtaforum.pl^$generichide
 @@||hentai-online.pl^$generichide
 !@@||hit.stat24.com^$script,xmlhttprequest,domain=www.geekweek.pl
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=games.cdn.famobi.com|grydladzieci.pl|fm.tuba.pl|wp.pl|player.pl|animezone.pl|ipla.tv|www.polsatnews.pl|playpuls.pl|polsatsport.pl|twojapogoda.pl|wtk.pl|tvp.pl|polsatnews.pl|tvokazje.pl|parenting.pl|abczdrowie.pl|money.pl|meloradio.pl|antyradio.pl|chillizet.pl|radioplus.pl|radiozet.pl|www.geekweek.pl|video.onnetwork.tv|partner.redefine.pl|echirurgia.pl|national-geographic.pl|mojegotowanie.pl|przyslijprzepis.pl|focusnauka.pl|glamour.pl|elle.pl|kobieta.pl|elleman.pl|claudia.pl|ipla.tv|elevensports.pl
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=games.cdn.famobi.com|grydladzieci.pl|fm.tuba.pl|wp.pl|player.pl|animezone.pl|ipla.tv|www.polsatnews.pl|playpuls.pl|polsatsport.pl|twojapogoda.pl|wtk.pl|tvp.pl|polsatnews.pl|tvokazje.pl|parenting.pl|abczdrowie.pl|money.pl|meloradio.pl|antyradio.pl|chillizet.pl|radioplus.pl|radiozet.pl|www.geekweek.pl|video.onnetwork.tv|partner.redefine.pl|echirurgia.pl|national-geographic.pl|mojegotowanie.pl|przyslijprzepis.pl|focusnauka.pl|glamour.pl|elle.pl|kobieta.pl|elleman.pl|claudia.pl|ipla.tv|elevensports.pl|mojpieknyogrod.pl|sadeczanin.info
 @@||imasdk.googleapis.com/js/sdkloader/vpaid_adapter.js$script,domain=vod.tvp.pl
 @@||imged.pl/subframe/js/*/adblock-advertisement.js$script
 @@||interia.pl^$generichide
@@ -720,7 +738,7 @@ zycietoprzygoda.pl##[class^="tws_"]
 @@||kwejk.pl^$generichide
 @@||legionisci.com^$generichide
 @@||lib.wtg-ads.com/lib.min.js$script,domain=legia.net
-@@||lib.wtg-ads.com/prebid/prebid_*.js$xmlhttprequest,domain=joemonster.org|innpoland.pl|dadhero.pl|wroclawskiejedzenie.pl|natemat.pl|weszlo.com|mamadu.pl|otopress.pl|wypracowania.pl|kulinarnapolska.org
+@@||lib.wtg-ads.com/prebid/prebid_*.js$xmlhttprequest,domain=joemonster.org|innpoland.pl|dadhero.pl|wroclawskiejedzenie.pl|natemat.pl|weszlo.com|mamadu.pl|otopress.pl|wypracowania.pl|kulinarnapolska.org|tulodz.pl
 @@||lowcygier.pl^$script
 @@||manjaro.pl/abd/adserver/adlogger_tracker.php
 @@||medonet.pl^$generichide
@@ -811,6 +829,8 @@ zycietoprzygoda.pl##[class^="tws_"]
 @@||zyciepabianic.pl^$generichide
 @@||bham.pl/templates/bham_res/js/advscript.js
 @@||tvcom-static.ssl.cdn.cra.cz^$script,domain=www.tvcom.pl|www.tvcom.cz|kulturazive.cz
+@@||faucet-doge.u7u.pl/libs/advertisement.js$script,domain=faucet-doge.u7u.pl
+@@||moviads.pl^$domain=mojpieknyogrod.pl
 !
 !4#--------------------------Rules block ads after antiadblock rules-------------!
 /ad-$subdocument,domain=upflix.pl
@@ -890,6 +910,8 @@ filmweb.pl#@##advertBar-pl_PL
 ||fwcdn.pl/adv/$important,script,domain=filmweb.pl,badfilter
 ||fwcdn.pl/adv/*.jpg
 ||fwcdn.pl/adv/*.png
+filmweb.pl$$script[tag-content="adblockDisplayInformation.):has-text(/[\w\W]{8000,50000}/"][max-length="262144"]
+filmweb.pl$$script[tag-content="plusAdblock):has-text(/[\w\W]{4000,10000}/"][max-length="262144"]
 filmweb.pl#%#//scriptlet('ubo-abort-current-inline-script.js', 'IRI', 'Adblock')
 filmweb.pl##.d_utru
 !

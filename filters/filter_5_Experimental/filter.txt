@@ -244,6 +244,9 @@
 ! Rules which are restricted to one or more domains.
 ! This section contain any type of rule grouped by domain.
 !
+!+ PLATFORM(android, ios, ext_android_cb)
+/^https?:\/\/yandex\.(by|kz|ru|ua|uz)\/images\/_[a-z]{4}\/[a-z0-9]{8,}\/.*\/[a-zA-Z0-9_\-]{150,}/$xmlhttprequest,~third-party
+
 !
 ! Whitelist
 !
@@ -291,11 +294,8 @@ reddit.com##.CommentsPage > article[id][class][style*="z-index: 1;"]
 !
 !################## For advertisement ##################
 !
-! VAST video ads
-!+ NOT_PLATFORM(windows, mac, android, ext_ff)
-||damoh.*.de^$redirect=nooptext,domain=pcgames.de|t-online.de|vox.de|giga.de|spieletipps.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/64754
-||video-weaver.*.hls.ttvnw.net/v*/playlist/*.m3u8$replace=/#EXT-X-DATERANGE:ID="stitched-ad[\s\S]*(#EXT-X-PROGRAM-DATE-TIME)(?![\s\S]*?#EXTINF:\d\.\d+\,live)[\s\S]*|(#EXT-X-DATERANGE:ID="stitched-ad[\s\S]*?(#EXT-X-PROGRAM-DATE-TIME)([\s\S]*?(#EXTINF:\d\.\d+\,live)))/\$5/
+! ||video-weaver.*.hls.ttvnw.net/v*/playlist/*.m3u8$replace=/#EXT-X-DATERANGE:ID="stitched-ad[\s\S]*(#EXT-X-PROGRAM-DATE-TIME)(?![\s\S]*?#EXTINF:\d\.\d+\,live)[\s\S]*|(#EXT-X-DATERANGE:ID="stitched-ad[\s\S]*?(#EXT-X-PROGRAM-DATE-TIME)([\s\S]*?(#EXTINF:\d\.\d+\,live)))/\$5/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/63128
 tumblr.com###base-container div[style="height:0;display:flex;flex-direction:column;overflow:hidden"] + div:not([class]):not([id]) > div[class]:not([data-id]):not([class*=" "])
 !

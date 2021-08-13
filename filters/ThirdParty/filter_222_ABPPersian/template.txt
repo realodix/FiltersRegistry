@@ -1,6 +1,8 @@
 !
 ! @include "https://ideone.com/plain/K452p" /exclude="../../exclusions.txt"
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/81637
+@@-230x230.$domain=songsara.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53500
 @@||gamepedia.com/load.php?
 ! Attention: check if these rules are removed after update this filter
@@ -8,6 +10,7 @@
 ! ||digikala.com^$third-party
 !
 ! /affiliate/*
+! ##.ads:not(.adf):not(.adn)
 ! ##*[class$="_ads"]:not(body):not(input)
 ! ##*[class^="ads-"]:not(body):not(input)
 ! ##*[class^="ads_"]:not(body):not(input)
@@ -845,7 +848,6 @@ saveinter.net##HTML
 ##.sidebar-textads
 ##a[href*="?aff="]
 ##a[href*="/affiliate.php?"]
-##.ads:not(.adf):not(.adn)
 ##.guestwarn
 ##a[href*="-ad."]
 ##a[href*="/ad/"]

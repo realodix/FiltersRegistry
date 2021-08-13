@@ -1,6 +1,6 @@
 !
 ! title: 乘风 广告过滤规则
-! OriginalVersion: 202103231
+! OriginalVersion: 202105121
 ! Expires: 2 days
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
 !@@*$domain=taobao.com|alipay.com|suning.com|vmall.com|etao.com|tmall.com|paipai.com|jd.com|jd.hk|i.qq.com|my.csdn.net
@@ -40,7 +40,7 @@ v.baidu.com##div[videoadv],a[href^="http://g.youxi.v.baidu."]
 www.baidu.com##div.c-container:has(a[data-landurl])
 zhidao.baidu.com###left-promotion,#ui-tooltip-0,div.cms-slide.cms-slide-optimus,div.wgt-bottom-ask,div.cms-slide.cms-slide-lazy
 !--贴吧---
-tiebac.baidu.com,tieba.baidu.com,jump.bdimg.com,jump2.bdimg.com##div[ad-dom-img],#thread_list>li:not(.j_thread_list):not(.thread_top_list_folder)
+tiebac.baidu.com,tieba.baidu.com,jump.bdimg.com,jump2.bdimg.com##div[ad-dom-img],#thread_list>li:not(.j_thread_list):not(.thread_top_list_folder),div[data-rank]
 @@||tb1.bdstatic.com/??/tb/_/*/ad_$script
 ||tb1.bdstatic.com/??/tb/_/game_iframe_common_$script
 ||tb1.bdstatic.com/??/tb/_/game_rank_in_head_$script
@@ -100,7 +100,6 @@ tanx.com
 */vamaker/
 wrating.com
 ~ziodslzz.net##.ad,div.ad960-90,div.ad-side,table.adtable,div.a_mu,div.a_h,div.ad_pic,div.wp.a_f,div.wp.a_t,div.a_pb,div.a_pt,div.a_pr,div.a_cn,#ggPar,#side-ad,#preAdContent,div.adbox
-~google.com##.adsbygoogle,.ads
 ||com/ads
 *_350_330.$image
 */html/click/
@@ -429,10 +428,9 @@ ithome.com##.categoryimg,#hd_float,#side_func,#con>#tt5>div,div.related_buy,li.s
 ||ithome.com/file/js/money/
 ||www.ithome.com/json/hot/$subdocument
 jb51.net##.clearfix.mtb10:first-child,div.r300>.idc3,#txtlink,div.topimg,#param.content-box+div,#xgd+dd
-||dm.jb51.net/
-||bdjs.jb51.net/$script
+jscode.jbzj.com
+zyzj360.com
 ||files.jb51.net/image/$image
-||img.jb51.net/images/sl/$image
 jianshu.com###note-fixed-ad-container
 ||jianshu.io/assets/web/*-ads-$image
 juejin.im##.banner,.wechat-banner
@@ -1021,6 +1019,7 @@ trade.mtime.com
 */inner_center1
 */intf/bbs_expert
 */js/1.htm$subdocument
+@@||wago.io/js/118.$script
 */js/118.
 */js/22.$subdocument
 */js/3000.
@@ -1181,18 +1180,16 @@ admin5.com##.float_both,div.sherry_ad1,div.specialBox,.content_right_ad
 ||168.it168.com$script
 ||17173.com/if/$subdocument
 ! title: 乘风 视频广告过滤规则
-! OriginalVersion: 202104081
+! OriginalVersion: 202105021
 ! Expires: 2 days
 ! Homepage: http://bbs.kafan.cn/thread-1866845-1-1.html
 v.youku.com##.control-phonewatch,#right-title-ad-banner
+youku.com#%#//scriptlet('ubo-aeld.js', 'dblclick', 'ykplayer.switchFullscreen')
 !v.youku.com##+js(nano-stb)
 ||atm.youku.com/
 ||cibntv.net/youku/$media
 ||valipl.cp31.ott.cibntv.net/$media
-|https://static.youku.com/index/js/ikuAdapterNew.js
 |https://js.ykimg.com/youku/dist/js/lib/ikuAdapterNew.js
-!||ykimg.com/material/$image
-!youku.com##.ad-wrap
 ||sealine.youku.com/yk/*callback=adpagesdk$script
 iqiyi.com##div[data-adzone],#block-V
 !iqiyi.com##+js(nano-sib)
@@ -1202,26 +1199,27 @@ iqiyi.com#%#//scriptlet('ubo-set.js', 'Object.prototype.parseXML', 'noopFunc')
 ||iqiyipic.com/image/20*_100000$image
 ||ssports.iqiyi.com/json/shop/shopInfo
 show.ssports.com
-qq.com##.mod_ad
-v.qq.com##.txp_ad
+qq.com##.mod_ad, .txp_ad
 v.qq.com,sports.qq.com#%#//scriptlet('ubo-json-prune.js', 'ad', 'vinfo')
 v.qq.com,sports.qq.com#%#//scriptlet('ubo-nano-sib.js', '\u5012\u8ba1\u65f6')
 @@||video.qq.com/fcgi-bin/
 ||mark.l.qq.com/fcgi-bin/get_video_mark_all?idlist=
-||adss.video.qq.com/
 ||gtimg.com/qqlive/
-||miaozhen.com/
-||reachmax.cn/
-||tencentmind.com/
-||xtgreat.com/
+miaozhen.com
+reachmax.cn
+scorecardresearch.com
+tencentmind.com
+xtgreat.com
 bilibili.com##.gg-floor-module,#slide_ad,#slide_ad+a[data-target-url]
 ||api.bilibili.com/x/web-show/res/loc?pf=$~script
 ||hdslb.com/bfs/sycp/creative_img/$image
 acfun.cn##.pause-display-container,#ad-comment,#ad-player-view
 ||aixifan.com/static/*/appGuide/
 cctv.com###bgAd_div
+cctv.com,ddrk.me#%#//scriptlet('ubo-aeld.js', 'dblclick', 'isImmediatePropagationStopped')
 ||imall.cctv.com/$subdocument
 ||bjcathay.com/
+!||player.cntv.cn/h5vod/$script
 pptv.com##div[id^=afp_],div[id$=-afp],#video-download-game
 ||synacast.com
 ||de.as.pptv.com^
@@ -1267,20 +1265,23 @@ huya.com###hy-ad,#hy-ab,#huya-ab
 */preroll/$media,domain=91porn.com
 ||91p20.space^
 ||waust.at^
+dililitv.cc,lzvod.net#%#//scriptlet('ubo-aeld.js', 'dblclick', 'dp.fullScreen.request')
 ||www.dililitv.cc/*.php?ad=$script
 js.dilidd.com
-dililitv.cc,hmtv.me,imeiju.io,zxfun.net#%#//scriptlet('ubo-acis.js', 'Object.defineProperty', 'location.href')
+dililitv.cc,hmtv.me,imeiju.io#%#//scriptlet('ubo-acis.js', 'Object.defineProperty', 'location.href')
 dyjihe.com##.tempWrap
 haitur.com,haicaoys.com##.dplayer-web-fullscreen-fix .float-box
 haitur.com#$#.container { max-width:90%!important;width:90%!important }
 haitur.com#$#.left-content { width:77%!important }
-dyjihe.com,hehua.net,imomoe.*,kakadm.com,milimili.tv,qiqidongman.com,vodxc.in#%#//scriptlet('ubo-ra.js', 'target', 'a[href^="/"]')
+imomoe.*,xiamov.com,xxdm8.com#%#//scriptlet('ubo-ra.js', 'target', 'base[target]')
+dyjihe.com,haicaoys.com,haitur.com,imomoe.*,kakadm.com,milimili.tv,qiqidongman.com,vodxc.in#%#//scriptlet('ubo-ra.js', 'target', 'a[href^="/"]')
 ||alicdn.com/$image,domain=api.xiaomingming.org
 imomoe.*###adl,#adr
-yatu.tv###loadtop,[id^=myas],#myds1,#daohang
+yatu.tv##.dplayer-web-fullscreen-fix #tburl,#loadtop,[id^=myas],#myds1,#daohang
 yatu.tv#%#//scriptlet('ubo-set.js', 'document.oncontextmenu', 'null')
 ||tracker.$xmlhttprequest,websocket,script,ping
 3z9e.cn
+7nsc.cn
 7b6l2j.cn
 anquanzhuomian.com
 ch-hr12333.com
@@ -1290,5 +1291,15 @@ fourier.taobao.com
 v4dwkcv.com
 weizhenwx.com
 youle55.com
+bmbaike.cn
+buzx53.cn
+cqqc3.com
+dacedsfa.cn
+qdwght.com
+quickapp.cn
+xcsci.cn
+xixiqiu.com
+xv5b.com
+xz6d.com
 ||www.yatu.tv:88/image/*.gif^$image
 ||www.yatu.tv:88/m/images/$image

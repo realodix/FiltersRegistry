@@ -1,8 +1,8 @@
 !
-! Checksum: DeNFDqSk40S4rz9MVgJkeA
-! OriginalVersion: 202104121650
+! Checksum: Trn+Zux3m0dtX9skmU6VRg
+! OriginalVersion: 202108131250
 ! Title: RU AdList: Counters
-! Last modified: 12 Apr 2021 16:50 UTC
+! Last modified: 13 Aug 2021 12:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -38,8 +38,8 @@
 @@||help.viber.com^*/counters?lang=$xmlhttprequest,domain=help.viber.com
 @@||kufar.by/cc_proxy/api/users/*/counter?withPollingTime=true$xmlhttprequest,domain=kufar.by
 @@||mail.ru/js/cpf/tools/jquery/counters/$domain=mail.ru
-@@||mc.yandex.ru/metrika/tag.js|$script,domain=auto.ru|auto.yandex|iz.ru
-@@||mc.yandex.ru/metrika/watch.js$domain=amurmedia.ru|auto.ru|carambatv.ru|cashalot.su|chelyabinsk.74.ru|damprodam.ru|eaomedia.ru|irkutskmedia.ru|iz.ru|krasnodarmedia.su|krasnoyarskmedia.ru|magadanmedia.ru|muzofond.org|news.rambler.ru|player.1tv.com|primamedia.ru|sakhalinmedia.ru|samozapis-spb.ru|sevastopolmedia.ru|sherlock.store|sovsport.ru|sprinthost.ru|stylenews.ru|tvrain.ru|ulanmedia.ru|ussurmedia.ru|yakutiamedia.ru|yap.ru|yaplakal.com
+@@||mc.yandex.ru/metrika/tag.js|$script,domain=auto.yandex|iz.ru
+@@||mc.yandex.ru/metrika/watch.js$domain=amurmedia.ru|carambatv.ru|cashalot.su|chelyabinsk.74.ru|damprodam.ru|eaomedia.ru|irkutskmedia.ru|iz.ru|krasnodarmedia.su|krasnoyarskmedia.ru|magadanmedia.ru|muzofond.org|news.rambler.ru|player.1tv.com|primamedia.ru|sakhalinmedia.ru|samozapis-spb.ru|sevastopolmedia.ru|sherlock.store|sovsport.ru|sprinthost.ru|stylenews.ru|tvrain.ru|ulanmedia.ru|ussurmedia.ru|yakutiamedia.ru|yap.ru|yaplakal.com
 @@||mc.yandex.ru/metrika/watch_visor.js$script,domain=zebratelecom.ru
 @@||mc.yandex.ru/webvisor^$domain=overclockers.ru
 @@||megafon.ru/static/?files=*/piwik.$domain=megafon.ru
@@ -49,6 +49,7 @@
 @@||polemika.com.ua/content/counter|$xmlhttprequest,domain=polemika.com.ua
 @@||s.youtube.com/api/stats/playback?$image,domain=youtube.com
 @@||scorecardresearch.com/*/streamingtag_plugin_jwplayer.js|$third-party,script
+@@||sephora.ru/assets/js/counter_gtm.js$domain=sephora.ru
 @@||stat.allsport-live.ru/images/$image,domain=allsport-live.net
 @@||stat.eagleplatform.com^$subdocument,domain=360tv.ru|news.rambler.ru
 @@||stat.radar.imgsmail.ru/*=honeypot_fake_$image,domain=e.mail.ru
@@ -105,6 +106,7 @@
 /l.php3?who=$image
 /library/svy/*/broker.js
 /log_interaction?
+/matomo.js$script,domain=~github.com
 /mint/?js
 /mmcount3.dll?
 /modules/google_analytics/*
@@ -143,7 +145,7 @@
 ://advstat.
 ://cnt.
 ://count.
-://counter.
+://counter.$domain=~tengrinews.kz
 ://counting.
 ://hit.$third-party
 ://hits.$third-party
@@ -157,10 +159,11 @@
 ^name=atatracker^
 _pagespeed_beacon?
 ||analytics.*.*/pixel.php?h=
+||kz/js/analytic
 ||ru/cnt/?
 ||ru/count/$domain=~yandex.by|~yandex.kz|~yandex.ru|~yandex.ua|~yandex.uz
 ||ru/img.php?id
-||ru/stat/$domain=~allsocial.ru|~barcodes.olegon.ru|~be1.ru|~metrika.yandex.ru|~proships.ru|~sms-track.ru|~sports.ru|~wordstat.yandex.ru
+||ru/stat/$domain=~allsocial.ru|~barcodes.olegon.ru|~be1.ru|~metrika.yandex.ru|~proships.ru|~sms-track.ru|~sports.ru|~textovod.com|~wordstat.yandex.ru
 ||su/stat/
 ||ua/stat/$domain=~fotomag.com.ua
 !
@@ -168,7 +171,7 @@ _pagespeed_beacon?
 ##[alt="Rambler's Top100"]
 ##[title="uCoz Counter"]
 ##[title="uWeb Counter"]
-##a#mobtop[title="Рейтинг мобильных сайтов"]
+##a#mobtop[title^="Рейтинг мобильных сайтов"]
 ##a[href*="//top.mail.ru/jump?"]
 ##a[href*="/rating/"] > img[width="88"][height="31"]
 ~rambler.ru##a[href*="rambler.ru/top100/"]
@@ -178,6 +181,7 @@ _pagespeed_beacon?
 ##a[href^="http://hitcounter.ru/top/stat.php"]
 ##a[href^="https://prime.rambler.ru/promo/"]
 ##img[src*="//counter.yadro.ru/"]
+##img[src*="/cycounter?"][width="88"][height="31"]
 ##img[src*="://c.bigmir.net/"]
 ##img[src*="://r.i.ua/"]
 ##img[src*="top.mail.ru/counter?"]
@@ -186,9 +190,11 @@ _pagespeed_beacon?
 ##img[title="bigmir)net TOP 100"]
 !
 ! = Общие блокировки (и с использованием имени доменов) =========================
+//stats.myangular.life^$third-party
 /redir/stat/*$domain=autonews.ru|rbc.ru|sportrbc.ru
 |http://li.ru^$third-party,~subdocument
 |http://pr-cy.$third-party
+||1l-hit.mail.ru^
 ||1pagerank.com^$third-party
 ||2ip.ru^$third-party,~subdocument
 ||2o7.net^$third-party
@@ -198,6 +204,7 @@ _pagespeed_beacon?
 ||a-counter.kiev.ua^$third-party
 ||a.sepyra.com^
 ||acint.net^$third-party
+||acstat.com^$third-party
 ||adblockmetrics.ru^$third-party
 ||addthis.com^*.gif?*&CXNID=
 ||adlog.com.com^
@@ -210,6 +217,7 @@ _pagespeed_beacon?
 ||ag.ru/*/info/info.php?
 ||agropoisk.ru/getbanner.php?
 ||aidata.io^$third-party
+||ainews.kz/api/track/
 ||ajur.info^$third-party
 ||akavita.com^$third-party
 ||alexa.com/site_stats/
@@ -239,6 +247,7 @@ _pagespeed_beacon?
 ||authentication.me^$third-party
 ||auto.ru/-/ajax/$~xmlhttprequest
 ||autodealer.ru/includes/button.php?
+||awsync.yandex.ru^$third-party
 ||bemobile.ua/bug/
 ||bemobile.ua/cm/
 ||bemobile.ua/id/
@@ -282,7 +291,9 @@ _pagespeed_beacon?
 ||carline.ru/best-top/count?
 ||casalemedia.com^$third-party
 ||catalog.metka.ru^$third-party
-||cdn.jsdelivr.net/npm/yandex-metrica-watch/$domain=~kodik.cc|~kodik.info|~kodikdb.com
+||cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js
+||cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js
+||ceros.com/a?data=
 ||cfv4.com^$third-party
 ||chartbeat.com^$third-party
 ||chatov.net/img.php?id=
@@ -297,7 +308,7 @@ _pagespeed_beacon?
 ||cloudfront.me/metrika/watch
 ||cloudfront.net/metrika/watch
 ||cloudfront.pro/metrika/watch
-||clustrmaps.com^$third-party
+||clustrmaps.com^$third-party,domain=~80-e.ru
 ||cntstat.com^$third-party
 ||codingjungle.net^$third-party
 ||collector.apester.com^$third-party
@@ -305,6 +316,7 @@ _pagespeed_beacon?
 ||comstar.ru/cnstats/$third-party
 ||countby.com^$third-party
 ||countcount.co^$third-party
+||counter.nv.ua^
 ||counters.gigya.com^
 ||countlog.com^$third-party
 ||cpanetwork.ru/tracki.asp?
@@ -312,8 +324,10 @@ _pagespeed_beacon?
 ||creativecdn.com/tags?
 ||criteo.com^$third-party
 ||crm-analytics.imweb.ru^$third-party
+||crsspxl.com^$third-party
 ||crwdcntrl.net^$third-party
 ||csi.gstatic.com^
+||culturaltracking.ru^$third-party
 ||cvt1.sibnet.ru^
 ||cy-pr.com^$third-party
 ||cys.ru/button.png?url=
@@ -326,8 +340,10 @@ _pagespeed_beacon?
 ||d3qxef4rp70elm.cloudfront.net^
 ||d7d3cf2e81d293050033-3dfc0615b0fd7b49143049256703bfce.ssl.cf1.rackcdn.com^
 ||data.giraff.io/track/$third-party,domain=~5-tv.ru|~vse42.ru
+||dataxpand.com^$third-party
 ||dc.services.visualstudio.com^*/track
 ||demandbase.com^$third-party
+||devapps.ru/*.js?_=0.9$script
 ||diginetica.net^$third-party
 ||directcrm.ru^$third-party
 ||disqus.com/api/ping$third-party
@@ -347,6 +363,7 @@ _pagespeed_beacon?
 ||evolvemediametrics.com^$third-party
 ||exe.bid/pixel?
 ||exelator.com^$third-party
+||exponea.com^$third-party
 ||extreme-dm.com^$third-party
 ||extreme-ip-lookup.com^$third-party
 ||extremetracking.com^$third-party
@@ -358,6 +375,7 @@ _pagespeed_beacon?
 ||feedjit.com^$third-party
 ||feedsportal.com/c/
 ||fghtem.com^$third-party
+||fitanalytics.com^$third-party
 ||flagcounter.com^$third-party,domain=~websdr.space
 ||fleshlight-russia.com/fbl.gif
 ||flixfacts.com^$third-party
@@ -383,6 +401,8 @@ _pagespeed_beacon?
 ||geoip.leadia.services^$third-party
 ||geoiplookup.wikimedia.org^
 ||get35.com^$third-party
+||get4click.ru/wrapper.$third-party
+||getaim.info^$third-party
 ||getclicky.com^$third-party
 ||getrank.net^$third-party
 ||getstat.net^$third-party
@@ -392,6 +412,7 @@ _pagespeed_beacon?
 ||gloxstore.com^$third-party
 ||go-mpulse.net^$third-party
 ||go.freeanalyzer.ru^
+||goha.ru*/event?hash=
 ||goha.ru^*&geodata=
 ||google-analytics.com/collect?
 ||google-analytics.com/r/collect?
@@ -441,7 +462,6 @@ _pagespeed_beacon?
 ||informer.sepyra.com^
 ||informer.yandex.ru^$third-party
 ||inforotor.net/rotor/
-||inosmi.ru/js/seo.min.js
 ||intarget.ru^$third-party
 ||intel.com/b/
 ||intencysrv.com^$third-party
@@ -449,8 +469,10 @@ _pagespeed_beacon?
 ||intercounter.website^$third-party
 ||interfax.ru/cnt/
 ||interzet.ru/log.php?
+||io.narrative.io/?$third-party
 ||io.userlook.com^$third-party
 ||ip-api.com^$third-party
+||ip.nf^$third-party
 ||ip2phrase.com^$third-party
 ||ipcounter.de^$third-party
 ||ipify.org^$third-party
@@ -475,6 +497,7 @@ _pagespeed_beacon?
 ||l2.io/ip.js
 ||libo.ru/rat/img/
 ||lifestats.ru^$third-party
+||listatic.ru^$third-party
 ||livejournal.com^*/pagestats/
 ||loadercdn.net^$third-party
 ||log.krs-ix.ru^
@@ -490,6 +513,7 @@ _pagespeed_beacon?
 ||mail.ru/direct.gif?
 ||mail.ru/grstat?
 ||mail.yandex.*/monitoring_*?event=ads-blocked&type=
+||mail.yandex.*/monitoring_liza.txt
 ||mainspy.ru/tic/
 ||maploco.com/vmap/
 ||mapyourvisitors.com^$third-party
@@ -497,6 +521,7 @@ _pagespeed_beacon?
 ||maulnet.ru/tools/panel/get_counter/
 ||maxmind.com^$third-party
 ||maxpark.com/iframe_
+||mc.webvisor.org^
 ||mcount.ru^$third-party
 ||meatydime.com^$third-party
 ||medfirms.ru/top/
@@ -506,9 +531,12 @@ _pagespeed_beacon?
 ||mediarepost.ru/counter.js
 ||megaindex.ru/?$third-party
 ||metrics.aviasales.ru^
+||metrika-informer.com^$third-party
 ||metrika.traff.space^$third-party
 ||metrka.com^$third-party
 ||mipagerank.com^$third-party
+||mmstat.com^$third-party
+||mobtop.az^$third-party
 ||mobtop.com^$third-party
 ||mobtop.ru^$third-party
 ||mokuz.ru/vipcounter/
@@ -517,7 +545,9 @@ _pagespeed_beacon?
 ||mozilla.net^*/webtrends/
 ||mpianalytics.com^$third-party
 ||msecnd.net/scripts/a/ai.0.js
+||mtp.spaces.im^
 ||mtp.spaces.ru^
+||mtp.spcs.me^
 ||musiccounter.ru/hit.pl?id=
 ||mxpnl.com^$third-party
 ||mycounter.ua^$third-party
@@ -535,6 +565,7 @@ _pagespeed_beacon?
 ||newrelic.com^$third-party
 ||newsharecounts.com/count.json
 ||nfshome.com/track.php?id=
+||ninja.data.olxcdn.com/ninja-cee.js
 ||odnoklassniki.ru/dk?*&uid=odklcnt0&ref=
 ||ohnorobot.com/verify.pl?
 ||omtrdc.net^$third-party
@@ -547,13 +578,18 @@ _pagespeed_beacon?
 ||partner.incloak.com^$third-party
 ||paycaptcha.net/metrika_
 ||pi.feedsportal.com^
+||piano.io/tracker/
 ||piccy.info/c?
 ||pics.rbc.ru^*/img.*?
+||pikabu.ru/*/analytics.js|$script
+||pikabu.ru/ajax/save_stories_stat.php|$xmlhttprequest
 ||ping-admin.ru^$third-party
 ||pingdom.net^$third-party
+||pippio.com^$third-party
 ||pixel.everesttech.net^
 ||pixel.mathtag.com^
 ||planetanovosti.com/stat/
+||plwork.net/stats_all
 ||popular-tracker.brainly.com^$third-party
 ||prchecker.info/getpr.php?
 ||prcy.$third-party
@@ -579,6 +615,7 @@ _pagespeed_beacon?
 ||rbc.ru/click?
 ||rbc.ru^*/geoinfo/by-ip/
 ||recostream.go.mail.ru^$domain=~pulse.mail.ru|~recostream.go.mail.ru
+||redditstatic.com/ads/pixel.js
 ||referrer.disqus.com^
 ||reinvigorate.net^$third-party
 ||relap.io/api/*/stat|$third-party,xmlhttprequest
@@ -587,8 +624,12 @@ _pagespeed_beacon?
 ||reqapi.ru^$third-party
 ||retailrocket.ru^$third-party,domain=~auchan.ru
 ||revolvermaps.com^$third-party
+||rezync.com^$third-party
+||rfihub.com^$third-party
 ||riamedia.com.ua/assets/js/tracker.js
 ||richaudience.com^$third-party
+||rktch.com^$third-party
+||rlcdn.com^$third-party
 ||rover.ebay.com^$image,object,script
 ||rpmstatic.net^$third-party
 ||rtb.com.ru^$third-party
@@ -600,7 +641,6 @@ _pagespeed_beacon?
 ||rutop.org^$third-party
 ||rutube.ru/dbg/player_stat?
 ||rutube.ru/partner-analytics.js
-||s.4pda.to/*.js?_=0.9|$script
 ||s.agava.ru^
 ||saint-petersburg.ru/i.php?
 ||savedwebhistory.org/rank.php?s=
@@ -608,6 +648,7 @@ _pagespeed_beacon?
 ||sc.hwdteam.ru^$third-party
 ||scorecardresearch.com^$third-party
 ||sedotracker.com^$third-party
+||seeip.org^$third-party
 ||seemore.ru^$third-party
 ||seliweb.com/info/nole.html?
 ||sentry.io/api^*/store/?$third-party
@@ -624,6 +665,7 @@ _pagespeed_beacon?
 ||site-rank.com^$third-party
 ||sitelog.forsite.ru^$third-party
 ||sitemeter.com^$third-party
+||sitescout.com^$third-party
 ||sitestats.info^$third-party
 ||siteuser.info^$third-party
 ||skylog.kz^$third-party
@@ -637,6 +679,7 @@ _pagespeed_beacon?
 ||spylog.com^$third-party
 ||spylog.ru^$third-party
 ||spywap.net/ct/
+||st.hbrd.io^$third-party
 ||st.onlygip.tech^$third-party
 ||stat.5-tv.ru^
 ||stat.adlabs.ru^
@@ -649,6 +692,7 @@ _pagespeed_beacon?
 ||stat24.$third-party
 ||stat70.ru/gather/?
 ||statad.ru^$third-party
+||statafun.ru^$third-party
 ||statcjs.com^$third-party
 ||statcounter.com^$third-party
 ||stathat.com^$third-party
@@ -660,11 +704,14 @@ _pagespeed_beacon?
 ||static.gazeta.ru/nm2015/js/noindex/activate.
 ||static.gazeta.ru^*/add_utm_links.js
 ||static.hotjar.com^$third-party
+||static.olx.*/js/newrelic.js
+||static.olx.*/js/tracking/
 ||static20.online^$third-party
 ||statistics.fppressa.ru^$third-party
 ||statistics.wibiya.com^$third-party
 ||statok.net/image/
 ||statpipe.ru^$third-party
+||stats-repl.myangular.life^$third-party
 ||stats.1internet.tv^
 ||stats.g.doubleclick.net^
 ||stats.indextools.com^
@@ -691,12 +738,14 @@ _pagespeed_beacon?
 ||t.delfi.lt^
 ||tag.aticdn.net^
 ||tags.tiqcdn.com/utag^*/utag.js$domain=~ikea.com
+||tapad.com^$third-party
 ||tapstat.ru^$third-party
 ||target.smi2.net^$domain=~smi2.ru
 ||target.ukr.net^
 ||tazeros.com^$third-party
 ||tbe.tom.ru^$third-party
 ||tdregistr.online^$third-party
+||tengrinews.kz/js/hide/seohide.js
 ||thedownloadplanet.com/tools/supplemental.php
 ||thesame.tv/tsn.html
 ||tic-pr.$third-party
@@ -727,11 +776,14 @@ _pagespeed_beacon?
 ||triks.info^$third-party
 ||trk.olnl.net^$third-party
 ||try.abtasty.com^$third-party
+||ttrace.ru^$third-party
 ||ttrating.com^$third-party
 ||tut.by/res_co_track.gif
 ||tut.by/scripts/BY/ga~
 ||tut.by/stat/
 ||tvigle.ru/img/stat.gif?
+||tvzavr.ru/astat/
+||tvzavr.ru/streamstat/
 ||tynt.com^$third-party
 ||ucounter.ucoz.net^
 ||ukr.net/track.js?
@@ -739,7 +791,10 @@ _pagespeed_beacon?
 ||ulogin-stats.ru^$third-party
 ||ulogin.ru^*stats.
 ||ulogix.ru^$third-party
+||unblockia.com^$third-party
+||unioin.com^$third-party
 ||uptime.ru^$third-party
+||ura.news/mi_stat.php
 ||url-sub.ru^$third-party
 ||ustat.pro^$third-party
 ||utro.ru/utro_images/*empty.gif?
@@ -771,6 +826,7 @@ _pagespeed_beacon?
 ||wikia-beacon.com^$third-party
 ||wootric.com^$third-party
 ||wow-impulse.net/track/
+||wp.aliexpress.com/trace.gif?event=
 ||ws.md/c.png?
 ||wtools.biz/sample2.php?
 ||www.net.kg^$third-party
@@ -789,6 +845,7 @@ _pagespeed_beacon?
 ||ymetrica.com^$third-party
 ||ymetrica1.com^$third-party
 ||youtorrents.net/button.php?
+||zcvh.net/*/ws|$websocket
 ||zero.kz/c.php?
 ||zoomby.ru/s/pixel?
 !
@@ -879,9 +936,9 @@ _pagespeed_beacon?
 ! = Частные и экспериментальные фильтры =======================================
 sinoptik.ua###bigmirTop
 lurkmo.re,lurkmore.to###p-counters
-games-pc.top,rustorka.com,rustorka.innal.top,rustorka.net,rustorka.top,rustorka2.innal.top,rustorka3.innal.top,rustorka4.innal.top,rustorka5.innal.top,rustorka6.innal.top,rustorkacom.lib###page_footer > .copyright > center:first-child
+game4you.top,games-pc.top,rustorka.com,rustorka.net,rustorka.top,rustorkacom.lib###page_footer > .copyright > center:first-child
 fastpic.ru###picContainer > img
-happy-hack.ru#?##side_right > .block_r:-abp-has(noindex > center)
+happy-hack.net#?##side_right > .block_r:-abp-has(> div [href*="liveinternet.ru/"])
 animedub.ru#@#*
 rambler.ru##._3S8wP > div:first-child + div
 inoreader.com#@#.ad_title
@@ -889,11 +946,14 @@ inoreader.com##.ad_title > a
 militaryreview.su##.bbanerr
 ingrus.net##.bcounts
 uniongang.net,uniongang.org#?#.block:-abp-has(> .block-title:-abp-contains(Счётчики))
+kanobu.ru##.c-liveinternet
 yakusubstudio.home-forum.com,yakusubstudio.ru##.contbaner
+80-e.ru##.copyright ~ .copyright
 segodnya.ua##.counters
 rambler.ru##.disableAdvButton__container
 ok.ru#?#.feed-list > .feed-w:-abp-has(.feed_ava ~ div div > [class] ~ [class] ~ [class] ~ [class] ~ [class] ~ [class])
 virtualbrest.ru#?#.footer [id]:-abp-has(> b)
+ferra.ru,letidor.ru,moslenta.ru,motor.ru,passion.ru,quto.ru,wmj.ru#?#.heading:-abp-contains(Рекомендуем ещё)
 sinoptik.ua##.liveinternet
 samlab.ws##.main > #footer ~ table
 radioprofusion.com##.revolvermaps
@@ -901,19 +961,33 @@ freehd.com.ua,hdreactor.club,hdreactor.su#?#.sidebar > .menu-wrap > .menu-head:-
 freehd.com.ua,hdreactor.club,hdreactor.su#?#.sidebar > .menu-wrap > .menu-head:-abp-contains(Счетчики) + div
 /^https?://rkn\.gov\.ru\/(?!js\/)+[a-z0-9]{15,25}\.js\?+[0-9]{7,15}/$script,domain=rkn.gov.ru
 @@/adsense.png|$image,domain=freeopenvpn.org
+@@/forum/misc/js/popunder.js|$script,domain=game4you.*|games-pc.*|innal.*|naylo.*|rustorka.*|rustorkacom.*
+@@||aj1907.online/*.js|$script,domain=game4you.*|games-pc.*|innal.*|naylo.*|rustorka.*|rustorkacom.*
+@@||aj1907.online^$xmlhttprequest,domain=game4you.top|games-pc.top|innal.top|naylo.top|rustorka.com|rustorka.net|rustorka.top|rustorkacom.lib
 @@||inoreader.com^$generichide
 @@||www.inoreader.com/adv/$domain=www.inoreader.com
 rambler.ru##[data-blocks="top_news_block"] ~ div[style="margin-bottom:15px"]
 animedub.ru##a[href="https://animedub.ru/adblock.html"]
+game4you.top,games-pc.top,innal.top,naylo.top,rustorka.com,rustorka.net,rustorka.top,rustorkacom.lib#$?#body ins { display: none !important }
+zannn.top#$?#body:not(#id) > div[style^="width:"][style*="1265px"] { display: block !important }
 auto.ru#?#div:matches-css-before(content: /Реклама/)
 auto.ru#?#div:matches-css-before(content: /Реклама/) ~ div
 inoreader.com##div[id^="leaderboard_ad"] > *
 radioprofusion.com##footer > .counter
 lostfilm.tv,lostfilm.tw##img[width="1"][height="1"]
+nova.rambler.*##div[class^="DirectMKB"]
+nova.rambler.*##section > article[class^="DirectNew"]
 rambler.*##[data-blocks="rec_block"]
 rambler.*,~www.rambler.*#$?#.pub_300x250.text-ad-links.adbanner.ad.text_ad.pub_728x90.text-ad.nav-ad.text-ads.textAd.ad-banner.text_ads.pub_300x250m { display: block !important }
+razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div > div[style*="height:"][style*="width:"] { width: 100% !important }
+razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[class][style^="top: "] ~ div[class]:not([style]) { right: -100% !important }
+razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[style*="px;"] { width: 100% !important }
+razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] { width: 100% !important }
 www.rambler.*###main > div[class]:not([id]) > :first-child[style]:not(div):not([class]):not([id])
+www.rambler.*##body[style*="position:"] > noscript + div:not([class]):not([id])
 www.rambler.*##body[style*="position:"] > script[src] + div:not([id])
+zannn.top#@?#:not(this-is-a-malicious-site)
+zannn.top#@?#this-is-a-malicious-site
 ||browserleaks.com/proxy$csp=script-src 'unsafe-inline'
 ||google-analytics.com^$domain=cdnvideo.ru|igromania.ru|rambler.ru
 ||googletagmanager.com/gtm.js$domain=censor.net|dtf.ru|gazeta.ru|lifehacker.ru|livejournal.com|motor.ru|nur.kz|rambler.ru|rutube.ru|tjournal.ru|tut.by|vc.ru
@@ -924,39 +998,50 @@ www.rambler.*##body[style*="position:"] > script[src] + div:not([id])
 /^https?://mail\.yandex\.[^\s]{125,}/$redirect=nooptext,script,~third-party
 /^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$redirect=nooptext,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz
 @@/^https?://yandex\.ru\/turbo[^\s]+(dni24\.com|fishki\.net|news\.ru|publy\.ru|tsargrad\.tv)/$csp=script-src
-mail.yandex.*##.ns-view-mail-pro-left-column-button
-mail.yandex.*##.PSHeader-Pro
 newssearch.yandex.*##.news-advert__column
 tv.yandex.*##.recommended-ott
 yandex.*###bk-container
 yandex.*##.b-statcounter + div[class] > div[id][class]
 yandex.*##.dist-popup
-yandex.*##.mg-page-layout[class*="sport"] .mg-page-layout-item div[class*="_type_"]
-yandex.*##.news-top-rubric-heading > span:only-child
 yandex.*##.turbo-embed_market_widget
 yandex.*##[class*="segment__container"] > div > [class^="card "][class*="_"]
 yandex.*##body[class*="b-page"] .widgets[role="main"] :not(div) :not(div) :not(div) > div[class]:not([class*="widget"]) > div[class]:not([class*="widget"]) > div[class]:not([class*="widget"]):not([class^="services"]):not([class*="search"]):not([class*="home"])
 yandex.*##body[class*="b-page"] .widgets[role="main"] :not(div) :not(div) :not(div) > div[class]:not([class*="widget"]) > div[class]:not([class*="widget"]) a[href^="https://yastatic.net/www/_/"]
 yandex.*##body[class*="b-page"] .widgets[role="main"] :not(div) :not(div) :not(div) > div[class]:not([class*="widget"]) > div[class]:not([class*="widget"]) a[href^="https://yastatic.net/www/_/"] ~ div
 yandex.*##div > .banner-root ~ .page-root > #page div[class^="_"] > div > script + section div[class^="_"] > [data-id] + div[class^="_"]:not([data-id]) > div:first-child
-yandex.*##div.media-grid__row[data-blockname="infinity_zen"] .feed__item > div[class^="card-wrapper"][class*=" "]:not([style])
+yandex.*##div ~ .news-top-rubric-heading > h1:only-child:if-not(> a)
+yandex.*##div[class*="-header"] ~ div[id*="page"] > div > div[class*="__"] + div[class] > [class*="__row"] > div[class*="__col"]:last-child
+yandex.*##div[class*="-header"] ~ div[id*="page"] div[class*="_banger"]
+yandex.*##div[class*="-header"] ~ div[id*="page"] div[class*="_banner_"]
+yandex.*##div[class*="-header"] ~ div[id*="page"] div[class*="sport-app__advert"]
 yandex.*##div[class*="-navigation-menu__"] + div[class] > [class*="__row"] > div[class*="__col"]:last-child
-yandex.*##div[class*="-navigation-menu__"] ~ div div[class*="_banger"]
 yandex.*##div[class*="turbo-advert_type_"]
 yandex.*##div[class^="content "][data-bem] > .content__bottom ~ div[class*="card "]
 yandex.*##div[data-bem*="climate-calendar-"] ~ .content > .content__section:first-child > div[class$="__content"] + div[class]
-yandex.*#?#.mg-page-layout[class*="sport"] .mg-page-layout-item:-abp-has(> .mg-page-layout-item__card > div[class*="_type_"])
-yandex.*#?#.mg-page-layout[class*="sport"] .mg-page-layout-item:-abp-has(> span > .mg-page-layout-item__card > div[class*="_type_"])
+yandex.*#?#.feed__row[id^="zen-row-"] .feed__item-wrap > .feed__item:-abp-has(.card-rtb-stub)
+yandex.*#?#.feed__row[id^="zen-row-"] .feed__item-wrap:-abp-has(> .feed__item .zen-ui-channel-info__subtitle-text:-abp-contains(промо))
 yandex.*#?#body > .serp_js_inited .serp-list > .serp-item:-abp-has(> div > h2 > [data-event-required])
-yandex.*#?#div[class*="-navigation-menu__"] ~ div div[class*="__col"]:-abp-has(> div[class*="_type_"] > div[class*="loader"] + div[id]:empty)
+yandex.*#?#div[class*="-header"] ~ div[id*="page"] div[class*="__col"]:-abp-has(> div[class*="-feed__"][class*="_type_"] > div[class*="loader"])
+||market.yandex.ru/widget/$redirect=nooptext,domain=zen.yandex.by|zen.yandex.kz|zen.yandex.ru|zen.yandex.ua|zen.yandex.uz
 ||strm.yandex.ru/get/$script,domain=yandex.ru|yastatic.net
 ||strm.yandex.ru/get/*?sid=*&vsid=
 ||yastatic.net/*/front-maps-static/*/chunks/promo/$redirect=nooptext
 ||yastatic.net/yandex-video-player-iframe-api-bundles-stable/*?adsdk-try=$redirect=nooptext
+~yandex.net,mail.yandex.*,yandex.*##.mail-Layout-Main > .mail-Advanced-Search ~ div[class^="ns-view-"] div[style^="height:"][style*="!important"] > div
+~yandex.net,mail.yandex.*,yandex.*##.ns-view-mail-pro-left-column-button
+~yandex.net,mail.yandex.*,yandex.*##.PSHeader-Pro
+! мобильная версия
+yandex.*##[data-bem*="search-select-promo"]
+yandex.*##div[class*="Advert_container__"]
+yandex.*##div[id*="page"] div[class*="_banner_"]
+yandex.*##div[id^="ADVERT_"]
+zen.yandex.*##div[class*="yandex-direct"]
+~afisha.yandex.*,yandex.*##[data-bem*="type"][data-bem*="banner"]:not(body)
 !
-! 4pda.ru
+! 4pda.to (ранее 4pda.ru)
 ! верхняя плашка
 4pda.*##html[style] > body [class]:not([id]):not(div):not([style]) > div ~ :not(div)[id][class][style=""]
+4pda.*##html[style] > body [class]:not([id]):not(div):not([style]) > div:empty + [data-revive-zoneid]
 ! рекламный фон
 ! кликабельный элемент рекламного фона
 4pda.*##html[style] > body [id][class] > script ~ [class]:not(empty):not(:last-of-type) article:not(.post) + article.post
@@ -989,9 +1074,15 @@ yandex.*#?#div[class*="-navigation-menu__"] ~ div div[class*="__col"]:-abp-has(>
 ! реклама в шапке форума
 4pda.*##html:not([style]) tbody > tr[valign="top"] > td[width*="20"] + td[class]
 ! реклама при скачивании на форуме
+4pda.*###lbOverlay
 4pda.*##html:not([style]) > body:not([itemscope]) > div[id]:not([href]) > [href="#"]:empty ~ [href^="http"]
 !
 ! Экспериментальные правила для маркеров
+$removeparam=utm_campaign
+$removeparam=utm_campaing
+$removeparam=utm_content
+$removeparam=utm_medium
+$removeparam=utm_referrer
+$removeparam=utm_source
+$removeparam=utm_term
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/43031
-@@||mail.yandex.*/api/v*/bar/counters?
