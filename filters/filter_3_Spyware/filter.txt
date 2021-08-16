@@ -77,6 +77,8 @@
 ! https://www.eff.org/deeplinks/2021/03/googles-floc-terrible-idea
 #%#//scriptlet('set-constant', 'Document.prototype.interestCohort', 'undefined')
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/91087
+shockwave.com#%#(function(){window.swua={swEvent:function(){}}})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90258
 laprovence.com#%#//scriptlet("set-constant", "xt_click", "noopFunc")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89237
@@ -18691,6 +18693,7 @@ _tracking.php?b=
 !
 /analytics.js$domain=bataryapil.com|journey.com.tr|tozlu.com|elleshoes.com|freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|partifabrik.com
 !
+||image.ruliweb.com/view/log
 ||odnoklassniki.ru/dk?cmd=videoStatNew
 ||opensubtitles.org/gfx/banners_campaigns/2x2.gif
 ||ias.r10s.jp/grp15/ex_common2.js
@@ -22109,6 +22112,9 @@ $app=com.miui.analytics
 ! https://github.com/AdguardTeam/CoreLibs/issues/1306
 ||rover.ebay.$image,object,script,badfilter
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/91087
+!+ NOT_PLATFORM(windows, mac, android, ext_chromium)
+@@||googletagmanager.com/gtm.js$domain=shockwave.com
 ! fix history on Firefox
 @@||dsb.yahoo.co.jp/api/v1/stream$xmlhttprequest,domain=gyao.yahoo.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90774
