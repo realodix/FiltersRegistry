@@ -1,7 +1,7 @@
 !
-! OriginalVersion: 202108160051
+! OriginalVersion: 202108160449
 ! Title: EasyPrivacy
-! Last modified: 16 Aug 2021 00:51 UTC
+! Last modified: 16 Aug 2021 04:49 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -255,10 +255,12 @@
 /500b-bench.jpg?
 /?dsp_uid=
 /?essb_counter_
+/?fp=*&prvtof=
 /?livehit=
 /?mob.ct=
 /?record&key=
 /?sentry_key=
+/?sentry_version=
 /?swift-performance-tracking
 /_/lite/performance/*
 /__analytics/*
@@ -2460,6 +2462,7 @@
 /js/tracking.js
 /js/tracking.min.js?
 /js/tracking/*
+/js/tracking?
 /js/tracking_
 /js/trk_
 /js_event_tracking/*
@@ -4263,6 +4266,7 @@
 /track/usage.
 /track/view/*
 /track/view?
+/track/views/*
 /track/view|
 /track/visitors/?
 /track/visits/?
@@ -5242,6 +5246,7 @@ cgi-bin/counter
 .mailbutler.io/tracking/
 .maillist-manage.com/clicks/$image
 .members.babbel.com/mo/
+.mightyape.co.nz/mo?
 .mjt.lu/oo/$image
 .mkt2684.com/eos/
 .mozilla.org/eos/$image
@@ -5272,6 +5277,7 @@ cgi-bin/counter
 /beaconimages.netflix.net/*$image
 /click.*/q/*$image
 /click.email.$image
+/clicks.degiro.com/q/*
 /clicks.email.$image
 /cmail2.com/t/*
 /email-pixel?
@@ -5508,9 +5514,10 @@ _sdcTrackingCode.
 ?proxy=ws://$script,websocket
 ?proxy=wss://$script,websocket
 ! google tracking
-/client_204?$image,other,ping,script
-/csi_204?$image,other,ping,script
-/gen_204?$image,other,ping,script
+/client_204?
+/csi_204?
+/gen_204?
+/generate_204
 ! Adblock tracking
 ,adb=*&referer=
 -logabpstatus.
@@ -6635,10 +6642,7 @@ _mongo_stats/
 ||googleadservices.com^$third-party
 ||googleoptimize.com^$third-party
 ||googlerank.info^$third-party
-||googletagmanager.com/gtag/$third-party
-||googletagmanager.com/gtm/$third-party
-||googletagmanager.com^$image,third-party
-||googletagservices.com/tag/$third-party
+||googletagmanager.com^$third-party
 ||gooo.al^$third-party
 ||gopjn.com^$third-party
 ||gostats.com^$third-party
@@ -11017,11 +11021,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||googleapis.com/aam.js
 ||googleapis.com/gadasource/gada.js
 ||googleapis.com/ivc.js
-||googleapis.com^*/gen_204?
 ||googlecode.com^*/tracker.js
-||googletagmanager.com/ns.html?$third-party
-||googletagservices.com^*/osd.js$third-party
-||googletagservices.com^*/osd_listener.js$third-party
 ||googleusercontent.com/tracker/
 ||gotdns.com/track/blank.aspx?
 ||gotmojo.com/track/
@@ -11035,7 +11035,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||gsn.chameleon.ad^$~script
 ||gsp1.baidu.com^
 ||gstatic.com/gadf/ga_dyn.js
-||gstatic.com/gen_204?
 ||gstatic.com/wcm/impl-
 ||gstatic.com/wcm/loader.js
 ||gtrk.s3.amazonaws.com^
@@ -11766,6 +11765,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||shopify.com/s/javascripts/tricorder/$script
 ||shoplocal.com/it.ashx?
 ||shopnetic.com^$third-party
+||shorthand.com/analytics/
 ||sig.atdmt.com^
 ||sinajs.cn/open/analytics/
 ||sitebooster.com/sb/wix/p?$third-party
@@ -11867,6 +11867,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||stg-data-collector.playbuzz.com^
 ||stileproject.com/vhtk/
 ||storage.data-vp.com/vp/t.js
+||storage.googleapis.com/afs-prod/tags
 ||streamads.com/view?
 ||stripe.com/?event=
 ||sts.eccmp.com^
@@ -11991,6 +11992,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||track.digitalriver.com^
 ||track.juno.com^
 ||track.mailerlite.com^
+||track.mp4.center^
 ||track.mycliplister.com^
 ||track.omg2.com^
 ||track.pnicnik.live^
@@ -12223,6 +12225,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||webworx24.co.uk/123trace.php
 ||webzel.com/counter/
 ||wetpaint.com^*/track?
+||whooshkaa.com/identify
 ||whooshkaa.com/listen/track
 ||whosread.com/counter/
 ||widgeo.net/compteur.php?
@@ -13374,6 +13377,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||anon-stats.eff.org^
 ||apartments.com/clientvisit/al.gif?
 ||apkpure.com/analytics_
+||apnews.com/logger
 ||appanalysis.banggood.com^
 ||arstechnica.com/keys/arstechnica.com/p.js
 ||atrack.allposters.com^
@@ -13604,6 +13608,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||go.theregister.com^$image
 ||gofundme.com/track
 ||google.com/dssw.js
+||google.com/images/phd/px.gif
 ||google.com/log?
 ||goseek.com/session-
 ||goseek.com/track-
@@ -13743,6 +13748,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||namethatporn.com/assets/imgs/1x1.gif
 ||nature.com/platform/track/
 ||naukrigulf.com/ni/nibms/bms_display.php
+||nbcnews.com/_next/static/chunks/ads.$script,domain=msnbc.com|nbcnews.com
 ||ncbi.nlm.nih.gov/core/pinger
 ||neatorama.com/story/view/
 ||neowin.net/ws/$websocket
@@ -24767,8 +24773,6 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=skyback.ru|szukajka
 @@||sourcepoint.telegraph.co.uk^$~third-party,xmlhttprequest
 @@||sourcepointcmp.bloomberg.*/ccpa.js$script,domain=bloomberg.co.jp|bloomberg.com
 @@||sourcepointcmp.bloomberg.*/mms/get_site_data$xmlhttprequest,domain=bloomberg.co.jp|bloomberg.com
-! Downdetector Consent
-@@||googletagservices.com/tag/js/gpt.js$domain=allestoringen.be|allestoringen.nl|downdetector.ae|downdetector.ca|downdetector.cl|downdetector.co.nz|downdetector.co.uk|downdetector.co.za|downdetector.com|downdetector.com.ar|downdetector.com.au|downdetector.com.br|downdetector.com.co|downdetector.cz|downdetector.dk|downdetector.ec|downdetector.es|downdetector.fi|downdetector.fr|downdetector.gr|downdetector.hk|downdetector.hr|downdetector.hu|downdetector.id|downdetector.ie|downdetector.in|downdetector.it|downdetector.jp|downdetector.mx|downdetector.my|downdetector.no|downdetector.pe|downdetector.ph|downdetector.pk|downdetector.pl|downdetector.pt|downdetector.ro|downdetector.ru|downdetector.se|downdetector.sg|downdetector.sk|downdetector.web.tr|xn--allestrungen-9ib.at|xn--allestrungen-9ib.ch|xn--allestrungen-9ib.de
 ! Cloudflare hcaptcha test
 @@/cdn-cgi/images/trace/captcha/js/h/transparent.gif$image,~third-party
 ! CNAME (Specific allowlists)
