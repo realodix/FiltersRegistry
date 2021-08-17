@@ -1,6 +1,6 @@
 !
 ! Title: Web Annoyances Ultralist
-! Last Modified: 11:40 2021-08-17
+! Last Modified: 13:49 2021-08-17
 ! Expires: 2 Days (Update Frequency)
 ! Description: Block annoying web elements and reclaim lost screen real estate. Web Annoyances Ultralist includes the following sublists - Ad Placeholders, Cookie Filters, Floating Filters (CSS Style Modifying & Companion Filters), Generic Filters, Modal Filters, Newsletter Filters, & Social Filters.
 ! Homepage: https://github.com/yourduskquibbles/webannoyances
@@ -1203,7 +1203,7 @@ yubico.com##.cookie-pop
 zdf.de##.js-rb-attached.m-open.x-cookies.b-system-dialog
 ||gdpr-tcfv2.sp-prod.net^
 ! Title: Web Annoyances Ultralist - Floating Annoyances (CSS Style Modifications & Companion Filters)
-! Last Modified: 11:40 2021-08-17
+! Last Modified: 13:49 2021-08-17
 ! Expires: 2 Days (Update Frequency)
 ! Description: Web Annoyances Ultralist Sublist for Floating Annoyances -  Modify site elements using CSS modifications to fix floating items that block screen real estate - Primarily used to "pin-in-place" sticky headers, dickbars, floating headers, floating videos, scrolling headers, scrolling videos, stickynavs and other distracting page elements.
 ! Homepage: https://github.com/yourduskquibbles/webannoyances
@@ -10464,10 +10464,10 @@ wootric.com#$#.olark-size-md.olark-launch-button { position: absolute !important
 wordfence.com#$#.site-cleaning-header { position: relative !important; }
 wordfence.com#$#.site-header { position: relative !important; top: 0 !important; }
 wordnik.com#$#.headerFixer { position: absolute !important; }
-wordpress.com#$#header { position: static !important; }
-wordpress.com,wordpress.org#$##masthead, .sticking.stick { position: relative !important; }
+wordpress.com,wordpress.org#$##masthead:not([class="entry-header"]), .sticking.stick { position: relative !important; }
 wordpress.com,wordpress.org#$##wpadminbar, .is-invisible.is-fixed.masterbar { position: absolute !important; }
 wordpress.com,wordpress.org#$#.masthead-fixed .site-main { margin-top: 0 !important; }
+wordpress.com,wordpress.org#$#header:not([class="entry-header"]) { position: static !important; }
 wordreference.com#$##search { position: static !important; box-shadow: none !important; }
 wordstream.com#$#.ws-header { position: relative !important; }
 world101.cfr.org#$#.breadcrumb-navigation__sidenav { position: static !important; }
@@ -10766,7 +10766,7 @@ zyngaplayerforums.com#$##footer { position: relative !important; top: 0 !importa
 ||accounts.google.com/gsi/*$xmlhttprequest,script,third-party
 ||player.daznservices.com/player/v4/popup.chunk.js
 ! Title: Web Annoyances Ultralist - Generic Filters
-! Last Modified: 10:01 2021-08-12
+! Last Modified: 12:40 2021-08-17
 ! Expires: 2 Days (Update Frequency)
 ! Description: Web Annoyances Ultralist Sublist for generic cosmetic filters - Cosmetically remove common annoyances found on multiple domains typically provided in the social, modal and newsletter Web Annoyances Ultralist sublists. Also includes cookie & gdpr warning elements.
 ! Homepage: https://github.com/yourduskquibbles/webannoyances
@@ -11004,13 +11004,13 @@ zyngaplayerforums.com#$##footer { position: relative !important; top: 0 !importa
 ###sb-container
 ###scroll-follow
 ###scroll-to-top
-###scroll-top
 ###scroll-top-btn
 ###scroll-top-link
+###scroll-top:not(html):not(body)
 ###scroll-up
 ###scrollToTop
 ###scrollToTopBtn
-###scrollTop
+###scrollTop:not(html):not(body)
 ###scrollTopBtn
 ###scrollUp
 ###scroll_to_top
@@ -11018,7 +11018,6 @@ zyngaplayerforums.com#$##footer { position: relative !important; top: 0 !importa
 ###scrolltop
 ###scrolltotop
 ###scrollup
-###share
 ###share-bar
 ###share-bar-bottom
 ###share-bar-top
@@ -11048,6 +11047,7 @@ zyngaplayerforums.com#$##footer { position: relative !important; top: 0 !importa
 ###share-top
 ###share-twitter
 ###share-unit
+###share:not(html):not(body)
 ###shareBar
 ###shareBarWrapper
 ###shareBtn
@@ -12842,6 +12842,7 @@ jobvite.com#@#.postActions
 linkedin.com#@#[href*="linkedin.com/shareArticle"]
 masters.com#@#.social_bar
 mbank.cz,obi.ru#@#.smartbanner
+medallia.com,theben.de#@##scrollTop
 mega-debrid.eu#@##mc_embed_signup
 mercopress.com#@##goToTop
 moneyunder30.com#@#.social-media-buttons
@@ -12862,7 +12863,6 @@ siliconrepublic.com#@#.social-list
 sportsgrid.com#@#.social-block
 tampabay.com#@#.scrolltop
 theaustralian.com.au#@#.share-tools
-theben.de#@##scrollTop
 thinkprogress.org,wsj.com#@#.sticky-share
 tiktok.com#@#.share-header
 tiktok.com#@#.share-links
@@ -17340,7 +17340,6 @@ wondershare.com##.scroll.RVbDww66-roll_headerPro
 wonderwall.com##.mini-default.mini
 wordfence.com###super-footer
 wordnik.com###sub-head
-wordpress.com,wordpress.org###bit
 wpxi.com##.mod-body
 wral.com###antenna-widget-bucket
 wral.com###cz-rec-container

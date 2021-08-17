@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 17August2021v5
+! OriginalVersion: 17August2021v8
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -35,6 +35,7 @@ www.suomi24.fi#$#div[width="50%"] + div[width="50%"] + [width="50%"] + div[class
 ! -----NETWORK FILTERS-----
 ||damoh.katsomo.fi/$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
 ||doubleclick.net^$xmlhttprequest,redirect=nooptext,domain=puhekupla.com
+||elisa.digital.nuance.com/tagserver/js/ads-blocking-detector.min.js$domain=elisa.fi
 ||freewheel-jitt.sanoma.fi^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media,redirect=noopmp3-0.1s,domain=ruutu.fi
 ||sanoma-prod.integration-x.com^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
@@ -291,7 +292,9 @@ gamereactor.fi##.videoAd
 gamereactor.fi##section.artistyle3.rightbox:nth-of-type(1)
 glu.fi#?#li:-abp-has(.adsbygoogle)
 glu.fi#?#ul.link:-abp-has(a[href^="http://clk.tradedoubler.com/"])
-golfpiste.com##.native-carousel
+golfpiste.com##.carousel-cell--native
+golfpiste.com##.section--ad__rectangle
+golfpiste.com##.section-native-list
 haapavesi-lehti.fi,kalajokilaakso.fi,kalajokiseutu.fi,keskipohjanmaa.fi,kokkola-lehti.fi,lestijoki.fi,nivala-lehti.fi,perhonjokilaakso.fi,pietarsaarensanomat.fi,selanne-lehti.fi##.ad-list
 haapavesi-lehti.fi,kalajokilaakso.fi,kalajokiseutu.fi,keskipohjanmaa.fi,kokkola-lehti.fi,lestijoki.fi,nivala-lehti.fi,perhonjokilaakso.fi,pietarsaarensanomat.fi,selanne-lehti.fi##.newslink-ad
 haapavesi-lehti.fi,kalajokilaakso.fi,kalajokiseutu.fi,keskipohjanmaa.fi,kokkola-lehti.fi,lestijoki.fi,nivala-lehti.fi,perhonjokilaakso.fi,pietarsaarensanomat.fi,selanne-lehti.fi#?#div[class="col-xs-12 col-sm-12 col-md-12 pad-0 hidden-xs"]:-abp-has(> #lunch-widget)
@@ -930,6 +933,8 @@ ruutu.fi##.RuutuPlayer__Error-sc-1o2b3la-0
 @@||doubleclick.net^$~third-party
 ! Lowe's list and Easyprivacy prevents opening thread replys via email
 @@||click.redditmail.com^$~third-party
+! Exception to Lowe's list - it removes some boxes
+@@||conductrics.com^$script,domain=elisa.fi
 !#if env_mobile
 dawn.fi#?#.ui-body-inherit.ui-li-static:-abp-has(#dawn_mobile-content)
 gamereactor.fi###ad_sticky
