@@ -77,6 +77,9 @@
 ! https://www.eff.org/deeplinks/2021/03/googles-floc-terrible-idea
 #%#//scriptlet('set-constant', 'Document.prototype.interestCohort', 'undefined')
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/91255
+! TODO: can be replaced by redirect resources (Fingerprint2) when it will be added - https://github.com/AdguardTeam/Scriptlets/issues/141
+the-japan-news.com#%#//scriptlet('set-cookie-reload', 'fp', '1')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91087
 shockwave.com#%#(function(){window.swua={swEvent:function(){}}})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90258
@@ -21175,6 +21178,8 @@ link.gmapp*.net$image
 ||businessinsider.com^$cookie=/traffic_src|^_sp_/
 ||vc.ru^$cookie=/osnova-aid|fingerprint|adblock-state/
 !
+! sharethrough.com ad analytics
+||sharethrough.com^$cookie=stx_user_id
 ! OLX
 $cookie=fingerprint,domain=olx.ro|olx.kz|olx.pl|olx.pt|olx.ua|olx.uz|olx.in|olx.com
 $cookie=dfp_user_id,domain=olx.ro|olx.kz|olx.pl|olx.pt|olx.ua|olx.uz|olx.in|olx.com
@@ -21201,6 +21206,9 @@ $cookie=wuuid,domain=duolingo.com|duolingo.cn
 !------------------------------
 !
 !
+! Mediaprint
+$cookie=pnespsdk_visitor
+$cookie=pnespsdk_ssn
 ! Sourcebuster JS tracking cookies
 $cookie=sbjs_udata
 $cookie=sbjs_session
@@ -22315,6 +22323,9 @@ $app=com.miui.analytics
 ! https://github.com/AdguardTeam/CoreLibs/issues/1306
 ||rover.ebay.$image,object,script,badfilter
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/91255
+!+ PLATFORM(ios, ext_android_cb)
+@@||the-japan-news.com/modules/js/lib/fgp/fingerprint2.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91230
 ||nsfw.xxx/vendor/fingerprint/fingerprint2.min.js$script,redirect=nooptext
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
