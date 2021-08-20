@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/91542
+themoscowtimes.com##.contribute-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90917
 searchsqlserver.techtarget.com#?#.resources-bar-header:contains(Sponsored News)
 searchsqlserver.techtarget.com##.sponsored-news
@@ -2121,6 +2123,7 @@ vz.ru,searchengineland.com,sport.segodnya.ua,vokrugsveta.ru,censor.net,fizzicsed
 !
 ~dereferer.me###mc_embed_signup
 !
+themoscowtimes.com###newsletter-modal
 computer.org##.landingHeaderActions > a[href*="/subscribe-digital"]
 computer.org##.generalContent p[style^="text-align: center; color:"] > a[href^="https://www.computer.org/resources/newsletters/"]
 computer.org#?#.landingHeaderActions > a[href*="/subscribe-digital"]:only-child:upward(1)
@@ -8625,7 +8628,7 @@ slate.com#@#.ad-container
 ##.cookie-monster
 ##.cookie-msg:not(body):not(html)
 ##.cookie-nag
-##.cookie-note
+##.cookie-note:not(body):not(html)
 ##.cookie-notice-container
 ##.cookie-notice-dialog
 ##.cookie-notice-wrapper
@@ -9479,6 +9482,7 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+algonquincollege.com###accn-cookie-notice
 findamasters.com#$##cookieModal { display: none !important; }
 findamasters.com#$#.modal-backdrop { display: none !important; }
 findamasters.com#$#body.modal-open { overflow: auto !important; padding-right: 0 !important; }
@@ -16218,6 +16222,7 @@ cmp-sp.lvz.de#%#AG_onLoad(function(){if(window.location.href.includes("consentUU
 privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 !
+schwalbe.com#%#AG_onLoad(function() {var b=new MutationObserver(function() {var c=document.querySelector('p[class="nl-accept"] > a[data-cookie-accept]'); c&&(b.disconnect(),c.click()) });b.observe(document, {childList: !0,subtree: !0});setTimeout(function() {b.disconnect()}, 1E4)})
 vaillant.de#%#//scriptlet('set-cookie', 'cookie_consent_shown', 'true')
 infranken.de#%#AG_onLoad(function() {var b=new MutationObserver(function() {var c=document.querySelector('body > div[style^="background:"][style*="position: fixed;"][style*="z-index:"] div[role="button"]:first-child > div > button'); c&&(b.disconnect(),c.click()) });b.observe(document, {childList: !0,subtree: !0});setTimeout(function() {b.disconnect()}, 1E4)})
 inselradio.com#%#//scriptlet('set-cookie', 'irCookieConsent', '3')
@@ -16944,6 +16949,10 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ! @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=oe24.at|epicgames.com|toteraz.pl|natgeotv.com|midomi.com|bethesda.net|volksfreund.de|kawasaki.com|foxchannels.com.tr|ga.de|shop.mango.com|kralmuzik.com.tr|westernunion.com|roastmarket.de|new.cappex.com|vimeo.com|heute.at|ntv.com.tr|wargaming.net|metacritic.com|gq-magazine.co.uk|viafree.dk|viafree.fi|viafree.no|viafree.se|glamour.de|cbsnews.com
 !
+! https://forum.adguard.com/index.php?threads/44388/
+@@||schwalbe.com/system/modules/cookiebar/assets/dist/cookiebar.min.
+!+ PLATFORM(ios, ext_android_cb)
+schwalbe.com#@#.cookie-box:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91409
 findamasters.com#@##cookieModal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91585
@@ -17952,7 +17961,7 @@ construction21.org#@##cookiesdirective
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61484
 coolblue.nl#@#.cookie-notification:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61426
-schwaebisch-hall.de#@#.cookie-note
+schwaebisch-hall.de#@#.cookie-note:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61350
 @@||cdn.privacy-mgmt.com^$domain=manager-magazin.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61349
@@ -20601,6 +20610,7 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+algonquincollege.com###fancybox-container-1
 evrimagaci.org###pwa-popup-container
 findamasters.com#%#//scriptlet('set-cookie', 'signup_win_closed', 'true')
 tripoto.com#%#//scriptlet('set-cookie', '__TRAVEL_QUIZ__', 'true')
@@ -28955,6 +28965,7 @@ techxplore.com,phys.org##.embed-responsive-trendmd
 .ru/proxy_*.php?p___=*&part_url=*.php?callback=*&token=*&iso=
 .net/proxy_*.php?p___=*&part_url=*.php?callback=*&token=*&iso=
 !
+kansaz.in#?#.row-fluid-wrapper:has(> div.row-fluid > div[data-widget-type="custom_widget"] > div.hs_cos_wrapper h3:contains(Ask a Question))
 ||widget.teletype.app^$third-party
 romarg.ro###deskpro-container
 williams-sonoma.com,potterybarn.com,pbteen.com,potterybarnkids.com,westelm.com,markandgraham.com###quiqChatLaunch
