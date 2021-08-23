@@ -22,7 +22,7 @@ $removeparam=fb_comment_id
 $removeparam=fb_ref
 $removeparam=fb_source
 $removeparam=fbclid
-$removeparam=gclid
+! UTM
 $removeparam=utm_campaign
 $removeparam=utm_channel
 $removeparam=utm_cid
@@ -42,8 +42,18 @@ $removeparam=utm_swu
 $removeparam=utm_term
 $removeparam=utm_userid
 $removeparam=utm_viz_id
-$removeparam=yclid
+$removeparam=utm_product
+$removeparam=utm_campaignid
+$removeparam=utm_ad
+$removeparam=utm_brand
 !
+!
+! Google ads/analytics
+$removeparam=gbraid
+$removeparam=wbraid
+$removeparam=gclsrc
+$removeparam=gclid
+$removeparam=yclid
 ! DPG Media analytics
 ! Used on Dutch sites
 $removeparam=dpg_source
@@ -61,7 +71,6 @@ $removeparam=adjust_campaign
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89869
 ! email subscriptions tracking
-$removeparam=utm_ad
 $removeparam=bsft_clkid
 $removeparam=bsft_eid
 $removeparam=bsft_mid
@@ -84,7 +93,6 @@ $removeparam=pk_source
 !
 ! https://github.com/AdguardTeam/AdguardFilters/pull/91540
 $removeparam=mbid
-$removeparam=utm_brand
 
 !---------------------------------------------------------------------------!
 !-------------- Specific web sites ---------------------------------------------!
@@ -93,6 +101,8 @@ $removeparam=utm_brand
 ! The rules for specific sites
 !
 !
+! kohls.com - counter
+||kohls.com^$removeparam=CID
 ! instagram.com - share tracking
 ||instagram.com^$removeparam=igshid
 ! euronews.com - email subscription tracking
