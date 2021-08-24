@@ -631,6 +631,9 @@ generation-nt.com#%#Object.defineProperty(window, 'AdvertBay', { get: function()
 !------- CSS fixes --------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/91892
+vf-serie.org,vf-film.org#$#.TPlayer.on::after { display: none !important; }
+vf-serie.org,vf-film.org#$##ads_player_inside { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76814
 forum-airguns.com#$#.three-col tr > td > div[style*="visibility: visible !important; display: block !important; opacity:"]:not([class]):not([id]) { position: absolute !important; left: -3000px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74493
@@ -689,6 +692,9 @@ laprovence.com$$script[wildcard="*((false?*https:*:document.location.protocol)+*
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+zustream.org###plyb
+zustream.org###contenedor > div[class] > a[target="_blank"]
+vf-serie.org,vf-film.org##.bnr
 zoneseries.stream##.movie-aye
 zoneseries.stream##a[href="/streaming-video.html"]
 ||zoneseries.stream/streaming-video.html
@@ -986,7 +992,9 @@ lesfrontaliers.lu##.ad-listing
 !
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91892
-$subdocument,third-party,domain=zoneseries.stream,badfilter
+@@||vudeo.net/embed-$subdocument
+@@||uqload.com/embed-$subdocument
+$subdocument,third-party,domain=zustream.org|zoneseries.stream|vf-film.org|vf-serie.org,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90825#issuecomment-902040297
 @@||cdn.bigsv.ru^$domain=seasonvar.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91225
