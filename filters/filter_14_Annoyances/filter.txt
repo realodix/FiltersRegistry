@@ -1905,7 +1905,7 @@ yandex.com,yandex.com.tr,~afisha.yandex.by,~afisha.yandex.kz,~afisha.yandex.ru,~
 ! Yandex.Mail
 mail.yandex.*#%#//scriptlet('abort-on-property-read', 'Object.prototype.adv')
 ! Mobile apps
-mail.yandex.*##.sidebarPromo
+mail.yandex.*#$#.sidebarPromo { visibility: hidden !important; height: 0 !important; }
 mail.yandex.*##.container div.market-place
 mail.yandex.*##.mail-PromoMobileApp
 mail.yandex.*##.mail-Done-Promo-Container
@@ -9513,6 +9513,9 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+/ext/damn_cookieconsent/*$domain=daab.de|daab-mitgliederbereich.de
+addendum.org#$#body { overflow: visible !important; }
+addendum.org#$#.cookie-consent-box { display: none !important; }
 kramp.com###cookiewall-modal
 easyparts-rollerteile.de#$#body { overflow: visible !important; }
 easyparts-rollerteile.de#$##div_popup_cookies { display: none !important; }
@@ -16284,7 +16287,7 @@ drohnen.de#%#//scriptlet('set-cookie', 'viewed_cookie_policy', 'yes')
 aniforte.de#%#//scriptlet('set-cookie', 'mnd-cookie-accepted-wwwanifortede1', '1')
 moviesroom.pl,tech-room.pl#%#//scriptlet('set-cookie-reload', 'privacy', '1')
 polsatgo.pl#%#//scriptlet('set-cookie', 'rodo-modal-displayed', '1')
-hornbach.de#%#AG_onLoad(function(){-1==document.cookie.indexOf("uc")&&setTimeout(function(){document.querySelector("#usercentrics-root").shadowRoot.querySelector('button[data-testid="uc-accept-all-button"]').click()},800)});
+hornbach.de#%#AG_onLoad(function(){if("undefined"!=typeof localStorage)try{if(!localStorage.getItem("uc_user_interaction")){var b=new MutationObserver(function(){var a,c,d=null==(a=document.querySelector("#usercentrics-root"))?void 0:null==(c=a.shadowRoot)?void 0:c.querySelector('button[data-testid="uc-accept-all-button"]');d&&(b.disconnect(),d.click())});b.observe(document,{childList:!0,subtree:!0});setTimeout(function(){b.disconnect()},1E4)}}catch(a){}});
 1blu.de#%#//scriptlet("set-cookie", "cookieConfig", "1")
 pandacheck.com#%#AG_onLoad(function(){if(!document.cookie.includes("cc_cookie")){var g=new MutationObserver(function(){var b=document.querySelector('.pc-cookie-modal--footer > a[role="button"]');var c=document.querySelector('.btn-link-cookie-save');b&&b.click();setTimeout(function(){ c&&c.click(); }, 300);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1E4)}});
 gold.de#%#AG_onLoad(function(){if(!document.cookie.includes("cc_cookie")){var g=new MutationObserver(function(){var b=document.querySelector('#cm_secondary_btn');var c=document.querySelector('#cs_save__btn');b&&b.click();setTimeout(function(){ c&&c.click(); }, 300);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1E4)}});
@@ -16322,7 +16325,7 @@ bilyoner.com#%#(function() { try { if ("undefined" != typeof localStorage) { loc
 robinhood.com#%#//scriptlet('set-cookie', 'gdpr_consent', '1')
 publikationen.dguv.de#%#//scriptlet('set-cookie', 'allowCookie', '1')
 b-tu.de#%#document.cookie="CookieConsent=mandatory; path=/;";
-aufstiegs-bafoeg.de,bne-portal.de,bmbf.de#%#document.cookie="gsbbanner=closed; path=/;";
+verfassungsschutz.de,aufstiegs-bafoeg.de,bne-portal.de,bmbf.de#%#document.cookie="gsbbanner=closed; path=/;";
 mubi.com#%#//scriptlet('set-cookie', 'mubi-cookie-consent', 'true')
 gut-leben-in-deutschland.de#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("gut-leben-cookie-banner-hidden", "true") } } catch (ex) {} })();
 starfieldtech.com#%#//scriptlet('set-cookie', 'pwinteraction', '1')
@@ -17001,6 +17004,9 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ! @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=oe24.at|epicgames.com|toteraz.pl|natgeotv.com|midomi.com|bethesda.net|volksfreund.de|kawasaki.com|foxchannels.com.tr|ga.de|shop.mango.com|kralmuzik.com.tr|westernunion.com|roastmarket.de|new.cappex.com|vimeo.com|heute.at|ntv.com.tr|wargaming.net|metacritic.com|gq-magazine.co.uk|viafree.dk|viafree.fi|viafree.no|viafree.se|glamour.de|cbsnews.com
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/91942
+verfassungsschutz.de#@##cookiebanner
+verfassungsschutz.de#@#.cookiebanner:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91913
 constructa.com#@#.o-cookielaw
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91910
@@ -20681,6 +20687,7 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+hollywoodmask.com###newletter-popup
 ewdn.com##div[data-title^="Subscription Form - Popup"]
 ewdn.com##.ulp-overlay
 indiafreestuff.in##.mypopups-substare
