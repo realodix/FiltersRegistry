@@ -531,6 +531,8 @@ smarthomearea.de#@#.an-advert-banner
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/91892
+zoneseries.stream#$?#a[href="/streaming-video.html"] { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74754
 tv5unis.ca#?#div[style="min-height: 0px;"] > div[class^="css-"] > div[class^="css-"] > div[data-m32-ad]:upward(2)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69716
@@ -595,6 +597,8 @@ jeuxvideo.com#?#.list-actu-home > li[-ext-has='span.officiel']
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/91892
+zoneseries.stream#%#//scriptlet("adjust-setTimeout", "#regarder", "7000", "0.02")
 ! https://github.com/easylist/listefr/issues/16
 ddl-francais.com#%#//scriptlet('prevent-window-open')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76272
@@ -685,6 +689,9 @@ laprovence.com$$script[wildcard="*((false?*https:*:document.location.protocol)+*
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+zoneseries.stream##.movie-aye
+zoneseries.stream##a[href="/streaming-video.html"]
+||zoneseries.stream/streaming-video.html
 montorrent.com##a[href^="#"].btn-fastest
 jeuxvideo.com##.sideWootbox
 actu-environnement.com##.module_annonce
@@ -978,6 +985,8 @@ lesfrontaliers.lu##.ad-listing
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/91892
+$subdocument,third-party,domain=zoneseries.stream,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90825#issuecomment-902040297
 @@||cdn.bigsv.ru^$domain=seasonvar.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91225

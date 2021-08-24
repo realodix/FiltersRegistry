@@ -2256,6 +2256,8 @@ amateurbusters.com#?#.sb_area > .sb_area_headline:contains(Urlaub)
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/92109
+spiele.rtl.de#%#//scriptlet('remove-class', 'js-game-detail-link', '.game-startbutton a[href^="https://spiele.rtl.de/games/"].js-game-detail-link')
 ! popunder
 blasensex.com#%#//scriptlet("abort-on-property-read", "jsUnda")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90034
@@ -5317,6 +5319,11 @@ homad-global-configs-eu-fra.schneevonmorgen.com.s3.amazonaws.com/*/config.json$r
 !###TEMPORARY###
 !###############
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/92109
+!#if (adguard_app_ios || adguard_ext_android_cb)
+@@||dco.smartclip.net/?plc=$domain=spiele.rtl.de
+@@||des.smartclip.net/ads?type=$domain=spiele.rtl.de
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88720
 fahrrad.de#@#.is-sponsored
 ! https://github.com/AdguardTeam/AdguardFilters/issues/87832
