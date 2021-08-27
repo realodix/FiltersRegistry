@@ -112,8 +112,8 @@ mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.ua,mail.yandex.uz,mail.
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.los, null)
 ! Invalid selector:
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.useAbdBundle, false)
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "&clid=$document,removeparam=|,domain=yandex.*"
-&clid=$document,removeparam=|,domain=yandex.*
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "&clid=$document,removeparam=|clid,domain=yandex.*"
+&clid=$document,removeparam=|clid,domain=yandex.*
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "&feature=emb_$document,removeparam=|feature=emb_,domain=youtube.com"
 &feature=emb_$document,removeparam=|feature=emb_,domain=youtube.com
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "&ymclid=$document,removeparam=|,domain=~ozon.onelink.me"
@@ -136,6 +136,8 @@ Error: "$removeparam rules are not compatible with some other modifiers" in the 
 .ua/?_ga=$document,removeparam=|
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/*&sid=$document,removeparam=|sid,domain=nnm-club.lib|nnm-club.me|nnmclub.ro|nnmclub.to"
 /*&sid=$document,removeparam=|sid,domain=nnm-club.lib|nnm-club.me|nnmclub.ro|nnmclub.to
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/*purchase-referrer=$document,removeparam=|,domain=market.yandex.*"
+/*purchase-referrer=$document,removeparam=|,domain=market.yandex.*
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/?amp;utm_*ukr$document,removeparam=|"
 /?amp;utm_*ukr$document,removeparam=|
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/?f=ukr.net$document,removeparam=|"
@@ -180,8 +182,6 @@ Error: "$removeparam rules are not compatible with some other modifiers" in the 
 ?pokupki=$document,removeparam=|,domain=market.yandex.*
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?previewToken=$document,removeparam=|,domain=maximonline.ru"
 ?previewToken=$document,removeparam=|,domain=maximonline.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?purchase-referrer=$document,removeparam=|,domain=market.yandex.*"
-?purchase-referrer=$document,removeparam=|,domain=market.yandex.*
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?rcmd_$document,removeparam=|rcmd_,domain=ria.ru"
 ?rcmd_$document,removeparam=|rcmd_,domain=ria.ru
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?referrer_block=$document,removeparam=|referrer_,domain=mail.ru|sportmail.ru"
@@ -226,5 +226,7 @@ Error: "$removeparam rules are not compatible with some other modifiers" in the 
 ||sportmail.ru^*exp_id=$document,xmlhttprequest,removeparam=|,domain=sportmail.ru
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||sportmail.ru^*frommail=1$document,xmlhttprequest,removeparam=|,domain=sportmail.ru"
 ||sportmail.ru^*frommail=1$document,xmlhttprequest,removeparam=|,domain=sportmail.ru
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||yandex.*/images/search?text=*&from=$document,removeparam=|from,domain=yandex.*"
+||yandex.*/images/search?text=*&from=$document,removeparam=|from,domain=yandex.*
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||yandex.ru/?clid=$document,removeparam=|,domain=yandex.*"
 ||yandex.ru/?clid=$document,removeparam=|,domain=yandex.*
