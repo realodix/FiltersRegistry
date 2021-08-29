@@ -428,7 +428,7 @@ yelp.*##.menu-bar-pitch_open-in-app
 linkedin.com#$?#html,body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 27August2021v2-Beta
+! OriginalVersion: 28August2021v2-Beta
 ! Expires: 5 days
 ! Description: Most anti-malware lists are pretty big and can cover a 5- or 6-digit amount of specific domains. But my list hereby claims to remove more than 25% of all known malware sites with just a 2-digit amount of entries. This is mostly done by blocking top-level domains that have become devastatingly abused by spammers, usually because they allowed for free and uncontrolled domain registrations. There's also additional categories that cover unusual malware and phishing domains that very few other lists seem to cover.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1380,6 +1380,15 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||23.111.88.207^$document
 ! https://github.com/DandelionSprout/adfilt/issues/254
 ||onesafesoftware.com^$document
+! https://github.com/DandelionSprout/adfilt/issues/257
+||185.158.250.239^$all
+||192.169.69.25^$all
+||212.192.241.72^$all
+||37.0.10.83^$all
+||newstepsco.com^$all
+.duckdns.org^$document
+||chse-security-notifications.email^$all
+||secure-0*.ddnss.ch^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -14102,7 +14111,7 @@ m4uhd.net##.quality
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 26August2021v1-Beta
+! OriginalVersion: 28August2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! If you like this list and wish for more people to use it, give some thumbs up to the https://github.com/AdguardTeam/FiltersRegistry/issues/401 and https://github.com/AdguardTeam/FiltersRegistry/issues/400 threads.
@@ -14235,7 +14244,8 @@ $removeparam=eblink
 $removeparam=AID
 $removeparam=CJEVENT
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-969819
-$removeparam=aid,domain=adguard.com|booking.com
+! (Exception: booking.com in Firefox; see #256)
+$removeparam=aid,domain=adguard.com
 ! https://account.microsoft.com/?refd=www.microsoft.com
 $removeparam=refd
 ! https://www.humblebundle.com/?hmb_source=navbar (09/01/2021)
