@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-08-28 11:15:43 CEST
+! Last modified: 2021-08-30 14:18:33 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -229,6 +229,7 @@ linnherbertsson.se##.content:has(.sponsored-container)
 listor.se##article.feed-item:has-text(/låna pengar|casino|betting/i)
 listor.se##article:has(a[href*="/annons/"])
 ljudochbild.se#$#.entry-content-wrap, .hideaway { max-height: unset !important; overflow: initial !important; height: unset !important; }
+loppi.se,modette.se,nyheter24.se#%#//scriptlet('ubo-ra.js', 'data-isready', '.bb_wrapper', 'stay')
 lwcdn.com#%#//scriptlet('ubo-aeld.js', '/^(?:adBlocker|contextmenu)$/')
 majanilssonlindelof.com##article:has(.has-text-align-center:has-text(/samarbete med/i))
 maklarvarlden.se##.td-post-category:has-text(/spons/i):upward(2)
@@ -252,7 +253,6 @@ mittkok.expressen.se#%#//scriptlet('ubo-acis.js', 'adblock')
 mittkok.expressen.se#%#//scriptlet('ubo-aeld.js', 'click', 'trackClick')
 mittkok.expressen.se#$#.main { width: 100% !important; }
 mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
-modette.se,nyheter24.se#%#//scriptlet('ubo-ra.js', 'data-isready', '.bb_wrapper', 'stay')
 monasuniversum.se##article > div > p:has-text(/annonssamarbete/i):upward(article)
 mygatemagazine.se##.textwidget:has-text(Annons)
 mytaste.se#$#.recipe-modal[data-state=default] .modal-container.open, .recipe-modal[data-state=panorama] .modal-container.open { padding-top: 0 !important; }
@@ -476,8 +476,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1544,8 +1544,7 @@ byggteknikforlaget.se###text-2.widget_text, .header-widget-area
 byggvarlden.se,hotellorestaurang.se##.ContentRight-50 .featured, #bannnerContainer, ul.productnews
 bytbil.com###privacyModal
 bytbil.com##.available-services
-cafe.se,kingmagazine.se,manolo.se##.card-partner
-cafe.se,kingmagazine.se,manolo.se,vagabond.se##.partner
+cafe.se,kingmagazine.se,manolo.se,vagabond.se##.card-partner, .partner
 caminomagasin.se###cookie-compliance
 caminomagasin.se##.block--extern-annons
 camping.se###CookiesBox
@@ -2025,7 +2024,7 @@ viivilla.se##.afubar-top, .native-ad-md, .sp-article
 viivilla.se##.overlay-bottom
 viktvaktarna.se##div[class*="GDPRBanner"]
 villalivet.se##.mtsnb, .villalivet-target
-vimedbarn.se##.annonsinlagg
+vimedbarn.se##.annonsinlagg, .annonsen
 vinbanken.se##.push-to-newsletter, .fancybox-overlay
 vinbanken.se##.top-add, .sidebar-adds, .spons-content
 vinochmatguiden.se##.newsletter
