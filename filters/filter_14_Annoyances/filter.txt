@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/91831
+popularmechanics.com##.bar-content-disclaimer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92601
 vgr.by##.edgtf-post-group
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92644
@@ -2147,6 +2149,8 @@ shopify.in,vz.ru,searchengineland.com,sport.segodnya.ua,vokrugsveta.ru,censor.ne
 ##.widget_blog_subscription
 ~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+libertyparkmusic.com#?#.fl-builder-content > div.fl-row:has(> div.fl-row-content-wrap h3[class]:contains(Sign up for our free newsletters))
+popularmechanics.com###journey-inline
 mts.by##.news-rss-detail-page
 techpp.com###newsletter-shortcode
 ||readingrockets.org/images/promos/enewsletter
@@ -4286,7 +4290,7 @@ ndtv.com##.sub_newsletter
 igate.com.ua,harpersbazaar.com.ua,incrussia.ru##.subs
 marketplace.magazineluiza.com.br,supersadovnik.ru,tripoli.land,rockstargame.su##.subs-form
 buyon.ru##.subscribe-b
-charbelnemnom.com,iphonegeek.me,afanasy.biz,media.nenaprasno.ru,vogue.ru,hyperhost.ua,pravda.ru,reverso.net,vokrug.tv##.subscribe-block
+focusme.com,charbelnemnom.com,iphonegeek.me,afanasy.biz,media.nenaprasno.ru,vogue.ru,hyperhost.ua,pravda.ru,reverso.net,vokrug.tv##.subscribe-block
 rabota.ru##.subscribe-block__inner
 livemint.com##.subscribe-box
 ppt.ru##.subscribe-card-wide
@@ -20856,6 +20860,12 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+libertyparkmusic.com#$#html > body[class*="overflow"] { overflow: auto !important; padding-right: 0 !important; }
+libertyparkmusic.com#$#html { overflow: auto !important; }
+jagran.com##.Cube
+navbharattimes.indiatimes.com##.side-overlay
+navbharattimes.indiatimes.com###ntfy
+focusme.com##.nx-notification
 cookpad.com###summer2021_modal
 proapk.org##.sub-overlay
 universalfreecourse.com,downloadfreecourse.com#%#//scriptlet('abort-current-inline-script', '$', 'modal_newsletter')
@@ -25158,6 +25168,9 @@ easy-deutsch.de#%#AG_onLoad(function() { setTimeout(function() { var el = docume
 !
 !--- Whitelist
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/91863
+!+ PLATFORM(ios, ext_android_cb)
+@@||libertyparkmusic.com/wp-content/plugins/thrive-leads/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91825
 @@||kbb.com/wp-content/themes/Newspaper-child/assets/KBBLogoRefresh.svg$domain=kbb.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76234
@@ -27158,6 +27171,8 @@ experts-exchange.com##.ctaSolutionStickyWrapper
 theguardian.com##.contributions__adblock
 ||contributions.guardianapis.com^
 !
+libertyparkmusic.com#?#.inside-right-sidebar > aside.widget:has(> div.textwidget span.title-text:contains(ONLINE MUSIC COURSES))
+||spinny.com/blog/wp-content/uploads/*/*WithCTA$image
 prom.ua##div[data-qaid="promo_popup"]
 topuniversities.com##.qstools
 ||mmocs.com/templates/game/images/join_affiliate.jpg
