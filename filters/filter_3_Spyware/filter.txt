@@ -4791,6 +4791,7 @@ nethunt.com/api/v1/track/email/$image
 ! Disabled in DNS filter
 ||telemetry.mozilla.org^
 !
+||heartbeats.prd.data.s.joyn.de^
 ||log.strm.yandex.ru^
 ||stats.ficbook.net^
 ||s.beop.io^$third-party
@@ -22113,6 +22114,10 @@ $app=com.miui.analytics
 ! https://github.com/AdguardTeam/CoreLibs/issues/1306
 ||rover.ebay.$image,object,script,badfilter
 !
+! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/743
+||citiintl.122.2o7.net/b/ss/citiintlemeapolandprod$image,redirect=1x1-transparent.gif,domain=citibankonline.pl
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||citiintl.122.2o7.net/b/ss/citiintlemeapolandprod$domain=citibankonline.pl
 ! www.uniqlo.com/jp/ja/checkout/payment - broken after choosing delivery method
 @@||lptag.liveperson.net/tag/tag.js$domain=uniqlo.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91822

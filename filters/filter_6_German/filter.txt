@@ -2258,6 +2258,8 @@ amateurbusters.com#?#.sb_area > .sb_area_headline:contains(Urlaub)
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/93347
+joyn.de#%#//scriptlet('prevent-fetch', 'zomap.de')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92118
 spielaffe.de#%#//scriptlet("adjust-setTimeout", "loadGameFile", "8000", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92109
@@ -2642,6 +2644,7 @@ drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan
 ! ##.id-Container--proBEEP
 hallo-muenchen.de,az-online.de,lokalo24.de,rosenheim24.de,kreiszeitung.de,nordbuzz.de,mannheim24.de,merkur.de,oktoberfest-live.de,tz.de##.id-Container--proBEEP
 !
+||zomap.de^$xmlhttprequest,redirect=nooptext,domain=joyn.de
 tonspion.de##.ts-target[style*="margin-bottom:"]
 charivari.de##span[style^="font-size:10px;color:grey;"]
 charivari.de##div[class*="skyscraper_"]
@@ -5169,6 +5172,8 @@ config.player.p7s1.io/prosieben-de.js$replace=/"adScheduler":\{"cobra":\{"advert
 ! wetter.com has different script than websites above
 /\:\/\/config-vvs\.glomex\.com\/[a-z0-9]*\.js/$replace=/"adScheduler"\:/"adScheduler":\{"cobra":\{\}\}\,"x":/,domain=wetter.com
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/93347
+||zomap.de^$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,xmlhttprequest,domain=joyn.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65811
 ||amazonaws.com/homad-global-configs-*.schneevonmorgen.com/global_config.json$replace=/"enabled": true\,/"enabled": false\,/i,domain=giga.de,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/64743
