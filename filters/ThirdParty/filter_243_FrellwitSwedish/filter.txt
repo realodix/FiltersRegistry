@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-09-02 07:11:50 CEST
+! Last modified: 2021-09-02 11:56:47 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -123,6 +123,7 @@ dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsv
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##.vicky-post-whitebox:has(.vicky-whitebox-label-text:has-text(/spons/i))
 djungeltrumman.se#%#//scriptlet('ubo-nano-sib.js', 'dt_fullpage_ad')
 djungeltrumman.se##.label-sponsored:upward(.post)
+dn.se#$#body.didomi-popup-open { overflow:unset!important }
 dromhemochtradgard.se##.native-wrapper:upward(1)
 duochjobbet.se##.editor_content.post:has(p:has-text(/^annons/i))
 ehandel.se##.aside-list--heading:has-text(/^sponsra/i):upward(.aside-list)
@@ -369,7 +370,6 @@ www.aftonbladet.se#%#//scriptlet('ubo-nostif.js', 'TAKEOVER')
 www.aftonbladet.se#$#body { overflow:unset!important }
 www.dn.se#%#//scriptlet('ubo-acis.js', 'DN', 'initAds')
 www.dn.se#%#//scriptlet('ubo-ra.js', 'data-auto-play')
-www.dn.se#$#body { position: unset !important; }
 www.expressen.se#%#//scriptlet('ubo-acis.js', 'Bau', 'preloadAds')
 www.expressen.se#%#//scriptlet('ubo-ra.js', 'data-start-in-view')
 www.expressen.se#%#//scriptlet('ubo-set.js', 'detect', 'noopFunc')
@@ -479,8 +479,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1605,7 +1605,6 @@ di.se,dn.se,privataaffarer.se##.teaser-native
 diabetes.se##.c-cookies
 djungeltrumman.se###sponsored-posts, #right-banners, .banner-wrapper
 dn.se##.campaign-holder
-dn.se##.gdpr-header
 doktorn.com##.js-banner-wrapper
 driva-eget.se,foretagande.se,hockeymagasinet.com,revisionsvarlden.se,runnersworld.se,tidningenbalans.se,travelnews.se,utsidan.se##.sponsored
 drivkraftsverige.se##.policy-disclaimer
@@ -2486,7 +2485,6 @@ yelp.se##.js-cookie-iframe
 ||prisguide.no/price.js?partner$third-party
 ||prisjakt-a.$third-party,domain=~hintaopas.fi|~ledenicheur.fr|~pricespy.co.nz|~pricespy.co.uk|~prisjagt.dk|~prisjakt.no|~prisjakt.nu
 ||prisjakt.nu^$third-party
-||privacy-center.org^$domain=di.se|stegforhalsa.se
 ||proff.se^$third-party
 ||proxyas.com^$third-party
 ||ptm.flowplayer.com^*/display$xmlhttprequest

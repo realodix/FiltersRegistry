@@ -1,8 +1,8 @@
 !
-! Checksum: QYjzmNib475AkSRefOeY5Q
-! OriginalVersion: 202109020850
+! Checksum: NIYAvQrXUsMWmeJak06q/A
+! OriginalVersion: 202109021650
 ! Title: RU AdList: Counters
-! Last modified: 02 Sep 2021 08:50 UTC
+! Last modified: 02 Sep 2021 16:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1034,10 +1034,14 @@ yandex.*#?#div[class*="-header"] ~ div[id*="page"] div[class*="__col"]:-abp-has(
 ! мобильная версия
 yandex.*##[data-bem*="search-select-promo"]
 yandex.*##div[class*="Advert_container__"]
+yandex.*##div[class^="Card_container__"][class*=" err_none "]
+yandex.*##div[class^="Card_container__"][class*="state_loaded Advert_fullScreenContainer"]
 yandex.*##div[id*="page"] div[class*="_banner_"]
 yandex.*##div[id^="ADVERT_"]
+yandex.*#?#.touch-feed > div > .feed-item[id^="zen-row-"]:-abp-has([class^="zen-ui-channel-info"][class$="subtitle-text"]:-abp-contains(промо))
+zen.yandex.*##[data-ad-id]
 zen.yandex.*##div[class*="yandex-direct"]
-~afisha.yandex.*,yandex.*##[data-bem*="type"][data-bem*="banner"]:not(body)
+~afisha.yandex.*,yandex.*##[data-bem*="type"][data-bem*="banner"]:not(body):not(form)
 !
 ! 4pda.to (ранее 4pda.ru)
 ! верхняя плашка
