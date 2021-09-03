@@ -81,6 +81,10 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/93514
+stream.co.jp##.base__widget
+! https://github.com/AdguardTeam/AdguardFilters/issues/93542
+||syouron.com/NEKO_TORA.js
 ! Native-ad article list
 diamond.jp###trend-watch
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91831
@@ -16478,7 +16482,7 @@ juedische-allgemeine.de#%#//scriptlet('set-cookie', 'ubCmpAccepted', 'true')
 juedische-allgemeine.de#%#document.cookie="ubCmpSettings=eyJnZW1laW5kZW5fc2VsZWN0ZWRfdmFsdWUiOnRydWUsImdvb2dsZV9hbmFseXRpY3MiOmZhbHNlLCJhZF90cmFja2luZyI6ZmFsc2UsInNvY2lhbF9lbWJlZHMiOnRydWV9;path=/;";
 mortalshell.com#%#//scriptlet('set-cookie', '_gdpr_mortal', '1')
 schwalbe.com#%#AG_onLoad(function() {var b=new MutationObserver(function() {var c=document.querySelector('p[class="nl-accept"] > a[data-cookie-accept]'); c&&(b.disconnect(),c.click()) });b.observe(document, {childList: !0,subtree: !0});setTimeout(function() {b.disconnect()}, 1E4)});
-vaillant.de#%#//scriptlet('set-cookie', 'cookie_consent_shown', 'true')
+vaillant.at,vaillant.de#%#//scriptlet('set-cookie', 'cookie_consent_shown', 'true')
 infranken.de#%#AG_onLoad(function() {var b=new MutationObserver(function() {var c=document.querySelector('body > div[style^="background:"][style*="position: fixed;"][style*="z-index:"] div[role="button"]:first-child > div > button'); c&&(b.disconnect(),c.click()) });b.observe(document, {childList: !0,subtree: !0});setTimeout(function() {b.disconnect()}, 1E4)});
 inselradio.com#%#//scriptlet('set-cookie', 'irCookieConsent', '3')
 norwegian.com#%#document.cookie="_nasStorageConsent=all=False&analysis=False&marketing=False&v=1; path=/";
@@ -17271,8 +17275,10 @@ bausep.de#@#.notice-cookie
 schwalbe.com#@#.cookie-box:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91409
 findamasters.com#@##cookieModal
+! https://github.com/AdguardTeam/AdguardFilters/issues/93146
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91585
-vaillant.de#@#.cookiewarning:not(body)
+vaillant.at,vaillant.de#@##cookiewarning
+vaillant.at,vaillant.de#@#.cookiewarning:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91513
 fensterkoenig.com#@##cookie-law-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91467
@@ -18230,8 +18236,6 @@ catsbest.de#@##cookieNotice
 @@||politainment.no/wp-content/plugins/complianz-gdpr/assets/*/cookieconsent.min.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/63132
 @@||developer.tomtom.com/sites/all/modules/contrib/eu_cookie_compliance/js/jquery.cookie-*.min.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/63010
-vaillant.de#@##cookiewarning
 ! https://github.com/AdguardTeam/AdguardFilters/issues/62980
 !#if (adguard_app_ios || adguard_ext_android_cb)
 @@||consent.cookiebot.com^$domain=grweb.ics.forth.gr
@@ -20940,6 +20944,7 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+stream.co.jp##.base__contact
 kaitoricollector.com##.footer_contact
 e-recht24.de##.eb-module[data-type="popup"]
 ||learnenglish.britishcouncil.org/sites/all/modules/splashify/js/splashify_init_min.js
