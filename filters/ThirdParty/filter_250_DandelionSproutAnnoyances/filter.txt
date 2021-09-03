@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 31August2021v1-Beta-Compilation
+! OriginalVersion: 03September2021v1-Beta-Compilation
 ! Expires: 3 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
@@ -427,7 +427,7 @@ yelp.*##.menu-bar-pitch_open-in-app
 linkedin.com#$?#html,body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 02September2021v1-Beta
+! OriginalVersion: 02September2021v2-Beta
 ! Expires: 5 days
 ! Description: Most anti-malware lists are pretty big and can cover a 5- or 6-digit amount of specific domains. But my list hereby claims to remove more than 25% of all known malware sites with just a 2-digit amount of entries. This is mostly done by blocking top-level domains that have become devastatingly abused by spammers, usually because they allowed for free and uncontrolled domain registrations. There's also additional categories that cover unusual malware and phishing domains that very few other lists seem to cover.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1384,6 +1384,32 @@ zombooru.com##a[href="http://www.hard55.com"]
 .duckdns.org^$document
 ||chse-security-notifications.email^$all
 ||secure-0*.ddnss.ch^$all
+||lucdream.com^$document
+||beastbuying.com^$document
+||kokotrokot.com^$document
+||07ca17vejqqej990.inteo.xyz^$document
+||pesoaniz.com^$document
+||plarium.com^$document
+||omnatuor.com^$all
+||novitrk1.com^$all
+||cu27t-evo29lution.xyz^$all
+||sothis-sayers.xyz^$all
+||doneonline.xyz^$document
+||possessedcrackinghart.com^$all
+||typiccor.com^$all
+||apsolutamente.com^$all
+||time4news.net^$all
+||pro-protection.xyz^$all
+||secureleadsforever.com^$all
+||antivirus.renewal-software-update.com^$all
+||renewal-software-update.com^$all
+||pushmeup.art^$document
+||covercenter.xyz^$all
+||gettrk.xyz^$all
+||trc.*.co^$document
+||artofads.co^$document
+||pc-my-protection.xyz^$all
+||beta-news.org^$document
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -6342,7 +6368,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 31August2021v1-Beta
+! OriginalVersion: 02September2021v1-Beta
 ! Expires: 5 days
 ! Description: Most anti-malware lists are pretty big and can cover a 5- or 6-digit amount of specific domains. But my list hereby claims to remove more than 25% of all known malware sites with just a 2-digit amount of entries. This is mostly done by blocking top-level domains that have become devastatingly abused by spammers, usually because they allowed for free and uncontrolled domain registrations. There's also additional categories that cover unusual malware and phishing domains that very few other lists seem to cover.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -6368,6 +6394,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ||bid^$document
 ||top^$document
 ||ooo^$document
+!#if !env_mobile
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (Advanced adblockers only) ———
 www.google.*##.g:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"]))
 www.google.*##.g:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
@@ -6384,7 +6411,9 @@ www.google.*##.g:has(a[href*=".top/"])
 www.google.*##.g:has(a[href*=".php?xxx="])
 www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="carrefour.it"], [href*="gospesa.it"]))
 www.google.*##.g:has(a[href^="https://books.google."])
-! ——— For Google Mobile ———
+!#endif
+!#if env_mobile
+! ——— Attempted removal of Google search result entries that lead to the above top-level domains (For Google Mobile) ———
 ! I strongly recommend the use of https://addons.mozilla.org/firefox/addon/google-search-fixer/ for use on Firefox for Android, thus the entries are written for the Chrome version of Google Mobile.
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".tk/"]:not([href*=coolcmd], [href*=budterence], [href*="google.tk"], [href*=transportnews], [href*=c0d3c], [href*=anonytext], [href*=tokelau-info], [href*=fakaofo], [href*=loljp-wiki], [href*=ninetail], [href*=goshujin], [href*="graph.tk"], [href*=nolfrevival], [href*="steamroller.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".ga/"]:not([href*="google.ga"], [href*=filtri-dns], [href*=anpigabon], [href*="dgdi.ga"], [href*=voitures], [href*="economie-gabon.ga"]))
@@ -6399,6 +6428,7 @@ www.google.*#?#*:has(> * > a[oncontextmenu][href*=".bid/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".top/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".php?xxx="])
 www.google.*#?#*:has(> * > a[oncontextmenu][href^="https://books.google."])
+!#endif
 ! ——— For DuckDuckGo ———
 duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".tk"]:not([data-domain*="coolcmd.tk"], [data-domain*="budterence.tk"], [data-domain*="google.tk"], [data-domain*="transportnews.tk"], [data-domain*="c0d3c.tk"], [data-domain*="anonytext.tk"], [data-domain*="tokelau-info.tk"], [data-domain*="fakaofo.tk"], [data-domain*="loljp-wiki.tk"], [data-domain*="ninetail.tk"], [data-domain*="goshujin.tk"], [data-domain*="graph.tk"], [data-domain*="nolfrevival.tk"], [data-domain*="coppersurfer.tk"], [data-domain*="restricted-functions.tk"], [data-domain*="bstweaker.tk"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".ga"]:not([data-domain*="google.ga"], [data-domain*="filtri-dns.ga"], [data-domain*="anpigabon.ga"], [data-domain*="dgdi.ga"], [data-domain*="voitures.ga"], [data-domain*="economie-gabon.ga"])
@@ -7298,6 +7328,32 @@ zombooru.com##a[href="http://www.hard55.com"]
 .duckdns.org^$document
 ||chse-security-notifications.email^$redirect=nooptext,important
 ||secure-0*.ddnss.ch^$redirect=nooptext,important
+||lucdream.com^$document
+||beastbuying.com^$document
+||kokotrokot.com^$document
+||07ca17vejqqej990.inteo.xyz^$document
+||pesoaniz.com^$document
+||plarium.com^$document
+||omnatuor.com^$redirect=nooptext,important
+||novitrk1.com^$redirect=nooptext,important
+||cu27t-evo29lution.xyz^$redirect=nooptext,important
+||sothis-sayers.xyz^$redirect=nooptext,important
+||doneonline.xyz^$document
+||possessedcrackinghart.com^$redirect=nooptext,important
+||typiccor.com^$redirect=nooptext,important
+||apsolutamente.com^$redirect=nooptext,important
+||time4news.net^$redirect=nooptext,important
+||pro-protection.xyz^$redirect=nooptext,important
+||secureleadsforever.com^$redirect=nooptext,important
+||antivirus.renewal-software-update.com^$redirect=nooptext,important
+||renewal-software-update.com^$redirect=nooptext,important
+||pushmeup.art^$document
+||covercenter.xyz^$redirect=nooptext,important
+||gettrk.xyz^$redirect=nooptext,important
+||trc.*.co^$document
+||artofads.co^$document
+||pc-my-protection.xyz^$redirect=nooptext,important
+||beta-news.org^$document
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$redirect=nooptext,important
@@ -15249,3 +15305,6 @@ bloombergquint.com#%#//scriptlet('ubo-aopr.js', 'getSelection')
 ! https://assets.mofoprod.net/network/documents/Mozilla_YouTube_Regrets_Report.pdf
 ! https://www.techtimes.com/articles/252624/20200917/youtubes-horrible-recommendations-could-affect-younger-users-and-you-could-help-fix-it.htm
 youtube.com##ytd-watch-next-secondary-results-renderer
+! Links to party compatibility testers in article pages
+! Requested by https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-903333579
+tv2.no##.banner
