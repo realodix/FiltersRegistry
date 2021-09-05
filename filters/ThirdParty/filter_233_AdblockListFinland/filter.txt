@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 4September2021v1
+! OriginalVersion: 5September2021v1
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -23,6 +23,9 @@ mobiili.fi##.header_ad, important
 mobiili.fi#$#.mainbody.extended { margin-top: 2em !important }
 puhelinvertailu.com#$#.index-wrap { left: 0px !important }
 telsu.fi##div[style^="font-size:20px;padding:"][style$="px;margin:20px;background:#fff;line-height:25px;"]
+vanha.kaleva.fi#$#.col-sm-12.col-md-8.col-lg-9 { width: 100% !important; }
+vanha.kaleva.fi##.event-detail-ad
+vanha.kaleva.fi#$#.event-detail-image { background-size: 100% 100% !important; }
 www.suomi24.fi#$#div[class^="ThreadGridItemWrapper__CardCol"][width="100%"] * div[class^="ThreadCardFooter__CardFooter"] > div[class^="ThreadCardFooter__ColumnContainer"] { padding-right: 15px !important }
 www.suomi24.fi#$#div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] > div[class^="ThreadGridItemWrapper__CardWrapper"] { padding-left: 0px !important }
 www.suomi24.fi#$?#div[class^="ThreadGridItemWrapper__CardCol"][width="50%"]:has(+ div[class^="ThreadGridItemWrapper__CardCol"][width="100%"]) { width:100% !important }
@@ -438,6 +441,7 @@ lapinkansa.fi#?#div[class="m-managedListing__column -ctx-index -level-1 -cols-2"
 lbaanijakuva.fi##.adremark
 leffatykki.com##div[class="ad230x90"]
 leijonat.com,suomikiekko.com,suomiurheilu.com##[href$="/pitkavetovihjeet/"]
+lily.fi##[class*=ad__component]
 ls24.fi##.article-block__list-article:-abp-has(a[href^="https://ls24.fi/kaupallinen-yhteistyo/"])
 ls24.fi##.asuntorauma-promo
 ls24.fi##.palvelupankki-banner
@@ -702,6 +706,7 @@ uusiteknologia.fi###text-97
 uusiteknologia.fi###text-98
 uutissuora.fi##div[class=td-all-devices]
 valioliiga.com##[href$="/vedonlyonti/"]
+vanha.kaleva.fi#?#.event-list-item:-abp-has(.list-item-advertisement)
 vantaansanomat.fi##div.display-ad
 vapaasana.swedishforum.net###p0
 vapaasana.swedishforum.net##div[id=main-content] > div:first-of-type[style="overflow:visible"]
@@ -912,6 +917,7 @@ gamereactor.fi##[class^=ad_mobileLeader]
 gamereactor.fi##[class^=ad_smartphbig]
 gamereactor.fi##div[style$="color: lightgrey; font-size: 11px; text-transform: uppercase;"]
 kotiliesi.fi##.placeholder
+vanha.kaleva.fi##.event-detail-ad-mobile
 !#endif
 ! -----UNSORTED END-----
 ! -----UNBREAK-----
@@ -940,7 +946,7 @@ kaksplus.fi#@#.sponsored-content
 ! https://github.com/easylist/easylist/pull/7022
 @@||cdn.almamedia.fi/almacmp/*.js$script,domain=kauppalehti.fi|tekniikkatalous.fi
 ! https://github.com/easylist/easylist/pull/8295
-@@||frosmo.com^$xmlhttprequest,domain=meillakotona.fi|terve.fi
+@@||frosmo.com/recoApi/$xmlhttprequest,domain=lily.fi|meillakotona.fi|terve.fi
 ! https://github.com/easylist/easylist/pull/8317
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/306
 @@||pelaaja.fi/sites/default/files/googleanalytics/analytics.js
@@ -951,3 +957,5 @@ kaksplus.fi#@#.sponsored-content
 ! Quickfix, buying tickets won't work properly with Easylist Cookie...
 vr.fi#@$#body { overflow: auto !important; }
 vr.fi#@#div[data-testid="modal"]
+! https://github.com/easylist/easylist/pull/8981
+@@||amazonaws.com/sites/kauppahalli*.js$script,domain=kauppahalli24.fi
