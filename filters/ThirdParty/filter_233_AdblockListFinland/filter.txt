@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 5September2021v2
+! OriginalVersion: 5September2021v7
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -21,6 +21,7 @@ mobiili.fi#$##headermob { position: static !important }
 mobiili.fi#$##show_merkki { margin-top: 2em !important }
 mobiili.fi##.header_ad, important
 mobiili.fi#$#.mainbody.extended { margin-top: 2em !important }
+outlook.live.com##div[aria-label=Siirtymisruutu] ~ div[data-max-width="2400"] + div[class]
 puhelinvertailu.com#$#.index-wrap { left: 0px !important }
 telsu.fi##div[style^="font-size:20px;padding:"][style$="px;margin:20px;background:#fff;line-height:25px;"]
 vanha.kaleva.fi#$#.col-sm-12.col-md-8.col-lg-9 { width: 100% !important; }
@@ -36,12 +37,8 @@ www.suomi24.fi#$#div[width="50%"] + div[width="50%"] + [width="50%"] + div[class
 ! HTML filters for Firefox
 ! -----SPECIFIC FILTERS END-----
 ! -----NETWORK FILTERS-----
-||damoh.katsomo.fi/$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
 ||doubleclick.net^$xmlhttprequest,redirect=nooptext,domain=puhekupla.com
 ||elisa.digital.nuance.com/tagserver/js/ads-blocking-detector.min.js$domain=elisa.fi
-||freewheel-jitt.sanoma.fi^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
-||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media,redirect=noopmp3-0.1s,domain=ruutu.fi
-||sanoma-prod.integration-x.com^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
 ! CNAME filters for Firefox
 ||cds.*.hwcdn.net^$script,domain=apteekkari.fi
 ! -----NETWORK FILTERS END-----
@@ -865,7 +862,7 @@ iltalehti.fi#?#div[class="card "]:-abp-has([class=alennuskoodi-column-embed])
 ! Sanoma Oyj video ads
 ||com-wakedynamite-production-publish.s3.amazonaws.com/publish/$media
 ||dwk14raokkwxv.cloudfront.net/sanomafi/media/*.mp4
-||freewheel-jitt.sanoma.fi/*.mp4
+||freewheel-jitt.sanoma.fi^/*.mp4
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media
 ! General Media unbreakers
 @@||fwmrm.net/ad/g/*_Supla_Audio_HTML5_Live$script
@@ -889,14 +886,11 @@ mtvuutiset.fi,mtv.fi,suomiareena.fi,studio55.fi,msn.com##.mtv-player-ad-containe
 ! Adblock check
 murha.info#@#.adsbygoogle
 murha.info#@#.adsbox
-!#if !ext_ublock
-!#if !adguard
-||damoh.katsomo.fi/*$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
+! Redirect resources
+||damoh.katsomo.fi/$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
 ||freewheel-jitt.sanoma.fi^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media,redirect=noopmp3-0.1s,domain=ruutu.fi
 ||sanoma-prod.integration-x.com^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
-!#endif
-!#endif
 ! appears when blocking ads:
 ||mobiili.fi/wp-content/themes/mobiilitheme/images/small-loading.gif
 ruutu.fi##.RuutuPlayer__Error-sc-1o2b3la-0
