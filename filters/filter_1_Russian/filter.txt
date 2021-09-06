@@ -6812,13 +6812,7 @@ livejournal.com#%#//scriptlet("set-constant", "begun_new_callbacks", "undefined"
 ! Kinopoisk
 ||strm.yandex.ru/get/$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/
 !+ NOT_PLATFORM(windows, mac, android)
-||strm.yandex.ru/get/$script,redirect=noopvast-2.0,domain=kinopoisk.ru
-! video ad if these requests are blocked
-@@||an.yandex.ru/system/context.js$domain=kinopoisk.ru
-@@||ads.adfox.ru/*/getbulk$xmlhttprequest,domain=kinopoisk.ru
-!#safari_cb_affinity(general,privacy)
-@@||mc.yandex.ru/metrika/tag.js?img_adv=123$domain=kinopoisk.ru
-!#safari_cb_affinity
+||strm.yandex.ru/get/$script,xmlhttprequest,other,redirect=noopvast-3.0,domain=yastatic.net|kinopoisk.ru
 !
 !#if (!adguard_ext_firefox)
 ||echo.msk.ru^$replace=/Ya.*\[{"attributes".*"blockId".*//,script
@@ -11742,6 +11736,8 @@ crazymailing.com,lotzon.pro,novosti-n.org,prokazan.ru,20minut.ua,alnews.com.ua,g
 !
 !
 !
+bankirsha.com##div[style$="height:100px;"]
+bankirsha.com##div[style$="height:100px;"] + script + hr
 ||dental-paint.ru^$domain=alexbruni.ru
 rtvi.com##.part-news
 tophotels.ru##.header-desctop-banner-container
