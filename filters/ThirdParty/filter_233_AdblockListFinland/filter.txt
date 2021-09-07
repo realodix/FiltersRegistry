@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 7September2021v2
+! OriginalVersion: 7September2021v3
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -56,7 +56,6 @@ savonsanomat.fi,ess.fi,itahame.fi,ksml.fi#%#//scriptlet('ubo-nostif.js', 'linkEl
 ! https://github.com/easylist/easylist/pull/8317
 pelaaja.fi#%#//scriptlet('ubo-aopr.js', 'ga')
 ||pelaaja.fi/sites/default/files/googleanalytics/analytics.js$important
-!
 ! -----GENERAL FILTERS-----
 /bannerCounter.php
 /js/spring.js
@@ -862,8 +861,8 @@ iltalehti.fi#?#div[class="card "]:-abp-has([class=alennuskoodi-column-embed])
 ! Sanoma Oyj video ads
 ||com-wakedynamite-production-publish.s3.amazonaws.com/publish/$media
 ||dwk14raokkwxv.cloudfront.net/sanomafi/media/*.mp4
-||freewheel-jitt.sanoma.fi^/*.mp4
-||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media
+||freewheel-jitt.sanoma.fi^$media
+||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^$media
 ! General Media unbreakers
 @@||fwmrm.net/ad/g/*_Supla_Audio_HTML5_Live$script
 @@||fwmrm.net/ad/*Nelonen_Web_HTML5_Live$script
@@ -887,10 +886,10 @@ mtvuutiset.fi,mtv.fi,suomiareena.fi,studio55.fi,msn.com##.mtv-player-ad-containe
 murha.info#@#.adsbygoogle
 murha.info#@#.adsbox
 ! Redirect resources
-||damoh.katsomo.fi/$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
-||freewheel-jitt.sanoma.fi^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
-||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi/$media,redirect=noopmp3-0.1s,domain=ruutu.fi
-||sanoma-prod.integration-x.com^/*.mp4$redirect=noopmp3-0.1s,domain=ruutu.fi
+||damoh.katsomo.fi^$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
+||freewheel-jitt.sanoma.fi^$media,redirect=noopmp3-0.1s,domain=ruutu.fi
+||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^$media,redirect=noopmp3-0.1s,domain=ruutu.fi
+||sanoma-prod.integration-x.com^$media,redirect=noopmp3-0.1s,domain=ruutu.fi
 ! appears when blocking ads:
 ||mobiili.fi/wp-content/themes/mobiilitheme/images/small-loading.gif
 ruutu.fi##.RuutuPlayer__Error-sc-1o2b3la-0
