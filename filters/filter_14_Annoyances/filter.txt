@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/92597#issuecomment-915197886
+safecities.economist.com##div[class*="-AltAdvertisement"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92824
 rockmods.net###HTML1
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92539
@@ -2179,6 +2181,8 @@ quinhillyer.com,johnbiver.com,jasonmattera.com,ipatriot.com,hooligancharters.com
 ##.widget_blog_subscription
 ~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+sodapdf.com##.foot-newsletter
+grammarly.com#?#main > div[class*="-container"]:has(> form > button > span:contains(subscribe))
 rockmods.net###HTML2
 socialmediatoday.com##.signup
 daytranslations.com##.newslette-wrapper
@@ -2692,7 +2696,7 @@ tamaris.com###newsletter-in-body
 extramovies.*###sidebar > #fixer > .filtro_y > form[action="https://feedburner.google.com/fb/a/mailverify"]
 extramovies.*#?##sidebar > #fixer > .filtro_y > form[action="https://feedburner.google.com/fb/a/mailverify"]:upward(1)
 nanu-nana.de#?#.page-wrapper > div.page-footer:has(> div.footer > div.newsletter)
-hiorg-server.de,electricalvolt.com,designoptimal.com,ruecken-zentrum.de,electronicsmcqs.com,freecourseweb.com,devcourseweb.com##.widget_email-subscribers-form
+sodapdf.com,hiorg-server.de,electricalvolt.com,designoptimal.com,ruecken-zentrum.de,electronicsmcqs.com,freecourseweb.com,devcourseweb.com##.widget_email-subscribers-form
 collegedekho.com##.widgetContent > div.block.formBlock
 architekturvideo.de#?#.vlog-sticky > div.widget:has(> div.textwidget > a[href^="https://eepurl.com/"])
 splav.ru##a[href="https://t.me/SPLAV_RU"]
@@ -9715,6 +9719,8 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+calvinklein.de#$#.ck-modal { display: none !important; }
+calvinklein.de#$#body { overflow-y: visible !important; }
 abw.by###accept_terms
 migros.com.tr##fe-product-cookie-indicator
 staradvertiser.com###ToSPPAlert
@@ -16553,6 +16559,7 @@ cmp-sp.lvz.de#%#AG_onLoad(function(){if(window.location.href.includes("consentUU
 privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 !
+codeeurope.pl#%#//scriptlet('set-cookie', 'gdprcookie', '1')
 hungama.com#%#//scriptlet("set-cookie", "ckpVisited", "true")
 akelius.com#%#document.cookie='akCookieSettings={"ga":false,"optimize":false,"facebook":false,"hotjar":false}; path=/;';
 rohtenburg.de#%#//scriptlet('set-cookie', 'no_thanks', 'true')
@@ -21061,6 +21068,10 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+tide.com###global-sticker
+grammarly.com##main > div[class*="-post"] > div[class*="-panel"]
+grammarly.com##div[class*="-popupEnterActive"]
+grammarly.com#?#main > div[class*="-banner"]:has(> div[class*="-basicButton"] > span:contains(Get Grammarly))
 mail.com##div[data-mod-name="welcomeback"]
 vpnpro.com#$#.providerModal { display: none!important; }
 vpnpro.com#$#.modal-backdrop { display: none!important; }
@@ -25909,11 +25920,11 @@ abendzeitung-muenchen.de###webpush-app
 /firebase.js$domain=novayagazeta.ru|comments.ua|kinosimka.net|ilan365.net|cnbcindonesia.com|haberzamani.net|oxy.cloud|allbasketball.org|auslogics.com|kartalyuvasi.com.tr|cnnindonesia.com|fbc.ua
 /firebase-messaging.js$domain=ukranews.com|comments.ua|meduza.io|coub.com|porno90.me|cnnamador.com|giallozafferano.it|wcostream.com|fptplay.vn|jooble.org|mobile01.com|myinstants.com|pdalife.ru|rg.ru|m.iguides.ru|donanimhaber.com|profile.ru|womanhit.ru|news.noteru.com|narodna-pravda.ua|newstm.in|sabah.com.tr|dreamstime.com|popbee.com|avtovzglyad.ru|allbasketball.org|tw.news.yahoo.com|takvim.com.tr|jn.pt|ria.ru|pars.host|calculator-online.net|operanewsapp.com|ahaber.com.tr|tamindir.com|concursosnobrasil.com.br|kompas.com|news.ebc.net.tw|recyclingtoday.com|homedecoratione.com|khersondaily.com|mirtesen.ru|womanhit.ru|belsat.eu|gearbest.com
 !
+/sw.js$domain=avtoblog.ua|tmearn.com|infox.ru|mp3download.to
 ltn.com.tw##.softPush_notification
 ||abw.by/src/js/OneSignal.js
 wcnc.com##.page__notifications
 phonearena.com##div[class="nc"]
-||infox.ru/sw.js
 /static/c1e/static/notification_config/*/*/js/index.js$domain=lifestylenama.in|manoranjannama.com|sportsnama.in|naukrinama.com
 roblox.com##.push-notifications-global-prompt
 ||download-video.com/web-notification/wsNotification.js
@@ -26135,7 +26146,6 @@ uol.com.br##.webalert_container
 lanacion.com.ar##.notificacion-modal
 ||pornl.com/ps/index.js
 ||sw.wpu.sh/script/main.js$domain=hclips.com|erkiss.live
-/sw.js$domain=avtoblog.ua|tmearn.com
 auchan.ua#%#//scriptlet("set-constant", "navigator.geolocation", "emptyObj")
 /push.js$domain=acunn.com|tsn.ua|sputnik.by|nation-news.ru|news.noteru.com|sputnik-georgia.ru
 lifehacker.ru###lh-push-app
