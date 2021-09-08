@@ -16,6 +16,8 @@ razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/defaul
 /^https?://mail\.yandex\.[^\s]{125,}/$empty,script,~third-party
 ! Rule "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$empty,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz" converted to: "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$redirect=nooptext,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz"
 /^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$empty,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz
+! Rule "yandex.*##.mini-suggest__item:has(> a[href^="http://"]):remove()" converted to: "yandex.*#$?#.mini-suggest__item:has(> a[href^="http://"]) { remove: true; }"
+yandex.*##.mini-suggest__item:has(> a[href^="http://"]):remove()
 ! Rule "||market.yandex.ru/widget/$empty,domain=zen.yandex.by|zen.yandex.kz|zen.yandex.ru|zen.yandex.ua|zen.yandex.uz" converted to: "||market.yandex.ru/widget/$redirect=nooptext,domain=zen.yandex.by|zen.yandex.kz|zen.yandex.ru|zen.yandex.ua|zen.yandex.uz"
 ||market.yandex.ru/widget/$empty,domain=zen.yandex.by|zen.yandex.kz|zen.yandex.ru|zen.yandex.ua|zen.yandex.uz
 ! Rule "||yastatic.net/*/front-maps-static/*/chunks/promo/$empty" converted to: "||yastatic.net/*/front-maps-static/*/chunks/promo/$redirect=nooptext"
