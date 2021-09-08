@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-09-07 16:46:21 CEST
+! Last modified: 2021-09-08 11:53:07 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -160,9 +160,7 @@ fof.se#%#//scriptlet('ubo-set.js', 'Drupal.behaviors.oxys_cookie_monster', 'unde
 fokus.se#$#.mediaconnect-protected-content, .mediaconnect-protected-content--show { max-height: unset !important; overflow: unset !important; }
 fokus.se#$#.mediaconnect-protected-content::after { background: unset !important; }
 folkhalsasverige.se#%#//scriptlet('ubo-acis.js', 'showConsentDlg')
-folkhalsasverige.se##.featurette:has-text(/sponsrad/i)
-folkhalsasverige.se##.vicky-fancybar-inner:has-text(/sponsrad/i)
-folkhalsasverige.se##.vicky-post-whitebox:has-text(/sponsrad/i)
+folkhalsasverige.se##.featurette,.vicky-post-whitebox,.vicky-fancybar-inner:has-text(/sponsrad/i)
 foretagande.se##article:has(.sponsored-text)
 forum.macworld.se,idg.se#$#.idgcp__layer--active, .idgcp__layer--active body { overflow: initial !important; }
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.c-announcement:has(.c-label--sponsored)
@@ -172,6 +170,7 @@ fragbite.se##article:has(.category:has-text(/spons/i))
 fssweden.se,fz.se,sweclockers.com#%#//scriptlet('ubo-set.js', 'adblock', 'false')
 fuska.se#%#//scriptlet('ubo-acis.js', '$', '.modal')
 futsalmagasinet.se##.td_block_wrap:has(span:has-text(/annonserat innehåll/i))
+futsalmagasinet.se##.wp-block-column > h2:has-text(/annonser/i) ~ p
 fz.se##.card:has(.article-sponsored)
 fz.se##.fp-carousel .fpci-kicker:has-text(/^sponsr/i):upward(.fpc-item)
 fz.se##a[href*="/sponsrat"]:upward(.card)
@@ -247,8 +246,7 @@ medibok.se#$?#style:has-text(body * :not) { remove: true; }
 mestmotor.se#$##piano { opacity: 1 !important; }
 mestmotor.se#%#//scriptlet('ubo-ra.js', 'onclick', '[onclick^="ANAL"]')
 metrojobb.se##.headlines__block:has(.ad-header)
-metromode.se##.b-card:has(.advert)
-metromode.se##.b-related__item:has(.advert)
+metromode.se##.b-card, .b-related__item:has(.advert)
 metromode.se#$?#.slick-item:has(.advert) { remove: true; }
 minimalisterna.se##.post:has(p:has-text(/i samarbete med/i))
 missatsamtal.se##.comment:has(.nosnaj)
@@ -287,9 +285,7 @@ partillevaxer.se,vasterasvaxer.se##.elementor-widget-heading:has-text(/annons/i)
 partillevaxer.se,vasterasvaxer.se##.elementor-widget-heading:has-text(/annons/i) + .elementor-widget-image
 partillevaxer.se,vasterasvaxer.se##.elementor-widget-heading:has-text(/annons/i) + .elementor-widget-image + div
 partillevaxer.se,vasterasvaxer.se##.elementor-widget-heading:has-text(/annons/i) + .elementor-widget-image + div + div
-piraja.se###featholder:has(.spons)
-piraja.se###hero:has(.spons)
-piraja.se##.intro:has(.spons)
+piraja.se##.intro, #hero, #featholder:has(.spons)
 polestarclubsweden.se,sjofart.net,svensktgolfforum.se#%#//scriptlet('ubo-acis.js', 'setTimeout', 'test')
 pricerunner.se##span:has-text(/^sponsrad$/i):upward([data-cy="deal-carousel"])
 privataaffarer.se##.data-grid-teaser:has(.teaser-label:has-text(/^annons/i))
@@ -311,8 +307,7 @@ senses.se##.isobrick:has(a[title^="Samarbete:"])
 senses.se##.isobrick:has(a[title^="Sponsrat:"])
 sexpacket.se#%#//scriptlet('ubo-aeld.js', '/contextmenu|cut|copy|paste/')
 shortcut.se##.blockquote:has(strong:has-text(/^annons/i))
-shortcut.se##.employer:has(.sponsored)
-shortcut.se##article:has(.sponsored)
+shortcut.se##.employer, article:has(.sponsored)
 skargarden.se##article:has([title^="Annons"])
 so-rummet.se##.link-list-item:has(img[src*="sponsrad"])
 so-rummet.se##.view-nya-lankar-front:has(h3:has-text(/annonser/i))
@@ -351,13 +346,11 @@ tidningenridsport.se#$#.entry-content { display: initial !important; }
 tjanstebilen.se##.post-item:has(.sponsored-article)
 totallyorebro.se,totallystockholm.se#$?#[class*="tot-content-preview-container"]:has(a[href*="casino"]) { remove: true; }
 trendenser.se##.post_feed_post:has(.sponsor-info)
-trendenser.se##a[href*="/category/annons"]:upward(.featured-post)
-trendenser.se##a[href*="/category/reklam"]:upward(.featured-post)
+trendenser.se##a[href*="/category/reklam"], a[href*="/category/annons"]:upward(.featured-post)
 tripadvisor.se##div:has-text(Sponsrat av):upward(div[data-curated-shelf-id])
 tv2.no#%#//scriptlet('ubo-acis.js', 'TV2', 'questback')
 tvdags.se##.article-list__item:has(.sponsor)
 underbaraclaras.se##.jet-listing-grid__item:has(.jet-listing-dynamic-field__content:has-text(/annonssamarbete/i))
-varden.se##app-blog-puff:has(.sponsored-label)
 viafree.se#$#.player-wrapper .viafree-player .vjs-tech { display:initial!important; }
 viivilla.se##.teaserblockdata:has(.teaser-sponsored-text)
 villalivet.se##a:has-text(/sponsra/i):upward(3)
@@ -901,7 +894,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /bilder-for-annonser/*$image
 /bilder/ads/*
 /bilder/betalannonser/*
-/bilder/foretag/*$domain=falubsbandy.com
 /bilder/logotyper/sponsorer-partners
 /bitcsys/js/bit.js$script
 /blogs/log_pageview/*$script
@@ -1506,9 +1498,9 @@ axier.se##.consent
 babyhjalp.se##.elementor-widget[data-settings*="sticky_"]
 backpacking.se,byggteknikforlaget.se,dialasen.com,livetsgoda.se,nyadagbladet.se,opulens.se,radiotreby.se,ravarumarknaden.se,sporthalsa.se,torbjornstips.se,worldkustom.com##.textwidget a[target="_blank"]
 badminton.nu,bandybyn.se###RightOuterBannerDiv
+bandybyn.se###RightDiv
 bandybyn.se##.StartPageBoxRow > .boxcontainer:last-child > .StartPageBoxNarrow
 bandybyn.se##.StartPageBoxRow > .boxcontainer:nth-child(2) > .StartPageBoxNarrow
-bandybyn.se,falubsbandy.com###RightDiv
 bandyfeber.com##.widget_sp_image, a[title^="ANNONS"]
 bandyplay.se##div[class^="CookieConsent"]
 barnsemester.se##.puffLine
@@ -1653,7 +1645,6 @@ expressen.se##.teaser--native, .native-article
 expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting
 expressen.se##figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"]
 expressen.se,isabellalowengrip.se,johannatoftby.se,matplatsen.net,monasuniversum.se###gatsby-focus-wrapper > div[class^="css-"]:last-of-type
-falubsbandy.com##.ImageLinkBox
 familjeliv.se##a[href*="/kampanj/"], .flm-kampanj
 familjesidan.se##.cookies-wrapper
 fastighetssverige.se##a[href*="/banner/out/"], .bnr_box
@@ -1709,7 +1700,6 @@ frilagt.se##.column-2 > figure
 friluftsframjandet.se##[id^="ad-"]
 funnygames.se##.slot
 fuska.se##.alert-success
-futsalmagasinet.se##.vc_widget_sidebar > .widget_text
 fz.se##.article-facebook
 gaffa.se##.external-branding
 gamereactor.se###cookielawwarning
@@ -2026,6 +2016,7 @@ uppsalanyheter.se###banner-top-block
 urlm.se##[class^="adpadtwentypad"]
 vagabond.se##.latest-article-native
 varden.se##.cdk-overlay-container, app-cookies
+varden.se##app-native-puff
 varldenidag.se##.profile-annons
 varldenshaftigaste.se##[id*="annons"], #getFixed
 varldenshistoria.se##.campaign-teaser-show
