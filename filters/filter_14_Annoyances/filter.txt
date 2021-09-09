@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/92826
+inc42.com#?##secondary > div.widget:has(> div.textwidget > div.recommendation-side)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92719
 pgrkam.com###registerModal1
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93650
@@ -6040,7 +6042,7 @@ borderlands.com##div[ads-blocked="adsBlocked"]
 ||amazonaws.com/sp-sw-sdk-production^
 ||ddnk.advertur.ru/v1/s/loader.js$script,redirect=noopjs,domain=video.alexfilm.cc
 @@||gsurl.be/advertisement.js
-||tinypass.com^$domain=thechive.com|thelocal.de|independent.co.uk|forbes.com|scotsman.com|inquirer.com|pinknews.co.uk
+||tinypass.com^$domain=thechive.com|thelocal.de|independent.co.uk|forbes.com|scotsman.com|inquirer.com|pinknews.co.uk|insider.com
 ||buhgalter.com.ua/assets/templates/base/js/blocker.js
 coinhub.pw#?#body > center:contains(Turn off your adblocker)
 milehighreport.com##div[class^="adblock-whitelist-messaging"]
@@ -9735,6 +9737,7 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+vivoplay.com.br##.go-cookies-warning
 ||d3nv2arudvw7ln.cloudfront.net/staticfolder/Tyre/cookie-bar/$domain=pirelli.com
 megafon.ru##.footer-v2__privacy
 calvinklein.de#$#.ck-modal { display: none !important; }
@@ -21089,6 +21092,9 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+popmama.com#$##mainBannerPopup { display: none!important; }
+popmama.com#$#.modal-backdrop { display: none!important; }
+popmama.com#$#body { overflow: visible!important; padding-right: 0!important; }
 comidinhasdochef.com##.snp-overlay
 comidinhasdochef.com##body .snp-builder
 toolsqa.com#$##advertisement-modal { display: none !important; }
@@ -22528,14 +22534,12 @@ bankbazaar.com#$##js-sign-in-box[style="display: block;"] ~ .modal-backdrop { di
 magadanmedia.ru###social_modalblock
 thebell.io##app-bottom-sticky-dialog
 livecodestream.dev##.formkit-overlay
-inc42.com#$#iframe[id^="offer-"] { display: none !important; }
+inc42.com#?#body > div.tp-modal:has(> div.tp-iframe-wrapper > iframe[src^="https://buy.tinypass.com/checkout/template/cacheableShow?aid"])
 inc42.com#$#.tp-backdrop { display: none !important; }
-inc42.com#$#.tp-modal { pointer-events: none !important; overflow: hidden !important; }
 inc42.com#$#iframe[id^="piano-id-"] { pointer-events: all !important; }
 inc42.com#$#html > body > div.plus-bottom-bar[style] { display: none !important; }
 inc42.com#$#button.tp-close { pointer-events: all !important; }
 inc42.com#$?#body.tp-modal-open { overflow: visible !important; }
-inc42.com#$#body { overflow: visible !important; }
 rockstargames.su##.webnavoz_notificationbox
 zerohedge.com###exitModalOverlay
 kdnuggets.com##.kd_bottom
