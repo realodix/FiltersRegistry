@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/92719
+pgrkam.com###registerModal1
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93650
 falkirkherald.co.uk#?##content-wrapper > div[class]:has(> div[class] > div.dailymotion-cpe)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92597#issuecomment-915197886
@@ -2183,6 +2185,12 @@ quinhillyer.com,johnbiver.com,jasonmattera.com,ipatriot.com,hooligancharters.com
 ##.widget_blog_subscription
 ~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+techmonitor.ai##.letter
+techmonitor.ai##.newsletter-article
+netsparker.com##.blog-v2-read-email-subscribe
+netsparker.com##.blog-v2-read-email-subscribe + div.text-privacy
+rd.com###desktop-nav-banner
+lifeoptimizer.org#?#.entry-content ~ div.code-block:has(> div > center form[action^="https://static.mailerlite.com/"])
 skillsyouneed.com#?##sidebar > div.widget > div.infobox1:has(> a.syn-subscribe-btn)
 nomadicboys.com##.subscription-bar
 nomadicboys.com##.subscription-inline-box
@@ -21081,6 +21089,9 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+toolsqa.com#$##advertisement-modal { display: none !important; }
+toolsqa.com#$#body[style^="overflow:"] { overflow: auto !important; }
+netsparker.com###subscripbeModal
 blog.bonus.ly##.leadinModal
 blog.bonus.ly##.announcement-bar-main
 skillsyouneed.com##.syn-share-bar
