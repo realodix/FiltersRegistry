@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 21.9.88
+! OriginalVersion: 21.9.99
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 08 Sep 2021 22:03 UTC
+! Last modified: 09 Sep 2021 12:51 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -16,6 +16,7 @@
 -iklan1.
 -iklan2.
 -ikln.
+.id^*-banner-$image
 .id^*/?ad=
 .id^*/?wid=
 .id^*/_adv/
@@ -56,6 +57,7 @@
 .id^*/adz/
 .id^*/affil/
 .id^*/bads/
+.id^*/banner$image
 .id^*/bannery/
 .id^*/bnr/
 .id^*/doubleclick/
@@ -73,8 +75,10 @@
 .id^*/peels/
 .id^*/pm/ad-
 .id^*/promodisplay?
+.id^*/sponsor-$image
 .id^*/ss/ad/
 .id^*/video-ad-
+.id^*_banner/$image
 .iklan.css
 /0iklan-$image
 /1iklan-
@@ -3580,6 +3584,7 @@ _GIF1200x120-
 ##.mobileAd_bottom_floating
 ##.mobileads
 ##.mobileadstop
+##.module_home_ads
 ##.myiklan
 ##.newkarma-core-banner-insidecontent
 ##.newkarma-core-center-ads
@@ -3810,7 +3815,6 @@ _GIF1200x120-
 ##[href*="//geni.us/bnrbrg"] > img
 ##[href*="//goraps.com/fullpage.php?"] > img
 ##[href*="/ad_d"]
-##[href*="123klik.xyz/r/"] > img
 ##[href*="bit.ly/ads"] > img
 ##[href*="klook.com/id/promo/"] > img
 ##[href*="niagahoster.co.id/ref/"]
@@ -4092,7 +4096,6 @@ _iklan$image,domain=sorotmakassar.com
 ||drive.google.com/uc?export=$image,domain=kepri.info|lintaskepri.com|seputarkepri.co.id|suluhkepri.com
 ||ibb.co^$image,domain=bunaken.co.id
 ||image-korankaltim.sgp1.digitaloceanspaces.com^*/ads/$image
-||5news.co.id^*/banner$image
 ||abenetwork.com^*/banner-
 ||acehherald.com^*/iklan-$image
 ||acehtimes.id^*/iklan-$image
@@ -4120,8 +4123,6 @@ _iklan$image,domain=sorotmakassar.com
 ||baliportalnews.com^*/iklan_$image
 ||balitopnews.com/uploads/banner/$image
 ||banghasan.com/banner/$image
-||bantenku.co.id^*/banner/$image
-||baritaitah.co.id/foto_banner/$image
 ||baritopost.co.id^*-iklan.$image
 ||bengkuluekspress.com^*/banner-$image
 ||bengkuluinteraktif.com^*/promo/$image
@@ -4132,8 +4133,6 @@ _iklan$image,domain=sorotmakassar.com
 ||beritaasatu.com^*/banner-$image
 ||beritabali.com^*/banner/$image
 ||beritabojonegoro.com/upload/banner/$image
-||beritadaerah.co.id^*/banner-$image
-||beritajakarta.id^*/banner/$image
 ||beritajateng.net^*/banner-$image
 ||beritakaltim.co^*/banner-$image
 ||beritamerdekaonline.com^*/banner-$image
@@ -4144,20 +4143,16 @@ _iklan$image,domain=sorotmakassar.com
 ||beritatotabuan.com^*/banner-$image
 ||bingkairiau.com^*/banner/$image
 ||bisablog.com^*/banner-$image
-||bitcoin.co.id/banner/$image
 ||blokbojonegoro.com/files/source/banners/$image
 ||bogorin.com^*/promo-$image
 ||bolmongraya.co^*/banner-$image
 ||borukaro.com/wp-content/uploads/*-promo.$image
-||budiarto.id/bausastra/assets/img/banner-iqra.png$image
-||cinemags.co.id/*-banner-$image
 ||cpnsonline.com/banner/$image
 ||deltakepri.co.id^*/baner-$image
 ||detak.co^*/ad_$image
 ||detakbanten.com/images/banners/$image
 ||detik.com^*/bannerinternal/
 ||detikglobalnews.com^*/banner-$image
-||detiknews.id^*/adv-$image
 ||detiksumsel.com/media/banner/$image
 ||detiksumsel.com/media/header_kiri/*/thumbheader_kiri*.jpeg$image
 ||detotabuan.com^*/banner-$image
@@ -4168,10 +4163,8 @@ _iklan$image,domain=sorotmakassar.com
 ||elshinta.com/banner/$image
 ||eramuslim.com^*/banners/$image
 ||esports.id/img/adds/$image
-||fajarbali.co.id/images/banners/$image
 ||faktualnews.co/images/*-300px.$image
 ||fornews.co^*/banner-$image
-||forumbitcoin.co.id^*/banner/$image
 ||franchiseglobal.com/images/banners/$image
 ||gagasanriau.com^*/banner/$image
 ||gamebrott.com/*-Localbanner_$image
@@ -4181,7 +4174,6 @@ _iklan$image,domain=sorotmakassar.com
 ||gatra.com/images/*/banner/$image
 ||globalplanet.news/assets/images/banner/$image
 ||goriau.com/assets/imgbank/*/ads-$image
-||gotvnews.co.id^*/banner-$image
 ||gresiknews.co^*/iklan-$image
 ||halamansembilan.com^*/iklan-$image
 ||haluankepri.com^*/banners/$image
@@ -4197,7 +4189,6 @@ _iklan$image,domain=sorotmakassar.com
 ||indotelko.com/images/banner/$image
 ||infobekasi-co-id.cdn.ampproject.org^*-banner-$image
 ||infobekasi.co.id^*/iklan-$image
-||infobrand.id^*/banner-$image
 ||infojambi.com^*/banner-$image
 ||infokepahiang.com^*/banner-$image
 ||infolampungnews.com^*/iklan-$image
@@ -4215,18 +4206,13 @@ _iklan$image,domain=sorotmakassar.com
 ||juragancipir.com/wp-content/uploads/*.gif$image
 ||jurnalborneo.co.id^*/iklan-$image
 ||justika.com/?location=$third-party,subdocument
-||kabargames.id/banner/$image
 ||kabarpokja.com^*/iklan-$image
-||kabarterkini.co.id^*/banner-$image
 ||kajanglako.com^*/banner/$image
 ||kanalinspirasi.com^*/iklan-$image
-||karyaone.co.id^*/banner-$image
 ||karyaone.co.id^*/promo-$image
 ||katada.id^*/iklan.$image
-||katim.id^*/img/banner/$image
 ||kba.one/files/sewaan/$image
 ||keganjilan.com^*/banner-$image
-||kendaripos.co.id^*/banner-
 ||keprisatu.com^*/ad-$image
 ||klikpositif.com^*/banner-$image
 ||klikpositif.com^*/banner/
@@ -4247,7 +4233,6 @@ _iklan$image,domain=sorotmakassar.com
 ||kumpulblogger.com/tl_*.php?uid=
 ||kupastuntas.co/uploads/banner/$image
 ||kxcdn.com/assets/*-ads-$image
-||laduni.id^*/banner/$image
 ||lampungmandiri.id^*/iklan-$image
 ||lenterapendidikan.com/assets/img/loader.jpg$image
 ||lenterapendidikan.com^*/banner/$image
@@ -4256,7 +4241,6 @@ _iklan$image,domain=sorotmakassar.com
 ||lintasperistiwa.com^*/banner-$image
 ||lintasperistiwa.com^*/iklan_$image
 ||lintastungkal.com^*/banner-$image
-||lokadata.id/images/banner_$image
 ||lomboktoday.co.id^*/iklan-$image
 ||lutim-news.com^*/iklan-$image
 ||malang-post.com/asset/foto_banner/$image
@@ -4265,7 +4249,6 @@ _iklan$image,domain=sorotmakassar.com
 ||manadotempo.com^*/banner-$image
 ||manadoxpress.com/foto_banner/$image
 ||mandiripos.com^*/banner-$image
-||markey.id^*/banner*.$image
 ||matangdream.com^*/banner.$image
 ||matasulsel.com^*/banner-$image
 ||mattanews.co^*/banner-$image
@@ -4287,14 +4270,11 @@ _iklan$image,domain=sorotmakassar.com
 ||mimbarpublik.com^*/banner-$image
 ||minangsatu.com/banner/$image
 ||modusaceh.co/files/sewaan/$image
-||moi.or.id/images/banners/$image
 ||mongondow.co^*/benner_$image
 ||moralriau.com^*/banner-$image
-||muslim.or.id^*/banner-$image
 ||newrevive.detik.com^
 ||newsbalikpapan.com^*/banner-$image
 ||ngalam.co^*/banner-$image
-||ngopibareng.id^*/banner_$image
 ||ngopibareng.id^*/iklan_$image
 ||nusabali.com/super_images/*.gif$image
 ||nusadaily.com^*-banner-$image
@@ -4307,19 +4287,15 @@ _iklan$image,domain=sorotmakassar.com
 ||papuatoday.com^*/banner-$image
 ||pelitariau.com/assets/banner/$image
 ||prfmnews.com/images/*.gif$image
-||progresnews.id^*/sponsor-$image
 ||prokal.co^*/banner/$image
 ||prokepri.com^*/banner-$image
 ||protapriau.com^*/banner-$image
 ||protapriau.com^*/bnner-$image
 ||pulausumbawanews.net^*/banner-$image
 ||pulausumbawanews.net^*/iklan-$image
-||qazwa.id^*/web-banner-$image
 ||radarbanyumas.co.id^*/online_radar_$image
 ||radarlombok.co.id^*/iklan-$image
-||radarmalang.id^*/banner-$image
 ||radarmalang.id^*/skin-ads-$image
-||radarpekalongan.co.id^*/banner-$image
 ||radartanggamus.co.id^*/iklan-$image
 ||radartegal.com^*/banner-$image
 ||rajabacklink.com/tm_images/banneraff/$image
@@ -4333,14 +4309,10 @@ _iklan$image,domain=sorotmakassar.com
 ||riauin.com/assets/banner/$image
 ||riaulink.com/assets/banner/$image
 ||riaumandiri.co/assets/banner/$image
-||riaumandiri.id/assets/banner/$image
 ||riauonline.co.id//ads/$image
 ||riaupos.co/banner/$image
-||rmco.id/images/banner/$image
 ||rmol.co/banner/$image
-||rri.co.id^*/banner/$image
 ||safelinku.com/728x20.$third-party,image
-||samuderakepri.co.id^*/banner-$image
 ||satuharapan.com^*/banners/$image
 ||satuharapan.com^*/tx_macinabanners/$image
 ||sekilasindonesia.id^*/iklan-$image
@@ -4353,7 +4325,6 @@ _iklan$image,domain=sorotmakassar.com
 ||speednews-manado.com^*/iklan-$image
 ||spiritsumbar.com^*/iklan-$image
 ||suarabantennews.com^*/ads-$image
-||suarabekasi.id^*/banner-$image
 ||suarabojonegoro.com^*/ademos-$image
 ||suarakahayannews.com^*/barner-$image
 ||suaramasyarakatindonesia.com^*/banner-$image
@@ -4372,7 +4343,6 @@ _iklan$image,domain=sorotmakassar.com
 ||sumselnian.com/media/banner/$image
 ||tangerang7.com^*/banner-$image
 ||tangerangnews.com^*/banner/$image
-||techfor.id^*/banner-$image
 ||teropongsenayan.com/banner/$image
 ||teropongsenayan.com^*/banner/$image
 ||teropongsulut.com^*/iklan-$image
@@ -4386,12 +4356,8 @@ _iklan$image,domain=sorotmakassar.com
 ||tribuanapos.net^*/iklan-$image
 ||tuntasonline.com^*/promotion/$image
 ||urbanasia.com/images/banner/$image
-||uzone.id^*/banner-$image
-||validnews.id/assets/img/banner/$image
-||valora.co.id^*/banner/$image
 ||visitjateng.com^*/banner/$image
 ||waralabakan.com^*/banner/$image
-||wartaekonomi.co.id^*/online_banner/$image
 ||wartapati.com^*_ads.$image
 ||waspadaaceh.com^*/iklan_
 ||wawasanriau.com/assets/banner/$image
@@ -4493,6 +4459,7 @@ ayobekasi.net,ayobogor.com,ayocirebon.com,ayopurwakarta.com,ayosurabaya.com,ayot
 faktabanten.co.id,seruji.co.id###fixedban
 kontan.co.id###fixslowshow
 carapedia.com###floating-banner
+kendaripos.co.id###foot-ad-wrap
 apahabar.com,katasulsel.com,lintastungkal.com,mediasinergi.co,sawerigading-news.com###header-banner
 gadgetren.com###header-native-ad
 goblintvfree.com###izlemac-yayin > div.embed-responsive
@@ -5825,18 +5792,12 @@ jakselnews-pikiran--rakyat-com.cdn.ampproject.org##center:has-text(Adv)
 ||139.99.33.248^$third-party
 ||139.99.33.249^$third-party
 ||166.62.7.206^$third-party
-||agenjudionline.^$third-party
 ||bbm88.org^$third-party
 ||bokep8.icu^$third-party,image
-||bolagalaxy.org^$third-party
 ||bosqq.online^$third-party
 ||caramenangtaruhanbola.com^$third-party
 ||cmcpoker.info^$third-party
 ||gebyarbola.org^$third-party
-||hanabet.*^$third-party
-||qqjelas.*^$third-party
-||rajacapsa.*^$third-party
-||rajaqq.*^$third-party
 ||imgur.com/PptFxqt.$image
 /*capsa*.gif$image
 /*judi*.gif$image
@@ -5854,7 +5815,6 @@ jakselnews-pikiran--rakyat-com.cdn.ampproject.org##center:has-text(Adv)
 -dewatangkas-$image
 -ezykasino.$image
 -freebet-bonus-$image
--hokicapsa-$image
 -hokiqq-$image
 -idnpoker-$image
 -indopokerlink-$image
@@ -8978,7 +8938,6 @@ _topbandar_$image
 ##[href*="gentingpoker."]
 ##[href*="gerandong."]
 ##[href*="gerhanaqq" i]
-##[href*="gettradr.com"]
 ##[href*="gftoto."]
 ##[href*="giatbola."]
 ##[href*="gilapoker."]
@@ -11778,11 +11737,6 @@ _topbandar_$image
 ##[href*="covelign.com/568Y"]
 ##[href*="cutt.ly/Xm1zzrY"]
 ##[href*="dapalan.com/F41I"]
-##[href*="dir.ect.link/doimovie"]
-##[href*="dir.ect.link/iboanoboy"]
-##[href*="dir.ect.link/idksanoboy"]
-##[href*="dir.ect.link/kokiano"]
-##[href*="dir.ect.link/mangaku"]
 ##[href*="directme.info/3aRwIOF"]
 ##[href*="directme.info/duniaibo"]
 ##[href*="directme.link/anoboyidks"]
@@ -11988,6 +11942,7 @@ _topbandar_$image
 ##[href*="/69.16.199.61/"]
 ##[href*="/69.16.212.90/"]
 ##[href*="/69.16.213.84/"]
+##[href*="/69.16.215.12/"]
 ##[href*="/69.16.215.93/"]
 ##[href*="/69.167.167.169"]
 ##[href*="/69.61.38.140"]
@@ -12458,7 +12413,7 @@ inonton.com###fadeinbox
 158.69.0.201,167.114.3.50,185.63.253.222,51.222.99.98,51.79.157.150,51.79.157.90,51.79.159.65,51.79.160.87,51.79.226.152,51.79.244.19,54.39.169.27,cinemaindo.watch,d21.top,ditonton.biz,ditonton.com,ditonton.net,khaanflix.org,onestopmovie.com,onestopmovie.link,onestopmovie.net,terbit21.click,terbit21.cool,terbit21.fun,terbit21.show,terbit21.win###float-banner
 158.69.0.201,51.222.99.98,51.79.157.150,51.79.160.87###float-bottom-banner
 139.99.61.225###floatbanner-bottom
-142.4.222.52,149.28.158.117,54.39.85.90,95.216.163.177,anichin.my.id,anikor.id###floatcenter
+142.4.222.52,149.28.158.117,54.39.85.90,95.216.163.177,anichin.my.id###floatcenter
 inonton.com###floating_banner_top
 144.91.116.224,144.91.98.14,185.63.253.247###floating_banner_top1
 mangaku.cc,mangaku.pro###ftadsth
@@ -12471,7 +12426,7 @@ ahanime.com###overplay
 topfilm21.com###pop-tengah
 158.69.0.201,167.114.3.50,185.63.253.222,51.222.99.98,51.79.157.150,terbit21.click,terbit21.cool,terbit21.fun###ptbanner
 blackavelic.com###teaser2
-142.4.222.52,95.216.163.177,anikor.id,awsubs.co,blackavelic.com###teaser3
+142.4.222.52,95.216.163.177,awsubs.co,blackavelic.com###teaser3
 172.96.189.133,172.96.189.146###tengah
 158.69.0.201,167.114.3.50,51.222.99.98,51.79.157.150,51.79.159.65,51.79.244.19,serialdrakor.com,terbit21.click,terbit21.cool,terbit21.fun###top-banner
 199.231.164.17###top_banner
@@ -12608,7 +12563,7 @@ mangapor.com#%#//scriptlet('ubo-acis.js', 'disable_copy')
 ##[href*="ref=serialdrakor"]
 leafpro.website#%#//scriptlet('ubo-acis.js', 'addEventListener', 'DOMNodeRemoved')
 belinfo.my.id#%#//scriptlet('ubo-acis.js', 'addEventListener', 'google_ad_client')
-adikhealth.xyz,cararoot.id,duit.cc,liveshootv.com,mangindo.xyz,miuiku.com,safeku.com,sekilastekno.com,sportif.id#%#//scriptlet('ubo-acis.js', 'eval', 'ignielAdBlock')
+adikhealth.xyz,duit.cc,liveshootv.com,mangindo.xyz,miuiku.com,safeku.com,sekilastekno.com,sportif.id#%#//scriptlet('ubo-acis.js', 'eval', 'ignielAdBlock')
 fc.lc,nurhamka.com,rikucan.com#%#//scriptlet('ubo-aopr.js', 'adBlockDetected')
 apamanfaat.id#%#//scriptlet('ubo-aopr.js', 'anOptions', 'anOptionAdsSelectors')
 adsafelink.com,dz4link.com,fotodovana.com,lewat.club,petsched.website,sekilastekno.com,shrinkme.in,stfly.io,viral-topics.com#%#//scriptlet('ubo-aopr.js', 'app_vars.force_disable_adblock')
@@ -12648,7 +12603,7 @@ earnload.co,fodz.xyz,glory-link.com,gpmojo.co,memoo.xyz,shortearn.eu,shorten.sh,
 itsafelink.com,loncatin.keneono.site,safe-your-url.blogspot.com,safejobsbos.blogspot.com#@##adsense
 gilakerja.com#@##advert1
 earnload.co,fodz.xyz,glory-link.com,gpmojo.co,memoo.xyz,shortearn.eu,shorten.sh,sportt.space#@#.ad-banner
-cararoot.id,liveshootv.com,sekilastekno.com###ignielAdBlock
+liveshootv.com,sekilastekno.com###ignielAdBlock
 intercelestial.com,linegee.net,sweetlantern.com###externalinject-gpt-passback-container
 intercelestial.com,linegee.net,sweetlantern.com###externalinject-gpt-passback-iframe
 hexafile.net,link.kangapip.com,proapkmod.com##.adsbygoogle
@@ -12791,12 +12746,10 @@ asuransiku.info##.klnsora
 semawur.com##[href*="semawur.com/links/share/"]
 modebaca.com##[href*="tautan.pro"]
 safe-your-url.blogspot.com##[href^="http://www.safelinkconverter.com"]
-cararoot.id##img[border="0"][src*="blogspot.com"]
 ceesty.com#%#//scriptlet('ubo-set.js', 'app.options.timerPageVisibilityChecking', 'false')
-apk.miuiku.com,cararoot.id,encurta.eu,get4link.xyz,icutlink.com,lewat.club,liveshootv.com,luangusaha.com,modebaca.com,oceantech.xyz,onlinecorp.me,p4link.com,sekilastekno.com,semawur.com,stfly.io#%#//scriptlet('ubo-set.js', 'blurred', 'false')
-ironimesafelink.my.id#%#//scriptlet('ubo-acis.js', 'Math', 'zfgloaded')
+apk.miuiku.com,encurta.eu,get4link.xyz,icutlink.com,lewat.club,liveshootv.com,luangusaha.com,modebaca.com,oceantech.xyz,onlinecorp.me,p4link.com,sekilastekno.com,semawur.com,stfly.io#%#//scriptlet('ubo-set.js', 'blurred', 'false')
 belinfo.my.id#%#//scriptlet('ubo-ra.js', 'onclick', '[onclick*="window.open"]')
-apk.miuiku.com,cararoot.id,ceesty.com,earnload.co,lewat.club,liveshootv.com,luangusaha.com,modebaca.com,oceantech.xyz,onlinecorp.me,p4link.com,sekilastekno.com,semawur.com,shortearn.eu,shorten.sh#%#//scriptlet('ubo-window.open-defuser.js')
+apk.miuiku.com,ceesty.com,earnload.co,lewat.club,liveshootv.com,luangusaha.com,modebaca.com,oceantech.xyz,onlinecorp.me,p4link.com,sekilastekno.com,semawur.com,shortearn.eu,shorten.sh#%#//scriptlet('ubo-window.open-defuser.js')
 fotodovana.com,get4link.xyz,luangusaha.com,oceantech.xyz,p4link.com##.blog-item
 fedaro.me##.btn-danger
 uiz.io##.btn-front:has-text(Download)
@@ -12809,7 +12762,7 @@ petsched.website##button[onclick="myfunction();"]
 onlinecorp.me,sekilastekno.com,sportif.id##img[width="200"][height="60"]
 $popup,domain=icutlink.com|lewat.club
 $third-party,subdocument,domain=glory-link.com
-/download-now-$image,domain=cararoot.id|lewat.club|sekilastekno.com
+/download-now-$image,domain=lewat.club|sekilastekno.com
 /download-now.$image,domain=icutlink.com
 /download3.$image,domain=link48.net|semawur.com
 /download_$image,domain=asuransiku.info
@@ -12854,7 +12807,7 @@ cikimm.com,isrul.com#%#//scriptlet('ubo-aopr.js', 'mql')
 saungfirmware.id#%#//scriptlet('ubo-aopr.js', 'short_url_app_vars.force_disable_adblock')
 labkom.co.id#%#//scriptlet('ubo-aopr.js', 'tdBlock')
 saungfirmware.id#%#//scriptlet('ubo-nano-sib.js')
-akbardwi.my.id,jagoanssh.com,linkconfig.com,nafaskuda.com,sihentai.my.id#%#//scriptlet('ubo-nobab.js')
+jagoanssh.com,linkconfig.com,nafaskuda.com,sihentai.my.id#%#//scriptlet('ubo-nobab.js')
 rukim.id,surgatekno.com#%#//scriptlet('ubo-nofab.js')
 menantisenja.com#%#//scriptlet('ubo-set.js', 'adblock', '1')
 selebsquad.com#%#//scriptlet('ubo-set.js', 'config.adblock', 'null')
