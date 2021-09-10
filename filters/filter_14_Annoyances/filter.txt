@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/93107
+allconnect.com#?#main section.h-break-container:has(> div.container p.text-gray-steel > a[href="/advertising-disclosure"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92826
 inc42.com#?##secondary > div.widget:has(> div.textwidget > div.recommendation-side)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92719
@@ -4521,7 +4523,7 @@ modelist-konstruktor.com,smopo.ch##.widget_newsletterwidgetminimal
 dealdoktor.de##.widget_tmx-dd-newsletter-widget
 bowandtie.ru,realnyezarabotki.com##.widget_wysija
 telecomtalk.info,te4h.ru,technoclever.com##.wp-subscribe
-gurkanbilgisu.com,losst.ru,shareappscrack.com,techonation.com##.wp_subscribe
+bestcouponhunter.com,gurkanbilgisu.com,losst.ru,shareappscrack.com,techonation.com##.wp_subscribe
 libertyunyielding.com##.wpdev-newsletter-signup
 giveawayoftheday.com##.wrap_subscrb
 tvernews.ru##.y_dzen
@@ -14181,7 +14183,7 @@ codemasters.com,dirt4game.com###codemasters_cookies
 nokiantyres.com.tr,kondis.no###coiConsentBanner
 isbank.co.uk,maximiles.com.tr,isbank.com.tr###cokieCover
 stadtfeste-in-deutschland.de###cono
-katho-nrw.de,fiyatgrafik.com,gartenprofi.net,alibre.info,fisglobal.com,delamar.de,gnosis.io,anyclip.com,manybooks.net,cardzmania.com,netzwelt.de,antarestech.com,nperf.com,notebookinfo.de,telefuel.com,alarabiya.net,dijnet.hu###consent
+editpad.org,katho-nrw.de,fiyatgrafik.com,gartenprofi.net,alibre.info,fisglobal.com,delamar.de,gnosis.io,anyclip.com,manybooks.net,cardzmania.com,netzwelt.de,antarestech.com,nperf.com,notebookinfo.de,telefuel.com,alarabiya.net,dijnet.hu###consent
 youtube.com###consent-bump
 revouninstaller.com###consentAccepted
 ebay-kleinanzeigen.de,mobile.de,nordic.businessinsider.com###consentBanner
@@ -21122,6 +21124,11 @@ sodapdf.com##.be-tooltip
 !
 ! Specific sites
 !
+actcorp.in#$##cityModal { display: none !important; }
+actcorp.in#$#.modal-backdrop { display: none !important; }
+actcorp.in#$#body[class*="modal-open"] { overflow: auto !important; }
+khanacademy.org##div[data-test-id="hack-ignore-focusable-not-visible-test"]
+salesforce.com##c-hc-welcome-popup
 freelancer.hk###fixed-banner
 tecmint.com##.top-bar
 expres.online###paywall-notification
