@@ -1,7 +1,7 @@
 !
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! OriginalVersion: 09September2021v1
+! OriginalVersion: 15September2021v2
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -197,8 +197,6 @@ mobilsiden.dk##.content-widget-HTML
 momondo.*##.type-provider.clearfix.flights
 musikknyheter.no##.spklw-widget
 nakenprat.com#%#//scriptlet('ubo-aopr.js', 'document.dispatchEvent')
-nettavisen.no##.optimus-complex-front
-nettavisen.no##.rel-article
 nettavisen.no##[param-editionid=reklame]
 ni.dk#?#.color-scheme-1:has-text(/Casino/i)
 ni.dk#?#.color-scheme-1:has-text(/Casino/i) + div
@@ -1451,6 +1449,7 @@ bvbnorge.no##.wsite-spacer
 bvbnorge.no#?#.wsite-multicol-col:has(> .wsite-spacer)
 nickelodeon.no##div[class=ad-container]
 klikk.no,blogg.no##div[class^="ad-container "]
+vg.no##div[class$=" ad-container"]
 apningstider.org##.header_middle
 apningstider.org##div[id^=google_ad_]
 apningstider.org##.block_w3 + .block_w3
@@ -2261,13 +2260,11 @@ sofabold.dk##.centerMgfx
 !#if env_mobile
 !#endif
 !
-!#if env_chromium
-!#if env_safari
+!#if !env_firefox
 !+ NOT_OPTIMIZED
 ! OriginalVersion: 21July2021v1-Extension
 fla.de###top-banner
 fla.de##.index-banner
-!#endif
 !#endif
 ! 🇳🇴: ——— Vindusviskere for betalte artikler (sånn at de nederste linjene i en forhåndsvisning ikke toner ut) ———
 ! Takk til THEtomaso (https://github.com/THEtomaso) for de fleste av disse oppføringene.
