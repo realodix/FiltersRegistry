@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/94334
+heise.de##.sidebar-deal
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93378
 securitymagazine.com##.sponsored-content-widget
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93118
@@ -2195,6 +2197,8 @@ quinhillyer.com,johnbiver.com,jasonmattera.com,ipatriot.com,hooligancharters.com
 ##.widget_blog_subscription
 ~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+heise.de##.article-newsletter-subscription
+heise.de#?#.article-body > .article-body > .row > .col-sm-4:has(> .downloads-container form[action^="https://www.heise.de/newsletter/"])
 warc.com##.get-daily-news
 spicyip.com##.subscribe_form_div
 theaggie.org##a[title="Subscribe to our e-newsletter"]
@@ -5514,7 +5518,7 @@ digilibraries.com#%#//scriptlet("set-constant", "detect", "undefined")
 aadvantageeshopping.com##.mn_adBlockWarning
 @@||bwitter.me/assets/google-adsense.js
 bwitter.me#?##side > ins.adsbygoogle:upward(1)
-serieslyawesome.tv##body .test-adblock-overlay:not(#style_important)
+der-postillon.com,serieslyawesome.tv##body .test-adblock-overlay:not(#style_important)
 garrysmods.org#$#body { overflow: auto !important; }
 garrysmods.org#$#.jquery-modal.blocker { display: none !important; }
 baumarkt-tracker.de###runa-notif
@@ -9774,6 +9778,7 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+||pdf-archive.com/js/consent.js
 ibo.org##.CookieChecker
 cordis.europa.eu##app-cookies-consent
 op.europa.eu##.customCookie
@@ -27702,6 +27707,7 @@ experts-exchange.com##.ctaSolutionStickyWrapper
 theguardian.com##.contributions__adblock
 ||contributions.guardianapis.com^
 !
+zerkalo.io##script[src="https://s1r.zerkalo.io/api?rev=r0~r0~r0~r0"] + div[class^="news-section-"]
 webfx.com##.seo-checker-sidebar-form
 contentkingapp.com##div[data-testid="onboarding-box"]
 contentkingapp.com##div[data-testid="action-sidebar-box"]
