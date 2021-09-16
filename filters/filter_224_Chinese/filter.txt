@@ -746,6 +746,8 @@ nfmovies.com#$#a[onclick*="openurl"][target="_blank"] img[src^="/static/"] { pos
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/94617
+o8tv.com#?#.container > .row > .myui-panel-bg:has(> .myui-panel-box > .myui-panel_bd > .col-xs-1 > a[target="_blank"] > img)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94251
 rjno1.com#?#.post > div[class^="ivo"] > .adsbygoogle:upward(1)
 rjno1.com#?#.site-main > div[class^="ivo"]:has(.adsbygoogle)
@@ -839,6 +841,8 @@ csdn.net#?##feedlist_id > li:has(> div[id^="kp_box_"])
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/94617
+o8tv.com#%#//scriptlet("abort-current-inline-script", "document.write", "tips")
 ! popup
 xvideo.cc#%#//scriptlet("set-constant", "poped", "true")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91356
@@ -1089,6 +1093,8 @@ $script,xmlhttprequest,third-party,domain=00ksw.com|01zww.com|0biquge.com|114zw.
 !
 !
 !
+o8tv.com##.myui-panel_bd > .col-xs-1 > a[target="_blank"] > img
+o8tv.com##a[href^="https://c.madeqr.com/"][target="_blank"] > img
 beauty321.com##.pc_ads
 ||img.lancdn.com/*-top-banner-
 nownews.com##div[class^="ad-blk"]
@@ -2172,6 +2178,7 @@ nfmovies.com#@?#div[id]:-abp-has(>img[onclick="openurl()"])
 -1688-wp-media/ads/
 -880-80-4.jpg
 -90mh-gg.
+/js/sjgg.js
 .bid/ads/
 .blog/ads/
 .cam/ads/
@@ -3500,6 +3507,8 @@ _xiuno_com_ad/
 ##script[src="/templates/frontend/frontend-jiucao/js/jquery.lazyload.min.js"] + .footer_app_box
 ##span[title="neteasefooter"]
 ##style + .vdgdo
+##A[href*=".5599722.com"]
+##A[href*=".d2mzb.com"]
 ##table[style="border:#7D8C8E solid 1px;height: 30px;text-align: center;"]
 .8ox.cn
 .cc/s.php?id=$script,third-party
