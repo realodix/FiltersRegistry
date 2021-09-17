@@ -5303,6 +5303,7 @@ slate.com#@#.ad-container
 !######### General element hiding rules ################
 !#######################################################
 !
+##.radioplayer-cookie-consent
 ###redim-cookiehint-modal
 ##.js-consent-banner
 ##.waconcookiemanagement
@@ -7252,6 +7253,9 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+kicker.de##div[id^="cmpbox"]
+awwwards.com#$##lightbox-cookies { display: none !important; }
+awwwards.com#$#body[class*="hidden"] { overflow-y: auto !important; }
 gbif.org###termsOfUse
 aeroespacial.sener###cookies_yb
 stuttgart-netze.de##.react--module__cookies
@@ -13293,7 +13297,6 @@ lieferando.de,lieferservice.at,lieferservice.ch,pizza.fr,pizza.lu,pizza.pt,pyszn
 tommy.com##.privacypolicymessagebox_header_cookies
 obozrevatel.com##.privasypolicy-info
 etstur.com,mngkargo.com.tr##.protectionOfData
-player.addradio.de,radioerft.de,radiosauerland.de,radioessen.de,radiobochum.de,radioenneperuhr.de,radiokw.de,radiobonn.de,radioemscherlippe.de,antenneunna.de,radioduisburg.de,webradio.hitradio-rtl.de,webradio.radioleipzig.de,radiorur.de,radiomuelheim.de,radiooberhausen.de,radioherne.de,radio-galaxy.com,radiovest.de,radiohagen.de,saw-musikwelt.de,radiotop40.de,radioeuskirchen.de,webradio.radiodresden.de,webradio.radiochemnitz.de,antenne1-neckarburg.de,webradio.radiozwickau.de,webradio.apolloradio.de,radiotop40.de,radiorsg.de,antennethueringen.de,antennemuenster.de,radiokoeln.de,radiosiegen.de,radio912.de,charivari.de,planetradio.de,player.ffn.de##.radioplayer-cookie-consent
 evokemotorcycles.com,realspeaker.net##.s-cookie-notification-bar
 forsvarsmakten.se##.s-cookies
 sport1.de###s1-cookie-banner
@@ -14903,10 +14906,19 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !#######################################################
 !
 ! @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js
-@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=vanityfair.com|saarbruecker-zeitung.de|olympics.com|dziendobry.tvn.pl|bergfreunde.de|oe24.at|epicgames.com|toteraz.pl|natgeotv.com|midomi.com|bethesda.net|volksfreund.de|kawasaki.com|foxchannels.com.tr|ga.de|shop.mango.com|kralmuzik.com.tr|westernunion.com|roastmarket.de|new.cappex.com|vimeo.com|heute.at|ntv.com.tr|wargaming.net|metacritic.com|gq-magazine.co.uk|viafree.dk|viafree.fi|viafree.no|viafree.se|glamour.de|cbsnews.com|worldoftanks.ru|vg247.com|newyorker.com
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=spiele.bild.de|spiele.stern.de|vanityfair.com|saarbruecker-zeitung.de|olympics.com|dziendobry.tvn.pl|bergfreunde.de|oe24.at|epicgames.com|toteraz.pl|natgeotv.com|midomi.com|bethesda.net|volksfreund.de|kawasaki.com|foxchannels.com.tr|ga.de|shop.mango.com|kralmuzik.com.tr|westernunion.com|roastmarket.de|new.cappex.com|vimeo.com|heute.at|ntv.com.tr|wargaming.net|metacritic.com|gq-magazine.co.uk|viafree.dk|viafree.fi|viafree.no|viafree.se|glamour.de|cbsnews.com|worldoftanks.ru|vg247.com|newyorker.com
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/94488
-@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=spiele.bild.de|spiele.stern.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/94962
+@@||sourcepoint.mgr.consensu.org/tcfv2/vendor-list/*$domain=bz-berlin.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/94990
+@@||cdn.consentmanager.mgr.consensu.org/delivery/cmp_de.min.js$domain=kicker.de
+@@||consentmanager.mgr.consensu.org/delivery/cmp.php$domain=kicker.de
+@@||cdn.consentmanager.mgr.consensu.org/delivery/customdata/*$domain=kicker.de
+! https://github.com/AdguardTeam/AdguardFilters/issues/93801
+awwwards.com#@#.box-cookies
+awwwards.com#@##cookies-info
+! https://github.com/AdguardTeam/AdguardFilters/issues/94989
+@@||golem.de/news^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94491
 @@||consent.cookiebot.com^$domain=koeln.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94381
@@ -18686,10 +18698,9 @@ sodapdf.com##.be-tooltip
 ! Specific sites
 !######### Subscription popups add to subscriptions.txt #########
 !
+awwwards.com##.box-recommended
 onlinecourses.ooo#%#//scriptlet("set-constant", "wp_subscribe_popup", "noopFunc")
 google.*#$#div[data-msau^="https://consent.google.com/minor-save?continue"] { display: none !important; }
-google.*#$##lb { display: none !important; }
-google.*#$#body { overflow: visible !important; position: absolute !important; }
 behance.net##div[class*="SignUpPrompt-popup-"]
 greeninfo.ru##.StickySubscribe
 m.progorod43.ru##.top-bar
@@ -25225,6 +25236,7 @@ experts-exchange.com##.ctaSolutionStickyWrapper
 theguardian.com##.contributions__adblock
 ||contributions.guardianapis.com^
 !
+clipchamp.com#?#header + article > div[class^="sc-"] > div[class] > div[class] > a[href^="https://app.clipchamp.com/"]:upward(1)
 101.ru##a[href="/ads_disable"]
 buscape.com.br#?#ul[class^="Hits_SearchResultList__"] > li[class^="Hits_SearchResultListItem__"]:has(em[data-analytics-element="sponsored"])
 cloud.mail.ru##div[data-qa-tooltip="promotip"]
@@ -25875,6 +25887,8 @@ quinhillyer.com,johnbiver.com,jasonmattera.com,ipatriot.com,hooligancharters.com
 ##.widget_blog_subscription
 ~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+coolztricks.com#?#.inside-right-sidebar > aside.widget_text:has(> div.textwidget a[href="http://telegram.im/icoolztricks"])
+coolztricks.com##.telegraph
 javarevisited.blogspot.com#?#.sidebar > div.widget > div.widget-content > form.gumroad-follow-form-embed:upward(div.widget)
 atlasvpn.com##.typeform-widget
 laravel-news.com##div[class="lg:gap-16 sm:gap-8 grid grid-cols-12 col-span-10 col-start-2 gap-6"] > div.text-gray-500.bg-white
