@@ -2277,6 +2277,8 @@ amateurbusters.com#?#.sb_area > .sb_area_headline:contains(Urlaub)
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! blick.ch - video ads
+blick.ch#%#//scriptlet("set-constant", "Object.prototype.adsEnabled", "false")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94882
 gamestar.de#%#//scriptlet("set-constant", "wgm.initAds", "noopFunc")
 gamestar.de#%#(function(){var a={cmd:[],"public":{getVideoAdUrl:function(){},createNewPosition:function(){},refreshAds:function(){}}};a.cmd.push=function(b){try{b()}catch(c){}};window.jad=a})();
@@ -5227,6 +5229,8 @@ config.player.p7s1.io/prosieben-de.js$replace=/"adScheduler":\{"cobra":\{"advert
 ! wetter.com has different script than websites above
 /\:\/\/config-vvs\.glomex\.com\/[a-z0-9]*\.js/$replace=/"adScheduler"\:/"adScheduler":\{"cobra":\{\}\}\,"x":/,domain=wetter.com
 !
+! blick.ch - video ads
+||ssaimanifest.prod.boltdns.net/playback/once/v*/vmap/hls/$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,domain=blick.ch
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93347
 ||zomap.de^$replace=/(<VAST[\s\S]*?>)[\s\S]*<\/VAST>/\$1<\/VAST>/,xmlhttprequest,domain=joyn.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65811
