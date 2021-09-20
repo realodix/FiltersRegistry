@@ -605,6 +605,10 @@ jeuxvideo.com#?#.list-actu-home > li[-ext-has='span.officiel']
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/95087
+dl-protect.info#%#//scriptlet("prevent-setInterval", "var _0x")
+! https://github.com/AdguardTeam/AdguardFilters/issues/95088
+wawacity.one#%#//scriptlet("prevent-setInterval", "var _0x")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91892
 zoneseries.stream#%#//scriptlet("adjust-setTimeout", "#regarder", "7000", "0.02")
 ! https://github.com/easylist/listefr/issues/16
@@ -702,6 +706,9 @@ laprovence.com$$script[wildcard="*((false?*https:*:document.location.protocol)+*
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+dl-protect.info##.blkad
+||dl-protect.info/170921.js
+||wawacity.one/170921.js
 ||core.unit-sense.net/app-booter?slotId=
 zustream.org###plyb
 zustream.org###contenedor > div[class] > a[target="_blank"]
@@ -1002,6 +1009,8 @@ lesfrontaliers.lu##.ad-listing
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/95087
+@@||uptostream.com^$csp=worker-src 'none'
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93910
 otomoto.pl#@#div[data-ad-id]
 ! userload.co - incorrect blocking
