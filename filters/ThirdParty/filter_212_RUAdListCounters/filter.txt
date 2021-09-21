@@ -1,8 +1,8 @@
 !
-! Checksum: 0ulPVrXFji3iajoCdJkFiA
-! OriginalVersion: 202109190050
+! Checksum: /uVThTl0A2mZfRiC79N6vQ
+! OriginalVersion: 202109211650
 ! Title: RU AdList: Counters
-! Last modified: 19 Sep 2021 00:50 UTC
+! Last modified: 21 Sep 2021 16:50 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -776,6 +776,7 @@ _pagespeed_beacon?
 ||trendstat.ru^$third-party
 ||triggertag.gorillanation.com^$third-party
 ||triks.info^$third-party
+||trk.mail.ru^$image,ping,script,xmlhttprequest
 ||trk.olnl.net^$third-party
 ||trustcommander.net/privacy/
 ||try.abtasty.com^$third-party
@@ -986,7 +987,9 @@ razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/defau
 razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[class][style^="top: "] ~ div[class]:not([style]) { right: -100% !important }
 razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[style*="px;"] { width: 100% !important }
 razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] { width: 100% !important }
+top100.rambler.*##body > div:not([id])[style="position: absolute; z-index: 10000;"]
 www.rambler.*###main > div[class]:not([id]) > :first-child[style]:not(div):not([class]):not([id])
+www.rambler.*##body[style*="position:"] > iframe[src] + div:not([id])
 www.rambler.*##body[style*="position:"] > noscript + div:not([class]):not([id])
 www.rambler.*##body[style*="position:"] > script[src] + div:not([id])
 zannn.top#@?#:not(this-is-a-malicious-site)

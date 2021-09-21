@@ -160,6 +160,22 @@ wired.com##+js(cookie-remover, /^/)
 womenshealthmag.com##+js(cookie-remover, /^/)
 ! Rule "foxnews.com,foxbusiness.com,thehill.com##+js(acis, JSON.stringify, instanceof)" converted to: "foxnews.com,foxbusiness.com,thehill.com#%#//scriptlet('ubo-acis.js', 'JSON.stringify', 'instanceof')"
 foxnews.com,foxbusiness.com,thehill.com##+js(acis, JSON.stringify, instanceof)
+! Rule "twitch.tv##+js(json-prune, /^(?X-TV-TWITCH-AD)$/)" converted to: "twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^(?X-TV-TWITCH-AD)$/')"
+twitch.tv##+js(json-prune, /^(?X-TV-TWITCH-AD)$/)
+! Rule "twitch.tv##+js(json-prune, /^(?X-TV-TWITCH-AD.*)$/)" converted to: "twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^(?X-TV-TWITCH-AD.*)$/')"
+twitch.tv##+js(json-prune, /^(?X-TV-TWITCH-AD.*)$/)
+! Rule "twitch.tv##+js(json-prune, /^(X-TV-TWITCH-AD)$/)" converted to: "twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^(X-TV-TWITCH-AD)$/')"
+twitch.tv##+js(json-prune, /^(X-TV-TWITCH-AD)$/)
+! Rule "twitch.tv##+js(json-prune, /^X-TV-TWITCH-AD.*/)" converted to: "twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^X-TV-TWITCH-AD.*/')"
+twitch.tv##+js(json-prune, /^X-TV-TWITCH-AD.*/)
+! Rule "twitch.tv##+js(json-prune, /^X-TV-TWITCH-AD/)" converted to: "twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^X-TV-TWITCH-AD/')"
+twitch.tv##+js(json-prune, /^X-TV-TWITCH-AD/)
+! Rule "twitch.tv##+js(json-prune, /^X-TV-TWITCH-AD/)" converted to: "twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^X-TV-TWITCH-AD/')"
+twitch.tv##+js(json-prune, /^X-TV-TWITCH-AD/)
+! Rule "twitch.tv##+js(json-prune, X-TV-TWITCH-AD-AD-FORMAT)" converted to: "twitch.tv#%#//scriptlet('ubo-json-prune.js', 'X-TV-TWITCH-AD-AD-FORMAT')"
+twitch.tv##+js(json-prune, X-TV-TWITCH-AD-AD-FORMAT)
+! Rule "twitch.tv##+js(json-prune, X-TV-TWITCH-AD-ROLL-TYPE)" converted to: "twitch.tv#%#//scriptlet('ubo-json-prune.js', 'X-TV-TWITCH-AD-ROLL-TYPE')"
+twitch.tv##+js(json-prune, X-TV-TWITCH-AD-ROLL-TYPE)
 ! Rule "reddit.com##+js(acis, addScript)" converted to: "reddit.com#%#//scriptlet('ubo-acis.js', 'addScript')"
 reddit.com##+js(acis, addScript)
 ! Rule "reddit.com##+js(acis, adSlots)" converted to: "reddit.com#%#//scriptlet('ubo-acis.js', 'adSlots')"
@@ -326,6 +342,22 @@ wired.com#%#//scriptlet('ubo-cookie-remover.js', '/^/')
 womenshealthmag.com#%#//scriptlet('ubo-cookie-remover.js', '/^/')
 ! foxnews.com,foxbusiness.com,thehill.com#%#//scriptlet('ubo-acis.js', 'JSON.stringify', 'instanceof') is excluded by "#%#//scriptlet" in exclusions-low.txt
 foxnews.com,foxbusiness.com,thehill.com#%#//scriptlet('ubo-acis.js', 'JSON.stringify', 'instanceof')
+! twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^(?X-TV-TWITCH-AD)$/') is excluded by "#%#//scriptlet" in exclusions-low.txt
+twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^(?X-TV-TWITCH-AD)$/')
+! twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^(?X-TV-TWITCH-AD.*)$/') is excluded by "#%#//scriptlet" in exclusions-low.txt
+twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^(?X-TV-TWITCH-AD.*)$/')
+! twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^(X-TV-TWITCH-AD)$/') is excluded by "#%#//scriptlet" in exclusions-low.txt
+twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^(X-TV-TWITCH-AD)$/')
+! twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^X-TV-TWITCH-AD.*/') is excluded by "#%#//scriptlet" in exclusions-low.txt
+twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^X-TV-TWITCH-AD.*/')
+! twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^X-TV-TWITCH-AD/') is excluded by "#%#//scriptlet" in exclusions-low.txt
+twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^X-TV-TWITCH-AD/')
+! twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^X-TV-TWITCH-AD/') is excluded by "#%#//scriptlet" in exclusions-low.txt
+twitch.tv#%#//scriptlet('ubo-json-prune.js', '/^X-TV-TWITCH-AD/')
+! twitch.tv#%#//scriptlet('ubo-json-prune.js', 'X-TV-TWITCH-AD-AD-FORMAT') is excluded by "#%#//scriptlet" in exclusions-low.txt
+twitch.tv#%#//scriptlet('ubo-json-prune.js', 'X-TV-TWITCH-AD-AD-FORMAT')
+! twitch.tv#%#//scriptlet('ubo-json-prune.js', 'X-TV-TWITCH-AD-ROLL-TYPE') is excluded by "#%#//scriptlet" in exclusions-low.txt
+twitch.tv#%#//scriptlet('ubo-json-prune.js', 'X-TV-TWITCH-AD-ROLL-TYPE')
 ! reddit.com#%#//scriptlet('ubo-acis.js', 'addScript') is excluded by "#%#//scriptlet" in exclusions-low.txt
 reddit.com#%#//scriptlet('ubo-acis.js', 'addScript')
 ! reddit.com#%#//scriptlet('ubo-acis.js', 'adSlots') is excluded by "#%#//scriptlet" in exclusions-low.txt

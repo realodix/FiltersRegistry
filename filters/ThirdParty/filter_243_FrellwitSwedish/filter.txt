@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-09-18 18:39:32 CEST
+! Last modified: 2021-09-21 16:08:50 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -45,11 +45,11 @@ accentmagasin.se#%#//scriptlet('ubo-nostif.js', 'n.modal')
 affarsliv.com,affarslivgotland.se,affarsvarlden.se,alekuriren.se,allas.se,arvikanyheter.se,baaam.se,babyhjalp.se,barometern.se,blt.se,bt.se,byrum.se,cafe.se,corren.se,dalslanningen.se,ekuriren.se,elle.se,eposten.se,expressen.se,femina.se,filipstadstidning.se,folkbladet.se,fragbite.se,frida.se,fryksdalsbygden.se,golfing.se,goteborgdirekt.se,gotland.net,gotlandjustnu.se,hant.se,helagotland.se,hjotidning.se,ibnytt.se,karlskogatidning.se,kindaposten.se,kingmagazine.se,kkuriren.se,klackspark.com,kristianstadsbladet.se,kt.se,kuriren.nu,lwcdn.com,mariestadstidningen.se,mestmotor.se,mitti.se,modette.se,motherhood.se,mvt.se,nkp.se,nlt.se,norran.se,norrbottensaffarer.se,nsd.se,nsk.se,nt.se,nwt.se,nyheter24.se,olandsbladet.se,ostrasmaland.se,provinstidningen.se,pt.se,realtid.se,recept.se,saffletidningen.se,skanesport.se,skd.se,sla.se,smp.se,sn.se,strengnastidning.se,svenskanamn.se,svenskdam.se,svenskgolf.se,sverigespringer.se,sydostran.se,thelocal.se,trelleborgsallehanda.se,unt.se,ut.se,varmlandsaffarer.se,vasterastidning.se,vf.se,viivilla.se,vimmerbytidning.se,vt.se,vxonews.se,youplay.se,ystadsallehanda.se#%#//scriptlet('ubo-json-prune.js', 'autoplay')
 affarsstaden.se#%#//scriptlet('ubo-acis.js', 'jQuery', 'adblockdetect')
 aftonbladet.se###main > div > div > div:has(h2:has-text(/^annons/i))
-aftonbladet.se##[data-ad-subtype="mega"]:upward(div[style^="opacity"])
 aftonbladet.se#$?#[data-ad-subtype]:upward(1) { min-height:unset!important }
 aftonbladet.se##a:has(span:has-text(/^annons/i))
 aftonbladet.se##a:has-text(Kommersiell text, innehåller annonslänkar)
 aftonbladet.se##aside > div:has(h2:has-text(/^annons/i))
+aftonbladet.se##div[class^="css-"]:has([data-ad-subtype="mega"])
 aftonbladet.se##section > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##strong:has-text(/ANNONS/i):upward(p)
 airam.fi#$#.body-fixed { position: unset !important; }
@@ -937,6 +937,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /cookiswarning.$script,domain=visitskargarden.se
 /cpg_ads.$script
 /cs1pc.js$domain=kiaindex.se
+/cts.min.js$domain=recept.se
 /cx-emediate-userprofile-se.$script
 /detroitchicago/cmb.js$domain=~idownloadblog.com
 /detroitchicago/cmbdv2.js$domain=wernamaten.se
@@ -987,6 +988,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /gpAnalytics/*$script
 /gplus.php$script,domain=fria.nu|friatidningen.se|goteborgsfria.se|sesam.nu|stockholmsfria.se
 /gravito.js$domain=realtid.se
+/gtagEventTracker.js
 /headerbidding.js
 /helios/multiad_jquery.$script
 /hemmafixbloggen/includes/events-tracker
@@ -1338,7 +1340,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /wds_nyhetsbrev_popup
 /Web%20Analytics/*$script
 /webbresurser/banner/*
-/widget.hittarecept.se/blogcounter
 /wordads-classes/js/*
 /wp-admin/admin-ajax.php?action=addthis_global_options$script,domain=expressen.se
 /wp-content/banners$image
@@ -1564,9 +1565,9 @@ cannabis.se,ordfrontmagasin.se##.pum-overlay
 cannabisifokus.se##div[id^="canna-"]
 capdesign.se###shareright
 chalmers.se###cookie_directive_container
-chef.se##.Blurb--native
 chef.se##.global-cookie-msg
 chef.se##.Product-modal,.Offer-popup
+chef.se,fokus.se##.Blurb--native
 chef.se,svd.se##.Ad
 civilekonomen.se###rollup
 classic.prisjakt.nu###confirm_cookie_use
@@ -1739,7 +1740,7 @@ hastnet.se##.add-wrap, .listings-search-ads, .right_panel
 hbwebben.se##.elementor-widget-container > a > img
 hd.se,sydsvenskan.se##[class*="teaser-native"]
 hd.se,sydsvenskan.se,typkanske.se##.gdpr
-hejaolika.se##.partnerinfostyle, div[id^="hejao-"]
+hejaolika.se##[class*="partnerinfostyle"], div[id^="hejao-"]
 helahisingen.se###custom_html-15, .code-block img
 hemhyra.se##.pageCookies
 hemmafixbloggen.se,surfa.se,teknikfreak.se###loader-wrapper
@@ -1874,8 +1875,7 @@ natursidan.se###sidebar .widget_text a[target]
 netdoktor.se##.article-list__item__link--sponsored
 netflixguiden.se##div.lboard, div.instream-dynamic
 news55.se###newsletter-popup, #premium-bottom-bar, #premium-popup
-news55.se##.after-article-widget
-news55.se##.is-native,.is-native-yes
+news55.se##.is-native, .is-native-yes, .after-article-widget
 newsvoice.se##.td-fix-index a[target="_blank"] img, aside a[target="_blank"] img
 ng.se##.secondary-sidebar > .panel-pane:last-child
 ng.se##.view-partner-articles, [class*="sponsored-article"]
@@ -2206,7 +2206,7 @@ yelp.se##.js-cookie-iframe
 ||cookielaw.org^$domain=cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|internetkunskap.se|internetstiftelsen.se|kokaihop.se|koket.se|manpower.se|mtv.se|natgeotv.com|nvp.se|recept.se|sekotidningen.se|spisa.nu|tv4.se|tv4play.se|yelp.se
 ||cookienotice.co^$third-party
 ||cookiepolicy.peytz.dk^$third-party
-||cookiepro.com^$third-party,domain=aktiespararna.se|birthday.se|djurskyddet.se|friendsarena.se|fz.se|hastnet.se|sd.se|spela.se|sweclockers.com
+||cookiepro.com^$third-party,domain=aktiespararna.se|birthday.se|djurskyddet.se|friendsarena.se|fz.se|hastnet.se|havet.nu|sd.se|spela.se|sweclockers.com
 ||cornucopia.cornubot.se/js/cookie
 ||createsend.com^$third-party
 ||createsend1.com^$third-party
@@ -2505,6 +2505,7 @@ yelp.se##.js-cookie-iframe
 ||pxl.host^$third-party
 ||rabattkoder.ifragasatt.se^
 ||rabble-res.cloudinary.com^$third-party
+||rackcdn.com/stf.js
 ||radio.se^*/clickperformance
 ||ramses.nu^*/banners/
 ||ramses.nu^*/Centralabanners/

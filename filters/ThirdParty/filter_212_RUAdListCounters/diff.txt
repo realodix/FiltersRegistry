@@ -34,6 +34,8 @@ yandex.*##.mini-suggest__item:has(> a[href^="http://"]):remove()
 4pda.*##html[style] > body div.holder-no-hidden:style(margin-bottom: 10px !important)
 ! Rule "/?from=RCM-$document,xmlhttprequest,queryprune,domain=rambler.ru" converted to: "/?from=RCM-$document,xmlhttprequest,removeparam,domain=rambler.ru"
 /?from=RCM-$document,xmlhttprequest,queryprune,domain=rambler.ru
+! www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru##+js(abort-on-stack-trace, Object.prototype._checkBannerExistingInDOM, inlineScript) is excluded by "##+js" in exclusions-low.txt
+www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru##+js(abort-on-stack-trace, Object.prototype._checkBannerExistingInDOM, inlineScript)
 ! 4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight') is excluded by "#%#//scriptlet" in exclusions-low.txt
 4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight')
 ! 4pda.*#%#//scriptlet('ubo-no-setTimeout-if.js', 'removeAttr', 'setTimeout') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -42,8 +44,6 @@ yandex.*##.mini-suggest__item:has(> a[href^="http://"]):remove()
 4pda.*#$#html[style] > body :not(div) ~ :not(div)[class][id][style] { background-image: none !important }
 ! 4pda.*#$#html[style] > body div.holder-no-hidden { margin-bottom: 10px !important } is excluded by "#$#" in exclusions-low.txt
 4pda.*#$#html[style] > body div.holder-no-hidden { margin-bottom: 10px !important }
-Error: "Unknown modifier: ~document" in the rule: "||trk.mail.ru^$~document"
-||trk.mail.ru^$~document
 ! Invalid selector:
 joyreactor.cc,pornreactor.cc,reactor.cc#?#+js(abort-on-property-read.js, Joyreactor.show_ads)
 ! Invalid selector:
@@ -67,19 +67,17 @@ rutr.life,rutracker.lib,rutracker.net,rutracker.nl,rutracker.org#?#+js(set-const
 ! Invalid selector:
 horoscopes.rambler.*#?#+js(set-constant.js, Object.prototype.needShowAlicePopup, null)
 ! Invalid selector:
-lena-miro.ru,periskop.su,levik.blog,livejournal.*,olegmakarenko.ru,shakko.ru,varlamov.*#?#+js(set-constant.js, Object.prototype.Begun, undefined)
-! Invalid selector:
 nova.rambler.*#?#+js(abort-on-property-read.js, Object.prototype.AdvManager)
 ! Invalid selector:
 razlozhi.*#?#+js(no-setTimeout-if.js, X-Set-Adblock)
 ! Invalid selector:
 rp5.*#?#+js(setTimeout-defuser.js, xvb)
 ! Invalid selector:
-www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#+js(json-prune.js, Blocks)
+vadimrazumov.ru,lena-miro.ru,periskop.su,levik.blog,livejournal.*,olegmakarenko.ru,shakko.ru,varlamov.*#?#+js(set-constant.js, Object.prototype.Begun, undefined)
 ! Invalid selector:
-www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#+js(json-prune.js, Url, Transport, SubTransports)
-Error: "Unknown pseudo class: +js(no-xhr-if.js, /zoomdecorate\.rambler\.ru|undefined/, method:GET)" in the rule: "www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#+js(no-xhr-if.js, /zoomdecorate\.rambler\.ru|undefined/, method:GET)"
-www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#+js(no-xhr-if.js, /zoomdecorate\.rambler\.ru|undefined/, method:GET)
+vadimrazumov.ru,lena-miro.ru,periskop.su,levik.blog,livejournal.*,olegmakarenko.ru,shakko.ru,varlamov.*#?#+js(set-constant.js, Object.prototype.antiadblock, false)
+! Invalid selector:
+www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#+js(json-prune.js, Blocks)
 ! Invalid selector:
 www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#^script:has-text("getPrefixes")
 ! Invalid selector:
@@ -202,6 +200,8 @@ Error: "$removeparam rules are not compatible with some other modifiers" in the 
 ?sub_confirmation=1$document,removeparam=|,domain=youtube.com
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?topblock$document,removeparam=|,domain=3dnews.ru"
 ?topblock$document,removeparam=|,domain=3dnews.ru
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?utm_partner_id=$document,removeparam=|,domain=mail.ru|sportmail.ru"
+?utm_partner_id=$document,removeparam=|,domain=mail.ru|sportmail.ru
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?ymclid=$document,removeparam=|"
 ?ymclid=$document,removeparam=|
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "aff_fcid=$document,removeparam=|,domain=aliexpress.*"

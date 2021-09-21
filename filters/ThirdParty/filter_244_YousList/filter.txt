@@ -3,7 +3,7 @@
 ! License: https://github.com/yous/YousList#license
 ! Title: YousList
 ! Expires: 4 days
-! OriginalVersion: 20210913
+! OriginalVersion: 20210920
 ! General element hiding rules
 ##amp-ad
 ##amp-embed.ad_cnt
@@ -559,6 +559,8 @@
 ~zna-77.com##a[href*="//zna-77.com"],a[href*="//www.zna-77.com"]
 ~zozola8.com##a[href*="//zozola8.com"]
 ! Regular expression URL filters
+/^[^:]+:\/\/+([^:\/]+\.)?\x70\x70\x73\x73\x2e\x6b\x72\/([\x61-\x7a_\/]*[\x41-\x5a]+)+[\x61-\x7a_\/]*\.[0-9\x61-\x7a]+$/$image,match-case
+/^[^:]+:\/\/+([^:\/]+\.)?\x79\x67\x6f\x73\x75\x2e\x63\x6f\x6d\/([\x61-\x7a_\/]*[\x41-\x5a]+)+[\x61-\x7a_\/]*\.[0-9\x61-\x7a]+$/$image,match-case
 ! URL filters
 *-ads.openx.net/w/1.0/acj^
 *-ads.openx.net/w/1.0/afr^
@@ -917,6 +919,7 @@
 ||adx.turl.co.kr/adx.wif^
 ||adx.turl.co.kr/pick.wif^
 ||adx.turl.co.kr/toast.wif^
+||afflresources.com/adrotatorplus/rotator.php^
 ||afreecatv.com/player/videoad7_1.swf^
 ||agate.opap.co.kr/html/
 ||ak-gb.marketgid.com^
@@ -1244,6 +1247,7 @@
 ||dailygame.co.kr/ad/dispad_bot.html^
 ||dailygame.co.kr/ad/dispad_right.html^
 ||dailygame.co.kr/ad/dispad_top.html^
+||dailymedi.com/banner_view.php^$domain=dailymedi.com
 ||danawa.com/NBP/powerLink.php^$domain=prod.danawa.com
 ||dangdangnews.com/banner/$domain=dangdangnews.com
 ||danmee.chosun.com/common/event2016/index.html^$domain=danmee.chosun.com
@@ -1951,6 +1955,7 @@
 ||p.udn.com.tw/upf/2014_banners/$domain=udn.com
 ||pagead2.googlesyndication.com/bg/*.js^
 ||pagead2.googlesyndication.com/pagead/js/*/osd.js^
+||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/reactive_library_*.js^
 ||partner.googleadservices.com/gpt/pubads_impl_*.js^
 ||partners.coupangcdn.com/widget/product-banner/main-*.js^$domain=partners.coupangcdn.com
 ||parts.blog.livedoor.jp/ad/$domain=blog.livedoor.jp
@@ -2109,6 +2114,7 @@
 ||si.nuggad.net/javascripts/nuggad-ls.js^
 ||simg.imadrep.co.kr/js/sv.min-*.js^
 ||sin1.g.adnxs.com/ab^
+||sir.kr/img/bn/$domain=sir.kr
 ||sisainlive.com/script/ad_flow2.js^$domain=sisainlive.com
 ||sisainlive.com/script/ad_flow_2.js^$domain=sisainlive.com
 ||site3.co.kr/applad.php^
@@ -3038,6 +3044,7 @@ dailymail.co.uk##div.billboard_wrapper
 dailymail.co.uk##div[data-adverts-ad]
 dailymail.co.uk##div[id^="taboola-stream-thumbnails-"]
 dailymail.co.uk##li[id^="taboola-mobile-stream-thumbnails-"]
+dailymedi.com##img[src^="banner_view.php"]
 dailymotion.com##div#bottom_banner
 dailymotion.com##div.ad
 dailymotion.com##div.mc
@@ -6200,6 +6207,10 @@ quora.com##div.ad
 quora.com##div.question_page_ad
 qz.com##div.inline-ad
 r25.jp##div.Article__articleListWrapper__featureBannerWrapper
+radiotimes.com##div.ad-banner-container
+radiotimes.com##div.dfp-ad
+radiotimes.com##div.sidebar__item-spacer--advert-top
+radiotimes.com##div.template-article__advert
 raider.io##div#application>div>div[style="position: fixed; right: 0px; bottom: 60px; z-index: 99999;"]
 raider.io##div.rio-zone
 rapidcityjournal.com##div.ad-col
@@ -6329,6 +6340,9 @@ siminsori.com##ins[data-ad-slot="I_siminsori_within_300_250"]
 siminsori.com##ins[data-ad-slot="I_시민의소리_모바일2단락밑_300_250"]
 siminsori.com##ins[data-ad-slot="I_시민의소리_바이라인하단1_300_250"]
 siminsori.com##ins[data-ad-slot="I_시민의소리_바이라인하단2_300_250"]
+sir.kr##div#adsense_view
+sir.kr##div#side-adsense
+sir.kr##div.idx-ads-wr
 sisain.co.kr##div#sliding_adop
 sisain.co.kr##div#sliding_adopP
 sisain.co.kr##div.ad-template
@@ -6413,6 +6427,7 @@ sportalkorea.com##div#topAdBox
 sportalkorea.com##p.ad_240
 sports.chosun.com##a.gisa_banner
 sports.chosun.com##div#rad
+sports.chosun.com##div.adBox
 sports.chosun.com##div.ad_box2014
 sports.chosun.com##div.bn
 sports.chosun.com##div.f_ad2
@@ -6662,6 +6677,7 @@ theblockchain.kr##div.topBanner
 theblockchain.kr##div.viewArticle>div[style="margin-bottom:15px"]
 theceluv.com##div#CmAdContent>table[align="left"][height="200"][style="margin-right:10px"][width="200"]
 theceluv.com##div.ad_box
+thefastcode.com##div[id^="placeholder_"]
 theguardian.com##div.ad-slot
 theguru.co.kr##div#news_body_area>div[style="clear:both;float:right;margin-left:20px;width:300px;height:250px;"]
 theguru.co.kr##div.com_ban
@@ -6785,6 +6801,9 @@ touch.pixiv.net##div.ad-container
 touch.pixiv.net##div.ad-topmost-header
 tr.investing.com##div.midHeader
 travel.chosun.com##iframe[src^="http://travel.chosun.com/common/r_banner/index.html"]
+trends24.in##div.footer__advert
+trends24.in##div.page-content__advert
+trends24.in##div.trend-card-advert
 trustedreviews.com##div.advert
 trustedreviews.com##div.header-advert-wrapper
 trustpost.kr##div#container>div[style="margin:0 auto;padding:0 auto;max-width:800px;"]
@@ -6914,6 +6933,7 @@ video.animoe.us##div#fbanner
 video.animoe.us##div.ad
 video.fenglin.to##div#ad_bar1
 video.fenglin.to##div#ad_bar7
+videohelp.com##div#mobilebanner
 vidzi.tv##div.player-ads
 view.heraldm.com##div#biz_view_banner
 view.heraldm.com##div#hbviewtop_72890id
