@@ -427,7 +427,7 @@ yelp.*##.menu-bar-pitch_open-in-app
 linkedin.com#$?#html,body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 20September2021v1-Beta
+! OriginalVersion: 22September2021v2-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -451,7 +451,7 @@ linkedin.com#$?#html,body { overflow: auto !important; }
 ||agency^$document
 ||gdn^$document
 ||bid^$document
-||top^$document
+||top^$document,domain=~corriente.top
 ||ooo^$document
 !#if !env_mobile
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (Advanced adblockers only) ———
@@ -6509,7 +6509,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 18September2021v2-Beta
+! OriginalVersion: 20September2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -7601,6 +7601,38 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||fernandomayol.com^$redirect=nooptext,important
 ||varmisende.com^$redirect=nooptext,important
 103.169.90.205$network
+! https://github.com/DandelionSprout/adfilt/pull/281
+! https://www.virustotal.com/gui/file/4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7/community
+125.44.43.45$network
+182.121.8.240$network
+42.235.183.74$network
+78.36.32.242$network
+115.50.2.119$network
+115.50.110.163$network
+119.179.84.145$network
+188.120.50.98$network
+190.238.183.5$network
+27.220.253.78$network
+! ! https://www.virustotal.com/gui/file/0374ead74fa807fb1737d8829fdb5bad6c93779f6b9eb7162eddabff7a64acff/community
+||esetnode32-antiviru.ydns.eu^$redirect=nooptext,important
+! https://www.joesandbox.com/analysis/486636/0/html#domains
+||aieov.com^$redirect=nooptext,important
+! Relations to the original domain
+192.3.194.242$network
+||fakasafs23asd-adj.ydns.eu^$redirect=nooptext,important
+||w0hsyejhnbcvzaxi8euyr6tgeya5vml09jysgav27.ydns.eu^$redirect=nooptext,important
+||hncbeyghfsbvcuabgsbncvzgaioiuyegdbhabbbw.ydns.eu^$redirect=nooptext,important
+||avira-antivirus.ydns.eu^$redirect=nooptext,important
+||k2ygoods.ydns.eu^$redirect=nooptext,important
+||lefteriskkokkiskikinew.ydns.eu^$redirect=nooptext,important
+||kelasdbadlkafg-uhuy28.ydns.eu^$redirect=nooptext,important
+||nan.ydns.eu^$redirect=nooptext,important
+||hurricane.ydns.eu^$redirect=nooptext,important
+||hjjhjkk.ydns.eu^$redirect=nooptext,important
+! https://github.com/blocklistproject/Lists/issues/497
+||tweakbit.com^$redirect=nooptext,important
+||static.tweakbit.com^$redirect=nooptext,important
+||pcspeedup.en.softonic.com^$redirect=nooptext,important
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$redirect=nooptext,important
@@ -13657,7 +13689,7 @@ hbonordic.com#$?#.video-js ~ div { background-image: none !important }
 ! Prime Video
 ! And just about any other streaming or rental service out there in the world as well, especially USA- or nation-specific ones.
 ! Title: 💐 Anti-'Awful comments' list
-! OriginalVersion: 24July2021v2-Beta
+! OriginalVersion: 22September2021v1-Beta
 ! Expires: 7 days
 ! Description: This is a somewhat alternate approach to the usual anti-comment-section lists, as this list only removes those comment sections that are filled with exceptionally bad comments.
 ! Note: Out of sheer massive spite against how some newssites deliberately run userpolls on the most contentious articles and only those articles, this list also targets such userpolls now.
@@ -13683,15 +13715,6 @@ en.greatfire.org###comments
 color-hex.com##.txtgray
 color-hex.com##.well-sm.well.commentcontainer
 color-hex.com##a[href="#comments"]
-! ——— Anti-'Megastupid comments' ———
-extra-leker.no###y-badges
-extra-leker.no##.yotpo-display-wrapper
-extra-leker.no##.hide-for-small-only.top-notice
-extra-leker.no##.scroller
-extra-leker.no##.testimonials
-extra-leker.no##.reviewed-products
-||p.yotpo.com^$domain=extra-leker.no
-ghacks.net###comments
 ! ——— Anti-'Pro-abuse comments' (Chiefly porn-related ones) ———
 rule34.paheal.net###commentlistrecent
 rule34.paheal.net###comment-list-recent
@@ -13715,20 +13738,6 @@ klix.ba##.komentariCont
 ! ——— Anti-'Posts that sound completely bizarre compared to the page you're currently at'
 ###hot-network-questions
 pastebin.com###content_right
-! ——— Temporarily turned off while searching for example pages ———
-!!!ign.com##h5.blocktitle
-!!!||comments.ign.com^
-!!!||ws-comments.ign.com^
-!!!polygon.com###comments
-!!!||disqus.com/embed/comments/?base=default&f=gogoanime-$subdocument
-! —!!!— Highly contentious among end-users and are under re-consideration —!!!—
-!!!youtube.com###watch-discussion
-!!!youtube.com##ytd-live-chat-frame
-!!!m.youtube.com##ytm-comment-section-renderer
-!!!youtube.com###comments
-!!!||youtube.com/live_chat_fragments_ajax?$xmlhttprequest
-!!!||youtube.com/comment_service_ajax?$domain=youtube.com
-!!!invidious.snopyta.org,yewtu.be,invidious.tube,invidious.kavin.rocks,tube.connect.cafe,invidious.zapashcanon.fr,invidious.fdn.fr,invidiou.site,vid.mint.lgbt,invidious.site,invidious.048596.xyz,invidious.zee.li,vid.puffyan.us,c7hqkpkpemu6e7emz5b4vyz7idjgdvgaaa3dyimmeojqbgpea3xqjoid.onion,w6ijuptxiku4xpnnaetxvnkc5vqcdu7mgns2u77qefoixi63vbvnpnqd.onion,kbjggqkzv65ivcqj6bumvp337z6264huv5kpkwuv6gu5yjiskvan7fad.onion,invidious.3o7z6yfxhbw7n3za4rss6l434kmv55cgw2vuziwuigpwegswvwzqipyd.onion,grwp24hodrefzvjjuccrkw3mjq4tzhaaq32amf33dzpmuxe7ilepcmad.onion,tube.incognet.io###comments
 ! Title: 🎬 Stop Autoplay On Video Sites
 ! Expires: 7 days
 ! OriginalVersion: 02April2021v1
@@ -14149,9 +14158,9 @@ fandom.com#$?#:root { --theme-body-background-image: none !important }
 ! Hopefully enables the use of all the above anti-image rules in uBlock Origin and AdGuard
 @@||wikia.nocookie.net^*/images/$image,badfilter
 ! Title: 🚤 Anti-'Snow marketing' List
-! OriginalVersion: 30August2021v1-Beta
+! OriginalVersion: 22September2021v1-Beta
 ! Expires: 3 days
-! Description: Christmas is a sad, sad time of the year, where everyone eat bleached fish, get drunk at company parties, wear ugly T-shirts, invite aggressive relatives, stuff the living room full of candles, listen to Whitney Houston, set up lame dollhouse exhibitions, and watch badly dubbed Eastern Bloc movies. And the snow that is everywhere on many websites during that time isn't helping on anyone's mood either. So here's a list to remove the snow from those websites.
+! Description: With Christmas being full of arcane, complicated, and very, _very_ rigid traditions in large parts of the world, the snow that is everywhere on many websites during that time isn't helping on confused peoples' mood either. So here's a list to remove the snow from those websites.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! My own entries
 ! netonnet.no
@@ -14320,9 +14329,9 @@ www.m.vk.com$badfilter
 @@||internet--access.net^
 ! Section reserved for THEtomaso to add fixes for Fanboy's Social Blocking List and for Fanboy's Annoyances List-exclusive entries (_Not_ for EasyList Cookie List)
 ! (Currently empty.)
-! Title: 💺 Anti-IMDB List
-! OriginalVersion: 30August2021v1-Beta
-! Description: Are you tired of being told by others what you should watch, specifically the hipsters that run around on IMDB? Here's a way to let you feel more peaceful with your truly own opinions.
+! Title: 💺 Anti-'IMDB ratings on other sites' List
+! OriginalVersion: 22September2021v1-Beta
+! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
