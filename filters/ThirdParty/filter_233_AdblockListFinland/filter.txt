@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 25September2021v4
+! OriginalVersion: 25September2021v7
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -385,6 +385,7 @@ kaleva.fi##div[class=lyta-lazy-load]
 kaleva.fi#?#.m-contentListItemThumb:-abp-has(> div > div > div[class^=m-contentListItemThumb__advertisement])
 kaleva.fi#?#.m-managedListing__column:-abp-has(> div > div > div > div[class^=m-contentListItem__advertisement])
 kaleva.fi#?#.media-site__widget-container:-abp-has( * .media-widget__title:-abp-contains(Kaupallinen yhteistyö))
+kaleva.fi#?#aside.sidebar__column-container:-abp-has(.-ad)
 kaleva.fi,lapinkansa.fi###outstream-container
 kansalainen.fi##div[id="text-html-widget-5"]
 kansalainen.fi##div[id^=ads]
@@ -483,6 +484,7 @@ mbnet.fi##div#tyopaikat-joblift--avainpaikat
 mediuutiset.fi##section > a[href^="https://www.mediuutiset.fi/kumppanisisallot"]
 mediuutiset.fi#?#div:-abp-has(> a[href="/kumppanisisaltoa"])
 mediuutiset.fi#?#div:-abp-has(> a[href^="https://www.mediuutiset.fi/kumppanisisallot/"]:not(a[class^=site-header]))
+mediuutiset.fi#?#div[width]:-abp-has([id|="almad"]:not([id|="almad-mobileParade"]))
 meillakotona.fi#?#div[class^=transitionSlot__component][class*=layout__container]:-abp-contains(MAINOS)
 meillakotona.fi,terve.fi#?#div[class*=feed__adSlot]
 mesta.net,paakallo.fi,puheenaiheet.fi##.gofollow
@@ -494,7 +496,8 @@ mikrobitti,talouselama.fi##div[id|=almad]
 mikrobitti.fi##.is-visible.LazyLoad
 mikrobitti.fi##aside > div > div > a[href^="https://studio.mikrobitti.fi/mikrobitti-studiovieras/"]
 mikrobitti.fi##div[id=rosmo]
-mikrobitti.fi#?#div[class]:-abp-has(> div[width] > .ad:not(aside))
+mikrobitti.fi#?#div[class]:-abp-has(> [width] > [id|="almad"]:not([id|="almad-mobileParade"]))
+mikrobitti.fi#?#div[class][width]:-abp-has([id|="almad-mobileParade"])
 mikrobitti.fi#?#div[style="margin-bottom:0"]:-abp-has(a[href^="https://www.mikrobitti.fi/kumppanisisallot/"])
 mikrobitti.fi#?#section > div:-abp-has(a[href^="https://www.mikrobitti.fi/kumppanisisallot/"])
 mobiili.fi###header_ad33
