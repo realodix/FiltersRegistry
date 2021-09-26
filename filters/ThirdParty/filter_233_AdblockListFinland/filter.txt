@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 26September2021v2
+! OriginalVersion: 26September2021v6
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -240,9 +240,6 @@ deitti.net##.ad-article
 demokraatti.fi##div[class^=AdStyles__Wrapper]
 demokraatti.fi##div[class^=OrderMagazinestyles__Container]
 download.fi##.ni_holder
-download.fi##b[style="font-size:bigger;"] > a[class=download_link][href$=".exe"]
-download.fi#?#div:-abp-has(> h3[style="font-size:20px;"])
-download.fi#?#div[class=splash_title] + p + p:-abp-has(> a[href$=".exe"])
 duunitori.fi##.js-fragment-web-lazy_carousel
 edukas.fi##.compareGoogleCell
 elmotv.com##[class^=mstila]
@@ -398,6 +395,7 @@ kansanuutiset.fi##div[class*=intextad]
 karjalainen.fi##a[href="https://punamustamedia.portal.worldoftulo.com/v2/shop/dtabkaiku"]
 karjalainen.fi#?#a[href*=kiinnostuitko]:-abp-has([alt=banneri])
 karjalainen.fi,sammysatv.com##center
+kauppalehti.fi#?#aside[class] + div[class]:-abp-has(.etua-react-embed)
 kauppalehti.fi#?#div:-abp-has(> a[href^="https://www.kauppalehti.fi/kumppanisisallot/"])
 kauppalehti.fi#?#div[class]:not(#article-content):-abp-has(> div[class][width] > .ad)
 kauppalehti.fi#?#div[class][width]:-abp-has(> .ad)
@@ -705,9 +703,6 @@ tori.fi##div[id=banner_panorama_topmost]
 tori.fi##div[id=panorama_top]
 tori.fi##div[id=panorama_topmost]
 traktorpool.fi##.billboard
-ts.fi##[class="tsv3-c-common-article__contentad notloaded"]
-ts.fi##div[class*="tsv3-c-common-smart noad-hideaction"]
-ts.fi#?#div[class="tsv3-c-layout__c js-tsv3-c-layout__c"]:-abp-has(> [class$="tsv3-c-layout tsv3-c-common-twocolumnslayout tsv3-c"] [class*=element--nativead])
 tulikulma.fi##.slideshow
 tvmatsit.com##.annons
 twitter.com#?#div:-abp-has(> div > div > div > h2 > div > span:-abp-contains(Mainostettu twiitti))
@@ -768,6 +763,9 @@ www.nettimoto.com###smallViewHouseBanner
 www.suomi24.fi##.asp
 www.suomi24.fi##div[class^=Vaalikone__HeaderAdWrapper]
 www.suomi24.fi#?#p:-abp-has(+ p + .asp)
+www.ts.fi##[class="tsv3-c-common-article__contentad notloaded"]
+www.ts.fi##div[class*="tsv3-c-common-smart noad-hideaction"]
+www.ts.fi#?#.tsv3-c-common-twocolumnslayout__row__right:-abp-has(.noad-hideaction-self):not(:-abp-has(.tsv3-c-ts-newstip)):not(:-abp-has(.tsv3-c-common-forum-threadlist))
 www.uusisuomi.fi#?#.lazyload-wrapper:-abp-has(.at-embed-container)
 x2.fi##.mobile-top-ad
 xracing.fi##.adBanner
