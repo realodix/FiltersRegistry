@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 21.9.377
+! OriginalVersion: 21.9.384
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 28 Sep 2021 15:14 UTC
+! Last modified: 28 Sep 2021 20:44 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -5805,7 +5805,9 @@ musiklib.org##.sidebar-sponsor
 kaskus.co.id##.sidebarLeftAds
 kaskus.co.id##.sidebarRightAds
 jambiline.com##.td-a-rec-id-sidebar
+sulselsatu.com##.textwidget img[width="100%"][height=""]
 sulselsatu.com##.textwidget img[width="728px"][height=""]
+sulselsatu.com##.textwidget img[width="80%"][height=""]
 dutademokrasi.com,kabarselebes.id,koranbanjar.net,satubmr.com##.theiaStickySidebar div > img
 penatimor.com##.theiaStickySidebar img[width="720"][height="465"]
 penatimor.com##.theiaStickySidebar img[width="720"][height="750"]
@@ -12884,27 +12886,27 @@ kompas.com##.latest ~ .ivs-wrap-wp
 gridoto.com##.read .geniee-box
 gridoto.com##.read .ivs-box
 kompasiana.com##.read-artikel .video-pilihan
+kompas.com##.read__article .ivs-wrap
 kompas.com##.read__article .video-box-wrap
 grid.id##.videoPlaylistPlugClass-carousel
-##amp-iframe[src^="https://www.vidio.com/embed/"]
 cnbcindonesia.com,insertlive.com##article .sisip_embed_sosmed
 detik.com##article .sisip_video_ds
 detik.com##article .video20detik_0
 ||20.detik.com/embed/$subdocument,domain=~20.detik.com|~adsmart.detik.com
-||api.cnnindonesia.com/gambas/oembed^$script
-||cnbcindonesia.com/embed/video/$subdocument
+||cnbcindonesia.com/embed/video/$subdocument,domain=cnbcindonesia.com
 ||dailymotion.com/embed/*&mute=true$subdocument,domain=viva.co.id
 ||dailymotion.com/embed/*?ads_params=$subdocument,domain=medanheadlines.com
 ||dailymotion.com/player/$subdocument,domain=kompasiana.com
-||haibunda.com/embed/video/$subdocument
-||insertlive.com/embed/video/$subdocument
+||embed.rctiplus.com/live/rcti/$subdocument,domain=sulselsatu.com
+||haibunda.com/embed/video/$subdocument,domain=haibunda.com
+||insertlive.com/embed/video/$subdocument,domain=insertlive.com
 ||ivideosmart.com/ivsplayer/$script,domain=bolasport.com|brilio.net|feedme.id|geeq.id|genpi.co|grid.id|gridoto.com|idntimes.com|jubi.co.id|kompas.com|kontan.co.id|styl.id|sulselsatu.com|tempo.co|~video.tempo.co
 ||ivideosmart.com/ivxplayer/$script,domain=grid.id|kompas.com
 ||mnc.sindo.media/embed/$subdocument,domain=sindonews.com
-||sindonews.com/frame/$subdocument
+||sindonews.com/frame/$subdocument,domain=sindonews.com
 ||soundcloud.com/player/$important,subdocument,domain=cumirproduction.blogspot.com
-||tv.kaskus.co.id/api/embed/widget/?autoplayInViewPort=true$subdocument
-||video.sindonews.com/embedjw/$subdocument
+||tv.kaskus.co.id/api/embed/widget/?autoplayInViewPort=true$subdocument,domain=kaskus.co.id
+||video.sindonews.com/embedjw/$subdocument,domain=sindonews.com
 ||vidio.com/embed/*&mute=true$third-party,subdocument
 ||youtube.com/embed/*&mute=1$subdocument,domain=genpi.co
 mazterize.net##.button:has-text(/download crack/i)
@@ -12917,6 +12919,7 @@ kuyhaa.net##iframe[width="420"][height="100"]
 ||log.viva.co.id/iframe^
 ||filmindonesia2020.blogspot.com^$third-party
 .gif$image,domain=kombatch.com
+/banner-$image,domain=komikindo.co
 /iklan.$script,domain=komiku.co.id
 ||nanime.biz^*/banner-$image
 mangakita.net###btm_banner
@@ -12925,7 +12928,7 @@ sektekomik.com,sheamanga.my.id###close-teaser
 mangaku.club###ftadsth
 bacakomik.co,komikstation.com###teaser3
 mangaku.club##.adv
-kiryuu.id,manhwaindo.id,sektekomik.com##.kln
+kiryuu.id,komikindo.co,manhwaindo.id,sektekomik.com##.kln
 kumpulmanga.org##.kzl
 mangaku.club##.section_ad
 komiku.co.id###Notifikasi
@@ -12934,7 +12937,7 @@ mangaindo.web.id#%#//scriptlet('ubo-acis.js', 'Math', 'zfgloaded')
 sheamanga.my.id#%#//scriptlet('ubo-acis.js', 'document.querySelectorAll', 'adConfig')
 klikmanga.com,komikstation.com,manhwaindo.id,manhwaland.org,westmanga.info#%#//scriptlet('ubo-acis.js', 'document.querySelectorAll', 'popMagic')
 otakudere.net#%#//scriptlet('ubo-aopr.js', 'Light.Popup')
-komikindo.id,komikstation.com,mangakita.net,mangaku.club,ngomik.net,westmanga.info#%#//scriptlet('ubo-window.open-defuser.js')
+bacakomik.co,komikcast.com,komikindo.id,komikstation.com,mangakita.net,mangaku.club,ngomik.net,westmanga.info#%#//scriptlet('ubo-window.open-defuser.js')
 manhwaland.org#%#//scriptlet('ubo-acis.js', 'SGPopup')
 konohime.web.id,mangaku.club#$#* { user-select: text !important; -webkit-touch-callout: default !important; }
 konohime.web.id#%#//scriptlet('ubo-aopw.js', 'disableSelection')
