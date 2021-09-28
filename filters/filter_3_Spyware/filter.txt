@@ -77,6 +77,8 @@
 ! https://www.eff.org/deeplinks/2021/03/googles-floc-terrible-idea
 #%#//scriptlet('set-constant', 'Document.prototype.interestCohort', 'undefined')
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/95512
+eduscho.at#%#//scriptlet("set-constant", "exactagTrack", "noopFunc")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91255
 ! TODO: can be replaced by redirect resources (Fingerprint2) when it will be added - https://github.com/AdguardTeam/Scriptlets/issues/141
 the-japan-news.com#%#//scriptlet('set-cookie-reload', 'fp', '1')
@@ -21928,6 +21930,9 @@ $app=com.miui.analytics
 ! https://github.com/AdguardTeam/CoreLibs/issues/1306
 ||rover.ebay.$image,object,script,badfilter
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/95512
+!+ PLATFORM(ios, ext_android_cb)
+@@||eduscho.at/*/exactag_clientside.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95294
 @@||twowheeler.policybazaar.com/js/googleanalytics.js
 ! fix no response on click
