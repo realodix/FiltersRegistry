@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-09-27 10:37:51 CEST
+! Last modified: 2021-09-29 08:36:48 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -104,6 +104,7 @@ bytbil.com#$#html,body { overflow: auto !important; }
 campingsverige.se##.post_sponsrad_label:upward(1)
 cannabis.se#%#//scriptlet('ubo-aopw.js', 'Cookies')
 cyclingplus.se,halsafitness.se,yogaworld.se##.post-wrap:has(h3:has-text(/samarbete/i))
+cykelframjandet.se##article.tg-item, .lcp_catlist li:has(a[href*="/annons"])
 dagenshultsfred.se,dagenskalmar.nu,dagensvastervik.se,dagensvimmerby.se#$#body { margin-top: 0 !important; }
 dagensjuridik.se##.card--muted:has(strong:has-text(/^senaste nytt från våra partners/i))
 dagensps.se##.dagensps_ad:upward(.container)
@@ -262,6 +263,7 @@ mytaste.se#$#.recipe-modal[data-state=default] .modal-container.open, .recipe-mo
 mytaste.se#$#.site-wrapper[data-state=panorama], .site-wrapper[data-state=default] { padding-top: 40px !important; }
 mytaste.se#$#body.modal-active.modal-open::before, body.modal-active::before { opacity: unset !important; content: unset !important; }
 nasdaqomxnordic.com#%#//scriptlet('ubo-acis.js', '$', 'shuffle')
+netflixguiden.se#%#//scriptlet('ubo-aopr.js', 'prebidAdUnits')
 news55.se##a[href]:not([href*="/news55.se"]):upward(section.sidebar)
 newsvoice.se##.td-post-author-name > a:has-text(/extern skribent/i):upward(5)
 newsvoice.se##.td-post-author-name > a[href$="/author/foretagaren/"]:upward(5)
@@ -472,8 +474,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1315,6 +1317,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /tinypass-gtp.min.js
 /TopBanner$subdocument,domain=hitta.se
 /torgen/banner.stat
+/trace/*/view$xmlhttprequest,domain=netflixguiden.se
 /trackers/SessionCam-tag$script
 /trackolding$script,domain=skyscanner.se
 /trafikfonden/*
@@ -2204,7 +2207,7 @@ yelp.se##.js-cookie-iframe
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$subdocument,third-party
 ||cookieinfoscript.com^$third-party
-||cookielaw.org^$domain=cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|internetkunskap.se|internetstiftelsen.se|kokaihop.se|koket.se|manpower.se|mtv.se|natgeotv.com|nvp.se|recept.se|sekotidningen.se|spisa.nu|tv4.se|tv4play.se|yelp.se
+||cookielaw.org^$domain=cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|internetkunskap.se|internetstiftelsen.se|ka.se|kokaihop.se|koket.se|manpower.se|mtv.se|natgeotv.com|nvp.se|recept.se|sekotidningen.se|spisa.nu|tv4.se|tv4play.se|yelp.se
 ||cookienotice.co^$third-party
 ||cookiepolicy.peytz.dk^$third-party
 ||cookiepro.com^$third-party,domain=aktiespararna.se|birthday.se|djurskyddet.se|friendsarena.se|fz.se|hastnet.se|havet.nu|sd.se|spela.se|sweclockers.com
@@ -2362,6 +2365,7 @@ yelp.se##.js-cookie-iframe
 ||jula.se/CookieConsent
 ||jwpcdn.com/player/plugins/inference/
 ||k5a.io^$third-party
+||ka.se/native/
 ||kaloo.ga^$third-party
 ||kamrat.com/js/cookiescript
 ||kayak.xno.se^$script
