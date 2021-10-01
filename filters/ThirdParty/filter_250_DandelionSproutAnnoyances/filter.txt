@@ -15090,7 +15090,7 @@ www.m.vk.com$badfilter
 ! Section reserved for THEtomaso to add fixes for Fanboy's Social Blocking List and for Fanboy's Annoyances List-exclusive entries (_Not_ for EasyList Cookie List)
 ! (Currently empty.)
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
-! OriginalVersion: 29September2021v1-Beta
+! OriginalVersion: 01October2021v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -15182,6 +15182,8 @@ netzkino.de#?#.list-inline > li:-abp-contains(Bewertung)
 ! United States
 kissanime.*##.rating
 kissanime.*##a[href*="kissanime."][href$="/imdb/"]
+! Australia
+binge.com.au#?#h3 + p + ul > li:-abp-has(svg[class$=Imdb])
 ! Various movie sites
 ddl-warez.to#?#td:-abp-has(.btn[data-original-title^=IMDb])
 myfriendspizza.com#?#a:-abp-contains(IMDb)
@@ -15204,7 +15206,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 01October2021v1-Beta
+! OriginalVersion: 01October2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -15685,7 +15687,8 @@ $removeparam=mkref
 ||audible.$removeparam=ipRedirectFrom
 ||audible.$removeparam=ipRedirectOriginalURL
 $removeparam=refer_code
-$removeparam=loc
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1412160
+$removeparam=loc,domain=~geizhals.de
 $removeparam=acampID
 ||google.$removeparam=prds
 $removeparam=pj_creativeid
@@ -16245,7 +16248,7 @@ $removeparam=_nc_vts_prog
 ! https://www.barrons.com/articles/etf-giants-push-back-against-senate-democrat-who-wants-to-take-away-tax-break-51631753035?refsec=hp_INTERESTS_taxes
 $removeparam=refsec,domain=barrons.com
 ! https://www.marketwatch.com/personal-finance/real-estate/rent/united-states/new-york/new-york?reloadLocationOnSearch=false&searchType=suggested&reflink=mc_wsj_search
-$removeparam=reflink,domain=marketwatch.com
+$removeparam=reflink,domain=marketwatch.com|mansionglobal.com
 ! https://edition.cnn.com/?hpt=header_edition-picker
 $removeparam=hpt,domain=cnn.com
 ! ——— Can never be made generic ———
