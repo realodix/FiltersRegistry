@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-09-29 08:36:48 CEST
+! Last modified: 2021-10-01 09:26:01 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -52,6 +52,7 @@ aftonbladet.se##div[class^="css-"]:has([data-ad-subtype="mega"])
 aftonbladet.se##section > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##strong:has-text(/ANNONS/i):upward(p)
 airam.fi#$#.body-fixed { position: unset !important; }
+aktivtraning.se,digitalfotoforalla.se,iform.se,illvet.se,militarhistoria.se,pctidningen.se,popularhistoria.se,viivilla.se,vinbanken.se#$#.noScroll, .noScroll body { overflow:unset!important }
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,pctidningen.se,popularhistoria.se#$?#li:has(.content-label:has-text(/annons/i)) { remove: true; }
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamhalle.se,fastighetsnytt.se,market.se,resume.se##.slot-panorama:upward(1)
 aktuellsakerhet.se##.td-adspot-title-span:upward(1)
@@ -123,7 +124,7 @@ dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsv
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##.vicky-post-whitebox:has(.vicky-whitebox-label-text:has-text(/spons/i))
 djungeltrumman.se#%#//scriptlet('ubo-nano-sib.js', 'dt_fullpage_ad')
 djungeltrumman.se##.label-sponsored:upward(.post)
-dn.se#$#body.didomi-popup-open { overflow:unset!important }
+dn.se,expressen.se#$#body.didomi-popup-open { overflow:unset!important }
 dromhemochtradgard.se##.native-wrapper:upward(1)
 duochjobbet.se##.editor_content.post:has(p:has-text(/^annons/i))
 ehandel.se##.aside-list--heading:has-text(/^sponsra/i):upward(.aside-list)
@@ -965,6 +966,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /eu_cookie_compliance/*$script
 /EUModalDialog$script,domain=morningstar.se
 /evidon*.js$domain=morningstar.se
+/execute?$xmlhttprequest,domain=iform.se|illvet.se|mestmotor.se|thelocal.se
 /exposure$xmlhttprequest,domain=lokalguiden.se
 /ext/phpbb/ads/*
 /ezoic$domain=temadagar.se
@@ -1327,6 +1329,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /twitter_count.php$domain=fria.nu|friatidningen.se|goteborgsfria.se|sesam.nu|stockholmsfria.se
 /ub-ads/*
 /ub-cookie-notice/*
+/unload?$ping,domain=iform.se|illvet.se|mestmotor.se|thelocal.se
 /uploads/bilder/Banner/*
 /uploads/bilder/Samarbetspartners/*
 /usabilla$script,domain=morningstar.se
@@ -1644,13 +1647,9 @@ existenz.se###slidebox
 existenz.se##.wm-nopop, #main > p[style^="color"]
 expo.se##div[class*="expo-ads"], div[class*="pane-openx"], .modal, .header-top.show-cookie-block
 expressen.se##.campaign
-expressen.se##.discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"]
 expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
-expressen.se##.pa-dialog
-expressen.se##.teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"]
-expressen.se##.teaser--native, .native-article
-expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting
-expressen.se##figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"]
+expressen.se##.teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"], figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"], .teaser--native, .native-article
+expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"]
 expressen.se,isabellalowengrip.se,johannatoftby.se,matplatsen.net,monasuniversum.se###gatsby-focus-wrapper > div[class^="css-"]:last-of-type
 familjeliv.se##a[href*="/kampanj/"], .flm-kampanj
 familjesidan.se##.cookies-wrapper
@@ -2205,7 +2204,6 @@ yelp.se##.js-cookie-iframe
 ||cookie-script.com^$third-party
 ||cookiebot.com^$third-party,domain=advokaten.se|bax-shop.se|circlek.se|etc.se|findroommate.se|goteborgdirekt.se|itaboutdoor.se|kingsizemag.se|kurera.se|livetochdiabetes.se|mitti.se|ng.se|sakochliv.se|skeppsbrons.se|smartsenior.se|swedroid.se|tankesport.se|tn.se|upplysning.se|vasterastidning.se|wesafe.se
 ||cookieconsent.popupsmart.com^$third-party
-||cookieinformation.com^$subdocument,third-party
 ||cookieinfoscript.com^$third-party
 ||cookielaw.org^$domain=cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|internetkunskap.se|internetstiftelsen.se|ka.se|kokaihop.se|koket.se|manpower.se|mtv.se|natgeotv.com|nvp.se|recept.se|sekotidningen.se|spisa.nu|tv4.se|tv4play.se|yelp.se
 ||cookienotice.co^$third-party
@@ -2247,6 +2245,7 @@ yelp.se##.js-cookie-iframe
 ||destination.se/track.js
 ||destination.se^$third-party
 ||destination.se^*/elastic-apm-rum.umd.min.js
+||dhandel.se/count/
 ||digikey.se^*/banners/
 ||digikey.se^*/consent
 ||digitaloceanspaces.com/ethical.min.js
@@ -2278,7 +2277,6 @@ yelp.se##.js-cookie-iframe
 ||execute-api.eu-west-1.amazonaws.com/live/analytics/$xmlhttprequest
 ||existenz.se/img/o/
 ||exitintel.com^$third-party
-||experience.tinypass.com^*/execute$xmlhttprequest,domain=illvet.se|mestmotor.se|thelocal.se
 ||external.reseguiden.se/offer
 ||facebook.com/*/plugins/like$third-party
 ||facebook.com/plugins/like$third-party
@@ -2480,7 +2478,7 @@ yelp.se##.js-cookie-iframe
 ||pensiono.se^$third-party
 ||petrk.com^$third-party
 ||pheegoab.click^
-||piano.io^$domain=thelocal.se
+||piano.io^$domain=iform.se|illvet.se|thelocal.se
 ||pingback.issuu.com/ping$xmlhttprequest
 ||pipedrive.com^*/statistics/seen$xmlhttprequest
 ||pixel.playbuzz.com^$xmlhttprequest

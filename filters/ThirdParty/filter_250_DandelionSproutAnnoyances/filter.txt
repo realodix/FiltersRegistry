@@ -427,7 +427,7 @@ yelp.*##.menu-bar-pitch_open-in-app
 linkedin.com#$?#html,body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 30September2021v1-Beta
+! OriginalVersion: 01October2021v2-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -435,7 +435,7 @@ linkedin.com#$?#html,body { overflow: auto !important; }
 ! ——— Bad top-level domains ———
 ! You can expect these domains to have an overwhelming majority of malware domains that have nothing to do with the countries in question. Nevertheless, if you are in a situation where you have to do active business in any of the countries in question, then this list may not be ideal for you.
 ! Tokelau
-||tk^$document,domain=~coolcmd.tk|~budterence.tk|~google.tk|~transportnews.tk|~c0d3c.tk|~anonytext.tk|~tokelau-info.tk|~fakaofo.tk|~loljp-wiki.tk|~ninetail.tk|~goshujin.tk|~graph.tk|~dls2.pokeacer.tk|~nolfrevival.tk|~coppersurfer.tk|~restricted-functions.tk|~bstweaker.tk|~nbd-media.tk
+||tk^$document,domain=~coolcmd.tk|~budterence.tk|~google.tk|~transportnews.tk|~c0d3c.tk|~anonytext.tk|~tokelau-info.tk|~fakaofo.tk|~loljp-wiki.tk|~ninetail.tk|~goshujin.tk|~graph.tk|~dls2.pokeacer.tk|~nolfrevival.tk|~coppersurfer.tk|~restricted-functions.tk|~bstweaker.tk|~nbd-media.tk|~glypx-pakhsh-nakon.tk
 ! Gabon
 ||ga^$document,domain=~google.ga|~filtri-dns.ga|~dgdi.ga|~voitures.ga|~economie-gabon.ga
 ! Mali
@@ -1541,6 +1541,20 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||pcspeedup.en.softonic.com^$all
 ! Copied from «uBlock Filters - Badware Risks» because it has proven to be a very good entry
 ||1redirb.com^$all
+! https://github.com/DandelionSprout/adfilt/issues/188#issuecomment-931700117
+||retailproductsusa.com^$all
+||cloud-repos.store^$all
+! https://github.com/DandelionSprout/adfilt/issues/188#issuecomment-931742337 (Initial batch)
+||adtrk18.com^$all
+||jpgtrk.com^$all
+||pnghst.com^$document,popup
+||pshtrk.com^$all
+||diabasewoodhouse.xyz^$document
+||displayoptoffers.com^$all
+||spnccrzone.com^$all
+||natnlconsmrctr.com^$all
+||jsontdsexit.com^$all
+||therewardboost.com^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -6846,11 +6860,55 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(.com specialize)
 ! ——— Dummy entry used to give myself credit, for when this list is used in large compilation hosts-type files (Although they are fully allowed by my licence to use this list, it'd be nice for me and end-users to see where it's being used, as a few of them do not credit their sources) ———
 ||if-a-large-hosts-file-contains-this-entry-then-it.uses-dandelion-sprouts-anti-malware-list-as-a-source-list.data^$document
+!#if !adguard
+! Title: AdGuard Safe Browsing Reverse-Engineered
+! OriginalVersion: 30September2021v1-Extension
+! Description: This is a list of queries sent to «Dandelion Sprout's Official DNS Server» that were blocked by AdGuard's very secretive anti-malware module (along with the dates they were first observed), and which I'm publishing for the benefit of uBlock Origin users, and to help de-mystificate the module, even if it contains less than 0.1% of the module's full and secret blocklist.
+! Domains first seen 20th of July 2021
+||oxtop.ru^
+||fotoredactor.com^
+||vmuzone.com^
+||dojki.biz^
+||bigdata.advmob.cn^
+||bigdata.adfuture.cn^
+||img.adtiming.com^
+! 1st of August 2021
+||lnk.pepipost.net^
+! 15th of August 2021
+||rainmeter-skins.com^
+! 28th of August 2021
+||ubsco.uk^
+||securebiz.org^
+||oligarph.club^
+||certificamayor.com^
+||2freeprivacytoolsforyou.xyz^
+||kygoibatdongsan.com^
+||www.bhyxj.com^
+||oneup.cc^
+||a0568605.xsph.ru^
+||a.ninis.us^
+! 31st of August 2021
+||push.soft-com.biz^
+! 2nd of September 2021
+||mycleanpc.com^
+! 10th of September 2021
+||spy-sheriff.com^
+||dedr.ru^
+! 18th of September 2021
+||getyoutube.net^
+! 24th of September 2021
+||testsafebrowsing.appspot.com^
+||msplash1.downdepo.com^
+! 29th of September 2021
+||testsafebrowsing.appspot.testsafebrowsing.appspot.testsafebrowsing.appspot.testsafebrowsing.appspot.testsafebrowsing.appspot.testsafebrowsing.appspot.testsafebrowsing.appspot.com^
+! 30th of September 2021
+||www.new.net^
+!#endif
 ! Placeholder line for alternate list versions
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 28September2021v1-Beta
+! OriginalVersion: 01October2021v2-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -6858,7 +6916,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ! ——— Bad top-level domains ———
 ! You can expect these domains to have an overwhelming majority of malware domains that have nothing to do with the countries in question. Nevertheless, if you are in a situation where you have to do active business in any of the countries in question, then this list may not be ideal for you.
 ! Tokelau
-||tk^$document,domain=~coolcmd.tk|~budterence.tk|~google.tk|~transportnews.tk|~c0d3c.tk|~anonytext.tk|~tokelau-info.tk|~fakaofo.tk|~loljp-wiki.tk|~ninetail.tk|~goshujin.tk|~graph.tk|~dls2.pokeacer.tk|~nolfrevival.tk|~coppersurfer.tk|~restricted-functions.tk|~bstweaker.tk|~nbd-media.tk
+||tk^$document,domain=~coolcmd.tk|~budterence.tk|~google.tk|~transportnews.tk|~c0d3c.tk|~anonytext.tk|~tokelau-info.tk|~fakaofo.tk|~loljp-wiki.tk|~ninetail.tk|~goshujin.tk|~graph.tk|~dls2.pokeacer.tk|~nolfrevival.tk|~coppersurfer.tk|~restricted-functions.tk|~bstweaker.tk|~nbd-media.tk|~glypx-pakhsh-nakon.tk
 ! Gabon
 ||ga^$document,domain=~google.ga|~filtri-dns.ga|~dgdi.ga|~voitures.ga|~economie-gabon.ga
 ! Mali
@@ -7966,6 +8024,22 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||tweakbit.com^$redirect=nooptext,important
 ||static.tweakbit.com^$redirect=nooptext,important
 ||pcspeedup.en.softonic.com^$redirect=nooptext,important
+! Copied from «uBlock Filters - Badware Risks» because it has proven to be a very good entry
+||1redirb.com^$redirect=nooptext,important
+! https://github.com/DandelionSprout/adfilt/issues/188#issuecomment-931700117
+||retailproductsusa.com^$redirect=nooptext,important
+||cloud-repos.store^$redirect=nooptext,important
+! https://github.com/DandelionSprout/adfilt/issues/188#issuecomment-931742337 (Initial batch)
+||adtrk18.com^$redirect=nooptext,important
+||jpgtrk.com^$redirect=nooptext,important
+||pnghst.com^$document,popup
+||pshtrk.com^$redirect=nooptext,important
+||diabasewoodhouse.xyz^$document
+||displayoptoffers.com^$redirect=nooptext,important
+||spnccrzone.com^$redirect=nooptext,important
+||natnlconsmrctr.com^$redirect=nooptext,important
+||jsontdsexit.com^$redirect=nooptext,important
+||therewardboost.com^$redirect=nooptext,important
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$redirect=nooptext,important
@@ -13273,6 +13347,8 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(.com specialize)
 ! ——— Dummy entry used to give myself credit, for when this list is used in large compilation hosts-type files (Although they are fully allowed by my licence to use this list, it'd be nice for me and end-users to see where it's being used, as a few of them do not credit their sources) ———
 ||if-a-large-hosts-file-contains-this-entry-then-it.uses-dandelion-sprouts-anti-malware-list-as-a-source-list.data^$document
+!#if !adguard
+!#endif
 ! Placeholder line for alternate list versions
 !#endif
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
@@ -15128,7 +15204,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 30September2021v1-Beta
+! OriginalVersion: 01October2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -15331,7 +15407,7 @@ $removeparam=pcampaignid
 $removeparam=igshid
 $removeparam=curator_clanid
 ||steampowered.com^$removeparam=ser
-$removeparam=snr
+$removeparam=snr,domain=~thalmaier.de
 ! https://www.bing.com/search?q=hello&sp=-1&pq=hello&sk=&sc=8-5&qs=n (04/03/2021)
 ||bing.com^$removeparam=sp
 $removeparam=sc,domain=bing.com|qvc.com
