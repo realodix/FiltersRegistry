@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 21.10.52
+! OriginalVersion: 21.10.57
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 02 Oct 2021 15:21 UTC
+! Last modified: 02 Oct 2021 18:30 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -1345,6 +1345,12 @@ _GIF1200x120-
 ###close-floatads
 ###close-floatadsbawah
 ###desktop-iklan
+###div-ad-mediumrectangle_1
+###div-ad-mediumrectangle_2
+###div-ad-mediumrectangle_3
+###div-ad-read_body_1
+###div-ad-read_body_2
+###div-ad-small_rectangle_1
 ###div-ad-video_detail
 ###div-banner-video_detail
 ###div-iklan-video_detail
@@ -2389,7 +2395,6 @@ _GIF1200x120-
 ##.banner-desktop-hide-mobile
 ##.banner-footer-ads
 ##.banner-footer-iklan
-##.banner-header
 ##.banner-header-item
 ##.banner-home-headline-bottom
 ##.banner-iklan
@@ -3884,6 +3889,7 @@ _GIF1200x120-
 ##img[width="905"][height="1280"]
 ##img[width="950px"][height="100px"]
 ~fjb.kaskus.co.id##.ads__banner
+~serbada.com##.banner-header
 ~doxadigital.com##.banner-top
 ~iklanpopuler.com,~ziyata.com##[src*="/iklan/"]
 ||accesstrade.co.id^$third-party
@@ -4515,6 +4521,7 @@ radioonline.co.id##.add-box-top
 lampungpro.co##.add-img
 dialeksis.com##.add-space
 nonton.com##.adds
+suara.com##.adds-top
 sindonews.com##.adtp
 kumparan.com##.adunitContainer:upward(2)
 detik.com##.adv
@@ -12502,13 +12509,15 @@ kompasiana.com##.read-artikel .video-pilihan
 kompas.com##.read__article .ivs-wrap
 kompas.com##.read__article .video-box-wrap
 grid.id##.videoPlaylistPlugClass-carousel
+suara.com##article #dailymotion-widget
+matamata.com##article .dailymotion-cpe
 cnbcindonesia.com,insertlive.com##article .sisip_embed_sosmed
 detik.com##article .sisip_video_ds
 detik.com##article .video20detik_0
 ||20.detik.com/embed/$subdocument,domain=~20.detik.com|~adsmart.detik.com
 ||cnbcindonesia.com/embed/video/$subdocument,domain=cnbcindonesia.com
 ||dailymotion.com/embed/*&mute=true$subdocument,domain=viva.co.id
-||dailymotion.com/embed/*?ads_params=$subdocument,domain=medanheadlines.com
+||dailymotion.com/embed/*?ads_params=$important,subdocument,domain=matamata.com|medanheadlines.com
 ||dailymotion.com/player/$subdocument,domain=kompasiana.com
 ||embed.rctiplus.com/live/rcti/$subdocument,domain=sulselsatu.com
 ||haibunda.com/embed/video/$subdocument,domain=haibunda.com
