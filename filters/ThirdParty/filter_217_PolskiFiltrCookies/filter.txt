@@ -6,8 +6,8 @@
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies i EasyList/AdGuard Base!
 ! Collaborators: MajkiIT, F4z, xxcriticxx, blocker999, hawkeye116477, krystian3w
 ! Homepage: https://www.certyficate.it/
-! OriginalVersion: 2021.9.26.0
-! Last modified: Sun, 26 Sep 2021, 22:56 UTC+02
+! OriginalVersion: 2021.10.1.1
+! Last modified: Fri, 01 Oct 2021, 20:36 UTC+02
 ! Expires: 2 days
 ! Support:
 !   Email => errors@certyficate.it
@@ -18,7 +18,7 @@
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0)
 ! Copyright © 2021 Certyficate IT & Polish Filters Team
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock/
-! v.2021.9.26.0 aktualizacja: nie, 26 wrz 2021, 22:56 UTC+02
+! v.2021.10.1.1 aktualizacja: pią, 01 paź 2021, 20:36 UTC+02
 !
 !
 ! Specyficzne reguły ukrywające
@@ -926,6 +926,7 @@ eurostyl.com.pl###euroCookieInfo
 eurzad.gorzow.pl,farmanoe.pl,passa.media.pl##.popup-overlay
 eu.alcatelmobile.com,start.me##.cookiebar
 eu.community.samsung.com###custom-header-cookie
+eu.crucial.com##[lang*="en-pl"] div#_evidon_banner.evidon-banner
 everhome.pl,gda.pl,sne.fc.pl,sne.olsztyn.pl,szwajcaria-kaszubska.pl,yogenfruz.pl##.shotimoo
 everydayme.pl##.cookie-consent-jolt
 ever.eu,ziaja.com###cookies-info
@@ -3857,6 +3858,7 @@ eu,pl#@#.js-cookies:not(body):not(html)
 eu,pl#@#.rodo-popup:not(body):not(html)
 fxpro.pl#@#.popup-cookies:not(body):not(html)
 goldenline.pl#@#.cookie-modal:not(body):not(html):not(.in):not(.mfp-hide)
+goodram.com#@##cookie-container
 gtv.com.pl#@##panel_cookie_dol
 kpcen-torun.edu.pl,ranking.perspektywy.pl#@##cookieModal:not(.countryCookieModalContainer):not(.idcac)
 lomza.pl#@##komunikat-cookie
@@ -4152,6 +4154,9 @@ gmina-aleksandrow.pl,grabow.pl,raciazek.pl###g_toplayer
 goldenline.pl###profiling-agreement, .modal-backdrop
 goldenline.pl###react-portals:has(.cookie-modal)
 goldenline.pl,sklepyinfo.pl,www.thomas-krenn.com,zsti.zsti.civ.pl#$#body[style*="overflow"] { overflow: auto !important; }
+goodram.com##div#cookie-container
+goodram.com#%#//scriptlet('ubo-rc.js', '.cookie-opened', 'body', 'complete')
+goodram.com#$#.cookie-opened { position: fixed; overflow: auto !important; }
 gryonline.wp.pl,tv.pudelek.pl#%#//scriptlet('ubo-set.js', 'wp_no_consent_screen', 'true')
 handluj.com,tarnobrzeg.info###rodo-message, .modal-backdrop
 hendi.pl##.modal__outer--rodo, .modal--open
