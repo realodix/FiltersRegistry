@@ -15260,7 +15260,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 02October2021v2-Beta
+! OriginalVersion: 02October2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -15392,7 +15392,7 @@ $removeparam=eblink
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-987226
 ! https://contabo.com/?show=vps&utm_source=cj&utm_medium=affiliate&utm_campaign=vps&source=affiliate&AID=12454632&PID=8533995&SID=&CJEVENT=1999e98a465411eb825b03900a180510 (25/12/2020)
 $removeparam=AID
-$removeparam=/CJEVENT/i
+$removeparam=/^CJEVENT=/i
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-969819
 ! (Exception: booking.com in Firefox; see #256)
 $removeparam=aid,domain=adguard.com
@@ -15436,7 +15436,7 @@ $removeparam=hashb
 $removeparam=hashc
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 $removeparam=irgwc
-$removeparam=/clickid/i
+$removeparam=/^clickid=/i
 ! https://www.alibaba.com/toprankedsellers/index.html?spm=a2700.8293689.0.0.2ce267afXoR8Ya&cardId=15000000051127726082&topOfferIds=62108344908&categoryIds=44&tracelog=from_home_category (01/03/2021)
 $removeparam=spm
 ||alibaba.com^$removeparam=categoryIds
@@ -15534,7 +15534,7 @@ $removeparam=itid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-715449
 $removeparam=full_trSrc
 $removeparam=cmpg_for_af
-$removeparam=/ICID/i,domain=~api.mapbox.com
+$removeparam=/^ICID/i,domain=~api.mapbox.com
 $removeparam=/^utm-/
 $removeparam=aff
 $removeparam=mc_cid
@@ -15569,14 +15569,14 @@ $removeparam=cmpid
 ! https://www.theguardian.com/technology/2021/may/11/apple-accused-of-breaking-uk-competition-law-by-overcharging-for-apps?CMP=Share_AndroidApp_Other
 $removeparam=CMP
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-750434
-$removeparam=/OCID/i,domain=~youtube.com
+$removeparam=/^OCID=/i,domain=~youtube.com
 $removeparam=tduid,domain=~redir.tradedoubler.com
 $removeparam=irclickid
 $removeparam=irclicid
 $removeparam=intcmp
 ||xbox.com^$removeparam=xr
 $removeparam=sourceid,domain=~google.*
-$removeparam=/sharedid/i
+$removeparam=/^sharedid=/i
 $removeparam=affiliates_ad_id
 $removeparam=campaign_id,domain=~kochava.com
 $removeparam=wmlspartner
@@ -15707,7 +15707,7 @@ $removeparam=ad_medium
 ||malwarebytes.com^$removeparam=guard
 ||malwarebytes.com^$removeparam=x-source
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
-$removeparam=/adgroup/i
+$removeparam=/^adgroup=/i
 $removeparam=ads_name
 $removeparam=ad_type
 $removeparam=CAWELAID
@@ -15893,7 +15893,8 @@ $removeparam=/^dpg_/
 ! https://www.asahi.com/sp/articles/ASP8K5CZ3P8KUTFK011.html?iref=comtop_7_01
 ||asahi.com^$removeparam=iref
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1151326
-||malwarebytes.com^$removeparam=/x-source$/
+||malwarebytes.com^$removeparam=x-source
+||malwarebytes.com^$removeparam=ADDITIONAL_x-source
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1155198
 $removeparam=sm12
 $removeparam=ts,domain=x-kom.pl|al.to|combat.pl
@@ -16006,7 +16007,7 @@ $removeparam=/^srcCode/i,domain=jcrew.com|magellans.com|teleflora.com|tigerdirec
 $removeparam=scd,domain=ashleystewart.com
 $removeparam=CJPIXEL
 $removeparam=LSNPUBNAME
-$removeparam=/affiliateID/i
+$removeparam=/^affiliateID=/i
 $removeparam=affiliate_id
 $removeparam=affiliate_location_id
 $removeparam=afn_sr
