@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/94838
+healthians.com##.bottomsticky
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95808
 magazine.skyeng.ru##.tg-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94286
@@ -17467,6 +17469,10 @@ amp-reddit-com.cdn.ampproject.org##.AppSelectorModal__body
 reddit.com#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("bannerLastClosed", "Thu Sep 16 2030 16:46:52 GMT+0300") } } catch (ex) {} })();
 reddit.com#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("pillLastClosed", "Thu Sep 16 2030 16:46:52 GMT+0300") } } catch (ex) {} })();
 !
+tiktok.com#$#body[style="overflow: hidden;"] { overflow: auto!important; }
+tiktok.com#$#div[class^="backdrop-"] { display: none!important; }
+tiktok.com#$#div[class^="jsx-"][style="bottom:49px"].footer-guide { display: none!important; }
+tiktok.com#$#div[class^="jsx-"].tiktok-bottom { bottom: 0px!important; }
 moneycontrol.com###download_app_banner_btn
 allegrolokalnie.pl##header.masthead[class*="--app-view"][class*="-mobile-masthead"] a.topheader
 allegrolokalnie.pl#%#(function() { try { if ("undefined" != typeof sessionStorage) { sessionStorage.setItem("lokalnie.is_top_header_hidden", "true") } } catch (ex) {} })();
@@ -18898,6 +18904,7 @@ sodapdf.com##.be-tooltip
 ! Specific sites
 !######### Subscription popups add to subscriptions.txt #########
 !
+portea.com##.modal
 sddhelp.ru##.modal--discount
 tgju.org###popup-layer-container
 lifestyle.livemint.com##div[class^="newsletter"]
@@ -26151,6 +26158,7 @@ quinhillyer.com,johnbiver.com,jasonmattera.com,ipatriot.com,hooligancharters.com
 ##.widget_blog_subscription
 ~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+vermontbiz.com#?#.region-inner > .block:has(> div.block-inner > div.content > div#mc_embed_signup)
 sddhelp.ru###subscription
 letoile.ru#$#div[data-popup-id="subscribed-popup"] { display: none!important; }
 letoile.ru#$#body { overflow: visible!important; }
@@ -30610,6 +30618,7 @@ naobzorah.ru###shopBlock
 .ru/proxy_*.php?p___=*&part_url=*.php?callback=*&token=*&iso=
 .net/proxy_*.php?p___=*&part_url=*.php?callback=*&token=*&iso=
 !
+||tars-file-upload.s*.amazonaws.com/bulb/js/widget.js$domain=healthians.com
 sddhelp.ru##.hi_help
 muzofond.fm##.feedback-main-container
 ||nauchniestati.ru/wp-content/themes/express/assets/js/chat.js
