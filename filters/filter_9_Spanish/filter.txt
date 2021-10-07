@@ -1522,6 +1522,7 @@ lanacion.com.ar#?#.lay-sidebar > .sidebar__aside > .com-banner:upward(1)
 lanacion.com.ar#?#.lay-sidebar > .sidebar__aside > .mod-banner:only-child:upward(1)
 rojadirectatv.pro#?#div.encabezados:has(> h3:contains(Publicidad))
 pirlotvonlinehd.com#?#div.encabezados:has(> h2:contains(PUBLICIDAD))
+noticialdia.com#?#ul[class^="widgets"] > li.widget:has(> div.textwidget ins.adsbygoogle)
 primedeportes.es#?#p[align="center"] > font:contains(/^advertising/)
 forum.lfspro.net#?##ipsLayout_mainArea > section:has(> ol > li > h2 > a:contains(LFSPro Ads))
 forum.lfspro.net#?#.ipsList_reset > li.ipsWidget:has(> h3:contains(LFSPro Ads))
@@ -1692,6 +1693,9 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/96396
+baixartorrents.org#%#//scriptlet("abort-on-property-read", "redirectpage")
+baixartorrents.org#%#//scriptlet("abort-on-property-read", "initPopunder")
 ! popup
 muyzorras.com#%#//scriptlet("prevent-window-open")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91647
@@ -1895,6 +1899,8 @@ repelis.net#%#Object.defineProperty(window,'adbClick',{value:function(){}});
 !------- CSS fixes --------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/96396
+androidapktop.com#$##colunas { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94435
 hardware.com.br#$#.is_advertising .site-advertising { margin: 5px auto 0 !important; }
 hardware.com.br#$#.hd-ad--background { display: none !important; }
@@ -2109,6 +2115,7 @@ http://adw.
 ! Incorrectly blocked domains can be excluded using regex(synchronize this regexp in all filters)
 /^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com)).*$/$third-party,script,domain=thepiratefilmestorrent.biz|serieslatinoamerica.tv|pelispop.com|superflix.net
 !
+||baixartorrents.org/subs/popup.js
 portugues.com.br##.pub-left
 portugues.com.br##.pub-300x250
 portugues.com.br##.pub_insert_content
@@ -2309,6 +2316,8 @@ pdfslide.tips##div[class*="gg_ads"]
 zonarutoppuden.com##.publibox
 lacuarta.com##.lateralads
 lacuarta.com##.centralads
+noticialdia.com###widget_A
+noticialdia.com##.widget_execphp
 puraciudad.com.ar##.oxte-pubadban
 puraciudad.com.ar##div[data-adid]
 puraciudad.com.ar##.sidebar > div.widget_oxte
