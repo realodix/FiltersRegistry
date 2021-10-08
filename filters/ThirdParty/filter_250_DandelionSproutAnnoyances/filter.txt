@@ -6950,7 +6950,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ||if-a-large-hosts-file-contains-this-entry-then-it.uses-dandelion-sprouts-anti-malware-list-as-a-source-list.data^$document
 !#if !adguard
 ! Title: AdGuard Safe Browsing Reverse-Engineered
-! OriginalVersion: 03October2021v1-Extension
+! OriginalVersion: 08October2021v1-Extension
 ! Description: This is a list of queries sent to «Dandelion Sprout's Official DNS Server» that were blocked by AdGuard's very secretive anti-malware module (along with the dates they were first observed), and which I'm publishing for the benefit of uBlock Origin users, and to help de-mystificate the module, even if it contains less than 0.1% of the module's full and secret blocklist.
 ! Domains first seen 20th of July 2021
 ||oxtop.ru^
@@ -7004,6 +7004,18 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ||msplash6.downdepo.com^
 ||censor.be^
 ||weddingstory.gr^
+! 8th of October
+||123movieshub.re^
+||filmhdplay.stream^
+||fullmoviedvd.rip^
+||hdqputlocker.com^
+||movies.123hdfree.com^
+||netmovies.co^
+||pirateiro.com^
+||putlockerxyz.com^
+||vanmovies4k.com^
+||watchfree.ws^
+||watchputlocker.site^
 !#endif
 ! Placeholder line for alternate list versions
 !#endif
@@ -15373,7 +15385,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 07October2021v1-Beta
+! OriginalVersion: 08October2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -16449,8 +16461,12 @@ $removeparam=hpt,domain=cnn.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1424772
 $removeparam=depth_1-utm_source
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
+||baidu.com^$removeparam=/^rsv/
+||baidu.com^$removeparam=f
+||baidu.com^$removeparam=inputT
+||baidu.com^$removeparam=issp
+||baidu.com^$removeparam=oq
 ||baidu.com^$removeparam=tn
-||baidu.com^$removeparam=rsv_iqid
 ! https://www.frisktpust.no/collections/interior/products/umi-ergonomisk-kontorstol?cmp_id=14758715696&adg_id=128927650218&kwd=ergonomisk%20kontorstol&device=m
 $removeparam=cmp_id
 $removeparam=adg_id
