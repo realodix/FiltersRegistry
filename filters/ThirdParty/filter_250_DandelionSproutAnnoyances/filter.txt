@@ -427,7 +427,7 @@ yelp.*##.menu-bar-pitch_open-in-app
 linkedin.com#$?#html,body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 07October2021v1-Beta
+! OriginalVersion: 07October2021v2-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1640,7 +1640,9 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||fortnitecode.online^$all
 ||cd.org^$document
 ! https://www.virustotal.com/gui/file/78f490e503c86eaaff5760197b9ff5308ed6e03161af13194a6c1e0cd95422de/community
-||23.94.26.138^$document
+! https://github.com/DandelionSprout/adfilt/commit/f7f114945c83b339be5cdd848e229680d9918abb#commitcomment-57642875
+||23.94.26.138^$all
+||ispco.shop^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -15134,7 +15136,7 @@ fandom.com#$?#:root { --theme-body-background-image: none !important }
 ##.SnowFlakesBg:not(html, body)
 ##foxfield-xmas:not(html, body)
 ! Title: 🌭 Falukorv List
-! OriginalVersion: 02October2021v1-Beta
+! OriginalVersion: 07October2021v1-Beta
 ! Expires: 10 days
 ! Description: Originally created because some PR-Chinese filterlist makers decided to block Falun Gong websites in their anti-ad lists for reasons that had absolutely nothing to do with ads, tracking or malware, and despite the sites already being megablocked within their country; this list has since then also expanded to cover other lists' entries that makes one think "Wait, hold up", due to how misplaced they are.
 ! The list is not designed to be used together with anti-'social network' lists.
@@ -15238,6 +15240,10 @@ www.m.vk.com$badfilter
 @@://global.sitesafety.trendmicro.com^
 @@://www.fortiguard.com^
 @@||dbl.oisd.nl^$elemhide
+@@||vulners.com^
+!#if false
+@@||testsafebrowsing.appspot.com^
+!#endif
 ! https://wiki.manjaro.org/index.php/Pacman-mirrors#Use
 @@://wikipedia.org^
 @@||github.com^
