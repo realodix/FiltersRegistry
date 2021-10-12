@@ -1,7 +1,7 @@
 !
-! OriginalVersion: 202110110747
+! OriginalVersion: 202110120906
 ! Title: EasyPrivacy
-! Last modified: 11 Oct 2021 07:47 UTC
+! Last modified: 12 Oct 2021 09:06 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://easylist.to/
 ! Licence: https://easylist.to/pages/licence.html
@@ -3394,6 +3394,7 @@
 /processUserCookie?
 /prod-analytics.
 /prod-client-js-logger/*
+/prod/log_preprocess
 /prodtracker?
 /production/analytics.
 /profile_tracker.
@@ -10383,6 +10384,8 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||branch.io^$third-party
 ||brandcdn.com/pixel/
 ||bravenet.com/counter/
+||browser.events.data.microsoft.com^
+||browser.pipe.aria.microsoft.com^
 ||bs.yandex.ru^
 ||bucklemail.com/a/$image
 ||bufferapp.com/wf/open?upn=$third-party
@@ -10473,7 +10476,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||cllctr.roistat.com^
 ||cloudapp.net/l/
 ||clouderrorreporting.googleapis.com^
-||cloudflare.com/cdn-cgi/trace$third-party,domain=~isbgpsafeyet.com
+||cloudflare.com/cdn-cgi/trace$third-party,domain=~isbgpsafeyet.com|~wyndhamdestinations.com
 ||cloudfront-labs.amazonaws.com^
 ||cloudfront.net*/keywee.min.js
 ||cloudfront.net*/sp.js|
@@ -10728,7 +10731,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||data.circulate.com^
 ||data.gosquared.com^$third-party
 ||data.imakenews.com^$third-party
-||data.microsoft.com/OneCollector/
 ||data.minute.ly^
 ||data.nexxt.com^
 ||data.queryly.com^
@@ -10835,7 +10837,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||ensighten.com/error/e.php?
 ||epimg.net/js/gdt/
 ||epl.paypal-communication.com^$script
-||epnt.ebay.com^
 ||epromote.co.za/track/
 ||erne.co/tags?
 ||errors.snackly.co^
@@ -12119,6 +12120,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||wco.crownpeak.com^
 ||weather.ca/counter.gif?
 ||web-soft.in/counters/
+||web.vortex.data.microsoft.com^
 ||web1.51.la^
 ||webedia.fr/js/gs.js
 ||weblog.livesport.eu^
@@ -13283,7 +13285,6 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||arstechnica.com/keys/arstechnica.com/p.js
 ||atrack.allposters.com^
 ||ats.alot.com^
-||auth4-eng.spankbang.com^
 ||avitop.com/aviation/hitlist.asp
 ||baidu.com^*/mwb2.gif?
 ||baidu.com^*/wb.gif?
@@ -13479,6 +13480,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||fp.measure.office.com^
 ||fpa-cdn.arstechnica.com^
 ||fpa-events.decrypt.co^
+||fpt.microsoft.com^
 ||france24.com^*/_ws/urgent
 ||freebiesms.com/tracker.aspx?
 ||freepik.com/_ga?
@@ -13575,6 +13577,7 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||intent.cmo.com.au^
 ||intent.goodgearguide.com.au^
 ||intent.pcworld.idg.com.au^
+||internal-ana.spankbang.com^
 ||internetslang.com/jass/
 ||intg.snapchat.com^
 ||intuitcdn.net/analytics/
@@ -13655,13 +13658,12 @@ $third-party,xmlhttprequest,domain=opensubtitles.org
 ||metroweekly.com/tools/blog_add_visitor/
 ||mi.academy.com/p/js/1.js
 ||miao.baidu.com^
-||microsoft.com/collect/
-||microsoft.com/Collector/
 ||mms.cnn.com^
 ||modanisa.com/al/j/analytics.js
 ||moneycontrol.com/news/services/get_comscore_pageview/
 ||monitor.channel4.com^
 ||mov.t-mobile.com/p/js/1.js
+||movetv.com/sa-events
 ||mps.nbcuni.com/request/page/json/params/*&adunits=$xmlhttprequest
 ||msn.com/collect/
 ||msn.com/OneCollector/
@@ -14361,6 +14363,8 @@ $csp=child-src 'none'; frame-src *; worker-src 'none',domain=skyback.ru|szukajka
 ! *.omtrdc.net (needs to be removed)
 ! *.demdex.net (needs to be removed)
 ! *.bred4tula.com (needs to be removed)
+!
+||primate.dmarcdigests.com^
 !
 ! a8.net (https://github.com/AdguardTeam/cname-trackers/blob/master/trackers/a8_net.md)
 ||a8.01cloud.jp^
