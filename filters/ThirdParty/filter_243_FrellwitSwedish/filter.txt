@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-10-13 10:34:17 CEST
+! Last modified: 2021-10-13 18:34:40 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -55,6 +55,7 @@ airam.fi#$#.body-fixed { position: unset !important; }
 aktivtraning.se,digitalfotoforalla.se,iform.se,illvet.se,militarhistoria.se,pctidningen.se,popularhistoria.se,viivilla.se,vinbanken.se#$#.noScroll, .noScroll body { overflow:unset!important }
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,pctidningen.se,popularhistoria.se#$?#li:has(.content-label:has-text(/annons/i)) { remove: true; }
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamhalle.se,fastighetsnytt.se,market.se,resume.se##.slot-panorama:upward(1)
+aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamhalle.se,fastighetsnytt.se,market.se,resume.se##article:matches-css-after(content:/Annonssamarbete/i)
 aktuellsakerhet.se##.td-adspot-title-span:upward(1)
 aktuellsakerhet.se##a[href*="reklamsamarbete"]:upward(.td_block_wrap)
 alicestenlof.com,annicaenglund.se,ellinorlofgren.se,linnherbertsson.se,pricerunner.se#$#.noscroll { overflow: initial !important; }
@@ -124,7 +125,7 @@ di.se,dn.se,expressen.se#$#body.didomi-popup-open { overflow:unset!important }
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se#%#//scriptlet('ubo-acis.js', 'showConsentDlg')
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##.carousel-caption:has(.vicky-category-label:has-text(/spons/i))
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##.featurette:has(.vicky-video-infobox-label:has-text(/spons/i))
-dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##.vicky-post-whitebox:has(.vicky-whitebox-label-text:has-text(/spons/i))
+dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##div[class*="vicky-whitebox"]:has-text(/spons/i):upward(a)
 djungeltrumman.se#%#//scriptlet('ubo-nano-sib.js', 'dt_fullpage_ad')
 djungeltrumman.se##.label-sponsored:upward(.post)
 dromhemochtradgard.se##.native-wrapper:upward(1)
@@ -281,6 +282,7 @@ norpan.se,skrattsajten.com#%#//scriptlet('ubo-acis.js', '$', 'e.preventDefault')
 nouw.com##.box.slide.active:has(.badge:has-text(/annons/i))
 nouw.com##.Container_blogPost:has(em:has-text(/reklamsamarbete/i))
 nouw.com##.magazine-grid-item:has(.badge:has-text(/annons/i))
+nsk.se,skd.se##.sponsrat-bar:upward(1)
 nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 nyheteridag.se##.article-inner:has(h2:has-text(/samarbetslänkar/i))
 omni.se,omniekonomi.se#%#//scriptlet('ubo-aeld.js', 'omniPulseLoaded')
@@ -298,6 +300,7 @@ qx.se##.col-4:has(script)
 qx.se##.qxa-container:upward(1)
 realtid.se##.field-item:has-text(/partner content/i):upward(article)
 realtid.se#$#.modal-open { overflow: unset !important; }
+resume.se##aside a[href$="/byracoachen/"]:upward(2)
 sakochliv.se#%#//scriptlet('ubo-acis.js', 'checkCampaignCookie')
 se.azrhymes.com#%#//scriptlet('ubo-nostif.js', '.info-center')
 se.readly.com#%#//scriptlet('ubo-rc.js', 'cookie-consent')
@@ -1899,7 +1902,6 @@ nordiskradio.se###cookieWindow
 norpan.se,skrattsajten.com##.cookieScript
 norrahalland.se##.norra-leeads-ads,.egna_annonser_widget
 norrbotten.com##a[href*=".com/annons"], .td-ss-main-sidebar > .td-a-rec
-nsk.se,skd.se##.advert-widget
 nsk.se,skd.se##[data-teaser-section*="native"], .slideUp
 nvp.se##[class*="banner_"], .BottomBannerContainer
 nyadagbladet.se##.third-col, article[class*="sponsrad"]
