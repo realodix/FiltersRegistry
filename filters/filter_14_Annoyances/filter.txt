@@ -2504,7 +2504,7 @@ www.kinopoisk.ru##div[class^="styles_adBlockWarningRoot"]
 !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)
 ! www.kinopoisk.ru#%#//scriptlet("abort-on-property-read", "Object.prototype.mediaAds")
 ! www.kinopoisk.ru#%#//scriptlet("abort-on-property-read", "Object.prototype.createVideoBannerAdLite")
-www.kinopoisk.ru#%#//scriptlet("abort-on-property-read", "Object.prototype.Rtb")
+www.kinopoisk.ru#%#//scriptlet("abort-on-property-read", "Object.prototype.BannerHtmlBase")
 !
 ! Yandex.Turbo
 yandex.*##.page__result > p ~ div[class*="_type_partner "]
@@ -12637,7 +12637,7 @@ gusto.at,lustaufsleben.at,news.at,profil.at,vgn.at###cookieBgOverlay
 mediaset.it###cookieConsentApp
 dortmund.de###cookieNoteBox
 pornxs.com###cookiePolicyNoticeBox
-canlitv.vin,canlitv.mobi,sondakika.com,hastane.com.tr,haberler.com###cookiePolicyw
+canlitv.*,sondakika.com,hastane.com.tr,haberler.com###cookiePolicyw
 comunio.de###cookieUsageHint
 storytel.ae,storytel.com.tr,storytel.dk,storytel.es,storytel.fi,storytel.in,storytel.is,storytel.nl,storytel.no,storytel.pl,storytel.ru,storytel.se###cookieWall
 1fichier.com###cookie_box
@@ -25007,13 +25007,12 @@ login.yahoo.co.jp###ads
 ||kakaku.com/script/itemview/RdmReviewAd.js
 kakaku.com#?#.alignC > div.mTop10 > div[style="border:1px solid #ccc;"]:contains(-PR-)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94502#issuecomment-920307757
+www.kinopoisk.ru#?#div[class^="styles_root"] > div[data-tid]:has(> div[class*="blockClassName"] a[href*="trailer_promo"])
+www.kinopoisk.ru#?#div[class^="styles_root"] > div[data-tid] + div[class*="blockClassName"]:has(> div[class] a[href^="https://hd.kinopoisk.ru/?source"])
 www.kinopoisk.ru##.kinopoisk-header-featured-menu__item
 www.kinopoisk.ru##a[href="https://hd.kinopoisk.ru/?source=kinopoisk_head_button"]
 www.kinopoisk.ru##.desktop-layout-with-sidebar__header a[href^="https://hd.kinopoisk.ru/film/"]
 www.kinopoisk.ru##div[class^="trailer-promo"]
-www.kinopoisk.ru#?#.desktop-layout-with-sidebar__content > div[class]:has(> div[class] a[kind="plus"])
-www.kinopoisk.ru#$?#header[style*="header-height"] > div[class]:has(> a[href*="kinopoisk_selfpromo"]) { display: none !important; }
-www.kinopoisk.ru#$?#header[style*="header-height"] > div[class]:has(> a[href*="kinopoisk_selfpromo"]) + div[class] { margin-top: 0 !important; }
 ! kinopoisk.ru#?#iframe.yandex_music:upward(div.media-post-embed)
 ! kinopoisk.ru##.media-page-layout__trailer-promo
 ! https://github.com/AdguardTeam/AdguardFilters/issues/72673
