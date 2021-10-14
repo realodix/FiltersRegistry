@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-10-13 18:34:40 CEST
+! Last modified: 2021-10-14 15:45:05 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -227,7 +227,7 @@ koket.se##[class*="mosaic_item_wrapper"]:has([class*="sponsorLabel"])
 konsolnyheter.se#%#//scriptlet('ubo-acis.js', 'stopPrntScr')
 kultwatch.se#$#.js-preloader > .document, .js-preloader > .hero-section { opacity: 1 !important; visibility: visible !important; }
 kwiss.me##.square-item:has(.qz-quiz-sponsored)
-lajvo.se##.postCard:has-text(/bonusar|casino|betting/i)
+lajvo.se##.postCard:has-text(/bonusar|casino|betting|spelbranschen/i)
 lakartidningen.se,mobilanyheter.net#%#//scriptlet('ubo-set.js', 'MonsterInsights', 'undefined')
 leovegas.com#$##cookie-consent-banner + div[data-test-id="header"] { top: 0 !important; }
 lesscarbs.se###mid section.elementor-section:has(a[href*="/annonssamarbete/"])
@@ -325,6 +325,8 @@ spray.se#$#body { -webkit-user-select: text !important; user-select: text !impor
 startaochdriva.se##.latest-post:has(a[href*="/sponsrat"])
 studocu.com#$##page-container { user-select: auto !important; }
 studocu.com#$#.new-viewer-wrapper .p2hv { pointer-events: auto !important; }
+studocu.com#$#div[data-page-no][style*="filter"] { filter: none !important; user-select: auto !important; }
+studocu.com##span:has-text(/använder cookies/i):upward(div[class^="bar-"])
 svampguiden.com##.panel:has(.label-sponsor)
 svensk-seo.se#%#//scriptlet('ubo-noeval.js')
 svenskgolf.se##.partnerLabel:upward(.highlight)
@@ -480,8 +482,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1374,7 +1376,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /wp-content/themes/keremiya1/js/script.js
 /wp-content/uploads/*/public/assets/js/advanced.js$script
 /wp-content/uploads/*annons$image
-/wp-content/uploads/*banner$image,domain=alltomhif.se|borattforum.se|brollopsmagasinet.se|bussmagasinet.se|customerinsider.se|danstidningen.se|dental24.se|guldkanalen.se|investerarbrevet.se|katerinamagasin.se|ljuskultur.se|marsta.nu|pakryss.se|polistidningen.se|sff.nu|sportpanelen.se|tekniknytt.se|turismnytt.se|vardfokus.se|viralsweden.com
+/wp-content/uploads/*banner$image,domain=alltomhif.se|borattforum.se|brollopsmagasinet.se|bussmagasinet.se|customerinsider.se|danstidningen.se|dental24.se|guldkanalen.se|investerarbrevet.se|katerinamagasin.se|ljuskultur.se|marsta.nu|pakryss.se|polistidningen.se|sff.nu|sportpanelen.se|svensktidskrift.se|tekniknytt.se|turismnytt.se|vardfokus.se|viralsweden.com
 /wp-content/uploads/*betfair$image
 /wp-content/uploads/*bethard$image
 /wp-content/uploads/*betting$image,domain=hockeybladet.nu|kulturbloggen.com|newsvoice.se|nyadagbladet.se|spelochfilm.se
@@ -1632,6 +1634,7 @@ driva-eget.se,foretagande.se,hockeymagasinet.com,revisionsvarlden.se,runnersworl
 drivkraftsverige.se##.policy-disclaimer
 duochjobbet.se###topbanner
 duplotryck.se##.wof-overlay, .wof-wheels
+edgeflyfishing.com,jaktsidan.se###ipsLayout_mainArea > iframe
 ehandel.se##.commercial-row, .aside-image-with-link, .post-container-sponsored, aside a[href*="/branschnyheter/"]
 ekonominyheter.se###lblock-ads
 elektronikforumet.com##td > a[href*="bildelar"][target="_blank"]
@@ -1794,7 +1797,6 @@ it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##a[onclick^=
 itseniorerna.se##.tm-preload
 jaktjournalen.se##.activate-notifications-container.shown
 jaktplay.se##.jaktplay-ad
-jaktsidan.se###ipsLayout_mainArea > iframe
 javligtgott.se##a[href="https://klimatkompensera.se"]
 javligtgott.se#@#.category-samarbeten:not(body):not(html)
 jennysmatblogg.nu,lindasbakskola.se,mykitchenstories.se,zeinaskitchen.se##.panorama-sticky, .sticky-area
@@ -1991,6 +1993,7 @@ sporttv.nu##a[onclick*="bannerClick"]
 spray.se##.column-left > .article-partial
 spray.se##[class^="ads-"], [class*="article-casino"]
 startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"]
+studocu.com##div[class^="preview-banner"]
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
 svd.se###mega-ad-wrapper, .Container--ad, .theme-Native, .AdWrapper, .AdPositionData
 svenskafans.com##.puff__ad-heading
@@ -1998,7 +2001,7 @@ svenskfast.se##.cookie-law__wrapper
 svenskhistoria.se##.widget_et_ads, .module-etads, #text-13, #block-4, a[target="_blank"][rel="noopener noreferrer"], a > img[width="300"][height="250"], a > img[width="800"][height="175"]
 svenskorientering.se###RightDiv
 svensktgolfforum.se##[data-ad-id]
-svensktidskrift.se###bannercolumn
+svensktidskrift.se###bannercolumn, img[title^="Annons"]
 sverigesingenjorer.se##.cookie-layer
 sverigeskonsumenter.se###cookie-box
 sverigesnatur.org##div[id^="sverigesNaturPopup"]
@@ -2281,7 +2284,6 @@ yrkesbilen.se##.header-banner-top
 ||eacdn.com/TrafficOpt/$script
 ||easyweb.se/stats/$image
 ||ecomm.events/i.js
-||edgeflyfishing.com^$image,domain=jaktsidan.se
 ||elfsight.com/events/views
 ||embed.lpcontent.net/leadboxes$script
 ||emg-services.net/public/scripts/bundles/emg-desktop$script
