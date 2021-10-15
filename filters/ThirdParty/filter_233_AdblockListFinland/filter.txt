@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 14October2021v1
+! OriginalVersion: 15October2021v3
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -40,7 +40,6 @@ www.suomi24.fi#$#div[width="100%"] + div[width="50%"] + div[width="50%"] + div[c
 www.suomi24.fi#$#div[width="100%"] + div[width="50%"] + div[width="50%"] + div[width="50%"] > div[class^="ThreadGridItemWrapper__CardWrapper"] > div { padding-left: 15px !important }
 www.suomi24.fi#$#div[width="50%"] + div[width="50%"] + [width="50%"] + div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] * div[class^="ThreadCardFooter__CardFooter"] > div[class^="ThreadCardFooter__ColumnContainer"] { padding-right: 15px !important }
 ! HTML filters for Firefox
-ampparit.com$$script[tag-content="initAlmaAds"][max-length="262144"]
 ! -----SPECIFIC FILTERS END-----
 ! -----NETWORK FILTERS-----
 ||doubleclick.net^$xmlhttprequest,redirect=nooptext,domain=puhekupla.com
@@ -119,7 +118,6 @@ _mainosnappi.
 ###ylamainokset
 ###ylamainos
 ##.adbox_content
-##.advertorial-teaser
 ##.bottomads
 ##.card--native
 ##.dfpBoxBottom
@@ -799,6 +797,7 @@ voice.fi#?#div.item:-abp-has(.sponsored)
 vuodatus.net###fb-root + div > div[style="background-color: #fff; margin: 0 auto; padding: 20px; display: table; min-width: 300px; max-width: 100%; font-family: 'Open Sans', sans-serif; font-size: 14px;"]
 wizhdsports.fi##.widget_media_image
 www.io-tech.fi###text-7
+www.is.fi##.advertorial-teaser
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###homeBottomBoxBanner
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###homeTopBoxBanner
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###huge_banner
@@ -814,6 +813,8 @@ www.nettimokki.com##div.nc_r_banner
 www.nettimoto.com###smallViewHouseBanner
 www.suomi24.fi##.asp
 www.suomi24.fi##div[class^=Vaalikone__HeaderAdWrapper]
+www.suomi24.fi#?#div[class^="HomePage__RightColItem"]:-abp-has(> div[class^="AdLivewrapped__AdWrapper"])
+www.suomi24.fi#?#div[class^="HomePage__RightColItem"]:-abp-has(> div[class^="Lainavertailu__Container"])
 www.suomi24.fi#?#p:-abp-has(+ p + .asp)
 www.ts.fi##[class="tsv3-c-common-article__contentad notloaded"]
 www.ts.fi##div[class*="tsv3-c-common-smart noad-hideaction"]
@@ -1062,3 +1063,5 @@ mtvuutiset.fi#@##onetrust-banner-sdk
 mtvuutiset.fi#@##onetrust-consent-sdk
 ! https://github.com/easylist/easylist/pull/9343
 @@||almamedia.fi/almacmp/$script
+! https://github.com/easylist/easylist/pull/9396
+##.advertorial-teaser
