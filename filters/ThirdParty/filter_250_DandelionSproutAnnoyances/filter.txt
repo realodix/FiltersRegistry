@@ -7130,7 +7130,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 12October2021v1-Beta
+! OriginalVersion: 14October2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -7171,7 +7171,7 @@ www.google.*##.g:has(a[href*=".bid/"])
 www.google.*##.g:has(a[href*=".top/"])
 ! ——— You know those ultra-fraudulent auto-generated things that clutter up Google searches? These entries should remove some of them. ———
 www.google.*##.g:has(a[href*=".php?xxx="])
-www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="carrefour.it"], [href*="gospesa.it"]))
+www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
 www.google.*##.g:has(a[href^="https://books.google."])
 !#endif
 !#if env_mobile
@@ -15635,7 +15635,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 14October2021v1-Beta
+! OriginalVersion: 15October2021v1-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -15889,7 +15889,6 @@ $removeparam=tracking_source
 ! https://www.theverge.com/2021/4/16/22387492/google-floc-ad-tech-privacy-browsers-brave-vivaldi-edge-mozilla-chrome-safari?scrolla=5eb6d68b7fedc32c19ef33b4 (20/04/2021)
 $removeparam=scrolla
 ! https://dagligvarehandelen.no/sites/default/files/styles/wysiwyg_full_width/public/70x100_cocashake_skisse_0.jpg?itok=k31KtKuB (30/04/2021)
-$removeparam=itok
 ! https://www.nytimes.com/2021/04/27/business/media/new-york-post-kamala-harris.html?smtyp=cur&smid=fb-nytimes&fbclid=IwAR1mH8MOV2qhIoD5pdX9gbEWedBAdS4sYOXB0yHJi3tZZ6Hg5r0Us-EEv0s (28/04/2021)
 $removeparam=smtyp
 ! https://techcrunch.com/2021/04/30/riot-games-updates-its-privacy-notice-to-start-developing-voice-comms-moderation/?tpcc=ECTW2020
