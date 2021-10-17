@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 16October2021v3
+! OriginalVersion: 17October2021v2
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -51,6 +51,7 @@ afterdawn.com,download.fi,high.fi,muropaketti.com#%#//scriptlet('ubo-nostif.js',
 gamereactor.fi#%#//scriptlet('ubo-aopr.js', 'adblockEnabled')
 happypancake.fi#%#//scriptlet('ubo-aopr.js', 'Object.prototype.adUnits')
 iltalehti.fi#$?#.double-column > a[href]:has(.article-container:has-text(Kaupallinen yhteistyö)) { remove: true; }
+kiuruvesilehti.fi,urjalansanomat.fi#%#//scriptlet('ubo-aeld.js', 'scroll', 'innerHeight')
 mikrobitti.fi#%#//scriptlet('ubo-nostif.js', 'bait')
 proxyproxy.fi,pirateproxy.fi#%#//scriptlet('ubo-nowoif.js')
 savonsanomat.fi,ess.fi,itahame.fi,ksml.fi#%#//scriptlet('ubo-nostif.js', 'linkEl')
@@ -59,10 +60,6 @@ savonsanomat.fi,ess.fi,itahame.fi,ksml.fi#%#//scriptlet('ubo-nostif.js', 'linkEl
 ! https://github.com/easylist/easylist/pull/8317
 pelaaja.fi#%#//scriptlet('ubo-aopr.js', 'ga')
 ||pelaaja.fi/sites/default/files/googleanalytics/analytics.js$important
-! https://github.com/abp-filters/abp-filters-anti-cv/pull/688
-kiuruvesilehti.fi,urjalansanomat.fi#%#//scriptlet('ubo-aeld.js', 'scroll', 'innerHeight')
-! https://github.com/easylist/easylist/pull/9339
-mtvuutiset.fi#$?#.container:has(.consent-blocking-embed-message) ~ #onetrust-consent-sdk { display: block !important }
 ! -----GENERAL FILTERS-----
 /bannerCounter.php
 /js/spring.js
@@ -1037,23 +1034,9 @@ kaksplus.fi#@#.sponsored-content
 ! Will be removed after PR's accepted (whitelistings for issues caused by other lists or additions to the main Easylist)
 ! https://github.com/easylist/easylist/pull/6887
 ##[data-template-type=nativead]
-! https://github.com/easylist/easylist/pull/8317
-! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/306
-@@||pelaaja.fi/sites/default/files/googleanalytics/analytics.js
 ! https://github.com/easylist/easylist/pull/8449
 ##[id|=bunyad-widget-ads]
 ! https://github.com/easylist/easylist/pull/9179
 iltalehti.fi#@#.ad-placement
-! https://github.com/easylist/easylist/pull/9204
-!#if !ext_ublock
-!#if !adguard
-luhta.com#@##cookie-consent
-luhta.com#@#.cookie-consent:not(body):not(html)
-!#endif
-!#endif
-! https://github.com/easylist/easylist/pull/9339
-@@||cdn.cookielaw.org^$script,stylesheet,xmlhttprequest,domain=mtvuutiset.fi
-mtvuutiset.fi#@##onetrust-banner-sdk
-mtvuutiset.fi#@##onetrust-consent-sdk
 ! https://github.com/easylist/easylist/pull/9343
 @@||almamedia.fi/almacmp/$script

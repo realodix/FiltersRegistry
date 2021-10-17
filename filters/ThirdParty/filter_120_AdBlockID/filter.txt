@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 21.10.362
+! OriginalVersion: 21.10.371
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 16 Oct 2021 22:02 UTC
+! Last modified: 17 Oct 2021 08:49 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -2395,7 +2395,7 @@ radioonline.co.id##.add-box-top
 lampungpro.co##.add-img
 dialeksis.com##.add-space
 nonton.com##.adds
-suara.com##.adds-top
+matamata.com,suara.com##.adds-top
 minangsatu.com,motorplus-online.com##.ads
 inews.id##.ads-close
 petanikode.com##.ads-content
@@ -2404,8 +2404,10 @@ kompas.tv##.ads-foot
 kompas.tv##.ads-jxstream
 kompas.tv##.ads-mgid-pag
 kompas.tv##.ads-mgid-read
+celebrities.id##.ads-top-fixed
 kompas.tv##.ads-undifined-live
 kompas.tv##.ads-zone-2
+tribunnewswiki.com##.ads_box_2
 inews.id##.ads_mobile_wrap
 petanikode.com##.adsense
 sindonews.com##.adtp
@@ -2414,6 +2416,7 @@ arenalte.com,krjogja.com,telusur.co.id##.advertisement
 pertamax7.com##.backstretch
 aliansirakyatnews.com##.baner
 presisi.co##.banner
+insertlive.com##.banner__top
 kabarnusa.com##.bannerx
 cosmogirl.co.id##.bnr
 id.theasianparent.com##.bottom-sticky-ad
@@ -2435,6 +2438,7 @@ gridoto.com##.float-ads
 okezone.com##.flying_ads
 kompas.com##.flying_carpet_div
 otakotaku.com##.footer .col-md-3
+insertlive.com##.footer_banner
 gadgetren.com,gcube.id,jejakpiknik.com,panditfootball.com##.footer_sticky
 beritakini.co##.funds
 parapuan.co##.gpt-ad-head-wrapper
@@ -2611,18 +2615,18 @@ bisnis-tempo-co.cdn.ampproject.org,blog-tempo-co.cdn.ampproject.org,bola-tempo-c
 bola-okezone-com.cdn.ampproject.org,celebrity-okezone-com.cdn.ampproject.org,economy-okezone-com.cdn.ampproject.org,lifestyle-okezone-com.cdn.ampproject.org,m-jatimnow-com.cdn.ampproject.org,muslim-okezone-com.cdn.ampproject.org,nasional-okezone-com.cdn.ampproject.org,otomotif-okezone-com.cdn.ampproject.org,sports-okezone-com.cdn.ampproject.org,techno-okezone-com.cdn.ampproject.org##amp-iframe[src^="https://click.advertnative.com/"]
 motorplus-online.com###composite-container:matches-css-before(content:/adv/i)
 tempo.co###inarticle_2:has-text(/adv/i)
-kompas.tv###jxOutstreamContainer:matches-css-before(content:"Advertisement")
-gridoto.com###jxOutstreamContainer:matches-css-before(content:/adv/i)
+gridoto.com,kompas.tv###jxOutstreamContainer:matches-css-before(content:/adv/i)
+tribunnewswiki.com##.box__reserved:matches-css-before(content:/adv/i)
 suarajatimpost.com##.card:has-text(/adv/i)
 okezone.com##.center-paralax:has([id^="div-gpt-ad"])
-kompas.tv##.clsivs:matches-css-before(content:"Advertisement")
+kompas.tv##.clsivs:matches-css-before(content:/adv/i)
 arenabola.id##.col-lg-3:has-text(/adv/i)
-parapuan.co##.commSkin__fluid:matches-css-before(content:"Advertisement")
+parapuan.co##.commSkin__fluid:matches-css-before(content:/adv/i)
 orami.co.id##.content div:has-text(/adv/i)
 sindonews.com##.ctn-mid li:has-text(/sponsor/i)
 radarbanten.co.id##.elementor-widget-image:not(:has(a[href*="radarbanten.co.id"]))
 tipspetani.com##.fixed-rside:has-text(/sponsor/i)
-kompas.tv##.mgidclsbanner:matches-css-before(content:"Advertisement")
+kompas.tv##.mgidclsbanner:matches-css-before(content:/adv/i)
 urbanasia.com##.paralax:not(:has(a[href*="urbanasia.com"]))
 genpi.co##.post-text > .caption:has-text(/adv/i)
 sasambonews.com##.sidebar .widget:has-text(/iklan/i)
@@ -9787,7 +9791,7 @@ detik.com##article .video20detik_0
 ||20.detik.com/embed/$subdocument,domain=~20.detik.com|~adsmart.detik.com
 ||cnbcindonesia.com/embed/video/$subdocument,domain=cnbcindonesia.com
 ||dailymotion.com/embed/*&mute=true$subdocument,domain=viva.co.id
-||dailymotion.com/embed/*?ads_params=$important,subdocument,domain=100kpj.com|matamata.com|medanheadlines.com|medcom.id
+||dailymotion.com/embed/*?ads_params=$important,subdocument,domain=100kpj.com|intipseleb.com|matamata.com|medanheadlines.com|medcom.id
 ||dailymotion.com/player/$subdocument,domain=kompasiana.com
 ||embed.dugout.com/v3.1/detik.js$script,domain=detik.com
 ||embed.rctiplus.com/live/rcti/$subdocument,domain=sulselsatu.com
@@ -10208,6 +10212,8 @@ apkgezegeni.com#%#//scriptlet('ubo-nofab.js')
 famfonts.com#%#//scriptlet('ubo-nobab.js')
 banki24.by#@#.banner1
 lner.co.uk,memepedia.ru#@#.banner-top
+!#if ext_ublock
+!#endif
 androidspin.com#@#[href*="idspin."]
 dropshipin.id#%#//scriptlet('ubo-acis.js', '$', 'ads')
 dafideff.com#%#//scriptlet('ubo-acis.js', 'addEventListener', 'google_ad_client')
@@ -10225,6 +10231,8 @@ rukim.id,surgatekno.com#%#//scriptlet('ubo-nofab.js')
 menantisenja.com#%#//scriptlet('ubo-set.js', 'adblock', '1')
 semuanyabola.com,urbandigital.id#%#//scriptlet('ubo-acis.js', 'ai_check_and_insert_block')
 duniailkom.com,solotrend.net#%#//scriptlet('ubo-acis.js', 'ai_run_scripts')
+!#if ext_ublock
+!#endif
 /fuckadblock.$script,redirect=noopjs,domain=akurasinews.com
 ||vkcdnservice.com/api/$script,redirect=noopjs
 @@.gif#*/ad/
