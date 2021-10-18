@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 21.10.372
+! OriginalVersion: 21.10.374
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 18 Oct 2021 08:18 UTC
+! Last modified: 18 Oct 2021 12:14 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -10221,8 +10221,6 @@ apkgezegeni.com#%#//scriptlet('ubo-nofab.js')
 famfonts.com#%#//scriptlet('ubo-nobab.js')
 banki24.by#@#.banner1
 lner.co.uk,memepedia.ru#@#.banner-top
-!#if ext_ublock
-!#endif
 androidspin.com#@#[href*="idspin."]
 dropshipin.id#%#//scriptlet('ubo-acis.js', '$', 'ads')
 dafideff.com#%#//scriptlet('ubo-acis.js', 'addEventListener', 'google_ad_client')
@@ -10240,8 +10238,6 @@ rukim.id,surgatekno.com#%#//scriptlet('ubo-nofab.js')
 menantisenja.com#%#//scriptlet('ubo-set.js', 'adblock', '1')
 semuanyabola.com,urbandigital.id#%#//scriptlet('ubo-acis.js', 'ai_check_and_insert_block')
 duniailkom.com,solotrend.net#%#//scriptlet('ubo-acis.js', 'ai_run_scripts')
-!#if ext_ublock
-!#endif
 /fuckadblock.$script,redirect=noopjs,domain=akurasinews.com
 ||vkcdnservice.com/api/$script,redirect=noopjs
 @@.gif#*/ad/
@@ -10355,5 +10351,10 @@ m.liputan6.com#@##back-to-top
 @@/gtm.js$script,domain=tokopedia.com
 @@/social-sharing-$script,domain=axe.com
 @@||apis.google.com/js/platform.js$domain=tiket.com
+!+ PLATFORM(ext_ublock)
+!#if ext_ublock
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$important,script,badfilter,redirect=nooptext,domain=igniel.com
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$important,script,badfilter,redirect=nooptext,domain=filecr.com
+!#endif
 ! Compiler: AdBlockID FC v1.0.0
 
