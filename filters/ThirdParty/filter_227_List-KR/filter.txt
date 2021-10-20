@@ -4,7 +4,7 @@
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ! Expires: 1 day
 ! DO NOT EDIT VERSION NUMBER
-! OriginalVersion: 20211002
+! OriginalVersion: 20211019
 ! ONLY DEVELOPER CAN EDIT THAT
 ! Exceptions for broken services
 @@||ad.smartmediarep.com/NetInsight/$domain=allclip.sbs.co.kr|allvod.sbs.co.kr|news.sbs.co.kr|programs.sbs.co.kr
@@ -15,6 +15,7 @@
 @@||ssl.pstatic.net/adimg3.search/adpost/js/adpost_show_ads_v2.min.js$script,domain=search.danawa.com|m.danawa.com|m.clien.net
 @@||vads-api.ad.daum.net/xylophone/adrequest/vmap/
 @@/script/bannerpop.js$domain=mindpost.or.kr
+@@||t1.daumcdn.net/adfit/static/kp.js$domain=pindirectshop.com
 ! General element hiding rules
 ##a[href*="//010bts.com"]
 ##a[href*="//747-one.com"]
@@ -563,6 +564,7 @@ yug-no.com#@#a[href*="//yug-no.com"]
 z9-we.com#@#a[href*="//www.z9-we.com"]
 z9-we.com#@#a[href*="//z9-we.com"]
 ! URL filters
+/data/banner.json?
 *-ads.openx.net/w/1.0/acj^
 *-ads.openx.net/w/1.0/afr^
 *-ads.openx.net/w/1.0/jstag^
@@ -1477,7 +1479,7 @@ z9-we.com#@#a[href*="//z9-we.com"]
 ||hygall.com/box/kakao_scroll50.html^$domain=hygall.com
 ||i-honam.com/banner/$domain=i-honam.com
 ||i.011st.com/ui_img/adoffice/creative/js/adcreative.min.js^
-||i.imgur.com^$domain=jujutorrent18.com|torrentgram3.com|torrent-rg.net|torrentqq78.com
+||i.imgur.com^$domain=jujutorrent18.com|torrentgram3.com|torrent-rg.net|torrentqq78.com|torrentview41.com
 ||i.ligatus.com/angular_front/tags/it/notizie/tags/angular-tag.js^
 ||i.mediatraffic.com.ua/js/uho/mt20_3.js^
 ||i.socdm.com/sdk/js/adg-script-loader.js^
@@ -2338,6 +2340,8 @@ z9-we.com#@#a[href*="//z9-we.com"]
 ||torrentmap.com/banner/
 ||torrentmoa.com/addons/popup/js/popup_layer.js^
 ||torrentsir18.com/data/file/to^
+||torrentview*.com/data/editor/*.gif
+||torrentview*.com/data/file/*_*/*.gif
 ||tpc.googlesyndication.com/daca_images/simgad/$domain=googleads.g.doubleclick.net|pagead2.googlesyndication.com
 ||tpc.googlesyndication.com/pagead/js/*/activeview/osd_listener.js^
 ||tpc.googlesyndication.com/simgad/$domain=googleads.g.doubleclick.net
@@ -6752,6 +6756,7 @@ tgd.kr##div.frame>div:not([class]):not([id])>div[style="padding:0 20px 15px;"]
 tgd.kr##div.frame>div[align="center"][style="background:#fff;"]
 tgd.kr##div.frame>div[style="background:#fff;    background: #fff;\a     padding: 20px 0;\a     margin-top: -14px;\a     text-align: center;"]
 tgd.kr##div.frame>div[style="padding:0em 1em;"]
+tgd.kr#$##header-menu-right { float: right!important; }
 theappl.com##div#pop_layer_banner
 theappl.com##div#rt_banner1
 theappl.com##div#rt_banner2
@@ -6910,6 +6915,10 @@ torrentsee48.com##div.mmbannel
 torrentsee48.com##div.tads1
 torrentwiz10.me##div[class="npia-board-gallery"]
 torrentqq78.com##a[href^="https://torrentqq78.com/ads/"]
+torrentview41.com##.col-md-12.widget-index-main
+torrentview41.com##.widget-main-box.hidden-sm.hidden-xs
+torrentview41.com#$#.search-bar { width: 40%!important; }
+torrentview41.com#$#.at-body { margin-top: 50px!important; }
 touch.pixiv.net##body>div>div[style="height: 80px; position: fixed; z-index: 998; bottom: 0; width: 100%; display: block; text-align: center; background-color: rgba(0,0,0,1);"]
 touch.pixiv.net##body>div>div[style="height: 80px; position: fixed; z-index: 998; bottom: 0px; width: 100%; text-align: center; background-color: rgb(0, 0, 0);"]
 touch.pixiv.net##div.ad-container
@@ -7401,6 +7410,7 @@ zum.com##div#adx_zum_main_rightwing
 zum.com##div#wrap_ad_main
 zum.com##div#wrap_ad_minisite
 ! Extended CSS rules
+torrentview41.com#?#.col-md-3.widget-index-left.hidden-sm.hidden-xs > .row > .widget-main-box h3:contains(보증업체):upward(1)
 etoland.co.kr#?#tbody > tr > td > img[src*="/img/adland01.gif"]:upward(2)
 chosun.com#?#div.raw-html > div iframe[src*="//adex.ednplus.com/"]:upward(2)
 meeco.kr#?#a img[src^="/images/custom_ads/"]:upward(1)
@@ -7419,6 +7429,7 @@ zipbogo.net##.sidebar > ul > li[-ext-has='a[href*="/ad/"],a[onclick^="visitWebBa
 ! START: https://github.com/AdguardTeam/AdguardFilters/blob/master/EnglishFilter/sections/antiadblock.txt
 ! END: https://github.com/AdguardTeam/AdguardFilters/blob/master/EnglishFilter/sections/antiadblock.txt
 !
+gaesae.com#%#//scriptlet('prevent-bab')
 ! HTML Filtration rules
 dcinside.com$$script[tag-content="function adBlockDetected()"]
 gall.dcinside.com$$tr[class="ub"][tag-content="<a href='http://addc.dcinside.com"]
@@ -7426,3 +7437,6 @@ koreapas.com$$script[tag-content="function adBlockDetected()"]
 liveinincheon.tistory.com$$script[tag-content="h237.nextFunction()"]
 thehindu.com$$script[tag-content="Adblock"]
 pixlr.com$$script[tag-content="cancelAdBlocker()"]
+! Stealth Mode
+! https://github.com/AdguardTeam/AdguardFilters/issues/97249 [Stealth Mode - Referrer]
+@@||dapi.kakao.com/v*/maps/sdk.js$stealth,domain=land.gnkcr.com

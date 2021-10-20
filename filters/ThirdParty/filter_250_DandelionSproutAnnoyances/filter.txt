@@ -1,12 +1,12 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 12September2021v1-Beta-Compilation
+! OriginalVersion: 13October2021v1-Beta-Compilation
 ! Expires: 3 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
 ! What this broad compilation doesn't block: Newsletters, cookie banners, social media links to company pages
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-! OriginalVersion: 30August2021v1
+! OriginalVersion: 18October2021v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -402,6 +402,7 @@ geekdashboard.com##.section--download
 ##.gta-banner-link
 reddit.com##.XPromoPill
 speedtest.net##.mobile-pretest
+instagram.com##main > div[class$="     "]:first-of-type + section:last-of-type
 !#if env_mobile
 twitter.com###layers > div:nth-of-type(2):last-of-type
 !#endif
@@ -427,7 +428,7 @@ yelp.*##.menu-bar-pitch_open-in-app
 linkedin.com#$?#html,body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 03October2021v2-Beta
+! OriginalVersion: 20October2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -443,7 +444,7 @@ linkedin.com#$?#html,body { overflow: auto !important; }
 ! Equatorial Guinea
 ||gq^$document,domain=~deimos.gq|~inege.gq|~tvgelive.gq|~comprarcarros.gq
 ! Central African Republic
-||cf^$document,domain=~google.cf|~rths.cf|~voitures.cf|~assembleenationale-rca.cf|~cps-rca.cf|~acap.cf|~miraculousladybug.cf
+||cf^$document,domain=~google.cf|~rths.cf|~voitures.cf|~assembleenationale-rca.cf|~cps-rca.cf|~acap.cf|~miraculousladybug.cf|~scrat.cf
 ! Palau
 ||pw^$document,domain=~libgen.pw|~petridish.pw|~palaugov.pw|~dpc.pw|~zikrap.pw
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
@@ -459,7 +460,7 @@ www.google.*##.g:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterenc
 www.google.*##.g:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
 www.google.*##.g:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"]))
 www.google.*##.g:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*="tvgelive.gq"], [href*="comprarcarros.gq"]))
-www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"]))
+www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 www.google.*##.g:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"]))
 www.google.*##.g:has(a[href*=".loan/"])
 www.google.*##.g:has(a[href*=".agency/"])
@@ -468,7 +469,7 @@ www.google.*##.g:has(a[href*=".bid/"])
 www.google.*##.g:has(a[href*=".top/"])
 ! ——— You know those ultra-fraudulent auto-generated things that clutter up Google searches? These entries should remove some of them. ———
 www.google.*##.g:has(a[href*=".php?xxx="])
-www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="carrefour.it"], [href*="gospesa.it"]))
+www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
 www.google.*##.g:has(a[href^="https://books.google."])
 !#endif
 !#if env_mobile
@@ -478,7 +479,7 @@ www.google.*##a[oncontextmenu][href*=".tk/"]:not([href*=coolcmd], [href*=budtere
 www.google.*##a[oncontextmenu][href*=".ga/"]:not([href*="google.ga"], [href*=filtri-dns], [href*=anpigabon], [href*="dgdi.ga"], [href*=voitures], [href*="economie-gabon.ga"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*=tvgelive], [href*=comprarcarros]):upward(2)
-www.google.*##a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*=voitures], [href*=assembleenationale-rca], [href*=cps-rca], [href*="acap.cf"], [href*="miraculousladybug.cf"]):upward(2)
+www.google.*##a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*=voitures], [href*=assembleenationale-rca], [href*=cps-rca], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.ml"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".loan/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".agency/"]:upward(2)
@@ -489,23 +490,23 @@ www.google.*##a[oncontextmenu][href*=".php?xxx="]:upward(2)
 www.google.*##a[oncontextmenu][href^="https://books.google."]:upward(2)
 !#endif
 ! ——— For DuckDuckGo ———
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".tk"]:not([data-domain*="coolcmd.tk"], [data-domain*="budterence.tk"], [data-domain*="google.tk"], [data-domain*="transportnews.tk"], [data-domain*="c0d3c.tk"], [data-domain*="anonytext.tk"], [data-domain*="tokelau-info.tk"], [data-domain*="fakaofo.tk"], [data-domain*="loljp-wiki.tk"], [data-domain*="ninetail.tk"], [data-domain*="goshujin.tk"], [data-domain*="graph.tk"], [data-domain*="nolfrevival.tk"], [data-domain*="coppersurfer.tk"], [data-domain*="restricted-functions.tk"], [data-domain*="bstweaker.tk"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".ga"]:not([data-domain*="google.ga"], [data-domain*="filtri-dns.ga"], [data-domain*="anpigabon.ga"], [data-domain*="dgdi.ga"], [data-domain*="voitures.ga"], [data-domain*="economie-gabon.ga"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".ml"]:not([data-domain*="google.ml"], [data-domain*="mobili.ml"], [data-domain*="melody.ml"], [data-domain*="dcod.ml"], [data-domain*="info-matin.ml"], [data-domain*="amap.ml"], [data-domain*="mastodon.ml"], [data-domain*="worproject.ml"], [data-domain*="nothingprivate.ml"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".gq"]:not([data-domain*="deimos.gq"], [data-domain*="inege.gq"], [data-domain*="tvgelive.gq"], [data-domain*="comprarcarros.gq"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="voitures.cf"], [data-domain*="assembleenationale-rca.cf"], [data-domain*="cps-rca.cf"], [data-domain*="acap.cf"], [data-domain*="miraculousladybug.cf"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="zikrap.pw"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".loan"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".agency"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".gdn"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".bid"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".top"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".tk"]:not([data-domain*="coolcmd.tk"], [data-domain*="budterence.tk"], [data-domain*="google.tk"], [data-domain*="transportnews.tk"], [data-domain*="c0d3c.tk"], [data-domain*="anonytext.tk"], [data-domain*="tokelau-info.tk"], [data-domain*="fakaofo.tk"], [data-domain*="loljp-wiki.tk"], [data-domain*="ninetail.tk"], [data-domain*="goshujin.tk"], [data-domain*="graph.tk"], [data-domain*="nolfrevival.tk"], [data-domain*="coppersurfer.tk"], [data-domain*="restricted-functions.tk"], [data-domain*="bstweaker.tk"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ga"]:not([data-domain*="google.ga"], [data-domain*="filtri-dns.ga"], [data-domain*="anpigabon.ga"], [data-domain*="dgdi.ga"], [data-domain*="voitures.ga"], [data-domain*="economie-gabon.ga"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ml"]:not([data-domain*="google.ml"], [data-domain*="mobili.ml"], [data-domain*="melody.ml"], [data-domain*="dcod.ml"], [data-domain*="info-matin.ml"], [data-domain*="amap.ml"], [data-domain*="mastodon.ml"], [data-domain*="worproject.ml"], [data-domain*="nothingprivate.ml"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gq"]:not([data-domain*="deimos.gq"], [data-domain*="inege.gq"], [data-domain*="tvgelive.gq"], [data-domain*="comprarcarros.gq"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="voitures.cf"], [data-domain*="assembleenationale-rca.cf"], [data-domain*="cps-rca.cf"], [data-domain*="acap.cf"], [data-domain*="miraculousladybug.cf"], [data-domain*="scrat.cf"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="zikrap.pw"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".loan"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]
 ! ——— For Bing ———
 bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"]))
 bing.com##.b_algo:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
 bing.com##.b_algo:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"]))
 bing.com##.b_algo:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*="tvgelive.gq"], [href*="comprarcarros.gq"]))
-bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"]))
+bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 bing.com##.b_algo:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"]))
 bing.com##.b_algo:has(a[href*=".loan/"])
 bing.com##.b_algo:has(a[href*=".agency/"])
@@ -530,6 +531,8 @@ bing.com##.b_algo:has(a[href*=".top/"])
 ||dutchmega.nl^$document
 ||juvander.net^$document
 ||ssl.bblck.me^$document
+||allblock.net^$document
+||microsoftedge.microsoft.com/addons/detail/allblock/nkllnmjaaifdphkfbmedklkimjmnjeen^$document
 ! Malicious domains found in videogame manuals and title screens
 ||acclaimsports.com^$document
 ||acclaimmaxsports.com^$document
@@ -860,7 +863,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||klickmode.biz^$all
 ||lastmedia.me^$all
 ||mediabasket.club^$all
-||namedia.club^$all
 ||newmode.biz^$all
 ||newscart.club^$all
 ||newsgate.biz^$all
@@ -896,9 +898,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||62.210.9.92^$document
 ||62.210.11.203^$document
 ||ilo134ulih.com^$all
-||192.243.59.12^$document
-||192.243.59.13^$document
-||192.243.59.20^$document
 ||hooligapps.com^$all
 ||best202*-games-web1.com^$all
 ||theonlygames.com^$all
@@ -1191,7 +1190,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||fblaster.com^$all
 ||googleanalytics.icu^$all
 ||ribinski.us^$all
-||security.fblaster.com^$all
 ||shopstatanalytics.store^$all
 ||sxamp.uno^$all
 ||sxbet.uno^$all
@@ -1400,7 +1398,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||time4news.net^$all
 ||pro-protection.xyz^$all
 ||secureleadsforever.com^$all
-||antivirus.renewal-software-update.com^$all
 ||renewal-software-update.com^$all
 ||pushmeup.art^$document
 ||covercenter.xyz^$all
@@ -1441,7 +1438,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||install.socialsearchconverter.com^$all
 ||feed.socialsearchconverter.com^$all
 ||api.socialsearchconverter.com^$all
-||install1.notify-service.com^$all
 ||notify-service.com^$all
 ||install.stream-all.com^$all
 ! copied over from https://github.com/uBlockOrigin/uAssets/issues/9848
@@ -1499,7 +1495,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 !! https://www.virustotal.com/gui/file/368afeda7af69f329e896dc86e9e4187a59d2007e0e4b47af30a1c117da0d792/community
 ||hydro-ca.link^$all
 ||covid19-ca.link^$all
-||sock.godforgiveuss.live^$all
 ||godforgiveuss.live^$all
 !! https://www.virustotal.com/gui/file/c0e40a12643436cb413235e385a6a90deeb6cc13b24458368fd7facb20ac0c81/community
 ||91.243.121.19^$all
@@ -1537,7 +1532,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||hjjhjkk.ydns.eu^$all
 ! https://github.com/blocklistproject/Lists/issues/497
 ||tweakbit.com^$all
-||static.tweakbit.com^$all
 ||pcspeedup.en.softonic.com^$all
 ! Copied from «uBlock Filters - Badware Risks» because it has proven to be a very good entry
 ||1redirb.com^$all
@@ -1563,23 +1557,19 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||clickagy.com^$all
 ||clicken.us^$all
 ||cloud-storage.store^$all
-||cpmstatsart.com^$all
 ||d.clarity.ms^$all
 ||d2m2wsoho8qq12.cloudfront.net^$all
 ||data.deduce.com^$all
 ||findanswersnow.net^$all
-||gogle.net^$all
 ||gpush.cogocast.net^$all
 ||info.leadid.com^$all
 ||lijit.com^$all
 ||listrakbi.com^$all
 ||partner.mediawallahscript.com^$document,popup
 ||pippio.com^$all
-||retailproductsusa.com^$all
 ||rlcdn.com^$all
 ||signupandturnyourscreenoffsafepowernow.date^$all
 ||static.imghst-de.com^$all
-||static.traversedlp.com^$all
 ||tag.cogocast.net^$all
 ||tag.yieldoptimizer.com^$document,popup
 ||traversedlp.com^$all
@@ -1639,6 +1629,155 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||starbux.fun^$all
 ||fortnitecode.online^$all
 ||cd.org^$document
+! https://www.virustotal.com/gui/file/78f490e503c86eaaff5760197b9ff5308ed6e03161af13194a6c1e0cd95422de/community
+! https://github.com/DandelionSprout/adfilt/commit/f7f114945c83b339be5cdd848e229680d9918abb#commitcomment-57642875
+||23.94.26.138^$all
+||ispco.shop^$all
+! https://github.com/DandelionSprout/adfilt/pull/298
+! https://www.virustotal.com/gui/file/ac5a95221b895545eb04cfea29693288d7b432ad313f6bfc9db2ddf86f085a63/community
+||205.185.126.200^$all
+! https://www.virustotal.com/gui/url/337dd5e5c53558dc7d6c8910b5ebe14a7390a78e13830b367363465b85ca8dd6?nocache=1
+||trytogoi.xyz^$all
+! https://www.virustotal.com/gui/url/0f8791a82ee4d2c229ccbe3328092cdb2135027439778c280f1d2d3b0fdba1bb
+||apple-technicalsupport-icloud.com^$all
+! https://www.virustotal.com/gui/file/3ef65ce27d39b037d75bdc16b197e04f3b391f76c2da5f2f755e2ded38bb9078/community
+||185.243.56.167^$all
+! https://www.virustotal.com/gui/file/12013662c71da69de977c04cd7021f13a70cf7bed4ca6c82acbc100464d4b0ef/community
+||123.10.224.135^$all
+||59.47.187.147^$all
+||39.68.172.210^$all
+||122.192.177.176^$all
+||112.27.124.108^$all
+||123.110.176.246^$all
+||219.155.105.98^$all
+||171.35.161.209^$all
+||60.16.255.36^$all
+||112.30.4.52^$all
+||182.121.191.201^$all
+||121.61.48.170^$all
+||39.81.68.45^$all
+||27.222.220.164^$all
+||113.233.215.135^$all
+||151.77.100.133^$all
+||125.120.13.184^$all
+||120.12.138.133^$all
+||27.194.115.185^$all
+||183.92.123.145^$all
+||110.89.8.126^$all
+||125.43.211.184^$all
+||1.0.218.230^$all
+||221.208.4.56^$all
+||60.13.60.19^$all
+||171.37.29.87^$all
+||124.91.237.188^$all
+||115.56.137.49^$all
+||115.52.240.69^$all
+||112.252.132.185^$all
+||117.198.240.157^$all
+||42.53.240.249^$all
+||116.179.138.68^$all
+||110.241.119.159^$all
+||115.56.31.133^$all
+||103.19.128.222^$all
+||202.12.80.74^$all
+||61.52.8.62^$all
+||182.122.252.69^$all
+||219.155.26.50^$all
+||120.4.141.185^$all
+||119.102.7.115^$all
+||72.51.127.213^$all
+||111.224.199.91^$all
+||119.250.236.122^$all
+||112.30.110.58^$all
+! https://www.virustotal.com/gui/file/715eef1fb3bbf84ade848d97d4ec05d380cf8595298b51af134385de70be9d08/community
+||pcae.de^$document
+! https://www.virustotal.com/gui/file/4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7/community
+||117.196.49.21^$all
+||115.55.54.234^$all
+||115.52.17.123^$all
+||182.59.69.21^$all
+! https://www.virustotal.com/gui/file/3db0e385eb53a32d61a5a35908a99317868b571e4cf7079db67fd68604da662c/community
+||chip-secured-download.de^$all
+! https://www.virustotal.com/gui/url/5b1dc9b2ec70e28b5f6cbb282a598a1b2ecd4df2aebb66953ca9194fa1c9c4fb
+! Domains which resolve to this (already blocked) IP - for users of HOSTs/Domains/uBlock Origin
+||ujgjyjltunl.com^$all
+||pvyvglaf.com^$all
+||ecsfunhget.com^$all
+||xemfrctctdnlhe.com^$all
+||tgxcmcoikpgek.com^$all
+||lghdoxzulv.com^$all
+||knxntpsd.com^$all
+||nctylivpwhpby.com^$all
+||phhitgjxsit.com^$all
+! https://www.virustotal.com/gui/url/b2936e74f35940d2f09cabf4e089a0d655e62a5fc08ad32e1fae79a62683683f?nocache=1
+||saimission.org^$all
+! https://www.virustotal.com/gui/url/4c2c3cf2e4f5b9ac9765eb9c58f2756d8f0f4632ec707107afe3c111f4749025?nocache=1
+||grub-wa-saya.duckdns.org^$all
+! https://www.virustotal.com/gui/file/a6e89d2bb1c2da1d852fb8e248f39cf7b3d4b0ea05a8d8f343d1b8e74d271d43/relations
+||driversupport.com^$document
+! Copied over from URLHaus
+||thehotelshowdev.bitkit.dk^$all
+! Domains related to the above
+||big5constructnigeria-staging.bitkit.dk^$all
+||big5-nigeria.bitkit.dk^$all
+||bromic-staging.bitkit.dk^$all
+! A PUP
+||mycleanpc.com^$document
+! Related domains owned by the same company and used for payment (the first is for 'tech support' scams, the second for their 'ID protection')
+||ustechsupport.com^$document
+||mycleanid.com^$document
+! The main website for the MyCleanPC company
+||realdefen.se^$document
+! Vermilion Strike
+! https://www.virustotal.com/gui/file/294b8db1f2702b60fb2e42fdc50c2cee6a5046112da9a5703a548a4fa50477bc/relations
+||160.202.163.100^$all
+! https://www.virustotal.com/gui/ip-address/160.202.163.100/relations
+||microsoftkernel.com^$all
+||hksupd.com^$all
+||microsofthk.com^$all
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-938167311
+||lnk.to/GlXHtur0^$all
+||machinesalaver.net^$all
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-940500664
+||aselink.guru^$all
+&t=redn|$document
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-944612753
+||sentencesavedress.top^$all
+||apk-top.cloud^$all
+||captcha-smart.top^$all
+||pushbizapi.com^$all
+||streamamongcotton.top^$all
+||termquotientbeen.top^$all
+! https://github.com/DandelionSprout/adfilt/pull/303
+! https://www.virustotal.com/gui/file/37328efa73c248b460aba605d7745b024f31ab7ab864e1af273e9a197a188f42/community
+||45.95.169.115^$all
+! https://www.virustotal.com/gui/file/03e4533ba8874c2f4dcdb94bd135914fa4c22ed477d7c0395dc2322b6468e249/community
+||45.148.120.80^$all
+! https://www.virustotal.com/gui/file/1a782cab036efa567c2c42b7bae9452bf735be72f0b00d68f6dcba48cea526fa/community
+||85.239.33.9^$all
+||leak.serveftp.com^$all
+! Relations to the domain above
+||adminsys.serveftp.com^$all
+||amazbaidu.serveftp.com^$all
+||amazcompute.serveftp.com^$all
+||httpssecure.serveftp.com^$all
+||identity-auth612.serveftp.com^$all
+||securd03c-acclogs.serveftp.com^$all
+||secure00-account.serveftp.com^$all
+||numberpresentifhh.serveftp.com^$all
+||secure-auth01.serveftp.com^$all
+||citionlinebk.serveftp.com^$all
+||secure05h-verify.serveftp.com^$all
+||secure-authlogin5.serveftp.com^$all
+||c4ase-verified9932.serveftp.com^$all
+||1log-wellsfargo.serveftp.com^$all
+||eposcardokubo.serveftp.com^$all
+! https://www.virustotal.com/gui/file/8a39f18caa77d52e80bec05f584ec50e733a3be1e33551d8902e95b9b0bfe6c0/community
+||107.173.176.183^$all
+! https://www.virustotal.com/gui/file/54054209c921a68f12a9b29d6e84f1b45cb417bc0b5a99356a245727e0a41e40/community
+||45.148.120.171^$all
+! http://vxvault.net/ViriFiche.php?ID=44058
+||sherence.ru^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -1672,7 +1811,6 @@ toorgle.net##.join
 ||allowandgo.com^$all
 ||aksuu.ru^$all
 ||allow-space.com^$all
-||allowandgo.com^$all
 ||clc.zoocenter.ru^$all
 ||clckask.club^$all
 ||clickjump.biz^$all
@@ -1696,7 +1834,6 @@ toorgle.net##.join
 ||amoxycillin1st.com^$all
 ! The Jerma985 Discord server
 ||crazycrabreedville.com^$all
-||discord-nitro.link^$all
 ! https://flclever.weebly.com/pixie-hollow-mini-games.html (06/05/2021)
 ||messium.info^$all
 ! Various Google searches
@@ -3955,7 +4092,6 @@ toorgle.net##.join
 ||illuminatekingdomwrist.com^$all
 ||illuminatelocks.com^$all
 ||illustrationmanlypageant.com^$all
-||ilo134ulih.com^$all
 ||ilxhsgd.com^$all
 ||imglov.com^$all
 ||immersedcopythinking.com^$all
@@ -4988,7 +5124,6 @@ toorgle.net##.join
 ||pipelydia.com^$all
 ||pitrespite.com^$all
 ||pitysuffix.com^$all
-||pl3143.puserving.com^$all
 ||plaguealacritytwitter.com^$all
 ||plaicenaive.com^$all
 ||plainlycradlescalp.com^$all
@@ -5061,7 +5196,6 @@ toorgle.net##.join
 ||portugueseexcessivelygospel.com^$all
 ||poshbeechhoneycomb.com^$all
 ||possessedbrute.com^$all
-||possessedcrackinghart.com^$all
 ||possiblytoxic.com^$all
 ||postalfranticallyfriendship.com^$all
 ||posterbreaking.com^$all
@@ -6522,7 +6656,6 @@ toorgle.net##.join
 ||cloud9-gaming.xyz^$all
 ||com-nitro.gifts^$all
 ||counter-stricke.ru^$all
-||crazy-soom.org.ru^$all
 ||cs-activit.xyz^$all
 ||cs-riptide.com^$all
 ||cs-riptide.ru^$all
@@ -6635,7 +6768,6 @@ toorgle.net##.join
 ||keydrop.ru.com^$all
 ||keys-dropes.com^$all
 ||keysdropes.com^$all
-||justinstalledpanel.com^$all
 ||magicdropgift.ru^$all
 ||magikbrop.xyz^$all
 ||market-csgo.ru^$all
@@ -6672,7 +6804,6 @@ toorgle.net##.join
 ||rollskin.ru^$all
 ||rust-chest.com^$all
 ||rust-get.com^$all
-||rust-satchel.com^$all
 ||rust-skin.com^$all
 ||s-arts.pro^$all
 ||skinosoda.online^$all
@@ -6944,9 +7075,29 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(.com specialize)
 ! ——— Dummy entry used to give myself credit, for when this list is used in large compilation hosts-type files (Although they are fully allowed by my licence to use this list, it'd be nice for me and end-users to see where it's being used, as a few of them do not credit their sources) ———
 ||if-a-large-hosts-file-contains-this-entry-then-it.uses-dandelion-sprouts-anti-malware-list-as-a-source-list.data^$document
+! ——— Anti-'Norton and McAfee' ———
+! Let's be honest: Everyone in the world hate these two invasive nagwares that scream at the top of lungs with their notifications
+||appcloud.mcafee.com^
+||mmfiles.amp.mcafee.com^
+||webadvisorc.rest.gti.mcafee.com^
+||mip.api.mcafeewebadvisor.com^
+||sadownload.mcafee.com^
+||websecurity.norton.com^
+||dns.norton.com^
+||stats.norton.com^
+||vss.norton.com^
+||shasta-rrs.norton.com^
+||norton-app.quantummetric.com^
+||static.nortoncdn.com^
+||oms.norton.com^
+||norton.ehosts.net^
+! https://get.adobe.com/no/reader/
+get.adobe.com###offersInformationPane
+! Gigabyte APP Center (May require «AdGuard for Windows»)
+||mb.download.gigabyte.com/FileList/Swhttp/DriverUpd/ANTIVIRUS^
 !#if !adguard
 ! Title: AdGuard Safe Browsing Reverse-Engineered
-! OriginalVersion: 03October2021v1-Extension
+! OriginalVersion: 08October2021v1-Extension
 ! Description: This is a list of queries sent to «Dandelion Sprout's Official DNS Server» that were blocked by AdGuard's very secretive anti-malware module (along with the dates they were first observed), and which I'm publishing for the benefit of uBlock Origin users, and to help de-mystificate the module, even if it contains less than 0.1% of the module's full and secret blocklist.
 ! Domains first seen 20th of July 2021
 ||oxtop.ru^
@@ -7000,12 +7151,24 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ||msplash6.downdepo.com^
 ||censor.be^
 ||weddingstory.gr^
+! 8th of October
+||123movieshub.re^
+||filmhdplay.stream^
+||fullmoviedvd.rip^
+||hdqputlocker.com^
+||movies.123hdfree.com^
+||netmovies.co^
+||pirateiro.com^
+||putlockerxyz.com^
+||vanmovies4k.com^
+||watchfree.ws^
+||watchputlocker.site^
 !#endif
 ! Placeholder line for alternate list versions
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 03October2021v1-Beta
+! OriginalVersion: 19October2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -7021,7 +7184,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ! Equatorial Guinea
 ||gq^$document,domain=~deimos.gq|~inege.gq|~tvgelive.gq|~comprarcarros.gq
 ! Central African Republic
-||cf^$document,domain=~google.cf|~rths.cf|~voitures.cf|~assembleenationale-rca.cf|~cps-rca.cf|~acap.cf|~miraculousladybug.cf
+||cf^$document,domain=~google.cf|~rths.cf|~voitures.cf|~assembleenationale-rca.cf|~cps-rca.cf|~acap.cf|~miraculousladybug.cf|~scrat.cf
 ! Palau
 ||pw^$document,domain=~libgen.pw|~petridish.pw|~palaugov.pw|~dpc.pw|~zikrap.pw
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
@@ -7037,7 +7200,7 @@ www.google.*##.g:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterenc
 www.google.*##.g:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
 www.google.*##.g:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"]))
 www.google.*##.g:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*="tvgelive.gq"], [href*="comprarcarros.gq"]))
-www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"]))
+www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 www.google.*##.g:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"]))
 www.google.*##.g:has(a[href*=".loan/"])
 www.google.*##.g:has(a[href*=".agency/"])
@@ -7046,7 +7209,7 @@ www.google.*##.g:has(a[href*=".bid/"])
 www.google.*##.g:has(a[href*=".top/"])
 ! ——— You know those ultra-fraudulent auto-generated things that clutter up Google searches? These entries should remove some of them. ———
 www.google.*##.g:has(a[href*=".php?xxx="])
-www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="carrefour.it"], [href*="gospesa.it"]))
+www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
 www.google.*##.g:has(a[href^="https://books.google."])
 !#endif
 !#if env_mobile
@@ -7056,7 +7219,7 @@ www.google.*#?#*:has(> * > a[oncontextmenu][href*=".tk/"]:not([href*=coolcmd], [
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".ga/"]:not([href*="google.ga"], [href*=filtri-dns], [href*=anpigabon], [href*="dgdi.ga"], [href*=voitures], [href*="economie-gabon.ga"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*=tvgelive], [href*=comprarcarros]))
-www.google.*#?#*:has(> * > a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*=voitures], [href*=assembleenationale-rca], [href*=cps-rca], [href*="acap.cf"], [href*="miraculousladybug.cf"]))
+www.google.*#?#*:has(> * > a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*=voitures], [href*=assembleenationale-rca], [href*=cps-rca], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.ml"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".loan/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".agency/"])
@@ -7067,23 +7230,23 @@ www.google.*#?#*:has(> * > a[oncontextmenu][href*=".php?xxx="])
 www.google.*#?#*:has(> * > a[oncontextmenu][href^="https://books.google."])
 !#endif
 ! ——— For DuckDuckGo ———
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".tk"]:not([data-domain*="coolcmd.tk"], [data-domain*="budterence.tk"], [data-domain*="google.tk"], [data-domain*="transportnews.tk"], [data-domain*="c0d3c.tk"], [data-domain*="anonytext.tk"], [data-domain*="tokelau-info.tk"], [data-domain*="fakaofo.tk"], [data-domain*="loljp-wiki.tk"], [data-domain*="ninetail.tk"], [data-domain*="goshujin.tk"], [data-domain*="graph.tk"], [data-domain*="nolfrevival.tk"], [data-domain*="coppersurfer.tk"], [data-domain*="restricted-functions.tk"], [data-domain*="bstweaker.tk"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".ga"]:not([data-domain*="google.ga"], [data-domain*="filtri-dns.ga"], [data-domain*="anpigabon.ga"], [data-domain*="dgdi.ga"], [data-domain*="voitures.ga"], [data-domain*="economie-gabon.ga"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".ml"]:not([data-domain*="google.ml"], [data-domain*="mobili.ml"], [data-domain*="melody.ml"], [data-domain*="dcod.ml"], [data-domain*="info-matin.ml"], [data-domain*="amap.ml"], [data-domain*="mastodon.ml"], [data-domain*="worproject.ml"], [data-domain*="nothingprivate.ml"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".gq"]:not([data-domain*="deimos.gq"], [data-domain*="inege.gq"], [data-domain*="tvgelive.gq"], [data-domain*="comprarcarros.gq"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="voitures.cf"], [data-domain*="assembleenationale-rca.cf"], [data-domain*="cps-rca.cf"], [data-domain*="acap.cf"], [data-domain*="miraculousladybug.cf"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="zikrap.pw"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".loan"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".agency"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".gdn"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".bid"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion##[data-domain$=".top"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".tk"]:not([data-domain*="coolcmd.tk"], [data-domain*="budterence.tk"], [data-domain*="google.tk"], [data-domain*="transportnews.tk"], [data-domain*="c0d3c.tk"], [data-domain*="anonytext.tk"], [data-domain*="tokelau-info.tk"], [data-domain*="fakaofo.tk"], [data-domain*="loljp-wiki.tk"], [data-domain*="ninetail.tk"], [data-domain*="goshujin.tk"], [data-domain*="graph.tk"], [data-domain*="nolfrevival.tk"], [data-domain*="coppersurfer.tk"], [data-domain*="restricted-functions.tk"], [data-domain*="bstweaker.tk"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ga"]:not([data-domain*="google.ga"], [data-domain*="filtri-dns.ga"], [data-domain*="anpigabon.ga"], [data-domain*="dgdi.ga"], [data-domain*="voitures.ga"], [data-domain*="economie-gabon.ga"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ml"]:not([data-domain*="google.ml"], [data-domain*="mobili.ml"], [data-domain*="melody.ml"], [data-domain*="dcod.ml"], [data-domain*="info-matin.ml"], [data-domain*="amap.ml"], [data-domain*="mastodon.ml"], [data-domain*="worproject.ml"], [data-domain*="nothingprivate.ml"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gq"]:not([data-domain*="deimos.gq"], [data-domain*="inege.gq"], [data-domain*="tvgelive.gq"], [data-domain*="comprarcarros.gq"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="voitures.cf"], [data-domain*="assembleenationale-rca.cf"], [data-domain*="cps-rca.cf"], [data-domain*="acap.cf"], [data-domain*="miraculousladybug.cf"], [data-domain*="scrat.cf"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="zikrap.pw"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".loan"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]
 ! ——— For Bing ———
 bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"]))
 bing.com##.b_algo:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
 bing.com##.b_algo:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"]))
 bing.com##.b_algo:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*="tvgelive.gq"], [href*="comprarcarros.gq"]))
-bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"]))
+bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 bing.com##.b_algo:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"]))
 bing.com##.b_algo:has(a[href*=".loan/"])
 bing.com##.b_algo:has(a[href*=".agency/"])
@@ -7105,6 +7268,8 @@ bing.com##.b_algo:has(a[href*=".top/"])
 ||dutchmega.nl^$document
 ||juvander.net^$document
 ||ssl.bblck.me^$document
+||allblock.net^$document
+||microsoftedge.microsoft.com/addons/detail/allblock/nkllnmjaaifdphkfbmedklkimjmnjeen^$document
 ! Malicious domains found in videogame manuals and title screens
 ||acclaimsports.com^$document
 ||acclaimmaxsports.com^$document
@@ -7437,7 +7602,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||klickmode.biz^$redirect=nooptext,important
 ||lastmedia.me^$redirect=nooptext,important
 ||mediabasket.club^$redirect=nooptext,important
-||namedia.club^$redirect=nooptext,important
 ||newmode.biz^$redirect=nooptext,important
 ||newscart.club^$redirect=nooptext,important
 ||newsgate.biz^$redirect=nooptext,important
@@ -7473,9 +7637,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 62.210.9.92$network
 62.210.11.203$network
 ||ilo134ulih.com^$redirect=nooptext,important
-192.243.59.12$network
-192.243.59.13$network
-192.243.59.20$network
 ||hooligapps.com^$redirect=nooptext,important
 ||best202*-games-web1.com^$redirect=nooptext,important
 ||theonlygames.com^$redirect=nooptext,important
@@ -7765,7 +7926,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||fblaster.com^$redirect=nooptext,important
 ||googleanalytics.icu^$redirect=nooptext,important
 ||ribinski.us^$redirect=nooptext,important
-||security.fblaster.com^$redirect=nooptext,important
 ||shopstatanalytics.store^$redirect=nooptext,important
 ||sxamp.uno^$redirect=nooptext,important
 ||sxbet.uno^$redirect=nooptext,important
@@ -7968,7 +8128,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||time4news.net^$redirect=nooptext,important
 ||pro-protection.xyz^$redirect=nooptext,important
 ||secureleadsforever.com^$redirect=nooptext,important
-||antivirus.renewal-software-update.com^$redirect=nooptext,important
 ||renewal-software-update.com^$redirect=nooptext,important
 ||pushmeup.art^$document
 ||covercenter.xyz^$redirect=nooptext,important
@@ -8009,7 +8168,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||install.socialsearchconverter.com^$redirect=nooptext,important
 ||feed.socialsearchconverter.com^$redirect=nooptext,important
 ||api.socialsearchconverter.com^$redirect=nooptext,important
-||install1.notify-service.com^$redirect=nooptext,important
 ||notify-service.com^$redirect=nooptext,important
 ||install.stream-all.com^$redirect=nooptext,important
 ! copied over from https://github.com/uBlockOrigin/uAssets/issues/9848
@@ -8067,7 +8225,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 !! https://www.virustotal.com/gui/file/368afeda7af69f329e896dc86e9e4187a59d2007e0e4b47af30a1c117da0d792/community
 ||hydro-ca.link^$redirect=nooptext,important
 ||covid19-ca.link^$redirect=nooptext,important
-||sock.godforgiveuss.live^$redirect=nooptext,important
 ||godforgiveuss.live^$redirect=nooptext,important
 !! https://www.virustotal.com/gui/file/c0e40a12643436cb413235e385a6a90deeb6cc13b24458368fd7facb20ac0c81/community
 91.243.121.19$network
@@ -8105,7 +8262,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||hjjhjkk.ydns.eu^$redirect=nooptext,important
 ! https://github.com/blocklistproject/Lists/issues/497
 ||tweakbit.com^$redirect=nooptext,important
-||static.tweakbit.com^$redirect=nooptext,important
 ||pcspeedup.en.softonic.com^$redirect=nooptext,important
 ! Copied from «uBlock Filters - Badware Risks» because it has proven to be a very good entry
 ||1redirb.com^$redirect=nooptext,important
@@ -8131,23 +8287,19 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||clickagy.com^$redirect=nooptext,important
 ||clicken.us^$redirect=nooptext,important
 ||cloud-storage.store^$redirect=nooptext,important
-||cpmstatsart.com^$redirect=nooptext,important
 ||d.clarity.ms^$redirect=nooptext,important
 ||d2m2wsoho8qq12.cloudfront.net^$redirect=nooptext,important
 ||data.deduce.com^$redirect=nooptext,important
 ||findanswersnow.net^$redirect=nooptext,important
-||gogle.net^$redirect=nooptext,important
 ||gpush.cogocast.net^$redirect=nooptext,important
 ||info.leadid.com^$redirect=nooptext,important
 ||lijit.com^$redirect=nooptext,important
 ||listrakbi.com^$redirect=nooptext,important
 ||partner.mediawallahscript.com^$document,popup
 ||pippio.com^$redirect=nooptext,important
-||retailproductsusa.com^$redirect=nooptext,important
 ||rlcdn.com^$redirect=nooptext,important
 ||signupandturnyourscreenoffsafepowernow.date^$redirect=nooptext,important
 ||static.imghst-de.com^$redirect=nooptext,important
-||static.traversedlp.com^$redirect=nooptext,important
 ||tag.cogocast.net^$redirect=nooptext,important
 ||tag.yieldoptimizer.com^$document,popup
 ||traversedlp.com^$redirect=nooptext,important
@@ -8188,6 +8340,171 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||hosting-redirect.com^$document
 ||robertprotectsyourpc-us1.com^$redirect=nooptext,important
 ||microsoftedge.microsoft.com/addons/detail/browse-safe/halaijeoccdjjoknnkcejljcimnfbmkf^$document
+! https://github.com/DandelionSprout/adfilt/pull/289
+||gogles.com^$redirect=nooptext,important
+||flexroll.online^$document
+||earnestbee.info^$document
+||weaknessnill.shop^$redirect=nooptext,important
+||aquariuminn.com^$redirect=nooptext,important
+||army-glo.scrollingsystem.com^$document
+||www.kqzyfj.com^$redirect=nooptext,important
+||kqzyfj.com^$document
+||cj.dotomi.com^$redirect=nooptext,important
+||mcafee12.tt.omtrdc.net^$document
+||trolleydrop.info^$document
+||jaynordan.digital^$document
+! https://www.virustotal.com/gui/ip-address/70.32.1.32/relations
+||hssupoort.us^$redirect=nooptext,important
+||clk.rtpdn14.com^$document
+||starbux.fun^$redirect=nooptext,important
+||fortnitecode.online^$redirect=nooptext,important
+||cd.org^$document
+! https://www.virustotal.com/gui/file/78f490e503c86eaaff5760197b9ff5308ed6e03161af13194a6c1e0cd95422de/community
+! https://github.com/DandelionSprout/adfilt/commit/f7f114945c83b339be5cdd848e229680d9918abb#commitcomment-57642875
+23.94.26.138$network
+||ispco.shop^$redirect=nooptext,important
+! https://github.com/DandelionSprout/adfilt/pull/298
+! https://www.virustotal.com/gui/file/ac5a95221b895545eb04cfea29693288d7b432ad313f6bfc9db2ddf86f085a63/community
+205.185.126.200$network
+! https://www.virustotal.com/gui/url/337dd5e5c53558dc7d6c8910b5ebe14a7390a78e13830b367363465b85ca8dd6?nocache=1
+||trytogoi.xyz^$redirect=nooptext,important
+! https://www.virustotal.com/gui/url/0f8791a82ee4d2c229ccbe3328092cdb2135027439778c280f1d2d3b0fdba1bb
+||apple-technicalsupport-icloud.com^$redirect=nooptext,important
+! https://www.virustotal.com/gui/file/3ef65ce27d39b037d75bdc16b197e04f3b391f76c2da5f2f755e2ded38bb9078/community
+185.243.56.167$network
+! https://www.virustotal.com/gui/file/12013662c71da69de977c04cd7021f13a70cf7bed4ca6c82acbc100464d4b0ef/community
+123.10.224.135$network
+59.47.187.147$network
+39.68.172.210$network
+122.192.177.176$network
+112.27.124.108$network
+123.110.176.246$network
+219.155.105.98$network
+171.35.161.209$network
+60.16.255.36$network
+112.30.4.52$network
+182.121.191.201$network
+121.61.48.170$network
+39.81.68.45$network
+27.222.220.164$network
+113.233.215.135$network
+151.77.100.133$network
+125.120.13.184$network
+120.12.138.133$network
+27.194.115.185$network
+104.128.199.228$network
+183.92.123.145$network
+110.89.8.126$network
+125.43.211.184$network
+1.0.218.230$network
+221.208.4.56$network
+60.13.60.19$network
+171.37.29.87$network
+124.91.237.188$network
+115.56.137.49$network
+115.52.240.69$network
+112.252.132.185$network
+117.198.240.157$network
+42.53.240.249$network
+116.179.138.68$network
+110.241.119.159$network
+115.56.31.133$network
+103.19.128.222$network
+202.12.80.74$network
+61.52.8.62$network
+182.122.252.69$network
+219.155.26.50$network
+120.4.141.185$network
+119.102.7.115$network
+72.51.127.213$network
+111.224.199.91$network
+119.250.236.122$network
+112.30.110.58$network
+! https://www.virustotal.com/gui/file/715eef1fb3bbf84ade848d97d4ec05d380cf8595298b51af134385de70be9d08/community
+||pcae.de^$document
+! https://www.virustotal.com/gui/file/4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7/community
+117.196.49.21$network
+115.55.54.234$network
+115.52.17.123$network
+182.59.69.21$network
+! https://www.virustotal.com/gui/file/3db0e385eb53a32d61a5a35908a99317868b571e4cf7079db67fd68604da662c/community
+||chip-secured-download.de^$redirect=nooptext,important
+! https://www.virustotal.com/gui/url/5b1dc9b2ec70e28b5f6cbb282a598a1b2ecd4df2aebb66953ca9194fa1c9c4fb
+! Domains which resolve to this (already blocked) IP - for users of HOSTs/Domains/uBlock Origin
+||ujgjyjltunl.com^$redirect=nooptext,important
+||pvyvglaf.com^$redirect=nooptext,important
+||ecsfunhget.com^$redirect=nooptext,important
+||xemfrctctdnlhe.com^$redirect=nooptext,important
+||tgxcmcoikpgek.com^$redirect=nooptext,important
+||lghdoxzulv.com^$redirect=nooptext,important
+||knxntpsd.com^$redirect=nooptext,important
+||nctylivpwhpby.com^$redirect=nooptext,important
+||phhitgjxsit.com^$redirect=nooptext,important
+! https://www.virustotal.com/gui/url/b2936e74f35940d2f09cabf4e089a0d655e62a5fc08ad32e1fae79a62683683f?nocache=1
+||saimission.org^$redirect=nooptext,important
+! https://www.virustotal.com/gui/url/4c2c3cf2e4f5b9ac9765eb9c58f2756d8f0f4632ec707107afe3c111f4749025?nocache=1
+||grub-wa-saya.duckdns.org^$redirect=nooptext,important
+! https://www.virustotal.com/gui/file/a6e89d2bb1c2da1d852fb8e248f39cf7b3d4b0ea05a8d8f343d1b8e74d271d43/relations
+||driversupport.com^$document
+! Copied over from URLHaus
+||thehotelshowdev.bitkit.dk^$redirect=nooptext,important
+! Domains related to the above
+||big5constructnigeria-staging.bitkit.dk^$redirect=nooptext,important
+||big5-nigeria.bitkit.dk^$redirect=nooptext,important
+||bromic-staging.bitkit.dk^$redirect=nooptext,important
+! A PUP
+||mycleanpc.com^$document
+! Related domains owned by the same company and used for payment (the first is for 'tech support' scams, the second for their 'ID protection')
+||ustechsupport.com^$document
+||mycleanid.com^$document
+! The main website for the MyCleanPC company
+||realdefen.se^$document
+! Vermilion Strike
+! https://www.virustotal.com/gui/file/294b8db1f2702b60fb2e42fdc50c2cee6a5046112da9a5703a548a4fa50477bc/relations
+160.202.163.100$network
+! https://www.virustotal.com/gui/ip-address/160.202.163.100/relations
+||microsoftkernel.com^$redirect=nooptext,important
+||hksupd.com^$redirect=nooptext,important
+||microsofthk.com^$redirect=nooptext,important
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-938167311
+||lnk.to/GlXHtur0^$redirect=nooptext,important
+||machinesalaver.net^$redirect=nooptext,important
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-940500664
+||aselink.guru^$redirect=nooptext,important
+&t=redn|$document
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-944612753
+||apk-top.cloud^$redirect=nooptext,important
+||pushbizapi.com^$redirect=nooptext,important
+! https://github.com/DandelionSprout/adfilt/pull/303
+! https://www.virustotal.com/gui/file/37328efa73c248b460aba605d7745b024f31ab7ab864e1af273e9a197a188f42/community
+45.95.169.115$network
+! https://www.virustotal.com/gui/file/03e4533ba8874c2f4dcdb94bd135914fa4c22ed477d7c0395dc2322b6468e249/community
+45.148.120.80$network
+! https://www.virustotal.com/gui/file/1a782cab036efa567c2c42b7bae9452bf735be72f0b00d68f6dcba48cea526fa/community
+85.239.33.9$network
+||leak.serveftp.com^$redirect=nooptext,important
+! Relations to the domain above
+||adminsys.serveftp.com^$redirect=nooptext,important
+||amazbaidu.serveftp.com^$redirect=nooptext,important
+||amazcompute.serveftp.com^$redirect=nooptext,important
+||httpssecure.serveftp.com^$redirect=nooptext,important
+||identity-auth612.serveftp.com^$redirect=nooptext,important
+||securd03c-acclogs.serveftp.com^$redirect=nooptext,important
+||secure00-account.serveftp.com^$redirect=nooptext,important
+||numberpresentifhh.serveftp.com^$redirect=nooptext,important
+||secure-auth01.serveftp.com^$redirect=nooptext,important
+||citionlinebk.serveftp.com^$redirect=nooptext,important
+||secure05h-verify.serveftp.com^$redirect=nooptext,important
+||secure-authlogin5.serveftp.com^$redirect=nooptext,important
+||c4ase-verified9932.serveftp.com^$redirect=nooptext,important
+||1log-wellsfargo.serveftp.com^$redirect=nooptext,important
+||eposcardokubo.serveftp.com^$redirect=nooptext,important
+! https://www.virustotal.com/gui/file/8a39f18caa77d52e80bec05f584ec50e733a3be1e33551d8902e95b9b0bfe6c0/community
+107.173.176.183$network
+! https://www.virustotal.com/gui/file/54054209c921a68f12a9b29d6e84f1b45cb417bc0b5a99356a245727e0a41e40/community
+45.148.120.171$network
+! http://vxvault.net/ViriFiche.php?ID=44058
+||sherence.ru^$redirect=nooptext,important
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$redirect=nooptext,important
@@ -8221,7 +8538,6 @@ toorgle.net##.join
 ||allowandgo.com^$redirect=nooptext,important
 ||aksuu.ru^$redirect=nooptext,important
 ||allow-space.com^$redirect=nooptext,important
-||allowandgo.com^$redirect=nooptext,important
 ||clc.zoocenter.ru^$redirect=nooptext,important
 ||clckask.club^$redirect=nooptext,important
 ||clickjump.biz^$redirect=nooptext,important
@@ -8245,7 +8561,6 @@ toorgle.net##.join
 ||amoxycillin1st.com^$redirect=nooptext,important
 ! The Jerma985 Discord server
 ||crazycrabreedville.com^$redirect=nooptext,important
-||discord-nitro.link^$redirect=nooptext,important
 ! https://flclever.weebly.com/pixie-hollow-mini-games.html (06/05/2021)
 ||messium.info^$redirect=nooptext,important
 ! Various Google searches
@@ -10497,7 +10812,6 @@ toorgle.net##.join
 ||illuminatekingdomwrist.com^$redirect=nooptext,important
 ||illuminatelocks.com^$redirect=nooptext,important
 ||illustrationmanlypageant.com^$redirect=nooptext,important
-||ilo134ulih.com^$redirect=nooptext,important
 ||ilxhsgd.com^$redirect=nooptext,important
 ||imglov.com^$redirect=nooptext,important
 ||immersedcopythinking.com^$redirect=nooptext,important
@@ -11530,7 +11844,6 @@ toorgle.net##.join
 ||pipelydia.com^$redirect=nooptext,important
 ||pitrespite.com^$redirect=nooptext,important
 ||pitysuffix.com^$redirect=nooptext,important
-||pl3143.puserving.com^$redirect=nooptext,important
 ||plaguealacritytwitter.com^$redirect=nooptext,important
 ||plaicenaive.com^$redirect=nooptext,important
 ||plainlycradlescalp.com^$redirect=nooptext,important
@@ -11603,7 +11916,6 @@ toorgle.net##.join
 ||portugueseexcessivelygospel.com^$redirect=nooptext,important
 ||poshbeechhoneycomb.com^$redirect=nooptext,important
 ||possessedbrute.com^$redirect=nooptext,important
-||possessedcrackinghart.com^$redirect=nooptext,important
 ||possiblytoxic.com^$redirect=nooptext,important
 ||postalfranticallyfriendship.com^$redirect=nooptext,important
 ||posterbreaking.com^$redirect=nooptext,important
@@ -13061,7 +13373,6 @@ toorgle.net##.join
 ||cloud9-gaming.xyz^$redirect=nooptext,important
 ||com-nitro.gifts^$redirect=nooptext,important
 ||counter-stricke.ru^$redirect=nooptext,important
-||crazy-soom.org.ru^$redirect=nooptext,important
 ||cs-activit.xyz^$redirect=nooptext,important
 ||cs-riptide.com^$redirect=nooptext,important
 ||cs-riptide.ru^$redirect=nooptext,important
@@ -13174,7 +13485,6 @@ toorgle.net##.join
 ||keydrop.ru.com^$redirect=nooptext,important
 ||keys-dropes.com^$redirect=nooptext,important
 ||keysdropes.com^$redirect=nooptext,important
-||justinstalledpanel.com^$redirect=nooptext,important
 ||magicdropgift.ru^$redirect=nooptext,important
 ||magikbrop.xyz^$redirect=nooptext,important
 ||market-csgo.ru^$redirect=nooptext,important
@@ -13210,7 +13520,6 @@ toorgle.net##.join
 ||rollskin.ru^$redirect=nooptext,important
 ||rust-chest.com^$redirect=nooptext,important
 ||rust-get.com^$redirect=nooptext,important
-||rust-satchel.com^$redirect=nooptext,important
 ||rust-skin.com^$redirect=nooptext,important
 ||s-arts.pro^$redirect=nooptext,important
 ||skinosoda.online^$redirect=nooptext,important
@@ -13487,7 +13796,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 ! Placeholder line for alternate list versions
 !#endif
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! OriginalVersion: 28September2021v1-Alpha
+! OriginalVersion: 20October2021v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -13910,6 +14219,7 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 condoblues.com###milotree_box_wrap
 ##.swp-hover-pin-button:not(html, body)
 ##.facebook-page-plugin:not(html, body)
+~vk.com##iframe[src^="https://vk.com/widget_like.php?"]
 ! NOT allowed to be generic
 pastebin.com##.h_800.tweet
 vox.com##.c-social-buttons
@@ -13940,6 +14250,7 @@ tomshardware.co.uk##.share-bar
 knowyourmeme.com##a[class^=pinterest-save]
 racefans.net##.sd-social
 gamespot.com##.share--column
+forbes.com##.article-sharing
 ! Title: 🔮 I Don't Want to Download Your Browser
 ! OriginalVersion: 29September2021v1-Beta
 ! Expires: 5 days
@@ -14003,7 +14314,7 @@ deezer.com#?#.page-alerts:-abp-has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:-abp-has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 23September2021v1
+! OriginalVersion: 18October2021v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -14239,6 +14550,9 @@ deviantart.com##div[style^="width:"] > div[class]:nth-of-type(2):last-of-type
 ! That weird mode where only the top 7 posts from the previous week are shown
 reddit.com##.m-slide-up.PreviewDrawer
 !#endif
+! The Dots
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-944921911
+the-dots.com##[class^=ContentPaywall]
 ! ——————————————————————————————————————————————————————————————————————
 ! Below are entries that I borrowed from «Strappazzon's Annoyances filter list», which is maintained by https://github.com/Strappazzon at https://raw.githubusercontent.com/Strappazzon/filterlists/master/Filterlists/Annoyances.txt, and which is licenced under MIT.
 ! Amazon
@@ -14957,7 +15271,7 @@ dailymotion.com##div[class*=_adCell_]
 ! Removes the "Browse more videos" feed below the video player"
 dailymotion.com#?#div[class^=DiscoveryQueueDisplay__sectionContainer_]:-abp-contains(Browse more )
 ! Title: 🐥 Twitter: Pure Reading Experience
-! OriginalVersion: 21April2021v1-Alpha
+! OriginalVersion: 05October2021v1-Alpha
 ! Expires: 5 days
 ! Description: Twitter is a place full of distractions, strange things, and people you'd want to stay 200km away from at all times. If you wish to focus strictly on the 2% of Twitter that is actually any good nowadays, here's a list for you.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -14982,8 +15296,10 @@ twitter.com#?#nav[aria-label][role=navigation] + div > section > div[aria-label^
 !!! twitter.com##section[aria-labelledby=accessible-list-1]
 ! Removes login nags
 twitter.com#?##layers > div[class*=" "]:first-of-type:-abp-has(a[href="/i/flow/signup"])
+!#if !adguard
 ! https://mobile.twitter.com/nasuno_Posi
 twitter.com##div[data-testid=sidebarColumn] section[aria-label][role=region]
+!#endif
 ! Removes the cookie sticky on bottom
 twitter.com###layers > div > div:nth-of-type(2):last-of-type
 ! Title: 🎓 Wikia: Pure Browsing Experience
@@ -15109,7 +15425,7 @@ fandom.com#$?#:root { --theme-body-background-image: none !important }
 ##.SnowFlakesBg:not(html, body)
 ##foxfield-xmas:not(html, body)
 ! Title: 🌭 Falukorv List
-! OriginalVersion: 02October2021v1-Beta
+! OriginalVersion: 17October2021v1-Beta
 ! Expires: 10 days
 ! Description: Originally created because some PR-Chinese filterlist makers decided to block Falun Gong websites in their anti-ad lists for reasons that had absolutely nothing to do with ads, tracking or malware, and despite the sites already being megablocked within their country; this list has since then also expanded to cover other lists' entries that makes one think "Wait, hold up", due to how misplaced they are.
 ! The list is not designed to be used together with anti-'social network' lists.
@@ -15213,6 +15529,10 @@ www.m.vk.com$badfilter
 @@://global.sitesafety.trendmicro.com^
 @@://www.fortiguard.com^
 @@||dbl.oisd.nl^$elemhide
+@@||vulners.com^
+!#if false
+@@||testsafebrowsing.appspot.com^
+!#endif
 ! https://wiki.manjaro.org/index.php/Pacman-mirrors#Use
 @@://wikipedia.org^
 @@||github.com^
@@ -15223,10 +15543,38 @@ www.m.vk.com$badfilter
 ! Connection pages for hotel/train/boat Wi-Fi networks (Work-in-progress, although delayed)
 ! Norrtåg
 @@||internet--access.net^
+! Narvesen
+@@||network-auth.com^
+! Thon Hotels
+@@||netnordic.net^
+@@||thonhotels.no^
+! Britannia Hotell
+@@||hospitality.thecloud.eu^
+! Burger King
+@@||service.thecloud.eu^
+! Rema 1000
+@@||rema1000-kunde.rema.no^
+! Krambua
+@@||airid.cloud^
+! Radisson Blu
+@@||login.mikenopa.com^
+! Scandic Hotels
+@@||hoisthospitality.com^
+! Clas Ohlson
+@@||connectivitycheck.gstatic.com^
+@@||guestportal.clasohlson.eu^
+! 'If' Insurance
+@@||visitor.if.eu^
+! Jordbærpikene
+@@||portal.skyid.no^
+! Nille
+@@||central-eu.cloudguest.central.arubanetworks.com^
+! University of Trondheim - NTNU
+@@||wireless.ntnu.no^
 ! Section reserved for THEtomaso to add fixes for Fanboy's Social Blocking List and for Fanboy's Annoyances List-exclusive entries (_Not_ for EasyList Cookie List)
 ! (Currently empty.)
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
-! OriginalVersion: 01October2021v1-Beta
+! OriginalVersion: 20October2021v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -15252,7 +15600,7 @@ www.m.vk.com$badfilter
 ! justwatch.com
 ~imdb.com##div[v-uib-tooltip=IMDB]
 ! pantaflix.com
-~imdb.com##div[class*=ImdbRating]
+~imdb.com##div[class*=ImdbRating]:not(html, body)
 ! kissanime.ru.com (Link working as of 13th of December 2019)
 ~imdb.com##.top-imdb-list:not(html, body)
 ! ww2.1movies.is (28/07/2020)
@@ -15280,6 +15628,7 @@ www.m.vk.com$badfilter
 ~imdb.com##.shortstory__imdb:not(html, body)
 ! https://45.87.43.43/filmas/bajala-magiski-nuotykiai-online/ (28/07/2021)
 ~imdb.com##.imdb2:not(html, body)
+! Viaplay (09/10/2021)
 ! International (All adblockers)
 bing.com#?#.b_algo:-abp-has(cite:-abp-contains(imdb.com)) .b_sritem
 newonnetflix.info#?#p:-abp-has(a[target=_imdb])
@@ -15320,6 +15669,12 @@ kissanime.*##.rating
 kissanime.*##a[href*="kissanime."][href$="/imdb/"]
 ! Australia
 binge.com.au#?#h3 + p + ul > li:-abp-has(svg[class$=Imdb])
+! Iran
+gapfilm.ir##a[href^="/movie/"] + div:not([class*=" "]):last-of-type > a[href^="/movie/"] ~ div:not([class*=" "]):last-of-type
+gapfilm.ir##a[href^="/serial/"] + div:not([class*=" "]):last-of-type > a[href^="/serial/"] ~ div:not([class*=" "]):last-of-type
+gapfilm.ir#?#.no-gutters div:not([class*=" "]):last-of-type:-abp-has(> span:-abp-contains(:IMDB))
+gapfilm.ir#?#div.col-lg-2.col-6:-abp-contains(IMDB)
+gapfilm.ir##.progress-drs
 ! Various movie sites
 ddl-warez.to#?#td:-abp-has(.btn[data-original-title^=IMDb])
 myfriendspizza.com#?#a:-abp-contains(IMDb)
@@ -15342,7 +15697,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 04October2021v1-Beta
+! OriginalVersion: 17October2021v4-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -15526,14 +15881,6 @@ $removeparam=tracelog
 $removeparam=cardId
 ! https://metro.co.uk/2017/04/11/hubble-just-spotted-something-massive-coming-out-of-uranus-6567896/?ito=article.desktop.share.top.facebook
 $removeparam=ito
-! https://es.aliexpress.com/item/4000672272353.html?pvid=c4cdc770-f05a-4b7b-8a50-d8b81efff6c9&_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:c4cdc770-f05a-4b7b-8a50-d8b81efff6c9,tpp_buckets:668%230%23131923%230_668%23808%234094%23200_668%23888%233325%231_668%232846%238113%23646_668%232717%237558%23188_668%231000022185%231000066059%230_668%233468%2315617%23897
-$removeparam=pvid
-||aliexpress.com^$removeparam=_t
-! https://es.aliexpress.com/item/4001349152860.html?gps-id=5547572&scm_id=1007.19201.130907.0&scm=1007.19201.130907.0&scm-url=1007.19201.130907.0
-||aliexpress.$removeparam=gps-id
-$removeparam=scm_id
-$removeparam=scm
-$removeparam=scm-url
 ! https://heathercoxrichardson.substack.com/p/a-new-narrative/comments?token=eyJ1c2VyX2lkIjo4Nzk4NDQyLCJwb3N0X2lkIjoyMTAzMDA1MiwiXyI6ImtkSWlHIiwiaWF0IjoxNjA2NzgxODUxLCJleHAiOjE2MDY3ODU0NTEsImlzcyI6InB1Yi0yMDUzMyIsInN1YiI6InBvc3QtcmVhY3Rpb24ifQ.tTGn1X5uPyuv73zXQEp7JY1cserdlOVCNwshJONiHRw
 ||substack.com^$removeparam=token
 ! https://www.bing.com/search?q=hello&form=QBLH&sp=-1&pq=hello&sc=8-5&qs=n&sk=&cvid=49B83A335B1C4884B71B2FAD4A8027A9 (02/03/2021)
@@ -15596,7 +15943,6 @@ $removeparam=tracking_source
 ! https://www.theverge.com/2021/4/16/22387492/google-floc-ad-tech-privacy-browsers-brave-vivaldi-edge-mozilla-chrome-safari?scrolla=5eb6d68b7fedc32c19ef33b4 (20/04/2021)
 $removeparam=scrolla
 ! https://dagligvarehandelen.no/sites/default/files/styles/wysiwyg_full_width/public/70x100_cocashake_skisse_0.jpg?itok=k31KtKuB (30/04/2021)
-$removeparam=itok
 ! https://www.nytimes.com/2021/04/27/business/media/new-york-post-kamala-harris.html?smtyp=cur&smid=fb-nytimes&fbclid=IwAR1mH8MOV2qhIoD5pdX9gbEWedBAdS4sYOXB0yHJi3tZZ6Hg5r0Us-EEv0s (28/04/2021)
 $removeparam=smtyp
 ! https://techcrunch.com/2021/04/30/riot-games-updates-its-privacy-notice-to-start-developing-voice-comms-moderation/?tpcc=ECTW2020
@@ -15755,13 +16101,12 @@ $removeparam=afftrack
 $removeparam=shrsl_analytics_sscid
 $removeparam=shrsl_analytics_sstid
 ! https://go.nordvpn.net/aff_c?offer_id=129&aff_id=614&aff_sub=06VOOBfmFXpFAcqqIHYIr28&aff_sub2=blackfriday.com
-$removeparam=/^AFF_ID/i,domain=~nordvpn.net
+$removeparam=/^AFF_ID/i,domain=~nordvpn.net|~getproton.me
 $removeparam=/^aff_/
 ||photojobz.com^$removeparam=hop
 $removeparam=SSAID
 $removeparam=affsrc
 $removeparam=/^cm_mmc/
-||aliexpress.com^$removeparam=initiative_id
 $removeparam=hsCtaTracking
 ||microsoft.com^$removeparam=headerid
 ||microsoft.com^$removeparam=/^AAAA/
@@ -15883,7 +16228,6 @@ $removeparam=ncid
 ! https://www.f-secure.com/en/home/products/freedome?ecid=10588&adcid=10588
 $removeparam=ecid
 $removeparam=adcid
-! https://www.gamereactor.fi/?sid=39feac60637556f2d1f67482abf2b1ea
 ! https://spreadprivacy.com/duckduckgrowing/?s=pr-hd
 ||spreadprivacy.com^$removeparam=s
 ! https://www.marvel.com/insider?Osocial=YT&CID=MarvelInsider
@@ -15893,11 +16237,6 @@ $removeparam=Osocial
 ! https://www.nytimes.com/2008/12/16/sports/othersports/16beckey.html?adxnnl=1&adxnnlx=1257549224-XSk5v9i4LDrKlVwQmlgO8A&
 $removeparam=/^adxnnl/
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-972519
-||aliexpress.$removeparam=tt
-||aliexpress.$removeparam=terminal_id
-$removeparam=tmLog
-$removeparam=aem_p4p_detail
-$removeparam=algo_exp_id
 $removeparam=mkt_tok
 ||digikey.com^$removeparam=/^amp;/
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1004671
@@ -16264,7 +16603,6 @@ $removeparam=mclk
 $removeparam=mrnd
 $removeparam=maid
 $removeparam=mcid
-$removeparam=msid
 $removeparam=mpty
 ||sunbasket.com^$removeparam=/^msb/
 ||sunbasket.com^$removeparam=muts
@@ -16351,29 +16689,6 @@ $removeparam=p_tok
 ||fiverr.com^$removeparam=context_type
 ! https://www.deviantart.com/emeraldblast63/art/The-Tale-of-Two-Sunsets-Cover-Art-891919440?ga_submit_new=10%3A1631669334
 ||deviantart.com^$removeparam=ga_submit_new
-! https://github.com/uBlockOrigin/uAssets/pull/10010
-||bilibili.com^$removeparam=/^current/
-||bilibili.com^$removeparam=/^from/
-||bilibili.com^$removeparam=/^network/
-||bilibili.com^$removeparam=/^playurl/
-||bilibili.com^$removeparam=/^share/
-||bilibili.com^$removeparam=accept_quality
-||bilibili.com^$removeparam=bbid
-||bilibili.com^$removeparam=broadcast_type
-||bilibili.com^$removeparam=bsource
-||bilibili.com^$removeparam=hotRank
-||bilibili.com^$removeparam=p2p_type
-||bilibili.com^$removeparam=platform_network_status
-||bilibili.com^$removeparam=quality_description
-||bilibili.com^$removeparam=referfrom
-||bilibili.com^$removeparam=rt
-||bilibili.com^$removeparam=seid
-||bilibili.com^$removeparam=spm_id_from
-||bilibili.com^$removeparam=tdsourcetag
-||bilibili.com^$removeparam=timestamp
-||bilibili.com^$removeparam=ts
-||bilibili.com^$removeparam=unique_k
-||bilibili.com^$removeparam=visit_id
 ! https://www.virustotal.com/gui/file/cdecce5824e901bbbd97c0f933c15a14a4f2c1b260da17d8081b6b87cf306c2f/community
 ||ccleaner.com^$removeparam=x-acqsource
 ! https://us.norton.com/?displocale=iso3%3ausa&displang=iso3%3aeng&ssdcat=266&origin=safew&env=prod&version=1.0
@@ -16402,13 +16717,97 @@ $removeparam=refsec,domain=barrons.com
 $removeparam=reflink,domain=marketwatch.com|mansionglobal.com
 ! https://edition.cnn.com/?hpt=header_edition-picker
 $removeparam=hpt,domain=cnn.com
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1421356
-||sogou.com^$removeparam=_asf
-||sogou.com^$removeparam=_ast
-||sogou.com^$removeparam=sugsuv
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1424772
+$removeparam=depth_1-utm_source
+! https://www.frisktpust.no/collections/interior/products/umi-ergonomisk-kontorstol?cmp_id=14758715696&adg_id=128927650218&kwd=ergonomisk%20kontorstol&device=m
+$removeparam=cmp_id
+$removeparam=adg_id
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1424696
+||bing.com^$removeparam=pq
+||bing.com^$removeparam=refig
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-541044
+||bing.com^$removeparam=cvid
+@@||bing.com/AS/Suggestions?$removeparam=cvid
+! https://www.jetbrains.com/?from=Komga
+||jetbrains.com^$removeparam=from
+! https://blog.myfitnesspal.com/essential-guide-to-fat/?os_ehash=55@sfmc:33608078
+$removeparam=os_ehash
+! https://nerdrooted.com/2020/01/06/how-to-install-wow-in-arch-manjaro-linux/?sfw=pass1693248042
+||nerdrooted.com^$removeparam=sfw
+! https://www.toshin-online.com/?ldtag_cl=8UWK33VzT3qqcRwOlcoPPwAA
+$removeparam=ldtag_cl
+! https://canberrafunrun2021.grassrootz.com/leukaemia?vero_id=campaign-3150-event-50-account-203189&vero_conv=RPXTW_rFPukmw3Xjk2CY2ENhTFg0V0Ju_scFfwnUHhjpHSMzUPquo3CmWb9XTcM6QTvwslcumT5a-4rk_S1L5GMRt209re12myDvly9EpcE=
+$removeparam=vero_conv
+! https://help.getvero.com/articles/what-is-vero-id
+$removeparam=vero_id
+! https://www.evga.com/products/product.aspx?pn=220-B5-0550-V1&Source=PCPartPicker
+||evga.com^$removeparam=Source
+! https://support.google.com/websearch/answer/9351707?p=featured_snippets&hl=en&visit_id=637669631265857080-3305857145&rd=1
+||google.$removeparam=visit_id
+! https://vpnarea.com/front/member/signup?a_aid=torrentgalaxy
+$removeparam=a_aid
+! https://www.infoq.com/articles/kotlin-ten-years-qa/?topicPageSponsorship=9df7746f-b196-415b-964e-bc8483319fd9
+||infoq.com^$removeparam=topicPageSponsorship
+! https://www.eneba.com/es/marketplace?af_id=nate
+||eneba.com^$removeparam=af_id
+! https://disq.us/url?url=https%3A%2F%2Farstechnica.co.uk%2Finformation-technology%2F2017%2F01%2Fantivirus-is-bad%2F%3Av0Er-2ea1-t4FcbndbRV_9xv5-4&cuid=977864
+||disq.us^$removeparam=cuid
+! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/58
+||eonline.com^$removeparam=/^(source|medium|content)=/
+! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/53
+||tokopedia.com^$removeparam=/^(source|trkid|whid)=/
+! https://github.com/ClearURLs/Rules/issues/13
+||mp.weixin.qq.com^$removeparam=/^(chksm|scene|xtrack|key|ascene|uin|devicetype|version|exportkey|pass_ticket)=/
+! https://www.flipkart.com/wildcraft-knight-mel-17-5-l-laptop-backpack/p/itmfejkcj45hnsdw?pid=BKPFEJKCFU49PCDE&lid=LSTBKPFEJKCFU49PCDEKYMJX4&marketplace=FLIPKART&store=reh%2F4d7%2Fak9&srno=b_1_1&otracker=hp_omu_Top%2BOffers%2BOn_3_13.dealCard.OMU_6NBH6T8TFQ5H_6&otracker1=hp_omu_WHITELISTED_neon%2Fmerchandising_Top%2BOffers%2BOn_NA_dealCard_cc_3_NA_view-all_6&fm=organic&iid=en_JRTu6S3VTYUNswfx2Vf%2BIxSVpVqAn%2BgBL%2F4egSHBpmeZwysjg95tdc%2B0VNBUu1uuBVLsn39nQeqsYzc7%2BsLNkQ%3D%3D&ppt=None&ppn=None&ssid=ooc70jk6kg0000001634312695177&cid=6NBH6T8TFQ5H
+$removeparam=otracker
+$removeparam=otracker1
+||flipkart.com^$removeparam=/^[cilp]id=/
+||flipkart.com^$removeparam=fm
+||flipkart.com^$removeparam=ppn
+||flipkart.com^$removeparam=ppt
+||flipkart.com^$removeparam=srno
+||flipkart.com^$removeparam=ssid
+||flipkart.com^$removeparam=store
+||flipkart.com^$removeparam=marketplace
+! https://www.w3schools.com/?ft_source=4916&ft_medium=7689
+$removeparam=ft_source
+$removeparam=ft_medium
+! https://www.bbc.com/?ref_medium=Desktop&ref_source=OI-TA&ref_campaign=menu-header
+$removeparam=ref_source
+$removeparam=ref_medium
+$removeparam=ref_campaign
+! https://www.mozilla.org/en-US/firefox/new/?redirect_source=getfirefox-com
+||mozilla.org^$removeparam=redirect_source
+! https://www.mozilla.org/en-US/firefox/new/?src=amo
+||mozilla.org^$removeparam=src
+! https://worldrugbymuseum.com/education?spMailingID=11883824&spUserID=MjY5ODA2ODEzMTk4S0&spJobID=1673999048&spReportId=MTY3Mzk5OTA0OAS2
+$removeparam=spMailingID
+$removeparam=spUserID
+$removeparam=spJobID
+$removeparam=spReportId
+! https://www.gog.com/news/interview_looking_back_at_the_witcher_3_wild_hunt_with_its_creators?track_click=1
+$removeparam=track_click
+! https://www.fiverr.com/mountdesign/design-3-professional-logo-for-you-in-24-hours?pos=1&funnel=c2c7cf95edaaf02368858291d8f4f9b2
+||fiverr.com^$removeparam=funnel
+! https://www.nbc.com/networks/e?_branch_match_id=977608396495687816
+||nbc.com^$removeparam=_branch_match_id
+! https://www.purepeople.com/article/sebastien-chabal-sans-sa-barbe-le-rugbyman-meconnaissable_a447301/1?actId=ebwp0YMB8s0Y9O2l_QRyx3V1qzzpVLXuLyr5FYI13OrFPXIXgMzQrwaYyENrH16E&actCampaignType=MAIL&actSource=7307
+$removeparam=actId
+$removeparam=actCampaignType
+$removeparam=actSource
+! https://www.epicgames.com/store/en-US/p/humankind?epic_affiliate=raptoria&epic_gameId=02c14a01b7044db98de3f3a10813a42e
+||epicgames.com^$removeparam=/^(epic_affiliate|epic_gameId)=/
+! https://adele.lnk.to/EOM
+$removeparam=/^(cId|lId|src)=/,domain=apple.com|youtube.com
+||music.apple.com^$removeparam=/^(ct|itsct|itscg|app)=/
+! https://tv.apple.com/?ign-itscg=10000&ign-itsct=atv-0-tv_ovp-nav_stm-apl-avl-191111
+||apple.com^$removeparam=/^ign-/
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1490207
+! i.e. https://go.skimresources.com/?id=160612X1627478&xcust=adm2_841947&xs=1&url=https%3A%2F%2Fwalmart.com%2Fip%2F204105463
+||go.skimresources.com^$removeparam=/^id|xcust|xs$/
 ! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
-$removeparam=cid,domain=apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*|ae.com|anntaylor.com|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|loft.com|nike.com|nyandcompany.com|overstock.com|radissonhotelsamericas.com|ray-ban.com|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|wine.com|wsj.com|zales.com
+$removeparam=cid,domain=adshares.net|apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*|ae.com|anntaylor.com|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|loft.com|nike.com|nyandcompany.com|overstock.com|radissonhotelsamericas.com|ray-ban.com|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|wine.com|wsj.com|zales.com
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
@@ -16425,6 +16824,10 @@ $removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|a
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=wsj.com|marketwatch.com|barrons.com|fnlondon.com|dowjones.com|mansionglobal.com|penews.com
 @@^mod=djemalertNEWS^$removeparam=mod
+! https://www.gamereactor.fi/?sid=39feac60637556f2d1f67482abf2b1ea
+! (Exceptions: mail.qq.com, high.fi, phpBB forums, various other sites)
+$removeparam=sid,domain=gamereactor.*
+! ——— Rules for specific sites ——— !
 ! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
 ||amazon.$removeparam=th
@@ -16489,6 +16892,10 @@ $removeparam=geniuslink
 ||amazon.$removeparam=asc_item
 ||amazon.$removeparam=m
 ||amazon.$removeparam=refinements
+! https://www.amazon.com/Razer-Kraken-Ultimate-Gaming-Headset/dp/B07ZK6R8JF/ref=pd_sbs_5/137-2432372-2577703?keywords=headphone&qsid=259-8119744-7604032&sres=B00NBR7962%2CB07YT122DS%2CB07WD58H6R%2CB00NBR70A2%2CB07Q1YXVWH%2CB07MTXLFXV%2CB06XT8L1YF%2CB09FSB6DHJ%2CB0876ZJ78K%2CB085NW5M9S%2CB07SCKVB54%2CB07GGYPWPZ%2CB07HGG85HL%2CB091GHJ7FN%2CB082K726CK%2CB073XDK6ZW%2CB08CVDPQ9P%2CB07QZVSJZS%2CB07QYV5Z1G%2CB09BVFWPMZ&srpt=HEADPHONES
+||amazon.$removeparam=qsid
+||amazon.$removeparam=sres
+||amazon.$removeparam=srpt
 ! Other
 ||amazon.$removeparam=ingress
 @@/b/ref=$removeparam=ie
@@ -16520,6 +16927,10 @@ $removeparam=Source,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 $removeparam=Medium,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 ! https://m.facebook.com/story.php?story_fbid=2953962358150955&id=2029436133936920&m_entstream_source=timeline&__tn__=%2As%2As-R
 $removeparam=m_entstream_source
+! https://github.com/ClearURLs/Rules/issues/23
+$removeparam=referral_code,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+$removeparam=referral_story_type,domain=facebook.com|facebookcorewwwi.onion|messenger.com
+$removeparam=tracking,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 ! ——— eBay ———
 ! https://www.ebay.com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=aid%3D111001%26algo%3DREC.SEED%26ao%3D1%26asc%3D20160908105057%26meid%3Da7ecc6d2187f43619ceae843d9c7e96e%26pid%3D100675%26rk%3D1%26rkt%3D15%26sd%3D173553616659%26itm%3D173553616659&_trksid=p2481888.c100675.m4236&_trkparms=pageci%3A87956e3f-3968-11e9-ae7f-74dbd1801ed7%7Cparentrq%3A277c9f541690a861b48415dfffeb1383%7Ciid%3A1 (31/10/2020)
 $removeparam=_trkparms
@@ -16596,6 +17007,8 @@ $removeparam=ogbl
 ://www.google.*/search^$removeparam=entrypoint
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1299693
 ||google.*/search$removeparam=sqi
+! https://www.google.com/search?gs_ssp=eJzj4tTP1TcwSssoSVZgNGB0YPASS0otKUktUkgqLc7MSy0uBjKKUhNLAeDcDI4&q=better+business+bureau&oq=better&sourceid=chrome&ie=UTF-8
+||google.$removeparam=gs_ssp
 ! ———TikTok———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-632259
 ||tiktok.com^$removeparam=app
@@ -16619,7 +17032,104 @@ $removeparam=share_link_id
 ||tiktok.com^$removeparam=is_retargeting
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-974118
 ||tiktok.com^$removeparam=checksum
+! ——— Rules for heavily covered international sites ——— !
+!! ——— PR-China ———
+!!! ——— Baidu ———
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
+||baidu.com^$removeparam=/^rsv/
+||baidu.com^$removeparam=euri
+||baidu.com^$removeparam=f
+||baidu.com^$removeparam=for
+||baidu.com^$removeparam=inputT
+||baidu.com^$removeparam=issp
+||baidu.com^$removeparam=oq
+||baidu.com^$removeparam=prefixsug
+||baidu.com^$removeparam=rqid
+||baidu.com^$removeparam=rs_src
+||baidu.com^$removeparam=rsf
+||baidu.com^$removeparam=rsp
+||baidu.com^$removeparam=tn
+||baidu.com^$removeparam=usm
+||baidu.com^$removeparam=wfr
+! https://mbd.baidu.com/newspage/data/landingsuper?context=%7B%22nid%22%3A%22news_9897086216107820920%22%7D&n_type=0&p_from=1
+||baidu.com^$removeparam=n_type
+||baidu.com^$removeparam=p_from
+! https://www.baidu.com/s?cl=3&fr=top1000&wd=%E8%88%AA%E5%A4%A9%E5%91%98%E5%A4%AA%E7%A9%BA%E8%BF%87%E5%B9%B4%E5%90%83%E5%95%A5%E9%A6%85%E9%A5%BA%E5%AD%90%3F&hisfilter=1
+||baidu.com^$removeparam=cl
+||baidu.com^$removeparam=fr
+||baidu.com^$removeparam=hisfilter
+!!! ——— Bilibili ———
+! https://github.com/uBlockOrigin/uAssets/pull/10010
+||bilibili.com^$removeparam=/^current/
+||bilibili.com^$removeparam=/^from/
+||bilibili.com^$removeparam=/^network/
+||bilibili.com^$removeparam=/^playurl/
+||bilibili.com^$removeparam=/^share/
+||bilibili.com^$removeparam=accept_quality
+||bilibili.com^$removeparam=bbid
+||bilibili.com^$removeparam=broadcast_type
+||bilibili.com^$removeparam=bsource
+||bilibili.com^$removeparam=hotRank
+||bilibili.com^$removeparam=p2p_type
+||bilibili.com^$removeparam=platform_network_status
+||bilibili.com^$removeparam=quality_description
+||bilibili.com^$removeparam=referfrom
+||bilibili.com^$removeparam=rt
+||bilibili.com^$removeparam=seid
+||bilibili.com^$removeparam=spm_id_from
+||bilibili.com^$removeparam=tdsourcetag
+||bilibili.com^$removeparam=timestamp
+||bilibili.com^$removeparam=ts
+@@||api.bilibili.com^$removeparam=ts
+||bilibili.com^$removeparam=unique_k
+||bilibili.com^$removeparam=visit_id
+! https://manga.bilibili.com/detail/mc25717?refer_from=bili_main_nav
+||bilibili.com^$removeparam=refer_from
+! https://show.bilibili.com/platform/home.html?msource=pc_web
+||bilibili.com^$removeparam=msource
+!!! ——— Sogou ———
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1421356
+||sogou.com^$removeparam=_asf
+||sogou.com^$removeparam=_ast
+||sogou.com^$removeparam=from
+||sogou.com^$removeparam=lkt
+||sogou.com^$removeparam=p
+||sogou.com^$removeparam=s_from
+||sogou.com^$removeparam=sst0
+||sogou.com^$removeparam=sugsuv
+||sogou.com^$removeparam=sugtime
+||sogou.com^$removeparam=sut
+||sogou.com^$removeparam=w
+!!! ——— AliExpress ———
+! https://es.aliexpress.com/item/4000672272353.html?pvid=c4cdc770-f05a-4b7b-8a50-d8b81efff6c9&_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:c4cdc770-f05a-4b7b-8a50-d8b81efff6c9,tpp_buckets:668%230%23131923%230_668%23808%234094%23200_668%23888%233325%231_668%232846%238113%23646_668%232717%237558%23188_668%231000022185%231000066059%230_668%233468%2315617%23897
+||aliexpress.com/item/$removeparam=pvid
+||aliexpress.com^$removeparam=_t
+! https://es.aliexpress.com/item/4001349152860.html?gps-id=5547572&scm_id=1007.19201.130907.0&scm=1007.19201.130907.0&scm-url=1007.19201.130907.0
+||aliexpress.$removeparam=gps-id
+$removeparam=scm_id
+$removeparam=scm
+$removeparam=scm-url
+||aliexpress.com^$removeparam=initiative_id
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-972519
+||aliexpress.$removeparam=tt
+||aliexpress.$removeparam=terminal_id
+$removeparam=tmLog
+$removeparam=aem_p4p_detail
+$removeparam=algo_exp_id
+! https://campaign.aliexpress.com/wow/gcp/ae/channel/ae/accelerate/tupr?wh_weex=true&_immersiveMode=true&wx_navbar_hidden=true&wx_navbar_transparent=true&ignoreNavigationBar=true&wx_statusbar_hidden=true&wh_pid=ae/daily/ae/3c_daily/phones_accessories
+$removeparam=wx_header
+$removeparam=wx_navbar_hidden
+$removeparam=wx_navbar_transparent
+$removeparam=ignoreNavigationBar
+$removeparam=wx_statusbar_hidden
+! https://aliexpress.com/item/1005002402123565.html?fromRankId=3141134
+$removeparam=fromRankId
+! https://aliexpress.com/item/33014052863.html?pdp_ext_f=%7B%22ship_from%22:%22%22,%22sku_id%22:%2267107423525%22%7D&utparam=%7B%22process_id%22:%22401%22,%22x_object_type%22:%22product%22,%22pvid%22:%22df54ce03-45d0-42f5-a661-634290fe5f03%22,%22belongs%22:[%7B%22floor_id%22:%2222234693%22,%22id%22:%22782032%22,%22type%22:%22dataset%22%7D,%7B%22id_list%22:[%221000094891%22],%22type%22:%22gbrain%22%7D],%22scm%22:%221007.34914.242271.0%22,%22tpp_buckets%22:%2221669%230%23186385%230_21669%234190%2319162%23485_24914%230%23242271%238%22,%22x_object_id%22:%2233014052863%22%7D&__tppBottom=true
+||aliexpress.com^$removeparam=pdp_ext_f
+||aliexpress.com^$removeparam=utparam
+||aliexpress.com^$removeparam=__tppBottom
 !#if !env_mobile
+! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 ! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
 $removeparam=w,domain=files.wordpress.com|store.playstation.com|s-microsoft.com|store-images.microsoft.com
@@ -16762,20 +17272,28 @@ bloombergquint.com#%#//scriptlet('ubo-aopr.js', 'getSelection')
 ! Fake screen smudge
 ||dinreisevaksine.no/wp-content/themes/dbh/assets/images/background.jpg^
 ! AAB prompts
-/^https://[a-z]{1,}\.com/v2[a-zA-Z0-9_-]{70}$/$xmlhttprequest,third-party
-/^https://[a-z]{1,}\.com/v2[a-zA-Z0-9_-]{79}$/$xmlhttprequest,third-party
-/^https://[a-z]{1,}\.com/v2[a-zA-Z0-9_-]{81}$/$xmlhttprequest,third-party
+/^https://[a-z]{8,25}\.com/v2[a-zA-Z0-9_-]{70,71}$/$xmlhttprequest,third-party
+/^https://[a-z]{8,25}\.com/v2[a-zA-Z0-9_-]{79}$/$xmlhttprequest,third-party
+/^https://[a-z]{8,25}\.com/v2[a-zA-Z0-9_-]{81}$/$xmlhttprequest,third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/87299
 @@/favicon.ico|
 @@/favicon1.ico|
 @@/doubleclick.ico|
-! Suggestion algorithms considered by tens of millions of humans to be dangerous to the human species
+! Suggestion algorithms considered by tens of millions of humans to be dangerous to the human species.
+! In light of several dozen end-users wanting the suggestions back, I've had to give in to the pressure and instead only block ones tagged as "New" and "Suggested for you".
 ! https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/YouTube%20suggestion%20feed%20block%20reason.webp
 ! https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Images/YouTube%20suggestion%20feed%20block%20reason%202.webp
 ! https://techcrunch.com/2021/07/07/youtubes-recommender-ai-still-a-horrorshow-finds-major-crowdsourced-study
 ! https://assets.mofoprod.net/network/documents/Mozilla_YouTube_Regrets_Report.pdf
 ! https://www.techtimes.com/articles/252624/20200917/youtubes-horrible-recommendations-could-affect-younger-users-and-you-could-help-fix-it.htm
-youtube.com##ytd-watch-next-secondary-results-renderer
+!!!youtube.com##ytd-watch-next-secondary-results-renderer
+www.youtube.com#?#.ytd-watch-flexy #dismissible:-abp-has(.badge-style-type-simple)
 ! Links to party compatibility testers in article pages
 ! Requested by https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-903333579
 tv2.no##.banner
+! Prevents sites from forcibly always opening pages in new tabs
+! https://github.com/EasyList-Lithuania/easylist_lithuania/issues/16
+autoplius.lt#%#//scriptlet('ubo-ra.js', 'target', '[target="_blank"]', 'stay')
+! Prevents sites from removing the ability to right-click on pages
+! https://www.patheos.com/blogs/godzooks
+/wp-content/plugins/disable-right-click-and-content-copy-protection^

@@ -50,8 +50,6 @@ www.suomi24.fi##div[width="100%"] + div[width="50%"] + div[width="50%"] + div[cl
 www.suomi24.fi##div[width="100%"] + div[width="50%"] + div[width="50%"] + div[width="50%"] > div[class^="ThreadGridItemWrapper__CardWrapper"] > div:style(padding-left: 15px !important)
 ! Rule "www.suomi24.fi##div[width="50%"] + div[width="50%"] + [width="50%"] + div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] * div[class^="ThreadCardFooter__CardFooter"] > div[class^="ThreadCardFooter__ColumnContainer"]:style(padding-right: 15px !important)" converted to: "www.suomi24.fi#$#div[width="50%"] + div[width="50%"] + [width="50%"] + div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] * div[class^="ThreadCardFooter__CardFooter"] > div[class^="ThreadCardFooter__ColumnContainer"] { padding-right: 15px !important }"
 www.suomi24.fi##div[width="50%"] + div[width="50%"] + [width="50%"] + div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] * div[class^="ThreadCardFooter__CardFooter"] > div[class^="ThreadCardFooter__ColumnContainer"]:style(padding-right: 15px !important)
-! Rule "ampparit.com##^script:has-text(initAlmaAds)" converted to: "ampparit.com$$script[tag-content="initAlmaAds"][max-length="262144"]"
-ampparit.com##^script:has-text(initAlmaAds)
 ! Rule "aamulehti.fi,satakunnankansa.fi,valkeakoskensanomat.fi,nokianuutiset.fi,janakkalansanomat.fi,kmvlehti.fi,jamsanseutu.fi,suurkeuruu.fi,kankaanpaanseutu.fi,rannikkoseutu.fi,tyrvaansanomat.fi,merikarvialehti.fi,sydansatakunta.fi##+js(nostif, adblockDetected, 0)" converted to: "aamulehti.fi,satakunnankansa.fi,valkeakoskensanomat.fi,nokianuutiset.fi,janakkalansanomat.fi,kmvlehti.fi,jamsanseutu.fi,suurkeuruu.fi,kankaanpaanseutu.fi,rannikkoseutu.fi,tyrvaansanomat.fi,merikarvialehti.fi,sydansatakunta.fi#%#//scriptlet('ubo-nostif.js', 'adblockDetected', '0')"
 aamulehti.fi,satakunnankansa.fi,valkeakoskensanomat.fi,nokianuutiset.fi,janakkalansanomat.fi,kmvlehti.fi,jamsanseutu.fi,suurkeuruu.fi,kankaanpaanseutu.fi,rannikkoseutu.fi,tyrvaansanomat.fi,merikarvialehti.fi,sydansatakunta.fi##+js(nostif, adblockDetected, 0)
 ! Rule "afterdawn.com,download.fi,high.fi,muropaketti.com##+js(nostif, f.parentNode.removeChild(f), 100)" converted to: "afterdawn.com,download.fi,high.fi,muropaketti.com#%#//scriptlet('ubo-nostif.js', 'f.parentNode.removeChild(f)', '100')"
@@ -62,6 +60,8 @@ gamereactor.fi##+js(aopr, adblockEnabled)
 happypancake.fi##+js(aopr, Object.prototype.adUnits)
 ! Rule "iltalehti.fi##.double-column > a[href]:has(.article-container:has-text(Kaupallinen yhteistyö)):remove()" converted to: "iltalehti.fi#$?#.double-column > a[href]:has(.article-container:has-text(Kaupallinen yhteistyö)) { remove: true; }"
 iltalehti.fi##.double-column > a[href]:has(.article-container:has-text(Kaupallinen yhteistyö)):remove()
+! Rule "kiuruvesilehti.fi,urjalansanomat.fi##+js(aeld, scroll, innerHeight)" converted to: "kiuruvesilehti.fi,urjalansanomat.fi#%#//scriptlet('ubo-aeld.js', 'scroll', 'innerHeight')"
+kiuruvesilehti.fi,urjalansanomat.fi##+js(aeld, scroll, innerHeight)
 ! Rule "mikrobitti.fi##+js(nostif, bait)" converted to: "mikrobitti.fi#%#//scriptlet('ubo-nostif.js', 'bait')"
 mikrobitti.fi##+js(nostif, bait)
 ! Rule "proxyproxy.fi,pirateproxy.fi##+js(nowoif)" converted to: "proxyproxy.fi,pirateproxy.fi#%#//scriptlet('ubo-nowoif.js')"
@@ -70,8 +70,6 @@ proxyproxy.fi,pirateproxy.fi##+js(nowoif)
 savonsanomat.fi,ess.fi,itahame.fi,ksml.fi##+js(nostif, linkEl)
 ! Rule "pelaaja.fi##+js(aopr, ga)" converted to: "pelaaja.fi#%#//scriptlet('ubo-aopr.js', 'ga')"
 pelaaja.fi##+js(aopr, ga)
-! Rule "kiuruvesilehti.fi,urjalansanomat.fi##+js(aeld, scroll, innerHeight)" converted to: "kiuruvesilehti.fi,urjalansanomat.fi#%#//scriptlet('ubo-aeld.js', 'scroll', 'innerHeight')"
-kiuruvesilehti.fi,urjalansanomat.fi##+js(aeld, scroll, innerHeight)
 ! Rule "||damoh.katsomo.fi^$media,rewrite=abp-resource:blank-mp3,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi" converted to: "||damoh.katsomo.fi^$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi"
 ||damoh.katsomo.fi^$media,rewrite=abp-resource:blank-mp3,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi
 ! Rule "||freewheel-jitt.sanoma.fi^$media,rewrite=abp-resource:blank-mp3,domain=ruutu.fi" converted to: "||freewheel-jitt.sanoma.fi^$media,redirect=noopmp3-0.1s,domain=ruutu.fi"
@@ -80,10 +78,10 @@ kiuruvesilehti.fi,urjalansanomat.fi##+js(aeld, scroll, innerHeight)
 ||nelonenmedia-pmd-ads-*.nm-stream.nelonenmedia.fi^$media,rewrite=abp-resource:blank-mp3,domain=ruutu.fi
 ! Rule "||sanoma-prod.integration-x.com^$media,rewrite=abp-resource:blank-mp3,domain=ruutu.fi" converted to: "||sanoma-prod.integration-x.com^$media,redirect=noopmp3-0.1s,domain=ruutu.fi"
 ||sanoma-prod.integration-x.com^$media,rewrite=abp-resource:blank-mp3,domain=ruutu.fi
-! Rule "vr.fi#@#body:style(overflow: auto !important;)" converted to: "vr.fi#@$#body { overflow: auto !important; }"
-vr.fi#@#body:style(overflow: auto !important;)
 ! Invalid selector:
 gamereactor.fi##^.ad_top
+! Invalid selector:
+kansanuutiset.fi##^.cb-module-block.cb-box.cb-a-large.clearfix:has([id|=div-gpt-ad])
 ! Invalid selector:
 kokemaenjokilaakso.fi##^[alt^=Mainos]
 ! Invalid selector:

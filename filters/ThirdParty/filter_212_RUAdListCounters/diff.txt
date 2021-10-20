@@ -34,8 +34,8 @@ yandex.*##.mini-suggest__item:has(> a[href^="http://"]):remove()
 4pda.*##html[style] > body div.holder-no-hidden:style(margin-bottom: 10px !important)
 ! Rule "/?from=RCM-$document,xmlhttprequest,queryprune,domain=rambler.ru" converted to: "/?from=RCM-$document,xmlhttprequest,removeparam,domain=rambler.ru"
 /?from=RCM-$document,xmlhttprequest,queryprune,domain=rambler.ru
-! www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru##+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript) is excluded by "##+js" in exclusions-low.txt
-www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru##+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)
+! ~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru##+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript) is excluded by "##+js" in exclusions-low.txt
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru##+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)
 ! 4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight') is excluded by "#%#//scriptlet" in exclusions-low.txt
 4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight')
 ! 4pda.*#%#//scriptlet('ubo-no-setTimeout-if.js', 'removeAttr', 'setTimeout') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -55,9 +55,9 @@ rutube.ru#?#+js(json-prune.js, creative, creative.id)
 ! Invalid selector:
 rutube.ru#?#+js(json-prune.js, interactives, interactives.0)
 ! Invalid selector:
-buhgalter.com.ua#?#+js(no-setTimeout-if.js, /b-buy-access/)
+online-fix.me#?#+js(no-setTimeout-if, / d[0-9]{1}/)
 ! Invalid selector:
-online-fix.me#?#+js(no-setTimeout-if.js, vid_vpaut_div)
+buhgalter.com.ua#?#+js(no-setTimeout-if.js, /b-buy-access/)
 ! Invalid selector:
 ivi.ru#?#+js(set-constant.js, Object.prototype.canShowMoreAds, noopFunc)
 ! Invalid selector:
@@ -77,11 +77,11 @@ vadimrazumov.ru,lena-miro.ru,periskop.su,levik.blog,livejournal.*,olegmakarenko.
 ! Invalid selector:
 vadimrazumov.ru,lena-miro.ru,periskop.su,levik.blog,livejournal.*,olegmakarenko.ru,shakko.ru,varlamov.*#?#+js(set-constant.js, Object.prototype.antiadblock, false)
 ! Invalid selector:
-www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#+js(json-prune.js, Blocks)
-! Invalid selector:
-www.afisha.*,autorambler.ru,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#^script:has-text("getPrefixes")
-! Invalid selector:
 www.rambler.*#?#+js(no-setInterval-if.js, catch, 500)
+! Invalid selector:
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#+js(json-prune.js, Blocks)
+! Invalid selector:
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#^script:has-text("getPrefixes")
 ! Invalid selector:
 frontend.vh.yandex.*#?#+js(set-constant.js, Object.prototype._getAutoplay, noopFunc)
 ! Invalid selector:
@@ -182,6 +182,8 @@ Error: "$removeparam rules are not compatible with some other modifiers" in the 
 ?from=shapka$document,xmlhttprequest,removeparam=|,domain=auto.ru
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?from=tabbar$document,removeparam=|from,domain=yandex.*"
 ?from=tabbar$document,removeparam=|from,domain=yandex.*
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?from=yanews$document,removeparam=|"
+?from=yanews$document,removeparam=|
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?nid=*show-uid=$document,removeparam=|,domain=market.yandex.*"
 ?nid=*show-uid=$document,removeparam=|,domain=market.yandex.*
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?pokupki=$document,removeparam=|,domain=market.yandex.*"
@@ -204,8 +206,8 @@ Error: "$removeparam rules are not compatible with some other modifiers" in the 
 ?utm_partner_id=$document,removeparam=|,domain=mail.ru|sportmail.ru
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?ymclid=$document,removeparam=|"
 ?ymclid=$document,removeparam=|
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "aff_fcid=$document,removeparam=|,domain=aliexpress.*"
-aff_fcid=$document,removeparam=|,domain=aliexpress.*
+Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "aff_fcid=$document,removeparam=|,domain=aliexpress.*|~campaign.aliexpress.com"
+aff_fcid=$document,removeparam=|,domain=aliexpress.*|~campaign.aliexpress.com
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "algo_pvid=$document,removeparam=|,domain=aliexpress.*"
 algo_pvid=$document,removeparam=|,domain=aliexpress.*
 Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "fbclid=$document,removeparam=fbclid"

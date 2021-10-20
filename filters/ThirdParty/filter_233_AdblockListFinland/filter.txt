@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 03October2021v2
+! OriginalVersion: 19October2021v1
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -40,7 +40,6 @@ www.suomi24.fi#$#div[width="100%"] + div[width="50%"] + div[width="50%"] + div[c
 www.suomi24.fi#$#div[width="100%"] + div[width="50%"] + div[width="50%"] + div[width="50%"] > div[class^="ThreadGridItemWrapper__CardWrapper"] > div { padding-left: 15px !important }
 www.suomi24.fi#$#div[width="50%"] + div[width="50%"] + [width="50%"] + div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] * div[class^="ThreadCardFooter__CardFooter"] > div[class^="ThreadCardFooter__ColumnContainer"] { padding-right: 15px !important }
 ! HTML filters for Firefox
-ampparit.com$$script[tag-content="initAlmaAds"][max-length="262144"]
 ! -----SPECIFIC FILTERS END-----
 ! -----NETWORK FILTERS-----
 ||doubleclick.net^$xmlhttprequest,redirect=nooptext,domain=puhekupla.com
@@ -52,6 +51,7 @@ afterdawn.com,download.fi,high.fi,muropaketti.com#%#//scriptlet('ubo-nostif.js',
 gamereactor.fi#%#//scriptlet('ubo-aopr.js', 'adblockEnabled')
 happypancake.fi#%#//scriptlet('ubo-aopr.js', 'Object.prototype.adUnits')
 iltalehti.fi#$?#.double-column > a[href]:has(.article-container:has-text(Kaupallinen yhteistyö)) { remove: true; }
+kiuruvesilehti.fi,urjalansanomat.fi#%#//scriptlet('ubo-aeld.js', 'scroll', 'innerHeight')
 mikrobitti.fi#%#//scriptlet('ubo-nostif.js', 'bait')
 proxyproxy.fi,pirateproxy.fi#%#//scriptlet('ubo-nowoif.js')
 savonsanomat.fi,ess.fi,itahame.fi,ksml.fi#%#//scriptlet('ubo-nostif.js', 'linkEl')
@@ -60,8 +60,6 @@ savonsanomat.fi,ess.fi,itahame.fi,ksml.fi#%#//scriptlet('ubo-nostif.js', 'linkEl
 ! https://github.com/easylist/easylist/pull/8317
 pelaaja.fi#%#//scriptlet('ubo-aopr.js', 'ga')
 ||pelaaja.fi/sites/default/files/googleanalytics/analytics.js$important
-! https://github.com/abp-filters/abp-filters-anti-cv/pull/688
-kiuruvesilehti.fi,urjalansanomat.fi#%#//scriptlet('ubo-aeld.js', 'scroll', 'innerHeight')
 ! -----GENERAL FILTERS-----
 /bannerCounter.php
 /js/spring.js
@@ -117,7 +115,6 @@ _mainosnappi.
 ###ylamainokset
 ###ylamainos
 ##.adbox_content
-##.advertorial-teaser
 ##.bottomads
 ##.card--native
 ##.dfpBoxBottom
@@ -409,6 +406,7 @@ kansanuutiset.fi##.cb-sidebar-widget.widget_text
 kansanuutiset.fi##.intextad.clearfix.cb-module-block.cb-box.cb-a-large
 kansanuutiset.fi##A[href="http://www.autonvaraosastore.fi/"]
 kansanuutiset.fi##div[class*=intextad]
+kansanuutiset.fi#?#.cb-module-block.cb-box.cb-a-large.clearfix:-abp-has([id|=div-gpt-ad])
 karjalainen.fi##a[href="https://punamustamedia.portal.worldoftulo.com/v2/shop/dtabkaiku"]
 karjalainen.fi#?#a[href*=kiinnostuitko]:-abp-has([alt=banneri])
 karjalainen.fi,sammysatv.com##center
@@ -570,6 +568,7 @@ mvlehti.net##.wp-block-image:-abp-has(a[href*=kasino])
 mvlehti.net##[href="https://www.cbdtukku.fi/"]
 mvlehti.net##[href="https://www.halvinlaina.fi/"]
 mvlehti.net##[href^="https://www.kasinot.org/"]
+mvlehti.net##a[href="https://www.kippis.net/"]
 mvlehti.net#?#.entry-content > h3:-abp-contains(kasino)
 mvlehti.net#?#[class|=featured-post]:-abp-contains(/rahapeli|kasino/i):-abp-has(a[href*="/202"])
 mvlehti.net#?#div[class="ad content-center"]:not(:-abp-has(> a[href^="https://vk.com/"])):not(:-abp-has(> a[href^="https://uvmedia.org/"]))
@@ -795,6 +794,9 @@ voice.fi#?#div.item:-abp-has(.sponsored)
 vuodatus.net###fb-root + div > div[style="background-color: #fff; margin: 0 auto; padding: 20px; display: table; min-width: 300px; max-width: 100%; font-family: 'Open Sans', sans-serif; font-size: 14px;"]
 wizhdsports.fi##.widget_media_image
 www.io-tech.fi###text-7
+www.io-tech.fi#?#.artikkeli-slide:-abp-has(a[href="https://www.io-tech.fi/artikkelit/paras-kannettava-tietokone-luovan-tyon-tekijoille/"])
+www.io-tech.fi#?#.view-full.uutinen:-abp-has(a[href="https://www.io-tech.fi/category/mainos/"])
+www.is.fi##.advertorial-teaser
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###homeBottomBoxBanner
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###homeTopBoxBanner
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###huge_banner
@@ -810,6 +812,8 @@ www.nettimokki.com##div.nc_r_banner
 www.nettimoto.com###smallViewHouseBanner
 www.suomi24.fi##.asp
 www.suomi24.fi##div[class^=Vaalikone__HeaderAdWrapper]
+www.suomi24.fi#?#div[class^="HomePage__RightColItem"]:-abp-has(> div[class^="AdLivewrapped__AdWrapper"])
+www.suomi24.fi#?#div[class^="HomePage__RightColItem"]:-abp-has(> div[class^="Lainavertailu__Container"])
 www.suomi24.fi#?#p:-abp-has(+ p + .asp)
 www.ts.fi##[class="tsv3-c-common-article__contentad notloaded"]
 www.ts.fi##div[class*="tsv3-c-common-smart noad-hideaction"]
@@ -1007,6 +1011,8 @@ vanha.kaleva.fi##.event-detail-ad-mobile
 @@||mpsnare.iesnare.com/snare.js$script,domain=power.fi
 ! Lowe's list and Easyprivacy prevents opening thread replys via email
 @@||click.redditmail.com^$~third-party
+! Lowe's list exception, cookie dialog won't open
+@@||googletagmanager.com/gtm.js$script,domain=arvopaperi.fi|kauppalehti.fi|mediuutiset.fi|mikrobitti.fi|talouselama.fi|tekniikkatalous.fi|tivi.fi|uusisuomi.fi
 ! To fix the opening of dna.fi / cdon.fi product links on hinta.fi
 @@||adform.net^$~third-party
 @@||tradedoubler.com^$~third-party
@@ -1028,30 +1034,15 @@ hs.fi#@#.mainos
 kaksplus.fi#@#.sponsored-content
 ! -----UNBREAK END-----
 ! Will be removed after PR's accepted (whitelistings for issues caused by other lists or additions to the main Easylist)
-! https://github.com/easylist/easylist/pull/6885
-##div[class^=AdSlot__container]
 ! https://github.com/easylist/easylist/pull/6887
 ##[data-template-type=nativead]
-! https://github.com/easylist/easylist/pull/7022
-@@||cdn.almamedia.fi/almacmp/*.js$script,domain=kauppalehti.fi|tekniikkatalous.fi
-! https://github.com/easylist/easylist/pull/8295
-@@||frosmo.com/recoApi/$xmlhttprequest,domain=lily.fi|meillakotona.fi|terve.fi
-! https://github.com/easylist/easylist/pull/8317
-! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/306
-@@||pelaaja.fi/sites/default/files/googleanalytics/analytics.js
 ! https://github.com/easylist/easylist/pull/8449
 ##[id|=bunyad-widget-ads]
-! https://github.com/easylist/easylist/pull/8695
-@@||high.auriro.net/http/600x400/$image,domain=dawn.fi
-! Quickfix, buying tickets won't work properly with Easylist Cookie...
-vr.fi#@$#body { overflow: auto !important; }
-vr.fi#@#div[data-testid="modal"]
 ! https://github.com/easylist/easylist/pull/9179
 iltalehti.fi#@#.ad-placement
-! https://github.com/easylist/easylist/pull/9204
-!#if !ext_ublock
-!#if !adguard
-luhta.com#@##cookie-consent
-luhta.com#@#.cookie-consent:not(body):not(html)
-!#endif
-!#endif
+! https://github.com/easylist/easylist/pull/9343
+@@||almamedia.fi/almacmp/$script
+! https://github.com/easylist/easylist/pull/9419
+gamemonkey.fi#@#.cookie-consent:not(body):not(html)
+gamemonkey.fi#@#.cookie-consent-header
+gamemonkey.fi#@#.cookie-consent-content

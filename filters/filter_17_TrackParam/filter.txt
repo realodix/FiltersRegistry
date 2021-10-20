@@ -106,6 +106,43 @@ $removeparam=pk_source
 ! The rules for specific sites
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/pull/95024
+! lcs.naver.com - It is used on Naver Corp's platform
+||lcs.naver.com/m?u=$removeparam=os
+||lcs.naver.com/m?u=$removeparam=ln
+||lcs.naver.com/m?u=$removeparam=sr
+||lcs.naver.com/m?u=$removeparam=bw
+||lcs.naver.com/m?u=$removeparam=bh
+||lcs.naver.com/m?u=$removeparam=ls
+||lcs.naver.com/m?u=$removeparam=navigationStart
+||lcs.naver.com/m?u=$removeparam=requestStart
+||lcs.naver.com/m?u=$removeparam=responseStart
+||lcs.naver.com/m?u=$removeparam=responseEnd
+||lcs.naver.com/m?u=$removeparam=domLoading
+||lcs.naver.com/m?u=$removeparam=domInteractive
+||lcs.naver.com/m?u=$removeparam=domContentLoadedEventStart
+||lcs.naver.com/m?u=$removeparam=domContentLoadedEventEnd
+||lcs.naver.com/m?u=$removeparam=domComplete
+||lcs.naver.com/m?u=$removeparam=loadEventStart
+||lcs.naver.com/m?u=$removeparam=loadEventEnd
+||lcs.naver.com/m?u=$removeparam=pid
+||lcs.naver.com/m?u=$removeparam=ts
+! https://github.com/AdguardTeam/AdguardFilters/issues/95525
+||edx.org^$removeparam=source
+! https://github.com/AdguardTeam/AdguardFilters/issues/95523
+||infoq.com^$removeparam=/topicPageSponsorship|^itm_/
+! https://github.com/AdguardTeam/AdguardFilters/issues/94797
+||coupondunia.in^$removeparam=itm_source
+! https://github.com/AdguardTeam/AdguardFilters/issues/94722
+||adshares.net^$removeparam=cid
+! https://github.com/AdguardTeam/AdguardFilters/issues/94664
+||get.adobe.com^$removeparam=browser_type
+||get.adobe.com^$removeparam=browser_dist
+! https://github.com/AdguardTeam/AdguardFilters/issues/94669
+||get.adobe.com^$removeparam=type
+||get.adobe.com^$removeparam=workflow
+||get.adobe.com^$removeparam=promoid
+||get.adobe.com^$removeparam=TRILIBIS_EMULATOR_UA
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95058
 ||ups.xplosion.de/ctx?event_id=$removeparam
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93452
@@ -161,7 +198,13 @@ $removeparam=/^curator_clanid/,domain=steampowered.com|steamcommunity.com
 ||nicovideo.jp^$removeparam=cmnhd_ref
 ||nicovideo.jp^$removeparam=ref
 ! Naver (naver.com) - tracking parameter
+! https://github.com/AdguardTeam/AdguardFilters/pull/89838
 ||search.naver.com/search.naver$removeparam=tqi
+||cc.naver.com/cc?a$removeparam=bw
+||cc.naver.com/cc?a$removeparam=px
+||cc.naver.com/cc?a$removeparam=py
+||cc.naver.com/cc?a$removeparam=sx
+||cc.naver.com/cc?a$removeparam=sy
 ! Yandex
 ! may be merged in regex rule over time
 ||yandex.*/news/$removeparam=from
@@ -194,6 +237,7 @@ $removeparam=/^curator_clanid/,domain=steampowered.com|steamcommunity.com
 !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)
 ! ||www.google.com/url?$removeparam=ved
 ! ||google.*/search$removeparam=ved
+||google.*/websearch$removeparam=visit_id
 ||google.*/search$removeparam=biw
 ||google.*/search$removeparam=bih
 ||google.*/search$removeparam=dpr
@@ -305,6 +349,7 @@ $removeparam=dclid
 ||trendyol.com^$removeparam=_ga
 ||trendyol.com^$removeparam=utm_subaff
 !
+||kaspersky.com^$removeparam=icid
 ||coursera.org^$removeparam=siteID
 ||mag2.com^$removeparam=trflg
 ||dailymail.co.uk^$removeparam=ito
@@ -389,6 +434,13 @@ $removeparam=dclid
 !+ PLATFORM(ext_chromium, ext_ff, ext_opera)
 @@||userscript.zone^$removeparam=utm_campaign
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/95837#issuecomment-944914999
+!+ PLATFORM(ext_ff)
+@@/ws$removeparam,domain=speedtest.net
+! https://github.com/AdguardTeam/AdguardFilters/issues/96900
+@@||plex.tv/api/v*/users/*?utm_source=$removeparam=utm_source,domain=watch.plex.tv
+! https://github.com/AdguardTeam/AdguardFilters/issues/96746
+@@/embed/comments^$removeparam,~third-party,domain=avclub.com|clickhole.com|deadspin.com|gizmodo.com|jalopnik.com|jezebel.com|kotaku.com|lifehacker.com|splinternews.com|theinventory.com|theonion.com|theroot.com|thetakeout.com|sportskeeda.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89618#issuecomment-897100189
 @@||urldefense.com^$removeparam=utm_id
 @@||urldefense.com^$removeparam=utm_medium
@@ -422,3 +474,4 @@ $removeparam=dclid
 @@||businessinsider.com.pl/*&srcc=ucs$removeparam
 ! https://github.com/AdguardTeam/AdguardFilters/issues/63522
 @@||onet.pl/?utm_source=$removeparam
+

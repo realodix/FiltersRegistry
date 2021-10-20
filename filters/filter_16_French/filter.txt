@@ -646,6 +646,8 @@ generation-nt.com#%#Object.defineProperty(window, 'AdvertBay', { get: function()
 !------- CSS fixes --------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/96839
+cnews.fr#$##wrapper-publicite { padding-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/92958
 forumgaming.fr,forumactif.com#$##page-body div[style*="visibility: visible !important; display: block !important; opacity:"]:not([class]):not([id]) { position: absolute !important; left: -3000px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91892
@@ -709,6 +711,15 @@ laprovence.com$$script[wildcard="*((false?*https:*:document.location.protocol)+*
 !-------------------- Specific rules --------------------!
 !--------------------------------------------------------!
 !
+! For URL shorteners or simple sites with frequently changed ad servers.
+! Incorrectly blocked domains can be excluded using regex(synchronize this regexp in all filters)
+/^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com)).*$/$third-party,script,domain=scan-fr.cc
+!
+!
+forums.automobile-propre.com##.ipsDataItem a[href*="advertisement&ad="] > img
+/invoke.js$domain=scan-fr.cc
+scan-fr.cc##body ~ iframe[style*="width:"][style*="z-index:"][style*="position:"]:not([src])
+programme-television.org##div[id^="programme-televisionorg_"][id$="_ar"].cmi_pSticky:empty
 commentcamarche.net##.ads--insertor-casper
 seriecenter.com##a[class^="ebooks_orange_72890"]
 letemps.ch##.ad-container
@@ -1020,6 +1031,18 @@ lesfrontaliers.lu##.ad-listing
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/97471
+@@||watchvideo.us/embed-*.html$subdocument
+$subdocument,third-party,domain=watchvideo.us,badfilter
+! https://github.com/AdguardTeam/AdguardFilters/issues/96211
+twitter.com#@?#[data-testid="tweet"]:-abp-contains(Sponsorisé)
+! https://github.com/AdguardTeam/AdguardFilters/issues/95992
+@@||cdn.reembed.com/player/inread.min.js$domain=protothema.gr
+! https://github.com/AdguardTeam/AdguardFilters/issues/96311
+@@||cache.vidembed.net^$domain=vidembed.*
+@@||vidembed.net/load/hls/$domain=vidembed.*
+@@||vidembed.cc/streaming.php?id=$subdocument
+$subdocument,third-party,domain=vidembed.cc,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95052
 @@||bunnycdn.ru^$xmlhttprequest,domain=fmovies.*
 @@||cdnjs.cloudflare.com/ajax/libs/$xmlhttprequest,domain=fmovies.*
@@ -1863,6 +1886,7 @@ shoptimise.fr#@#iframe[id^="google_ads_iframe"]
 -300x250.php?cb=
 -300x250_pub.
 -300x300.gif
+-300x350-
 -300x37.$image
 -300x60_
 -320px-250px.
@@ -1933,6 +1957,7 @@ shoptimise.fr#@#iframe[id^="google_ads_iframe"]
 -ads.js&script
 -ads/920x
 -ads/ads.
+-ads720.
 -adspromo.
 -adv-1.
 -adv-2.
@@ -2393,6 +2418,7 @@ shoptimise.fr#@#iframe[id^="google_ads_iframe"]
 /ad140x60.
 /ad2-920-
 /ad2/show.
+/ad300-
 /ad300ro.
 /ad300x2502.
 /ad300x2502R.
@@ -2513,6 +2539,7 @@ shoptimise.fr#@#iframe[id^="google_ads_iframe"]
 /ads-3-
 /ads-4-
 /ads-ad-
+/ads-banner
 /ads-bubble.
 /ads-by.
 /ads-ext.
@@ -7020,6 +7047,7 @@ debugger:$popup
 ||abskursin.com^
 ||abtaurosa.club^
 ||abtyroguer.com^
+||abyamaskor.com^
 ||academand.com^
 ||achiname.info^
 ||acknowing.com^
@@ -7043,9 +7071,13 @@ debugger:$popup
 ||advicethrew.com^
 ||afieldfluxplead.com^
 ||aftlogonamuse.com^
+||agafurretor.com^
 ||agakoffingan.com^
+||agalarvitaran.com^
+||agamagcargoan.com^
 ||agamantykeon.com^
 ||agaomastaran.com^
+||agavanilliteom.com^
 ||agooxouy.net^
 ||aidgiltreef.casa^
 ||aidrapani.com^
@@ -7077,6 +7109,8 @@ debugger:$popup
 ||amenitypassenger.com^
 ||amgardevoirtor.com^
 ||amiderations.info^
+||amnoctowlan.club^
+||amoddishor.com^
 ||amtropiusr.com^
 ||amuckstyvain.com^
 ||amuseer.com^
@@ -7094,6 +7128,7 @@ debugger:$popup
 ||arautsod.com^
 ||arbourspankappetite.com^
 ||arcaptart.site^
+||ardspalkiator.com^
 ||areallair.club^
 ||areelektrosstor.com^
 ||aristianewr.club^
@@ -7104,6 +7139,7 @@ debugger:$popup
 ||armconvince.com^
 ||armhutspa.com^
 ||arshelmeton.com^
+||arwartortleer.com^
 ||asdhit.com^
 ||asgclick.com^
 ||asgorebysschan.com^
@@ -7122,12 +7158,16 @@ debugger:$popup
 ||aterroppop.com^
 ||atgallader.com^
 ||atgenesecton.com^
+||atraichuor.com^
 ||attenhance.com^
+||atzekromchan.com^
 ||au79nt5wic4x.com^
 ||auiviilbp2.com^
+||aukarosizox.com^
 ||aukelkjut.com^
 ||auksizox.com^
 ||aumaupoy.net^
+||aumsookr.com^
 ||authcaptcha.com^
 ||avalancheofnews.com^
 ||avrdi.com^
@@ -7161,6 +7201,7 @@ debugger:$popup
 ||beganuglyriled.work^
 ||behoppipan.com^
 ||beigeiros.pw^
+||belombrea.com^
 ||bemachopor.com^
 ||bergtuftpus.com^
 ||besmeargleor.com^
@@ -7170,8 +7211,10 @@ debugger:$popup
 ||besti.ga^
 ||bestzba.com^
 ||betalonflamechan.com^
+||betjoltiktor.com^
 ||betklefkior.com^
 ||betmasquerainchan.com^
+||betnoctowlor.com^
 ||betotodileon.com^
 ||betrustkelping.com^
 ||bett2you.net^
@@ -7184,6 +7227,7 @@ debugger:$popup
 ||bighticeate.com^
 ||bigosearch.com^
 ||bigrourg.net^
+||biwhamto.com^
 ||bjyc6868.com^
 ||bkrkv.com^
 ||blatwalm.com^
@@ -7197,6 +7241,8 @@ debugger:$popup
 ||boacheeb.com^
 ||boasstylijoked.com^
 ||boatheeh.com^
+||bokeden.com^
+||boshaulr.net^
 ||botkano.info^
 ||bouldrethedti.info^
 ||boxantany.com^
@@ -7213,6 +7259,7 @@ debugger:$popup
 ||buylnk.com^
 ||bwsru.com^
 ||bxjch.top^
+||bycelebian.com^
 ||byeej.com^
 ||byfoongusor.com^
 ||byluvdiscor.com^
@@ -7275,6 +7322,8 @@ debugger:$popup
 ||clrpdhptoddatj49.pro^
 ||coepitta.com^
 ||collanetti.com^
+||comicplanet.net^
+||consoupow.com^
 ||conumal.com^
 ||convdlink.com^
 ||coograma.net^
@@ -7377,6 +7426,7 @@ debugger:$popup
 ||dockduhdogs.com^
 ||docsconvert.club^
 ||doeownfeed.icu^
+||doflygonan.com^
 ||doghauky.net^
 ||dogiedimepupae.com^
 ||domankeyan.com^
@@ -7419,6 +7469,7 @@ debugger:$popup
 ||ebbaidfie.com^
 ||ederrassi.com^
 ||edua29146y.com^
+||eefoathy.com^
 ||eegepsad.net^
 ||eemgl.com^
 ||eemsaurt.com^
@@ -7480,6 +7531,7 @@ debugger:$popup
 ||facesnotebook.com^
 ||fadsimz.com^
 ||fae4b91d8638a798.com^
+||faestara.com^
 ||fagpodmum.site^
 ||fagsheswad.com^
 ||failerhood.com^
@@ -7608,6 +7660,7 @@ debugger:$popup
 ||goitcl.com^
 ||gonews2.com^
 ||goodbookbook.com^
+||goods2you.net^
 ||goods4you.org^
 ||goofsyoudell.com^
 ||gotsopyam.com^
@@ -7623,6 +7676,7 @@ debugger:$popup
 ||grimsaiy.com^
 ||groomoub.com^
 ||groucign.com^
+||growebads.com^
 ||grtyb.com^
 ||gvesgrun.online^
 ||gwa8i3rrf9mwozpi.pro^
@@ -7687,6 +7741,7 @@ debugger:$popup
 ||hookawep.net^
 ||hoppedcodpool.com^
 ||hostageflirtingdiscern.com^
+||hothoomu.net^
 ||hoveoilnoun.casa^
 ||howdogwag.com^
 ||hpcyk.com^
@@ -7740,6 +7795,7 @@ debugger:$popup
 ||insidethestockmarket.xyz^
 ||installnow.pro^
 ||interedy.info^
+||intersads.com^
 ||ionnmjdsf.com^
 ||ip41.ip-146-59-188.eu^
 ||ip42.ip-146-59-188.eu^
@@ -7763,9 +7819,11 @@ debugger:$popup
 ||itstuffnews.com^
 ||itswowiota.com^
 ||itteholm.site^
+||ittogepiom.com^
 ||ittoxicroakon.club^
 ||itvalleynews.com^
 ||itweedler.com^
+||itzekromom.com^
 ||iy8yhpmgrcpwkcvh.pro^
 ||iygke.com^
 ||iz682noju02ye5.com^
@@ -7792,6 +7850,7 @@ debugger:$popup
 ||joazaush.net^
 ||jogdosoaf.com^
 ||joheeptaicat.com^
+||joindetox.info^
 ||joinhiesnext.com^
 ||joolupid.com^
 ||jotpoolwarren.com^
@@ -7935,6 +7994,7 @@ debugger:$popup
 ||maulupoa.com^
 ||maxforta.com^
 ||maygasjump.com^
+||maylnk.com^
 ||mctqu.com^
 ||mdvkn.com^
 ||mdyhb.com^
@@ -7960,6 +8020,7 @@ debugger:$popup
 ||mfotj.com^
 ||mheok.com^
 ||mhzaj.com^
+||miamribud.com^
 ||millssunsask.cam^
 ||minerad.com^
 ||minerulesyuk.com^
@@ -7967,6 +8028,7 @@ debugger:$popup
 ||mixineptpol.icu^
 ||mlzutqzgyuxb.com^
 ||mnoa6ez1eq.com^
+||moakaumo.com^
 ||mobibiobi.com^
 ||mobiledevel.com^
 ||mobpushup.com^
@@ -7982,6 +8044,7 @@ debugger:$popup
 ||mugaskems.com^
 ||mughaymil.site^
 ||mugyepsea.com^
+||mumsimso.net^
 ||munchenviableski.com^
 ||muskyconsflew.cam^
 ||mussyboomgale.com^
@@ -7999,6 +8062,7 @@ debugger:$popup
 ||mzyfkfj.com^
 ||n1g459ky7y.com^
 ||nacrerowlee.work^
+||naewynn.com^
 ||natapea.com^
 ||ndjelsefd.com^
 ||ndyzz.com^
@@ -8045,6 +8109,7 @@ debugger:$popup
 ||noksauxi.com^
 ||nomkb.com^
 ||nonestolesantes.com^
+||noophaul.com^
 ||noqukjy.com^
 ||notcotal.com^
 ||notificationallow.com^
@@ -8083,21 +8148,30 @@ debugger:$popup
 ||offalakazaman.com^
 ||offchatotor.com^
 ||offmachopor.com^
+||offsigilyphor.com^
 ||ofseedotom.com^
+||ofslakotha.com^
 ||ohsleakink.com^
 ||oilwrypit.com^
 ||oixlg.com^
 ||olatumal.com^
 ||omanala.com^
+||omchimcharchan.com^
 ||omclacrv.com^
 ||omnatuor.com^
+||omnidokingon.com^
 ||onaugan.com^
+||oncavst.com^
 ||onclarck.com^
 ||onclickrev.com^
 ||onclklnd.com^
 ||ondeerlingan.com^
+||onetypecdn.com^
 ||onkavst.com^
 ||onraltstor.com^
+||onshowit.com^
+||onsnivyr.com^
+||onsolrockon.com^
 ||onwasrv.com^
 ||oocastou.net^
 ||oochique.com^
@@ -8120,7 +8194,9 @@ debugger:$popup
 ||otbuzvqq8fm5.com^
 ||otefauks.link^
 ||othepbuttit.com^
+||oucuftuthy.com^
 ||oukrocky.com^
+||oumtoujo.net^
 ||oungimuk.net^
 ||oupe71eiun.com^
 ||ouradse.com^
@@ -8131,12 +8207,15 @@ debugger:$popup
 ||outchinchour.com^
 ||outloginequity.com^
 ||outseylor.com^
+||outsliggooa.com^
 ||outtimburrtor.com^
 ||outworkincur.com^
+||outyanmegaom.com^
 ||ouues.space^
 ||ovcmqf.com^
 ||ovdnqk2u20ic.com^
 ||overely.com^
+||overgalladean.com^
 ||overkirliaan.com^
 ||overmewer.com^
 ||overzoruaon.com^
@@ -8174,6 +8253,7 @@ debugger:$popup
 ||pftfk.com^
 ||phalata.info^
 ||phee1oci.com^
+||pheghoug.net^
 ||phengung.net^
 ||phenver.com^
 ||phexetos.com^
@@ -8221,6 +8301,7 @@ debugger:$popup
 ||prytinrye.com^
 ||psachugh.net^
 ||psadsoob.com^
+||psaiceex.net^
 ||psairurg.net^
 ||psauthou.net^
 ||psevaulr.net^
@@ -8231,6 +8312,7 @@ debugger:$popup
 ||psourgem.com^
 ||psughooy.com^
 ||ptaissud.com^
+||ptidsezi.com^
 ||ptigjkkds.com^
 ||ptocmaux.com^
 ||pu5hk1n2020.com^
@@ -8245,6 +8327,8 @@ debugger:$popup
 ||pushails.com^
 ||pushalk.com^
 ||pushamir.com^
+||pushdelone.com^
+||pushimg.com^
 ||pushinkaa.com^
 ||pushkav.com^
 ||pushlarr.com^
@@ -8301,6 +8385,7 @@ debugger:$popup
 ||rapenitloco.com^
 ||rapinesnifter.com^
 ||rationalan.pro^
+||ravalamin.com^
 ||ravaynore.com^
 ||raylnk.com^
 ||rdbb.club^
@@ -8339,6 +8424,7 @@ debugger:$popup
 ||rmndme.com^
 ||rndchandelureon.com^
 ||rndchanseytor.club^
+||rndhaunteran.com^
 ||rnnuw.com^
 ||roarscoifscrap.com^
 ||roduster.com^
@@ -8352,6 +8438,7 @@ debugger:$popup
 ||rounsh.com^
 ||rouonixon.com^
 ||roupsouk.com^
+||rowlnk.com^
 ||rrtcfwmvhs.com^
 ||rsepv.com^
 ||rsuuc.com^
@@ -8505,7 +8592,9 @@ debugger:$popup
 ||sticoats.net^
 ||stignaud.net^
 ||stipsain.net^
+||stoaphalti.com^
 ||stogerde.com^
+||stoltoog.net^
 ||stompebi.link^
 ||stookoth.com^
 ||storoukr.net^
@@ -8524,6 +8613,9 @@ debugger:$popup
 ||sunmixyaw.com^
 ||superadbid.com^
 ||surv2you.net^
+||surv2you.org^
+||survey2you.co^
+||survey2you.net^
 ||survey2you.org^
 ||survey4you.co^
 ||susifhfh2d8ldn09.com^
@@ -8558,6 +8650,7 @@ debugger:$popup
 ||technotology.com^
 ||techsheywees.com^
 ||teesagzoo.com^
+||teleproff.com^
 ||tempwinowale.com^
 ||temtaifu.com^
 ||tensagesic.com^
@@ -8568,6 +8661,7 @@ debugger:$popup
 ||terrasdsdstd.com^
 ||tesd2x9bpqjd.com^
 ||teser.net^
+||teste.ztech.gq^
 ||testsite34.com^
 ||texterra.me^
 ||thaihary.link^
@@ -8578,6 +8672,7 @@ debugger:$popup
 ||ths9j89.com^
 ||thugitori.pro^
 ||tierpuborb.com^
+||timecrom.com^
 ||tinotheshertheg.pro^
 ||tipgalledroil.casa^
 ||tippledtalmud.com^
@@ -8594,13 +8689,16 @@ debugger:$popup
 ||tognilaha.com^
 ||togranbulla.com^
 ||tojinr.com^
+||tomawilea.com^
 ||tombspyelates.com^
 ||toninjaska.com^
 ||tontwiredat.info^
 ||tookoufu.net^
 ||top1-news.site^
+||topadbid.com^
 ||topicgumpetals.com^
 ||topwwnews.com^
+||tosuicunea.com^
 ||tozoruaon.com^
 ||tp1jcgl644jk.com^
 ||tqeobp89axcn.com^
@@ -8646,6 +8744,7 @@ debugger:$popup
 ||uj0g7.com^
 ||ulathana.com^
 ||ultimowraxle.com^
+||unazumarillan.com^
 ||undef8trust.com^
 ||undergiveto54.com^
 ||undom.net^
@@ -8653,15 +8752,18 @@ debugger:$popup
 ||unique2lazy.com^
 ||unmovedfilch.com^
 ||unrestgrits.com^
+||unsigilyphor.com^
 ||unsop.com^
 ||unwartortlean.com^
 ||update-it-now.com^
 ||upgastlyr.com^
+||upshroomishtor.com^
 ||upssirten.com^
 ||upstwirlcuff.casa^
 ||urbanodecalle.com^
 ||urechar.com^
 ||uriren.pw^
+||urmavite.com^
 ||ursorsee.pro^
 ||userscramsspy.cam^
 ||usmrzcqkbz.com^
@@ -8669,6 +8771,7 @@ debugger:$popup
 ||uymkdz9s.com^
 ||v3rjvtt.com^
 ||vaigowoa.com^
+||valpeiros.com^
 ||valshara.com^
 ||vamprog.site^
 ||vamsoupowoa.com^
@@ -8684,11 +8787,13 @@ debugger:$popup
 ||videosprofitnetwork.com^
 ||vidhos.com^
 ||vidsplay.net^
+||viewlnk.com^
 ||vihootch.casa^
 ||vilercarpetfolk.com^
 ||vimjobcue.work^
 ||vinfdv6b4j.com^
 ||viralfix.net^
+||viralstrangers.com^
 ||virleth.com^
 ||vlogoflife.com^
 ||vneffwecka.com^
@@ -8747,6 +8852,7 @@ debugger:$popup
 ||wopsedoaltuwipp.com^
 ||wopsedoaltuwn.com^
 ||wopsedoaltuwo.com^
+||wopsedoaltuwp.com^
 ||wordc.ga^
 ||woremooncased.com^
 ||worlanned.pro^
@@ -8797,6 +8903,7 @@ debugger:$popup
 ||ylskyueqya.com^
 ||yocksswainaha.com^
 ||yonazurilla.com^
+||yonomastara.com^
 ||yougotacheck.com^
 ||ypqy3sgq.com^
 ||yrxrbha.com^
@@ -12457,6 +12564,7 @@ $stylesheet,third-party,domain=1fichier.com|247tpb.club|7-up.net|9xupload.me|9xu
 ||all-musculation.com^*/pub-fond/
 ||alldebrid.fr/lib/images/pub_
 ||allmetsat.com/data/pub/
+||alloforfait.fr/wp-content/themes/alloforfait15/v/m-red-
 ||alloref.com/images/cdp
 ||alloref.com/images/maxdetrafic.gif
 ||allstream.fr/images/partenaires/
@@ -18462,6 +18570,7 @@ troc-velo.com###xpubpart
 yahoo.com###yad-billboard
 mateur.tv###zone-out-bis
 terredauphinoise.fr###zone-pub1
+alloforfait.fr###zzone
 118712.fr,voila.fr##.ADS
 vfcomplet.vip##.Ad
 ivocommunication.com,ivoprint.com##.Ads
@@ -19259,6 +19368,7 @@ portail.free.fr##.zoning--300-600
 portail.free.fr##.zoning--726-90
 portail.free.fr##.zoning--sticky
 lepetiteconomiste.com##.zoom
+alloforfait.fr##.zpart
 fdesouche.com##[class$="-link"]
 ccm.net,commentcamarche.com,commentcamarche.net##[class$="_adsense"]
 amazon.fr##[class*="-advertising-"]
