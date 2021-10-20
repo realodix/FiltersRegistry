@@ -13,6 +13,8 @@
 ! Special thanks to ryanbr@github for the rules from Fanboy's Swedish list.
 !
 ! --- Browser/extension specific filters
+&autoplay$subdocument,removeparam=autoplay,domain=di.se|expressen.se
+&browser=MozillaFirefox$removeparam=/^browser/,xmlhttprequest,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 .info/dagens-nyheter/$document
 .info/dn-nyheter/$document
 .info/expressen-se-nyheter/$document
@@ -39,6 +41,8 @@
 /sweden/swedish/hjo-tidning.html$document
 56kilo.se,paulas.me##em:has-text(/Annons|Reklam/i):upward(article)
 99.teknikveckan.se##.carousel-item-link:has-text(Annons:)
+?autoPlay$subdocument,removeparam=autoplay,domain=expressen.se
+?autoplay=true$subdocument,removeparam=autoplay,domain=expressen.se
 accentmagasin.se#%#//scriptlet('ubo-nostif.js', 'n.modal')
 affarsliv.com,affarslivgotland.se,affarsvarlden.se,alekuriren.se,allas.se,arvikanyheter.se,baaam.se,babyhjalp.se,barometern.se,blt.se,bt.se,byrum.se,cafe.se,corren.se,dalslanningen.se,ekuriren.se,elle.se,eposten.se,expressen.se,femina.se,filipstadstidning.se,folkbladet.se,fragbite.se,frida.se,fryksdalsbygden.se,golfing.se,goteborgdirekt.se,gotland.net,gotlandjustnu.se,hant.se,helagotland.se,hjotidning.se,ibnytt.se,karlskogatidning.se,kindaposten.se,kingmagazine.se,kkuriren.se,klackspark.com,kristianstadsbladet.se,kt-kuriren.se,kt.se,kuriren.nu,lwcdn.com,mariestadstidningen.se,mestmotor.se,mitti.se,modette.se,motherhood.se,mvt.se,nkp.se,nlt.se,norran.se,norrbottensaffarer.se,nsd.se,nsk.se,nt.se,nwt.se,nyheter24.se,olandsbladet.se,ostrasmaland.se,provinstidningen.se,pt.se,realtid.se,recept.se,saffletidningen.se,skanesport.se,skd.se,sla.se,smp.se,sn.se,strengnastidning.se,svenskanamn.se,svenskdam.se,svenskgolf.se,sverigespringer.se,sydostran.se,thelocal.se,trelleborgsallehanda.se,unt.se,ut.se,varmlandsaffarer.se,vasterastidning.se,vf.se,viivilla.se,vimmerbytidning.se,vt.se,vxonews.se,youplay.se,ystadsallehanda.se#%#//scriptlet('ubo-json-prune.js', 'autoplay')
 affarsstaden.se#%#//scriptlet('ubo-acis.js', 'jQuery', 'adblockdetect')
@@ -180,7 +184,7 @@ fz.se##.card:has(.article-sponsored)
 fz.se##.fp-carousel .fpci-kicker:has-text(/^sponsr/i):upward(.fpc-item)
 fz.se##a[href*="/sponsrat"]:upward(.card)
 gamereactor.se###grtvbelt_Sponsored:upward(1)
-gamereactor.se#%#//scriptlet('ubo-ra.js', 'data-autoplay', 'video', 'stay')
+gamereactor.se#%#//scriptlet('ubo-ra.js', 'data-autoplay', 'video, stay')
 gbgfotboll.se#$#body { overflow: initial !important; }
 globalportalen.org,svenskjakt.se#%#//scriptlet('ubo-ra.js', 'autoplay')
 goon.se##.cpt-collab-text-ct1:has-text(/samarbete|annons/i):upward(.cpt-alm-main)
@@ -236,7 +240,7 @@ linnherbertsson.se##.content:has(.sponsored-container)
 listor.se##article.feed-item:has-text(/låna pengar|casino|betting/i)
 listor.se##article:has(a[href*="/annons/"])
 ljudochbild.se#$#.entry-content-wrap, .hideaway { max-height: unset !important; overflow: initial !important; height: unset !important; }
-loppi.se,modette.se,nyheter24.se#%#//scriptlet('ubo-ra.js', 'data-isready', '.bb_wrapper', 'stay')
+loppi.se,modette.se,nyheter24.se#%#//scriptlet('ubo-ra.js', 'data-isready', '.bb_wrapper, stay')
 lwcdn.com#%#//scriptlet('ubo-aeld.js', '/^(?:adBlocker|contextmenu)$/')
 majanilssonlindelof.com##article:has(.has-text-align-center:has-text(/samarbete med/i))
 maklarvarlden.se##.td-post-category:has-text(/spons/i):upward(2)
@@ -376,6 +380,7 @@ www.dn.se#%#//scriptlet('ubo-ra.js', 'data-auto-play')
 www.expressen.se#%#//scriptlet('ubo-acis.js', 'Bau', 'preloadAds')
 www.expressen.se#%#//scriptlet('ubo-ra.js', 'data-start-in-view')
 www.expressen.se#%#//scriptlet('ubo-set.js', 'detect', 'noopFunc')
+www.google.se#%#//scriptlet('ubo-ra.js', 'onmousedown|ping', 'a[href][onmousedown], a[href][ping]')
 www.svd.se#%#//scriptlet('ubo-aopr.js', 'navigator.sendBeacon')
 youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||aftonbladet.se.senaste.$document
@@ -384,6 +389,7 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||biowebb-data.*.amazonaws$important,third-party
 ||byggkonsult.org^$all
 ||cision.com^$badfilter
+||delivery.youplay.se/load.js?*&ap=true$removeparam=/^ap/,script
 ||fast.fonts.net/t/1.css$redirect=nooptext,domain=pbswisstools.com
 ||google-analytics.com^$important,domain=aftonbladet.se|tradera.com|xxl.se
 ||googletagmanager.com^$important,domain=tradera.com|xxl.se

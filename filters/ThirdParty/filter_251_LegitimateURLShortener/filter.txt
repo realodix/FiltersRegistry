@@ -117,6 +117,7 @@ $removeparam=draftsforfriends
 .userapi.com/impg^$removeparam=proxy
 .userapi.com/impg^$removeparam=type
 ! https://www.imdb.com/title/tt7826036/?ref_=ttep_ep5
+$~xmlhttprequest,removeparam=ref_,domain=imdb.com|amazon.*|primevideo.com|shopbop.com|awesomeopensource.com
 ! https://www.bloglovin.com/blogs/enestaende-mat-2346432?widget-ref=https://enestaaendemat.no/ (07/12/2020)
 $removeparam=widget-ref
 ! https://www.youtube.com/watch?v=ACb-3n4tRGE&ab_channel=BillyO%27Reilly (07/12/2020)
@@ -130,6 +131,7 @@ $removeparam=_nc_sid
 $removeparam=eblink
 ! https://www.tv2.no/?r=refresh (16/12/2020)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-987226
+$~xmlhttprequest,removeparam=r,domain=tv2.no|linode.com
 ! https://contabo.com/?show=vps&utm_source=cj&utm_medium=affiliate&utm_campaign=vps&source=affiliate&AID=12454632&PID=8533995&SID=&CJEVENT=1999e98a465411eb825b03900a180510 (25/12/2020)
 $removeparam=AID
 $removeparam=/^CJEVENT=/i
@@ -142,6 +144,7 @@ $removeparam=refd
 $removeparam=/^hmb_/
 ! https://nttxstore.jp/_RH_3550?FMID=ocntop&LID=ocntop&_ga=2.104844229.490267265.1610372894-229139367.1610372894 (11/01/2021)
 $removeparam=FMID
+$~xmlhttprequest,removeparam=LID
 $removeparam=_ga
 ! https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=https%3A%2F%2Fwww.nytimes.com%2F2021%2F01%2F21%2Fopinion%2Fpublic-transit-funding.html%3Faction%3Dclick%26module%3DWell%26pgtype%3DHomepage%26section%3DEditorials (24/01/2021)
 $removeparam=action,domain=nytimes.com|nytimes3xbfgragh.onion
@@ -246,6 +249,7 @@ $removeparam=tracking_source
 ! https://www.theverge.com/2021/4/16/22387492/google-floc-ad-tech-privacy-browsers-brave-vivaldi-edge-mozilla-chrome-safari?scrolla=5eb6d68b7fedc32c19ef33b4 (20/04/2021)
 $removeparam=scrolla
 ! https://dagligvarehandelen.no/sites/default/files/styles/wysiwyg_full_width/public/70x100_cocashake_skisse_0.jpg?itok=k31KtKuB (30/04/2021)
+$~image,removeparam=itok
 ! https://www.nytimes.com/2021/04/27/business/media/new-york-post-kamala-harris.html?smtyp=cur&smid=fb-nytimes&fbclid=IwAR1mH8MOV2qhIoD5pdX9gbEWedBAdS4sYOXB0yHJi3tZZ6Hg5r0Us-EEv0s (28/04/2021)
 $removeparam=smtyp
 ! https://techcrunch.com/2021/04/30/riot-games-updates-its-privacy-notice-to-start-developing-voice-comms-moderation/?tpcc=ECTW2020
@@ -258,6 +262,7 @@ $removeparam=onetime_FromEmail
 ! https://cdnb.artstation.com/p/assets/images/images/030/045/719/large/abhishek-karmakar-b56f0421b303b8d9016f022d17330898.jpg?1599443127 (06/05/2021)
 ||artstation.com^$removeparam=/^[0-9]/
 ! https://www.wired.com/story/oversight-board-to-facebook-not-going-to-do-your-dirty-work/?mbid=social_twitter
+$~xmlhttprequest,removeparam=mbid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-706290
 $removeparam=from,domain=bandcamp.com|apkpure.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-711131
@@ -418,6 +423,7 @@ $removeparam=hsCtaTracking
 $removeparam=tblci
 $removeparam=tcid
 $removeparam=/^dv_adwords_/
+$~xmlhttprequest,removeparam=/^adid=/i,domain=~finn.no
 $removeparam=wdorigin
 ||microsoft.com^$removeparam=ru
 ||microsoft.com^$removeparam=destrt
@@ -563,6 +569,7 @@ $removeparam=MID
 ! https://homemcr.org/production/the-war-of-the-worlds/?dm_i=6OM7%2CA1RR%2C21FCIX%2C17EEV%2C1
 ||homemcr.org^$removeparam=dm_i
 ! https://www.greatrun.org/train-and-prepare/training-plans/?eid=AJ935930567982484926441023zzzzz64bccfd443fc61ff2c06e3cf8c7b889a2061064e5d5db55e171241354f241bed00
+$~xmlhttprequest,removeparam=eid,domain=~howlongtobeat.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1031533
 ||simplelogin.io^$removeparam=slref
 ||privateinternetaccess.com^$removeparam=channel
@@ -906,6 +913,7 @@ $removeparam=mclk
 $removeparam=mrnd
 $removeparam=maid
 $removeparam=mcid
+$~xmlhttprequest,removeparam=msid
 $removeparam=mpty
 ||sunbasket.com^$removeparam=/^msb/
 ||sunbasket.com^$removeparam=muts
@@ -1171,6 +1179,7 @@ $removeparam=geniuslink
 ||amazon.$removeparam=hsa_cr_id
 ||amazon.$removeparam=/^pd_rd_/
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
+$~xmlhttprequest,removeparam=psc
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-944078
 ||amazon.$removeparam=twitchToken
 ||amazon.$removeparam=sigts
@@ -1210,6 +1219,7 @@ $removeparam=hc_location
 $removeparam=sfnsn
 ! https://raw.githubusercontent.com/kowith337/PersonalFilterListCollection/master/filterlist/other/SurvivedTrackingLinkWarning.txt (Considered by me to be transformative work)
 ! https://www.facebook.com/2021iihfworlds/videos/hey-we-are-moving-on-with-spiky-video-series-this-time-our-mascot-helps-organizi/925480501570258/?__so__=permalink&__rv__=related_videos (22/05/2021)
+?*__$~xmlhttprequest,removeparam=/^__[bce-z]/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 $removeparam=acontext
 $removeparam=dti
 $removeparam=fref
@@ -1222,6 +1232,7 @@ $removeparam=/^zero_/,domain=facebook.com|facebookcorewwwi.onion|messenger.com
 ||facebook.com/ads^$removeparam=session_id
 ! https://x.facebook.com/mylittlepony/videos/917830495715016/?refsrc=https%3A%2F%2Fx.facebook.com%2Fmylittlepony%2Fposts%2F4640468362637231&_rdr (09/04/2021)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1047774 (03/08/2021)
+$~xmlhttprequest,removeparam=/^refsrc=/i
 $removeparam=_rdr
 ! https://m.facebook.com/groups/474038555978926/permalink/3971436826239064/?locale2=nb_NO&refid=18&_ft_=qid.-8161291356206974390%3Amf_story_key.3971436826239064%3Atop_level_post_id.3971436826239064%3Atl_objid.3971436826239064%3Acontent_owner_id_new.100000852462546%3Apage_id.474038555978926%3Asrc.22%3Astory_location.6%3Astory_attachment_style.photo%3Afilter.GroupStoriesByActivityEntQuery%3Atds_flgs.3%3Aott.AX85R38AvGqMKK58%3Apage_insights.%7B%22474038555978926%22%3A%7B%22page_id%22%3A474038555978926%2C%22page_id_type%22%3A%22group%22%2C%22actor_id%22%3A100000852462546%2C%22dm%22%3A%7B%22isShare%22%3A0%2C%22originalPostOwnerID%22%3A0%7D%2C%22psn%22%3A%22EntGroupMallPostCreationStory%22%2C%22post_context%22%3A%7B%22object_fbtype%22%3A657%2C%22publish_time%22%3A1626033323%2C%22story_name%22%3A%22EntGroupMallPostCreationStory%22%2C%22story_fbid%22%3A%5B3971436826239064%5D%7D%2C%22role%22%3A1%2C%22sl%22%3A6%7D%7D&__tn__=-R
 $removeparam=_ft_
@@ -1281,6 +1292,7 @@ $removeparam=usg,domain=~translate.googleusercontent.com|~translate.google.*
 ! https://www.google.no/search?ei=rKq_X621OYCHwPAP5YCiuA0&q=penli.fi&oq=penli.fi&gs_lcp=CgZwc3ktYWIQAzIECAAQEzIGCAAQHhATMgYIABAeEBNQw2VYw2Vg-2ZoAHAAeACAAWGIAacBkgEBMpgBAKABAaoBB2d3cy13aXrAAQE&sclient=psy-ab&uact=5 (26/11/2020)
 $removeparam=gs_lcp
 $removeparam=cshid
+||google.$~xmlhttprequest,removeparam=ei
 ! https://www.google.com/search?q=%22The%20Butterfly%20Fairy%20Friends%22%20little%20airplane&newwindow=1&sxsrf=ALeKk011aAibMJ9b29iUUQWPxzOfWhZZJA%3A1606560888505&tbas=0&source=lnt&sa=X (28/11/2020)
 $removeparam=sxsrf
 $removeparam=tbas
@@ -1330,6 +1342,7 @@ $removeparam=share_app_id
 $removeparam=share_item_id
 $removeparam=share_link_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-783185
+||tiktok.com^$~xmlhttprequest,removeparam=/(referer_url|referer_video_id|refer|sender_device|sender_web_id|is_from_webapp|is_copy_url)/
 ! ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
 ||tiktok.com^$removeparam=c
 ||tiktok.com^$removeparam=is_retargeting
