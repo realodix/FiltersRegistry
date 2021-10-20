@@ -6,21 +6,22 @@ This repository contains the known filters subscriptions available to AdGuard us
 We may add third-party filters to AdGuard Filters Registry. When making a decision about adding a third-party filter, we follow these rules:
 
 1. The filter should be oriented towards browser content blockers.
-2. The filter should have a place for receiving user complaints and holding discussions, such as a repository on github.com, or a website open to public.
-3. The filter should be relatively popular, meaning: 
+2. The filter should be legal. If it has rules for paywall circumvention, we won't add such a filter.
+3. The filter should have a place for receiving user complaints and holding discussions, such as a repository on github.com, or a website open to public.
+4. The filter should be relatively popular, meaning: 
     * if there is a repository on GitHub, the number of stars should be at least 50
     * if there is no repository on GitHub, the number of analyzed issues and discussions is estimated at 10 per month on the filter's website
     * the filter should be actively supported for at least 6 months
-4. The filter should be regularly updated with at least 10 updates per month.
-5. The filter should be compatible with AdGuard products. You can familiarize yourself with AdGuard syntax here: https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters.
-6. If the filter works only in some operating systems and satisfies all other criteria, it will be added but only for the supported platforms.
-7. Previously added filters that haven't received any support for a year will be removed. We reserve the right to remove the filter earlier, depending on circumstances.
-8. If the filter contains too many problematic rules, it will not be added. A rule is considered problematic if it causes false positives or otherwise displays unitended behavior. Decisions about filters with problematic rules are arbitrary and there may be exceptions (see items 9 and 10, for example).
+5. The filter should be regularly updated with at least 10 updates per month.
+6. The filter should be compatible with AdGuard products. You can familiarize yourself with AdGuard syntax here: https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters.
+7. If the filter works only in some operating systems and satisfies all other criteria, it will be added but only for the supported platforms.
+8. Previously added filters that haven't received any support for a year will be removed. We reserve the right to remove the filter earlier, depending on circumstances.
+9. If the filter contains too many problematic rules, it will not be added. A rule is considered problematic if it causes false positives or otherwise displays unitended behavior. Decisions about filters with problematic rules are arbitrary and there may be exceptions (see items 9 and 10, for example).
     * If the filter intentionally blocks or restricts access to any services for no reason other than being a reflection of the filter author's opinion, the filter will not get added, or will get removed if already added.
-9. If the filter is popular in a specific region and there are no alternatives to it, then it can be added as is.
-10. If the filter gets added, it receives a so-called [trustLevel](#trustLevel) (Low, High, Full), based on the number of problematic rules it contains and some other factors. Filters without "Full" trust level may have part of their rules disabled.
+10. If the filter is popular in a specific region and there are no alternatives to it, then it can be added as is.
+11. If the filter gets added, it receives a so-called [trustLevel](#trustLevel) (Low, High, Full), based on the number of problematic rules it contains and some other factors. Filters without "Full" trust level may have part of their rules disabled.
     * The trust level of a filter can be re-reviewed and raised if the author improves the filter over time.
-11. If there are two or more similar filters that satisfy all other criteria, they all may be added if they don't duplicate each other and don't conflict with each other. If there is a large amount of conflicting or duplicate rules, the filter with more matches on such rules gets the priority.
+12. If there are two or more similar filters that satisfy all other criteria, they all may be added if they don't duplicate each other and don't conflict with each other. If there is a large amount of conflicting or duplicate rules, the filter with more matches on such rules gets the priority.
 ## Filters metadata
 
 - `template.txt`
