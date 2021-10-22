@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/96888
+torrentgalaxy.to##.alert-danger
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96809
 origin.originalnews.nico###right_rec_banners
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96512
@@ -5288,6 +5290,8 @@ cc-fan.tv,cn-fan.tv,fox-fan.tv,nf-fan.tv#@#.text_ads
 !
 ! Common safari_cb_affinity(general)
 !#safari_cb_affinity(general)
+!#if (adguard_app_ios || adguard_ext_android_cb)
+@@||richmond.com^$generichide
 @@||liveonsat.com/wp-banners.js
 @@||rocket-league.com/wp-banners.js
 @@||picmix.com/wp-banners.js
@@ -5398,6 +5402,7 @@ slate.com#@#.ad-container
 @@/ads/ads.js|$domain=nltimes.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38404
 @@||ad.71i.de/somtag/loader/loader.js$domain=dtm.com|sportdeutschland.tv
+!#endif
 !#safari_cb_affinity
 
 !#######################################################
@@ -19266,10 +19271,10 @@ bosco.ru##.subscribe-leave__overlay
 softonic.com##.zeus_iframe.is-sticky-left-bottom
 tsum.ru#$#lead-form { display: none!important; }
 tsum.ru#$#body { overflow: visible!important; }
-mtstandard.com#$##lee-registration-wall { display: none!important; }
-mtstandard.com#$##lee-subscription-wall { display: none!important; }
-mtstandard.com#$#.modal-backdrop { display: none!important; }
-mtstandard.com#$#body { overflow: visible!important; padding-right: 0!important; }
+richmond.com,mtstandard.com#$##lee-registration-wall { display: none !important; }
+richmond.com,mtstandard.com#$##lee-subscription-wall { display: none !important; }
+richmond.com,mtstandard.com#$#.modal-backdrop { display: none !important; }
+richmond.com,mtstandard.com#$#body { overflow: auto !important; padding-right: 0 !important; }
 credit.com##.code-block-extracredit-free-trial-pop-up
 myassignmenthelp.com###wait-popup
 myassignmenthelp.com##.modal-backdrop
@@ -25758,6 +25763,7 @@ experts-exchange.com##.ctaSolutionStickyWrapper
 theguardian.com##.contributions__adblock
 ||contributions.guardianapis.com^
 !
+chrome.google.com##[role="dialog"][aria-labelledby="promo-header"]
 ||visionplus.id/videocontents/vod/$domain=okezone.com
 bilibili.com##.video-page-game-card
 noripon.blog##.cta[style="background: #f2f2f2;"]
