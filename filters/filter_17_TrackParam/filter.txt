@@ -97,6 +97,16 @@ $removeparam=mtm_source
 $removeparam=pk_campaign
 $removeparam=pk_medium
 $removeparam=pk_source
+! Branch.io ( https://stackoverflow.com/questions/37882810/what-is-meaning-of-branch-match-id )
+$removeparam=_branch_match_id
+! https://github.com/brave/brave-browser/issues/17507
+$removeparam=ml_subscriber
+$removeparam=ml_subscriber_hash
+! https://github.com/brave/brave-browser/issues/17451
+$removeparam=rb_clickid
+! https://github.com/brave/brave-browser/issues/13644
+$removeparam=oly_anon_id
+$removeparam=oly_enc_id
 !
 
 !---------------------------------------------------------------------------!
@@ -106,6 +116,8 @@ $removeparam=pk_source
 ! The rules for specific sites
 !
 !
+! https://www.expressvpn.com/tfk?a_aid=tf, https://vpnarea.com/front/member/signup?a_aid=torrentgalaxy
+$removeparam=a_aid,domain=expressvpn.com|vpnarea.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97742
 ||hog.*^$removeparam=ad
 ! https://github.com/AdguardTeam/AdguardFilters/pull/95024
