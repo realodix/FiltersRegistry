@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 13October2021v1-Beta-Compilation
+! OriginalVersion: 25October2021v1-Beta-Compilation
 ! Expires: 3 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
@@ -428,7 +428,7 @@ yelp.*##.menu-bar-pitch_open-in-app
 linkedin.com#$?#html,body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 24October2021v3-Beta
+! OriginalVersion: 25October2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1780,6 +1780,12 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||sherence.ru^$all
 ! https://twitter.com/soranker0/status/1449491402409185283
 ://disordgift.$all
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-950330114
+||free-softs.net^$all
+! https://github.com/iam-py-test/investigations/blob/main/2021/10/24/1.md#html-capture
+||google-yandex.$document
+||cloud-apps.store^$document
+/(^|://|\.)[a-z]{5,}-[a-z]{5,}-[a-z]{5,}\.xyz($|/)/$document
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -17390,11 +17396,11 @@ bloombergquint.com#%#//scriptlet('ubo-aopr.js', 'getSelection')
 !#if adguard_app_windows
 ! Assassin's Creed 1 (and other known Ubisoft games) PC stuttering
 ! Inspired by https://steamcommunity.com/app/15100/discussions/0/864949037837351686/
-*$all,app=AssassinsCreed_Game.exe
-*$all,app=AssassinsCreed_Dx10.exe
-*$all,app=AssassinsCreed_Dx9.exe
-*$all,app=fc3_blooddragon.exe
-*$all,app=fc3_blooddragon_d3d11.exe
+*$app=AssassinsCreed_Game.exe
+*$app=AssassinsCreed_Dx10.exe
+*$app=AssassinsCreed_Dx9.exe
+*$app=fc3_blooddragon.exe
+*$app=fc3_blooddragon_d3d11.exe
 !#endif
 ! Fake screen smudge
 ||dinreisevaksine.no/wp-content/themes/dbh/assets/images/background.jpg^
