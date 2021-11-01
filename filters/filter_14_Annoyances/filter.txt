@@ -2592,22 +2592,22 @@ echo.msk.ru#$?#span > div[role]:has(> div[class] > section.content) { margin-top
 !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)
 afisha.ru,letidor.ru,autorambler.ru,wmj.ru,motor.ru,passion.ru,quto.ru,eda.ru,rns.online,championat.com,gazeta.ru,lenta.ru,rambler.ru#%#//scriptlet("abort-on-property-write", "Object.prototype.getPlaceSelectorByBannerId")
 !#endif
-rambler.ru#$#.ad.ad-banner.adbanner.nav-ad.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display: block !important; }
+rambler.ua,rambler.ru#$#.ad.ad-banner.adbanner.nav-ad.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display: block !important; }
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
 !#safari_cb_affinity(general)
-rambler.ru#@#.ad
-rambler.ru#@#.ad-banner
-rambler.ru#@#.adbanner
-rambler.ru#@#.nav-ad
-rambler.ru#@#.pub_300x250
-rambler.ru#@#.pub_300x250m
-rambler.ru#@#.pub_728x90
-rambler.ru#@#.text-ad
-rambler.ru#@#.textAd
-rambler.ru#@#.text_ad
-rambler.ru#@#.text_ads
-rambler.ru#@#.text-ads
-rambler.ru#@#.text-ad-links
+rambler.ua,rambler.ru#@#.ad
+rambler.ua,rambler.ru#@#.ad-banner
+rambler.ua,rambler.ru#@#.adbanner
+rambler.ua,rambler.ru#@#.nav-ad
+rambler.ua,rambler.ru#@#.pub_300x250
+rambler.ua,rambler.ru#@#.pub_300x250m
+rambler.ua,rambler.ru#@#.pub_728x90
+rambler.ua,rambler.ru#@#.text-ad
+rambler.ua,rambler.ru#@#.textAd
+rambler.ua,rambler.ru#@#.text_ad
+rambler.ua,rambler.ru#@#.text_ads
+rambler.ua,rambler.ru#@#.text-ads
+rambler.ua,rambler.ru#@#.text-ad-links
 !#safari_cb_affinity
 !#endif
 top100.rambler.ru##body > noscript ~ iframe[src^="https://id.rambler.ru/"] + div[style^="position:"]
@@ -15287,6 +15287,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ! @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=rte.ie|digitaltrends.com|spiele.bild.de|spiele.stern.de|vanityfair.com|saarbruecker-zeitung.de|olympics.com|dziendobry.tvn.pl|bergfreunde.de|oe24.at|epicgames.com|toteraz.pl|natgeotv.com|midomi.com|bethesda.net|volksfreund.de|kawasaki.com|foxchannels.com.tr|ga.de|shop.mango.com|kralmuzik.com.tr|westernunion.com|roastmarket.de|new.cappex.com|vimeo.com|heute.at|ntv.com.tr|wargaming.net|metacritic.com|gq-magazine.co.uk|viafree.dk|viafree.fi|viafree.no|viafree.se|glamour.de|cbsnews.com|worldoftanks.ru|vg247.com|newyorker.com
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/97238
+@@||wcpstatic.microsoft.com/mscc/lib/v*/wcp-consent.js$domain=blogs.windows.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97202
 @@||prfshop.ru/*/cookies-policy/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97773
@@ -17748,6 +17750,10 @@ amp-reddit-com.cdn.ampproject.org##.AppSelectorModal__body
 reddit.com#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("bannerLastClosed", "Thu Sep 16 2030 16:46:52 GMT+0300") } } catch (ex) {} })();
 reddit.com#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("pillLastClosed", "Thu Sep 16 2030 16:46:52 GMT+0300") } } catch (ex) {} })();
 !
+skymetweather.com##a[href="https://play.google.com/store/apps/details?id=com.skymet.skymetaqi"] > img
+skymetweather.com##span[style^="color: #003366;"][style*="font-size:23px;"]
+skymetweather.com##.openapp
+skymetweather.com###appblock
 fuzhou.baixing.com##.app-downlod
 lifehacker.ru##a[href="https://redirect.appmetrica.yandex.com/serve/892107163701433566"]
 ||glav-dostavka.ru/js/n-smartbanner.min.js
@@ -26678,6 +26684,7 @@ hhla.de###hhlaupdate-sticky
 oblgazeta.ru##.readus-title
 megapixel.cz##.pdbox--subscribe-newsletter
 proglib.io##.telegram-btn
+wroom.ru##.text-block > div.row.nomobile
 thepythoncode.com##form[action="/subscribe"]
 thepythoncode.com##.subscribe-area
 thepythoncode.com#$?#.modal:has(form[action="/subscribe"]) { display: none!important; }
@@ -29369,6 +29376,8 @@ mail.ru###subscriptionFormWeekMainBlockId
 !######### CSS tweaks #########
 !##############################
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/98000
+skymetweather.com###articledetails ~ br
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98103
 pelisplaygratis.info#$##player2 { display: block !important; }
 pelisplaygratis.info#$##block-campaign { display: none !important; }
