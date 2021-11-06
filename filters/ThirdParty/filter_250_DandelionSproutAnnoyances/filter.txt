@@ -428,7 +428,7 @@ yelp.*##.menu-bar-pitch_open-in-app
 linkedin.com#$?#html,body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 05November2021v1-Beta
+! OriginalVersion: 06November2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -561,6 +561,17 @@ bing.com##.b_algo:has(a[href*=".top/"])
 ||138.68.252.54^$document
 ||useragentswitch.com^$all
 ||dev-nano.com^$all
+! Presumed to be fraudulent antivirus extensions on app/extension sites where it's perfectly probable that everyday people could install them.
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=antivirus][href*=free])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=antivirus][href*=clean])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=antivirus][href*=boost])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=boost][href*=clean])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=antivirus][href*=gratis])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=antivirus][href*="201"])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=antivirus][href*=security])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*="anti.virus"])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*="scanguard"])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=".totalav."])
 ! ——— IQ test sites that make you waste heaps of time by taking the test, and then try to charge you to see the results. ———
 ||funeducation.com^$document
 ||iq-research.info^$document
@@ -746,6 +757,10 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 download.cnet.com#?#.c-globalCard:-abp-has(a[href*="/Sir-AdGuard/"])
 download.cnet.com#?#.c-globalCard:-abp-has(a[href*="/Ad-Smasher/"])
 download.cnet.com#?#.c-globalCard:-abp-has(a[href*="/AdsCleaner/"])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=adblocker])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=".adblock."])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=adsblock])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href$=".adblock"])
 ||apps.apple.com/*/app/*/id1564900435^$document
 ! ——— Wrong TLDs of legitimate sites ———
 ||ubuntu.org^$document
@@ -14457,7 +14472,7 @@ deezer.com#?#.page-alerts:-abp-has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:-abp-has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 18October2021v1
+! OriginalVersion: 06November2021v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -14663,6 +14678,9 @@ photoblog.pl##.frontpage-teaser-photo-container > .register > #registration-form
 !! Removes an account creation prompt that can sometimes show up in articles.
 community.spiceworks.com##.join-login-alt--six-second
 community.spiceworks.com#$?#body.sui-u-no-scroll { overflow: auto !important }
+!! Removes a "You've come here often" prompt after approx. 9 page visits
+!! https://github.com/DandelionSprout/adfilt/issues/324
+community.spiceworks.com#%#//scriptlet('ubo-cookie-remover.js', 'visit_count')
 ! Glassdoor
 !! Removes an impassable login prompt on candidate interview pages in particular
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-631091688
