@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/98420
+closermag.fr##.sidebar-wrapper .dailymotion-player-wrapper#dailymotion-pip-large-viewport
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98411
 w3cschool.cn##body > .widget-body[data-type] > .widget-main
 ! zoon.ru - annoying animated banner
@@ -2784,7 +2786,7 @@ bloody-disgusting.com,haberolduk.com,askdifference.com,multics.eu,pipeflare.io,t
 !--- Admiral ---
 ! can be closed
 savvytime.com,nbcsportsedge.com,haber3.com,androidpolice.com,news.com.au,forums.radioreference.com,boston.com,reviewgeek.com,technicpack.net,theblaze.com,morfix.co.il,factinate.com,phonearena.com,stripes.com,progameguides.com,weatherbug.com,patheos.com,online-tech-tips.com,digitaltrends.com,helpdeskgeek.com,britannica.com,wrestlinginc.com,superherohype.com,news24.com,pgatour.com,wral.com,gamepur.com,fin24.com,geekzone.co.nz,upi.com,thewindowsclub.com,androidcure.com,secondnexus.com,health24.com,wokesloth.com,sport24.co.za,onmsft.com,cultofmac.com,washingtontimes.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "admiral")
-ign.com,workandmoney.com,today.com,rottentomatoes.com,walterfootball.com,dotesports.com,boredpanda.com,cleveland.com#%#//scriptlet("set-constant", "admiral", "noopFunc")
+finviz.com,ign.com,workandmoney.com,today.com,rottentomatoes.com,walterfootball.com,dotesports.com,boredpanda.com,cleveland.com#%#//scriptlet("set-constant", "admiral", "noopFunc")
 ! cannot be closed
 blackenterprise.com,crooksandliars.com,cmacapps.com,cwtv.com,feral-heart.com,gamerevolution.com,gktoday.in,informazionefiscale.it,inquirer.net,interestingengineering.com,legacy.com,leitesculinaria.com,nofilmschool.com,obsev.com,order-order.com,pleated-jeans.com,post-gazette.com,practicalclinicalskills.com,ranker.com,sanfoundry.com,simpleflying.com,thegatewaypundit.com,timelessleaf.com,viraliq.com,winhelponline.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "admiral")
 gry.pl#%#Object.defineProperty(Object.prototype, 'hasAdmiralList', { get: function() { throw null; }, set: function() { throw null; } });
@@ -2803,6 +2805,7 @@ digitaltrends.com#@#.text_ads_2
 ! editorial.rottentomatoes.com#@#.text-ad
 ! @@||ad.doubleclick.net/ddm/adj^$domain=editorial.rottentomatoes.com
 !
+||lovelydrum.com^$third-party
 ||breadbalance.com^$third-party
 ||stakingsmile.com^$third-party
 ||rabbitrifle.com^$third-party
@@ -25089,6 +25092,9 @@ disk.yandex.*##.mail360-banner
 !-----------------------------------------------
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/99304
+||xgoo.jp/images/common/banner_*_320_150$domain=oshiete.goo.ne.jp
+||xgoo.jp/images/common/banner_*_630_110$domain=oshiete.goo.ne.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98411
 w3cschool.cn###rfbanner
 w3cschool.cn#$##topbanner { display: none !important; }
@@ -25276,7 +25282,6 @@ sankei.com###piano_information_Article
 ||news.sod.co.jp/wp-content/uploads/*/prime_cp_$image,~third-party
 nicovideo.jp##.TagRelatedBannerContainer.Card
 photo-ac.com##.belt-banner-exl
-||xgoo.jp/images/common/banner_*_630_110.$domain=oshiete.goo.ne.jp
 ||bizocean.jp/column/wp-content/uploads/2017/11/temply_banner
 ! https://www.bikebros.co.jp/vb/sports/simpre/simpre-20210427/ banner
 ||goobike.com/img/$domain=bikebros.co.jp
@@ -31929,6 +31934,7 @@ spiegel.de##div[data-settings*="https://widget.civey.com/"]
 !
 ! Chat widgets
 !
+/js/chat/edu_chat.js
 ||chatbot.com^$third-party
 ||mylivechat.com^$third-party
 moluch.ru##.ask_out
