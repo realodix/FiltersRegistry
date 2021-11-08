@@ -1,13 +1,13 @@
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 02November2021v1-Beta
+! OriginalVersion: 07November2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Homepage for the repository: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! Opt-in allowlist for affiliate support tags: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt
 ! Special thanks to https://github.com/git-101-collab for providing a 3-digit amount of new entries to this list, and to https://github.com/iam-py-test for volunteering to speed up the addition of user-submitted entries.
-! ——— General rules ——— !
+! ——— General remove rules ——— !
 ! From AdGuard CoreLibs (11/11/2020)
 $removeparam=yclid
 $removeparam=gclid
@@ -20,9 +20,6 @@ $removeparam=fb_ref
 $removeparam=fb_source
 $removeparam=action_object_map
 $removeparam=action_ref_map
-! Scripts that solely exist to make URLs longer
-!! https://github.com/the1812/Bilibili-Evolved/issues/2247
-/auto-append-spmid.js
 ! https://www.elkjop.no/product/data/kabler-og-tilkobling-pc-og-nettverk/APPLEMD463ZA/thunderbolt-til-gigabit-ethernet-adapter?utm_id=Pricecomparison2989_5_False&utm_medium=Pricecomparison (14/11/2020)
 ! https://www.ikea.com/kr/en/stores/restaurant/?itm_campaign=ikea_food&itm_element=essential_banner&itm_content=ikea_food (17/02/2021)
 ! https://www.infoq.com/containers/?itm_source=infoq&itm_medium=header_graybar&itm_campaign=topic_clk (28/02/2021)
@@ -347,7 +344,7 @@ $removeparam=refer_code
 ! https://chggtrx.com/clk.trk?CID=267627&AFID=304351
 $removeparam=AFID,domain=~chggtrx.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1412160
-$removeparam=loc,domain=~geizhals.de
+$removeparam=loc,domain=~geizhals.de|~ebay.*
 $removeparam=acampID
 $removeparam=pj_creativeid
 $removeparam=pj_publisherid
@@ -691,7 +688,12 @@ $removeparam=_vsrefdom
 $removeparam=ceneo_spo
 ^from=ceneo^$removeparam=from
 ^ref=ceneo^$removeparam=ref
-! ——— Specific rules ——— !
+! ——— General blocking rules ——— !
+!! Scripts that solely exist to make URLs longer
+! https://github.com/DandelionSprout/adfilt/pull/320
+! https://github.com/the1812/Bilibili-Evolved/issues/2247
+/auto-append-spmid.js
+! ——— Specific remove rules ——— !
 !! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
 $removeparam=cid,domain=adshares.net|apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*|ae.com|anntaylor.com|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|loft.com|nike.com|nyandcompany.com|overstock.com|radissonhotelsamericas.com|ray-ban.com|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|wine.com|wsj.com|zales.com|xg4ken.com|flipkart.com
@@ -706,7 +708,7 @@ $removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
 $removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com|ashford.com|bose.*|kennethcole.com|kipling-usa.com|newbalance.com|wondershare.*|investors.com|yahoo.com|engadget.com|mozilla.org
 ! No particular example
-$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com
+$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com|community.spiceworks.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=wsj.com|marketwatch.com|barrons.com|fnlondon.com|dowjones.com|mansionglobal.com|penews.com
@@ -728,7 +730,7 @@ $removeparam=refRID
 @@||amazon.*/gp/slredirect/picassoRedirect.html^$removeparam
 ! https://www.amazon.com/Disney-Fairies-Lessons-Chapter-ebook-ebook/dp/B007R6UWG2/ref=sr_1_16?dchild=1&keywords=disney+fairies&qid=1606488113&sr=8-16 (27/11/2020)
 $removeparam=dchild
-$removeparam=qid
+$removeparam=qid,domain=~ebay.*
 ||amazon.$removeparam=sr
 ! https://www.amazon.co.uk/dp/B08K443FBQ/ref=asc_df_B08K443FBQ1606003200000/?creative=22374&creativeASIN=B08K443FBQ (28/11/2020)
 $removeparam=creative
@@ -1522,9 +1524,19 @@ $removeparam=pro,domain=etsy.com
 $removeparam=frs,domain=etsy.com
 ! https://linkvertise.com/8062/TS3StoreMagnet?o=sharing
 ||linkvertise.com^$removeparam=o
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1589504
+$removeparam=trk,domain=linkedin.com
+! https://github.com/DandelionSprout/adfilt/issues/324
+||community.spiceworks.com^$removeparam=carPos
+! https://www.bleepingcomputer.com/search/?cx=partner-pub-0920899300397823%3A3529943228&cof=FORID%3A10&ie=UTF-8&q=ransomware
+||bleepingcomputer.com^$removeparam=cx
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1600035
+$removeparam=collection,domain=everlane.com
+! https://1.bp.blogspot.com/-j1vCw2c3c8o/WDaCDjs8WiI/AAAAAAAELx0/2lBglz1aaw4fnW09LcAsIj88VsPUr9n5gCLcB/s1600/AS000761_04.gif?time=Sun%20Nov%2007%202021%2012:01:08%20GMT+0300%20(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,%20%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F)
+||bp.blogspot.com^$removeparam=time
 ! ——— Rules for heavily covered international sites ——— !
 !! ——— PR-China ———
-!! Special thanks to https://github.com/shenzhiming88 for helping with this section
+!! Special thanks to https://github.com/shenzhiming88 for helping with this section.
 !!! ——— AliExpress ———
 ! https://es.aliexpress.com/item/4000672272353.html?pvid=c4cdc770-f05a-4b7b-8a50-d8b81efff6c9&_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:c4cdc770-f05a-4b7b-8a50-d8b81efff6c9,tpp_buckets:668%230%23131923%230_668%23808%234094%23200_668%23888%233325%231_668%232846%238113%23646_668%232717%237558%23188_668%231000022185%231000066059%230_668%233468%2315617%23897
 ||aliexpress.com/item/$removeparam=pvid
@@ -1597,6 +1609,13 @@ $removeparam=fromRankId
 ||baidu.com^$removeparam=ref
 ||baidu.com^$removeparam=rq
 ||baidu.com^$removeparam=vslid
+! https://github.com/DandelionSprout/adfilt/pull/325
+||baidu.com^$removeparam=gsid
+||baidu.com^$removeparam=idctag
+||baidu.com^$removeparam=logid
+||baidu.com^$removeparam=pageFrom
+||baidu.com^$removeparam=sids
+||baidu.com^$removeparam=srcp
 !!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
 ||bilibili.com^$removeparam=/^current/
@@ -1656,3 +1675,5 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 !#endif
 ! ——— Allowlist ——— !
 @@mailinglist$removeparam=/^utm_/
+@@||graph.baidu.com/upload?$removeparam=from
+@@||web.archive.org/*_/http$removeparam

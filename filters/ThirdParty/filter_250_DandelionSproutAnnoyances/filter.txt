@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 01November2021v1-Beta-Compilation
+! OriginalVersion: 06November2021v2-Beta-Compilation
 ! Expires: 3 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
@@ -428,7 +428,7 @@ yelp.*##.menu-bar-pitch_open-in-app
 linkedin.com#$?#html,body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 29October2021v1-Beta
+! OriginalVersion: 06November2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -436,11 +436,11 @@ linkedin.com#$?#html,body { overflow: auto !important; }
 ! ——— Bad top-level domains ———
 ! You can expect these domains to have an overwhelming majority of malware domains that have nothing to do with the countries in question. Nevertheless, if you are in a situation where you have to do active business in any of the countries in question, then this list may not be ideal for you.
 ! Tokelau
-||tk^$document,domain=~coolcmd.tk|~budterence.tk|~google.tk|~transportnews.tk|~c0d3c.tk|~anonytext.tk|~tokelau-info.tk|~fakaofo.tk|~loljp-wiki.tk|~ninetail.tk|~goshujin.tk|~graph.tk|~dls2.pokeacer.tk|~nolfrevival.tk|~coppersurfer.tk|~restricted-functions.tk|~bstweaker.tk|~nbd-media.tk|~glypx-pakhsh-nakon.tk
+||tk^$document,domain=~coolcmd.tk|~budterence.tk|~google.tk|~transportnews.tk|~c0d3c.tk|~anonytext.tk|~tokelau-info.tk|~fakaofo.tk|~loljp-wiki.tk|~ninetail.tk|~goshujin.tk|~graph.tk|~dls2.pokeacer.tk|~nolfrevival.tk|~coppersurfer.tk|~restricted-functions.tk|~bstweaker.tk|~nbd-media.tk|~glypx-pakhsh-nakon.tk|~gotofap.tk
 ! Gabon
 ||ga^$document,domain=~google.ga|~filtri-dns.ga|~dgdi.ga|~voitures.ga|~economie-gabon.ga
 ! Mali
-||ml^$document,domain=~google.ml|~mobili.ml|~melody.ml|~dcod.ml|~info-matin.ml|~amap.ml|~mastodon.ml|~worproject.ml|~nothingprivate.ml|~lingva.ml
+||ml^$document,domain=~google.ml|~mobili.ml|~melody.ml|~dcod.ml|~info-matin.ml|~amap.ml|~mastodon.ml|~worproject.ml|~nothingprivate.ml|~lingva.ml|~lemmy.ml
 ! Equatorial Guinea
 ||gq^$document,domain=~deimos.gq|~inege.gq|~tvgelive.gq|~comprarcarros.gq
 ! Central African Republic
@@ -456,9 +456,9 @@ linkedin.com#$?#html,body { overflow: auto !important; }
 ||ooo^$document
 !#if !env_mobile
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (Advanced adblockers only) ———
-www.google.*##.g:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"]))
+www.google.*##.g:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"], [href*="gotofap.tk"]))
 www.google.*##.g:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
-www.google.*##.g:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"]))
+www.google.*##.g:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"]))
 www.google.*##.g:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*="tvgelive.gq"], [href*="comprarcarros.gq"]))
 www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 www.google.*##.g:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"]))
@@ -475,9 +475,9 @@ www.google.*##.g:has(a[href^="https://books.google."])
 !#if env_mobile
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (For Google Mobile) ———
 ! I strongly recommend the use of https://addons.mozilla.org/firefox/addon/google-search-fixer/ for use on Firefox for Android, thus the entries are written for the Chrome version of Google Mobile.
-www.google.*##a[oncontextmenu][href*=".tk/"]:not([href*=coolcmd], [href*=budterence], [href*="google.tk"], [href*=transportnews], [href*=c0d3c], [href*=anonytext], [href*=tokelau-info], [href*=fakaofo], [href*=loljp-wiki], [href*=ninetail], [href*=goshujin], [href*="graph.tk"], [href*=nolfrevival], [href*="steamroller.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"]):upward(2)
+www.google.*##a[oncontextmenu][href*=".tk/"]:not([href*=coolcmd], [href*=budterence], [href*="google.tk"], [href*=transportnews], [href*=c0d3c], [href*=anonytext], [href*=tokelau-info], [href*=fakaofo], [href*=loljp-wiki], [href*=ninetail], [href*=goshujin], [href*="graph.tk"], [href*=nolfrevival], [href*="steamroller.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"], [href*="gotofap.tk"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".ga/"]:not([href*="google.ga"], [href*=filtri-dns], [href*=anpigabon], [href*="dgdi.ga"], [href*=voitures], [href*="economie-gabon.ga"]):upward(2)
-www.google.*##a[oncontextmenu][href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"]):upward(2)
+www.google.*##a[oncontextmenu][href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*=tvgelive], [href*=comprarcarros]):upward(2)
 www.google.*##a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*=voitures], [href*=assembleenationale-rca], [href*=cps-rca], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"]):upward(2)
@@ -490,9 +490,9 @@ www.google.*##a[oncontextmenu][href*=".php?xxx="]:upward(2)
 www.google.*##a[oncontextmenu][href^="https://books.google."]:upward(2)
 !#endif
 ! ——— For DuckDuckGo ———
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".tk"]:not([data-domain*="coolcmd.tk"], [data-domain*="budterence.tk"], [data-domain*="google.tk"], [data-domain*="transportnews.tk"], [data-domain*="c0d3c.tk"], [data-domain*="anonytext.tk"], [data-domain*="tokelau-info.tk"], [data-domain*="fakaofo.tk"], [data-domain*="loljp-wiki.tk"], [data-domain*="ninetail.tk"], [data-domain*="goshujin.tk"], [data-domain*="graph.tk"], [data-domain*="nolfrevival.tk"], [data-domain*="coppersurfer.tk"], [data-domain*="restricted-functions.tk"], [data-domain*="bstweaker.tk"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".tk"]:not([data-domain*="coolcmd.tk"], [data-domain*="budterence.tk"], [data-domain*="google.tk"], [data-domain*="transportnews.tk"], [data-domain*="c0d3c.tk"], [data-domain*="anonytext.tk"], [data-domain*="tokelau-info.tk"], [data-domain*="fakaofo.tk"], [data-domain*="loljp-wiki.tk"], [data-domain*="ninetail.tk"], [data-domain*="goshujin.tk"], [data-domain*="graph.tk"], [data-domain*="nolfrevival.tk"], [data-domain*="coppersurfer.tk"], [data-domain*="restricted-functions.tk"], [data-domain*="nbd-media.tk"], [data-domain*="bstweaker.tk"], [data-domain*="gotofap.tk"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ga"]:not([data-domain*="google.ga"], [data-domain*="filtri-dns.ga"], [data-domain*="anpigabon.ga"], [data-domain*="dgdi.ga"], [data-domain*="voitures.ga"], [data-domain*="economie-gabon.ga"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ml"]:not([data-domain*="google.ml"], [data-domain*="mobili.ml"], [data-domain*="melody.ml"], [data-domain*="dcod.ml"], [data-domain*="info-matin.ml"], [data-domain*="amap.ml"], [data-domain*="mastodon.ml"], [data-domain*="worproject.ml"], [data-domain*="nothingprivate.ml"], [href*="lingva.ml"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ml"]:not([data-domain*="google.ml"], [data-domain*="mobili.ml"], [data-domain*="melody.ml"], [data-domain*="dcod.ml"], [data-domain*="info-matin.ml"], [data-domain*="amap.ml"], [data-domain*="mastodon.ml"], [data-domain*="worproject.ml"], [data-domain*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gq"]:not([data-domain*="deimos.gq"], [data-domain*="inege.gq"], [data-domain*="tvgelive.gq"], [data-domain*="comprarcarros.gq"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="voitures.cf"], [data-domain*="assembleenationale-rca.cf"], [data-domain*="cps-rca.cf"], [data-domain*="acap.cf"], [data-domain*="miraculousladybug.cf"], [data-domain*="scrat.cf"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="zikrap.pw"])
@@ -502,9 +502,9 @@ duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]
 ! ——— For Bing ———
-bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"]))
+bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="nbd-media.tk"], [href*="bstweaker.tk"], [href*="gotofap.tk"]))
 bing.com##.b_algo:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
-bing.com##.b_algo:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"]))
+bing.com##.b_algo:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"]))
 bing.com##.b_algo:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*="tvgelive.gq"], [href*="comprarcarros.gq"]))
 bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 bing.com##.b_algo:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"]))
@@ -561,6 +561,17 @@ bing.com##.b_algo:has(a[href*=".top/"])
 ||138.68.252.54^$document
 ||useragentswitch.com^$all
 ||dev-nano.com^$all
+! Presumed to be fraudulent antivirus extensions on app/extension sites where it's perfectly probable that everyday people could install them.
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=antivirus][href*=free])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=antivirus][href*=clean])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=antivirus][href*=boost])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=boost][href*=clean])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=antivirus][href*=gratis])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=antivirus][href*="201"])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=antivirus][href*=security])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*="anti.virus"])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*="scanguard"])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=".totalav."])
 ! ——— IQ test sites that make you waste heaps of time by taking the test, and then try to charge you to see the results. ———
 ||funeducation.com^$document
 ||iq-research.info^$document
@@ -746,6 +757,10 @@ softonic.*,softonic-ar.com,softonic-th.com##a[href*="://adblock."]
 download.cnet.com#?#.c-globalCard:-abp-has(a[href*="/Sir-AdGuard/"])
 download.cnet.com#?#.c-globalCard:-abp-has(a[href*="/Ad-Smasher/"])
 download.cnet.com#?#.c-globalCard:-abp-has(a[href*="/AdsCleaner/"])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=adblocker])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=".adblock."])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href*=adsblock])
+play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([href$=".adblock"])
 ||apps.apple.com/*/app/*/id1564900435^$document
 ! ——— Wrong TLDs of legitimate sites ———
 ||ubuntu.org^$document
@@ -1828,6 +1843,27 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||ese40.xyz^$all
 ||e07wm.xyz^$all
 ||news-back.org^$all
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-955748638
+||steamhistory-offer.xyz^$all
+! https://github.com/iam-py-test/investigations/blob/main/2021/11/1/1.md
+&url_bnm_redirect=$all
+/mcafeedirect.jsp$all,domain=~mcafee.com
+/beep.mp3^$domain=xyz|club|pro
+||beta-one.net^$all
+||kokotrokot.com^$all
+||besty-deals.com^$all
+||totalav.com^$all
+?next_url=$document,popup
+?uclickhash=$document,popup
+! https://www.upwork.com/freelance-jobs/apply/Integarte-push-notification-for-chrome_~013c73ed9282225184/
+||premiumbros.com^$all
+||mugrikees.com^$all
+||alpha-news.org^$all
+! https://github.com/iam-py-test/investigations/blob/main/2021/11/3/1.md
+||safejokesearch.com^$all
+||mediadlvr.com^$all
+||youvetube.com^$all
+||youutube.com^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -7211,7 +7247,7 @@ get.adobe.com###offersInformationPane
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 28October2021v1-Beta
+! OriginalVersion: 05November2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -7219,11 +7255,11 @@ get.adobe.com###offersInformationPane
 ! ——— Bad top-level domains ———
 ! You can expect these domains to have an overwhelming majority of malware domains that have nothing to do with the countries in question. Nevertheless, if you are in a situation where you have to do active business in any of the countries in question, then this list may not be ideal for you.
 ! Tokelau
-||tk^$document,domain=~coolcmd.tk|~budterence.tk|~google.tk|~transportnews.tk|~c0d3c.tk|~anonytext.tk|~tokelau-info.tk|~fakaofo.tk|~loljp-wiki.tk|~ninetail.tk|~goshujin.tk|~graph.tk|~dls2.pokeacer.tk|~nolfrevival.tk|~coppersurfer.tk|~restricted-functions.tk|~bstweaker.tk|~nbd-media.tk|~glypx-pakhsh-nakon.tk
+||tk^$document,domain=~coolcmd.tk|~budterence.tk|~google.tk|~transportnews.tk|~c0d3c.tk|~anonytext.tk|~tokelau-info.tk|~fakaofo.tk|~loljp-wiki.tk|~ninetail.tk|~goshujin.tk|~graph.tk|~dls2.pokeacer.tk|~nolfrevival.tk|~coppersurfer.tk|~restricted-functions.tk|~bstweaker.tk|~nbd-media.tk|~glypx-pakhsh-nakon.tk|~gotofap.tk
 ! Gabon
 ||ga^$document,domain=~google.ga|~filtri-dns.ga|~dgdi.ga|~voitures.ga|~economie-gabon.ga
 ! Mali
-||ml^$document,domain=~google.ml|~mobili.ml|~melody.ml|~dcod.ml|~info-matin.ml|~amap.ml|~mastodon.ml|~worproject.ml|~nothingprivate.ml|~lingva.ml
+||ml^$document,domain=~google.ml|~mobili.ml|~melody.ml|~dcod.ml|~info-matin.ml|~amap.ml|~mastodon.ml|~worproject.ml|~nothingprivate.ml|~lingva.ml|~lemmy.ml
 ! Equatorial Guinea
 ||gq^$document,domain=~deimos.gq|~inege.gq|~tvgelive.gq|~comprarcarros.gq
 ! Central African Republic
@@ -7239,9 +7275,9 @@ get.adobe.com###offersInformationPane
 ||ooo^$document
 !#if !env_mobile
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (Advanced adblockers only) ———
-www.google.*##.g:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"]))
+www.google.*##.g:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"], [href*="gotofap.tk"]))
 www.google.*##.g:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
-www.google.*##.g:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"]))
+www.google.*##.g:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"]))
 www.google.*##.g:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*="tvgelive.gq"], [href*="comprarcarros.gq"]))
 www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 www.google.*##.g:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"]))
@@ -7258,9 +7294,9 @@ www.google.*##.g:has(a[href^="https://books.google."])
 !#if env_mobile
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (For Google Mobile) ———
 ! I strongly recommend the use of https://addons.mozilla.org/firefox/addon/google-search-fixer/ for use on Firefox for Android, thus the entries are written for the Chrome version of Google Mobile.
-www.google.*#?#*:has(> * > a[oncontextmenu][href*=".tk/"]:not([href*=coolcmd], [href*=budterence], [href*="google.tk"], [href*=transportnews], [href*=c0d3c], [href*=anonytext], [href*=tokelau-info], [href*=fakaofo], [href*=loljp-wiki], [href*=ninetail], [href*=goshujin], [href*="graph.tk"], [href*=nolfrevival], [href*="steamroller.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"]))
+www.google.*#?#*:has(> * > a[oncontextmenu][href*=".tk/"]:not([href*=coolcmd], [href*=budterence], [href*="google.tk"], [href*=transportnews], [href*=c0d3c], [href*=anonytext], [href*=tokelau-info], [href*=fakaofo], [href*=loljp-wiki], [href*=ninetail], [href*=goshujin], [href*="graph.tk"], [href*=nolfrevival], [href*="steamroller.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"], [href*="gotofap.tk"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".ga/"]:not([href*="google.ga"], [href*=filtri-dns], [href*=anpigabon], [href*="dgdi.ga"], [href*=voitures], [href*="economie-gabon.ga"]))
-www.google.*#?#*:has(> * > a[oncontextmenu][href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"]))
+www.google.*#?#*:has(> * > a[oncontextmenu][href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*=tvgelive], [href*=comprarcarros]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*=voitures], [href*=assembleenationale-rca], [href*=cps-rca], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"]))
@@ -7273,9 +7309,9 @@ www.google.*#?#*:has(> * > a[oncontextmenu][href*=".php?xxx="])
 www.google.*#?#*:has(> * > a[oncontextmenu][href^="https://books.google."])
 !#endif
 ! ——— For DuckDuckGo ———
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".tk"]:not([data-domain*="coolcmd.tk"], [data-domain*="budterence.tk"], [data-domain*="google.tk"], [data-domain*="transportnews.tk"], [data-domain*="c0d3c.tk"], [data-domain*="anonytext.tk"], [data-domain*="tokelau-info.tk"], [data-domain*="fakaofo.tk"], [data-domain*="loljp-wiki.tk"], [data-domain*="ninetail.tk"], [data-domain*="goshujin.tk"], [data-domain*="graph.tk"], [data-domain*="nolfrevival.tk"], [data-domain*="coppersurfer.tk"], [data-domain*="restricted-functions.tk"], [data-domain*="bstweaker.tk"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".tk"]:not([data-domain*="coolcmd.tk"], [data-domain*="budterence.tk"], [data-domain*="google.tk"], [data-domain*="transportnews.tk"], [data-domain*="c0d3c.tk"], [data-domain*="anonytext.tk"], [data-domain*="tokelau-info.tk"], [data-domain*="fakaofo.tk"], [data-domain*="loljp-wiki.tk"], [data-domain*="ninetail.tk"], [data-domain*="goshujin.tk"], [data-domain*="graph.tk"], [data-domain*="nolfrevival.tk"], [data-domain*="coppersurfer.tk"], [data-domain*="restricted-functions.tk"], [data-domain*="nbd-media.tk"], [data-domain*="bstweaker.tk"], [data-domain*="gotofap.tk"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ga"]:not([data-domain*="google.ga"], [data-domain*="filtri-dns.ga"], [data-domain*="anpigabon.ga"], [data-domain*="dgdi.ga"], [data-domain*="voitures.ga"], [data-domain*="economie-gabon.ga"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ml"]:not([data-domain*="google.ml"], [data-domain*="mobili.ml"], [data-domain*="melody.ml"], [data-domain*="dcod.ml"], [data-domain*="info-matin.ml"], [data-domain*="amap.ml"], [data-domain*="mastodon.ml"], [data-domain*="worproject.ml"], [data-domain*="nothingprivate.ml"], [href*="lingva.ml"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ml"]:not([data-domain*="google.ml"], [data-domain*="mobili.ml"], [data-domain*="melody.ml"], [data-domain*="dcod.ml"], [data-domain*="info-matin.ml"], [data-domain*="amap.ml"], [data-domain*="mastodon.ml"], [data-domain*="worproject.ml"], [data-domain*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gq"]:not([data-domain*="deimos.gq"], [data-domain*="inege.gq"], [data-domain*="tvgelive.gq"], [data-domain*="comprarcarros.gq"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="voitures.cf"], [data-domain*="assembleenationale-rca.cf"], [data-domain*="cps-rca.cf"], [data-domain*="acap.cf"], [data-domain*="miraculousladybug.cf"], [data-domain*="scrat.cf"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="zikrap.pw"])
@@ -7285,9 +7321,9 @@ duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]
 ! ——— For Bing ———
-bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"]))
+bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="nbd-media.tk"], [href*="bstweaker.tk"], [href*="gotofap.tk"]))
 bing.com##.b_algo:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
-bing.com##.b_algo:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"]))
+bing.com##.b_algo:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"]))
 bing.com##.b_algo:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*="tvgelive.gq"], [href*="comprarcarros.gq"]))
 bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 bing.com##.b_algo:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"]))
@@ -8569,6 +8605,55 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||google-yandex.$document
 ||cloud-apps.store^$document
 /(^|://|\.)[a-z]{5,}-[a-z]{5,}-[a-z]{5,}\.xyz($|/)/$document
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-951321929
+||citationsherbe.at^$redirect=nooptext,important
+159.148.186.228$network
+! https://github.com/iam-py-test/investigations/blob/main/2021/10/26/1.md#domains
+||yotube.com^$redirect=nooptext,important
+||mybetterdl.com^$redirect=nooptext,important
+||p185689.mybetterdl.com^$redirect=nooptext,important
+||besty-deals.com^$redirect=nooptext,important
+||r-tb.com^$redirect=nooptext,important
+||cdn.hoood.info^$redirect=nooptext,important
+||data-px.services^$redirect=nooptext,important
+||barah-flo.com^$redirect=nooptext,important
+||beta-one.net^$redirect=nooptext,important
+||beastbuying.com^$redirect=nooptext,important
+||pisism.com^$redirect=nooptext,important
+||czyzd.xyz^$redirect=nooptext,important
+||r1it6.xyz^$redirect=nooptext,important
+||sqjxp.xyz^$redirect=nooptext,important
+||h5e4b.xyz^$redirect=nooptext,important
+||nkb18.xyz^$redirect=nooptext,important
+||m6ydd.xyz^$redirect=nooptext,important
+||welcomejohncena.pro^$redirect=nooptext,important
+||security-scanner.xyz^$redirect=nooptext,important
+||pushmeup.art^$redirect=nooptext,important
+||totalav.com^$redirect=nooptext,important
+||c2egp.xyz^$redirect=nooptext,important
+||ese40.xyz^$redirect=nooptext,important
+||e07wm.xyz^$redirect=nooptext,important
+||news-back.org^$redirect=nooptext,important
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-955748638
+||steamhistory-offer.xyz^$redirect=nooptext,important
+! https://github.com/iam-py-test/investigations/blob/main/2021/11/1/1.md
+/mcafeedirect.jsp$all,domain=~mcafee.com
+/beep.mp3^$domain=xyz|club|pro
+||beta-one.net^$redirect=nooptext,important
+||kokotrokot.com^$redirect=nooptext,important
+||besty-deals.com^$redirect=nooptext,important
+||totalav.com^$redirect=nooptext,important
+?next_url=$document,popup
+?uclickhash=$document,popup
+! https://www.upwork.com/freelance-jobs/apply/Integarte-push-notification-for-chrome_~013c73ed9282225184/
+||premiumbros.com^$redirect=nooptext,important
+||mugrikees.com^$redirect=nooptext,important
+||alpha-news.org^$redirect=nooptext,important
+! https://github.com/iam-py-test/investigations/blob/main/2021/11/3/1.md
+||safejokesearch.com^$redirect=nooptext,important
+||mediadlvr.com^$redirect=nooptext,important
+||youvetube.com^$redirect=nooptext,important
+||youutube.com^$redirect=nooptext,important
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$redirect=nooptext,important
@@ -14387,7 +14472,7 @@ deezer.com#?#.page-alerts:-abp-has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:-abp-has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 18October2021v1
+! OriginalVersion: 06November2021v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -14593,6 +14678,9 @@ photoblog.pl##.frontpage-teaser-photo-container > .register > #registration-form
 !! Removes an account creation prompt that can sometimes show up in articles.
 community.spiceworks.com##.join-login-alt--six-second
 community.spiceworks.com#$?#body.sui-u-no-scroll { overflow: auto !important }
+!! Removes a "You've come here often" prompt after approx. 9 page visits
+!! https://github.com/DandelionSprout/adfilt/issues/324
+community.spiceworks.com#%#//scriptlet('ubo-cookie-remover.js', 'visit_count')
 ! Glassdoor
 !! Removes an impassable login prompt on candidate interview pages in particular
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-631091688
@@ -15507,7 +15595,7 @@ fandom.com#$?#:root { --theme-body-background-image: none !important }
 ##.SnowFlakesBg:not(html, body)
 ##foxfield-xmas:not(html, body)
 ! Title: 🌭 Falukorv List
-! OriginalVersion: 17October2021v1-Beta
+! OriginalVersion: 04November2021v1-Beta
 ! Expires: 10 days
 ! Description: Originally created because some PR-Chinese filterlist makers decided to block Falun Gong websites in their anti-ad lists for reasons that had absolutely nothing to do with ads, tracking or malware, and despite the sites already being megablocked within their country; this list has since then also expanded to cover other lists' entries that makes one think "Wait, hold up", due to how misplaced they are.
 ! The list is not designed to be used together with anti-'social network' lists.
@@ -15617,7 +15705,8 @@ www.m.vk.com$badfilter
 !#endif
 ! https://wiki.manjaro.org/index.php/Pacman-mirrors#Use
 @@://wikipedia.org^
-@@||github.com^
+@@|github.com|
+@@://github.com|
 @@||bitbucket.org^
 ! https://github.com/easylist/easylist/issues/8367 - Unblocks entries that accidentally blank entire pages
 #@#html
@@ -15656,7 +15745,7 @@ www.m.vk.com$badfilter
 ! Section reserved for THEtomaso to add fixes for Fanboy's Social Blocking List and for Fanboy's Annoyances List-exclusive entries (_Not_ for EasyList Cookie List)
 ! (Currently empty.)
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
-! OriginalVersion: 20October2021v1-Beta
+! OriginalVersion: 04November2021v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -15744,6 +15833,9 @@ serienytt.no##div[class^=wpgb-block-][class$=wpgb-idle-scheme-1] + div[class^=wp
 ! Sweden
 tv.nu##a[href*="imdb.com"]
 tv.nu##._1bnN4
+! Denmark
+tvguide.dk##.zk-poster-badges
+cmore.dk##div[class^=AssetPortraitsstyles__Rating]
 ! Germany
 netzkino.de#?#.list-inline > li:-abp-contains(Bewertung)
 ! United States
@@ -15779,14 +15871,14 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 02November2021v1-Beta
+! OriginalVersion: 07November2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Homepage for the repository: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! Opt-in allowlist for affiliate support tags: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt
 ! Special thanks to https://github.com/git-101-collab for providing a 3-digit amount of new entries to this list, and to https://github.com/iam-py-test for volunteering to speed up the addition of user-submitted entries.
-! ——— General rules ——— !
+! ——— General remove rules ——— !
 ! From AdGuard CoreLibs (11/11/2020)
 $removeparam=yclid
 $removeparam=gclid
@@ -15799,9 +15891,6 @@ $removeparam=fb_ref
 $removeparam=fb_source
 $removeparam=action_object_map
 $removeparam=action_ref_map
-! Scripts that solely exist to make URLs longer
-!! https://github.com/the1812/Bilibili-Evolved/issues/2247
-/auto-append-spmid.js
 ! https://www.elkjop.no/product/data/kabler-og-tilkobling-pc-og-nettverk/APPLEMD463ZA/thunderbolt-til-gigabit-ethernet-adapter?utm_id=Pricecomparison2989_5_False&utm_medium=Pricecomparison (14/11/2020)
 ! https://www.ikea.com/kr/en/stores/restaurant/?itm_campaign=ikea_food&itm_element=essential_banner&itm_content=ikea_food (17/02/2021)
 ! https://www.infoq.com/containers/?itm_source=infoq&itm_medium=header_graybar&itm_campaign=topic_clk (28/02/2021)
@@ -16126,7 +16215,7 @@ $removeparam=refer_code
 ! https://chggtrx.com/clk.trk?CID=267627&AFID=304351
 $removeparam=AFID,domain=~chggtrx.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1412160
-$removeparam=loc,domain=~geizhals.de
+$removeparam=loc,domain=~geizhals.de|~ebay.*
 $removeparam=acampID
 $removeparam=pj_creativeid
 $removeparam=pj_publisherid
@@ -16470,7 +16559,12 @@ $removeparam=_vsrefdom
 $removeparam=ceneo_spo
 ^from=ceneo^$removeparam=from
 ^ref=ceneo^$removeparam=ref
-! ——— Specific rules ——— !
+! ——— General blocking rules ——— !
+!! Scripts that solely exist to make URLs longer
+! https://github.com/DandelionSprout/adfilt/pull/320
+! https://github.com/the1812/Bilibili-Evolved/issues/2247
+/auto-append-spmid.js
+! ——— Specific remove rules ——— !
 !! ——— Can never be made generic ———
 ! (e.g. due to sparebank1.no, RARbg.to, Disney+ newsletter unsubscriptions)
 $removeparam=cid,domain=adshares.net|apple.com|www.microsoft.com|telenor.no|proshop.*|rightmove.co.uk|giphy.com|nbcnews.com|voxi.co.uk|lenovo.com|rei.com|adguard.com|gamestop.com|bitdefender.*|ae.com|anntaylor.com|blair.com|childrensplace.com|emirates.com|factoryoutletstore.com|haband.com|intuit.com|jared.com|jcpenney.com|kay.com|kohls.com|loft.com|nike.com|nyandcompany.com|overstock.com|radissonhotelsamericas.com|ray-ban.com|tommy.com|toms.com|tractorsupply.com|underarmour.com|vineyardvines.com|wine.com|wsj.com|zales.com|xg4ken.com|flipkart.com
@@ -16485,7 +16579,7 @@ $removeparam=tid,domain=comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
 $removeparam=src,domain=thunderbird.net|twitter.com|udemy.com|elastix.org|bluejeans.com|melopero.com|kubii.*|reichelt.*|okdo.com|raspipc.es|tiendatec.es|thepihut.com|cytron.io|buyzero.de|welectron.com|digikey.*|adafruit.com|hinta.fi|3cx.com|ashford.com|bose.*|kennethcole.com|kipling-usa.com|newbalance.com|wondershare.*|investors.com|yahoo.com|engadget.com|mozilla.org
 ! No particular example
-$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com
+$removeparam=source,domain=googleusercontent.com|awd-it.*|ashford.com|asos.com|att.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|choicehotels.com|contabo.com|directv.com|drinkhint.com|edx.org|hammacher.com|hanes.com|hottopic.com|housing.com|hp.com|itnext.io|medium.com|nautica.com|onehanesplace.com|petsupplies.com|phonesoap.com|riteaid.com|sonos.com|squarespace.com|thedailybeast.com|tiktok.com|tommybahama.com|torrid.com|tous.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|jacquielawson.com|fool.com|fiverr.com|blavity.com|eonline.com|tokopedia.com|community.spiceworks.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=wsj.com|marketwatch.com|barrons.com|fnlondon.com|dowjones.com|mansionglobal.com|penews.com
@@ -16507,7 +16601,7 @@ $removeparam=refRID
 @@||amazon.*/gp/slredirect/picassoRedirect.html^$removeparam
 ! https://www.amazon.com/Disney-Fairies-Lessons-Chapter-ebook-ebook/dp/B007R6UWG2/ref=sr_1_16?dchild=1&keywords=disney+fairies&qid=1606488113&sr=8-16 (27/11/2020)
 $removeparam=dchild
-$removeparam=qid
+$removeparam=qid,domain=~ebay.*
 ||amazon.$removeparam=sr
 ! https://www.amazon.co.uk/dp/B08K443FBQ/ref=asc_df_B08K443FBQ1606003200000/?creative=22374&creativeASIN=B08K443FBQ (28/11/2020)
 $removeparam=creative
@@ -17301,9 +17395,19 @@ $removeparam=pro,domain=etsy.com
 $removeparam=frs,domain=etsy.com
 ! https://linkvertise.com/8062/TS3StoreMagnet?o=sharing
 ||linkvertise.com^$removeparam=o
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1589504
+$removeparam=trk,domain=linkedin.com
+! https://github.com/DandelionSprout/adfilt/issues/324
+||community.spiceworks.com^$removeparam=carPos
+! https://www.bleepingcomputer.com/search/?cx=partner-pub-0920899300397823%3A3529943228&cof=FORID%3A10&ie=UTF-8&q=ransomware
+||bleepingcomputer.com^$removeparam=cx
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1600035
+$removeparam=collection,domain=everlane.com
+! https://1.bp.blogspot.com/-j1vCw2c3c8o/WDaCDjs8WiI/AAAAAAAELx0/2lBglz1aaw4fnW09LcAsIj88VsPUr9n5gCLcB/s1600/AS000761_04.gif?time=Sun%20Nov%2007%202021%2012:01:08%20GMT+0300%20(%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,%20%D1%81%D1%82%D0%B0%D0%BD%D0%B4%D0%B0%D1%80%D1%82%D0%BD%D0%BE%D0%B5%20%D0%B2%D1%80%D0%B5%D0%BC%D1%8F)
+||bp.blogspot.com^$removeparam=time
 ! ——— Rules for heavily covered international sites ——— !
 !! ——— PR-China ———
-!! Special thanks to https://github.com/shenzhiming88 for helping with this section
+!! Special thanks to https://github.com/shenzhiming88 for helping with this section.
 !!! ——— AliExpress ———
 ! https://es.aliexpress.com/item/4000672272353.html?pvid=c4cdc770-f05a-4b7b-8a50-d8b81efff6c9&_t=gps-id:pcDetailBottomMoreThisSeller,scm-url:1007.13339.169870.0,pvid:c4cdc770-f05a-4b7b-8a50-d8b81efff6c9,tpp_buckets:668%230%23131923%230_668%23808%234094%23200_668%23888%233325%231_668%232846%238113%23646_668%232717%237558%23188_668%231000022185%231000066059%230_668%233468%2315617%23897
 ||aliexpress.com/item/$removeparam=pvid
@@ -17376,6 +17480,13 @@ $removeparam=fromRankId
 ||baidu.com^$removeparam=ref
 ||baidu.com^$removeparam=rq
 ||baidu.com^$removeparam=vslid
+! https://github.com/DandelionSprout/adfilt/pull/325
+||baidu.com^$removeparam=gsid
+||baidu.com^$removeparam=idctag
+||baidu.com^$removeparam=logid
+||baidu.com^$removeparam=pageFrom
+||baidu.com^$removeparam=sids
+||baidu.com^$removeparam=srcp
 !!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
 ||bilibili.com^$removeparam=/^current/
@@ -17435,6 +17546,8 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 !#endif
 ! ——— Allowlist ——— !
 @@mailinglist$removeparam=/^utm_/
+@@||graph.baidu.com/upload?$removeparam=from
+@@||web.archive.org/*_/http$removeparam
 !#endif
 !#endif
 !#endif
@@ -17537,6 +17650,448 @@ store.playstation.com#$#html[lang=ja] span { font-family: "Segoe UI", "Calibri",
 !#endif
 !#endif
 !#endif
+!#if adguard_app_mac
+! No iMacs have had less than 1600px wide monitors since 2006, MacBook Pro since 2012, or MacBook Air since 2017. Thus I'm taking a gamble by embedding this for Mac users:
+! Title: 🖥️ Dandelion Sprout's Website Stretcher
+! OriginalVersion: 04November2021v1-Beta
+! Expires: 3 days
+! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
+! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
+! Note that the list is designed for screens that are ≥1440px wide, and it should not be used on phones, pre-2007 monitors, or cheap laptops.
+! Special thanks go out to elypter (https://github.com/elypter), who inadvertently taught me that adblockers can be used to edit elements' CSS styles.
+! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+! ————————————————————————————————————————
+! Category: Prisjakt
+! Redesign
+prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#.category-page > div { max-width: 98vw !important }
+prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#.category-page--wrapper { max-width: none !important }
+prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#div[class^=Content-] { max-width: none !important }
+prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#div[class^=PageContent-] { max-width: 97vw !important }
+prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#.category-list--top-level-item { flex: unset !important; margin-right: 15px !important }
+prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#nav[class^=Navigation-] { max-width: 95vw !important }
+prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#div[class^=sc-] > div[class^=sc-] { max-width: none !important }
+prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#.pj-ui-product-listing--item { min-width: 200px !important; flex: unset !important }
+prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#.app--main > div[class^=sc-] { max-width: 97vw !important }
+! Front page
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$##centered_container { margin-left:1px !important; margin-right:1px !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$##supersearch_large { width:95vw !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$##column1 { width:1000px !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$##column2 { width:230px !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.column2.shadow.section { width:80vw !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#nav.footer { width:95vw !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.list-cat-images.no-border.mt20 > li > div.show-on-hover { width:200px !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.list-cat-images > li { width:125px !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.super_search_textbox_big { width:80vw !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$##headerdiv { width:95vw !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.column1.shadow.section { width:210px }
+! Category pages
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.list-cat-images-wide { width:95vw !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$##category_description_container { width:950px !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.divider-with-content.right { width:1350px !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.white-bg { width:95vw !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.list-simple > li { width:190px !important }
+! Criteria pages
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$##main_content_wrapper { width:95vw !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$##header-logo { width:180px !important }
+! Product pages
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.v-centered { width:1390px !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.big-tabs-low.flex_tabs { width:1300px !important }
+! Review pages
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.balloon-inner { width:75vw !important;min-width:1000px }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.balloon-r::after { margin-left:270px !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.balloon-r::before { margin-left:270px !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.balloon-translated { width:60vw !important }
+classic.prisjakt.*,classic.pricespy.*,classic.prisjagt.dk,classic.hintaopas.fi,classic.ledenicheur.fr#$#.drg-sidebar { max-width:320px }
+! —————————————————————————————————————————
+! Category: Vidlii
+vidlii.com#$#.wrapper { width:1370px !important }
+vidlii.com#$##vtbl_actions { width: 950px !important; margin-right: 10px !important }
+vidlii.com#$##vtbl_desc { width:410px !important }
+vidlii.com#$##vtbl_pl { width:940px !important; height:700px !important }
+vidlii.com#$#.pr_hd_wrapper { width:1350px !important }
+vidlii.com#$#.search_bar { width:600px !important }
+vidlii.com#$#.h_l { width:1030px !important }
+vidlii.com#$#.vc_r { width:1150px !important }
+vidlii.com#$#.ln2 { width:220px !important }
+vidlii.com#$#input#em { width:340px !important }
+! —————————————————————————————————————————
+! Category: MeWe
+! General entries
+mewe.com#$#.header_inner { max-width: none !important; margin: 0 20px !important }
+mewe.com#$#.header_nav_list { width:40vw !important }
+mewe.com#$#.header_logo_wrapper { margin: 0 30px !important }
+mewe.com#$#.header_notification-btn { margin: 0 60px !important }
+mewe.com#$#.content-all-wrapper { max-width: none !important; width: 98vw !important }
+mewe.com#$#.c-mw-post { max-width: calc(80vw - 350px)!important }
+mewe.com#$#.c-mw-postbox-placeholder { max-width: none !important }
+mewe.com#$#.postbox_header_textarea { max-width: none !important }
+mewe.com#$#.c-feed-simple { max-width: none !important }
+mewe.com#$#.nofollow { white-space: normal !important }
+mewe.com#$#.mewe-app-wrapper { max-width: none !important }
+mewe.com#$#.mewe-app-content > .h-size-600 { max-width: none !important; flex: unset !important }
+! Media viewer
+mewe.com#$#.media-dialog_post--comment-fixed { width:40vw !important }
+mewe.com#$#.media-dialog_inner { max-width: none !important }
+mewe.com#$#.media-dialog.content-high.c-mw-comment-your { width:40vw !important }
+! Emoji picker
+mewe.com#$#.c-mw-emoji-picker { width:670px !important; margin-left: -300px !important }
+mewe.com#$#div[class*="c-app-route myworld ember-view"] + div[class*=c-mw-emoji-picker] { left: 35vw !important }
+mewe.com#$#ul.like-category li { width:45px !important }
+mewe.com#$#ul.category li { width:45px !important }
+mewe.com#$#.search.active { padding-top:6px !important; padding-bottom:3px !important }
+! Groups
+mewe.com#$##content-wrapper { max-width: none !important }
+mewe.com#$#.group-feed-routable_feed { flex-basis: 100% !important }
+mewe.com#$#.sidebar-right-group { width: auto !important }
+! Fullscreen chat
+!!!mewe.com##.chat-message_content:style(max-width: 100% !important)
+mewe.com#$#.chat-message_main { flex: unset !important }
+! Search results
+mewe.com#$#.dialog_inner { max-width: 80% !important; padding-right: 45px !important }
+mewe.com#$#.smart-search_results { max-width: none !important; width: 70vw !important }
+mewe.com#$#.smart-search_menu--visible { margin-left: -5vw !important }
+! Userpages
+mewe.com#$#.profile-posts-routable_feed { flex-basis: 100% !important }
+! ——————————————————————————————————————
+! Category: Pixiv
+! Bookmarks
+pixiv.net#$#div { max-width: none !important }
+pixiv.net#$#figcaption > div > div { width: 90% !important }
+pixiv.net#$#header > div { width: 80vw !important }
+pixiv.net#$#header > div li { margin-right: 35px !important }
+pixiv.net#$#.layout-column-2 { width:85vw !important;float:right }
+pixiv.net#$#.layout-a { width:98vw !important }
+pixiv.net#$#div[class^=sc-] + div[class*=" "]:not([class^=sc-]) > div[class^=sc-][class*=" "]:only-of-type { width: unset !important; padding-left: 4px !important }
+! Search pages (November 2019 redesign)
+pixiv.net#$#section > div > ul { grid-template-columns: repeat(auto-fill, 175px) !important }
+pixiv.net#$##root > div > div > div > div > div[class*=" sc"]:only-child { padding-left: 10px !important }
+pixiv.net#$##root > div > div > div:only-child { width: 98vw !important; padding: 4px !important }
+pixiv.net#$#div[class*=" "]:not([class^=sc-]) > div[class*=" sc-"] { margin: 10px !important; padding: 4px !important }
+pixiv.net#$##root > div > div > div:last-child > div:only-child { width: 99vw !important; padding: 0 !important }
+pixiv.net#$##root > div > div > div > div > div > div > ul { padding-left: 8px !important }
+pixiv.net#$#div[class^=sc-]:nth-of-type(4):last-of-type > div[class^=sc-]:only-of-type { width: unset !important; padding: 0 3px !important }
+pixiv.net#$#div[class^=sc-]:nth-of-type(5):last-of-type > div[class^=sc-]:only-of-type { width: unset !important; padding: 0 3px !important }
+pixiv.net#$?#div > section:upward(1) { width: unset !important; padding-left: 8px !important; padding-right: 0px !important }
+! Front page (May 2020 redesign)
+pixiv.net#$##root > div > div > div > div > div > ul { padding-left: 8px !important }
+pixiv.net#$#section > div:last-of-type > div:only-of-type > ul { width: 98vw !important }
+pixiv.net#$#div:not([class]) > div[class^=sc-] > div[class]:not([class^=sc-]) > div[class^=sc-]:only-of-type { width: unset !important; padding: 0 3px !important }
+!!!pixiv.net##div:matches-css(width: 1224px):style(width: 98vw !important)
+pixiv.net#$#div[class^=gtm-toppage-] > div:not([class]) > div[class] { width: unset !important }
+! Image collage on image pages
+pixiv.net#$#div[style^="position: relative;"] { width: unset !important }
+pixiv.net#$#main[class] { min-width: 1060px !important; width: 75px !important }
+! The search bar on the front page and on search pages
+pixiv.net#$#[class=ui-search] { width: 460px !important }
+pixiv.net#$#[class=ui-search] > .container { width: 400px !important }
+pixiv.net#$#[class=ui-search] > .container > #suggest-input { width: 400px !important }
+! The search bar on image pages
+pixiv.net#$#form[action="/search.php"] { margin-left: 0 !important; width: 460px !important }
+pixiv.net#$#input[placeholder="Search results"] { width: 400px !important }
+! Image pages
+pixiv.net#$#.sc-AykKD { width: 97vw !important }
+pixiv.net#$##root > div[class^=sc-] > div[class^=sc-]:only-child { margin: 0 !important; padding: 2px !important }
+pixiv.net#$#.gtm-illust-recommend-zone > div:not([class]) > div[class*=" "] { width: 97vw !important }
+! Search bar
+pixiv.net#$#input[autocapitalize][name=word] { width: 400px !important }
+pixiv.net#$#header form { margin-left: -120px !important }
+! Artist pages' art logs
+pixiv.net#$#div[role=presentation] > div > form { min-width: 600px !important }
+pixiv.net#$#div:not([class]) + div:not([class=" "]) > div > section { max-width: none !important }
+pixiv.net#$#div:not([class]) + div:not([class=" "]) > div > section > ul > li { margin-right: 4px !important }
+pixiv.net#$#div > div[class*=" "]:nth-of-type(2) > div[class*=" "]:only-of-type > div[class*=" "]:only-of-type { width: 95vw !important; padding-left: 5px !important }
+pixiv.net#$#li[size="1"][offset="0"] { margin-right: 4px !important }
+! https://www.pixiv.net/en/users/2284714/artworks
+pixiv.net#$#nav + div > section { max-width: 97vw !important }
+pixiv.net#$#nav + div > section > ul > li { margin-right: 0 !important }
+pixiv.net#$##root > div > div:only-of-type > div:nth-of-type(2) section { max-width: 98vw !important }
+pixiv.net#$##root > div > div:only-of-type > div:nth-of-type(2) section > ul > li { margin-right: 4px !important }
+! Discovery page
+pixiv.net#$#.layout-body { width:98vw !important }
+pixiv.net#$##wrapper { margin-left: 2px !important; margin-right: 2px !important; width: 98vw !important }
+pixiv.net#$##js-react-search-mid > div { margin-left: 0 !important; margin-right: 0 !important }
+pixiv.net#$#._premium-lead-popular-d-body { max-width: 100vw !important }
+! ——————————————————————————————————————————————————————————————————
+! Category: Google Play
+! General entries
+play.google.com#$#.card-list.two-cards { margin-left: 220px !important; margin-right:15px }
+play.google.com#$#.cluster-heading { margin-left: 220px !important }
+! Article pages
+play.google.com#$#.UTg3hd { margin-left:5px !important;margin-top:5px !important;max-width:none !important }
+play.google.com#$#.tlG8q { margin-left:10px !important;margin-top:10px !important }
+play.google.com#$#.LXrl4c { width: 860px !important }
+play.google.com#$#.hkhL9e { width: 220px !important }
+play.google.com#$#.hAyfc { width: 250px !important }
+play.google.com#$#.W4P4ne { padding-left: 10px !important;padding-right: 10px !important }
+
+! User reviews
+play.google.com#$#.UD7Dzf { width: 762px !important }
+play.google.com#$#.W4P4nw { margin-left: 10px !important;margin-right: 10px !important }
+
+! Article preview images
+play.google.com#$#.XYLQ2b { width: 900px !important }
+play.google.com#$#.Eg31qe { width: 780px !important }
+
+! Google Play Books article pages
+play.google.com#$#.Njo8s { width:900px !important }
+
+! Google Play Books notes on how to read content
+play.google.com#$#.wAHRxd { width:420px !important;max-width:450px !important }
+
+! Google Play Books owned books list
+play.google.com#$#.body-content { margin-left:205px !important }
+
+! Google Play Music article pages
+play.google.com#$#div.main-content { margin-left:7px !important }
+play.google.com#$#div.meta-info { width:200px !important }
+! ————————————————————————————————————————————————————————————————————————
+! Category: ASUS Router
+router.asus.com#$#.NM_table { width:1100px !important }
+router.asus.com#$##_NM_table { width:570px }
+router.asus.com#$##wl_ssid.input_25_table { width:350px !important }
+router.asus.com#$#.NM_radius_bottom { width:440px !important }
+router.asus.com#$#.NM_radius_bottom_container { width:440px !important }
+router.asus.com#$##rt_table { width:400px !important }
+router.asus.com#$##wl_wpa_psk { width:400px !important }
+router.asus.com#$#.loading_bar { width:230px !important }
+router.asus.com#$##deviceOption_1.input_option { width:180px !important }
+router.asus.com#$#.clientlist_viewlist { width:1120px !important }
+router.asus.com#$#.input_32_table { width:410px !important }
+router.asus.com#$#.input_18_table { width:168px !important }
+
+! Login screen
+router.asus.com#$#.form_input { width:600px !important }
+! ————————————————————————————————————————————————————————————————————
+! Category: Wikia
+! This category is based on 'Clean Wikia', made by Phoenixsong (https://userstyles.org/users/161415)
+wikia.org,fandom.com#$##WikiaPage { width: 100% !important; max-width: none !important; margin: 0 !important; padding: 0 !important }
+wikia.org,fandom.com#$##PageHeader { padding: 16px 10px 12px }
+wikia.org,fandom.com#$##WikiaMainContent { width: 100% !important; margin: 0 !important }
+wikia.org,fandom.com#$##WikiaMainContentContainer { margin: 0 !important }
+! Flow the sidebars (which were moved to the bottom of the page) into 2 columns to save vertical space.
+! These rules mostly emulate the website’s rules at a small breakpoint when this happens naturally.
+wikia.org,fandom.com#$#.WikiaRail { display: block !important; column-count: 2 !important; width: auto !important }
+wikia.org,fandom.com#$#.rail-module { break-inside: avoid !important }
+wikia.org,fandom.com#$#.rail-sticky-module { position: static !important }
+! For 2-column Wikias, e.g. https://spyro.fandom.com/wiki/Fairies
+fandom.com#$#.WikiaSiteWrapper { width: 98vw !important }
+fandom.com#$#.article-with-rail .WikiaRail { max-width: 250px !important; column-count: 1 !important }
+! For the new GUI with the toolbar on the left
+fandom.com#$#.resizable-container { max-width: none !important }
+! For smaller-popularity Gamepedias
+! https://angelswithscalywings.fandom.com/wiki/Reza
+fandom.com###bodyContent + div[id^=siderail_]
+fandom.com#$#body[class*=gamepedia] #bodyContent { width: unset !important }
+! ————————————————————————————————————————————————————————————————————
+! Category: Finn.no
+! Front page
+finn.no#$#.ad-stream__unit { width: 230px !important }
+finn.no#$#.pageholder { max-width: none !important }
+finn.no#$#.market-grid__item { width: 20% !important }
+
+! Torget category list page
+finn.no#$#.container.bg-ice.pbs { max-width: none !important; padding-top: 0 !important }
+finn.no#$#.page { max-width: none !important }
+
+! Product lists (Grid)
+finn.no#$#.ads--list > .ads__unit { max-width: none !important }
+finn.no#$#.ads__unit { max-width:310px !important }
+
+! Product pages
+finn.no#$#.grid__unit.u-r-size1of3 { width: 30% !important }
+finn.no#$#.grid__unit.u-r-size2of3 { width: 70% !important }
+
+! Top bar
+finn.no#$#.top-bar-top-bar__nav-1O8LN { max-width: none !important }
+finn.no#$#.top-bar-top-bar__menu-item-3kxIT { padding-right: 40px !important; padding-left: 40px !important }
+! ——————————————————————————————————————————————————————————————————————————
+! Category: GitHub
+! This category is based on entries from 'GitHub Wide', which is maintained by https://github.com/mdo at https://github.com/mdo/github-wide, and which is licenced under MIT.
+! General entries
+github.com#$#.container-lg { max-width: none !important }
+github.com#$#.container { width: 100% !important; padding-left: 30px !important; padding-right: 30px !important }
+github.com#$#.container-lg { width: 100% !important; padding-left: 30px !important; padding-right: 30px !important }
+github.com#$#.file-header::after { clear: left !important }
+github.com#$#.container-xl { max-width: none !important }
+! Repo Next layout
+github.com#$#.repository-content { width: 100% !important }
+github.com#$#.repository-with-sidebar { padding-right: 60px !important }
+github.com#$#.repository-with-sidebar > .repository-sidebar { margin-right: -60px !important }
+github.com#$#.summary-stats { display: table; width: 100% }
+github.com#$#.authors-and-code { display: table; width: 100% }
+github.com#$#.summary-stats > li { width: 25% }
+github.com#$#.authors-and-code > .section { width: 50% }
+! Repo Next Code page
+github.com#$#.with-full-navigation { padding-right: 190px !important }
+github.com#$#.with-full-navigation > .repository-sidebar { margin-right: -190px !important }
+! Issues/PRs
+github.com#$#.discussion-sidebar { width: 220px !important }
+github.com#$#.discussion-timeline { width: 100% !important }
+github.com#$#.col-9 { width: 100% !important }
+github.com#$##discussion_bucket > .col-12.col-md-9 { width: calc(100vw - 260px) !important }
+github.com#$##partial-discussion-sidebar[data-channel^=issue] { margin-left: 24px !important }
+github.com#$#.col-md-3.col-12.flex-shrink-0 { width: 200px !important }
+github.com#$##discussion_bucket .col-md-3.col-12.flex-shrink-0 { margin-left: 30px !important }
+github.com#$#.flex-shrink-0.col-12.col-md-9 { width: calc(100% - 250px) !important }
+github.com#$#.js-discussion { width: calc(100vw - 320px) !important }
+github.com#$##discussion_bucket { width: 100% !important }
+github.com#$#.Layout-sidebar { max-width: 210px !important }
+! PRs only
+github.com#$#.pull-request-tab-content { width: calc(100vw - 275px) !important; }
+github.com#$#.gutter-condensed > .col-3 { width: 200px !important }
+! New issues and Dashboard
+github.com#$##dashboard { position: relative !important }
+github.com#$#.new-issue-form { position: relative !important }
+github.com#$#html[lang] > body:not(.full-width) .dashboard-sidebar { position: absolute !important; top: 0 !important; right: 0 !important }
+github.com#$#.new-issue-form > .discussion-sidebar { position: absolute !important; top: 0 !important; right: 0 !important }
+github.com#$#button.discussion-sidebar-toggle { width: 100% !important }
+github.com#$#.timeline-new-comment { max-width: none !important }
+! Dashboard
+github.com#$#html[lang] > body:not(.full-width) .news { float: none !important; margin-right: 360px !important }
+! Settings
+github.com#$#.settings-content { float: none !important; width: auto !important; overflow: auto !important }
+github.com#$#.repo-settings-content { float: none !important; width: auto !important; overflow: auto !important }
+github.com#$#.container > .settings-content, .repo-settings-content { margin-left: 260px !important }
+github.com#$##repo-settings > .menu-container { width: 240px !important }
+github.com#$##js-flash-container > .flash-messages { width: 100% !important; padding-left: 30px !important; padding-right: 30px !important }
+! Profile avatar tooltip
+github.com#$#.u-photo .avatar { width: 230px !important }
+github.com#$#.h-card { width: 230px; margin-right: 16px }
+! Commit feed notes on a repo's front page
+github.com#$#.commit-desc > .text-small { max-width: none !important }
+! Commit comments
+github.com#$##comments > .timeline-comment-wrapper { width: calc(100vw - 240px) !important }
+! Filename textfields
+github.com#$#.js-blob-filename { width: 400px !important }
+! Profile page
+github.com#$#body.page-profile .flex-shrink-0.col-12.col-md-9 { margin-left: 40px !important }
+! —————————————————————————————————————————————————————————————————————
+! Category: Patreon
+! General entries
+patreon.com#$#.sc-Rmtcm { max-width: none !important }
+patreon.com#$#.gHmKBb { white-space: normal !important }
+patreon.com#$#div.HztiF.sc-cvbbAY { max-width: 380px !important }
+patreon.com#$#div > iframe { left: 0 !important }
+! List of active pledges
+patreon.com#$#div > div[data-tag=pledges-your-pledges-pledge-info] { width: 190% !important }
+patreon.com#$#.FhviP { max-width: 95vw !important }
+patreon.com#$#div.gRYtWI:nth-of-type(1) { max-width: 450px !important }
+patreon.com##div[data-tag^=activePledgeToCreator-] > div[data-tag=right-column]
+! —————————————————————————————————————————————————————————————————————
+! Category: SoundCloud
+soundcloud.com#$#.l-container { width: 95vw !important }
+soundcloud.com#$#html[lang] > body { background: none !important }
+! Making it easier to see the thumbnails in the video player bar
+soundcloud.com#$#.playbackSoundBadge__avatar > div > .sc-artwork { width: 46px !important; height: 46px !important }
+soundcloud.com#$#.playbackSoundBadge__avatar > div { width: 46px !important; height: 46px !important }
+soundcloud.com#$#.playbackSoundBadge__avatar { width: 46px !important; height: 46px !important; margin-right: 3px !important }
+! —————————————————————————————————————————————————————————————————————
+! Category: Nintendo of America
+! Amiibo pages
+! Some mild flicker may occur on some pages
+nintendo.com#$#.compatible-amiibo > .wrapper { max-width: none !important; width: 98vw !important }
+nintendo.com#$#.figures li { width: auto !important }
+nintendo.com#$#.figures { column-count: 7 !important }
+nintendo.com#$##game-detail-page { max-width: none !important; width: 98vw !important }
+nintendo.com#$##game-set > li { width: auto !important }
+nintendo.com#$##game-set { column-count: 8 !important }
+! —————————————————————————————————————————————————————————————————————
+! Category: Wikipedia
+! For a new interface that has been introduced to Wikipedia and Wiktionary in some languages, e.g. fr.wikipedia.org
+! https://github.com/DandelionSprout/adfilt/issues/118
+wikipedia.org,wiktionary.org#$#.mw-page-container { max-width: none !important }
+wikipedia.org,wiktionary.org#$#.mw-workspace-container { max-width: none !important }
+wikipedia.org,wiktionary.org#$#.mw-content-container { max-width: none !important }
+wikipedia.org,wiktionary.org#$##mw-navigation + .mw-content-container { margin-left: 176px !important }
+! —————————————————————————————————————————————————————————————————————
+! Overcategory: Loosely assorted sites with ≤2 entries
+! Category: Telenor Digital Norway
+telenor.no#$#.container { width: 98vw }
+telenor.no#$#.minesider-container { max-width: none; width: 98vw }
+! Category: Bulbapedia
+bulbapedia.bulbagarden.net#$##content.mw-body { max-width: 95vw !important }
+bulbapedia.bulbagarden.net###left_rail
+bulbapedia.bulbagarden.net###right_rail
+! Category: Qwant
+qwant.com#$#.results-column { max-width: none !important; width: 1200px !important }
+! Category: GitLab
+gitlab.com#$#.container-fluid.container-limited:not(.breadcrumbs) { max-width: 100% !important }
+gitlab.com#$#.wiki.md.file-content { max-width: none !important }
+! Category: PayPal
+! Account frontpage
+paypal.com#$#.vx_mainContent { max-width: 1500px !important }
+! Category: Bitwarden Vault
+vault.bitwarden.com#$#.container.page-content { width: 100% }
+! Category: Piliapp
+piliapp.com#$#.container { width: 100vw !important }
+piliapp.com#$#div#content { width: 78% !important }
+! Category: Travis CI
+travis-ci.org#$#.wrapper-main { max-width: none !important; width: 92% !important }
+travis-ci.org#$#.main { max-width: none !important }
+! Category: TwitchMetrics
+twitchmetrics.net#$#div.container { max-width: 95vw !important }
+! Category: Font Meme
+fontmeme.com#$##wrap { width: 97vw !important }
+! Category: dafontFREE
+dafontfree.net#$#.wrappage { width: 98vw !important }
+! Category: Reddit
+! When opening a post in New Reddit in a new tab
+reddit.com#$#div[aria-hidden] > div[tabindex] > div:nth-of-type(1) { max-width: 1000px !important }
+! Category: Fark
+fark.com#$##container { width: 95vw !important }
+fark.com#$##newsContainer { width: 96% !important }
+! Category: Color-hex
+! Makes the text input bar display all of its info placeholder text properly
+color-hex.com#$##colorvalue { width: 230px !important }
+! Category: PCGamingWiki
+pcgamingwiki.com#$#table[id^=table-] { max-width: 1060px !important; width: 100vw }
+pcgamingwiki.com#$##masthead { max-width: 1500px !important }
+!#endif
+!#if adguard_app_windows
+! Title: 👩‍🏭 List for preventing games from freezing when pinging dead servers
+! OriginalVersion: 06November2021-Alpha
+! Expires: 14 days
+! Description: In the early 2010's, it was common for Windows games to be hardcoded to require connections to first-party servers to work properly. To no one's surprise besides the game publishers, this began causing problems later on when the servers shut down, with games stuttering, freezing, or failing to start. This list implements community fixes to make those games playable and non-stuttering again.
+! Note: This list is designed for AdGuard for Windows (both the regular and DNS blocking modes) and AdGuard Home. In AdGuard for Windows, remember to add the games' .exes at Settings → Network → List of Filtered Apps → +. List versions for hosts and domains tools are planned later in 2021.
+! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
+! Test Drive Unlimited 2
+! https://www.pcgamingwiki.com/wiki/Test_Drive_Unlimited_2#Playing_offline_with_online_profile_after_official_servers_were_shut_down
+||clientstats.testdriveunlimited2.com^
+||patchserver.testdriveunlimited2.com^
+||www.testdriveunlimited2.com^
+! Saints Row 3 and Saints Row IV
+! https://www.pcgamingwiki.com/wiki/Saints_Row_IV#Stuttering_caused_by_My_Steelport_service_shutdown
+||sr3.hydra.agoragames.com^
+||sr4.hydra.agoragames.com^
+! Tropico 4
+! https://www.pcgamingwiki.com/wiki/Tropico_4#Will_not_run_on_Windows_10_64bit
+||launcher01.kalypsomedia.com^
+! Kane & Lynch 2: Dog Days
+! https://www.pcgamingwiki.com/wiki/Kane_%26_Lynch_2:_Dog_Days
+||kl2-pc-game-content.eidos.co.uk^
+! No Man's Sky (as of 2016)
+! https://www.pcgamingwiki.com/wiki/No_Man%27s_Sky#Long_pauses.2Ffreezing_during_starfield_intro_and_during_gameplay
+||a247c.playfabapi.com^
+||p-a247c-mainserver-800395549.us-west-2.elb.amazonaws.com^
+||api.gameanalytics.com^
+||ec2-54-156-235-193.compute-1.amazonaws.com^
+||ec2-3-230-190-87.compute-1.amazonaws.com^
+!#if !ext_ublock
+! Assassin's Creed 1 (Requires AdGuard for Windows, due to the unreliability of the entries in the source link.)
+! Inspired by https://steamcommunity.com/app/15100/discussions/0/864949037837351686/
+*$app=AssassinsCreed_Game.exe
+*$app=AssassinsCreed_Dx10.exe
+*$app=AssassinsCreed_Dx9.exe
+! Far Cry 3 Blood Dragon (Requires AdGuard for Windows)
+*$app=fc3_blooddragon.exe
+*$app=fc3_blooddragon_d3d11.exe
+! Tom Clancy's Ghost Recon: Advanced Warfighter (Requires AdGuard for Windows)
+! https://www.pcgamingwiki.com/wiki/Tom_Clancy%27s_Ghost_Recon_Advanced_Warfighter#Temporary_freeze_at_startup
+||greconawf.available.gamespy.com^$app=graw-standalone.exe|graw.exe
+||key.gamespy.com^$app=graw-standalone.exe|graw.exe
+||greconawf.ms0.gamespy.com^$app=graw-standalone.exe|graw.exe
+!#endif
+!#endif
 ! ————— Entries that are currently specific to this compilation —————
 ! Removes listings in certain lists, that are simply unwanted and unwarranted space wasters
 freelancer.com#?#.PageProjectViewLogout-freelancerInfo:-abp-has(.small-flag.bangladesh)
@@ -17558,15 +18113,6 @@ foodora.*#$#.user-wrapper + .order-components { top: 64px !important }
 bloombergquint.com#%#//scriptlet('ubo-acis.js', 'document.oncopy')
 bloombergquint.com#%#//scriptlet('ubo-aopr.js', 'getSelection')
 ||deepl.com/js/docTrans-react.chunk.
-!#if adguard_app_windows
-! Assassin's Creed 1 (and other known Ubisoft games) PC stuttering
-! Inspired by https://steamcommunity.com/app/15100/discussions/0/864949037837351686/
-*$app=AssassinsCreed_Game.exe
-*$app=AssassinsCreed_Dx10.exe
-*$app=AssassinsCreed_Dx9.exe
-*$app=fc3_blooddragon.exe
-*$app=fc3_blooddragon_d3d11.exe
-!#endif
 ! Fake screen smudge
 ||dinreisevaksine.no/wp-content/themes/dbh/assets/images/background.jpg^
 ! AAB prompts

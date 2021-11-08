@@ -77,6 +77,9 @@
 ! https://www.eff.org/deeplinks/2021/03/googles-floc-terrible-idea
 #%#//scriptlet('set-constant', 'Document.prototype.interestCohort', 'undefined')
 !
+! https://github.com/AdguardTeam/Scriptlets/issues/160
+! https://github.com/AdguardTeam/AdguardFilters/issues/97512
+alternative.me,justjaredjr.com,r-graph-gallery.com#%#//scriptlet('remove-attr', 'onclick', 'a[href][onclick*="getOutboundLink"]')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95512
 eduscho.at#%#//scriptlet("set-constant", "exactagTrack", "noopFunc")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91255
@@ -264,6 +267,19 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 !||i.snssdk.com/log/*
 !||i.snssdk.com/slardar/sdk.js
 !
+||trk-egestas.com^$third-party
+||d41.co^$third-party
+||tags.soloway.ru^$third-party
+||instadrama.site^$third-party
+||shoplytics.com^$third-party
+||analytics.tradedoubler.com^
+||edgrmtracking.com^$third-party
+||adbrix.io^$third-party
+||cc-api-data.adobe.io^
+||adg-data.kajicam.com^
+||report.smartcount.net^$third-party
+||bacon.getcarro.com^$third-party
+||t.unbounce.com^$third-party
 ||wipe.de^$third-party
 ||oremark.com^$third-party
 ||cbt.whatcounts.net^$third-party
@@ -320,7 +336,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||thequin.ai^$third-party
 ||ajur.info^$third-party
 ||clicks.h.hepsiburada.com^$third-party
-||spgo.io^
+||eu.spgo.io^
 ||rcp.evolok.net^$third-party
 ||pd.trysera.com^$third-party
 ||ct2.sarashi.com^
@@ -3675,6 +3691,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! These domains are used for tracking purposes according to the data that is being sent there.
 ! More info: https://getadmiral.com/products/measure
 !
+||breadbalance.com^$third-party
 ||stakingsmile.com^$third-party
 ||rabbitrifle.com^$third-party
 ||cherriescare.com^$third-party
@@ -4859,6 +4876,10 @@ nethunt.com/api/v1/track/email/$image
 ! Disabled in DNS filter
 ||telemetry.mozilla.org^
 !
+||analytics.sports.ru^
+||aegis.qq.com^
+||views.romaniatv.net^
+||d3pkntwtp2ukl5.cloudfront.net^
 ||analytics-api.dvdfab.cn^
 ||c.pravo.ru^
 ||weblog.coupang.com^
@@ -5136,7 +5157,6 @@ nethunt.com/api/v1/track/email/$image
 ||asumi.shinobi.jp^
 ||tracking.epicgames.com^
 ||t*.zcvh.net^
-||adj.st^
 ||d3nq5jrakcyw1w.cloudfront.net^
 ||tracking.netdoktor.at^
 ||targeting.tbt.arcpublishing.com^
@@ -18059,6 +18079,7 @@ charlestownwyllie.oaklawnnonantum.com^
 ! Umami
 /umami.js
 !
+/check.php?t=*&rand=$image,~third-party
 /akamai/*/mediaanalytics/Mediaanalytics.min.js
 /wp-content/plugins/pb-ga-google-analytics/*$domain=~wordpress.org
 /wp-statistics/v2/hit?
@@ -18445,6 +18466,18 @@ _tracking.php?b=
 !
 /analytics.js$domain=bataryapil.com|journey.com.tr|tozlu.com|elleshoes.com|freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|partifabrik.com|newsmax.com
 !
+||daisomall.co.kr/collect.php
+||cam.ink/eye.gif?
+||adobe.io/system/log
+||contents-search-windows.com/api/v1/x^
+||sobaka.ru/assets/*/countersApi.js
+||instagram.com/logging/
+||fastcdn.co/js/sptw.
+||onedaythreeautumns.com/api/census/RecordHit
+||api-web.pressplay.cc/marketing^
+||flog.pressplay.cc/batch_track^
+||spush.toptoon.com/log/
+||rfk.finishline.com/api/event-rfkj/
 ||cams.xnxx.com/pixel/
 tourister.ru##.nt-foot-item[style="overflow:hidden;"]
 ||pravo.ru/assets/*/js/event.js
@@ -20795,6 +20828,8 @@ link.gmapp*.net$image
 !---- Domain pecific rules ----
 !------------------------------
 !
+||subhd.*^$cookie=/SuBhD.*/
+||subhdtw.*^$cookie=/SuBhD.*/
 ||joyn.de^$cookie=trackingSessionId
 ||tf1.fr^$cookie=atidvisitor
 ||tf1.fr^$cookie=ABTastySession
@@ -20851,6 +20886,11 @@ $cookie=wuuid,domain=duolingo.com|duolingo.cn
 !---- Generic rules -----------
 !------------------------------
 !
+!
+! Tradedoubler
+! The GUID Cookie holds an identifier to support server side storage of the user event history
+$cookie=TradeDoublerGUID
+$cookie=TRADEDOUBLER
 !
 ! Eloqua - collects information about how visitors use a website, for instance which pages visitors go to most often, and which search terms visitors used to get to our websites
 $cookie=ELOQUA
@@ -21444,6 +21484,12 @@ $app=com.miui.analytics
 ||int.vlancaa.fun^
 ||tok.vaicore.xyz^
 !
+||gd-stats.jpush.cn^
+||analytics.enjoymobiserver.com^
+||api.reproio.com^
+||log*.interactive-circle.jp^
+||b94.yahoo.co.jp^
+||api.smbeat.jp^
 ||api.simeji.me/*/sessionLog
 ||hibiki-track.logica.bz^
 ||log.mmstat.com^
@@ -22014,6 +22060,16 @@ $app=com.miui.analytics
 ! https://github.com/AdguardTeam/CoreLibs/issues/1306
 ||rover.ebay.$image,object,script,badfilter
 !
+! Vodafone app - error when viewing detail
+@@||dpm.demdex.net^$app=com.appseleration.android.selfcare
+! ! https://github.com/AdguardTeam/Scriptlets/issues/160
+! https://github.com/AdguardTeam/AdguardFilters/issues/97512
+!+ PLATFORM(ios, ext_safari)
+@@||googletagmanager.com/gtag/js?id=$domain=alternative.me|justjaredjr.com|r-graph-gallery.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/97629
+@@||api.rfksrv.com/search-rec/$domain=finishline.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/98557
+@@||googletagmanager.com/gtm.js$domain=iltalehti.fi
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98724
 @@||googletagmanager.com/gtag/js$domain=xl-bygg.no
 ! https://github.com/AdguardTeam/AdGuardSDNSFilter/issues/797
@@ -22982,9 +23038,6 @@ ciokorea.com,adpiamall.com,live.joins.com,naver.com,jbe.go.kr#%#//scriptlet('set
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56992
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||google-analytics.com/analytics.js$domain=freecoursesonline.me
-! https://github.com/AdguardTeam/AdguardFilters/issues/56928
-!+ PLATFORM(ios, ext_android_cb, ext_safari)
-@@||q4mn.adj.st/track/*&adjust_notrack=1
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56955
 ||google-analytics.com/analytics.js$script,redirect=google-analytics,domain=4kdownload.com
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
