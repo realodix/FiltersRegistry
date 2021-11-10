@@ -1,7 +1,7 @@
 !
-! OriginalVersion: 202111100909
+! OriginalVersion: 202111101450
 ! Title: ABPVN List
-! Last modified: 10 Nov 2021 09:09 UTC+7
+! Last modified: 10 Nov 2021 14:50 UTC+7
 ! Expires: 1 days (update frequency)
 !
 ! ABPVN List filter
@@ -16,7 +16,7 @@
 ! Report new issue on github: https://github.com/abpvn/abpvn/issues/new
 ! ---------- Generic Blocking Rules ----------
 $popup,third-party,domain=megaurl.in|hamtruyen.com|phim1080z.com|phim1080zz.com|bilutivi.net|animehay.tv|hhkungfu.tv|fancoiphim.net
-*$csp=script-src 'self' 'unsafe-inline',domain=nousdecor.com|fidlarmusic.com|kingsleynyc.com|thegoneapp.com|staaker.com|uebnews.online|nro.vn|linkcc.pro|khophimhd.net|appvn.com|kiemlua.com
+*$csp=script-src 'self' 'unsafe-inline',domain=nousdecor.com|fidlarmusic.com|kingsleynyc.com|thegoneapp.com|staaker.com|uebnews.online|nro.vn|khophimhd.net|appvn.com|kiemlua.com
 *$csp=script-src 'self',domain=downloadsachmienphi.com
 .com/cpc/$script
 .com/qc/
@@ -157,7 +157,6 @@ utm_source=propellerads$popup
 ||centralland.com.vn^*.gif
 ||chiasenhac.vn/banner/
 ||chodansinh.net^*.gif
-||chogannha.com/bannersan.gif
 ||chonkeo.com^*.gif$image
 ||chophanthiet.us/chau/$image
 ||chophanthiet.us/images/banner
@@ -198,6 +197,7 @@ utm_source=propellerads$popup
 ||explus.vn/gooima.js
 ||f.thuongtruong.com.vn/VIDEO/
 ||fabet88.net^$popup,third-party
+||fancoiphim.net^*.gif
 ||fb88sports.com/Creative/banner$image
 ||ff.imacdn.com^$image,media
 ||file1.dangcongsan.vn^*.gif$image
@@ -371,7 +371,6 @@ utm_source=propellerads$popup
 ||phim7z.tv/ads/popup.html$popup
 ||phimchat.tv/public/images/banner/$image
 ||phimchill.tv/media/*.gif
-||phimchonz.com/ads/
 ||phimdinhcao.com^*.xml$~third-party
 ||phimhdonlinez.com^*.gif
 ||phimmedia.me^*.xml$~third-party
@@ -1005,13 +1004,14 @@ fancoiphim.net###encompass > div[style^="float:left;"]
 fancoiphim.net###lam_khong_cong_het_1_ngay_link
 fancoiphim.net##div[style="float: left;width: 100%;text-align: center;margin-top: 30px;"]
 fancoiphim.net##div[style^="float:left;width:248px;"]
+fancoiphim.net##pc_top_xuyen_trang_1
 fancoiphim.net,salaphim.com##.clickadunopop
 files.pw##.adscenter
 files.pw##.adscenter2
 files.pw##.adscenter3
 fimnhe.net##.a--d-wrapper
 fimnhe.net,vaophim.org,phimgii.net##.mobile-catfix
-font.vn,zingnews.vn,toquoc.vn,baoxaydung.com.vn,tienphong.vn,antt.nguoiduatin.vn,linkcc.pro,kinhtenongthon.vn,taichinhdoanhnghiep.net.vn,123nhadat.vn,qthang.net##.banner
+font.vn,zingnews.vn,toquoc.vn,baoxaydung.com.vn,tienphong.vn,antt.nguoiduatin.vn,kinhtenongthon.vn,taichinhdoanhnghiep.net.vn,123nhadat.vn,qthang.net##.banner
 fphim.com###banner_macau
 fptshop.com.vn##.banner-cs
 freetuts.net###adsoptimal_160_600_fixed
@@ -1130,7 +1130,7 @@ kiemhieptruyen.com##a[href^="https://shorten.asia"]
 kiemhieptruyen.com#?#p.hoi:-abp-contains(DEAL)
 kiemhieptruyen.com#?#p:-abp-has(a[href^="http://bit.ly"])
 kienthuc.net.vn##.sponsor-zone
-kienthucykhoa.edu.vn,raovathochiminh.net,mmo4me.com,chogannha.com###widget-12
+kienthucykhoa.edu.vn,raovathochiminh.net,mmo4me.com###widget-12
 kienviet.net##.banner-sidebar
 kqxs.vn##.bggradient-mien
 lacaigi.com##.anhbn-qc
@@ -1144,7 +1144,7 @@ lichvannien365.com##div[style="width: 100%; min-height: 240px; text-align: cente
 lichvannien365.com##div[style="width: 100%; min-height: 90px; text-align: center;"]
 lichvannien365.com##div[style="width: 100%;text-align: center;min-height: 280px;"]
 link1s.com###baolink1s
-link1s.com##.banner-inner
+link1s.com,linkcc.pro##.banner-inner
 linkneverdie.net##.d-none.d-md-block.d-lg-block
 linkneverdie.net##.info-footer:nth-child(4)
 linksvip.net##.quangcao-top
@@ -1413,6 +1413,7 @@ truyensieuhay.com##.main-content >a[style="margin-top:10px;"]
 truyensieuhay.com##.video_wrapper
 truyentranh.net###balloon-ads
 truyentranh86.com##.embed-responsive
+truyentranhaudio.com,truyentranhaudio.online##div.mrb10
 truyentranhlh.net##.preload1
 truyentranhlh.net##.preload2
 truyentranhtam.com,mangaxy.com,truyentranh86.com##.tt8quangcao
@@ -1631,6 +1632,7 @@ zone.tv,fullphimz.net##.uniad-zonetype-preload-overlay
 @@||hhkungfu.tv$generichide
 @@||itudong.com$generichide
 @@||khosinhvien.com$generichide
+@@||linkcc.pro$generichide
 @@||megaurl.in$generichide
 @@||mrcong.com$generichide
 @@||romgoc.net$generichide
@@ -1639,8 +1641,8 @@ zone.tv,fullphimz.net##.uniad-zonetype-preload-overlay
 @@||traderviet.com$generichide
 @@||vtvgiaitri.vn$generichide
 duytan.edu.vn#@##adbox
-linkviet.xyz,linkvietvip.com,megalink.vip,linkcc.pro,link1s.com,getlink.tienichmaytinh.net#@##ad-banner
-linkviet.xyz,linkvietvip.com,megalink.vip,linkcc.pro,link1s.com,tailieuxanh.com,getlink.tienichmaytinh.net#@#.ad-banner
+linkviet.xyz,linkvietvip.com,megalink.vip,ink1s.com,getlink.tienichmaytinh.net#@##ad-banner
+linkviet.xyz,linkvietvip.com,megalink.vip,link1s.com,tailieuxanh.com,getlink.tienichmaytinh.net#@#.ad-banner
 pennbookcenter.com,link1s.com,rodjulian.com#@##banner_ad
 pops.vn#@##adsContainer
 pops.vn#@#.ad-placement
