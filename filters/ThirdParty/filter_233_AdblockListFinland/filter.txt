@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 06November2021v1
+! OriginalVersion: 12November2021v6
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -239,6 +239,8 @@ como.fi,episodi.fi,fum.fi,inferno.fi,rumba.fi,soundi.fi,tilt.fi#?#div.border-bot
 dailyfinland.fi##.wrepper.mx-auto > .row[style="margin-bottom:20px"]
 dawn.fi##[style="margin:-15px -15px 15px -15px;text-align:center; min-height: 250px;"]
 dawn.fi##[style="margin:-15px -15px 15px -15px;text-align:center; min-height: 300px;"]
+dawn.fi#?#.ui-body-inherit.ui-li-static:-abp-contains(loadAd)
+dawn.fi#?#center > b:-abp-contains(Mainos:)
 dawn.fi#?#div[style="text-align: center; font-size: 0.7em;margin-bottom:15px"]:-abp-contains(Mainos)
 deitti.net##.ad-article
 demokraatti.fi##div[class^=AdStyles__Wrapper]
@@ -247,6 +249,7 @@ download.fi##.ni_holder
 duunitori.fi##.js-fragment-web-lazy_carousel
 edukas.fi##.compareGoogleCell
 elmotv.com##[class^=mstila]
+elmotv.com##[href^="https://promo.leovegas.com/"]
 elmotv.com##a[href^="https://ads.expekt.se/"]
 elmotv.com##a[href^="https://www.expekt.com/"]
 elmotv.com##div[class="artikkeli_body"] > p:first-of-type > a[href$=".gif"]
@@ -352,6 +355,7 @@ hs.fi##div[class*=ad-container]
 hs.fi#?#.embedded:-abp-contains(Markkinapaikka)
 huoltovalikko.com##A[href="http://www.satshop.fi"]
 huonoaiti.fi#?#.col.article-card.item:-abp-contains(Kaupallinen yhteistyö, yhteistyössä)
+huuto.net###hise-items-container
 huuto.net#?#.grid-element-container:-abp-has(.hise-link[href^="https://"])
 hymy.fi##.grid--dfp-slots
 hymy.fi##[href="http://www.finswingers.com/"]
@@ -570,7 +574,10 @@ mvlehti.net##.wp-block-image:-abp-has(a[href*=kasino])
 mvlehti.net##[href="https://www.cbdtukku.fi/"]
 mvlehti.net##[href="https://www.halvinlaina.fi/"]
 mvlehti.net##[href^="https://www.kasinot.org/"]
+mvlehti.net##a[href*="tarjousproffa.com"]
+mvlehti.net##a[href="https://kasinot.org"]
 mvlehti.net##a[href="https://www.kippis.net/"]
+mvlehti.net#?#.aligncenter:has(a[href*="tarjousproffa.com"])
 mvlehti.net#?#.entry-content > h3:-abp-contains(kasino)
 mvlehti.net#?#[class|=featured-post]:-abp-contains(/rahapeli|kasino/i):-abp-has(a[href*="/202"])
 mvlehti.net#?#div[class="ad content-center"]:not(:-abp-has(> a[href^="https://vk.com/"])):not(:-abp-has(> a[href^="https://uvmedia.org/"]))
@@ -733,6 +740,8 @@ ticketmaster.fi#?#div:-abp-has(> [id|=ad-slot])
 tiede.fi#?#.views-row:-abp-has(.is-commercial)
 tiedonantaja.fi##[class*="block-boxes-ad-300x250"]
 tilt.fi##.lazyloading
+tilt.fi#?#div[class="w-full bg-white border-gray-200 border-b py-2 px-4"]:-abp-has([id^="tilt_smart_boksi"])
+tilt.fi#?#div[style="min-height:552px;"]:-abp-has([id^="tilt_smart_paraati"])
 tivi.fi##aside > div[class] > a[href^="https://www.tivi.fi/kumppanisisallot/"]
 tivi.fi##section > div[class] > a[href^="https://www.tivi.fi/kumppanisisallot/"]
 tivi.fi#?#aside:-abp-has(> div > span:-abp-contains(KAUPALLINEN YHTEISTYÖ))
@@ -1045,3 +1054,10 @@ iltalehti.fi#@#.ad-placement
 @@||almamedia.fi/almacmp/$script
 ! https://github.com/easylist/easylist/pull/9489
 @@||atlas.playpilot.com/api/v1/ads/browse/$xmlhttprequest,domain=playpilot.com
+! https://github.com/easylist/easylist/pull/9560
+@@||google-analytics.com/analytics.js$script,domain=hobbyhall.fi
+@@||google-analytics.com/gtm/js$script,domain=hobbyhall.fi
+@@||googletagmanager.com/gtm.js$script,domain=hobbyhall.fi
+@@||cloudfront.net/frosmo.easy.js$script,domain=hobbyhall.fi
+@@||frosmo.com/messageApi$xmlhttprequest,domain=hobbyhall.fi
+@@||frosmo.com/recoApi/$xmlhttprequest,domain=hobbyhall.fi
