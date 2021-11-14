@@ -1,6 +1,6 @@
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 14November2021v3-Beta
+! OriginalVersion: 14November2021v6-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -862,7 +862,6 @@ $removeparam=deep_link_sub1
 $removeparam=ClickThruEmail
 $removeparam=ClickThruCustomerNumber
 ! https://scripts.affiliatefuture.com/AFClick.asp?affiliateID=29219&merchantID=2543&programmeID=6678&mediaID=0&tracking=&url=https://example.com/
-^tracker=AFFILIATEFUTURE^$removeparam=tracker
 ^tracker=affiliatefuture^$removeparam=tracker
 $removeparam=affc
 ! https://www.kichink.com/home/issafari?uri=https://example.com
@@ -1916,6 +1915,11 @@ $removeparam=width,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.
 $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno.nu
 !#endif
 ! ——— Allowlist ——— !
+! https://github.com/DandelionSprout/adfilt/commit/6dd010c70438a84cae7cf6b683d0d99dc56794ad
 @@mailinglist$removeparam=/^utm_/
+! Block users from uploading images - https://github.com/DandelionSprout/adfilt/pull/325
 @@||graph.baidu.com/upload?$removeparam=from
+! Prevent rules from applying the internet Archive, and thus breaking it
 @@||web.archive.org/*_/http$removeparam
+! Block users from saving files in `BaiduNetdisk` - https://github.com/DandelionSprout/adfilt/pull/343
+@@||pan.baidu.com/share/transfer?$removeparam=from
