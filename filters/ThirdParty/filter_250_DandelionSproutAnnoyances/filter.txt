@@ -428,7 +428,7 @@ yelp.*##.menu-bar-pitch_open-in-app
 linkedin.com#$?#html,body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 12November2021v1-Beta
+! OriginalVersion: 14November2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -980,7 +980,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||captcharesolving-universe.com^$all
 ||captcharesolver.com^$all
 ||roaddrinkfun.live^$all
-||cpmstatsart.com^$all
 ||instantfwding.com^$all
 ||fwdservice.com^$all
 ||gamesex.fun^$all
@@ -1821,7 +1820,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||yotube.com^$all
 ||mybetterdl.com^$all
 ||p185689.mybetterdl.com^$all
-||besty-deals.com^$all
 ||r-tb.com^$all
 ||cdn.hoood.info^$all
 ||data-px.services^$all
@@ -1838,7 +1836,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||welcomejohncena.pro^$all
 ||security-scanner.xyz^$all
 ||pushmeup.art^$all
-||totalav.com^$all
 ||c2egp.xyz^$all
 ||ese40.xyz^$all
 ||e07wm.xyz^$all
@@ -1849,10 +1846,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 &url_bnm_redirect=$all
 /mcafeedirect.jsp$all,domain=~mcafee.com
 /beep.mp3^$domain=xyz|club|pro
-||beta-one.net^$all
 ||kokotrokot.com^$all
-||besty-deals.com^$all
-||totalav.com^$all
 ?next_url=$document,popup
 ?uclickhash=$document,popup
 ! https://www.upwork.com/freelance-jobs/apply/Integarte-push-notification-for-chrome_~013c73ed9282225184/
@@ -15539,7 +15533,7 @@ fandom.com#$?#:root { --theme-body-background-image: none !important }
 ! Hopefully enables the use of all the above anti-image rules in uBlock Origin and AdGuard
 @@||wikia.nocookie.net^*/images/$image,badfilter
 ! Title: 🚤 Anti-'Snow marketing' List
-! OriginalVersion: 22September2021v1-Beta
+! OriginalVersion: 14November2021v1-Beta
 ! Expires: 3 days
 ! Description: With Christmas being full of arcane, complicated, and very, _very_ rigid traditions in large parts of the world, the snow that is everywhere on many websites during that time isn't helping on confused peoples' mood either. So here's a list to remove the snow from those websites.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -15592,7 +15586,6 @@ fandom.com#$?#:root { --theme-body-background-image: none !important }
 /wp-snow-effect^
 -christmasification-
 /christmas-snow.js
-##.SnowFlakesBg:not(html, body)
 ##foxfield-xmas:not(html, body)
 ! Title: 🌭 Falukorv List
 ! OriginalVersion: 04November2021v1-Beta
@@ -17663,6 +17656,13 @@ $removeparam=fromRankId
 ||aliexpress.com^$removeparam=pdp_ext_f
 ||aliexpress.com^$removeparam=utparam
 ||aliexpress.com^$removeparam=__tppBottom
+! https://s.click.aliexpress.com/e/_pQN242z?dp=p12840043004615122514&cv=21876
+$removeparam=aff_fcid
+$removeparam=aff_fsk
+$removeparam=aff_platform
+$removeparam=aff_trace_key
+||aliexpress.com^$removeparam=dp
+||aliexpress.com^$removeparam=cv
 !!! ——— Baidu ———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
 ||baidu.com^$removeparam=/^rsv/
