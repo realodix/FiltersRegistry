@@ -89,7 +89,7 @@ dengekionline.com##.gNews_advertisement
 youtube.com##ytd-statement-banner-renderer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98919
 qanda.ai##img + div[class^="Picture__Cover-"]
-! adguard.com - commot rule for all annoyances on the site
+! adguard.com - common rule for all annoyances on the site
 adguard.com##.annoyance
 ! native-ad PRs
 j-town.net##.advertisement-list
@@ -2588,6 +2588,12 @@ otzovik.com#%#//scriptlet("abort-on-property-read", "Object.prototype.RtbBlockRe
 ! sdamgia.ru
 sdamgia.ru#%#//scriptlet("abort-on-property-read", "Object.prototype.RenderMarks")
 ! liveinternet.ru
+liveinternet.ru#?#.clear ~ div[class]:has(> div.float100 > div[align="center"] > div[id])
+liveinternet.ru#?#body > div[class]:has(> div.myblockbottom__close)
+liveinternet.ru#?#.leftcolumn > div[class]:has(> form[action="https://www.technohelp.ru/"])
+liveinternet.ru#?#script:not([src]) + div[id]:has(> div[style*="width: 100%;"])
+liveinternet.ru##.leftcolumn > script[type] + div[style="clear:both;"]
+liveinternet.ru##.rightcolumn > div.news
 liveinternet.ru#%#//scriptlet("abort-on-property-read", "Object.prototype.customDomain")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42969
 drive2.ru#%#//scriptlet("abort-on-property-read", "Object.prototype.renderBanner")
@@ -24607,6 +24613,7 @@ abendzeitung-muenchen.de###webpush-app
 /firebase.js$domain=novayagazeta.ru|comments.ua|kinosimka.net|ilan365.net|cnbcindonesia.com|haberzamani.net|oxy.cloud|allbasketball.org|auslogics.com|kartalyuvasi.com.tr|cnnindonesia.com|fbc.ua
 /firebase-messaging.js$domain=ukranews.com|comments.ua|meduza.io|coub.com|porno90.me|cnnamador.com|giallozafferano.it|wcostream.com|fptplay.vn|jooble.org|mobile01.com|myinstants.com|pdalife.ru|rg.ru|m.iguides.ru|donanimhaber.com|profile.ru|womanhit.ru|news.noteru.com|narodna-pravda.ua|newstm.in|sabah.com.tr|dreamstime.com|popbee.com|avtovzglyad.ru|allbasketball.org|tw.news.yahoo.com|takvim.com.tr|jn.pt|ria.ru|pars.host|calculator-online.net|operanewsapp.com|ahaber.com.tr|tamindir.com|concursosnobrasil.com.br|kompas.com|news.ebc.net.tw|recyclingtoday.com|homedecoratione.com|khersondaily.com|mirtesen.ru|womanhit.ru|belsat.eu|gearbest.com|op.gg|novayagazeta.ru|pocket-lint.com|turunculevye.com
 !
+riafan.ru##.pushSubscribe
 ||ytro.news/static/js/push.js
 ||maximizly.*/sources/webpush/production/js/maximizly-push.js
 ||cosplay-porn.me/swps.js
@@ -26978,6 +26985,8 @@ quinhillyer.com,johnbiver.com,jasonmattera.com,ipatriot.com,hooligancharters.com
 ##.widget_blog_subscription
 ~news.un.org,~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+swarajyamag.com#?#div[style^="position:"] > div[class] > div[class^="_"]:has(> form[name] > input[name="email"])
+liveinternet.ru#?##Bl-Sidebar > div[id^="BlockVar-"]:has(> h3.sorted > strong:contains(Подписка по))
 tausendkind.de##a[href="/service/newsletter"]
 ajc.com##.radt-banner-hp
 camelactive.com#$##sendinblueModal { display: none!important; }
