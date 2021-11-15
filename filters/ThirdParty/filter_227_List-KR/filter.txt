@@ -4,7 +4,7 @@
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ! Expires: 1 day
 ! DO NOT EDIT VERSION NUMBER
-! OriginalVersion: 20211114
+! OriginalVersion: 20211115
 ! ONLY DEVELOPER CAN EDIT THAT
 ! Exceptions for broken services
 @@||ad.smartmediarep.com/NetInsight/$domain=allclip.sbs.co.kr|allvod.sbs.co.kr|news.sbs.co.kr|programs.sbs.co.kr
@@ -17,6 +17,8 @@
 @@/script/bannerpop.js$domain=mindpost.or.kr
 @@||t1.daumcdn.net/adfit/static/kp.js$domain=pindirectshop.com
 ! General element hiding rules
+##a[href*="//ad-api.enuri.info/"]
+##img[src*="//ad-api.enuri.info/"]
 ##a[href*="//010bts.com"]
 ##a[href*="//747-one.com"]
 ##a[href*="//ara-0u.com"]
@@ -646,6 +648,7 @@ z9-we.com#@#a[href*="//z9-we.com"]
 ||ad*.*/event.ems/$domain=~interpark.com
 ||ad*.netshelter.net/adj/
 ||ad-api.band.us^
+||ad-api.enuri.info^
 ||ad-cdn.technoratimedia.com^
 ||ad-first.co.kr^
 ||ad-js.chip.de/js/chip/*.min.js^$domain=chip.de
@@ -1016,6 +1019,7 @@ z9-we.com#@#a[href*="//z9-we.com"]
 ||bizon.kr/bizon_ad/
 ||blockadsnot.com/*.aspx^
 ||blockadsnot.com/vast-client.min.js^
+||blogfiles.pstatic.net/*/kubrick76_*_GIF/*_dokkinun.gif
 ||bnhtml.com/invoke.js^
 ||bntnews.hankyung.com/bntdata/images/ad/$domain=bntnews.hankyung.com
 ||bodnara.co.kr/09shop/article_right_box.php^$domain=bodnara.co.kr
@@ -2791,6 +2795,7 @@ blog.naver.com###ssp-adcontent
 blog.naver.com###ssp-adpost
 blog.naver.com##span[id^="adPostInjectArea_"]
 blog.naver.com##td.adpost_con
+blog.naverblogwidget.com##a[href*="//852lala.xe.to/"]
 bloomberg.com##div.bb-ads__ad
 bloomberg.com##div.in-article-ad-dummy
 bloomberg.com##div.leaderboard-ad-dummy
@@ -3433,7 +3438,6 @@ ent.joseilbo.com##li.rank_banner
 entermedia.co.kr##div#listingBannerContainer
 entermedia.co.kr##div.ad-template
 entertain.v.daum.net##div.shopad_entertain
-enuri.com##div.ad_powerlink
 enuri.com##div.ad_powershopping
 eomisae.co.kr##main#main div.col-md-9 center>div[style="border:1px solid #dedede; text-align:center; padding-top:15px; padding-bottom:15px; background-color: white;"]
 eomisae.co.kr##main#main div.col-md-9 center>div[style="border:1px solid #dedede; text-align:center; padding-top:15px; padding-bottom:15px; background: #fff;"]
@@ -7359,7 +7363,7 @@ ytn.co.kr##div.ad
 ytn.co.kr##div.ad_box
 ytn.co.kr##div.hns_mask_div
 ytn.co.kr##iframe[src^="/inc_banner/AdServerChange.php"]
-ytn.co.kr##.ad_powerlink
+enuri.com,ytn.co.kr##.ad_powerlink
 zangsisi.net##body>center
 zangsisi.net##div#fixed-top
 zangsisi.net##div.fixed-top>center
@@ -7400,6 +7404,13 @@ zum.com##div#adx_zum_main_leftwing
 zum.com##div#adx_zum_main_rightwing
 zum.com##div#wrap_ad_main
 zum.com##div#wrap_ad_minisite
+enuri.com###prodPowerClick
+enuri.com###midBanner
+enuri.com##div[class$="bnr__band"]
+enuri.com##ul#evt_banner
+enuri.com##.bnrbox.bnrbox--knowfun
+enuri.com##div.col__inner > .enurievt
+enuri.com##.bnrbox > ul.bnr__list
 ! Extended CSS rules
 namu.wiki#?#aside > div[id^="tchika"].c:has(> div[id^="tchika"]:not(.c))
 namu.wiki#?#div.app > div > > div > div > div > iframe[src*="//arca.live/static/ad/call_ad.html?"]:upward(3)
