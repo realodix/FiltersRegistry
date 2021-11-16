@@ -74,6 +74,7 @@
 !
 ! Содержит доменные имена, использующиеся рекламными сетями.
 !
+||gcebhl.com^$third-party
 ||zkbkat.com^$third-party
 ||uqystk.com^$third-party
 ||j1oxqq05ry.ru^$third-party
@@ -5183,6 +5184,12 @@ electric-house.ru#@#.adsbygoogle
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/100125
+libertycity.ru#%#//scriptlet('set-constant', 'adBlockEnabled', 'false')
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+libertycity.ru#@#div[id^="adfox_"]
+libertycity.ru#@#.adsbygoogle
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96703
 ||shadowcore.ru/templates/Cirata/js/bundle.umd.js
 shadowcore.ru#%#//scriptlet("abort-on-property-read", "justDetectAdblock")
@@ -7369,6 +7376,7 @@ okko.sport#?#div[class]:has(> div[class] > div[class]:contains(/^коэффиц�
 okko.sport#?#button:has(> span:contains(/^прогнозы$/))
 okko.sport##div[class]:has(> iframe[src^="https://clients-static.okko.tv/web/banners/winline/"])
 !
+html5book.ru#?#.primary > div.widget:has(> div.textwidget > script[src^="//pagead2.googlesyndication.com/"])
 ua-football.com#?#.topBook:upward(1)
 intex-press.by#?#.cards-main > div.card:has(> div.inner > div.textwidget > div[id^="adfox_"])
 radiokot.ru#?##pagecontent > table:has(> tbody > tr > td > b:contains(/^Реклама$/))
@@ -11861,6 +11869,9 @@ crazymailing.com,lotzon.pro,novosti-n.org,prokazan.ru,20minut.ua,alnews.com.ua,g
 !
 !
 !
+libertycity.ru##.file_info_ad
+rueconomics.ru##.block-long-img
+cnews.ru##.google_bottom_line
 gorodche.ru##div[id*="first"][id*="col"]
 gorodche.ru##div[id*="rastyagka"]
 app2top.ru##.sidebar > section.stream-block
@@ -23264,6 +23275,8 @@ ut-1.alexbranding.com,unitheme.net#@#[class^="adv-"]
 @@||brontp-beta.yandex.ru^$extension
 @@||brontp-alpha.yandex.ru^$extension
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/100125
+libertycity.ru#@#iframe[width="240"][height="400"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98208
 @@||an.yandex.ru/system/context.js$domain=penzainform.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96258#issuecomment-948795380
