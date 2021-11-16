@@ -15902,7 +15902,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 ! Title: ➗ Actually Legitimate URL Shortener Tool
 ! OriginalVersion: 15November2021v1-Beta
 ! Expires: 2 days
-! Description: In a world dominated by bit.ly, ad.fly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
+! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
 ! Homepage for the repository: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! Opt-in allowlist for affiliate support tags: https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener-AffiliateTagAllowlist.txt
@@ -17662,6 +17662,11 @@ $removeparam=referer,domain=bodykind.com
 ||viglink.com^$removeparam=vgref
 ! https://analytics.bluekai.com/site/16231?phint=event=click&phint=campaign=BRAND-TAB&phint=platform=search&done=https://example.com/
 ||analytics.bluekai.com^$removeparam=phint
+! https://www.hao123.com/?tn=93288632_hao_pg
+! It is the rebate parameter for the page - https://github.com/DandelionSprout/adfilt/pull/351
+||hao123.com^$removeparam=tn
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1646225
+||wsj.com^$removeparam=reflink
 ! ——— Rules for heavily covered international sites ——— !
 !! ——— PR-China ———
 !! Special thanks to https://github.com/shenzhiming88 for helping with this section.
@@ -17751,6 +17756,8 @@ $removeparam=aff_trace_key
 ||baidu.com^$removeparam=pageFrom
 ||baidu.com^$removeparam=sids
 ||baidu.com^$removeparam=srcp
+! https://baike.baidu.com/item/test/16103773?ivk_sa=1024630g (15/11/2021)
+||baidu.com^$removeparam=ivk_sa
 !!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
 ||bilibili.com^$removeparam=/^current/
