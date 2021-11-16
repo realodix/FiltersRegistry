@@ -89,8 +89,8 @@ dengekionline.com##.gNews_advertisement
 youtube.com##ytd-statement-banner-renderer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98919
 qanda.ai##img + div[class^="Picture__Cover-"]
-! adguard.com - common rule for all annoyances on the site
-adguard.com##.annoyance
+! adguard-vpn.com, adguard.com - common rule for all annoyances on the site
+adguard-vpn.com,adguard.com##.annoyance
 ! native-ad PRs
 j-town.net##.advertisement-list
 j-town.net##aside.section_content > div.section_title > h2.pr-list
@@ -19323,6 +19323,8 @@ temp-mail.org#%#//scriptlet('remove-class', 'smartbanner-show', 'html')
 ozon.ru#$?#.mobile > div.modal-mask:has(> div.modal-wrapper > div.modal-container > div.modal-content h2:contains(OZON ещё лучше в приложении)) { display: none!important; }
 ozon.ru#$#body { overflow: visible!important; }
 ozon.ru#$#html { overflow: visible!important; }
+newzit.com#$#div[class*="hasSmartBanner_"] > div[class^="banner_"] { display: none !important; }
+newzit.com#$#div[class*="hasSmartBanner_"] { padding-top: 0 !important; }
 !#endif
 !
 ! Unhide for iOS and Android CB if top padding cannot be removed
