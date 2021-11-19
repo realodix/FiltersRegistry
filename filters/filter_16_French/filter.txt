@@ -611,6 +611,8 @@ jeuxvideo.com#?#.list-actu-home > li[-ext-has='span.officiel']
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/99580
+zone-telechargement.work#%#//scriptlet('prevent-setInterval', 'this[_0x')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95087
 dl-protect.info#%#//scriptlet("prevent-setInterval", "var _0x")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95088
@@ -717,6 +719,9 @@ laprovence.com$$script[wildcard="*((false?*https:*:document.location.protocol)+*
 /^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com)).*$/$third-party,script,domain=scan-fr.cc
 !
 !
+zone-telechargement.work##a[href^="https://dl-protect.info/url-premium?"]
+||dl-protect.info/assets/images/dl1.png
+||zone-telechargement.work/*/images/dl/telechargement-direct.png
 liberation.fr##div[class^="StickyAd-"]
 oxtorrent.*###vpnvpn
 ||widget.publishub.optimhub.com/assets/widget/widget_mntzm.js$domain=closermag.fr
