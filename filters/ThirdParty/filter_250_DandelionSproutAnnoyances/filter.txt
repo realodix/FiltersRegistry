@@ -16063,7 +16063,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 21November2021v3-Beta
+! OriginalVersion: 21November2021v5-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -16087,9 +16087,10 @@ $removeparam=action_ref_map
 ! https://www.ikea.com/kr/en/stores/restaurant/?itm_campaign=ikea_food&itm_element=essential_banner&itm_content=ikea_food (17/02/2021)
 ! https://www.infoq.com/containers/?itm_source=infoq&itm_medium=header_graybar&itm_campaign=topic_clk (28/02/2021)
 ! https://app.sheetgo.com/workflows/1606149317012600L5SS/connections?stm_source=sheetgo-webapp-workflow-invite&stm_medium=email&stm_campaign=on-demand-invitation (28/02/2021)
+! https://www.dx.com/p/sliding-camera-protective-cover-for-smartphones-laptops-tablets-2729311.html?Utm_rid=91262049&Utm_source=affiliatewindow (21/11/2021)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488307
 ! Exclude sendgb.com - https://github.com/AdguardTeam/AdguardFilters/issues/100285
-$removeparam=/^utm_/,domain=~redir.tradedoubler.com|~sendgb.com
+$removeparam=/^utm_/i,domain=~redir.tradedoubler.com|~sendgb.com
 $removeparam=/^itm_/,domain=~redir.tradedoubler.com
 $removeparam=/^stm_/,domain=~redir.tradedoubler.com
 ! https://www.ixigua.com/6888869154099629319?logTag=Y8JlCALntSDuDesMiPno8 (31/10/2020)
@@ -16364,8 +16365,9 @@ $removeparam=hsCtaTracking
 $removeparam=tblci
 $removeparam=tcid
 $removeparam=/^dv_adwords_/
-$~xmlhttprequest,removeparam=/^adid=/i,domain=~finn.no
 $removeparam=wdorigin
+! https://tenshoku.nikkei.co.jp/lp/15002/?n_cid=TPRN0002&waad=Ujim9yQ8&adid=NK_L2_T_shortlink_Sun_diagnosis&utm_source=NKdenshiban&utm_medium=content-text&utm_content=text&utm_campaign=shortlink_Sun_diagnosis
+$~xmlhttprequest,removeparam=/^adid=/i,domain=~finn.no
 ! https://go.nordvpn.net/aff_c?offer_id=129&aff_id=614&aff_sub=06VOOBfmFXpFAcqqIHYIr28&aff_sub2=blackfriday.com
 $removeparam=/^AFF_ID/i,domain=~nordvpn.net|~getproton.me
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-773756
@@ -16810,8 +16812,6 @@ $removeparam=cm_ainfo
 $removeparam=/^Offers\.com/
 ! https://www.hunterboots.com/us/en_us/sale-womens-sale-footwear#esp_sort=price&esp_order=asc?CSID=AFF||||&siteID=qpF0HYnRugA-S5yfZifcN54MdPsE4Cewzw
 $removeparam=CSID
-! https://www.dx.com/p/sliding-camera-protective-cover-for-smartphones-laptops-tablets-2729311.html?Utm_rid=91262049&Utm_source=affiliatewindow
-$removeparam=/^Utm_/
 ! https://www.kelkoo.com/?kpartnerid=1938479021
 $removeparam=kpartnerid
 ! https://www.lifeextension.com/lab-testing/itemlc167015/apolipoprotein-b-blood-test?source=connexity&cnxclid=16357131459502835009610090302008005
@@ -16858,6 +16858,7 @@ $removeparam=tmclickref
 ! https://www.johnlewis.com/logitech-slim-combo-folio-backlit-keyboard-for-ipad-pro-12-9-inch-3rd-and-4th-gen-graphite/p5175708?sku=238774173&tmcampid=99&s_afcid=af_1451575
 $removeparam=s_afcid
 ! https://www.blizzard.com/en-us/?n_cid=DSNKD003
+! https://style.nikkei.com/article/DGXZQOLM158FE0V11C21A0000000?n_cid=TPRN0002
 $removeparam=n_cid
 ! https://www.tedbaker.com/uk/Womens/Outlet/Accessories/Shoes/c/category_womens_outlet_footwear?int_cmpid=ww_lp_hero_sale-shoes_cta3
 $removeparam=int_cmpid
@@ -16926,8 +16927,13 @@ $removeparam=tg_ref
 ! https://www.douban.com/group/topic/233734111/?dt_platform=other&dt_dapp=1
 $removeparam=dt_dapp
 $removeparam=dt_platform
+! https://gitlab.com/anti-tracking/ClearURLs/rules/-/issues/200
+! https://xtech.nikkei.com/atcl/nxt/column/18/01778/00009/?i_cid=nbpnxt_ranking
+! https://gooday.nikkei.co.jp/atcl/column/21/101900007/102000001/?waad=KOqJ8ACd
+$removeparam=i_cid
+$removeparam=waad
 ! ——— General blocking rules ——— !
-!! Scripts that solely exist to make URLs longer
+!! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
 ! https://github.com/the1812/Bilibili-Evolved/issues/2247
 /auto-append-spmid.js
@@ -18054,7 +18060,7 @@ $removeparam=referer,domain=bodykind.com
 ||target.com^$removeparam=lnk
 ||target.com^$removeparam=marketing_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1666311
-$removeparam=s,domain=twitter.com|spreadprivacy.com
+$removeparam=s,domain=spreadprivacy.com
 ! https://twitter.com/chrissteinplays/status/1461003062936547331?t=CXBXxSiUKI8wPAkoGMH7zg
 $removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|npr.org|twitter.com
 ! https://market.yandex.ru/promo/hasbro_special?clid=602&cpa-perf=1#c
@@ -18093,7 +18099,7 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 !#endif
 ! ——— Allowlist ——— !
 ! https://github.com/DandelionSprout/adfilt/commit/6dd010c70438a84cae7cf6b683d0d99dc56794ad
-@@mailinglist$removeparam=/^utm_/
+@@mailinglist$removeparam=/^utm_/i
 ! Block users from uploading images - https://github.com/DandelionSprout/adfilt/pull/325
 @@||graph.baidu.com/upload?$removeparam=from
 ! Prevent rules from applying the internet Archive, and thus breaking it
