@@ -430,7 +430,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 20November2021v1-Beta
+! OriginalVersion: 20November2021v2-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1952,6 +1952,11 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||discord-glft.$all
 ||discordnitrogift$all
 ||gift-nitro.$all
+! https://www.virustotal.com/gui/file/4293c1d8574dc87c58360d6bac3daa182f64f7785c9d41da5e0741d2b1817fc7/community
+||39.65.72.211^$all
+||42.238.151.197^$all
+||27.213.60.53^$all
+||115.56.169.134^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -16058,7 +16063,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 19November2021v3-Beta
+! OriginalVersion: 20November2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -17285,7 +17290,9 @@ $removeparam=aff_trace_key
 ||baidu.com^$removeparam=od
 ||baidu.com^$removeparam=dyTabStr
 ! http://zhidao.baidu.com/search?&ct=17&pn=0&tn=ikaslist&rn=10&word=test (29/10/2021)
+! https://image.baidu.com/search/index?tn=baiduimage&ct=201326592&word=2020%C4%EA%B6%C8%D6%D0%B9%FA%D2%BD%D4%BA%C5%C5%D0%D0%B0%F1&t=3&ie=gbk (20/11/2021)
 ||baidu.com/search?$removeparam=ct
+||baidu.com/search/index?$removeparam=ct
 ! https://github.com/DandelionSprout/adfilt/pull/319
 ||baidu.com^$removeparam=asctag
 ||baidu.com^$removeparam=rq
@@ -17311,6 +17318,27 @@ $removeparam=aff_trace_key
 ||baidu.com^$removeparam=lemmaTitle
 ! https://baike.baidu.com/tashuo/browse/content?id=84d19be0ff2608324a4bdf94&fromModule=pcArticleMoreRecommend (18/11/2021)
 ||baidu.com^$removeparam=fromModule
+! https://github.com/DandelionSprout/adfilt/pull/364
+! https://mbd.baidu.com/newspage/data/dtlandingsuper?nid=dt_5624822534906982005&sourceFrom=homepage (20/11/2021)
+||baidu.com^$removeparam=sourceFrom
+! https://tieba.baidu.com/f?kw=%E6%98%93%E8%AF%AD%E8%A8%80&frs=yqtb (20/11/2021)
+||baidu.com^$removeparam=frs
+! https://www.baidu.com/link?url=DypBAruKxuzkAvWXFHq_rxxT5MydC8DJ4NHQl_AF1S68iPgkIzz25jieqDZlF0QuyudS5uWFCIoQjZQDNT73j_&wd=&eqid=bbdd7ac30001f6b30000000661990cd3 (20/11/2021)
+! It is a redirect link.
+||baidu.com/link?$removeparam=eqid
+||baidu.com/link?$removeparam=wd
+! https://map.baidu.com/poi/SeasonTest%E5%AD%A3%E7%84%B6%E9%A4%90%E5%8E%85/@13540616.122963477,3641295.0502960454,12.83z?uid=3a7516a5c9d09cb6fda778d0&ugc_type=3&ugc_ver=1&device_ratio=1&compat=1&pcevaname=pc4.1&newfrom=zhuzhan_webmap&querytype=detailConInfo&da_src=shareurl (20/11/2021)
+||baidu.com^$removeparam=compat
+||baidu.com^$removeparam=da_src
+||baidu.com^$removeparam=device_ratio
+||baidu.com^$removeparam=newfrom
+||baidu.com^$removeparam=pcevaname
+||baidu.com^$removeparam=ugc_type
+||baidu.com^$removeparam=ugc_ver
+! https://wenku.baidu.com/view/1fab21892a160b4e767f5acfa1c7aa00b42a9de8.html?fixfr=nCtMIYeqlpHMQxJ6JQTzXA%253D%253D&rec_flag=default&sxts=1637422043101 (20/11/2021)
+||baidu.com^$removeparam=fixfr
+||baidu.com^$removeparam=rec_flag
+||baidu.com^$removeparam=sxts
 !!!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
 ||bilibili.com^$removeparam=/^current/
@@ -17340,9 +17368,6 @@ $removeparam=aff_trace_key
 ! https://github.com/the1812/Bilibili-Evolved/issues/974
 ||bilibili.com/bangumi$removeparam=theme
 ! https://github.com/DandelionSprout/adfilt/pull/354
-! https://github.com/the1812/Bilibili-Evolved/issues/1207
-||live.bilibili.com^$removeparam=visit_id
-! https://github.com/DandelionSprout/adfilt/pull/354
 ! https://github.com/the1812/Bilibili-Evolved/issues/913
 ||bilibili.com/audio/au*?$removeparam=type
 ||bilibili.com/audio/mycollection?$removeparam=type
@@ -17363,6 +17388,7 @@ $removeparam=aff_trace_key
 ||sogou.com^$removeparam=w
 ! https://github.com/DandelionSprout/adfilt/pull/310
 $removeparam=clickArea
+$removeparam=user_ip
 ||sogou.com^$removeparam=bh
 ||sogou.com^$removeparam=entityid
 ||sogou.com^$removeparam=hintidx
@@ -17370,7 +17396,17 @@ $removeparam=clickArea
 ||sogou.com^$removeparam=innerid
 ||sogou.com^$removeparam=interation
 ||sogou.com^$removeparam=interV
-||sogou.com^$removeparam=user_ip
+! https://github.com/DandelionSprout/adfilt/pull/364
+! https://www.sogou.com/web?query=Test&ie=utf8&oq&ri=0&suguuid=0caa7aac-2827-472b-942c-a5f03b0704ce&stj=0%3B4%3B0%3B0&stj2=0&stj0=0&stj1=4&hp=48&hp1&suglabid=suglabId_1 (20/11/2021)
+||sogou.com^$removeparam=/^hp/
+||sogou.com^$removeparam=/^stj/
+||sogou.com^$removeparam=oq
+||sogou.com^$removeparam=ri
+||sogou.com^$removeparam=suglabid
+||sogou.com^$removeparam=suguuid
+! https://baike.sogou.com/v64825130.htm?ch=ch.bk.amb&fromTitle=test (20/11/2021)
+||baike.sogou.com^$removeparam=ch
+||sogou.com^$removeparam=fromTitle
 !!!! ——— Tencent ———
 ! https://github.com/ClearURLs/Rules/issues/13
 ||mp.weixin.qq.com^$removeparam=ckhsm
@@ -17403,7 +17439,6 @@ $removeparam=c,domain=tiktok.com|norton.com|farfetch.com|hepsiburada.com|appsfly
 $removeparam=campaign,domain=blue-tomato.com|sitepoint.com|sportler.com|peterhahn.*
 $removeparam=/^pf_rd_/,domain=shopbop.com|amazon.*|imdb.com
 $removeparam=Source,domain=facebook.com|facebookcorewwwi.onion|messenger.com|evga.com
-$removeparam=visit_id,domain=bilibili.com|google.*
 $removeparam=version,domain=mp.weixin.qq.com|us.norton.com
 $removeparam=p,domain=banggood.com|sogou.com
 $removeparam=linkId,domain=amazon.*|disneyplus.com
@@ -18012,6 +18047,23 @@ $removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|npr.org
 ! https://market.yandex.ru/promo/hasbro_special?clid=602&cpa-perf=1#c
 ||yandex.$removeparam=clid
 $removeparam=cpa-perf
+! https://support.google.com/websearch/answer/9351707?p=featured_snippets&hl=en&visit_id=637669631265857080-3305857145&rd=1
+! https://github.com/DandelionSprout/adfilt/pull/354
+! https://github.com/the1812/Bilibili-Evolved/issues/1207
+$removeparam=visit_id,domain=live.bilibili.com|google.*
+! https://github.com/AdguardTeam/AdguardFilters/pull/100181
+||cc.loginfra.com/cc$removeparam=a
+||cc.loginfra.com/cc$removeparam=bw
+||cc.loginfra.com/cc$removeparam=px
+||cc.loginfra.com/cc$removeparam=py
+||cc.loginfra.com/cc$removeparam=sx
+||cc.loginfra.com/cc$removeparam=sy
+||cc.loginfra.com/cc$removeparam=nsc
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1674964
+||pb.sogou.com^$removeparam=scrnwi
+||pb.sogou.com^$removeparam=scrnhi
+||pb.sogou.com^$removeparam=uigs_cookie
+||pb.sogou.com^$removeparam=uigs_t
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
@@ -18031,6 +18083,9 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 @@||web.archive.org/*_/http$removeparam
 ! Block users from saving files in `BaiduNetdisk` - https://github.com/DandelionSprout/adfilt/pull/343
 @@||pan.baidu.com/share/transfer?$removeparam=from
+! https://github.com/DandelionSprout/adfilt/pull/364
+! Prevent the user from selecting the product type normally - test address: https://b2b.baidu.com/s?q=Test
+@@||b2b.baidu.com/s/a?$removeparam=f
 !#endif
 !#endif
 !#endif
