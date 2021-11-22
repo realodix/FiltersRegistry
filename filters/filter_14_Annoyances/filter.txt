@@ -2666,7 +2666,7 @@ echo.msk.ru#$?#span > div[role]:has(> div[class] > section.content) { margin-top
 !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)
 afisha.ru,letidor.ru,autorambler.ru,wmj.ru,motor.ru,passion.ru,quto.ru,eda.ru,rns.online,championat.com,gazeta.ru,lenta.ru,rambler.ru#%#//scriptlet("abort-on-property-write", "Object.prototype.getPlaceSelectorByBannerId")
 !#endif
-rambler.ua,rambler.ru#$#.ad.ad-banner.adbanner.nav-ad.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display: block !important; }
+rambler.ua,rambler.ru#%#//scriptlet('set-cookie', '_blocker_hidden', '1')
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
 !#safari_cb_affinity(general)
 rambler.ua,rambler.ru#@#.ad
@@ -14768,13 +14768,14 @@ consent2.ksta.de#%#AG_onLoad(function(){if(window.location.href.includes("consen
 privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 !
+turboimagehost.com#%#//scriptlet('set-cookie', 'cookiewarn', '1')
 webcatalog.io#%#//scriptlet('set-local-storage-item', 'hideCookieConsentDialog', 'true')
 mozio.com#%#(function() { try { if ('undefined' != typeof localStorage) { localStorage.setItem('cookie-notice-data', '{"hash":"google-analytics-v2|google-tag-manager|loggly|zendesk","categories":["ESSENTIAL","FUNCTIONALITY","PERFORMANCE","ADVERTISING","PERSONALIZATION","TRACKING","ANALYTICS"]}') } } catch (ex) {} })();
 binance.com#%#(function(){try{'undefined'==typeof localStorage||localStorage.getItem('showCookieTip')||localStorage.setItem('showCookieTip','"allow"')}catch(a){}})();
 sber-zvuk.com#%#//scriptlet('set-local-storage-item', 'accept_cookie', 'true')
 schullv.de#%#//scriptlet('set-local-storage-item', 'cookiesAccepted', 'true')
 rupprecht.de#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("prudsysSession")){var a=new MutationObserver(function(){var b=document.querySelector(".consent-banner-confirmation-buttons button.btn-default");b&&(a.disconnect(),b.click())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
-bbc.com#%#AG_onLoad(function(){try{if(!document.cookie.includes("AAAA")){var b=new MutationObserver(function(){var a=document.querySelector(".fc-consent-root button.fc-cta-consent");a&&(b.disconnect(),a.click())});b.observe(document,{childList:!0,subtree:!0});setTimeout(function(){b.disconnect()},1E4)}}catch(a){}});
+stooq.pl,stooq.com,bbc.com#%#AG_onLoad(function(){try{if(!document.cookie.includes("AAAA")){var b=new MutationObserver(function(){var a=document.querySelector(".fc-consent-root button.fc-cta-consent");a&&(b.disconnect(),a.click())});b.observe(document,{childList:!0,subtree:!0});setTimeout(function(){b.disconnect()},1E4)}}catch(a){}});
 frisco.pl#%#(function(){document.cookie.includes("cookies-consents")||(document.cookie='cookies-consents={"ad_storage":false,"analytics_storage":false}')})();
 gentside.com#%#AG_onLoad(function(){if(window.self!==window.top&&document.referrer.startsWith("https://www.gentside.com/")){var a=new MutationObserver(function(){var b=document.querySelector('button[title="Accepter"]');b&&(a.disconnect(),b.click())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
 cdn.privacy-mgmt.com#%#AG_onLoad(function(){if(window.self!==window.top&&document.referrer.startsWith("https://www.bold.dk/")){var a=new MutationObserver(function(){var b=document.querySelector('button[title="Accepter"]');b&&(a.disconnect(),b.click())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
@@ -14800,7 +14801,6 @@ iriedaily.de#%#//scriptlet('set-cookie', 'actualOptanonConsent', '1')
 nouvelobs.com#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("euconsent-v2")){var a=new MutationObserver(function(){var b=document.querySelector(".gdpr-glm-standard button.gdpr-glm-button--standard");b&&(a.disconnect(),b.click())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
 cdn.privacy-mgmt.com#%#AG_onLoad(function(){if(window.self!==window.top&&document.referrer.startsWith("https://www.berliner-zeitung.de/")){var a=new MutationObserver(function(){var b=document.querySelector('button.message-button[title="Zustimmen"]');b&&(a.disconnect(),b.click())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
 phonenphoto.com#%#//scriptlet('set-cookie', 'cookie_accept', 'true')
-stooq.pl,stooq.com#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("cookie_uu")){var a=new MutationObserver(function(){var b=document.querySelector(".fc-consent-root button.fc-cta-consent");b&&(a.disconnect(),b.click())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
 dominospizza.pl#%#//scriptlet('set-cookie', 'dominos_cookies_accepted', '1')
 livecounts.io#%#//scriptlet('set-local-storage-item', 'CONSENT_AGREED', '1')
 jobware.de#%#//scriptlet('set-cookie', '_dsgvo', '1')
