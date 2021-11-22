@@ -1966,6 +1966,14 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||ultimate-detection.com^$all
 ! https://github.com/uBlockOrigin/uAssets/issues/10536
 ||tw-goldenwinner-57.com^$all
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-974886953
+||your-ladie-fun.life^$all
+||e.datingmap.top^$all
+||datingmap.top^$document
+||tonightshookup.com^$document
+||members.tonightshookup.com^$all
+||t.tonightshookup.com^$all
+||yourladiefun.life^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -16072,7 +16080,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 21November2021v5-Beta
+! OriginalVersion: 22November2021v2-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -16375,10 +16383,9 @@ $removeparam=tblci
 $removeparam=tcid
 $removeparam=/^dv_adwords_/
 $removeparam=wdorigin
+$removeparam=/^aff_id[0-9]?=/i
 ! https://tenshoku.nikkei.co.jp/lp/15002/?n_cid=TPRN0002&waad=Ujim9yQ8&adid=NK_L2_T_shortlink_Sun_diagnosis&utm_source=NKdenshiban&utm_medium=content-text&utm_content=text&utm_campaign=shortlink_Sun_diagnosis
 $~xmlhttprequest,removeparam=/^adid=/i,domain=~finn.no
-! https://go.nordvpn.net/aff_c?offer_id=129&aff_id=614&aff_sub=06VOOBfmFXpFAcqqIHYIr28&aff_sub2=blackfriday.com
-$removeparam=/^AFF_ID/i,domain=~nordvpn.net|~getproton.me
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-773756
 $removeparam=twitchReferral
 ! https://www.chancellors.co.uk/properties/r/3714620?elqTrackId=9829ww2ws92q56sfe2sqqqq81525lsw8a
@@ -17274,6 +17281,8 @@ $removeparam=aff_trace_key
 $removeparam=spm
 $removeparam=tracelog
 $removeparam=cardId
+! http://m.aliexpress.com/item/32475192128.html?aff_click_id=2c7754c8f1174236b64f3b364bfd24a3-1470106049987-05070-eub6yrrBy
+$removeparam=aff_click_id
 !!!! ——— Baidu ———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
 ||baidu.com^$removeparam=/^rsv/
@@ -18120,6 +18129,10 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 @@||b2b.baidu.com/s/a?$removeparam=f
 ! Cause image upload failure on the forum `bbs.nga.cn` - https://github.com/AdguardTeam/AdguardFilters/issues/96952
 @@||img*.nga$removeparam=cmpid
+! Fix '404 Not Found' on pages with path /aff_c - https://go.nordvpn.net/aff_c?offer_id=129&aff_id=614&aff_sub=06VOOBfmFXpFAcqqIHYIr28&aff_sub2=blackfriday.com
+@@/aff_c?$removeparam=/^aff_id[0-9]?=/i
+! Map views for Blocket.se classifieds
+@@||hitta.se^$removeparam=ad_id
 !#endif
 !#endif
 !#endif
