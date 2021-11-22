@@ -5395,6 +5395,9 @@ ivi.ru#%#AG_onLoad(function() { document.cookie = "adbNotice=1"; });
 ! if the rule below is not working
 ! outlook.live.com#?#div[aria-label="Navigation pane"][data-max-width] ~ div[class^="_"]:last-child:has(> div > div > span:contains(Ad Choices))
 outlook.live.com##body div[aria-label][data-max-width] ~ div[class^="_3_"]:last-child
+! https://github.com/AdguardTeam/AdguardFilters/issues/70864
+outlook.live.com#?##app div[class] > div[role="region"] ~ div[class]:not([data-max-width]) > div[class] > div[class]:has(> div[class] > img[aria-label][src*="adbar"])
+outlook.live.com#?##app div[class] > div[role="region"] ~ div[class]:not([data-max-width]):not([role]):has(div[class] > img[aria-label][src*="adbar"])
 ! maybe olsolete
 !outlook.live.com##div[class="_n_h"][style*="width: 165px;"]
 !outlook.live.com#$##primaryContainer > div[style*="right: 165px;"] { width: 100% !important; }
@@ -19585,6 +19588,9 @@ sodapdf.com##.be-tooltip
 ! Specific sites
 !######### Subscription popups add to subscriptions.txt #########
 !
+comfortkino.ru#$#.mfp-wrap { display: none!important; }
+comfortkino.ru#$#.mfp-bg { display: none!important; }
+comfortkino.ru#$#html { overflow: visible!important; }
 m.soundcloud.com#$#div[class^="Tooltip_TooltipOverlay__"] { display: none !important; }
 m.soundcloud.com#$#body { overflow: auto !important; }
 webukatu.com#%#//scriptlet("prevent-setTimeout", "isshowmodal", "3000")
