@@ -1908,7 +1908,9 @@ suchen.mobile.de#?#._3hi7AUfka9 > h3._3Vd33SM-eT:contains(Gesponsert)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34640
 maniac.de#?#.wpb_wrapper > .td_block_wrap:has(> div > h4:contains(Werbung))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35569
+! https://github.com/AdguardTeam/AdguardFilters/issues/100980
 computerbase.de#?#.content-list > li:not([class]):not([id]):has(>.content-list__ad-label)
+computerbase.de#?#.article-view__content > .text-asset:has(> p > a[data-awin-clickref])
 ! merkur.de - left-over in article
 merkur.de#?#.p402_hide > .id-Article-content-item:has(> strong > a[href^="https://ad.doubleclick.net"])
 ! ksta.de - left-over
@@ -2428,6 +2430,9 @@ menshealth.de#%#function google_ad_request_done() {};
 !------- CSS fixes --------------------!
 !--------------------------------------!
 !
+! gmx.net left-overs when opening inbox (need to zoom a bit)
+3c.gmx.net#$#.page-body > .section-1 > .section-container { bottom: 0px !important; }
+3c.gmx.net#$#.page-body > .section-1 { margin-right: 0px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93020
 webradio.de#$#.console-wrapper { padding-top: 0!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/84712
@@ -2689,6 +2694,8 @@ drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan
 ! ##.id-Container--proBEEP
 hallo-muenchen.de,az-online.de,lokalo24.de,rosenheim24.de,kreiszeitung.de,nordbuzz.de,mannheim24.de,merkur.de,oktoberfest-live.de,tz.de##.id-Container--proBEEP
 !
+3c.gmx.net###superbanner
+3c.gmx.net##.sky
 quoka.de##main > .yui3-g
 spox.com###content > .ct > main ~ div[style^="min-height:"]
 womenshealth.de##div[id^="div-gpt-ad-"]
