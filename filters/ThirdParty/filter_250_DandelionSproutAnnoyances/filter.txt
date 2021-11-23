@@ -430,7 +430,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 22November2021v1-Beta
+! OriginalVersion: 23November2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1974,6 +1974,16 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||members.tonightshookup.com^$all
 ||t.tonightshookup.com^$all
 ||yourladiefun.life^$all
+! https://www.virustotal.com/gui/url/a2524bba49ae71297d2b408b30d058700d9c80b5b1154924cafe190ec3e605a6/detection
+||newrrb.bid^$all
+! https://www.virustotal.com/gui/file/2b2628a50d3b39b0fa2395d487bf62b00e37cdae847ff76ee58399bbe4e9f7b3/community
+||194.87.138.20^$all
+! https://www.virustotal.com/gui/file/b320bc7a9151d70daca038c4356ca89bfcd4918bcd6f0f73683a27a6a72467ae/community
+||103.167.92.73^$all
+! https://www.virustotal.com/gui/file/6146dfe56dcb49e1b843624a44e204754e15625a4f94b230b59a5cafc924f618/community
+||bursakulis.com^$all
+! https://www.virustotal.com/gui/url/b333c49efa4d399e65c5e2d96a905b380acbca58a3e3052b7bd7cfcb3e0e81ee
+||610418.selcdn.ru^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -16100,7 +16110,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 23November2021v2-Beta
+! OriginalVersion: 23November2021v3-Beta
 ! Expires: 2 days
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -18127,6 +18137,12 @@ $removeparam=visit_id,domain=bilibili.com|google.*
 ||coupang.com^$removeparam=traceid
 ||coupang.com^$removeparam=wTime
 ||coupang.com^$removeparam=wPcid
+! https://github.com/AdguardTeam/AdguardFilters/issues/99645
+||trendyol.com^$removeparam=tyutm_source
+||trendyol.com^$removeparam=tyutm_medium
+||trendyol.com^$removeparam=tyutm_campaign
+! https://github.com/AdguardTeam/AdguardFilters/issues/94662#issuecomment-946949031
+||reddit.com^$removeparam=correlation_id
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
@@ -18156,8 +18172,7 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 ! Map views for Blocket.se classifieds
 @@||hitta.se^$removeparam=ad_id
 ! Email verification for 'MyWOT' - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1683830
-@@||mywot.com/user/*/confirmNewEmail$removeparam=utm_source
-@@||mywot.com/user/*/confirmNewEmail$removeparam=utm_medium
+@@||mywot.com/user/*/confirmNewEmail$removeparam=/^utm_/i
 !#if adguard_ext_firefox
 ! https://github.com/DandelionSprout/adfilt/issues/376
 @@|wss://$removeparam
