@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 23November2021v1
+! OriginalVersion: 23November2021v2
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -9,6 +9,7 @@
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues
 ! -----SPECIFIC FILTERS-----
 afterdawn.com,download.fi,edukas.fi#$##ad-top-banner-placeholder { min-height: 0px !important }
+ap-cdn.sanomagames.com##.banner-slot-preroll
 etn.fi#$#tbody > tr > td[style="width:468px"][valign=top] { width: unset !important }
 feissarimokat.com##div[style="background: rgb(246, 66, 100) none repeat scroll 0% 0%; color: rgb(255, 255, 255); padding: 20px;"]
 hardware.fi#$#.top-ad-space { min-height: 0 !important }
@@ -49,6 +50,7 @@ www.suomi24.fi#$#div[width="50%"] + div[width="50%"] + [width="50%"] + div[class
 ! -----SCRIPTS-----
 aamulehti.fi,satakunnankansa.fi,valkeakoskensanomat.fi,nokianuutiset.fi,janakkalansanomat.fi,kmvlehti.fi,jamsanseutu.fi,suurkeuruu.fi,kankaanpaanseutu.fi,rannikkoseutu.fi,tyrvaansanomat.fi,merikarvialehti.fi,sydansatakunta.fi#%#//scriptlet('ubo-nostif.js', 'adblockDetected', '0')
 afterdawn.com,download.fi,high.fi,muropaketti.com#%#//scriptlet('ubo-nostif.js', 'f.parentNode.removeChild(f)', '100')
+ap-cdn.sanomagames.com#%#//scriptlet('ubo-rc.js', 'st__hidden', '#gamewrapper')
 gamereactor.fi#%#//scriptlet('ubo-aopr.js', 'adblockEnabled')
 happypancake.fi#%#//scriptlet('ubo-aopr.js', 'Object.prototype.adUnits')
 iltalehti.fi#$?#.double-column > a[href]:has(.article-container:has-text(Kaupallinen yhteistyö)) { remove: true; }
