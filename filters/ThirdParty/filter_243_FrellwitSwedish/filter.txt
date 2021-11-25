@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-11-23 12:11:28 CET
+! Last modified: 2021-11-25 11:00:23 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -252,6 +252,7 @@ listor.se##article:has(a[href*="/annons/"])
 ljudochbild.se#$#.entry-content-wrap, .hideaway { max-height: unset !important; overflow: initial !important; height: unset !important; }
 loppi.se,modette.se,nyheter24.se#%#//scriptlet('ubo-ra.js', 'data-isready', '.bb_wrapper, stay')
 lwcdn.com#%#//scriptlet('ubo-aeld.js', '/^(?:adBlocker|contextmenu)$/')
+macradion.com,teknikveckan.se##.grid-item:has(.pill:has-text(/spons/i))
 majanilssonlindelof.com##article:has(.has-text-align-center:has-text(/samarbete med/i))
 maklarvarlden.se##.td-post-category:has-text(/spons/i):upward(2)
 maklarvarlden.se##.td-pulldown-size:has-text(/spons/i):upward(3)
@@ -356,7 +357,6 @@ teknifik.se##.post:has(.sponsor)
 teknikensvarld.se#$#.article__body__preview::before { background: none !important; }
 teknikensvarld.se#$#.article__body__preview { height: auto !important; overflow: visible !important; }
 tekniknytt.se##.label:has-text(/samarbete|annons|reklam|presenteras av/i):upward(a)
-teknikveckan.se##.grid-item:has(.pill:has-text(/spons/i))
 temperatur.nu##.holidAds:upward(1)
 tennisportalen.se##.td-pb-row [class*="td-pb-span"]:has(h4:has-text(/spons/i))
 thelocal.se##.article-content-member-type:has-text(/partner content/i):upward(.article-block)
@@ -383,6 +383,7 @@ vinbanken.se#$#.fancybox-lock { overflow-y: auto !important; }
 voister.se##.voister .brief:has(.voister .campaign-vignette)
 voodoofilm.org##.content-news:has(span[id*="Sponsored"])
 wellness.se##[id^="adPlacement"]:upward(1)
+wellness.se##article:has(.ad)
 wellness.se##p:has-text(/^kommersiellt innehåll/i):upward(article)
 wellness.se##p:has-text(/^kommersiellt innehåll|^annons$/i):upward(a)
 www.aftonbladet.se#%#//scriptlet('ubo-nostif.js', 'TAKEOVER')
@@ -500,8 +501,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1478,7 +1479,7 @@ affarsliv.com,affarslivgotland.se,corren.se,ekuriren.se,eposten.se,folkbladet.se
 affarsvarlden.se##.article-list-item--native, .advert-notice-box
 affarsvarlden.se##.cookies-wrap
 affarsvarlden.se##.kingstreet-media-section, .modal-get-premium__wrap
-aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"], [id^="adPlacement"]
+aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"], [id^="adPlacement"], #main[role="main"] a[href="https://www.aftonbladet.se/black-friday"]
 aftonbladet.se,autonytt.se,ekonominyheter.se,hockeybladet.nu,lesscarbs.se,matinspo.se,modette.se,undervarttak.se,xn--snabbalnen-75a.se##a[href*="/track.adtraction."]
 aftonbladet.se,effektmagasin.se,halsasverige.se,nojesmagasinet.nu,spela.se,svenskorientering.se##.advert
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
