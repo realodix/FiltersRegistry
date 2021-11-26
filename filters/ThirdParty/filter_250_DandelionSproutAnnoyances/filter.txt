@@ -430,7 +430,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 26November2021v1-Beta
+! OriginalVersion: 26November2021v3-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -454,7 +454,7 @@ linkedin.com#$?#body { overflow: auto !important; }
 ||agency^$document
 ||gdn^$document
 ||bid^$document
-||top^$document,domain=~corriente.top
+||top^$document,domain=~corriente.top|~gdtot.top
 ||ooo^$document
 !#if !env_mobile
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (Advanced adblockers only) ———
@@ -468,7 +468,7 @@ www.google.*##.g:has(a[href*=".loan/"])
 www.google.*##.g:has(a[href*=".agency/"])
 www.google.*##.g:has(a[href*=".gdn/"])
 www.google.*##.g:has(a[href*=".bid/"])
-www.google.*##.g:has(a[href*=".top/"])
+www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"]))
 ! ——— You know those ultra-fraudulent auto-generated things that clutter up Google searches? These entries should remove some of them. ———
 www.google.*##.g:has(a[href*=".php?xxx="])
 www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
@@ -487,7 +487,7 @@ www.google.*##a[oncontextmenu][href*=".loan/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".agency/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".gdn/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".bid/"]:upward(2)
-www.google.*##a[oncontextmenu][href*=".top/"]:upward(2)
+www.google.*##a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".php?xxx="]:upward(2)
 www.google.*##a[oncontextmenu][href^="https://books.google."]:upward(2)
 !#endif
@@ -502,7 +502,7 @@ duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"])
 ! ——— For Bing ———
 bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="nbd-media.tk"], [href*="bstweaker.tk"], [href*="gotofap.tk"], [href*="somepythonthings.tk"]))
 bing.com##.b_algo:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
@@ -514,7 +514,7 @@ bing.com##.b_algo:has(a[href*=".loan/"])
 bing.com##.b_algo:has(a[href*=".agency/"])
 bing.com##.b_algo:has(a[href*=".gdn/"])
 bing.com##.b_algo:has(a[href*=".bid/"])
-bing.com##.b_algo:has(a[href*=".top/"])
+bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"]))
 ! ——— Old dead tech-related domains ———
 ! Domains that used to host lists for adblockers or "hosts" tools, but which are now either used by malware pushers, or could potentially be snapped up by them.
 ||adblock.gjtech.net^$document
@@ -2014,6 +2014,18 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||fasterfiles.net^$all
 ||steamkeygiveaway.net^$all
 ||yunosurveys.com^$all
+! https://github.com/uBlockOrigin/uAssets/pull/10620
+||mcdupe.com^$all
+||shadyclient.net^$all
+! https://www.virustotal.com/gui/file/d546509ab6670f9ff31783ed72875dfc0f37fa2b666bd5870eecaaed2ebea4a8/community
+||58.249.74.79^$all
+||27.45.14.109^$all
+||27.40.101.191^$all
+||27.45.119.22^$all
+||27.47.73.159^$all
+||115.204.119.237^$all
+||163.125.31.46^$all
+||163.179.168.44^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
