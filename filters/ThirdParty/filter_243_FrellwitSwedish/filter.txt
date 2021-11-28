@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-11-25 11:00:23 CET
+! Last modified: 2021-11-28 08:00:55 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -144,7 +144,8 @@ ehandelstips.se##[href*="/author/sponsradeartiklar/"]:upward(li)
 ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
 elle.se##section.c-native_banner:upward(2)
 espressomedia.se##.penci-block-vc:has([href*="casino"])
-etc.se#%#//scriptlet('ubo-set.js', 'Drupal.behaviors.lock_article', 'undefined')
+etc.se##.adaptive:upward(1)
+etc.se#$#.paywalled.hidden { display:unset!important }
 ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se##.ssp_divider:has(.sponsored-bar)
 etunawebben.se#%#//scriptlet('ubo-nostif.js', 'ad')
 eventeffect.se,executiveeffect.se,saleseffect.se##.post-teaser:has(a[href$="/annons/"])
@@ -370,6 +371,7 @@ totallyorebro.se,totallystockholm.se#$?#[class*="tot-content-preview-container"]
 trendenser.se##.post_feed_post:has(.sponsor-info)
 trendenser.se##a[href*="/category/reklam"], a[href*="/category/annons"]:upward(.featured-post)
 tripadvisor.se##div:has-text(Sponsrat av):upward(div[data-curated-shelf-id])
+tv.nu###tv-schedule section:has-text(ANNONS)
 tv2.no#%#//scriptlet('ubo-acis.js', 'TV2', 'questback')
 tvdags.se##.article-list__item:has(.sponsor)
 underbaraclaras.se##.jet-listing-grid__item:has(.jet-listing-dynamic-field__content:has-text(/annonssamarbete/i))
@@ -1153,7 +1155,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /plugins/convertplug/*
 /plugins/convertpro/*
 /plugins/cookie-bar/*
-/plugins/cookie-law-info/*$domain=carup.se|gilla.se|hockeybladet.nu|ljudochbild.se|nyadagbladet.se|temadagar.se|tidningenbalans.se|tidningenresultat.se
+/plugins/cookie-law-info/*$domain=carup.se|gilla.se|hockeybladet.nu|ljudochbild.se|lundagard.se|nyadagbladet.se|temadagar.se|tidningenbalans.se|tidningenresultat.se
 /plugins/cookie-notice/*
 /plugins/cookie_consent/*$script
 /plugins/cookies-and-content-security-policy$domain=cannabisifokus.se
@@ -1479,7 +1481,7 @@ affarsliv.com,affarslivgotland.se,corren.se,ekuriren.se,eposten.se,folkbladet.se
 affarsvarlden.se##.article-list-item--native, .advert-notice-box
 affarsvarlden.se##.cookies-wrap
 affarsvarlden.se##.kingstreet-media-section, .modal-get-premium__wrap
-aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"], [id^="adPlacement"], #main[role="main"] a[href="https://www.aftonbladet.se/black-friday"]
+aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/rabattkod"], a[href*="/casinoguide"], [id^="adPlacement"]
 aftonbladet.se,autonytt.se,ekonominyheter.se,hockeybladet.nu,lesscarbs.se,matinspo.se,modette.se,undervarttak.se,xn--snabbalnen-75a.se##a[href*="/track.adtraction."]
 aftonbladet.se,effektmagasin.se,halsasverige.se,nojesmagasinet.nu,spela.se,svenskorientering.se##.advert
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
@@ -1685,9 +1687,7 @@ epochtimes.se##.cookie-bar
 epochtimes.se##img[alt*="casino"]
 esportare.se##a[href*="utm_campaign"]
 espressomedia.se,it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##.penci-wrap-gprd-law
-etc.se###popup, .etc-mobile-app-buttons-wrapper
-etc.se##.article-type-annons, .banner-wrap
-etc.se##.block-content > p img[alt]:not([class])
+etc.se##[data-controller="ad-container"], .bg-gradient-white
 etn.se,uppsalanyheter.se##.banneritem
 ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se###wsfb-container, .share-buttons
 ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se##.inline-share-buttons
