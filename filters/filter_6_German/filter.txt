@@ -1002,9 +1002,11 @@ urbia.de,essen-und-trinken.de#@#.playerAd
 !
 !
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/100366
+! https://github.com/AdguardTeam/AdguardFilters/issues/101535
 onvista.de#@##SMART_BILLBOARD
-||onvista.de/boxes/interactions
+||api.onvista.de*interactions
+@@||smartadserver.com/ac?mwid=$domain=onvista.de
+onvista.de#%#//scriptlet("set-constant", "window.ovHasAdBlocker", "false")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93705
 einrichtungsbeispiele.de#@#.adsbygoogle
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93879
@@ -1624,6 +1626,9 @@ teleboy.ch#@#.adWrapper
 !
 ! Extended CSS rules
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/101535
+onvista.de#?#.col__content section:has(> div.grid > div.col h2 + div.ov-subline:contains(Werbung))
+onvista.de#?#.col__content section:has(> div > h2 + div.ov-subline:contains(Werbung))
 ! stern.de ad
 stern.de#$?#.group-teaserblock__items > article:has(> .teaser__text-content > .ad-labels) { remove: true; }
 ! maedchen.de - ad on main page
@@ -2708,6 +2713,7 @@ drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan
 ! ##.id-Container--proBEEP
 hallo-muenchen.de,az-online.de,lokalo24.de,rosenheim24.de,kreiszeitung.de,nordbuzz.de,mannheim24.de,merkur.de,oktoberfest-live.de,tz.de##.id-Container--proBEEP
 !
+onvista.de##.ov-snapshot-tradedata-integration
 maedchen.de##kas[type="placement"]
 erotik.quoka.de###bannerResultRegio
 ||img.quoka.de/cdn/qrb^
