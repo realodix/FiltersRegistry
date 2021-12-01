@@ -430,7 +430,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 30November2021v2-Beta
+! OriginalVersion: 01December2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -535,7 +535,7 @@ bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdto
 ||ssl.bblck.me^$document
 ||allblock.net^$document
 ||microsoftedge.microsoft.com/addons/detail/allblock/nkllnmjaaifdphkfbmedklkimjmnjeen^$document
-! Malicious domains found in videogame manuals and title screens
+! Malicious or purchaseable domains found in videogame manuals and title screens
 ||acclaimsports.com^$document
 ||acclaimmaxsports.com^$document
 ||hip-games.com^$document
@@ -965,7 +965,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||new-message.today^$document
 ||new-notification.live^$document
 ||new-notifications.live^$document
-||notified-today.com^$document
 ||notified-today.live^$document
 ||notified-today.xyz^$document
 ||stay-notified.com^$document
@@ -1436,7 +1435,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||secure-0*.ddnss.ch^$all
 ||lucdream.com^$document
 ||beastbuying.com^$document
-||kokotrokot.com^$document
 ||07ca17vejqqej990.inteo.xyz^$document
 ||pesoaniz.com^$document
 ||plarium.com^$document
@@ -1452,7 +1450,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||pro-protection.xyz^$all
 ||secureleadsforever.com^$all
 ||renewal-software-update.com^$all
-||pushmeup.art^$document
+||pushmeup.art^$all
 ||covercenter.xyz^$all
 ||gettrk.xyz^$all
 ||trc.*.co^$document
@@ -1644,7 +1642,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||safelyonline.net^$document
 ||browse-safe.net^$document
 ||btpnative.com^$document
-||mybetterdl.com^$document
+||mybetterdl.com^$all
 ||besty-deals.com^$all
 ||data-px.services^$document
 ||newsvot.com^$document
@@ -1671,7 +1669,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||army-glo.scrollingsystem.com^$document
 ||www.kqzyfj.com^$all
 ||kqzyfj.com^$document
-||cj.dotomi.com^$all
 ||mcafee12.tt.omtrdc.net^$document
 ||trolleydrop.info^$document
 ||jaynordan.digital^$document
@@ -1840,14 +1837,10 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||159.148.186.228^$all
 ! https://github.com/iam-py-test/investigations/blob/main/2021/10/26/1.md#domains
 ||yotube.com^$all
-||mybetterdl.com^$all
-||p185689.mybetterdl.com^$all
 ||r-tb.com^$all
 ||cdn.hoood.info^$all
-||data-px.services^$all
 ||barah-flo.com^$all
 ||beta-one.net^$all
-||beastbuying.com^$all
 ||pisism.com^$all
 ||czyzd.xyz^$all
 ||r1it6.xyz^$all
@@ -1857,7 +1850,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||m6ydd.xyz^$all
 ||welcomejohncena.pro^$all
 ||security-scanner.xyz^$all
-||pushmeup.art^$all
 ||c2egp.xyz^$all
 ||ese40.xyz^$all
 ||e07wm.xyz^$all
@@ -2058,7 +2050,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||new.bestlifeoffer20.com^$document
 ||reykijnoac.com^$document
 ||totalnicefeed.com^$all
-||omnatuor.com^$all
 ! https://github.com/iam-py-test/investigations/blob/main/2021/11/28/2.md
 ||riteupd.mimanduca.co^$all
 ||oaesso.info^$document
@@ -7009,10 +7000,10 @@ toorgle.net##.join
 ||discord-spooky.ru^$all
 ||discord.foundation^$all
 ||discordgift.ru^$all
-||discordnitro-steam.ru^$all
+||discordnitro-steam.$all
 ||discordnitro.space^$all
-||discordxgift.xyz^$all
-||discordxnitro.xyz^$all
+||discordxgift.$all
+||discordxnitro.$all
 ||discorgift.online^$all
 ||discrocl.xyz^$all
 ||discrod.gifts^$all
@@ -7041,7 +7032,7 @@ toorgle.net##.join
 ||free-dislcordnitrlos.ru^$all
 ||free-niltross.ru^$all
 ||free-nitlross.ru^$all
-||freediscordnitro.ru^$all
+||freediscordnitro.$all
 ||freeskinsfree.pp.ua^$all
 ||from-plames.xyz^$all
 ||from-sparsei.ru.com^$all
@@ -7377,11 +7368,6 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ! ——— Spam in comment sections across the internet about "working" from "home" ———
 ! ——— Upgrades HTTP requests to HTTPS on sites that don't do it automatically ———
 $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|ufl.edu|oecd.org|bu.edu|wikidot.com|alternativenation.net
-! ——— Offline-only apps trying to phone home ———
-!#if adguard
-! https://fosspost.org/audacity-is-now-a-spyware/
-*$app=audacity.exe|audacity.app
-!#endif
 ! ——— Anti-'Malware comments' (Currently Disqus-specific) ———
 ! https://myip.ms/info/limitexcess
 *#?#.post-list > .post-content:has-text(/Best girls webcam/i)
@@ -7389,8 +7375,10 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(Viagra)
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(We offer unlimited)
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(.com specialize)
+!#if !ext_ublock
 ! ——— Dummy entry used to give myself credit, for when this list is used in large compilation hosts-type files (Although they are fully allowed by my licence to use this list, it'd be nice for me and end-users to see where it's being used, as a few of them do not credit their sources) ———
 ||if-a-large-hosts-file-contains-this-entry-then-it.uses-dandelion-sprouts-anti-malware-list-as-a-source-list.data^$document
+!#endif
 ! ——— Anti-PUP (WIP) ———
 ! This section covers ones that would not normally be found in EasyList or AdGuard Base, for instance McAfee WebAdvisor (which also tries to change the search engine)
 ||webadvisorc.rest.gti.mcafee.com^
@@ -7476,7 +7464,7 @@ get.adobe.com###offersInformationPane
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 27November2021v3-Beta
+! OriginalVersion: 01December2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -7578,7 +7566,7 @@ bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdto
 ||ssl.bblck.me^$document
 ||allblock.net^$document
 ||microsoftedge.microsoft.com/addons/detail/allblock/nkllnmjaaifdphkfbmedklkimjmnjeen^$document
-! Malicious domains found in videogame manuals and title screens
+! Malicious or purchaseable domains found in videogame manuals and title screens
 ||acclaimsports.com^$document
 ||acclaimmaxsports.com^$document
 ||hip-games.com^$document
@@ -8010,7 +7998,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||new-message.today^$document
 ||new-notification.live^$document
 ||new-notifications.live^$document
-||notified-today.com^$document
 ||notified-today.live^$document
 ||notified-today.xyz^$document
 ||stay-notified.com^$document
@@ -8473,7 +8460,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||secure-0*.ddnss.ch^$redirect=nooptext,important
 ||lucdream.com^$document
 ||beastbuying.com^$document
-||kokotrokot.com^$document
 ||07ca17vejqqej990.inteo.xyz^$document
 ||pesoaniz.com^$document
 ||plarium.com^$document
@@ -8489,7 +8475,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||pro-protection.xyz^$redirect=nooptext,important
 ||secureleadsforever.com^$redirect=nooptext,important
 ||renewal-software-update.com^$redirect=nooptext,important
-||pushmeup.art^$document
+||pushmeup.art^$redirect=nooptext,important
 ||covercenter.xyz^$redirect=nooptext,important
 ||gettrk.xyz^$redirect=nooptext,important
 ||trc.*.co^$document
@@ -8681,7 +8667,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||safelyonline.net^$document
 ||browse-safe.net^$document
 ||btpnative.com^$document
-||mybetterdl.com^$document
+||mybetterdl.com^$redirect=nooptext,important
 ||besty-deals.com^$redirect=nooptext,important
 ||data-px.services^$document
 ||newsvot.com^$document
@@ -8708,7 +8694,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||army-glo.scrollingsystem.com^$document
 ||www.kqzyfj.com^$redirect=nooptext,important
 ||kqzyfj.com^$document
-||cj.dotomi.com^$redirect=nooptext,important
 ||mcafee12.tt.omtrdc.net^$document
 ||trolleydrop.info^$document
 ||jaynordan.digital^$document
@@ -8874,14 +8859,10 @@ zombooru.com##a[href="http://www.hard55.com"]
 159.148.186.228$network
 ! https://github.com/iam-py-test/investigations/blob/main/2021/10/26/1.md#domains
 ||yotube.com^$redirect=nooptext,important
-||mybetterdl.com^$redirect=nooptext,important
-||p185689.mybetterdl.com^$redirect=nooptext,important
 ||r-tb.com^$redirect=nooptext,important
 ||cdn.hoood.info^$redirect=nooptext,important
-||data-px.services^$redirect=nooptext,important
 ||barah-flo.com^$redirect=nooptext,important
 ||beta-one.net^$redirect=nooptext,important
-||beastbuying.com^$redirect=nooptext,important
 ||pisism.com^$redirect=nooptext,important
 ||czyzd.xyz^$redirect=nooptext,important
 ||r1it6.xyz^$redirect=nooptext,important
@@ -8891,7 +8872,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||m6ydd.xyz^$redirect=nooptext,important
 ||welcomejohncena.pro^$redirect=nooptext,important
 ||security-scanner.xyz^$redirect=nooptext,important
-||pushmeup.art^$redirect=nooptext,important
 ||c2egp.xyz^$redirect=nooptext,important
 ||ese40.xyz^$redirect=nooptext,important
 ||e07wm.xyz^$redirect=nooptext,important
@@ -9079,6 +9059,44 @@ zombooru.com##a[href="http://www.hard55.com"]
 115.204.119.237$network
 163.125.31.46$network
 163.179.168.44$network
+! https://github.com/uBlockOrigin/uAssets/pull/10647
+! https://github.com/iam-py-test/investigations/blob/main/2021/11/28/1.md
+||updsec.builtfromzero.com^$redirect=nooptext,important
+||money-mod.com^$document
+||gospelchor.info^$document
+||new.bestlifeoffer20.com^$document
+||reykijnoac.com^$document
+||totalnicefeed.com^$redirect=nooptext,important
+! https://github.com/iam-py-test/investigations/blob/main/2021/11/28/2.md
+||riteupd.mimanduca.co^$redirect=nooptext,important
+||oaesso.info^$document
+||bestlifeoffer20.com^$document
+! https://scammer.info/t/password-stealer/84348
+! https://bazaar.abuse.ch/sample/462a689d171f543c10efa08e963996d382585b67a6b298ec40d64f924adfb47a/
+||youtube.com/watch?v=8nY7SnvNxH4^$redirect=nooptext,important
+||bit.ly/3p8kN5V^$document
+||mediafire.com/file/at2tvnao5x6ivdo/EngineOwning.rar/$redirect=nooptext,important
+||download2264.mediafire.com/pnk44f5ci9rg/at2tvnao5x6ivdo/EngineOwning.rar^$redirect=nooptext,important
+! https://www.virustotal.com/gui/file/12013662c71da69de977c04cd7021f13a70cf7bed4ca6c82acbc100464d4b0ef/community
+110.89.59.135$network
+113.116.89.1$network
+119.183.146.191$network
+153.3.3.226$network
+182.116.104.6$network
+60.7.133.200$network
+122.6.254.201$network
+110.89.11.167$network
+171.112.177.90$network
+115.194.38.143$network
+61.52.79.32$network
+! https://scammer.info/t/pihishing-site-claiming-to-hold-a-ups-package-that-needs-payment/84466
+||ups-dk.u1537460.cp.regruhosting.ru^$redirect=nooptext,important
+! https://www.virustotal.com/gui/url/269d374b629d7896da1f9e7449bd5afecf6284a9a564244f96a71e5192363635?nocache=1
+||lowseelan.com^$redirect=nooptext,important
+! https://www.virustotal.com/gui/file/50fd813cf8fe981e6aee179f8ba394e5527c5128b84c328f9f8347cd994bbc42/community
+||dl02.s3.amazonaws.com/installers/747947/oi_picasa38-setupexe.exe^$redirect=nooptext,important
+! https://www.virustotal.com/gui/file/2ea599605c4d65902943f12e1114a71af7a40fa7dffbf018b0ee3e7a61aaeaa3/community
+||dl02.s3.amazonaws.com/installers/424531/2gzbsoj4gxb.exe^$redirect=nooptext,important
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$redirect=nooptext,important
@@ -13988,10 +14006,10 @@ toorgle.net##.join
 ||discord-spooky.ru^$redirect=nooptext,important
 ||discord.foundation^$redirect=nooptext,important
 ||discordgift.ru^$redirect=nooptext,important
-||discordnitro-steam.ru^$redirect=nooptext,important
+||discordnitro-steam.$redirect=nooptext,important
 ||discordnitro.space^$redirect=nooptext,important
-||discordxgift.xyz^$redirect=nooptext,important
-||discordxnitro.xyz^$redirect=nooptext,important
+||discordxgift.$redirect=nooptext,important
+||discordxnitro.$redirect=nooptext,important
 ||discorgift.online^$redirect=nooptext,important
 ||discrocl.xyz^$redirect=nooptext,important
 ||discrod.gifts^$redirect=nooptext,important
@@ -14020,7 +14038,7 @@ toorgle.net##.join
 ||free-dislcordnitrlos.ru^$redirect=nooptext,important
 ||free-niltross.ru^$redirect=nooptext,important
 ||free-nitlross.ru^$redirect=nooptext,important
-||freediscordnitro.ru^$redirect=nooptext,important
+||freediscordnitro.$redirect=nooptext,important
 ||freeskinsfree.pp.ua^$redirect=nooptext,important
 ||from-plames.xyz^$redirect=nooptext,important
 ||from-sparsei.ru.com^$redirect=nooptext,important
@@ -14301,12 +14319,12 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ||githubt.com^
 ||githubnt.com^
 ! ——— Usually used by various groups who buy old domains and display illicit ads on them ———
-://ww4.$document
-://ww5.$document,domain=~ww5.msu.ac.zw
+://ww4.$document,domain=~ww4.ikea.com
+://ww5.$document,domain=~ww5.ikea.com|~ww5.msu.ac.zw
 ://ww6.$document,domain=~ww6.generali.pt
 ://ww7.$document,domain=~ww7.be|~ww7.readsnk.com
 ://ww8.$document,domain=~ww8.co|~ww8.ikea.com|~ww8.tiki.ne.jp|~ww8.erovoice.us|~ww8.anyanime.com|~ww8.bakushpal.az|~ww8.tokyoghoulre.com
-://ww9.$document,domain=~ww9.tiki.ne.jp|~ww9.sakura.ne.jp|~ww9.generali.pt|~ww9.itau.com.br
+://ww9.$document,domain=~ww9.ikea.com|~ww9.tiki.ne.jp|~ww9.sakura.ne.jp|~ww9.generali.pt|~ww9.itau.com.br
 ://ww10.$document
 ://ww11.$document
 ://ww12.$document
@@ -14355,11 +14373,6 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ! ——— Spam in comment sections across the internet about "working" from "home" ———
 ! ——— Upgrades HTTP requests to HTTPS on sites that don't do it automatically ———
 $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|ufl.edu|oecd.org|bu.edu|wikidot.com|alternativenation.net
-! ——— Offline-only apps trying to phone home ———
-!#if adguard
-! https://fosspost.org/audacity-is-now-a-spyware/
-*$app=audacity.exe|audacity.app
-!#endif
 ! ——— Anti-'Malware comments' (Currently Disqus-specific) ———
 ! https://myip.ms/info/limitexcess
 *#?#.post-list > .post-content:has-text(/Best girls webcam/i)
@@ -14367,8 +14380,10 @@ $csp=upgrade-insecure-requests,domain=apache.org|gnu.org|washington.edu|nyu.edu|
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(Viagra)
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(We offer unlimited)
 *#?#script[src*=disquscdn] + #layout .post-content:has-text(.com specialize)
+!#if !ext_ublock
 ! ——— Dummy entry used to give myself credit, for when this list is used in large compilation hosts-type files (Although they are fully allowed by my licence to use this list, it'd be nice for me and end-users to see where it's being used, as a few of them do not credit their sources) ———
 ||if-a-large-hosts-file-contains-this-entry-then-it.uses-dandelion-sprouts-anti-malware-list-as-a-source-list.data^$document
+!#endif
 ! ——— Anti-PUP (WIP) ———
 ! This section covers ones that would not normally be found in EasyList or AdGuard Base, for instance McAfee WebAdvisor (which also tries to change the search engine)
 ||webadvisorc.rest.gti.mcafee.com^
