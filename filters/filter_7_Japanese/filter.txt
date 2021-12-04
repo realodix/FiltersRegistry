@@ -905,7 +905,6 @@ michaelsan.livedoor.biz#?#.plugin-memo > div.side > div[class^="alistcloud-"]:up
 blog.livedoor.jp#?#.left-column-inner > div.plugin-memo:has(> div.side > ins.widget-banner)
 blog.livedoor.jp#?##left_wrapper > div.area01 > p[style="”font-size:5pt;"] + center:has-text(スポンサードリンク)
 blog.livedoor.jp#?#.plugin-memo > div.side > script[src^="//z-fe."]:upward(2)
-blog.livedoor.jp#?#.plugin-memo > div.side > div.gad-fixed:upward(2)
 blog.livedoor.jp#?#.plugin-memo > div.side > script[src^="https://i-section"]:upward(2)
 blog.livedoor.jp#?#.plugin-memo > div.side > center > script[src$="ziyu.net/js/dqnplus.js"]:upward(3)
 lionmaru.blog#?#.entry-content > p + h2:contains(【PR】)
@@ -1418,6 +1417,10 @@ avgle.com#%#//scriptlet('abort-current-inline-script', '__htapop')
 !-------CSS---------
 !-------------------
 !
+! TO DO: replace the second rule with [$path=/goldennews]blog.livedoor.jp#$##side-column[style^="position: fixed"] { position: static!important; } once v4 is widely distributed.
+! https://github.com/AdguardTeam/AdguardFilters/issues/101983
+blog.livedoor.jp#$?#.plugin-memo > div.side > div.gad-fixed:upward(2) { display: none!important; }
+blog.livedoor.jp#$##side-column[style^="position: fixed"] { position: static!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/100858 fix sidebar
 blog.livedoor.jp#$?#.plugin-memo > div.side > div.ad-center:upward(2) { display: none!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97959
