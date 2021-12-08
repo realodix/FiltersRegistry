@@ -9,6 +9,7 @@ const REQUIRED_LOCALES = [
     'en',
     // + other our locales
     'ru',
+    'de',
     'fr',
     'it',
     'ja',
