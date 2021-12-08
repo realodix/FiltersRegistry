@@ -78,6 +78,7 @@
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
 !
+||xfkkvjabbogciwl.top^
 ||cameracaseira.com^$third-party
 ||bloco.top^$third-party
 ||fireadsone.com^$third-party
@@ -287,6 +288,11 @@ tunovelaligera.com#@#iframe[width="728"][height="90"]
 tunovelaligera.com#@#img[width="728"][height="90"]
 !#endif
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/101956
+comando.to#%#//scriptlet("abort-on-property-read", "adblock")
+||aj1907.online^$xmlhttprequest,redirect=nooptext,domain=comando.to
+!+ PLATFORM(ios, ext_android_cb)
+@@||aj1907.online/*&cp.adblock=$domain=comando.to
 ! https://github.com/uBlockOrigin/uAssets/issues/10747
 ||mundodonghua.com/ver/supreme-god-2/banner.gif?$image,redirect=1x1-transparent.gif,important
 @@||mundodonghua.com/ver/supreme-god-2/banner.gif?
@@ -2219,6 +2225,8 @@ jc.ne10.uol.com.br,internetpasoapaso.com,acidadeon.com,leouve.com.br,larazon.es,
 ! ##.ad
 laopiniondemurcia.es,larazon.es,dicio.com.br,band.uol.com.br,xataka.com,onyxplay.com,genbeta.com,vagalume.com.br,xatakandroid.com,abril.com.br##.ad
 !
+comando.to##.entry-content center > a[rel="noopener"] > img
+||comando.to/wp-content/uploads/*/video.js
 rollingstone.com.co###elementor-popup-modal-31279
 rollingstone.com.co##.elementor-location-header div.elementor-widget-slides
 laopiniondemurcia.es##.commercial-up-full
