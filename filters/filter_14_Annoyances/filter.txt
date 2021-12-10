@@ -1576,6 +1576,8 @@ techradar.com##.omaha-background
 calendar.google.com,docs.google.com,mail.google.com,news.google.com,drive.google.com##iframe[src^="https://ogs.google.com"][src*="/widget/callout/"]:upward(div[style^="overflow: hidden; position: absolute; top: 0px; width:"])
 ! google - Search Console promo
 google.*###wmxmsg
+! https://github.com/AdguardTeam/AdguardFilters/issues/101733
+google.*##svg[width="411"][height="250"][preserveAspectRatio="xMidYMid meet"]
 ! google - Chrome banner
 google.*##div.gb_i[data-ogsr-up] > div[style*="overflow: hidden;"][style*="position: absolute;"][style*="z-index: "][style*="overflow: hidden;"][style*="margin-right: 25px;"]
 ! google - information about Stadia
@@ -2257,7 +2259,7 @@ translate.yandex.by,translate.yandex.com,ceviri.yandex.com.tr,translate.yandex.f
 !
 ! Yandex.Video
 yandex.*##.VideoViewer-SnippetsFeed > div[class*="_placement_"]
-yandex.*##body[data-bem*="Яндекс.Видео"] div.serp-list__items > div[data-logger-type][data-counter*="ect_id=R-I-"]
+yandex.*##.serp-list__items > div[id^="Direct-"][data-hydrate-priority] > *
 ! Browser ad
 yandex.*###bk-container
 !
@@ -2394,6 +2396,10 @@ windowstechblog.nl#%#AG_onLoad(function() { window.bizpanda = {}; });
 izlemac75.net##body > div[style*="width:100%;text-align:center"]
 izlemac75.net##body > div#reload
 !
+gujaratexclusive.in##.td-post-content p > a[href^="https://t.me/"]
+gujaratexclusive.in##.td-post-content p > a[href^="https://chat.whatsapp.com/"]
+gujaratexclusive.in##.td-post-content p > a[href^="https://www.instagram.com/"]
+gujaratexclusive.in##.td-post-content p > a[href^="https://twitter.com/"]
 betonmobile.ru##.promo_cont
 pepper.pl##.js-banner.aGrid[data-track*="twitter_banner"]
 mssqltips.com###signup-div
@@ -19858,6 +19864,8 @@ sodapdf.com##.be-tooltip
 ! Specific sites
 !######### Subscription popups add to subscriptions.txt #########
 !
+songsterr.com###showroom
+songsterr.com###app > aside#promo
 aura-office.co.jp###bnr_inquiry
 pdf.wondershare.jp###icon-anchor-right
 digit.in###cubewrapid
@@ -24727,6 +24735,7 @@ abendzeitung-muenchen.de###webpush-app
 ||api.infinario.com^$third-party
 ||mucizewus.com^$third-party
 ||lib1.biz^$third-party
+||pecukirom.com^$third-party
 ||pushid.info^$third-party
 /smio-push-notification/*
 ###smart_push_smio_overlay
@@ -27587,6 +27596,7 @@ quinhillyer.com,johnbiver.com,jasonmattera.com,ipatriot.com,hooligancharters.com
 ##.widget_blog_subscription
 ~curvegames.com,~news.un.org,~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+interior.ru##.subscribe-popup
 northantslive.news##.factbox
 ||data.reachplc.com^$domain=northantslive.news
 bellingcat.com##.footer__mailing__right
@@ -33147,6 +33157,11 @@ sanzisport.com###text-7
 goanimelist.me#?#.wpex-sidebar > div.wpex-widget-area:has(> div.widget_text > h3:contains(Live Chat))
 sedsports.com###custom_html-67
 animeindo.moe##iframe[src*="/animeindo/chat.php"]
+!
+! Whitelist
+! https://github.com/AdguardTeam/AdguardFilters/issues/102621
+@@||service.force.com/embeddedservice/*/esw.min.js$domain=visible.com
+!
 ! шпаргалки.com
 xn--80aaivjfyj3e.com,wiseeconomist.ru,zakon.today##.pravoved-ru-widget
 pornohirsch.com###customer-chat-iframe
