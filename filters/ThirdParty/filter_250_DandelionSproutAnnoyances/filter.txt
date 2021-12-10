@@ -430,7 +430,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 09December2021v1-Beta
+! OriginalVersion: 10December2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -449,12 +449,13 @@ linkedin.com#$?#body { overflow: auto !important; }
 ||cf^$document,domain=~google.cf|~rths.cf|~voitures.cf|~assembleenationale-rca.cf|~cps-rca.cf|~acap.cf|~miraculousladybug.cf|~scrat.cf
 ! Palau
 ||pw^$document,domain=~libgen.pw|~petridish.pw|~palaugov.pw|~dpc.pw|~zikrap.pw|~demonoid.pw
+! Legitimate use is almost non-existent, but has a tiny userbase in Japan
+||top^$document,domain=~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^$document
 ||agency^$document
 ||gdn^$document
 ||bid^$document
-||top^$document,domain=~corriente.top|~gdtot.top
 ||ooo^$document
 !#if !env_mobile
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (Advanced adblockers only) ———
@@ -468,7 +469,7 @@ www.google.*##.g:has(a[href*=".loan/"])
 www.google.*##.g:has(a[href*=".agency/"])
 www.google.*##.g:has(a[href*=".gdn/"])
 www.google.*##.g:has(a[href*=".bid/"])
-www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"]))
+www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"]))
 ! ——— You know those ultra-fraudulent auto-generated things that clutter up Google searches? These entries should remove some of them. ———
 www.google.*##.g:has(a[href*=".php?xxx="])
 www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
@@ -487,7 +488,7 @@ www.google.*##a[oncontextmenu][href*=".loan/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".agency/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".gdn/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".bid/"]:upward(2)
-www.google.*##a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"]):upward(2)
+www.google.*##a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".php?xxx="]:upward(2)
 www.google.*##a[oncontextmenu][href^="https://books.google."]:upward(2)
 !#endif
@@ -502,7 +503,7 @@ duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"])
 ! ——— For Bing ———
 bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="nbd-media.tk"], [href*="bstweaker.tk"], [href*="gotofap.tk"], [href*="somepythonthings.tk"]))
 bing.com##.b_algo:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
@@ -514,7 +515,7 @@ bing.com##.b_algo:has(a[href*=".loan/"])
 bing.com##.b_algo:has(a[href*=".agency/"])
 bing.com##.b_algo:has(a[href*=".gdn/"])
 bing.com##.b_algo:has(a[href*=".bid/"])
-bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"]))
+bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"]))
 ! ——— Old dead tech-related domains ———
 ! Domains that used to host lists for adblockers or "hosts" tools, but which are now either used by malware pushers, or could potentially be snapped up by them.
 ||adblock.gjtech.net^$document
@@ -7501,7 +7502,7 @@ get.adobe.com###offersInformationPane
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 02December2021v1-Beta
+! OriginalVersion: 10December2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -7520,12 +7521,13 @@ get.adobe.com###offersInformationPane
 ||cf^$document,domain=~google.cf|~rths.cf|~voitures.cf|~assembleenationale-rca.cf|~cps-rca.cf|~acap.cf|~miraculousladybug.cf|~scrat.cf
 ! Palau
 ||pw^$document,domain=~libgen.pw|~petridish.pw|~palaugov.pw|~dpc.pw|~zikrap.pw|~demonoid.pw
+! Legitimate use is almost non-existent, but has a tiny userbase in Japan
+||top^$document,domain=~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^$document
 ||agency^$document
 ||gdn^$document
 ||bid^$document
-||top^$document,domain=~corriente.top|~gdtot.top
 ||ooo^$document
 !#if !env_mobile
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (Advanced adblockers only) ———
@@ -7539,7 +7541,7 @@ www.google.*##.g:has(a[href*=".loan/"])
 www.google.*##.g:has(a[href*=".agency/"])
 www.google.*##.g:has(a[href*=".gdn/"])
 www.google.*##.g:has(a[href*=".bid/"])
-www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"]))
+www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"]))
 ! ——— You know those ultra-fraudulent auto-generated things that clutter up Google searches? These entries should remove some of them. ———
 www.google.*##.g:has(a[href*=".php?xxx="])
 www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
@@ -7558,7 +7560,7 @@ www.google.*#?#*:has(> * > a[oncontextmenu][href*=".loan/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".agency/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".gdn/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".bid/"])
-www.google.*#?#*:has(> * > a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"]))
+www.google.*#?#*:has(> * > a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".php?xxx="])
 www.google.*#?#*:has(> * > a[oncontextmenu][href^="https://books.google."])
 !#endif
@@ -7573,7 +7575,7 @@ duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"])
 ! ——— For Bing ———
 bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="nbd-media.tk"], [href*="bstweaker.tk"], [href*="gotofap.tk"], [href*="somepythonthings.tk"]))
 bing.com##.b_algo:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
@@ -7585,7 +7587,7 @@ bing.com##.b_algo:has(a[href*=".loan/"])
 bing.com##.b_algo:has(a[href*=".agency/"])
 bing.com##.b_algo:has(a[href*=".gdn/"])
 bing.com##.b_algo:has(a[href*=".bid/"])
-bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"]))
+bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"]))
 ! ——— Old dead tech-related domains ———
 ! Domains that used to host lists for adblockers or "hosts" tools, but which are now either used by malware pushers, or could potentially be snapped up by them.
 ||adblock.gjtech.net^$document
@@ -7754,14 +7756,9 @@ azdll.net##.dllhelper-banner
 ! Common scam domain patterns
 /^http://(apps?|best|competition|game|mobile|play|prize|reward|sweeps)[0-9]{2,8}\.[a-z-]{5,22}[0-9]{1,8}\.(icu|life|live)/$~third-party,document
 /^https://(apps?|best|competition|game|mobile|play|prize|reward|sweeps)[0-9]{2,8}\.[a-z-]{5,22}[0-9]{1,8}\.(icu|life|live)/$~third-party,document
-/^https:\/\/[a-z]{7,}\.li[fv]e\/[a-z]{8}\/\?/$document,popup,domain=life|live
-/^https?:\/\/[-0-9a-z]*prize[-0-9a-z]+\.li[fv]e\/\?u=[0-9a-z]+&o=[0-9a-z]+/$document,domain=life|live
-/^https?:\/\/[-0-9a-z]*prize[-0-9a-z]+\.li[fv]e\/\?u=[0-9a-z]+&o=[0-9a-z]+/$popup,domain=www.google.*
+/^https:\/\/[-0-9a-z]{12,}\.life\/\?u=[0-9a-z]{7,}&o=[0-9a-z]{7,}&/$document,domain=life
 ! https://github.com/AdguardTeam/AdguardFilters/issues/58737
-/^https?://(www\.)?[-0-9a-z]{14,}\.fun/[a-z]{10,11}\.php.*/$document,domain=fun
-! https://github.com/AdguardTeam/AdguardFilters/issues/78614
-/^https?:\/\/\d{6}\.xyz\/lucky\/[-a-z]+\/\?t=/$document,popup,domain=xyz
-/^https?:\/\/[a-z]{6}\.vip\/lucky\/[-a-z]+\/\?t=/$document,popup,domain=vip
+/^https?:\/\/(?:www\.)?[-0-9a-z]{14,}\.(?:biz|fun|live)\/[a-zA-Z]{10,}\.php/$document,domain=biz|fun|live
 ! ——— Banner for "MSN New Tab" ———
 msn.com##.irisbanner
 ! ——— Download sites that felt shoddy to me (Most of which, if not all of which, had real non-ad download links that contained malware .exe files) ———
@@ -8490,7 +8487,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 212.192.241.72$network
 37.0.10.83$network
 ||newstepsco.com^$redirect=nooptext,important
-||duckdns.org^$document,domain=~www.duckdns.org|~checkip.dyndns.com
+||duckdns.org^$document,domain=~www.duckdns.org
 @@://duckdns.org^$document
 ||chse-security-notifications.email^$redirect=nooptext,important
 ||secure-0*.ddnss.ch^$redirect=nooptext,important
@@ -9157,6 +9154,24 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||dundeehills.group^$redirect=nooptext,important
 !+ NOT_OPTIMIZED
 132.148.220.142$network
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-986306768
+||chess-progress.ru^$document
+||ouhastay.net^$redirect=nooptext,important
+! https://scammer.info/t/there-are-things-in-the-game-that-will-interest-you-trojan/84908
+||askara.super.site^$redirect=nooptext,important
+||cdn.discordapp.com/attachments/916361798763053136/917187511053320202/Askara.exe^$redirect=nooptext,important
+||discord.com/invite/askara^$document
+! https://scammer.info/t/fake-facebook-login-page/84939
+||royyer.us/R8cWuvQjhtM^$redirect=nooptext,important
+||coperola.blob.core.windows.net^$redirect=nooptext,important
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-988127908
+! https://www.tek.no/i/lVeQAe/
+! https://www.nkom.no/aktuelt/ikke-trykk-pa-lenker-i-sms--for-du-er-helt-sikker/
+||eccolabgroup.com^$redirect=nooptext,important
+||galerijajava.ba^$redirect=nooptext,important
+||p-stn.net^$redirect=nooptext,important
+! https://borsen.dagbladet.no/74020239/
+||poetic-selection.flywheelsites.com^$redirect=nooptext,important
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$redirect=nooptext,important
@@ -18686,19 +18701,19 @@ _Cursor1.png^
 !#if !env_safari
 !#if !adguard_app_mac
 ! Title: 🈺 Japanese Text Softener
-! OriginalVersion: 23October2021v1-Alpha
+! OriginalVersion: 10December2021v1-Alpha
 ! Expires: 6 days
 ! Description: The font situation on many Japanese websites is kind-of absolutely atrocious on Windows (Other OSs are much less affected). They use super-stiff janky fonts resemblant of Windows 95 or Amiga. And even worse, many of the sites also default to the stiff Japanese fonts' atrocious Latin letter types. Here's how to use the sites in a way that is compatible with the 3rd decade of the 21st century.
 ! 🇯🇵: Windows における多くの日本語サイトのフォント状況はまったくもってゾッとします（他のOSでは遥かにマシです）。Windows 95 か Amiga を思わせるギッザギザのクズフォントが使用されており、さらに悪いことにそういったサイトの多くは、欧文書体に至ってもこのゾッとするギザギザ日本語フォントをデフォルトとして採用しているのです。令和の時代に相応しくサイトを利用する方法は次のとおりです。
 ! Note: I understand it as such that Japanese tech users can get annoyed about some Unicode font blunders that led to some kanji looking incorrect in many fonts. If any of the below fonts are affected by this, inform me about it on GitHub.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp#$#body { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp#$#div { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp#$#li { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp#$#a { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp#$#strong { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp#$#dd { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp#$#span { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top#$#body { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top#$#div { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top#$#li { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top#$#a { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top#$#strong { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top#$#dd { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top#$#span { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
 store.playstation.com#$#html[lang=ja] body { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
 store.playstation.com#$#html[lang=ja] div { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
 store.playstation.com#$#html[lang=ja] li { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
