@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/101963
+blog.tinect.jp###meerkat-wrap
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101781
 ||belaruspartisan.by/images/sherem.png
 ||belaruspartisan.by/images/svaboda3.jpg
@@ -14946,6 +14948,7 @@ consent2.ksta.de#%#AG_onLoad(function(){if(window.location.href.includes("consen
 privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 !
+debrid-link.fr#%#//scriptlet('set-cookie', 'cookies_infos', '1')
 nonsolocap.it#%#//scriptlet("set-constant", "cookieChoices.showCookieConsent", "noopFunc")
 romeo.com#%#//scriptlet('set-local-storage-item', 'cookiesConsent', '1')
 vanlaack.com#%#//scriptlet("set-cookie", "cookie-preference", "1")
@@ -27575,12 +27578,15 @@ shoppinglive.ru,starhit.ru,gamemag.ru,careeraddict.com,glasswire.com,metaratings
 quinhillyer.com,johnbiver.com,jasonmattera.com,ipatriot.com,hooligancharters.com,greatamericanpolitics.com,dailylol.com,clickitconservativenews.com,brasspills.com,brandonvallorani.com,affluentinvestor.com,thinkamericana.com,schaftleinreport.com##body > div[id][style*="top: 0px; width: 100%; z-index: 99999999;"]
 !
 ! Genegic rules
+||inyourarea.co.uk^$third-party
 ##.followit--follow-form-container
 ||embeds.fanmatics.com^$third-party
 ||cp.unisender.com/*/form-widget-loader.js$third-party
 ##.widget_blog_subscription
 ~curvegames.com,~news.un.org,~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+northantslive.news##.factbox
+||data.reachplc.com^$domain=northantslive.news
 bellingcat.com##.footer__mailing__right
 clevescene.com###NewsletterSignup
 seaside-cottage.de##.widget_wp_cleverreach
@@ -30361,7 +30367,7 @@ makeuseof.com##.single-post-newsletter
 game2day.ru##.single_socials
 psd-tutorials.de##.site-newsletter
 brodude.ru##.site__footer-center-subscribe-form
-manchestereveningnews.co.uk,getreading.co.uk,dailystar.co.uk,chroniclelive.co.uk,examiner.co.uk,mirror.co.uk,plymouthherald.co.uk##.skinny-signup
+northantslive.news,manchestereveningnews.co.uk,getreading.co.uk,dailystar.co.uk,chroniclelive.co.uk,examiner.co.uk,mirror.co.uk,plymouthherald.co.uk##.skinny-signup
 fototips.ru##.snp-builder
 weraveyou.com##.snp-fb
 podrobnosti.mk.ua##.social-bottom
