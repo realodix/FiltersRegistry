@@ -81,6 +81,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/103172
+digitalidentity.co.jp##div[class^="bnr_contact"]:last-child
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103158
 vedomosti.ru##.the-header-announce
 vedomosti.ru##.subscription-placeholders
@@ -88,6 +90,8 @@ vedomosti.ru##.subscription-placeholders
 tubics.com##.blog-detail-aside > div:not([id="related_widget"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/102737
 ananweb.jp##nav.related-links:first-of-type
+! https://github.com/AdguardTeam/AdguardFilters/issues/102410
+pornpics.com###fb-button
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101963
 blog.tinect.jp###meerkat-wrap
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101781
@@ -3192,6 +3196,7 @@ hgtv.com#@#.showads
 !
 !
 !
+brighteon.com#%#//scriptlet("set-constant", "brighteonSpecial", "true")
 gofile.io###adsPlaywire
 opopular.com.br###notification-ajude-ab
 sonyliv.com#$#.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display: block !important; }
@@ -4911,6 +4916,7 @@ postimees.ee#%#//scriptlet('remove-class', 'cookie-paywall-visible', 'article[cl
 it-actual.ru#$#.adsbygoogle { transform: scale(0) !important; height: 0 !important; }
 !
 !#safari_cb_affinity(general)
+@@||brighteon.com/static/ads/ads.js
 @@||static.wmbcdn.com/uniweb/images/ad-banner.png$domain=mamba.ru
 canyoublockit.com#@#.ad_widget
 dumpert.nl#@#.ads_box
@@ -7649,6 +7655,7 @@ floristikwerkstatt-mueller.com##.flash[data-cookie="eu_cookie"]
 fdp.de#?#body > #sliding-popup:has(> .eu-cookie-compliance-banner)
 lexicool.com###cookie_consent_popup
 filewhopper.com##.cl_js_inited
+pornpics.com###cookie-contract
 labbe.de##.acris-cookie-consent
 labbe.de##.ec-gtm-cookie-directive
 hemdenbox.de#$##s-cookie-consent { display: none!important; }
@@ -19909,6 +19916,7 @@ sodapdf.com##.be-tooltip
 ! Specific sites
 !######### Subscription popups add to subscriptions.txt #########
 !
+digitalidentity.co.jp##div[class^="bnr_floating"]
 yenidonem.com.tr##.floating-wpp
 blog-jp.janetter.net##.tmblr-iframe--follow-teaser
 ||cxense.com/cx.cce.js$domain=gamespark.jp|inside-games.jp
@@ -19940,7 +19948,6 @@ koronawirusunas.pl#%#//scriptlet("prevent-setTimeout", "#PatronModal")
 nsctotal.com.br#$#.tp-modal { display: none !important; }
 nsctotal.com.br#$#.tp-backdrop { display: none !important; }
 cosmopolitan.com###recommended-modal
-kisscartoon.nz###upgrade_pop
 petri.com#%#//scriptlet('set-cookie-reload', 'hustle-hide-module-10', '10')
 ext.hp.com##.cmnbox01 > div.repo
 web.bridge-net.jp##.fltBnr
@@ -23241,7 +23248,7 @@ godealla.pl##.facebook.playfair
 budsgunshop.com,godealla.pl##.overlay
 glassesusa.com##div[class^="welcomeNotice__wrap"]
 85.114.138.56,enzahome.com.tr,isralove.org###popup
-kisscartoon.sh,xmovies8.tv,kissanime.nz,kissanime.si,kisscartoon.is,kissanime.ac,kisscartoon.su,bmovies.cz,xmovies8.pl###upgrade_pop
+kissanime.*,kisscartoon.*,xmovies8.*,bmovies.cz###upgrade_pop
 livescience.com,space.com,tomshardware.com###ec-modal
 boston.com##.content-toaster--newsletter
 ejje.weblio.jp###free-house-ad-on-load-modal-overlay
@@ -27782,7 +27789,7 @@ darkwiki.in###media_image-5
 coursecouponclub.com###media_image-2
 betterprogramming.pub#?#div[class]:has(> div[class] > h2:contains(/^Sign up for programming bytes$/))
 templatemonster.com###maillist-subscription
-happy-size.de#?#section[role="dialog"]:has(> aside[aria-label*="Newsletter-Anmeldung"])
+klingel.de,happy-size.de#?#section[role="dialog"]:has(> aside[aria-label*="Newsletter-Anmeldung"])
 aceofhacking.com###tpbr_topbar
 techcracked.com###Image1
 washingtoninformer.com###boxzilla-93937
