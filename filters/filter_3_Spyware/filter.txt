@@ -19267,7 +19267,8 @@ _tracking.php?b=
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101178 - bethesda.net
 ! https://github.com/AdguardTeam/Scriptlets/issues/160 - simon.com
 ! https://www.reddit.com/r/uBlockOrigin/comments/pyfove/ublock_origin_breaks_corsairs_website_when_using/ (Firefox)
-||googletagmanager.com/gtm.js?$third-party,script,redirect=googletagmanager-gtm,domain=~corsair.com|~olx.*|~simon.com|~bethesda.net
+! TODO: Blocking GTM globally is dangerous, needs to be tested manually on problematic websites
+! ||googletagmanager.com/gtm.js?$third-party,script,redirect=googletagmanager-gtm,domain=~corsair.com|~olx.*|~simon.com|~bethesda.net|~paddle.com
 ||googletagservices.com/tag/js/gpt.js$xmlhttprequest,script,redirect=googletagservices-gpt
 ! fix https://golf.com/news/tour-confidential-match-play-concession-augusta-womens-am/
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=~golf.com
@@ -20453,7 +20454,7 @@ abp?type=js&session$domain=prosieben.de|sat1.de|kabeleins.de|sixx.de|prosiebenma
 ||graph.facebook.com/logging_client_events
 ||goto.kz/img.php^$third-party
 ||googlesyndication.com/safeframe/$third-party
-||googletagmanager.com/gtm.js?$third-party
+||googletagmanager.com/gtm.js$third-party
 ||goodbookbook.com/_.gif?_
 ||front.sspicy.ru/collect?$third-party
 ||findme.ru/Counter$third-party
@@ -23030,6 +23031,8 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/103226
+@@||line-scdn.net/*/torimochi.js$domain=web-tw-pay.line.me
 ! https://github.com/AdguardTeam/AdguardFilters/issues/102634
 @@||slike.indiatimes.com/feed/playerconfig/*.json$domain=zoomtventertainment.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103023
@@ -24924,8 +24927,6 @@ kizi.com#%#window.google_trackConversion = function() {};
 @@||google-analytics.com/analytics.js$domain=developers.google.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/15210
 @@||d31j93rd8oukbv.cloudfront.net/metrika/watch_ua.js$domain=novayagazeta.ru
-! checkout.paddle.com
-@@||googletagmanager.com/gtm.js^$domain=checkout.paddle.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/14998
 @@||google-analytics.com/analytics.js$domain=frenchfrysoftware.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/14959
