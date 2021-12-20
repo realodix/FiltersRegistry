@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2021-12-17 16:41:34 CET
+! Last modified: 2021-12-20 07:50:12 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -379,7 +379,6 @@ trendenser.se##.post_feed_post:has(.sponsor-info)
 trendenser.se##a[href*="/category/reklam"], a[href*="/category/annons"]:upward(.featured-post)
 tripadvisor.se##div:has-text(Sponsrat av):upward(div[data-curated-shelf-id])
 tv.nu###tv-schedule section:has-text(ANNONS)
-tv2.no#%#//scriptlet('ubo-acis.js', 'TV2', 'questback')
 tvdags.se##.article-list__item:has(.sponsor)
 underbaraclaras.se##.jet-listing-grid__item:has(.jet-listing-dynamic-field__content:has-text(/annonssamarbete/i))
 upptack-sverige.se##.front-cta:has-text(/sponsrat innehåll/i)
@@ -412,7 +411,7 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||byggkonsult.org^$all
 ||cision.com^$badfilter
 ||delivery.youplay.se/load.js?*&ap=true$removeparam=/^ap/,script
-||fast.fonts.net/t/1.css$redirect=nooptext,domain=pbswisstools.com
+||fast.fonts.net/*/1.css$redirect=nooptext,domain=pbswisstools.com
 ||google-analytics.com^$important,domain=aftonbladet.se|tradera.com|xxl.se
 ||googletagmanager.com^$important,domain=tradera.com|xxl.se
 ||look.utndln.com^$all
@@ -436,7 +435,7 @@ bastad.se,fysikstugan.se,heleneholmsif.se,historiskahem.se,melodifestivalklubben
 boktugg.se,carup.se,dinbyggare.se,ettgottskratt.se,humorbibeln.se,konsolnyheter.se,lakartidningen.se,matsafari.nu,newsner.com,sportbibeln.se,sportpanelen.se,trafiksakerhet.se,villalivet.se,zeinaskitchen.se#%#//scriptlet('ubo-set.js', 'mi_track_user', 'false')
 !#endif
 !#if !env_chromium
-@@||fast.fonts.net/t/1.css$domain=pbswisstools.com
+@@||fast.fonts.net/*/1.css$domain=pbswisstools.com
 nyadagbladet.se$$script[tag-content="OneSignal"][max-length="262144"]
 svd.se$$script[tag-content="SvD.ads.preDefineAd"][max-length="262144"]
 di.se$$script[tag-content="checkAdBlockEnabled"][max-length="262144"]
@@ -509,8 +508,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -793,7 +792,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ##td#reklam
 ##ul.adsmodern
 &type=load_offers$xmlhttprequest,domain=illvet.se|pctidningen.se
-*$csp=script-src 'none',domain=svtt.se|ssvd.se|exressen.se|eexpressen.se|sskatteverket.se|aatg.se|atgg.se
 -popup-analytics$script
 -tracking.js$domain=aftonbladet.se
 .ax/ad/
@@ -1298,6 +1296,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /Portalannonser/*$image
 /postscribe.$script,domain=linnherbertsson.se
 /prebid$script,domain=idg.se
+/prebid_rtb_call
 /prisjakt$xmlhttprequest,domain=fz.se
 /private-browsing.js$domain=thelocal.se
 /prod/adform$xmlhttprequest
@@ -2172,7 +2171,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||amazonaws.com/metapic-cdn/*/metapic.
 ||amazonaws.com/pfe_im/js/prod/pcc/s_code.js
 ||ana.tunnl.com^
-||analytics-sdk.yle.fi^$script
 ||analytics.barnebys.sh^$image
 ||analytics.ozzi.io^$third-party
 ||analytics.wayke.se^
@@ -2764,7 +2762,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||yelp.se/sit_rep
 ||yieldwrapper.com^$third-party
 ||yle-consent-sdk.yle.fi^
-||yle.fi/*/event$ping
 ||youplay.se^$third-party,domain=dayviews.com|emocore.se|extraextra.se|hamsterpaj.net|kalender.se|kamrat.com
 ||yoursecurecheckout1.com^
 ||ysektionen.se/media/uploads/*banner$image
