@@ -1,6 +1,6 @@
 !
 ! Title: Web Annoyances Ultralist
-! Last Modified: 10:34 2021-12-20
+! Last Modified: 10:53 2021-12-21
 ! Expires: 2 Days (Update Frequency)
 ! Description: Block annoying web elements and reclaim lost screen real estate. Web Annoyances Ultralist includes the following sublists - Ad Placeholders, Cookie Filters, Floating Filters (CSS Style Modifying & Companion Filters), Generic Filters, Modal Filters, Newsletter Filters, & Social Filters.
 ! Homepage: https://github.com/yourduskquibbles/webannoyances
@@ -12,7 +12,7 @@
 ! Start Web Annoyances Ultralist
 ! Start Web Annoyances Ultralist Sublists
 ! Title: Web Annoyances Ultralist - Ad Placeholder Filters
-! Last Modified: 10:34 2021-12-20
+! Last Modified: 10:53 2021-12-21
 ! Expires: 2 Days (Update Frequency)
 ! Description: Web Annoyances Ultralist Sublist for empty advertising placeholders.
 ! Homepage: https://github.com/yourduskquibbles/webannoyances
@@ -622,7 +622,7 @@ theawl.com###ad-top
 thebalance.com,thebalancecareers.com,thebalanceeveryday.com,thebalancesmb.com###mntl-leaderboard-spacer_1-0
 thebiglead.com##.mobile-instream-ad-holder-single
 theblast.com##.surge-ad-container
-theblaze.com##.recommended_sponsored
+theblaze.com##.ad-top-padding, .recommended_sponsored
 thebump.com##.dartAdTop, .in-article-promo
 thecinemaholic.com##.gridlove-ad-below-header
 thedailybeast.com##.ConnatixAd, .DEPRECATEDAdSlot, .PageTopAd, .SimpleAd
@@ -1262,7 +1262,7 @@ yubico.com##.cookie-pop
 zdf.de##.js-rb-attached.m-open.x-cookies.b-system-dialog
 ||gdpr-tcfv2.sp-prod.net^
 ! Title: Web Annoyances Ultralist - Floating Annoyances (CSS Style Modifications & Companion Filters)
-! Last Modified: 10:34 2021-12-20
+! Last Modified: 10:53 2021-12-21
 ! Expires: 2 Days (Update Frequency)
 ! Description: Web Annoyances Ultralist Sublist for Floating Annoyances -  Modify site elements using CSS modifications to fix floating items that block screen real estate - Primarily used to "pin-in-place" sticky headers, dickbars, floating headers, floating videos, scrolling headers, scrolling videos, stickynavs and other distracting page elements.
 ! Homepage: https://github.com/yourduskquibbles/webannoyances
@@ -1933,12 +1933,14 @@ apkmos.com#$#.td-header-wrap .td-affix .td-main-menu-logo { height: 60px !import
 apkmos.com,igeeksblog.com,lastwordonprofootball.com,livekindly.co,smartphoneaccessoriesreview.com,statereviewer.com,techbizweb.com,techquila.co.in,thezerohack.com#$#.td-header-menu-wrap { position: static !important; transform: translate3d(0,0,0) !important; }
 apnews.com#$#.APLine, .fluid-wrapper > .SectionTitle > .apLine-0-2-8, .apLine-0-2-14, .apLine-0-2-30, .apLine-0-2-36, [class*="apLine-"] { transform: scale(1) !important; }
 apnews.com#$#.ContentView-LeftRail { position: relative !important; }
-apnews.com#$#.Header .header-container { height: 134px !important; flex-wrap: wrap !important; }
+apnews.com#$#.Header .header-container { height: 73px !important; flex-wrap: wrap !important; padding-top: 0 !important; padding-bottom: 0 !important; }
 apnews.com#$#.Header .header-featured-wrapper { position: absolute !important; top: 134px !important; }
-apnews.com#$#.Header .header-navigation-container { width: 100% !important; }
+apnews.com#$#.Header .header-featured-wrapper[style="top: auto;"] { position: absolute !important; top: 73px !important; }
+apnews.com#$#.Header .header-navigation-container { position: relative !important; top: auto !important; width: unset !important; }
 apnews.com#$#.Header .header-navigation-item .header-navigation-item-section-text, .Header .header-title.title { display: block !important; }
 apnews.com#$#.Header .header-navigation-utilities, .ng-isolate-scope.header { position: absolute !important; }
 apnews.com#$#.Header .header-navigation-wrapper { padding: 1rem 0 !important; }
+apnews.com#$#.Header .header { width: 100% !important; }
 apnews.com#$#.Header { position: absolute !important; top: 0 !important; height: auto !important; }
 apnews.com#$#.SocialShare { position: static !important; }
 apnews.com#$#.content.optional-header-title, .count-caption { opacity: 1 !important; }
@@ -10005,6 +10007,10 @@ tortoisemedia.com#$#.tm-header { position: absolute !important; }
 totalfratmove.com#$##nav-bar { position: relative !important; top: 0 !important; }
 totallandscapecare.com#$#.header.navbar-fixed-top.navbar { position: relative !important; top: 0 !important; }
 totalprosports.com#$##topbar, .navbg, .nav-full { position: absolute !important; }
+totalprosports.com#$#.custom-logo { opacity: 1 !important; }
+totalprosports.com##.custom-scroll-logo
+totalprosports.com#$#.custom-scroll-logo { opacity: 0 !important; }
+totalprosports.com#$#.site-header { position: static !important; }
 tour-magazin.de#$#nav.set.top.stucked { position: relative !important; top: 0 !important; }
 townandcountrymag.com#$#.content-nav-active.sticky.nav, .sticky.nav { position: relative !important; top: 0 !important; }
 townhall.com#$##thm-nav-sm, .fa-bars.fa, .toggle, nav { position: relative !important; top: 0 !important; }
@@ -14391,7 +14397,7 @@ zmescience.com##.jeg_container > .jeg_read_progress_wrapper
 ||prod.theintercept.com^$subdocument,~third-party
 ||stacklist.com/*/subscribe-modal
 ! Title: Web Annoyances Ultralist - Newsletter Subscription Filters
-! Last Modified: 10:34 2021-12-20
+! Last Modified: 10:53 2021-12-21
 ! Expires: 2 Days (Update Frequency)
 ! Description: Web Annoyances Ultralist Sublist for newsletter annoyances - Remove newsletter & other subscription cosmetic elements.
 ! Homepage: https://github.com/yourduskquibbles/webannoyances
@@ -15082,6 +15088,7 @@ today.com##.entry-bottom, .newsletter-l-wrapper, .tabletNewsletter___Av6eE
 todayonline.com##.article-detail_subscription
 toofab.com###sbnewsletter-signup-wrap
 torontolife.com##.subscribe-navigation__list
+totalprosports.com###mai_reusable_block_widget-3
 townhall.com##.email-signup-inpage, .nlbox
 trains.com##.aboveMobile.basement
 travelandleisure.com##.newsletter-callout
@@ -15155,7 +15162,7 @@ zmescience.com##.ps-container.cp-slidein-content
 ||mercurynews.com/newsletters-signup/$subdocument
 ||ocweekly.com/*_Reskin_newsletters$image
 ! Title: Web Annoyances Ultralist - Social Filters
-! Last Modified: 09:13 2021-12-17
+! Last Modified: 10:53 2021-12-21
 ! Expires: 2 Days (Update Frequency)
 ! Description: Web Annoyances Ultralist Sublist for social networking & sharing - Remove third party social media share sections, icons & other cosmetic elements.
 ! Homepage: https://github.com/yourduskquibbles/webannoyances
@@ -16171,7 +16178,7 @@ thedailyshow.com##.followUs.follow, .followUsBackground
 thediplomat.com###td-share-bar, .sharrre.td-share__btn--facebook.td-share__btn, .sharrre.td-share__btn--linkedin.td-share__btn, .sharrre.td-share__btn--twitter.td-share__btn
 thedodo.com##.impact__follow-us
 thedrive.com##.icon-pinterest.icon
-theepochtimes.com##.fb, .social.right_float > .text, .twitter
+theepochtimes.com##.fb, .reddit, .social.right_float > .text, .twitter
 thefader.com##.custom_share_buttons_top, .new_social_share_button
 thefederalist.com##.aside-left-social-standard
 thefreethoughtproject.com##.spnf_right.spnf_ticker, .heateor_sss_sharing_container
