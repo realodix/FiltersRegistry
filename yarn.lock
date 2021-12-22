@@ -2,20 +2,20 @@
 # yarn lockfile v1
 
 
-"@adguard/scriptlets@^1.4.4":
-  version "1.4.4"
-  resolved "https://registry.yarnpkg.com/@adguard/scriptlets/-/scriptlets-1.4.4.tgz#959cef45458ec01e7d89360a90b0e9bd31db20da"
-  integrity sha512-ZH4yzIAqlTA4HNtZQHipPbRmXWcNBtgKP/N1GbKe2hjskPc742iA0AHn01ko0rfcUe4tmT6Ua0IHKJKHpymLng==
+"@adguard/scriptlets@^1.5.4":
+  version "1.5.4"
+  resolved "https://registry.yarnpkg.com/@adguard/scriptlets/-/scriptlets-1.5.4.tgz#4530809e091536a695e70a8630774802c0deb5ac"
+  integrity sha512-qJSAD1MuO5RCa6dhBM3AzoBwZdKEg/hDz4E4c+l7HWLTPN6YMODE5wXYXCvCrcAsJe1v28DWqjbTlkwxb/vghg==
   dependencies:
     "@babel/runtime" "^7.7.2"
     js-yaml "^3.13.1"
 
-"@adguard/tsurlfilter@0.7.17":
-  version "0.7.17"
-  resolved "https://registry.yarnpkg.com/@adguard/tsurlfilter/-/tsurlfilter-0.7.17.tgz#960ba6a4f2ec9cf26d69cc2f6267f2c933a6ae98"
-  integrity sha512-tI/r9NC20Sau9rNHC8eIZvgsqCHEwVKK+y29K/9ZW5050FwTah+9HWmyruNC1vJrKbg2xHTXYylKlgjnkv1fYA==
+"@adguard/tsurlfilter@^0.7.43":
+  version "0.7.43"
+  resolved "https://registry.yarnpkg.com/@adguard/tsurlfilter/-/tsurlfilter-0.7.43.tgz#78241c8292d16428bf80169f730b358a357cc6cd"
+  integrity sha512-UJ2osIHgs4W/5o7AI5ARKN499cSPS9ZEmac+fW2mgq1QyB2QPf6yG9cJxocAqTtavqZChZgV/ROTBi9PMTTbmg==
   dependencies:
-    "@adguard/scriptlets" "^1.4.4"
+    "@adguard/scriptlets" "^1.5.4"
     "@types/ip6addr" "^0.2.3"
     "@types/netmask" "^1.0.30"
     "@types/punycode" "^2.1.0"
@@ -29,6 +29,7 @@
     punycode "^2.1.1"
     text-encoding "git+https://github.com/AdguardTeam/text-encoding.git#v0.7.1"
     tldts "^5.6.45"
+    webextension-polyfill "^0.8.0"
 
 "@babel/runtime@^7.7.2":
   version "7.8.4"
@@ -75,11 +76,12 @@ acorn@^7.1.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
   integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
-"adguard-filters-compiler@git+https://github.com/AdguardTeam/FiltersCompiler.git#v1.1.32":
-  version "1.1.32"
-  resolved "git+https://github.com/AdguardTeam/FiltersCompiler.git#062d993ddf5a92d972ff4ad6c00bbdfba6ed002b"
+"adguard-filters-compiler@git+https://github.com/AdguardTeam/FiltersCompiler.git#v1.1.34":
+  version "1.1.34"
+  resolved "git+https://github.com/AdguardTeam/FiltersCompiler.git#7426fb4cc0fd0eb56963895da243b196cde145af"
   dependencies:
-    "@adguard/tsurlfilter" "0.7.17"
+    "@adguard/scriptlets" "^1.5.4"
+    "@adguard/tsurlfilter" "^0.7.43"
     ajv "^6.10.2"
     child_process ">=1.0.2"
     crypto "1.0.1"
@@ -88,7 +90,6 @@ acorn@^7.1.1:
     jsdom "^16.3.0"
     md5 "2.2.1"
     moment "^2.24.0"
-    scriptlets "git+https://github.com/AdguardTeam/Scriptlets.git#v1.4.3"
     utf8 "^3.0.0"
 
 ajv@^6.10.2:
@@ -663,13 +664,6 @@ saxes@^5.0.0:
   dependencies:
     xmlchars "^2.2.0"
 
-"scriptlets@git+https://github.com/AdguardTeam/Scriptlets.git#v1.4.3":
-  version "1.4.4"
-  resolved "git+https://github.com/AdguardTeam/Scriptlets.git#334c4dac505e4b89ff7c28eae35e09957907707c"
-  dependencies:
-    "@babel/runtime" "^7.7.2"
-    js-yaml "^3.13.1"
-
 source-map@~0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.6.1.tgz#74722af32e9614e9c287a8d0bbde48b5e2f1a263"
@@ -794,6 +788,11 @@ w3c-xmlserializer@^2.0.0:
   integrity sha512-4tzD0mF8iSiMiNs30BiLO3EpfGLZUT2MSX/G+o7ZywDzliWQ3OPtTZ0PTC3B3ca1UAf4cJMHB+2Bf56EriJuRA==
   dependencies:
     xml-name-validator "^3.0.0"
+
+webextension-polyfill@^0.8.0:
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/webextension-polyfill/-/webextension-polyfill-0.8.0.tgz#f80e9f4b7f81820c420abd6ffbebfa838c60e041"
+  integrity sha512-a19+DzlT6Kp9/UI+mF9XQopeZ+n2ussjhxHJ4/pmIGge9ijCDz7Gn93mNnjpZAk95T4Tae8iHZ6sSf869txqiQ==
 
 webidl-conversions@^5.0.0:
   version "5.0.0"
