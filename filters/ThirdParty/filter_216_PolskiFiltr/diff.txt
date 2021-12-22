@@ -106,6 +106,8 @@ abczdrowie.pl,allani.pl,autokrata.pl,autokult.pl,biztok.pl,dzieci.pl,easygo.pl,e
 www.wp.pl##html, html > body:style(overflow: visible!important;)
 ! Rule "www.wp.pl##+js(set-constant.js, WP.gaf.loadBunch, noopFunc)" converted to: "www.wp.pl#%#//scriptlet('ubo-set-constant.js', 'WP.gaf.loadBunch', 'noopFunc')"
 www.wp.pl##+js(set-constant.js, WP.gaf.loadBunch, noopFunc)
+! Rule "www.wp.pl##+js(aost,WP,r https)" converted to: "www.wp.pl#%#//scriptlet('ubo-aost.js', 'WP', 'r https')"
+www.wp.pl##+js(aost,WP,r https)
 ! Rule "money.pl##body:style(pointer-events: auto!important;)" converted to: "money.pl#$#body { pointer-events: auto!important; }"
 money.pl##body:style(pointer-events: auto!important;)
 ! Rule "money.pl##+js(set-constant, Object.prototype.rekids, undefined)" converted to: "money.pl#%#//scriptlet('ubo-set-constant.js', 'Object.prototype.rekids', 'undefined')"
@@ -124,6 +126,8 @@ kafeteria.pl,polygamia.pl,open.fm,pudelek.pl##+js(nostif, HubAPI, 3000)
 kafeteria.pl,polygamia.pl,open.fm,pudelek.pl##+js(aeld, message, t.origin===k)
 ! Rule "wp.pl##+js(no-setTimeout-if, /getComputedStyle[\s\S]*?style\.display="none"[\s\S]*?styleBlocked[\s\S]*?detected/)" converted to: "wp.pl#%#//scriptlet('ubo-no-setTimeout-if.js', '/getComputedStyle[\s\S]*?style\.display="none"[\s\S]*?styleBlocked[\s\S]*?detected/')"
 wp.pl##+js(no-setTimeout-if, /getComputedStyle[\s\S]*?style\.display="none"[\s\S]*?styleBlocked[\s\S]*?detected/)
+! Rule "abczdrowie.pl,autokult.pl,echirurgia.pl,film.wp.pl,fotoblogia.pl,gadzetomania.pl,gry.wp.pl,horoskop.wp.pl,kobieta.wp.pl,komorkomania.pl,medycyna24.pl,money.pl,parenting.pl,pogoda.wp.pl,tech.wp.pl,tv.wp.pl,twojeip.wp.pl,wiadomosci.wp.pl,wideo.wp.pl,sportowefakty.wp.pl,fitness.wp.pl,wawalove.wp.pl,gwiazdy.wp.pl,teleshow.wp.pl,www.wp.pl##+js(aost, WP.prebid, onLoad)" converted to: "abczdrowie.pl,autokult.pl,echirurgia.pl,film.wp.pl,fotoblogia.pl,gadzetomania.pl,gry.wp.pl,horoskop.wp.pl,kobieta.wp.pl,komorkomania.pl,medycyna24.pl,money.pl,parenting.pl,pogoda.wp.pl,tech.wp.pl,tv.wp.pl,twojeip.wp.pl,wiadomosci.wp.pl,wideo.wp.pl,sportowefakty.wp.pl,fitness.wp.pl,wawalove.wp.pl,gwiazdy.wp.pl,teleshow.wp.pl,www.wp.pl#%#//scriptlet('ubo-aost.js', 'WP.prebid', 'onLoad')"
+abczdrowie.pl,autokult.pl,echirurgia.pl,film.wp.pl,fotoblogia.pl,gadzetomania.pl,gry.wp.pl,horoskop.wp.pl,kobieta.wp.pl,komorkomania.pl,medycyna24.pl,money.pl,parenting.pl,pogoda.wp.pl,tech.wp.pl,tv.wp.pl,twojeip.wp.pl,wiadomosci.wp.pl,wideo.wp.pl,sportowefakty.wp.pl,fitness.wp.pl,wawalove.wp.pl,gwiazdy.wp.pl,teleshow.wp.pl,www.wp.pl##+js(aost, WP.prebid, onLoad)
 ! Rule "sportowefakty.wp.pl##+js(aopr, Object.prototype.bodyCode)" converted to: "sportowefakty.wp.pl#%#//scriptlet('ubo-aopr.js', 'Object.prototype.bodyCode')"
 sportowefakty.wp.pl##+js(aopr, Object.prototype.bodyCode)
 ! Rule "open.fm##+js(set-constant, Object.prototype.gafSlot, undefined)" converted to: "open.fm#%#//scriptlet('ubo-set-constant.js', 'Object.prototype.gafSlot', 'undefined')"
@@ -529,10 +533,6 @@ www.wp.pl##:xpath(//div[@data-st-area='Zakupy'][count(*)=2][not(header)])
 ! Invalid selector:
 ~www.wp.pl,wp.pl##:xpath(//div[count(*)=3][img[@class][@src]][*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=0]])
 ! Invalid selector:
-www.wp.pl##+js(aost,WP,r https)
-! Invalid selector:
-abczdrowie.pl,autokult.pl,echirurgia.pl,film.wp.pl,fotoblogia.pl,gadzetomania.pl,gry.wp.pl,horoskop.wp.pl,kobieta.wp.pl,komorkomania.pl,medycyna24.pl,money.pl,parenting.pl,pogoda.wp.pl,tech.wp.pl,tv.wp.pl,twojeip.wp.pl,wiadomosci.wp.pl,wideo.wp.pl,sportowefakty.wp.pl,fitness.wp.pl,wawalove.wp.pl,gwiazdy.wp.pl,teleshow.wp.pl,www.wp.pl##+js(aost, WP.prebid, onLoad)
-! Invalid selector:
 parenting.pl##:xpath(//div[count(*)=1][*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=0]])
 ! Invalid selector:
 parenting.pl##:xpath(//div[count(*)=1][*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=0]])
@@ -554,8 +554,6 @@ polygamia.pl##+js(nano-remove-elements-onready.js, .screening)
 elka.pl,miedziowe.pl##:xpath(//*[@align="center"][contains(text(), 'reklama')])
 ! Invalid selector:
 stooq.pl,stooq.com##:xpath(//*[@align="center"]/*[@id][contains(text(),"REKLAMA")])
-Error: "$redirect modifier is invalid" in the rule: "/^https:\/\/(www\.)?youtube(-nocookie)?\.com\/embed\//$third-party,subdocument,object,redirect=click2load.html,domain=orionblues.pinger.pl"
-/^https:\/\/(www\.)?youtube(-nocookie)?\.com\/embed\//$third-party,subdocument,object,redirect=click2load.html,domain=orionblues.pinger.pl
 Error: "Unknown pseudo class: +js(insert-iframe, 1, honeypot, https://www.napiprojekt.pl/napisy-42731-Ostatni-U-Boot-(1993), width: 1px !important; height: 1px !important; position: absolute !important; left: -3000px !important)" in the rule: "napiprojekt.pl##+js(insert-iframe, 1, honeypot, https://www.napiprojekt.pl/napisy-42731-Ostatni-U-Boot-(1993), width: 1px !important; height: 1px !important; position: absolute !important; left: -3000px !important)"
 napiprojekt.pl##+js(insert-iframe, 1, honeypot, https://www.napiprojekt.pl/napisy-42731-Ostatni-U-Boot-(1993), width: 1px !important; height: 1px !important; position: absolute !important; left: -3000px !important)
 ! Invalid selector:

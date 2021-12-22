@@ -14,6 +14,8 @@ razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/defaul
 razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[style*="px;"]:style(width: 100% !important)
 ! Rule "razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"]:style(width: 100% !important)" converted to: "razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] { width: 100% !important }"
 razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"]:style(width: 100% !important)
+! Rule "~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru##+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)" converted to: "~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#%#//scriptlet('ubo-abort-on-stack-trace.js', 'Object.prototype.getBaseFingerprint', 'inlineScript')"
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru##+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)
 ! Rule "/^https?://mail\.yandex\.[^\s]{125,}/$empty,script,~third-party" converted to: "/^https?://mail\.yandex\.[^\s]{125,}/$redirect=nooptext,script,~third-party"
 /^https?://mail\.yandex\.[^\s]{125,}/$empty,script,~third-party
 ! Rule "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$empty,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz" converted to: "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$redirect=nooptext,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz"
@@ -38,8 +40,8 @@ yandex.*##.mini-suggest__item:has(> a[href^="http://"]):remove()
 /?from=RCM-$document,xmlhttprequest,queryprune,domain=rambler.ru
 ! google.*#%#//scriptlet('ubo-remove-attr.js', 'onmousedown', '#search [data-async-context] a') is excluded by "#%#//scriptlet" in exclusions-low.txt
 google.*#%#//scriptlet('ubo-remove-attr.js', 'onmousedown', '#search [data-async-context] a')
-! ~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru##+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript) is excluded by "##+js" in exclusions-low.txt
-~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru##+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)
+! ~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#%#//scriptlet('ubo-abort-on-stack-trace.js', 'Object.prototype.getBaseFingerprint', 'inlineScript') is excluded by "#%#//scriptlet" in exclusions-low.txt
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#%#//scriptlet('ubo-abort-on-stack-trace.js', 'Object.prototype.getBaseFingerprint', 'inlineScript')
 ! 4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight') is excluded by "#%#//scriptlet" in exclusions-low.txt
 4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight')
 ! 4pda.*#%#//scriptlet('ubo-no-setTimeout-if.js', 'removeAttr', 'setTimeout') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -128,131 +130,3 @@ music.yandex.*#?#+js(set-constant.js, Object.prototype.showBranding, noopFunc)
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.los, null)
 ! Invalid selector:
 ~yandex.net,yandex.*#?#+js(set-constant.js, Object.prototype.useAbdBundle, false)
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "&clid=$document,removeparam=|clid,domain=yandex.*"
-&clid=$document,removeparam=|clid,domain=yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "&feature=emb_$document,removeparam=|feature=emb_,domain=youtube.com"
-&feature=emb_$document,removeparam=|feature=emb_,domain=youtube.com
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "&ymclid=$document,removeparam=|,domain=~ozon.onelink.me"
-&ymclid=$document,removeparam=|,domain=~ozon.onelink.me
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".com/?_ga=$document,removeparam=|"
-.com/?_ga=$document,removeparam=|
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".html?gps-id=$document,removeparam=|,domain=aliexpress.*"
-.html?gps-id=$document,removeparam=|,domain=aliexpress.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".html?pdp_ext_f=$document,removeparam=|,domain=aliexpress.*"
-.html?pdp_ext_f=$document,removeparam=|,domain=aliexpress.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".html?spm=$document,removeparam=spm,domain=aliexpress.*"
-.html?spm=$document,removeparam=spm,domain=aliexpress.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".net/?_ga=$document,removeparam=|"
-.net/?_ga=$document,removeparam=|
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".ru/?_ga=$document,removeparam=|"
-.ru/?_ga=$document,removeparam=|
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".ru/?spm=$document,removeparam=spm,domain=aliexpress.*"
-.ru/?spm=$document,removeparam=spm,domain=aliexpress.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: ".ua/?_ga=$document,removeparam=|"
-.ua/?_ga=$document,removeparam=|
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/*&sid=$document,removeparam=|sid,domain=nnm-club.lib|nnm-club.me|nnmclub.ro|nnmclub.to|rutor.in"
-/*&sid=$document,removeparam=|sid,domain=nnm-club.lib|nnm-club.me|nnmclub.ro|nnmclub.to|rutor.in
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/*purchase-referrer=$document,removeparam=|,domain=market.yandex.*"
-/*purchase-referrer=$document,removeparam=|,domain=market.yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/?amp;utm_*ukr$document,removeparam=|"
-/?amp;utm_*ukr$document,removeparam=|
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/?f=ukr.net$document,removeparam=|"
-/?f=ukr.net$document,removeparam=|
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/?from=RCM-$document,xmlhttprequest,removeparam,domain=rambler.ru"
-/?from=RCM-$document,xmlhttprequest,removeparam,domain=rambler.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/?readmore$document,xmlhttprequest,removeparam=|,domain=rambler.ru"
-/?readmore$document,xmlhttprequest,removeparam=|,domain=rambler.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "/story/*?lang=$document,removeparam=|,domain=yandex.*"
-/story/*?lang=$document,removeparam=|,domain=yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "://aliexpress.*.htm?spm=$document,removeparam=|,domain=aliexpress.*"
-://aliexpress.*.htm?spm=$document,removeparam=|,domain=aliexpress.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "=ukraine_news&utm_$document,removeparam=|utm_"
-=ukraine_news&utm_$document,removeparam=|utm_
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?*r_audience=$document,removeparam=|,domain=ria.com"
-?*r_audience=$document,removeparam=|,domain=ria.com
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?amp;test_id=$document,removeparam=|,domain=mail.ru"
-?amp;test_id=$document,removeparam=|,domain=mail.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?clid=$document,removeparam=|clid,domain=yandex.*"
-?clid=$document,removeparam=|clid,domain=yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?commercial=$document,removeparam=|,domain=ria.com"
-?commercial=$document,removeparam=|,domain=ria.com
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?country_code=$document,removeparam=|,domain=zen.yandex.*"
-?country_code=$document,removeparam=|,domain=zen.yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?cpc=*show-uid=$document,removeparam=|,domain=market.yandex.*"
-?cpc=*show-uid=$document,removeparam=|,domain=market.yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?e=lfm$document,removeparam=|,domain=sports.ru"
-?e=lfm$document,removeparam=|,domain=sports.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?fm=$document,removeparam=|fm,domain=mail.ru"
-?fm=$document,removeparam=|fm,domain=mail.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?fr=$document,removeparam=|fr,domain=mail.ru"
-?fr=$document,removeparam=|fr,domain=mail.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?from=$document,removeparam=|from,domain=3dnews.ru|7days.ru|~auth.mail.ru|auto.ru|autonews.ru|habr.com|igromania.ru|kommersant.ru|mail.ru|ntv.ru|rbc.ru|sportrbc.ru|sports.ru"
-?from=$document,removeparam=|from,domain=3dnews.ru|7days.ru|~auth.mail.ru|auto.ru|autonews.ru|habr.com|igromania.ru|kommersant.ru|mail.ru|ntv.ru|rbc.ru|sportrbc.ru|sports.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?from=shapka$document,xmlhttprequest,removeparam=|,domain=auto.ru"
-?from=shapka$document,xmlhttprequest,removeparam=|,domain=auto.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?from=tabbar$document,removeparam=|from,domain=yandex.*"
-?from=tabbar$document,removeparam=|from,domain=yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?from=yanews$document,removeparam=|"
-?from=yanews$document,removeparam=|
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?nid=*show-uid=$document,removeparam=|,domain=market.yandex.*"
-?nid=*show-uid=$document,removeparam=|,domain=market.yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?pokupki=$document,removeparam=|,domain=market.yandex.*"
-?pokupki=$document,removeparam=|,domain=market.yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?previewToken=$document,removeparam=|,domain=maximonline.ru"
-?previewToken=$document,removeparam=|,domain=maximonline.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?rcmd_$document,removeparam=|rcmd_,domain=ria.ru"
-?rcmd_$document,removeparam=|rcmd_,domain=ria.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?referrer_block=$document,removeparam=|referrer_,domain=mail.ru|sportmail.ru"
-?referrer_block=$document,removeparam=|referrer_,domain=mail.ru|sportmail.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?ruid=$document,removeparam=|ruid,domain=autonews.ru|rbc.ru|sportrbc.ru"
-?ruid=$document,removeparam=|ruid,domain=autonews.ru|rbc.ru|sportrbc.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?source=ukrnet$document,removeparam=|"
-?source=ukrnet$document,removeparam=|
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?sub_confirmation=1$document,removeparam=|,domain=youtube.com"
-?sub_confirmation=1$document,removeparam=|,domain=youtube.com
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?topblock$document,removeparam=|,domain=3dnews.ru"
-?topblock$document,removeparam=|,domain=3dnews.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?utm_partner_id=$document,removeparam=|,domain=mail.ru|sportmail.ru"
-?utm_partner_id=$document,removeparam=|,domain=mail.ru|sportmail.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "?ymclid=$document,removeparam=|"
-?ymclid=$document,removeparam=|
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "aff_fcid=$document,removeparam=|,domain=aliexpress.*|~campaign.aliexpress.com"
-aff_fcid=$document,removeparam=|,domain=aliexpress.*|~campaign.aliexpress.com
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "algo_pvid=$document,removeparam=|,domain=aliexpress.*"
-algo_pvid=$document,removeparam=|,domain=aliexpress.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "fbclid=$document,removeparam=fbclid"
-fbclid=$document,removeparam=fbclid
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "frm=$document,removeparam=|frm,domain=mail.ru"
-frm=$document,removeparam=|frm,domain=mail.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "from=*_portal&lang=$document,removeparam=|,domain=yandex.*"
-from=*_portal&lang=$document,removeparam=|,domain=yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "mt_click$document,removeparam=|,domain=mail.ru|ok.ru"
-mt_click$document,removeparam=|,domain=mail.ru|ok.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "mt_sub$document,removeparam=|,domain=mail.ru|ok.ru"
-mt_sub$document,removeparam=|,domain=mail.ru|ok.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "smotri_id=$document,removeparam=|smotri_id,domain=mail.ru"
-smotri_id=$document,removeparam=|smotri_id,domain=mail.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "utm_$document,removeparam=ig_rid,domain=instagram.com"
-utm_$document,removeparam=ig_rid,domain=instagram.com
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||finance.ua/*?mpl=$document,removeparam=|,domain=finance.ua"
-||finance.ua/*?mpl=$document,removeparam=|,domain=finance.ua
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||imdb.com/*pf_rd_$document,removeparam=|pf_rd_,domain=imdb.com"
-||imdb.com/*pf_rd_$document,removeparam=|pf_rd_,domain=imdb.com
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||imdb.com/*ref_=$document,removeparam=|ref,domain=imdb.com"
-||imdb.com/*ref_=$document,removeparam=|ref,domain=imdb.com
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||mail.ru^*exp_id=$document,removeparam=|,domain=mail.ru"
-||mail.ru^*exp_id=$document,removeparam=|,domain=mail.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||mail.ru^*frommail=1$document,removeparam=|frommail=1,domain=mail.ru"
-||mail.ru^*frommail=1$document,removeparam=|frommail=1,domain=mail.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||sportmail.ru^*exp_id=$document,xmlhttprequest,removeparam=|,domain=sportmail.ru"
-||sportmail.ru^*exp_id=$document,xmlhttprequest,removeparam=|,domain=sportmail.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||sportmail.ru^*frommail=1$document,xmlhttprequest,removeparam=|,domain=sportmail.ru"
-||sportmail.ru^*frommail=1$document,xmlhttprequest,removeparam=|,domain=sportmail.ru
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||yandex.*/images/search?text=*&from=$document,removeparam=|from,domain=yandex.*"
-||yandex.*/images/search?text=*&from=$document,removeparam=|from,domain=yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||yandex.*/news*?from=main$document,removeparam=|,domain=yandex.*"
-||yandex.*/news*?from=main$document,removeparam=|,domain=yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||yandex.*/news*msid$document,removeparam=|,domain=yandex.*"
-||yandex.*/news*msid$document,removeparam=|,domain=yandex.*
-Error: "$removeparam rules are not compatible with some other modifiers" in the rule: "||yandex.ru/?clid=$document,removeparam=|,domain=yandex.*"
-||yandex.ru/?clid=$document,removeparam=|,domain=yandex.*
