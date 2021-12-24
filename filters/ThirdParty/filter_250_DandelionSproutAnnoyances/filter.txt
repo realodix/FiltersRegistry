@@ -430,7 +430,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 22December2021v3-Beta
+! OriginalVersion: 24December2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -2167,6 +2167,8 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||download-srvr.xyz^$all
 ||134.122.115.190^$all
 ||cybermicto768jubileejhsye6yt6543.s3.us-east-1.amazonaws.com^$all
+! https://github.com/uBlockOrigin/uBlock-issues/issues/1774#issuecomment-1000722777
+||viewty.xyz^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -16460,7 +16462,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 23December2021v1-Beta
+! OriginalVersion: 24December2021v1-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -17442,6 +17444,18 @@ $removeparam=/^from=rss$/
 $removeparam=/^source=rss$/
 ! https://www.smh.com.au/world/europe/i-really-want-to-be-free-dubai-ruler-s-ex-wife-awarded-1b-to-settle-uk-custody-case-20211221-p59jf7.html?ref=rss
 $removeparam=/^ref=rss$/
+! https://github.com/uBlockOrigin/uAssets/issues/11051
+/upgcxcode^$removeparam=uparams
+/upgcxcode^$removeparam=upsig
+/upgcxcode^$removeparam=platform
+/upgcxcode^$removeparam=trid
+/upgcxcode^$removeparam=oi
+/upgcxcode^$removeparam=os
+/upgcxcode^$removeparam=gen
+/upgcxcode^$removeparam=deadline
+/upgcxcode^$removeparam=nbs
+/upgcxcode^$removeparam=uipk
+/upgcxcode^$removeparam=e
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
