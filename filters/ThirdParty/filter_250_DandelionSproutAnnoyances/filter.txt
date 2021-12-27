@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 22November2021v1-Beta-Compilation
+! OriginalVersion: 27December2021v1-Beta-Compilation
 ! Expires: 3 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
@@ -430,7 +430,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 24December2021v1-Beta
+! OriginalVersion: 27December2021v1-Beta
 ! Expires: 5 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -667,6 +667,9 @@ virusresearch.org##.virus-after-fourth-h2
 virusresearch.org##.virus-after-content
 ! https://www.cyclonis.com/how-to-create-gmail-account-without-phone-number/
 cyclonis.com##div.rotatead-container:has(.download[data-params*="dl.enigmasoftware.com"])
+! https://www.2-viruses.com/remove-ad-spam-press-allow-to-continue
+2-viruses.com##.active.prods-win.prod-download
+||2-viruses.com/downloads/spyhunter2^$all
 ! ¤¤¤ Restoro  ¤¤¤
 ! https://www.windowsdispatch.com/fix-system-restore-0x81000203-error-code/
 windowsdispatch.com##strong
@@ -2169,6 +2172,40 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||cybermicto768jubileejhsye6yt6543.s3.us-east-1.amazonaws.com^$all
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/1774#issuecomment-1000722777
 ||viewty.xyz^$all
+||landing.marketstm.com^$document
+! https://scammer.info/t/airdrop-discord-nitro-with-steam-scam-7-977-525-68-47/86156
+||discrode-app.com^$all
+! https://scammer.info/t/1-month-nitro-for-free-take-it-scam/86166
+||discrode-gifte.club^$all
+! fake MediaFire scam domains
+||overeverything.co^$document
+||wrappdt.cloudcircuit.co^$document
+||blacknumbers.co^$document
+||hunterbid.exacad.co^$document
+||songlos.com^$document
+||lorweo.info^$all
+||royaltees.co^$all
+||correctwantserve.top^$document
+||qilihi.correctwantserve.top^$all
+||hunterrandom.latabledusanglier.com^$all
+||insload.bainisgaingeals.com^$document
+||viahunter.lafabricagourmet.co^$document
+||findes.co^$document
+||vitafox.findes.co^$document
+||ooload.qualitywatches.co^$document
+||locatorblog.sukabumitoday.co^$all
+||sukabumitoday.co^$document
+||glofwy.sugarfinehot.top^$document
+||supersong.nl/upload/6277.rar^$all
+||nlnvan.garydouglasnewell.co^$all
+||garydouglasnewell.co^$document
+||partdate.yaspiq.co^$document
+||jmtrading.co^$document
+||monkeyselite.tonick.co^$document
+||rappersonal.paradisedestination.co^$all
+||kqnpcp.friendmagnetcool.top^$all
+||contactalliance.mbogi.co^$all
+||kitago.info^$document
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -19379,9 +19416,9 @@ bloombergquint.com#%#//scriptlet('ubo-aopr.js', 'getSelection')
 ! Fake screen smudge
 ||dinreisevaksine.no/wp-content/themes/dbh/assets/images/background.jpg^
 ! AAB prompts
-/^https://[a-z]{8,25}\.com/v2[a-zA-Z0-9_-]{70,71}$/$xmlhttprequest,third-party
-/^https://[a-z]{8,25}\.com/v2[a-zA-Z0-9_-]{79}$/$xmlhttprequest,third-party
-/^https://[a-z]{8,25}\.com/v2[a-zA-Z0-9_-]{81}$/$xmlhttprequest,third-party
+/^https://[a-z]{8,25}\.com/v2[a-zA-Z0-9_-]{70,71}$/$xmlhttprequest,ping,third-party
+/^https://[a-z]{8,25}\.com/v2[a-zA-Z0-9_-]{79}$/$xmlhttprequest,ping,third-party
+/^https://[a-z]{8,25}\.com/v2[a-zA-Z0-9_-]{81}$/$xmlhttprequest,ping,third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/87299
 @@/favicon.ico|
 @@/favicon1.ico|
