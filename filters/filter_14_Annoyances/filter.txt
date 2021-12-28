@@ -1112,7 +1112,7 @@ anizm.tv##a[href^="https://www.instagram.com/"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44026
 bizimyaka.com##.block-fan
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43632
-soap2day.com##div[class^="col-sm-"] > .alert.alert-warning
+soap2day.*##div[class^="col-sm-"] > .alert.alert-warning
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43168
 hesgoal.com##.twitter-follow-button
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43526
@@ -7113,7 +7113,6 @@ slate.com#@#.ad-container
 ##.sh-cookie-confirmation
 ##.site-cookie-panel
 ##.site-cookies
-##.sqs-announcement-bar
 ##.storm-cookie
 ##.sys_cc-cookies
 ##.tCook
@@ -7637,6 +7636,7 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+blueflag.global,lemoncode.net,records.team##.sqs-announcement-bar
 doppelherz.com#$#.cookie-inquiry-wrapper { display: none !important; }
 doppelherz.com#$#html { overflow: auto !important; }
 epson.ru###cookie_confirm
@@ -20067,7 +20067,7 @@ sodapdf.com##.be-tooltip
 !
 kingdom-anime.com###topVisual
 heros-ultraman.com##.sw-Bnr_Footer
-any-video-converter.com###banner_2018christmas
+any-video-converter.com##div[id^="banner_"]
 any-video-converter.com##.active-popup
 social-dog.net###banner
 tech-camp.in###js-popup
@@ -26050,6 +26050,10 @@ disk.yandex.*##.mail360-banner
 !-----------------------------------------------
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/102502
+hnavi.co.jp#?#div[class^="article-content-"] > p:not([style]) + p[style]:has(> a[href^="https://hnavi.co.jp/lp/system2b/"])
+hnavi.co.jp##div[class^="article-content-"] > p ~ div.bnr2
+hnavi.co.jp##.sidebar > ul.sidebar__banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103126
 biglobe.ne.jp#?#.prom > a.prom-all:upward(1)
 news.biglobe.ne.jp##.bnr
@@ -27911,6 +27915,7 @@ quinhillyer.com,johnbiver.com,jasonmattera.com,ipatriot.com,hooligancharters.com
 ##.widget_blog_subscription
 ~curvegames.com,~news.un.org,~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+nola.com###cm-email-signup-custom
 viz.com#$##modal-newsletter { display: none!important; }
 viz.com#$#.o_overlay { display: none!important; }
 viz.com#$#html { position: static!important; overflow: visible!important; }
