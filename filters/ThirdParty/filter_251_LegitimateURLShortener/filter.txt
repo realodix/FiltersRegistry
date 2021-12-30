@@ -1,6 +1,6 @@
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 29December2021v6-Beta
+! OriginalVersion: 30December2021v6-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1136,6 +1136,8 @@ $removeparam=sk,domain=bing.com|aliexpress.*
 ||bing.com^$removeparam=cvid
 @@||bing.com/AS/Suggestions?$removeparam=cvid
 ||bing.com^$removeparam=go
+! https://www.bing.com/search?q=brew+milk+video+heathly+or+brainwash&shtp=GetUrl&shid=52ffd333-de86-43eb-8e42-3c4b8d86b6a3&shtk=RHJpbmsgT25lIEdsYXNzIG9mIE1pbGsgYSBEYXkuIEJldHRlciBCb25lcyBvciBCcmFpbndhc2hpbmc%2F&shdk=VGhpcyB2aWRlbyBpcyBzcG9uc29yZWQgYnkgRGFzaGxhbmUuIFRyeSBpdCBmcmVlIGZvciAzMCBkYXlzIGF0IGh0dHBzOi8vd3d3LmRhc2hsYW5lLmNvbS9icmV3IElmIHlvdSBsaWtlIGl0LCB1c2UgdGhlIGNvZGUg4oCYYnJld%2BKAmSBmb3IgMTAlIG9mZiBhdCBjaGVja291dCBJcyBtaWxrIGdvb2Qgb3IgYmFkIGZvciB5b3U%2FIElzIGl0IHJlYWxseSBoZWFsdGh5IGZvciB5b3VyIGJvbmVzPyBXaHkgYXJlIHJlc2VhcmNoZXJzIGFuZCBzY2llbnRpc3RzIHNwZWFraW5nIGFnYWluc3QgaXQ%2FIElzIHRoZSBmb29kIGluZHVzdHJ5IGhpZGluZyBzb21ldGhpbmcgZnJvbSB1cz8gTGV0J3MgZmluZCBvdXQgLi4u&shhk=a8MjbVhOQyCok8qs42amxA6%2B8sUgPQh4DtB4PgJh0gI%3D&shth=OVP.XR1Cz2a0aI5ebTNFbFySUAIIEk
+||bing.com^$removeparam=/^sh/
 !!! ——— eBay ———
 ! https://www.ebay.com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=aid%3D111001%26algo%3DREC.SEED%26ao%3D1%26asc%3D20160908105057%26meid%3Da7ecc6d2187f43619ceae843d9c7e96e%26pid%3D100675%26rk%3D1%26rkt%3D15%26sd%3D173553616659%26itm%3D173553616659&_trksid=p2481888.c100675.m4236&_trkparms=pageci%3A87956e3f-3968-11e9-ae7f-74dbd1801ed7%7Cparentrq%3A277c9f541690a861b48415dfffeb1383%7Ciid%3A1 (31/10/2020)
 $removeparam=_trkparms
@@ -2148,7 +2150,7 @@ $removeparam=referer,domain=bodykind.com
 ! https://v.youku.com/v_show/id_XNTE5MDA0MzA2NA==.html?s=decc0e2f935f461f84b1 (30/11/2021)
 $removeparam=s,domain=spreadprivacy.com|youku.com
 ! https://twitter.com/chrissteinplays/status/1461003062936547331?t=CXBXxSiUKI8wPAkoGMH7zg
-$removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|npr.org|twitter.com|elprecio.es
+$removeparam=t,domain=rakuten.com|steamcdn-a.akamaihd.net|duckduckgo.com|npr.org|elprecio.es
 ! https://market.yandex.ru/promo/hasbro_special?clid=602&cpa-perf=1#c
 ||yandex.$removeparam=clid
 $removeparam=cpa-perf
@@ -2316,7 +2318,7 @@ $removeparam=promo_position,domain=oikotie.fi|kesaduuni.org
 ! https://www.audible.co.uk/pd/Ramble-Book-Audiobook/0008293368?plink=jNCwFiYvWi3iSh2g&pf_rd_p=ab7f9b8c-a03d-488b-a24b-c34000fee893&pf_rd_r=7HVH9AZS88GVGWRP0DMV
 $removeparam=plink,domain=audible.*
 ! https://github.com/easylist/easylist/issues/10288
-||startpage.com^$removeparam=segment
+||startpage.*^$removeparam=segment
 ! https://www.netflix.com/watch/81110875?trackId=254794450&tctx=2%2C1%2C96c1d619-68cd-4cad-ba6c-7e473d76dd30-24305116%2C%2Cunknown%2C%2C%2C (29/12/2021)
 ||netflix.com^$removeparam=trackId
 ||netflix.com^$removeparam=tctx
@@ -2324,6 +2326,16 @@ $removeparam=plink,domain=audible.*
 ||netflix.com^$removeparam=trackIdTrailer
 ||netflix.com^$removeparam=trackIdEpisode
 ||netflix.com^$removeparam=dpRightClick
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1889101
+$removeparam=rx_c,domain=cvshealth.*
+$removeparam=rx_group,domain=cvshealth.*
+$removeparam=rx_job,domain=cvshealth.*
+$removeparam=rx_source,domain=cvshealth.*
+$removeparam=rx_ts,domain=cvshealth.*
+$removeparam=rx_p,domain=cvshealth.*
+! https://www.paramountplus.com/fi/?cbsclick=QHSXuQw7WxyIWrPQHcWEzT3UUkG2eTztlwcSQ00&vndid=395495
+$removeparam=cbsclick,domain=paramountplus.com|cbs.com
+$removeparam=vndid,domain=paramountplus.com|cbs.com
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
