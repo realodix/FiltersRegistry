@@ -358,6 +358,14 @@
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/11152
+rjno1.com##div[id][style^="width: 100%; height: 100%; border-"]
+rjno1.com#%#//scriptlet("abort-current-inline-script", "onload", "AdBlock")
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rjno1.com
+@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2019.js$domain=rjno1.com
+@@||rjno1.com^$generichide
+!#endif
 ! https://github.com/uBlockOrigin/uAssets/issues/11148
 zhangxinxu.com#@#.sldebar_out + *,style[id] + a[class]
 zhangxinxu.com#$#.sldebar_out + * { height: 0!important; }
@@ -502,9 +510,6 @@ stealjobs.com#@#.custom-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7428
 !+ PLATFORM(ios, ext_android_cb)
 @@||moviesunuss.net^$generichide
-! rjno1.com
-!+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
-@@||rjno1.com^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/10485
 alotof.software#%#window.google_jobrunner = function() {};
 !+ PLATFORM(ext_ff, ext_opera, ios, ext_android_cb, ext_ublock)
@@ -561,21 +566,6 @@ papalah.com#%#//scriptlet("abort-on-property-read", "adBlockDetected")
 @@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$domain=papalah.com
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||papalah.com^$generichide
-! https://github.com/AdguardTeam/AdguardFilters/issues/37247
-rjno1.com#%#//scriptlet("prevent-setTimeout", "/Goog_Osd_UnloadAdBlock|ad blocker/")
-rjno1.com#%#//scriptlet("abort-current-inline-script", "onload", "AdBlock")
-@@||rjno1.com^$csp=script-src 'self' *;style-src
-||d5.sina.com.cn/litong/zhitou/leju/leju.js$script,redirect=noopjs,important,domain=rjno1.com
-!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
-@@||rjno1.com^$generichide
-@@||d5.sina.com.cn/litong/zhitou/leju/leju.js$domain=rjno1.com
-@@||rjno1.com/templates/moban/images/logo.gif#
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=rjno1.com
-@@||pagead2.googlesyndication.com/pagead/js/r*/show_ads_impl.js$domain=rjno1.com
-@@||googletagservices.com/activeview/js/current/osd.js$domain=rjno1.com
-rjno1.com#@#.adsbygoogle
-rjno1.com#$#.adsbygoogle { height: 1px!important; }
-!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34322
 @@||8maple.ru/comic.jpg$domain=video.bilibili.to
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42425
@@ -3847,6 +3837,7 @@ ubmcmm.baidustatic.com
 ##a[href*="/nf.brushshopy.com"]
 ##a[href*="/od005.cn"]
 ##a[href*="/od005.com"]
+##a[href*=".chicagospy.com/"]
 ##a[href*="/od005.net"]
 ##a[href*="/od005.tv"]
 ##a[href*="/od005.vip"]
@@ -11473,7 +11464,10 @@ hxsame.hexun.com$domain=~quote.hexun.com
 ||zzsky.cn/images/a_d_
 ||zzz4.com/JS_AD/
 ||zzzyk.com/js/
+||dingdangsheji.com^*/%E7%94%BB%E6%9D%BF-
+||dingdangsheji.com^*/%E5%9B%BE%E6%80%AA%E5%85%BD
 szxx.com.cn###A0
+dingdangsheji.com##.modown-ad
 6parknews.com#?##d_list > ul > li:-abp-has(a[href^="http"]:not([href*="6parknews"]))
 szxx.com.cn###A1
 szxx.com.cn###A2
@@ -17297,6 +17291,7 @@ gohome.com.hk#@#div[id^="div-gpt-ad"]
 @@_ads_cpc_$domain=90lover.cn
 @@_cpa_adview_$domain=52xkdy.com
 @@_cpc_cpm_$domain=saraba1st.com|ygo-sem.cn
+@@_cpc_cpm_$domain=youranshare.com
 @@u-ads.adap.tv*youku.$domain=youku.com
 @@||012.tw^$script,domain=apk.tw
 @@||060s.com/images_ad/*.png
@@ -19272,6 +19267,7 @@ $script,subdocument,third-party,websocket,xmlhttprequest,domain=00ksw.com|01zww.
 ||tguomcq.cn^
 ||myline1.club^
 ||zgyso.cn^
+||xaxdwz.xyz^
 bxwx333.org###addiv3
 bxwx333.org###bdstatic
 55shuba.com###botDiv
