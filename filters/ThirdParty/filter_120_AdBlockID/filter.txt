@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 21.12.37
+! OriginalVersion: 21.12.1
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 30 Dec 2021 12:50 UTC
+! Last modified: 31 Dec 2021 18:18 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -2989,12 +2989,13 @@ gamereactor.asia##.wrapper:has(.ad_interscroller)
 brilio.net##amp-iframe:has([src*="advertnative.com"])
 inews.id##div:matches-css(text-align: center):has([id*="-StickyAd" i])
 biggo.id##.search-ad-banner-re
+shopee.co.id##.shopee-search-item-result .shopee-search-item-result__item:has-text(Iklan)
 [$path=/find/]tokopedia.com#$?# div[data-testid^="divFindProduct"]:has(div[data-testid="master-product-card"] [data-testid="lblTopads"]) { remove: true; }
 [$path=/p/]tokopedia.com#$?# a[data-testid="lnkProductContainer"]:has([alt*="topads"]) { remove: true; }
 [$path=/search?]tokopedia.com#$?# div[data-testid="master-product-card"]:has([data-testid="divSRPTopadsIcon"]) { remove: true; }
-[$path=/search?]shopee.co.id#$?#.shopee-search-item-result__item:has-text(/iklan/i) { remove: true; }
 biggo.id##div[style^="overflow-x: auto;"]:has([id^="ads"])
 biggo.id##img[onclick*="AD_SEARCHRESULT"]
+shopee.co.id##.search-page .search-items-container .item-card-list__item-card-wrapper:has-text(Ad)
 [$path=/find/]tokopedia.com#$?# div[data-testid="divLazyFindProduct"]:has([data-testid="lblTopads"]) { remove: true; }
 [$path=/search?]tokopedia.com#$?# div[data-testid="master-product-card"]:has([data-testid="linkProductTopads"]) { remove: true; }
 m.akurat.co#$##mainPage { margin-top: 0!important; }
