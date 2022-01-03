@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-01-01 08:51:49 CET
+! Last modified: 2022-01-03 08:35:15 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -49,6 +49,7 @@ affarsstaden.se#%#//scriptlet('ubo-acis.js', 'jQuery', 'adblockdetect')
 aftonbladet.se###main > div > div > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##a:has(span:has-text(/^annons/i))
 aftonbladet.se##a:has-text(Kommersiell text, innehåller annonslänkar)
+aftonbladet.se##a[href^="https://kampanj."]:upward(1)
 aftonbladet.se##aside > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##div[class^="css-"]:has([data-ad-subtype="mega"])
 aftonbladet.se##section > div:has(h2:has-text(/^annons/i))
@@ -80,11 +81,6 @@ bandyfeber.com##.avia-content-slider:has(.slide-entry-excerpt:has-text(/annons:/
 bandyfeber.com##article:has(a[href*="/annons-"])
 barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vxonews.se,ystadsallehanda.se##[id*="_panorama"],[id*="_mobil"]:upward(div[display="block"])
 barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vxonews.se,ystadsallehanda.se##[id*="_panorama"],[id*="_outsider"],[id*="_insider"],[id*="_mobil"]:upward(1)
-battrenyheter.se##.home-cat-first:has(a[href$="/sponsrad/"])
-battrenyheter.se##.post-item:has(a[href$="/samarbete/"])
-battrenyheter.se##.post-item:has(a[href$="/sponsrad/"])
-battrenyheter.se##.post-item:has(a[href*="casino"])
-battrenyheter.se##.vc_row.vc_row-flex:has(.abnan-single)
 battrestadsdel.se###my-mega-menu-widget:has-text(/sponsrade artiklar/i)
 biblioteksforeningen.se#$#body { opacity:1!important }
 bicycling.se,runnersworld.se#$#.modal-open { overflow: initial !important; }
@@ -124,6 +120,7 @@ datormagazin.se##.td_module_wrap:has(a[href*="/annons/"])
 datormagazin.se##a:has-text(/^annons/i)
 designbase.se##.is_sponsored:upward(.article-item)
 di.se#%#//scriptlet('ubo-acis.js', 'Di', 'initAds')
+di.se#%#//scriptlet('ubo-nosiif.js', 'runAdBlockPaywall')
 di.se#%#//scriptlet('ubo-nostif.js', '#triggerModal')
 di.se#%#//scriptlet('ubo-ra.js', 'data-auto-play,,stay')
 di.se#%#//scriptlet('ubo-set.js', 'getAdblockerStatus', 'noopFunc')
@@ -431,7 +428,6 @@ proffs.se#$#*::-webkit-scrollbar { display: unset !important; }
 nyadagbladet.se#%#//scriptlet('ubo-acis.js', 'OneSignal')
 newsvoice.se#%#//scriptlet('ubo-acis.js', 'exactmetrics_scroll_tracking_load')
 boktugg.se,carup.se,dinbyggare.se,ettgottskratt.se,humorbibeln.se,konsolnyheter.se,lakartidningen.se,matsafari.nu,newsner.com,sportbibeln.se,sportpanelen.se,trafiksakerhet.se,villalivet.se,zeinaskitchen.se#%#//scriptlet('ubo-acis.js', 'monsterinsights_frontend')
-di.se#%#//scriptlet('ubo-nosiif.js', 'runAdBlockPaywall', '1000')
 bastad.se,fysikstugan.se,heleneholmsif.se,historiskahem.se,melodifestivalklubben.se,newsvoice.se,pppress.se,thorengruppen.se,trafikskola.se,utslappsratt.se#%#//scriptlet('ubo-set.js', 'em_track_user', 'false')
 bastad.se,fysikstugan.se,heleneholmsif.se,historiskahem.se,melodifestivalklubben.se,newsvoice.se,pppress.se,thorengruppen.se,trafikskola.se,utslappsratt.se#%#//scriptlet('ubo-set.js', 'exactmetrics_frontend', 'undefined')
 boktugg.se,carup.se,dinbyggare.se,ettgottskratt.se,humorbibeln.se,konsolnyheter.se,lakartidningen.se,matsafari.nu,newsner.com,sportbibeln.se,sportpanelen.se,trafiksakerhet.se,villalivet.se,zeinaskitchen.se#%#//scriptlet('ubo-set.js', 'mi_track_user', 'false')
@@ -439,19 +435,12 @@ boktugg.se,carup.se,dinbyggare.se,ettgottskratt.se,humorbibeln.se,konsolnyheter.
 !#if !env_chromium
 @@||fast.fonts.net/*/1.css$domain=pbswisstools.com
 nyadagbladet.se$$script[tag-content="OneSignal"][max-length="262144"]
-svd.se$$script[tag-content="SvD.ads.preDefineAd"][max-length="262144"]
-di.se$$script[tag-content="checkAdBlockEnabled"][max-length="262144"]
 bastad.se,heleneholmsif.se,historiskahem.se,melodifestivalklubben.se,newsvoice.se,pppress.se,thorengruppen.se,trafikskola.se,utslappsratt.se$$script[tag-content="em_track_user"][max-length="262144"]
 bastad.se,heleneholmsif.se,historiskahem.se,melodifestivalklubben.se,newsvoice.se,pppress.se,thorengruppen.se,trafikskola.se,utslappsratt.se$$script[tag-content="exactmetrics_frontend"][max-length="262144"]
 newsvoice.se$$script[tag-content="exactmetrics_scroll_tracking_load"][max-length="262144"]
 boktugg.se,carup.se,dinbyggare.se,ettgottskratt.se,humorbibeln.se,konsolnyheter.se,lakartidningen.se,matsafari.nu,newsner.com,sportbibeln.se,sportpanelen.se,trafiksakerhet.se,villalivet.se,zeinaskitchen.se$$script[tag-content="mi_track_user"][max-length="262144"]
 boktugg.se,carup.se,dinbyggare.se,ettgottskratt.se,humorbibeln.se,konsolnyheter.se,lakartidningen.se,matsafari.nu,newsner.com,sportbibeln.se,sportpanelen.se,trafiksakerhet.se,villalivet.se,zeinaskitchen.se$$script[tag-content="monsterinsights_frontend"][max-length="262144"]
-aftonbladet.se$$script[tag-content="preLoadAds"][max-length="262144"]
-www.expressen.se$$script[tag-content="window.Bau.preloadAds"][max-length="262144"]
 dn.se$$script[tag-content="window.DN.initAds"][max-length="262144"]
-!#endif
-!#if env_mobile
-aftonbladet.se#%#//scriptlet('ubo-nostif.js', 'abAndroidSmartAppBannerActive')
 !#endif
 !#if !env_mobile
 /jquery.smoothwheel/*$script
@@ -510,8 +499,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -864,6 +853,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 .se/wdg/vda-active
 .se/wp-content/banners/
 .se/xhr/add-impression/
+/*banner-nyhetsbrev*.mp4
 /468adrotate.php
 /?adsforwp_front_js
 /?agg_url=/shopping$domain=nyheter24.se
@@ -1587,7 +1577,6 @@ barnsemester.se##.puffLine
 barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vxonews.se,ystadsallehanda.se##.component__guide-ads, #fullpage-ad-portal, div[style="min-height: 302px;"]
 barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,kristianstadsbladet.se,olandsbladet.se,osterlenmagasinet.se,ostrasmaland.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vxonews.se,ystadsallehanda.se##.component_gdprMessage__container
 batliv.se,borattforum.se,brollopsmagasinet.se,bussmagasinet.se,elinor.se,em-fotboll.se,fotbollsresultat.com,globalpolitics.se,nyhetersto.se,svenskbyggtidning.se##a.gofollow[data-track]
-battrenyheter.se##.gbnan, .abnan-single, a[href*="bettingsidor"]
 battrestadsdel.se###top-banner-mobile, #HideBanner, .apd-text, .apds_main, .entry-priomaker, [class^="dls-"]
 battrestadsdel.se,casinoexpo.se,flashback.se,leta.se###top-banner
 beernews.se##.cookie-consent-wrapper
@@ -1758,7 +1747,7 @@ forum.macworld.se,idg.se##.idgcp__layer
 forum.mustangclubsweden.org##a[href*="&do=advertisement&ad=1"]
 forum.robsoft.nu##td[valign="middle"] > a[target="_blank"]
 forum.robsoft.nu,svenskaturistforeningen.se##.cookie-box
-forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article
+forvaltarforum.se##[id^="ff_banner"], .home .partner_article + .mh-section, .home .payed_article + .mh-section, .home-columns .ticker-title.partner_article, .home-columns .ticker-title.payed_article, .mh-header .widget_sow-slider, .sow-slider-image, .houdini_partner_article, .houdini_video_banner
 fotboll.com##.header-static-lg, .fp-partner, .xs-ad, .bo-wrapper
 fotbolldirekt.se,hockeysverige.se,innebandymagazinet.se##.site-partnevisment, .h-background--sponsored-light, .row .text-center img
 fotbollskanalen.se##.brand, .desktop-ad-web
@@ -2399,7 +2388,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||gamesglue.com/js/gameanalytics/GameAnalytics.$script
 ||getlevelten.com^$third-party
 ||getsitecontrol.com^$third-party
-||glimr.io^$third-party
 ||gnuheter.com/creeper/image$image
 ||gopeach.se^$third-party
 ||greatstoryvideo.se^$third-party
