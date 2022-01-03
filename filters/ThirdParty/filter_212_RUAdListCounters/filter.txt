@@ -1,8 +1,8 @@
 !
-! Checksum: PQU/PvnJmueV/cGVI5j59w
-! OriginalVersion: 202201031644
+! Checksum: JfBly29HVKpcC9oqmXKQAQ
+! OriginalVersion: 202201032044
 ! Title: RU AdList: Counters
-! Last modified: 03 Jan 2022 16:44 UTC
+! Last modified: 03 Jan 2022 20:44 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1090,7 +1090,10 @@ zen.yandex.*##div[class*="yandex-direct"]
 ! пустые и рекламные блоки в правой колонке
 4pda.*##html[style] > body [id][class][style^="overflow: hidden; height:"] > div[style*="display: block;"]
 4pda.*##html[style] > body:not([style=";background-color:#E6E7E9!important"]) [id][class] > .slider-list:nth-child(-n+5) + div[class]
+4pda.*##html[style] [id] .slider-list[style] ~ div[class]:empty
+4pda.*##html[style] [id] .slider-list[style] ~ div[class]:not([id]) > [style=""]
 4pda.*#?#html[style] > body [id][class][style^="overflow: hidden; height:"] > div[style]:-abp-has(a[href][target="_blank"] > img)
+4pda.*#?#html[style] [id] .slider-list[style] ~ div[class]:not([id]):-abp-has(> :only-child:not(div):not([id]):not([class]))
 4pda.*#?#html[style] [id] div[class]:-abp-has(> h2 ~ script:-abp-contains(/return/))
 ! пустые и рекламные блоки в материалах
 4pda.*##html[style] > body .advanced-area .post[itemid] ~ .post:not([itemid]):nth-child(-n+3)
