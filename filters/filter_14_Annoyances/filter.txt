@@ -26189,6 +26189,7 @@ sugi9532.com##.c-infoBar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101977
 realsound.jp###bnr_RsCareer
 ! promo banner on mobile
+!+ NOT_OPTIMIZED
 eiga.com##.header-pure-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101720
 toretoku.jp##.saleBnr
@@ -27998,6 +27999,7 @@ quinhillyer.com,johnbiver.com,jasonmattera.com,ipatriot.com,hooligancharters.com
 ##.widget_blog_subscription
 ~curvegames.com,~news.un.org,~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+bankchart.com.ua##.subscription-ad
 euobserver.com##div[class="v2 wide membership-upsell show"]
 lifewire.com##.news > .latest-issue-spotlight
 virtualbrest.ru##a[href="https://tx.me/virtualbrestnews"] > img[height="65"]
@@ -31154,6 +31156,8 @@ mail.ru###subscriptionFormWeekMainBlockId
 !######### CSS tweaks #########
 !##############################
 !
+! circumvent countdown
+ac-illust.com,photo-ac.com#$#body.modal-open * { filter: none!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/pull/103288
 lover9.net#$##sex.sexmaster[style*="display:"] { display: block !important; }
 ! https://www.reddit.com/r/uBlockOrigin/comments/r43gcd/how_do_i_prevent_the_adblock_detector_and_the/
@@ -31182,10 +31186,6 @@ social-unlock.com#$#form#link a.submit { opacity: 1 !important; pointer-events: 
 kingtalks.net#$##mybutton { display: block !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93826
 nestoria.de#$##js-filters-view { padding-top: 0!important; }
-! circumvent countdown
-ac-illust.com#$##timer-download { display: block!important; }
-photo-ac.com#$##timer-download-list { display: block!important; }
-ac-illust.com,photo-ac.com#$#.p402_hide > div#timer   { display: none!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91434
 designwizard.com#$#.main-header { top: 0!important; }
 ! https://github.com/uBlockOrigin/uAssets/issues/4501
@@ -31443,6 +31443,9 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !######### JS tweaks ##########
 !##############################
 !
+! circumvent countdown
+ac-illust.com,photo-ac.com#%#//scriptlet('set-constant', 'adsLoaded', 'true')
+ac-illust.com,photo-ac.com#%#//scriptlet('set-constant', 'enable_dl_after_countdown', 'true')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/104640
 appsmodz.com#%#//scriptlet("adjust-setInterval", "startChecking", "*", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/104500
