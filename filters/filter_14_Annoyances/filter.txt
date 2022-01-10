@@ -15115,6 +15115,7 @@ consent2.ksta.de#%#AG_onLoad(function(){if(window.location.href.includes("consen
 privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 !
+gaana.com#%#//scriptlet('set-cookie', 'gdprv1', '1')
 umcutrecht.nl#%#//scriptlet('set-local-storage-item', 'consent', '1')
 apotheka.ee#%#//scriptlet('set-cookie', 'gdpr_cookie_token', '1')
 uphold.com#%#(function(){try{"undefined"==typeof localStorage||localStorage.getItem("wallet.trackingConsentAnswerDate")||localStorage.setItem("wallet.trackingConsentAnswerDate",Date())}catch(a){}})();
@@ -18582,6 +18583,8 @@ amp-reddit-com.cdn.ampproject.org##.AppSelectorModal__body
 reddit.com#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("bannerLastClosed", "Thu Sep 16 2030 16:46:52 GMT+0300") } } catch (ex) {} })();
 reddit.com#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("pillLastClosed", "Thu Sep 16 2030 16:46:52 GMT+0300") } } catch (ex) {} })();
 !
+sukima.me##header > div.v-toolbar__content div[class="container"]
+sukima.me#$#header > div.v-toolbar__content { height: 52px!important; }
 pochta.ru##div[class^="TrackingInput__Banners-"]
 gallerix.ru##a[href^="https://flae.ru/rec/click.php?c="]
 gallerix.ru##.defs-closeadv
@@ -26133,6 +26136,11 @@ disk.yandex.*##.mail360-banner
 !-----------------------------------------------
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/104530
+gaana.com##body .advert:not(#style_important)
+gaana.com#$##app > main.wrapper { padding-right: 0 !important; }
+gaana.com#$##app > footer.footer { margin-right: 0 !important; }
+gaana.com#$#section#scoll_headerInfo.active { width: 100% !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/105971
 sp.m.jiji.com##.spView > div.banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103566
