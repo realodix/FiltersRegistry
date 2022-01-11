@@ -5217,6 +5217,12 @@ sinoptik.ua#@#div[id^="adsLeftZone"]
 sinoptik.ua#@##left-slot1
 sinoptik.ua#@#div[id^="bn_"]
 !#endif
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/102209
+!#if (adguard_app_ios || adguard_ext_android_cb)
+@@||ebalovo.adult^$generichide
+@@||ebalovo.porn^$generichide
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/104692
 studref.com#%#//scriptlet("set-constant", "abl", "noopFunc")
 ||securepubads.g.doubleclick.net/pagead/ppub_config$xmlhttprequest,redirect=nooptext,domain=studref.com
@@ -22162,7 +22168,6 @@ fastpic.ru,fastpic.org##div[style="height: 900px; min-width: 300px;"]
 fastpic.ru,fastpic.org##div[style="width: 100%; height: 250px;"]
 fastpic.ru,fastpic.org###bleft
 fastpic.ru,fastpic.org###bright
-fastpic.ru,fastpic.org##div[class^="spinner"] a[id]:last-child
 !
 ! lostfilm.tv, mirrors: lostfilm.tw,lostfilm.run
 lostfilm.pro,lostfilmtv.site,lostfilm.uno,lostfilm.run,lostfilm.tw,lostfilm.tv##a[onclick^="backToCshponk"]
