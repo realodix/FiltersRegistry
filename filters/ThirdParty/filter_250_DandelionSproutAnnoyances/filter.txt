@@ -6,7 +6,7 @@
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
 ! What this broad compilation doesn't block: Newsletters, cookie banners, social media links to company pages
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-! OriginalVersion: 03January2022v1
+! OriginalVersion: 16January2022v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -411,6 +411,11 @@ twitter.com###layers > div:nth-of-type(2):last-of-type
 ! https://github.com/AdguardTeam/AdguardFilters/issues/105227
 ##li[class$=_get_app]
 ###getAppModel
+! https://github.com/AdguardTeam/AdguardFilters/issues/104688
+###ampPush
+##.amp-push-notification:not(html, body)
+##.pushbtn.align-center-button:not(html, body)
+###___ndtvpushdiv
 ! Below are entries that I borrowed from "I Don't Want Your App", which is maintained by https://github.com/lassekongo83 at https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/i-dont-want-your-app.txt, and which is licenced as GPLv3
 ! Generic
 ##a[href*=".app.link/"]
@@ -17092,7 +17097,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 15January2022v2-Beta
+! OriginalVersion: 16January2022v5-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -17102,6 +17107,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 ! Important notes:
 ! - this list can not bypass tracker redirects through third-party domains. This can be done by strict-blocking said domain and using the ability to view parameters on the strict-block page or tools to bypass it.
 ! - this list can not remove anything after the # in URLs. This is impossible in uBlock Origin and AdGuard.
+! - this list can not remove paramters added using https://developer.mozilla.org/en-US/docs/Web/API/History/replaceState
 ! ——— General remove rules ——— !
 ! From AdGuard CoreLibs (11/11/2020)
 $removeparam=yclid
@@ -18409,6 +18415,11 @@ $removeparam=share_link_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-974118
 ||tiktok.com^$removeparam=checksum
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1909327
+||tiktok.com^$removeparam=sec_uid
+||tiktok.com^$removeparam=share_author_id
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1979025
+$removeparam=/^web_id\d+/,domain=tiktok.com
 !! ——— Rules for heavily covered international sites ———
 !!! ——— PR-China ———
 !!! Special thanks to https://github.com/shenzhiming88 for helping with this section.
@@ -19532,9 +19543,6 @@ $removeparam=rffrid
 $removeparam=/^qxjkl=tsid:/
 $removeparam=ad_name
 ||dermstore.com^$removeparam=URL
-! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1909327
-||tiktok.com^$removeparam=sec_uid
-||tiktok.com^$removeparam=share_author_id
 ! https://www.gamereactor.fi/uutiset/914423/JBL+esitteli+aanekkaan+BoomBox+3n+ja+samalla+uuden+mikrofonin+ja+nappikuulokkeet+pelaamiseen/?rs=rss
 $removeparam=rs,domain=gamereactor.*
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1949473
@@ -19554,6 +19562,8 @@ $removeparam=rcode,domain=kucoin.com
 ||adressa.no^$removeparam=/^rs[0-9]/
 ! https://www.deezer.com/en/track/143032368?deferredFl=1
 ||deezer.com^$removeparam=deferredFl
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1979025
+$removeparam=Bibblio_source,domain=macrumors.com
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
