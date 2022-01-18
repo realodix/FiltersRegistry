@@ -2317,6 +2317,9 @@ amateurbusters.com#?#.sb_area > .sb_area_headline:contains(Urlaub)
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/107055
+gamepro.de#%#//scriptlet("set-constant", "wgm.initAds", "noopFunc")
+gamepro.de#%#(function(){var a={cmd:[],"public":{getVideoAdUrl:function(){},createNewPosition:function(){},refreshAds:function(){}}};a.cmd.push=function(b){try{b()}catch(c){}};window.jad=a})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/102180
 duden.de#%#//scriptlet('remove-class', 'pageskin', 'body.pageskin')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101799
@@ -5609,6 +5612,11 @@ homad-global-configs-eu-fra.schneevonmorgen.com.s3.amazonaws.com/*/config.json$r
 !###############
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/107055
+!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_chromium)
+@@||getjad.io/library/$script,domain=gamepro.de
+@@||getjad.io/prebid/$script,domain=gamepro.de
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/104747
 heise.de#@#[data-ad-unit]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103978
