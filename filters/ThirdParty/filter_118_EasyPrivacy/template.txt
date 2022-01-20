@@ -1,6 +1,11 @@
 !
 @include "https://easylist.to/easylist/easyprivacy.txt" /exclude="../../exclusions.txt"
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/103955
+!#if (adguard_ext_safari || adguard_app_ios)
+@@||ups.com/track?$domain=ups.com
+@@||parcelapp.net/webtrack.$domain=parcelapp.net
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/86351
 !+ PLATFORM(ios, ext_safari)
 @@||toloka.to/tracker.php?$domain=toloka.to
