@@ -438,7 +438,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 21January2022v1-Beta
+! OriginalVersion: 21January2022v2-Beta
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -7719,7 +7719,7 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ://ww5.$document,domain=~ww5.ikea.com|~ww5.msu.ac.zw
 ://ww6.$document,domain=~ww6.generali.pt
 ://ww7.$document,domain=~ww7.be|~ww7.readsnk.com
-://ww8.$document,domain=~ww8.co|~ww8.ikea.com|~ww8.tiki.ne.jp|~ww8.erovoice.us|~ww8.anyanime.com|~ww8.bakushpal.az|~ww8.tokyoghoulre.com
+://ww8.$document,domain=~ww8.co|~ww8.ikea.com|~ww8.tiki.ne.jp|~ww8.erovoice.us|~ww8.anyanime.com|~ww8.bakushpal.az|~ww8.tokyoghoulre.com|~ww8.readonepiece.com
 ://ww9.$document,domain=~ww9.ikea.com|~ww9.tiki.ne.jp|~ww9.sakura.ne.jp|~ww9.generali.pt|~ww9.itau.com.br
 ://ww10.$document
 ://ww11.$document
@@ -7865,7 +7865,7 @@ get.adobe.com###offersInformationPane
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 15January2022v1-Beta
+! OriginalVersion: 21January2022v2-Beta
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -9886,6 +9886,8 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||discqrdapp.com^$redirect=nooptext,important
 ! https://scammer.info/t/discord-nitro-scam-25/87887
 ||discorde-nitre.xyz^$redirect=nooptext,important
+! https://github.com/blocklistproject/Lists/issues/613#issuecomment-1018499340
+||e-giftnitro.com^$redirect=nooptext,important
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$redirect=nooptext,important
@@ -15111,7 +15113,7 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ://ww5.$document,domain=~ww5.ikea.com|~ww5.msu.ac.zw
 ://ww6.$document,domain=~ww6.generali.pt
 ://ww7.$document,domain=~ww7.be|~ww7.readsnk.com
-://ww8.$document,domain=~ww8.co|~ww8.ikea.com|~ww8.tiki.ne.jp|~ww8.erovoice.us|~ww8.anyanime.com|~ww8.bakushpal.az|~ww8.tokyoghoulre.com
+://ww8.$document,domain=~ww8.co|~ww8.ikea.com|~ww8.tiki.ne.jp|~ww8.erovoice.us|~ww8.anyanime.com|~ww8.bakushpal.az|~ww8.tokyoghoulre.com|~ww8.readonepiece.com
 ://ww9.$document,domain=~ww9.ikea.com|~ww9.tiki.ne.jp|~ww9.sakura.ne.jp|~ww9.generali.pt|~ww9.itau.com.br
 ://ww10.$document
 ://ww11.$document
@@ -17105,7 +17107,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 21January2022v2-Beta
+! OriginalVersion: 21January2022v3-Beta
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -18111,6 +18113,10 @@ $removeparam=/^ref=admitad$/
 $removeparam=/^source=admitad$/
 ! https://horace.co/en/?target=admitad&tagtag_uid=b3c1717ba8405d217dcc71ac3957989a
 $removeparam=/^target=admitad$/
+! https://www.inredningsvaruhuset.se/ios/63223-apple-iphone-13-128gb-midnight-0194252707203.html?referer=prisjakt
+$removeparam=/^referer=prisjakt/i
+! https://digicom.nu/sv/produkter/xiaomi-box-s-4k-hdr.html?ref_lp=prisjakt
+$removeparam=ref_lp
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -19401,8 +19407,6 @@ $removeparam=recs_seed,domain=nordstrom.com
 $removeparam=ct,domain=bumble.com
 ! https://www.savagex.com/shop/savage-x-smoking-jacket-sq2149163-6212-12096199?psrc=browse_men_sleep
 $removeparam=psrc,domain=savagex.com
-! https://www.voosestore.com/fi/drones/dji/dji-mavic/dji-mavic-mini/dji-mini-2-fly-more-combo?ref_lp=prisjakt
-$removeparam=ref_lp,domain=voosestore.com
 ! https://shopee.es/?c=install_homepage01_211109&deep_and_deferred=1&smtt=9&pid=affiliates_planning_chollometro
 ||shopee.$removeparam=deep_and_deferred
 ! https://www.gamivo.com/product/windows-10-professional?glv=geyuy8q7
@@ -19583,6 +19587,12 @@ $removeparam=rpcid,domain=lifamasks.shop
 ! https://www.bleepingcomputer.com/news/security/mcafee-agent-bug-lets-hackers-run-code-with-windows-system-privileges/?traffic_source=Connatix
 ||bleepingcomputer.com^$removeparam=traffic_source
 $removeparam=/traffic_source=Connatix/i
+! https://www.alina.se/Produkt.aspx?site=prisjakt&T2=0045496453435
+$removeparam=site,domain=alina.se
+! https://www.motardinn.com/motorcykel-utrustning/ctek-mxs-5.0/77878/p?belboon=2201192236054280583
+$removeparam=belboon,domain=motardinn.com
+! https://www.davids.se/produkt/mlpg3qn-a?variant=15818&prisjakt=1
+$removeparam=prisjakt,domain=davids.se|poradio.se|teleradio.nu
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
