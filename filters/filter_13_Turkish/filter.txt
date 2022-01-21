@@ -429,11 +429,16 @@
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
 ! #adcontent bait
-bakimlikadin.net,korsanedebiyat.com,ozbeceriksizler.co,iyibeslenme.net,genelpara.com,teknop.net,kirtkirtla.com,buneymis.net,ozgunbilgi.com,azbuz.org,mustafabukulmez.com,yemeklerimiz.com,siberkalem.com,hepgezelim.com,urfakalesi.com,gecbunlari.com,oyuncukuru.org,filmonerileri.org,sosyofo.com,hknkr.com,wblogy.com,kadioglublog.com,konuneydi.com,intekno.net#@##adcontent
-bakimlikadin.net,korsanedebiyat.com,ozbeceriksizler.co,genelpara.com,azbuz.org,mustafabukulmez.com,yemeklerimiz.com#%#//scriptlet("prevent-setTimeout", "0===o.offsetLeft&&0===o.offsetTop")
+morlevha.com,bakimlikadin.net,korsanedebiyat.com,ozbeceriksizler.co,iyibeslenme.net,genelpara.com,teknop.net,kirtkirtla.com,buneymis.net,ozgunbilgi.com,azbuz.org,mustafabukulmez.com,yemeklerimiz.com,siberkalem.com,hepgezelim.com,urfakalesi.com,gecbunlari.com,oyuncukuru.org,filmonerileri.org,sosyofo.com,hknkr.com,wblogy.com,kadioglublog.com,konuneydi.com,intekno.net#@##adcontent
+morlevha.com,bakimlikadin.net,korsanedebiyat.com,ozbeceriksizler.co,genelpara.com,azbuz.org,mustafabukulmez.com,yemeklerimiz.com#%#//scriptlet("prevent-setTimeout", "0===o.offsetLeft&&0===o.offsetTop")
 iyibeslenme.net,teknop.net,kirtkirtla.com,buneymis.net,ozgunbilgi.com#%#//scriptlet("set-constant", "adblock.check", "noopFunc")
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/106782
+!#if (adguard_ext_firefox || adguard_app_ios || adguard_ext_android_cb || adguard_ext_safari)
+@@||prestashopturkiye.com^$generichide
+@@||prestashopturkiye.com/images/*.png#*_ad
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103894
 ||mo.ciner.com.tr/assets/js/adblock.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101763
@@ -2553,10 +2558,12 @@ fullhdfilmcibaba.com,720pizlemek.com,hdfilmizledayi.com###adStarter
 /service/advertchannels?$domain=turkuazgazetesi.net|yenialanya.com|bugunkocaeli.com.tr|cagdaskocaeli.com.tr|mansetaydin.com|enkocaeli.com|kocaelikoz.com|kocaelibarisgazetesi.com|seskocaeli.com
 turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdaskocaeli.com.tr,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.us
 !
+||prestashopturkiye.com/ucretsiz-sanal-pos.jpg
 korsanedebiyat.com###custom_html-10
 korsanedebiyat.com###custom_html-12
 ||app.igfhaber.com/netasync.js
 ufukgazetesi.net###newsRead > div.lholder
+medyafaresi.com###globalsun
 cemre.com##a[href*=".adj.st/"] > img
 sezonlukdizi1.com###video-onu2
 ||sezonlukdizi1.com/js/minipop.js
@@ -5084,7 +5091,7 @@ eskisehirgundem.com##div[class="galleryWidget homeWidget colorbox gray photo"]
 eskisehirgundem.com##.hreklam
 turkiyedeenerji.com,eskisehirgundem.com##div[class^="singleAd"]
 qualitydergisi.com##.megaBanner
-omerbozdi.com.tr,bodrumolay.com###custom_html-3
+morlevha.com,omerbozdi.com.tr,bodrumolay.com###custom_html-3
 bodrumolay.com##a[href^="https://gozdoktorubodrum.com/"]
 ds-*.kxcdn.com^$domain=e-psikiyatri.com
 /api/banner$domain=e-psikiyatri.com
@@ -5840,7 +5847,7 @@ petroturk.com##a[href^="http://bit.ly/"][target="_blank"] > img
 tarihiolaylar.com##div.text-center.columns > a[target="_blank"] > img[alt]
 ggmyfriend.com##div[id^="ads"]
 ggmyfriend.com##.entry > div[style*="padding: 5px;"][style*="margin-bottom: 10px;"][style*="margin-top: 5px;"] > center
-omerbozdi.com.tr,ansiklopedist.com,bodrumolay.com,gurkanbilgisu.com,ggmyfriend.com###custom_html-2
+morlevha.com,omerbozdi.com.tr,ansiklopedist.com,bodrumolay.com,gurkanbilgisu.com,ggmyfriend.com###custom_html-2
 hesaplama.net##.mad
 meleklermekani.com##.u-bottomFixer
 cezmikalorifer.com###secondary > aside[id^="media_image-"]
