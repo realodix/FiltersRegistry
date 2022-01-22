@@ -4,7 +4,7 @@
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ! Expires: 1 day
 ! DO NOT EDIT VERSION NUMBER
-! OriginalVersion: 20220121
+! OriginalVersion: 20220122
 ! ONLY DEVELOPER CAN EDIT THAT
 ! Exceptions for broken services
 @@||ad.smartmediarep.com^$domain=mbn.co.kr
@@ -21,6 +21,7 @@
 @@||api-ao-list.adison.co^$app=com.nhn.android.webtoon
 @@||api-ao-list.adison.co^$app=com.nhn.android.nbooks
 ! General element hiding rules
+##iframe[src*="/ad.bidrich.com/"]
 ##a[href*="//adv.imadrep.co.kr/"]
 ##iframe[src*="//www.kodcad.kr/"]
 ##a[href*="//ad-api.enuri.info/"]
@@ -2541,7 +2542,11 @@ ondisk.co.kr##div[id^="wingBanner-"]
 ||image.thebell.co.kr/banner/
 ||koya-culture.com/data/banner/
 ||arca.live/external/callad?
+||jjang0u.com/banner_wrap
+||ad.bidrich.com^
 ! Site element hiding rules
+jjang0u.com##.banner-web
+jjang0u.com##div[id^="bidrich_"]
 community.rememberapp.co.kr#$#div.sc-64vosk-0.jIkGEl { margin-bottom: 10px !important; }
 lover9.net#@#.adsbygoogle
 lover9.net#$#.modal { position: unset !important; }
@@ -7509,7 +7514,7 @@ namu.wiki##iframe[src*="//arca.live/external/callad?"]
 m.bunjang.co.kr#?#.app > div > div > div[class]:has(> div[class] > div[class] > div[class]:contains(파워링크))
 m.bunjang.co.kr#?#div:has(> div > div > div > div:has(> div:contains(AD)) > img[alt="AD 가이드"])
 namu.wiki#?#article > div:matches-attr("/data-v-/"):has(> div:matches-attr("/data-v-/") > div > iframe[src*="//arca.live/static/ad/powerlink_"])
-! namu.wiki#?#div:matches-attr("/data-v-/"):has(> div > div > div > div:matches-attr("/data-v-/"):matches-css(justify-content: space-between) > img[src*="/w.namu.la/s/"])
+namu.wiki#?#div:matches-attr("/data-v-/"):has(> div > div > div > div:matches-attr("/data-v-/"):matches-css(justify-content: space-between) > img[src*="/w.namu.la/s/"]:nth-ancestor(4))
 namu.wiki#?#div[class]:matches-attr("/data-v-/") > div:matches-attr("/data-v-/"):not([class]):not(:has(> a[href^="/w/"]:matches-attr("/data-v-/"))):not(:has(> a:matches-attr("/data-v-/"))):not(:contains(/.{1,}/i))
 mosen.mt.co.kr#?#section.textList > article.row:has(> ul.aritcle-info > li.title > a[href*="//adv.imadrep.co.kr/"])
 m.dcinside.com#?#section.gall-lst-group > .detail-top-lst > li:has(> div > a > span.ntc-line-ad)
