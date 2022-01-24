@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 22.1.122
+! OriginalVersion: 22.1.126
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 23 Jan 2022 21:06 UTC
+! Last modified: 24 Jan 2022 15:37 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -4404,7 +4404,6 @@ _usafelink.$third-party,script
 /theboncud/safepoh/*$third-party,script
 /VoreCorporation/Customer-Host/*$third-party,script
 /xmithzyl/safelink/*$third-party,script
-.gif$image,domain=mangaku.live
 ||komikindo.co^*/banner-$image
 ||nanime.biz^*/banner-$image
 mangakita.net###btm_banner
@@ -4413,12 +4412,14 @@ mangaid.click###catfish
 mangaku.live###ftadsth
 bacakomik.co###teaser3
 209.126.6.6###tutupen
-mangaku.live##.adv
-mangaku.live##.ewbnr
+mangaku.live,mangaku.my.id##.adv
+manganime.in##.asd
+mangaku.live,mangaku.my.id##.ewbnr
 kiryuu.id,komikindo.co,komiktap.in,komikvip.com,mangadewasa.com,mangakita.net,manhwaindo.id,manhwaland.icu,ngomik.net,sektekomik.com##.kln
 kumpulmanga.org,overlordfree.web.id##.kzl
 mangaku.live##.section_ad
 komikvip.com##.textwidget:not(:has(#a[href*="komikvip.com"])) > a > img
+mangaku.my.id,manganime.in##[id*="ads"]
 manhwaid.org##img[data-original-width="720"][data-original-height="120"]
 mangaindo.web.id,meganebuk.net#%#//scriptlet('ubo-aopr.js', 'anOptions')
 komiknesia.com#%#//scriptlet('ubo-aopr.js', 'quadsOptions')
@@ -4433,6 +4434,7 @@ bacakomik.co,komik18.com,komikcast.com,komikindo.id,mangakita.net,mangaku.live,m
 komikindo.id,komikuindo.id,mangadewasa.com,mangaku.live,manhwaid.org,sekaikomik.site#$#* { user-select: text !important; -webkit-user-select: text !important; -webkit-touch-callout: default !important; }
 komikuindo.id#%#//scriptlet('ubo-acis.js', 'disableSelection', 'reEnable')
 mangacanblog.com#%#//scriptlet('ubo-aeld.js', '/^(?:contextmenu|selectstart)$/')
+mangaku.live,mangaku.my.id#%#//scriptlet('ubo-aeld.js', 'contextmenu')
 otakudesu.info#%#//scriptlet('ubo-aeld.js', 'keydown')
 manhwaid.org#%#//scriptlet('ubo-aopr.js', 'disableSelection')
 komiktap.in,komikuindo.id,manhwaid.org,otakudesu.info#%#//scriptlet('ubo-aopr.js', 'document.oncontextmenu')
