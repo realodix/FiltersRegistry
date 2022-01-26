@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 17January2022v1-Beta-Compilation
+! OriginalVersion: 26January2022v1-Beta-Compilation
 ! Expires: 3 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
@@ -19769,7 +19769,7 @@ store.playstation.com#$#html[lang=ja] span { font-family: "Segoe UI", "Calibri",
 !#if adguard_app_mac
 ! No iMacs have had less than 1600px wide monitors since 2006, MacBook Pro since 2012, or MacBook Air since 2017. Thus I'm taking a gamble by embedding this for Mac users:
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! OriginalVersion: 15December2021v1-Beta
+! OriginalVersion: 26January2022v1-Beta
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
@@ -20020,6 +20020,8 @@ finn.no#$#.grid__unit.u-r-size2of3 { width: 70% !important }
 ! Top bar
 finn.no#$#.top-bar-top-bar__nav-1O8LN { max-width: none !important }
 finn.no#$#.top-bar-top-bar__menu-item-3kxIT { padding-right: 40px !important; padding-left: 40px !important }
+! Real estate search section
+www.finn.no#%#//scriptlet('ubo-rc.js', 'ads__unit--premium', '.ads__unit, stay')
 ! ——————————————————————————————————————————————————————————————————————————
 ! Category: GitHub
 ! This category is based on entries from 'GitHub Wide', which is maintained by https://github.com/mdo at https://github.com/mdo/github-wide, and which is licenced under MIT.
@@ -20265,3 +20267,7 @@ bbs.qyer.com##.bottom-seo-links
 qunar.com##.qunar-assist-hide.mod-home-seolink
 ! Fake loading screens
 hackintoshshop.com##body > div:first-of-type[style^=background-color][id]
+! Makes real estate classifieds on FinnNO uniformly sized again, and reverses the effects of the site's large price increase for estate brokers to get large thumbnails
+! https://www.nettavisen.no/okonomi/raser-over-nye-priser-for-boligsalg-pa-finn-no-forbrukerne-er-fratatt-ethvert-valg/s/12-95-3424235759
+! https://github.com/DandelionSprout/adfilt/issues/466
+www.finn.no#%#//scriptlet('ubo-rc.js', 'ads__unit--premium', '.ads__unit, stay')
