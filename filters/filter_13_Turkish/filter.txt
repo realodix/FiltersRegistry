@@ -434,6 +434,12 @@ zamaninvarken.com,kredi.biz.tr,kriptoradar.com,morlevha.com,bakimlikadin.net,kor
 iyibeslenme.net,teknop.net,kirtkirtla.com,buneymis.net,ozgunbilgi.com#%#//scriptlet("set-constant", "adblock.check", "noopFunc")
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/106793
+okultanitimi.net#%#//scriptlet("abort-current-inline-script", "$", "adblock")
+!#if (adguard_app_ios || adguard_ext_android_cb)
+okultanitimi.net#@#.adsbygoogle
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=okultanitimi.net
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/106782
 !#if (adguard_ext_firefox || adguard_app_ios || adguard_ext_android_cb || adguard_ext_safari)
 @@||prestashopturkiye.com^$generichide
@@ -882,6 +888,7 @@ r10.net#%#//scriptlet('abort-on-property-write', 'rInt')
 ! Extended CSS rules
 !
 !
+okultanitimi.net#?#.gutters-sm > div[class="col-md-3 d-none d-md-block"]:has(> [id^="reklamokul"]:not(#reklamokul2))
 turkanime.co#?#div[class^="col-xs-"] > .row > div[class^="col-xs-"] > .panel:has(> #sponsored)
 aktuelsanat.net#?#span.stream-title:contains(/^Reklam$/)
 tamgaturk.com#?#body > .new_content.shadow1:has(> .header_big_advert)
@@ -1462,7 +1469,7 @@ bursahaberdar.com,isvecgundemi.com,kgrt.net,halk54.com,eskisehirhaber.com,haberl
 torrentarsivi.*#%#//scriptlet("prevent-addEventListener", "", "getPopupTarget")
 torrentarsivi.*#%#//scriptlet("abort-on-property-read", "check_target")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/72637
-contentx.me#%#//scriptlet("prevent-window-open")
+contentx.me#%#//scriptlet("set-constant", "initOpen", "undefined")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/72404
 filmizlemetv.com#%#//scriptlet("prevent-window-open")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/72363
@@ -2387,6 +2394,7 @@ fullhdfilmcibaba.com,720pizlemek.com,hdfilmizledayi.com###adStarter
 /service/advertchannels?$domain=dirilispostasi.com|turkuazgazetesi.net|yenialanya.com|bugunkocaeli.com.tr|cagdaskocaeli.com.tr|mansetaydin.com|enkocaeli.com|kocaelikoz.com|kocaelibarisgazetesi.com|seskocaeli.com
 dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdaskocaeli.com.tr,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.us
 !
+okultanitimi.net##[id^="reklamokul"]:not(#reklamokul2)
 zamaninvarken.com###custom_html-6
 kredi.biz.tr###custom_html-4
 milliyet.com.tr##p > a[href*="&utm_medium="][href*="&utm_campaign="][target="_blank"] > img
