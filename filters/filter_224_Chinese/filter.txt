@@ -359,6 +359,12 @@
 ! These rules are against all kinds of ad blocking reinjection/circumvention scripts
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/107446
+linovelib.com#$##byspider { display: none !important; }
+linovelib.com#$#body[style] { overflow: auto !important; }
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=linovelib.com
+!+ PLATFORM(ios, ext_android_cb)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=linovelib.com
 ! https://github.com/uBlockOrigin/uAssets/issues/11152
 @@||hm.baidu.com/hm.js?$script,domain=rjno1.com
 @@||home.163.com/special/$script,redirect=noopjs,domain=rjno1.com
@@ -19478,6 +19484,8 @@ $script,subdocument,third-party,websocket,xmlhttprequest,domain=00ksw.com|01zww.
 ||ikcdhqh.cn^
 ||jxxiangyujinshu.com^
 ||8gustis.xyz^
+||uni-king.cn^
+||mx98.xyz^
 ##a[href$=".120ydrayy.com"]
 ##a[href*=".1956hl.com/"]
 ##a[href*=".233787.com/"]
