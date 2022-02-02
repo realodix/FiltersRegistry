@@ -2318,6 +2318,8 @@ amateurbusters.com#?#.sb_area > .sb_area_headline:contains(Urlaub)
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/108788
+spielen.com#%#//scriptlet("set-constant", "idhb", "emptyObj")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/107055
 gamepro.de#%#//scriptlet("set-constant", "wgm.initAds", "noopFunc")
 gamepro.de#%#(function(){var a={cmd:[],"public":{getVideoAdUrl:function(){},createNewPosition:function(){},refreshAds:function(){}}};a.cmd.push=function(b){try{b()}catch(c){}};window.jad=a})();
@@ -5624,6 +5626,9 @@ homad-global-configs-eu-fra.schneevonmorgen.com.s3.amazonaws.com/*/config.json$r
 !###############
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/108788
+!+ PLATFORM(ios, ext_android_cb)
+@@||hb.improvedigital.com/pbw/headerlift.min.js$domain=spielen.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/107944
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=noopjs,domain=wetteronline.de
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
