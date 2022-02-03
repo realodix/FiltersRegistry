@@ -1,6 +1,6 @@
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 03February2022v1
+! OriginalVersion: 03February2022v3
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -477,7 +477,7 @@ $removeparam=lctid
 $removeparam=lcid
 $removeparam=usource
 ! http://www.bitdefender.com/?MPid=75107
-$removeparam=/^mpid=/i
+$removeparam=/^mpid=/i,domain=~miguvideo.*
 ! https://www.vitacost.com/?csrc=SITEREF-CJ&cjbatcheventid=8807380&cjpid=8807380
 $removeparam=cjbatcheventid
 $removeparam=cjpid
@@ -556,7 +556,7 @@ $removeparam=fcref
 $removeparam=mclk
 $removeparam=mrnd
 $removeparam=maid
-$removeparam=mcid
+$~xmlhttprequest,removeparam=mcid,domain=~miguvideo.*
 $~xmlhttprequest,removeparam=msid
 $removeparam=mpty
 ! https://www.sixt.com/?exactag_uk=9d5a889680c4465784ce7afe174d6070
@@ -1024,6 +1024,10 @@ $removeparam=int_source
 $removeparam=int_medium
 $removeparam=int_content
 $removeparam=int_campaign
+! https://github.com/DandelionSprout/adfilt/pull/483
+! https://weibo.com/5146173015/Gckc5ax0y?sudaref=zh.wikipedia.org (03/02/2022)
+! https://finance.sina.com.cn/stock/?sudaref=graph.qq.com&display=0&retcode=0 (03/02/2022)
+$removeparam=sudaref
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
