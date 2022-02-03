@@ -662,6 +662,8 @@ jeuxvideo.com#?#.list-actu-home > li[-ext-has='span.officiel']
 !
 ! French-language catch-up TV web apps
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/104938
+scan-manga.com#%#//scriptlet("abort-current-inline-script", "document.getElementById", "window.open")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83543
 canalplus.com#%#//scriptlet('set-constant', '__data.application.settings.featPlayerAds', 'false')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103930
@@ -791,8 +793,8 @@ lavie.fr##.if-abo
 lavie.fr##.bandeau-abo
 qub.ca##legend[data-testid="adTag"]
 purepeople.com##body .ad__placeholder
-scan-manga.com###dt_bg
-scan-manga.com##body .top_body
+scan-manga.com###all > #az_bg:empty
+scan-manga.com##body > .top_body:empty
 ||cdn.scanmanga.eu/img/bans/$domain=scan-manga.com
 /nwm-fp.min.js$domain=streamonsport.to
 ||streamonsport.to/telefoot.gif
