@@ -72,7 +72,12 @@
 !-------------- Advertising networks ---------------------------------------!
 !---------------------------------------------------------------------------!
 !
-! Section contains list of advertising networks
+! This section contains the list of third-party advertising networks domains for mobile devices.
+! Note, that we only put rules that block full domains here and not URL parts (there's `general_url.txt` for that). Also, it must be domains that are used in a third-party context.
+!
+! Good: ||doubleclick.net^$third-party
+! Bad: /banner.jpg (should be in general_url.txt)
+! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
 !
 ! ||mobileapptracking.com^ - don't block this domain with all subdomains. https://forum.adguard.com/index.php?threads/23917/
@@ -1175,7 +1180,14 @@
 !-------------- Anti-adblock rules -----------------------------------------!
 !---------------------------------------------------------------------------!
 !
-! These rules are against all kinds of ad blocking reinjection/circumvention scripts
+! First of all, this section has common rules that prevent most known ad block detections. In that case domain should be added to the common rules.
+! The section contains the list of the rules are against all kinds of ads reinjection or ad-blocking circumvention scripts. If such a script does not cripple the website, we add rules to the Annoyances filter.
+! Rules should generally be domain-specific. In some exceptional cases, it's allowed to add generic ones, but this should be approved by most of the maintainers.
+!
+! Good: ||example.org/adblock/detect.js
+! Good: @@/adblocker/detect.js$domain=example.org
+! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
+!
 !
 !--- Temporary
 ! https://github.com/AdguardTeam/AdguardForiOS/issues/255
@@ -1290,7 +1302,11 @@ westseattleblog.com#@#.header-ad
 !-------------- Extended CSS rules -----------------------------------------!
 !---------------------------------------------------------------------------!
 !
-! Extended CSS rules
+! This section contains the list of extended CSS rules against ads on mobile devices.
+! Note, that rules should be domain-specific and you have to use special syntax `#?#` instead of `##`.
+!
+! Good: example.org#?#main > div.row:has(> div.ad)
+! Bad: example.org##main > div.ad (should be in specific.txt)
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109417
 seiga.nicovideo.jp#?#div[data-ads-name="sp_android_web_manga_viewer_lv3_300x250_north"]:upward(1)
@@ -1775,7 +1791,10 @@ rambler.ru#?#main > div[class] ~ div[class] > div[class] div[class] > a[href^="h
 !-------------- General element hiding rules -------------------------------!
 !---------------------------------------------------------------------------!
 !
-! Section contains list general hiding rules
+! This section contains generic element hiding rules that block ads on mobile devices.
+!
+! Good: ##.adv
+! Bad: example.org##.adv (should be in specific.txt)
 !
 !--- popular banner sizes ---
 ##img[width="320"][height="50"]
@@ -1801,6 +1820,13 @@ rambler.ru#?#main > div[class] ~ div[class] > div[class] div[class] > a[href^="h
 !---------------------------------------------------------------------------!
 !-------------- General javascript, CSS and HTML extensions ----------------!
 !---------------------------------------------------------------------------!
+!
+! This section contains the list of ad blocking rules that fall under "advanced" category.
+! By advanced we mean the following rule types: CSS, scriptlets, HTML filtering (`$$` marker), JS.
+!
+! Good: example.org#$##rek { display: none !important; }; example.org#%#//scriptlet('set-cookie', 'ad', '0'); example.org#%#document.cookie = "ad =0"; ; example.org$$script[tag-content="ad"][max-length="3000"].
+! Bad: example.org###rek (should be in specific.txt)
+!
 !-------------------
 !-------JS----------
 !-------------------
@@ -2120,7 +2146,11 @@ nasimke.ru$$script[tag-content="function show_ads"][max-length="6000"]
 !-------------- General URL blocking rules ---------------------------------!
 !---------------------------------------------------------------------------!
 !
-! General URL(for apps only)
+! This section contains the list of generic blocking rules (mobile sites or apps).
+!
+! Good: .org/ads/
+! Bad: .org/ads/$domain=example.org (for instance, should be in speficic.txt)
+!
 !
 ||s.*.com/pp.php?uid=$third-party
 .cn/?ss=
@@ -2175,7 +2205,11 @@ nasimke.ru$$script[tag-content="function show_ads"][max-length="6000"]
 !------ White list. Fixing filtration errors (false-positive)---------------!
 !---------------------------------------------------------------------------!
 !
-! White list. Fixing filtration errors (false-positive)
+! This section contains the list of rules that fix incorrect blocking. Rules must be domain-specific.
+!
+! Good: example.org#@#.ad
+! Bad:  @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
+!
 !
 ! ##### TEMPORARY START #####
 !
@@ -2578,7 +2612,11 @@ deviantart.com#@#.mobile-ad
 !-------------- Rules for specific websites --------------------------------!
 !---------------------------------------------------------------------------!
 !
-! Section contains rules for specific websites
+! This section contains the list of domain-specific rules that block ads on mobile devices.
+!
+! Good: example.org###rek; ||m.example.com/ads/
+! Bad: example.org#$##rek { display: none !important; } (for instance, should be in general_extensions.txt)
+!
 !
 ! https://forum.adguard.com/index.php?threads/10464/
 ||images-*.ssl-images-amazon.com/images/*/ape/sf/MAsf-*_.js
@@ -5353,7 +5391,10 @@ anwap.club,anwap.film,anwap.mobi##body > div[class] > a > strong
 !-------------- Rules for specific applications ----------------------------!
 !---------------------------------------------------------------------------!
 !
-! Section contains rules for specific applications
+! This section contains the list of the base rules that block ads in mobile apps. Rules should be specific.
+!
+! Good: ||graph.facebook.com^$app=com.geumson.nookslist
+! Bad:  ||graph.facebook.com^$third-party (should be in adservers.txt)
 !
 !
 ! French-language catch-up TV mobile apps
@@ -6236,7 +6277,10 @@ c0server.jags.co.jp/jss/img/banners/$app=jp.co.jags.android.Bokumaka
 !------------------ Content replacement rules ------------------------------!
 !---------------------------------------------------------------------------!
 !
-! The content replacement rules
+! This section contains the list of the content replacement rules that block ads on mobile devices. Rules must be domain-specific.
+!
+! Good: ||example.org/video-links$replace=/vast":/vast_":/
+! Bad:  ||example.org/video-links (should be in specific.txt)
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101976
 ||content.jwplatform.com/players/*isAMP$replace=/"autostart": "viewable"/"autostart": ""/

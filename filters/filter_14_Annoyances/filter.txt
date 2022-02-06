@@ -72,6 +72,12 @@
 !---------------------- Annoyances ---------------------------------!
 !-------------------------------------------------------------------!
 !
+! This section contains the list of the rules against annoyances that are not falling under existing categories. Rules should be domain-specific.
+!
+! Good: example.org##.annoyance (it's an annoyance that not falling under existing categories)
+! Bad:  ||example.org^$third-party (it's an adserver and should be in adservers.txt)
+!
+!
 !######### Annoying elements (not ads)
 !
 ! Test for youtube. Look for feedback
@@ -2647,8 +2653,14 @@ jianshu.com##.dt-open-bg[data-scene="leftBtn"]
 jianshu.com##.note-comment-above-ad-wrap
 
 !
-! These rules are against all kinds of ad blocking reinjection/circumvention scripts
-! which does not affect the functioning of site
+! First of all, this section has common rules that prevent most known ad block detections. In that case domain should be added to the common rules.
+! The section contains the list of the rules are against all kinds of ads reinjection or ad-blocking circumvention scripts that do not affect the functioning of the website.
+! Rules should generally be domain-specific. In some exceptional cases, it's allowed to add generic ones, but this should be approved by most of the maintainers.
+!
+! Good: ||example.org/adblock/detect.js
+! Good: @@/adblocker/detect.js$domain=example.org
+! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
+!
 !
 !
 ! Important: don't block paywalls
@@ -5728,6 +5740,13 @@ slate.com#@#.ad-container
 !#endif
 !#safari_cb_affinity
 
+!
+! This section contains the list of generic rules that block cookie notifications.
+!
+! Good: ###cookie
+! Bad: example.org###cookie (should be in cookies_specific.txt)
+!
+!
 !#######################################################
 !######### General element hiding rules ################
 !#######################################################
@@ -7587,6 +7606,13 @@ _europecookielaw.
 ||cdn.consentmanager.mgr.consensu.org^$third-party
 ||quantcast.mgr.consensu.org^$third-party
 
+!
+! This section contains the list of domain-specific rules that block cookie notifications.
+!
+! Good: example.org###cookie
+! Bad: ###cookie (should be in cookies_general.txt)
+!
+!
 !#######################################################
 !######### Rules for specific sites ####################
 !#######################################################
@@ -7701,6 +7727,8 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+engelhorn.de#$#body[style^="overflow:"] { overflow: auto !important }
+engelhorn.de#$#div[id^="cmpbox"] { display: none !important }
 veepn.com##.cookie_privacy
 cenyvaptekah.ru##.alert-first-usage
 vogue.com.cn###user_cookie_pop
@@ -16253,6 +16281,13 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||polygamia.pl/$replace=/\n\((window\._|self\.webpackChunk)_proto_[\s\S]*?"AKCEPTUJ.[\s\S]*?I PRZECHODZ.[\s\S]*?DO SERWISU".*//,script
 ||dobreprogramy.pl/$replace=/\n\((window\._|self\.webpackChunk)_proto_[\s\S]*?"AKCEPTUJ.[\s\S]*?I PRZECHODZ.[\s\S]*?DO SERWISU".*//,script
 
+!
+! This section contains the list of rules that fix incorrect blocking of cookie notifications by generic rules. Rules should be domain-specific.
+!
+! Good: example.org#@##cookie
+! Bad:  example.org###cookie (should be in cookies_specific.txt)
+!
+!
 !#######################################################
 !######### White list. Fixing filtering errors #########
 !#######################################################
@@ -18570,7 +18605,13 @@ fashionette.de#@##cookies-notice
 foodnetwork.co.uk#@#.cookie-message:not(html):not(body)
 
 !
-! Extended CSS rules
+! Obsolete. Do not add new rules.
+! This section contains the list of extended CSS rules against ads.
+! Note, that rules should be domain-specific and you have to use special syntax `#?#` instead of `##`.
+!
+! Good: example.org#?#main > div.row:has(> div.ad)
+! Bad: example.org##main > div.ad (should be in specific.txt)
+!
 !
 !----------------------------------!
 !--------- REMAINS ----------------!
@@ -18708,6 +18749,13 @@ sydneyweekender.com.au#?#div[class="four columns bgcolour"][-ext-contains="Faceb
 online-life.cc#?#div[style="height:10px;"] ~ div.block_title[-ext-contains="НАША ГРУППА"]
 !----------------------------------!
 
+!
+! This section contains the list of rules that block ads on not-popular websites. Rules should be domain-specific.
+!
+! Good: example.org##.ad
+! Bad: ##.ad (should be in general_url.txt)
+!
+!
 !#######################################################
 !######### Low-attendance sites ########################
 !######### less then 30k visits/month ##################
@@ -18928,6 +18976,13 @@ early-riser.com#?#div[class] ~ h1[style]:contains(Newsletter)
 early-riser.com#?#div[class] ~ h1[style]:contains(Newsletter) + p
 early-riser.com#?#div[class] ~ h1[style]:contains(Newsletter) + p + div[class]
 
+!
+! This section contains the list of rules are against banners that promote mobile apps.
+! Note, that the file consists of multiple sections for different purposes. For instance, there is a section for exceptions and some platform-specific sections.
+!
+! Good: any type of the rules will be good
+! Bad: @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
+!
 !#######################################################
 !######### Banners of mobile apps for the sites ########
 !#######################################################
@@ -20456,11 +20511,13 @@ detik.com,cnbcindonesia.com##.smartbanner_new
 temp-mail.org##.smartbanner
 !#endif
 
-!#######################################################
-!######### Rules for blocking in page popups ###########
-!######### and floating elements #######################
-!#######################################################
-! Whitelist is at the end of file
+!
+! This section contains the list of rules that block in-page popups (like banners with special offers) and floating elements.
+! At the bottom of this file, you can find the allowlist that fixes issues caused by the rules from this file.
+!
+! Good: any type of the rules will be good
+! Bad: @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
+!
 !
 ! "Add to home screen in mobile Chrome"
 ||mail.ru/manifest.json
@@ -25523,9 +25580,13 @@ eventcairo.com#@#a[href^="https://form.typeform.com/"]
 @@||my.leadpages.net/template/$script,domain=weddingjams.com|thesaturdaypaper.com.au|careercontessa.com
 @@||my.leadpages.net^*/public/
 
-!#######################################################
-!######### Rules for blocking push notifications #######
-!#######################################################
+!
+! This section contains the list of rules that block website push notifications ("subscribe to the news" kind of notifications).
+!
+! Good: any type of the rules will be good
+! Bad: @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
+!
+!
 ! Disabling of push-notifications
 wallstreet-online.de,dni.ru,polit.info#%#if (window.PushManager) { window.PushManager.prototype.subscribe = function () { return { then: function (func) { } }; }; }
 macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFunc")
@@ -26441,7 +26502,11 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 @@||api.savemedia.website^$domain=convert2mp3.club
 
 !
-!######### Remains of ads. Obsolete section. Better use Extended CSS rules in regular filters
+! Obsolete. Do not add new rules.
+! This section contains the list of the rules that block remains of ads. Better use Extended CSS rules in regular filters.
+! Do not add any rules here.
+!
+!
 !
 webmd.com#?#.main-container > div[id^="ContentPane"] ~ aside.module-unified-right-rail:has(> header > h3:contains(Today on WebMD))
 avtonovostidnya.ru##main > div[id*="single"] ~ hr.gray-lg
@@ -26611,6 +26676,15 @@ mylivecricket.info##footer~p+p+p
 appadvice.com##section#top+footer
 invlab.ru###barcelona-social-media-icons-2
 
+!
+! This is section contains the list of rules that block websites' own banners at our discretion.
+!
+! Self-promo example: promoting other services from the same company (if it's annoying enough).
+!
+! Good: any type of the rules will be good
+! Bad: @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
+!
+!
 !#######################################################
 !######### Blocking self promotion #####################
 !#######################################################
@@ -28623,9 +28697,13 @@ tele2.ru##div[data-cartridge-type="PersonalizedTizer"]
 !
 !
 
-!#######################################################
-!######### Subscriptions, newsletters etc. #############
-!#######################################################
+!
+! This section contains the list of rules that block the promotion of subscriptions, newsletters.
+! Examples: "subscribe to our blog", "subscribe to our newsletter" blocks in all kinds of blocks.
+!
+! Good: any type of the rules will be good
+! Bad: @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
+!
 !
 ! common names
 ! ##.cta-component-half-width
@@ -31963,6 +32041,13 @@ mail.ru###subscriptionFormWeekMainBlockId
 @@||sibforms.com/serveUnsub/
 @@||sibforms.com/serve/$domain=camelactive.com
 
+!
+! This section contains the list of rules that are used for UI tweaks and other similar cases. For instance, we unblock the right context menu or unblock selecting text on a webpage.
+!
+! Good: any type of the rules will be good
+! Bad: @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
+!
+!
 !##############################
 !######### CSS tweaks #########
 !##############################
@@ -33885,6 +33970,13 @@ twgreatdaily.com$$script[tag-content="indexOf|css|fn|this|attr|unselectable|cons
 ! lenta.ru and motor.ru - disable autolay
 ||api.vp.rambler.ru/api/*/getPlayerData?params=$replace=/"autoPlay":"(scroll|scroll_mute)"/"autoPlay":"no"/
 
+!
+! This section contains the list of rules that block annoying third-party widgets (weather, money exchange, 3rd-party feedbacks, 3rd-party assistants).
+!
+! Good: any type of the rules will be good
+! Bad: @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
+!
+!
 !#######################################################
 !######### Block useless widgets #######################
 !### Weather, money exchange, 3rd-party feedbacks, #####

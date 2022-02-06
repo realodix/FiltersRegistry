@@ -74,6 +74,12 @@
 !
 ! This section contains rules for common trackers/buttons
 !
+! This section contains the list of the rules for common trackers/buttons.
+!
+! Good: ||example.org^$third-party (if it's social tracker)
+! Bad:  @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
+!
+!
 ||share.gree.jp^$third-party
 ||twitter.countoon.com^$third-party
 ||twitcount.com^$third-party
@@ -225,7 +231,11 @@
 !-------------- Unsorted urls --------------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
-! Contains unsorted urls
+! This section contains the list of generic blocking rules.
+!
+! Good: .org/ads/
+! Bad: .org/ads/$domain=example.org (for instance, should be in speficic.txt)
+!
 !
 /plugins/content/jllike/*
 /Twitter_b_rect.$image
@@ -337,7 +347,11 @@ lj_bookmarklet
 !-------------- Extended CSS rules -----------------------------------------!
 !---------------------------------------------------------------------------!
 !
-! Extended CSS rules
+! This section contains the list of extended CSS rules against social widgets.
+! Note, that rules should be domain-specific and you have to use special syntax `#?#` instead of `##`.
+!
+! Good: example.org#?#main > div.row:has(> div.ad)
+! Bad: example.org##main > div.ad (should be in specific.txt)
 !
 elamigosedition.com#?#.sidebar > div.side-b:has(> div.side-t > span.fa-thumbs-up)
 ua-region.com.ua#?#.cart-company-full > div.d-flex:has(> div.main-info-sharing)
@@ -1091,6 +1105,13 @@ buzzhand.com#$?#body[-ext-has="div"] { overflow: visible!important; }
 !-------------------------------------------------------------------------------!
 !-------------- General javascript, CSS and HTML extensions --------------------!
 !-------------------------------------------------------------------------------!
+!
+! This section contains the list of social blocking rules that fall under "advanced" category.
+! By advanced we mean the following rule types: CSS, scriptlets, HTML filtering (`$$` marker), JS.
+!
+! Good: example.org#$##rek { display: none !important; }; example.org#%#//scriptlet('set-cookie', 'ad', '0'); example.org#%#document.cookie = "ad =0"; ; example.org$$script[tag-content="ad"][max-length="3000"].
+! Bad: example.org###rek (should be in specific.txt)
+!
 !-------------------
 !-------JS----------
 !-------------------
@@ -1320,7 +1341,11 @@ digitaltrends.com$$script[tag-content="facebook_like"][max-length="2000"]
 !-------------- Specific web sites ---------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
-! Contains rules for specific web sites
+! This section contains the list of domain-specific rules that block social widgets.
+!
+! Good: example.org###rek; ||example.com/social/
+! Bad: example.org#$##rek { display: none !important; } (for instance, should be in general_extensions.txt)
+!
 !
 ! Common names
 ! ##.social:not(body)
@@ -8847,7 +8872,11 @@ betanews.com##.social-links-wrap
 !-------------- General hiding rules -------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
-! Section contains list general hiding rules
+! This section contains generic element hiding rules that block social widgets.
+!
+! Good: ##.fb_widget
+! Bad: example.org##.fb_share (should be in specific.txt)
+!
 !
 !+ NOT_OPTIMIZED
 ##.zalo-share-button
@@ -9944,7 +9973,11 @@ designboom.com,livescience.com,pbtech.co.nz,peoplesworld.org,space.com##.fa-face
 !-------------- Rules for removing full screen popups --------------------------!
 !-------------------------------------------------------------------------------!
 !
-! Rules for blocking social popups
+! This section contains the list of the rules that block in page social popups.
+!
+! Good: any type of the rules will be good
+! Bad: @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
+!
 !
 /cdn-cgi/pe/bag2?r[]=*mailget.net
 /wp-content/plugins/easy-facebook-likebox/*
@@ -10508,7 +10541,11 @@ neokur.com#$#.jquery-modal.blocker { display: none!important; }
 !-------------- Whitelist  -----------------------------------------------------!
 !-------------------------------------------------------------------------------!
 !
-! Section fixing issues caused by social filter
+! This section contains the list of rules that fix incorrect blocking. Rules must be domain-specific.
+!
+! Good: example.org#@#.ad
+! Bad:  @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
+!
 !
 ! #Social locker#
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
