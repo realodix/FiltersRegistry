@@ -87,6 +87,11 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/109576
+seiko-boutique.de#$#body._has-modal { overflow: auto !important }
+seiko-boutique.de#$#.amgdprcookie-modal-container { display: none !important; }
+seiko-boutique.de#$#.modals-overlay { display: none !important; }
+seiko-boutique.de#$#div[id^="popupbuilder-popup"] { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/108684
 avg.com,avast.com###offer-chrome
 ! https://github.com/AdguardTeam/AdguardFilters/issues/108457
@@ -2462,6 +2467,7 @@ windowstechblog.nl#%#AG_onLoad(function() { window.bizpanda = {}; });
 izlemac75.net##body > div[style*="width:100%;text-align:center"]
 izlemac75.net##body > div#reload
 !
+novayagazeta.ru##div[class^="SocialsBlock_"]
 smartme.pl##.c_ad__container
 gujaratexclusive.in##.td-post-content p > a[href^="https://t.me/"]
 gujaratexclusive.in##.td-post-content p > a[href^="https://chat.whatsapp.com/"]
@@ -7747,7 +7753,7 @@ veepn.com##.cookie_privacy
 cenyvaptekah.ru##.alert-first-usage
 vogue.com.cn###user_cookie_pop
 voguescandinavia.com##div[class^="cookieNotification__"]
-gorzdrav.org##.b-cookie-popup
+366.ru,gorzdrav.org##.b-cookie-popup
 care-center.de###eprivacyModal
 care-center.de###eprivacyModal ~ .modal-backdrop
 toppreise.ch##.Plugin_WeUseCookies
@@ -28760,6 +28766,9 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 ##.widget_blog_subscription
 ~mega-debrid.eu,~curvegames.com,~news.un.org,~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+seiko-boutique.de#?#.magezon-builder > div.mgz-element:has(> div.mgz-element-inner div.mgz-element-separator-wrapper > h2.title:contains(Newsletter))
+seiko-boutique.de#?#.magezon-builder > div.mgz-element:has(> div.mgz-element-inner div.mgz-element-separator-wrapper > h2.title:contains(Newsletter)) + div[class]
+seiko-boutique.de#?#.magezon-builder > div.mgz-element:has(> div.mgz-element-inner div.mgz-element-separator-wrapper > h2.title:contains(Newsletter)) + div[class] + div[class]
 lalibre.be##div[id^="BtPopin_"]
 lalibre.be##iframe[src^="https://ipm.emsecure.net/"][src*="NEWSLETTER"]
 archiproducts.com##.cont-newsletter-social
