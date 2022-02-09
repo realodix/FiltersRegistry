@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-02-07 08:30:29 CET
+! Last modified: 2022-02-09 08:45:32 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -130,6 +130,7 @@ dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsv
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##.carousel-caption:has(.vicky-category-label:has-text(/spons/i))
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##.featurette:has(.vicky-video-infobox-label:has-text(/spons/i))
 dinlivsstil.nu,foretagsverige.se,forskningsverige.se,grillbibeln.se,hallbarhetsverige.se,kampenmotcancer.se,motorbibeln.se,tillvaxtsverige.se##div[class*="vicky-whitebox"]:has-text(/spons/i):upward(a)
+dinvinguide.se##p:has-text(/hämtar annons/i):upward(div.items-center)
 djungeltrumman.se#$?##latest-slider a:has(.label-sponsored) { remove: true; }
 djungeltrumman.se#%#//scriptlet('ubo-nano-sib.js', 'dt_fullpage_ad')
 djungeltrumman.se##.label-sponsored:upward(.post)
@@ -509,8 +510,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -893,7 +894,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /adnami/macro/*$script
 /adnuntius_top_scroll/*
 /ads-dm.js
-/ads-functions.js$domain=dinvinguide.se
 /ads.article.js
 /ads.for.me/jsa?$script
 /ads.js$domain=flashback.org
@@ -1595,6 +1595,7 @@ battrestadsdel.se###top-banner-mobile, #HideBanner, .apd-text, .apds_main, .entr
 battrestadsdel.se,casinoexpo.se,flashback.se,leta.se###top-banner
 beernews.se##.cookie-consent-wrapper
 bergsmannen.se##.ann-puff, .headerLinks
+bestchampagne.se##aside.section-sm
 betong.se,foodetc.se,livetsgoda.se##a[target$="blank"] img
 bettips.se##.bettips-am
 bettips.se,borskollen.se##.top-banner
@@ -1626,7 +1627,7 @@ bulletin.nu##[class^="newsletter-subscribe"], div[class^="cookie-message"], div[
 bussmagasinet.se###page > div:not(.left):not(.right)
 bussmagasinet.se###titlebanner
 byggahus.se###svartalistan-login-required-overlay
-byggahus.se##.block-ad, #cookie-consent-dialog, a[href^="/partner/"]
+byggahus.se##.block-ad, #cookie-consent-dialog, a[href^="/partner/"], .threadMatchedContent
 byggfaktadocu.se##.pop_box
 byggipedia.se##.protect_contents-overlay
 byggnadsarbetaren.se##[class^="siteAds"], .siteAlerts
