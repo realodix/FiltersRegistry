@@ -3937,7 +3937,7 @@ borderlands.com##div[ads-blocked="adsBlocked"]
 ||amazonaws.com/sp-sw-sdk-production^
 ||ddnk.advertur.ru/v1/s/loader.js$script,redirect=noopjs,domain=video.alexfilm.cc
 @@||gsurl.be/advertisement.js
-||tinypass.com^$domain=thechive.com|thelocal.de|independent.co.uk|forbes.com|scotsman.com|inquirer.com|pinknews.co.uk|insider.com|blick.ch|torontosun.com
+||tinypass.com^$domain=thechive.com|thelocal.de|independent.co.uk|scotsman.com|inquirer.com|pinknews.co.uk|insider.com|blick.ch|torontosun.com
 ||buhgalter.com.ua/assets/templates/base/js/blocker.js
 coinhub.pw#?#body > center:contains(Turn off your adblocker)
 milehighreport.com##div[class^="adblock-whitelist-messaging"]
@@ -15455,6 +15455,7 @@ consent2.ksta.de#%#AG_onLoad(function(){if(window.location.href.includes("consen
 privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 !
+elvenar.com#%#//scriptlet('set-cookie', 'CookieNotification', '0')
 aeromexico.com#%#//scriptlet('set-cookie', 'AgreeCookies', 'true')
 virginaustralia.com#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("virginCookiesAccepted")){var a=new MutationObserver(function(){var b=document.querySelector('#cookieAcceptanceBtn');b&&b.click()});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
 amway-estonia.com,amway-latvia.com,amway-lithuania.com,amway.*#%#//scriptlet('set-cookie-reload', 'isCookieConsentAccepted', 'true')
@@ -20727,6 +20728,8 @@ sodapdf.com##.be-tooltip
 ! Specific sites
 !######### Subscription popups add to subscriptions.txt #########
 !
+facebook.com#%#//scriptlet('prevent-addEventListener', 'scroll', 'showPopup')
+shopback.com.au###extension-onsite-slider
 quto.ru##iframe[src^="https://vp.rambler.ru/player/"][style*="position: fixed;"]
 gastronom.ru##.chaos-indivisible-teaser
 menunedeli.ru##.frm_subs_fllscrn
@@ -28856,6 +28859,9 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 ##.widget_blog_subscription
 ~mega-debrid.eu,~curvegames.com,~news.un.org,~norwichzen.org.uk,~dereferer.me###mc_embed_signup
 !
+ppc.world#$?#.popup-wrapper:has(> #popup-subscribe) { display: none!important; }
+ppc.world#$#body { overflow: auto!important; }
+zendesk.com##.ouibounce-blog-newsletter
 philomag.de##.stickyfooter .node--promoted
 sobesednik.ru##a[href="https://t.me/sobesednikru"] > img
 traditionalcookingschool.com##.cp-widget[data-title="Sidebar: TCS Newsletter"]
@@ -32537,6 +32543,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/108502
+yifysubtitles.me#%#//scriptlet("adjust-setInterval", "timer", "", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109848
 apkmody.io#%#//scriptlet("adjust-setTimeout", "download_loading", "*", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/108056
@@ -33964,7 +33972,7 @@ appofmirror.com#%#//scriptlet("abort-current-inline-script", "nocontextmenu")
 city-data.com,patrika.com,ogznet.com#%#//scriptlet("set-constant", "document.oncopy", "undefined")
 ogznet.com#%#//scriptlet("prevent-addEventListener", "/^(?:contextmenu|copy)$/")
 webtoons.com#%#//scriptlet('remove-attr', 'onselectstart|ondragstart|oncontextmenu', 'img[class="_images"]')
-expertology.ru#%#//scriptlet('abort-on-property-write', 'document.oncopy')
+fishki.net,expertology.ru#%#//scriptlet('abort-on-property-write', 'document.oncopy')
 deepl.com#%#//scriptlet("set-constant", "Object.prototype.getFooterText", "undefined")
 electricalvoice.com#%#//scriptlet("abort-on-property-write", "image_save_msg")
 foodnavigator.com#%#//scriptlet("set-constant", "wrbm_gb.copyAlert", "undefined")
