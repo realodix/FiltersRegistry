@@ -3,7 +3,7 @@
 ! Expires: 3 days
 ! Issue tracker: https://github.com/tcptomato/ROad-Block/issues
 ! Homepage: https://www.adblock.ro
-! Last modified: 01 Sep 2021 13:55 UTC
+! Last modified: 10 Feb 2022 21:23 UTC
 /adblock.js
 /plugins/footer-pop-up-banner/*
 /Reclama/*
@@ -14,11 +14,8 @@
 /ac_d_n
 /campaigns/click
 ||ad.doubleclick.net^
-||psd.marketing^$third-party
 ||paydemic.com
 coinhive.min.js
-||coin-hive.com^
-||coinhive.com^
 ||jsecoin.com^
 ||reasedoper.pw^
 ||mataharirama.xyz^
@@ -57,7 +54,6 @@ coinhive.min.js
 ||observatorulph.ro/cdn-cgi/apps/*$script,~third-party
 ||thumbs.gfycat.com^$image,domain=deschide.md
 @@||s1.olx.ro/static/olxro/naspersclassifieds-regional/olxeu-atlas-web/static/js/tracking/ninja.js$script,domain=olx.ro
-@@tracking/ninja.js$script,domain=olx.ro
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=a1.ro
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=antena3.ro
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=observator.tv
@@ -146,6 +142,11 @@ stiripesurse.ro##.row:nth-of-type(4) > .column-container > .md-one-half.ld-one-h
 stiripesurse.ro##.small.banner
 stiripesurse.ro##.banner
 ||media.stiripesurse.ro/assets/img/ads_img/$image
+||media.stiripesurse.ro/image/*.gif$image
+stiripesurse.ro##.js-alternating-banners
+stiripesurse.ro##[href*="Adv"]
+stiripesurse.ro##[href*="Promo"]
+stiripesurse.ro##[href^="https://ccir.ro/"]
 trafictube.ro##div[style$="width:520px"]
 transilvaniareporter.ro###flashContent
 urban.ro###home_calendar > a
@@ -616,8 +617,8 @@ evz.ro##[href="https://agoramag.ro"]
 ||media.evz.ro/wp-content/uploads/2021/03/kuga-BDT.png$image
 evz.ro###ado970p1
 evz.ro###ado970p2
-||cotidianul.ro/wp-content/uploads/*/domeniul-coroanei$image
-cotidianul.ro##[title^="ADS:"]
+! https://github.com/tcptomato/ROad-Block/issues/128
+||cotidianul.ro/wp-content/uploads/*banner
 national.ro#?#.clear:-abp-has(a)
 national.ro##.metasingle-jos
 national.ro###ys-container
@@ -696,7 +697,6 @@ gazetaromaneasca.com##.rm-skin
 ||ido.ro/i/a/300.php$subdocument,domain=vremea.ido.ro
 romaniatv.net##.height-300
 romaniatv.net##.strawberry-ads__pretty-container
-romaniatv.net##.column--300
 ##.SC_TBlock
 ||adevarul.ro/assets/adevarul.ro/MRImage/2019/02/20/5c6d75d7445219c57e642558/orig.jpg$image
 ||adevarul.ro/assets/adevarul.ro/MRImage/2019/05/27/5cec182e445219c57e1efd38/orig.jpg$image
@@ -771,8 +771,44 @@ playtech.ro##.height-sm-250.height-xs-300
 playtech.ro##.mg-bottom-10.text-center
 playtech.ro##.padding-top-10.padding-bottom-10
 playtech.ro##.height-md-300.height-xs-400
-www.scritub.com###dreapta > div:nth-of-type(1) > div
-www.scritub.com##.Section1 > div > div
-www.scritub.com##div:nth-of-type(4)
-www.scritub.com##div:nth-of-type(5)
-www.scritub.com###dreapta > div > div
+scritub.com##[style^="overflow:"]:has([data-ad])
+scritub.com##[style^="overflow:"]:has([data-ad-slot])
+scritub.com##[style^="overflow:"]:has(#v-scritub-v3)
+||sighet247.ro/banners/
+sighet247.ro##.ad
+||hdfilmeonline.ro/wp-content/uploads/2021/03/amazon-bands.jpg$image
+||hdfilmeonline.ro/wp-content/uploads/2021/03/amazonnub.png$image
+hdfilmeonline.ro##.bireklam
+||www.hoinaru.ro/wp-content/uploads/*/*/banner*$image
+reno.ro##.profitshare
+reno.ro##.adsense
+rasfoiesc.com##[style^="overflow:"]:has([data-ad])
+rasfoiesc.com##[style^="overflow:"]:has([data-ad-slot])
+rasfoiesc.com##td[height^="500"]
+daciaclub.ro,reno.ro##.profitshare
+daciaclub.ro,reno.ro##.adsense
+click.ro##.google-ads-in_article
+click.ro##.google-ads-billboard
+gandul.ro##.strawberry-ads-manager-container
+ziuanews.ro###pub-top-container
+ziaruldeiasi.ro##[href*="adclick"]
+asculta-live.com##.ad
+cetateanul.net##[href*="/?utm_source=cetateanul"]
+myradioonline.ro##.pls-dis-blck
+qreferat.com##[style^="overflow:auto;"]
+jurnalul.ro#?#.DAGInScrollInner:-abp-has(.bannerBox)
+jurnalul.ro##.bannerGrey
+protv.ro##.brandingDfp
+protv.ro#?#.container.billboard-1-index:-abp-has([id^="div-gpt-ad"])
+! https://github.com/tcptomato/ROad-Block/issues/136
+fanatik.ro##.strawberry-ads-manager-container
+dcnews.ro##[href^="https://ccir.ro/"]
+! anti-gambling advertising
+||serve.efortuna.ro^
+||banners.livepartners.com^
+||fanatik.ro/wp-content/uploads/*/*/netbet*.webp
+||fanatik.ro/wp-content/uploads//*/*/netbet-fundal.svg
+||fanatik.ro/wp-content/uploads/*/*/fortuna*.webp
+||fanatik.ro/wp-content/uploads/*/*/betano*.webp
+##[href^="https://serve.efortuna.ro/"]
+##[href^="https://banners.livepartners.com/"]
