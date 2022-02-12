@@ -18,8 +18,6 @@ razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/defaul
 razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[style*="px;"]:style(width: 100% !important)
 ! Rule "razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"]:style(width: 100% !important)" converted to: "razlozhi.*#$?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] { width: 100% !important }"
 razlozhi.*#?#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"]:style(width: 100% !important)
-! Rule "~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru##+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)" converted to: "~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#%#//scriptlet('ubo-abort-on-stack-trace.js', 'Object.prototype.getBaseFingerprint', 'inlineScript')"
-~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru##+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)
 ! Rule "/^https?://mail\.yandex\.[^\s]{125,}/$empty,script,~third-party" converted to: "/^https?://mail\.yandex\.[^\s]{125,}/$redirect=nooptext,script,~third-party"
 /^https?://mail\.yandex\.[^\s]{125,}/$empty,script,~third-party
 ! Rule "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$empty,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz" converted to: "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$redirect=nooptext,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz"
@@ -50,8 +48,6 @@ google.*#%#//scriptlet('ubo-remove-attr.js', 'data-jsarwt', '#rcnt [data-ved] a'
 www.google.*#%#//scriptlet('ubo-remove-attr.js', 'jsaction', '#islmp .isv-r > a')
 ! www.google.*#%#//scriptlet('ubo-remove-attr.js', 'jsaction', '#islsp c-wiz a[href^="http"][data-ved][target], stay') is excluded by "#%#//scriptlet" in exclusions-low.txt
 www.google.*#%#//scriptlet('ubo-remove-attr.js', 'jsaction', '#islsp c-wiz a[href^="http"][data-ved][target], stay')
-! ~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#%#//scriptlet('ubo-abort-on-stack-trace.js', 'Object.prototype.getBaseFingerprint', 'inlineScript') is excluded by "#%#//scriptlet" in exclusions-low.txt
-~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#%#//scriptlet('ubo-abort-on-stack-trace.js', 'Object.prototype.getBaseFingerprint', 'inlineScript')
 ! 4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight') is excluded by "#%#//scriptlet" in exclusions-low.txt
 4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight')
 ! 4pda.*#%#//scriptlet('ubo-no-setTimeout-if.js', 'removeAttr', 'setTimeout') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -107,9 +103,11 @@ vadimrazumov.ru,lena-miro.ru,periskop.su,levik.blog,livejournal.*,olegmakarenko.
 ! Invalid selector:
 www.rambler.*#?#+js(no-setInterval-if, catch, 500)
 ! Invalid selector:
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)
+! Invalid selector:
 ~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#+js(json-prune, Blocks)
 ! Invalid selector:
-~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#^script:has-text("getPrefixes")
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.ru,motor.ru,passion.ru,quto.ru,rambler.*,rns.online,wmj.ru#?#^script:has-text('getPrefixes')
 ! Invalid selector:
 frontend.vh.yandex.*#?#+js(set-constant, Object.prototype._getAutoplay, noopFunc)
 ! Invalid selector:
