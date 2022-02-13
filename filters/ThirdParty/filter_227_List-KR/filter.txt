@@ -4,7 +4,7 @@
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 ! Expires: 1 day
 ! DO NOT EDIT VERSION NUMBER
-! OriginalVersion: 20220212
+! OriginalVersion: 20220213
 ! ONLY DEVELOPER CAN EDIT THAT
 ! Exceptions for broken services
 @@||ad.smartmediarep.com^$domain=mbn.co.kr
@@ -1603,8 +1603,7 @@ ondisk.co.kr##div[id^="wingBanner-"]
 ||img.kormedi.com/healthgift/ad/ad*.html^$domain=m.kormedi.com
 ||img.kwangju.co.kr/banner/$domain=kwangju.co.kr
 ||img.luukku.com/st/static/javascripts/external-js/ad-layout/$domain=luukku.com
-||img.mobon.net/js/elpBackUnder.js^
-||img.mobon.net/mediaCategory/newAd/adbn_*.js^
+||img.mobon.net^
 ||img.mrep.kr/slot/*.html^
 ||img.nabang.tv/partner/banner/
 ||img.newspim.com/banner/$domain=newspim.com
@@ -1878,19 +1877,7 @@ ondisk.co.kr##div[id^="wingBanner-"]
 ||mediacategory.com/adnet/
 ||mediacategory.com/playLinkAd/js/mMobonPlayLink.js^
 ||mediacategory.com/playLinkAd/js/mobonPlayLinkToast.js^
-||mediacategory.com/servlet/adBanner^
-||mediacategory.com/servlet/adBannerFloating^
-||mediacategory.com/servlet/adbn^
-||mediacategory.com/servlet/adbnMobileBanner^
-||mediacategory.com/servlet/adbnMobileFloating^
-||mediacategory.com/servlet/adNative^
-||mediacategory.com/servlet/adNewsflashContentsBox^
-||mediacategory.com/servlet/adPlayLinkBanner^
-||mediacategory.com/servlet/adPlayLinkServlet^
-||mediacategory.com/servlet/iadbn^
-||mediacategory.com/servlet/nateMobileServlet^
-||mediacategory.com/servlet/sadbn^
-||mediacategory.com/servlet/shortCut^
+||mediacategory.com/servlet/
 ||mediafire.com/templates/linkto/ads.php^$domain=mediafire.com
 ||mediamixad.com/ad/liveAd^
 ||mediamixad.com/ad/webad^
@@ -7533,6 +7520,7 @@ m.comic.naver.com##[id^="flex_ad_"]
 sajuplus.net##.adsense-alt
 torrentdia12.com,torrentdia13.com,torrentdia14.com,torrentdia15.com,torrentdia16.com,torrentdia17.com,torrentdia18.com,torrentdia19.com,torrentdia20.com,torrentdia21.com,torrentdia22.com##[href*=".com/bbs/bannerhit.php?"]
 ! Extended CSS rules
+ppss.kr#?#section[id^="custom_"]:has(> div.widget_text > h3:contains(SPONSORED).widgettitle)
 m.newspic.kr#?#.aside_wrap > div.box:has(> div > iframe[src^="https://ad.adinc.kr/"])
 m.bunjang.co.kr#?#.app > div > div > div[class]:has(> div[class] > div[class] > div[class]:contains(파워링크))
 m.bunjang.co.kr#?#div:has(> div > div > div:contains(연관상품) > div:has(> div:contains(AD)) > img[alt="AD 가이드"])
@@ -7648,8 +7636,19 @@ cafe.naver.com#?#tr._noticeArticle.board-notice.type_main:has(> td.td_article > 
 ||bandisoft.com/bandizip/ad/
 !#endif
 !#if ( adguard_ext_firefox || adguard_ext_edge || adguard_ext_chromium )
-@@/:\/\/ygosu\.com\/([a-z]|[A-Z])\w+\/([A-Z])\w+\.ps/
-@@/:\/\/ygosu\.com\/([A-Z])\w+\.ps/
-/:\/\/ygosu\.com\/([A-Z])\w+\./$object,image,media,other,redirect=32x32-transparent.png
-/:\/\/ygosu\.com\/([a-z]|[A-Z])\w+\/([A-Z])\w+\./$object,image,media,other,redirect=32x32-transparent.png
+@@/:\/\/ygosu\.com\/([A-Z]|[a-z]|[0-9]|_)+\/([A-Z]|[a-z]|[0-9]|_)+ps/
+@@/:\/\/ygosu\.com\/([A-Z]|[a-z]|[0-9]|_)+ps/
+/:\/\/ygosu\.com\/([A-Z]|[a-z]|[0-9]|_)+/$object,image,media,other,redirect=32x32-transparent.png
+/:\/\/ygosu\.com\/([A-Z]|[a-z]|[0-9]|_)+\/([A-Z]|[a-z]|[0-9]|_)+/$object,image,media,other,redirect=32x32-transparent.png
+!#endif
+!#if ( adguard_ext_firefox || adguard_ext_edge || adguard_ext_chromium )
+@@/:\/\/([a-z]|[0-9])+\.inven\.co\.kr\/([A-Z]|[a-z]|[0-9]|_)+\/([A-Z]|[a-z]|[0-9]|_)+\.ps/
+@@/:\/\/([a-z]|[0-9])+\.inven\.co\.kr\/([A-Z]|[a-z]|[0-9]|_)+\.ps/
+/:\/\/([a-z]|[0-9])+\.inven\.co\.kr\/([A-Z]|[a-z]|[0-9]|_)+\./$object,image,media,other,redirect=32x32-transparent.png
+/:\/\/([a-z]|[0-9])+\.inven\.co\.kr\/([A-Z]|[a-z]|[0-9]|_)+\/([A-Z]|[a-z]|[0-9]|_)+\./$object,image,media,other,redirect=32x32-transparent.png
+!#endif
+!#if ( adguard_ext_firefox || adguard_ext_edge || adguard_ext_chromium )
+@@||ppss.kr/wp-content/uploads/
+/:\/\/ppss\.kr\/([A-Z]|[a-z]|[0-9]|_)+/$object,image,media,other,redirect=32x32-transparent.png
+/:\/\/ppss\.kr\/([A-Z]|[a-z]|[0-9]|_)+\/([A-Z]|[a-z]|[0-9]|_)+/$object,image,media,other,redirect=32x32-transparent.png
 !#endif
