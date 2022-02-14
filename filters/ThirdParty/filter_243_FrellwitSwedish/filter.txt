@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-02-12 09:52:38 CET
+! Last modified: 2022-02-14 08:03:47 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -279,6 +279,7 @@ mobilanyheter.net#%#//scriptlet('ubo-set.js', 'ai_run_scripts', 'noopFunc')
 modernalivet.se#$#body.modal-active { overflow:unset!important }
 modernalivet.se##h3:has-text(/annons/i):upward(.sidebar-widget)
 monasuniversum.se##article > div > p:has-text(/annonssamarbete/i):upward(article)
+moviezine.se##strong:has-text(ANNONS:)
 mygatemagazine.se##.textwidget:has-text(Annons)
 mytaste.se#$#.recipe-modal[data-state=default] .modal-container.open, .recipe-modal[data-state=panorama] .modal-container.open { padding-top: 0 !important; }
 mytaste.se#$#.site-wrapper[data-state=panorama], .site-wrapper[data-state=default] { padding-top: 40px !important; }
@@ -1606,7 +1607,7 @@ bilsport.se##fl-panorama-top,fl-newsletter-popup
 bilweb.se###cookie_alert
 bilwebben.ax##.front #secondary-content-wrapper
 birthday.se##.datax
-blocket.se###placement_panorama, .blocket-placement, div[style="height: 240px;"]
+blocket.se###placement_panorama, .blocket-placement, div[style="height: 240px;"], [class*="offering-info-box"]
 bokadirekt.se##.home-banner, img[alt*="banner"]
 bokmassan.se,svenskamassan.se##.cookie-law
 boktugg.se##[id^="boktu-"]
@@ -1903,6 +1904,7 @@ livetochdiabetes.se###text-3
 livetsgoda.se##.penci-rlt-popup
 livsmedelsverket.se###CookieConsent
 ljudochbild.se##.adremark, .coofad, .popup-overlay, .hidead, .phoneads, .pricecomp, .offerz, .type-articleadvertorial, .adblock, .lbplussinfo, .popup-overlayx
+ljungbysporten.se##section.widget_media_image, a[target="_blank"]:not([href*="ljungbysporten.se"])
 lokalfotboll.se###topbar, .inside-right-sidebar > .really_simple_image_widget
 lokalguiden.se##.applicant-match-container, .banner-item, .banner-container
 lokalnytt.se##.panoramaImageBox
@@ -2270,7 +2272,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||compricer.se^$third-party
 ||connect.nosto.com^*/behav-popup.$script
 ||connectio.s3.amazonaws.com/connect-retarget.$script
-||consensu.org^$domain=alekuriren.se|babyhjalp.se|bjarenu.se|blogg.se|butikpris.se|cleannet.se|dagenshandel.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|filmtopp.se|flashback.org|food-supply.se|foodnet.se|forni.se|fri-kopenskap.se|friidrott.se|gbgfotboll.se|habit.se|hockeynews.se|humorbibeln.se|innebandy.se|interiorbyvanessa.se|jennysmatblogg.nu|kalender.se|kemivarldenbiotech.se|laget.se|land.se|landlantbruk.se|landleyskok.se|landskogsbruk.se|leta.se|lifesciencesweden.se|lindasbakskola.se|listor.se|ljudochbild.se|matklubben.se|medtechmagazine.se|merinfo.se|motormagasinet.se|mykitchenstories.se|mytaste.se|newsner.com|norrahalland.se|oppettiden.se|packnet.se|pernillawahlgren.se|plastnet.se|poddtoppen.se|prevent.se|processnet.se|proff.se|recyclingnet.se|res.se|rf.se|rt-forum.se|samnytt.se|skik.se|skyddosakerhet.se|sportbibeln.se|spray.se|stff.se|svenskayoutubers.se|svenskorientering.se|swehockey.se|themoviefreak.se|tittapavideon.se|transportnet.se|travelnews.se|tvmatchen.nu|uochd.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|zeinaskitchen.se
+||consensu.org^$domain=alekuriren.se|babyhjalp.se|bjarenu.se|blogg.se|butikpris.se|cleannet.se|dagenshandel.se|eniro.se|enkelteknik.se|entreprenad.com|ettgottskratt.se|filmtopp.se|flashback.org|food-supply.se|foodnet.se|forni.se|fri-kopenskap.se|friidrott.se|gbgfotboll.se|habit.se|hockeynews.se|humorbibeln.se|innebandy.se|interiorbyvanessa.se|jennysmatblogg.nu|kalender.se|kamerabild.se|kemivarldenbiotech.se|laget.se|land.se|landlantbruk.se|landleyskok.se|landskogsbruk.se|leta.se|lifesciencesweden.se|lindasbakskola.se|listor.se|ljudochbild.se|matklubben.se|medtechmagazine.se|merinfo.se|mobil.se|motormagasinet.se|mykitchenstories.se|mytaste.se|newsner.com|norrahalland.se|oppettiden.se|packnet.se|pernillawahlgren.se|plastnet.se|poddtoppen.se|prevent.se|processnet.se|proff.se|recyclingnet.se|res.se|rf.se|rt-forum.se|samnytt.se|skik.se|skyddosakerhet.se|sportbibeln.se|spray.se|stff.se|svenskayoutubers.se|svenskorientering.se|swehockey.se|themoviefreak.se|tittapavideon.se|transportnet.se|travelnews.se|tvmatchen.nu|uochd.se|varldenshaftigaste.se|verkstaderna.se|woodnet.se|zeinaskitchen.se
 ||consent.dk^$third-party,domain=~ekstrabladet.dk
 ||consent.podplay.com^
 ||consentframework.com^$domain=luleahockeyforum.com
@@ -2586,6 +2588,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||privacy-mgmt.com^$domain=radio.se
 ||proff.se^$third-party
 ||proxyas.com^$third-party
+||prylguiden.expressen.se^
 ||ptm.flowplayer.com^*/display$xmlhttprequest
 ||ptm.flowplayer.com^*/ping$xmlhttprequest
 ||ptm.flowplayer.com^*/view$xmlhttprequest
