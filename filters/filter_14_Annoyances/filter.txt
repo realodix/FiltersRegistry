@@ -7255,6 +7255,7 @@ slate.com#@#.ad-container
 !######### General URL blocking rules ##################
 !#######################################################
 !
+||delivery.consentconverter.com/delivery/cmp.php
 ||ccm.takuma.de^$third-party
 ||gdpr-legal-cookie.beeclever.app^$third-party
 /cookie-law-info-public.js
@@ -7747,6 +7748,13 @@ techadvisor.co.uk,forum.notebookreview.com,computerworld.com,skysports.com#$#bod
 !
 !
 !
+sescsp.org.br##.container-policy
+sescsp.org.br##.container-policy ~ div.overlay
+thesettlersonline.fr,thesettlersonline.ru,thesettlersonline.es,thesettlersonline.nl,thesettlersonline.cz,thesettlersonline.it,thesettlersonline.com.br,thesettlersonline.pl,diesiedleronline.de,thesettlersonline.com#$##consentNotification { display: none!important; }
+thesettlersonline.fr,thesettlersonline.ru,thesettlersonline.es,thesettlersonline.nl,thesettlersonline.cz,thesettlersonline.it,thesettlersonline.com.br,thesettlersonline.pl,diesiedleronline.de,thesettlersonline.com#$#body { overflow: visible!important; margin-right: 0!important; }
+apteka24.ua##.cookie-agreement
+swisstransfer.com#$#module-rgpd-component { display: none!important; }
+swisstransfer.com#$#body { overflow: visible!important; }
 americanas.com.br##div[class^="lgpd-message-box__"]
 serpro.gov.br##.br-cookiebar
 rapidonline.com#$#.cookie-policy-wrap { display: none !important; }
@@ -11206,7 +11214,7 @@ tausendkind.de,orbisana.de#$#html { position: static!important; }
 ouh.nhs.uk,wwnorton.com,enbiosis.com##.cookie-consent-banner
 blog.remarkable.com,medium.com,blog.sikayetvar.com##.butterBar--CCPA
 blog.sikayetvar.com##body > div#root ~ div:not([class]):not([id]) > div[class^="db t k"]
-openuserjs.org,oses.com.tr,turklab.com.tr,sanalmagaza.droetker.com.tr,discounto.de,apteka24.ua,damelibros.com,hashflare.io##.alert-dismissible
+openuserjs.org,oses.com.tr,turklab.com.tr,sanalmagaza.droetker.com.tr,discounto.de,damelibros.com,hashflare.io##.alert-dismissible
 generali.com.tr##.kvk-footer
 sonnenapotheke-hauenstein.de,apoase.de,apotheke-marienbrunn.de###cookie-message ~ .design
 cookpad.com##div[data-id="cookie_dialog"]
@@ -19119,12 +19127,17 @@ early-riser.com#?#div[class] ~ h1[style]:contains(Newsletter) + p + div[class]
 ##head[prefix~="medium-com:"] ~ body .js-openInAppButton
 ##head[prefix~="medium-com:"] ~ body .js-postActionsBarContent > .js-readNextInteractions
 !
+pairs.lv#$##headerBanner { display: none !important; }
+pairs.lv#$##page_top[style="top: 64px;"] { top: 0 !important; }
+pairs.lv#$#.fixheader[style$="top: 64px;"] { top: 0 !important; }
 op.gg##.e6ayeey0
 mgronline.com##.app-container
 m.bunjang.co.kr#%#//scriptlet("set-cookie", "_bun_hide_lm", "0")
 google.*###app > div.visible > div[role="dialog"][jsaction^="focusout:promotion.dismiss;"]
 spark-interfax.ru##.mobile-app-banner
 pizzahut.jp##.promote-app
+||seiga.nicovideo.jp/manga/img/manga/common/app_store_banner_
+seiga.nicovideo.jp##.launch_app_container
 ||seiga.nicovideo.jp/manga/resources/viewer/dl_banner.png
 seiga.nicovideo.jp#?#a[href="https://site.nicovideo.jp/nicomanga/?appstore=1"][style^="width: 100%; text-align: center; background-color"]:upward(1)
 store.shopping.yahoo.co.jp###h_app
@@ -20759,6 +20772,9 @@ sodapdf.com##.be-tooltip
 ! Specific sites
 !######### Subscription popups add to subscriptions.txt #########
 !
+everplans.com#$##bio_ep_bg { display: none !important; }
+everplans.com#$##bio_ep { display: none !important; }
+everplans.com#$#body { overflow: auto !important; }
 x.gd##.notice
 tsargrad.tv##.sticky-bottom
 leparisien.fr##.dailymotion-player-wrapper[style*="position: fixed;"]
@@ -32307,9 +32323,10 @@ jaunpurmusic.info#$#div[id^="wpsafe-wait"] { display none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/105790
 mcdlpit.com#$#.countdown > #reveal_url { display: block !important; }
 ! circumvent countdown
-ac-illust.com,photo-ac.com#?##eachDownloadedModal .ac-btn[href^="https://premium."]:upward(#eachDownloadedModal)
-ac-illust.com,photo-ac.com#$#.modal-backdrop  {display: none !important; }
-ac-illust.com,photo-ac.com#$#body.modal-open * { filter: none!important; }
+ac-illust.com,photo-ac.com,silhouette-ac.com#?##eachDownloadedModal .ac-btn[href^="https://premium."]:upward(#eachDownloadedModal)
+ac-illust.com,photo-ac.com,silhouette-ac.com#$#.modal-backdrop  {display: none !important; }
+ac-illust.com,photo-ac.com,silhouette-ac.com#$#body.modal-open * { filter: none !important; }
+ac-illust.com,photo-ac.com,silhouette-ac.com#$#body.modal-open { overflow: auto !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/pull/103288
 lover9.net#$##sex.sexmaster[style*="display:"] { display: block !important; }
 ! https://www.reddit.com/r/uBlockOrigin/comments/r43gcd/how_do_i_prevent_the_adblock_detector_and_the/
@@ -34233,7 +34250,7 @@ twgreatdaily.com$$script[tag-content="indexOf|css|fn|this|attr|unselectable|cons
 ##.plugin-blogroll
 ##[class^="blogroll_wrapper"]
 !
-nan-net.com#?#td > .bbs_box > iframe[src^="//tool2.nan-net.com"]:upward(1)
+koe-koe.com##.rss_c
 ||doujinlist.com/rss.js
 ||2nt.com/b/o/t/bottisoku/$subdocument,domain=bottisoku.blog.2nt.com
 bottisoku.blog.2nt.com##.ently_new_article
@@ -34711,6 +34728,10 @@ indoxxi.show##.tawkto-btn
 !
 !
 !
+! speed test widget
+! https://github.com/AdguardTeam/AdguardFilters/issues/110452
+||pcm-intl.speedtestcustom.com^$domain=pcmag.com
+pcmag.com###article > div > div.aspect-ratio-16\/9.iframe-wrapper
 ||getcobra.io/ext/poll/$third-party
 ||quiz.marquiz.ru^
 ||widget.bitay.com^$domain=ajansspor.com
