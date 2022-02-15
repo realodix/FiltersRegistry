@@ -16395,6 +16395,11 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ! @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=cc.com|3sat.de|zdf.de|costco.com|giantbomb.com|glovoapp.com|rte.ie|digitaltrends.com|spiele.bild.de|spiele.stern.de|vanityfair.com|saarbruecker-zeitung.de|olympics.com|dziendobry.tvn.pl|bergfreunde.de|oe24.at|epicgames.com|toteraz.pl|natgeotv.com|midomi.com|volksfreund.de|kawasaki.com|foxchannels.com.tr|ga.de|shop.mango.com|kralmuzik.com.tr|westernunion.com|roastmarket.de|new.cappex.com|vimeo.com|heute.at|ntv.com.tr|wargaming.net|metacritic.com|gq-magazine.co.uk|viafree.dk|viafree.fi|viafree.no|viafree.se|glamour.de|cbsnews.com|worldoftanks.ru|vg247.com|newyorker.com|games.miamiherald.com|eurogamer.es|eurogamer.de|bet.com|ikonpass.com|mcdelivery.de|id.trimble.com
 !
+! Required for apps only
+! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
+! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
+!+ PLATFORM(windows, mac, android)
+@@||geolocation.onetrust.com/cookieconsentpub/*/geo/location
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109380
 skousen.dk,skousen.no,whiteaway.com,whiteaway.no,whiteaway.se#@##CookieConsent
 @@||policy.app.cookieinformation.com^$domain=skousen.dk|skousen.no|whiteaway.com|whiteaway.no|whiteaway.se
@@ -20777,6 +20782,8 @@ sodapdf.com##.be-tooltip
 ! Specific sites
 !######### Subscription popups add to subscriptions.txt #########
 !
+how-to-inc.com###sp-cta
+agoda.com##.ModalPortal
 generacodice.com#$#body.modal-open { overflow: auto !important; padding-right: 0 !important; }
 generacodice.com#$#.modal-backdrop { display: none !important; }
 generacodice.com#$#div[aria-labelledby="registrationModalTitle"] { display: none !important; }
@@ -21178,7 +21185,7 @@ companyhouse.de#$#div[id="ajax-modal"][style="display: block; padding-right: 17p
 bfstrms.xyz##div[id^="webmodal"]
 bfstrms.xyz##.modal-backdrop
 startech.com.bd#%#//scriptlet('set-constant', 'app.enablePopup', 'false')
-naifix.com##.boxzilla-bottom-right-container
+equl.jp,naifix.com##.boxzilla-bottom-right-container
 raspberrytips.com#$#html { overflow: visible !important; }
 raspberrytips.com#$#.cp-modal-popup-container.cp-free-ebook-container { display: none !important; }
 developer.android.com#?#devsite-snackbar a.devsite-snackbar-link[href^="https://developer.android.com/survey"]:upward(devsite-snackbar)
@@ -28953,7 +28960,10 @@ handmadekultur.de###elementor-popup-modal-228660
 chronext.de#$#.e-tastic__chronext-newsletterModal { display: none!important; }
 chronext.de#$#body { overflow: visible!important; position: static!important; touch-action: auto!important; }
 chronext.de##.newsletter-bar
+interfax-russia.ru#?#div[class] > div.border-bottom:has(> span:contains(Читайте нас))
 chronext.de##.e-tastic__chronext-newsletterStage
+av.by##.journal-youtube
+av.by##.article__content > h4:has(> a[href="https://zen.yandex.ru/av.by"])
 watchmaster.com#$##newsletterPopup { display: none!important; }
 watchmaster.com#$#.modal-backdrop { display: none!important; }
 watchmaster.com#$#body { overflow: visible!important; padding-right: 0!important; }
