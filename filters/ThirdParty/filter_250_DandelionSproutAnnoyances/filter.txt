@@ -17209,7 +17209,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 15February2022v4
+! OriginalVersion: 16February2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -18242,6 +18242,10 @@ $removeparam=sudaref
 ! http://edu.sina.com.cn/y/bbs/2005/1020/1017979.html?presentid=webnews (14/02/2022)
 ! This extra parameter appears when opening news from widgets in Windows 11.
 ^presentid=webnews^$removeparam=presentid
+! https://www.dailykos.com/stories/2022/2/14/2080215/-From-the-GNR-Newsroom-The-Monday-Good-News-Roundup?pm_source=story_sidebar&pm_medium=web&pm_campaign=recommended
+$removeparam=pm_source
+$removeparam=pm_medium
+$removeparam=pm_campaign
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -19802,6 +19806,8 @@ $removeparam=article-trending,domain=sportskeeda.com
 $removeparam=_amp,domain=latimes.com
 ! https://metro.co.uk/2022/02/07/facebook-and-insta-may-drop-europe-if-they-cant-target-users-with-ads-16062662/?ico=related-posts
 $removeparam=ico,domain=metro.co.uk
+! https://www.disneyplus.com/en-fi?cid=DSS-Affiliate-Impact-Content-Future%20PLC.-564546
+$removeparam=/^cid=DSS-Affiliate/,domain=disneyplus.com
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
@@ -20200,7 +20206,7 @@ finn.no#$#.grid__unit.u-r-size2of3 { width: 70% !important }
 finn.no#$#.top-bar-top-bar__nav-1O8LN { max-width: none !important }
 finn.no#$#.top-bar-top-bar__menu-item-3kxIT { padding-right: 40px !important; padding-left: 40px !important }
 ! Real estate search section
-www.finn.no#%#//scriptlet('ubo-rc.js', 'ads__unit--premium', '.ads__unit, stay')
+www.finn.no#%#//scriptlet('ubo-rc.js', 'ads__unit--premium', '.ads__unit', 'stay')
 ! ——————————————————————————————————————————————————————————————————————————
 ! Category: GitHub
 ! This category is based on entries from 'GitHub Wide', which is maintained by https://github.com/mdo at https://github.com/mdo/github-wide, and which is licenced under MIT.
@@ -20437,7 +20443,7 @@ www.youtube.com#?#.ytd-watch-flexy #dismissible:-abp-has(.badge-style-type-simpl
 tv2.no##.banner
 ! Prevents sites from forcibly always opening pages in new tabs
 ! https://github.com/EasyList-Lithuania/easylist_lithuania/issues/16
-autoplius.lt#%#//scriptlet('ubo-ra.js', 'target', '[target="_blank"], stay')
+autoplius.lt#%#//scriptlet('ubo-ra.js', 'target', '[target="_blank"]', 'stay')
 ! Prevents sites from removing the ability to right-click on pages
 ! https://www.patheos.com/blogs/godzooks
 /wp-content/plugins/disable-right-click-and-content-copy-protection^
@@ -20454,4 +20460,4 @@ hackintoshshop.com##body > div:first-of-type[style^=background-color][id]
 ! Makes real estate classifieds on FinnNO uniformly sized again, and reverses the effects of the site's large price increase for estate brokers to get large thumbnails
 ! https://www.nettavisen.no/okonomi/raser-over-nye-priser-for-boligsalg-pa-finn-no-forbrukerne-er-fratatt-ethvert-valg/s/12-95-3424235759
 ! https://github.com/DandelionSprout/adfilt/issues/466
-www.finn.no#%#//scriptlet('ubo-rc.js', 'ads__unit--premium', '.ads__unit, stay')
+www.finn.no#%#//scriptlet('ubo-rc.js', 'ads__unit--premium', '.ads__unit', 'stay')
