@@ -1142,18 +1142,20 @@ subhd.com##div[style^="text-align:center;height:270px"],.col-md-10 > div:nth-of-
 admin5.com##.float_both,div.sherry_ad1,div.specialBox,.content_right_ad
 100.pncdn.cn
 ! Title: 乘风 视频过滤规则
-! OriginalVersion: 202202171
+! OriginalVersion: 202202181
 ! Expires: 1 day
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
 ! 屏蔽P2P
-v.qq.com,bilibili.com,douyu.com,huya.com,le.com,mgtv.com,dandanzan.top,nunuyy1.*#%#//scriptlet('ubo-nowebrtc.js')
+v.qq.com,bilibili.com,huya.com,le.com,mgtv.com,dandanzan.top,nunuyy1.*#%#//scriptlet('ubo-set.js', 'RTCPeerConnection', 'undefined')
+v.qq.com,bilibili.com,huya.com,le.com,mgtv.com,dandanzan.top,nunuyy1.*#%#//scriptlet('ubo-set.js', 'webkitRTCPeerConnection', 'undefined')
+v.qq.com,bilibili.com,huya.com,le.com,mgtv.com,dandanzan.top,nunuyy1.*#%#//scriptlet('ubo-set.js', 'mozRTCPeerConnection', 'undefined')
 v.youku.com##.control-phonewatch,#right-title-ad-banner, .kui-watermark-0
 v.youku.com#%#//scriptlet('ubo-aeld.js', 'dblclick', 'triggerEvent')
 m.youku.com,v.youku.com#%#//scriptlet('ubo-nano-stb.js', 'r--', '', '0.02')
 !m.youku.com,v.youku.com##+js(cookie-remover, cna)
 atm.youku.com
 cad.youku.com
-@@||log.mmstat.com^$script,domain=youku.com
+@@||mmstat.com^$domain=youku.com
 ||cibntv.net/youku/$media,important
 ||valipl.cp31.ott.cibntv.net/$media
 |https://js.ykimg.com/youku/dist/js/lib/ikuAdapterNew.js
@@ -1247,7 +1249,8 @@ yoyi.com.cn
 zhiziyun.com
 le.com##.min_pause_img
 www.douyu.com#%#//scriptlet('ubo-aeld.js', '/visibilitychange|pagehide/')
-! www.douyu.com##+js(set, RTCPeerConnection.prototype.addStream, noopFunc)
+www.douyu.com#%#//scriptlet('ubo-set.js', 'RTCPeerConnection.prototype.addStream', 'noopFunc')
+www.douyu.com#%#//scriptlet('ubo-set.js', 'webkitRTCPeerConnection.prototype.addStream', 'noopFunc')
 ||douyucdn.cn/adxdsp/$image
 wan.douyu.com
 douyu.com,huya.com##a[href^="https://g.wan."]
