@@ -7267,6 +7267,7 @@ slate.com#@#.ad-container
 !######### General URL blocking rules ##################
 !#######################################################
 !
+/wp-content/plugins/dsgvo-tools-cookie-hinweis-datenschutz/*
 ||delivery.consentconverter.com/delivery/cmp.php
 ||ccm.takuma.de^$third-party
 ||gdpr-legal-cookie.beeclever.app^$third-party
@@ -32305,6 +32306,11 @@ mail.ru###subscriptionFormWeekMainBlockId
 !######### CSS tweaks #########
 !##############################
 !
+! go.insurance-space.xyz/?link=XBST
+go.insurance-space.xyz#$##wpsafe-generate { display: block !important; }
+go.insurance-space.xyz#$##wpsafe-link { display: block !important; }
+go.insurance-space.xyz#$##wpsafelinkhuman { display none !important; }
+go.insurance-space.xyz#$#div[id^="wpsafe-wait"] { display none !important; }
 ! https://www.reddit.com/r/uBlockOrigin/comments/sy74pj/full_page_anti_adblock_detector/
 paidappstore.xyz#$##wpsafe-generate { display: block !important; }
 paidappstore.xyz#$##wpsafe-link { display: block !important; }
@@ -32634,6 +32640,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 !
 !
+! zshort.cc/9LuhC
+mdn.rest#%#//scriptlet("set-constant", "waitTime", "0")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110953
 courses99.com#%#//scriptlet("adjust-setInterval", "countdown", "", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110891
