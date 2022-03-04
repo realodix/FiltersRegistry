@@ -494,13 +494,12 @@ g-pc.info#%#//scriptlet('set-constant', 'adsbygoogle.loaded', 'true')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=g-pc.info
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103488
-! https://github.com/AdguardTeam/AdguardFilters/issues/87846
-musenboya.com#@#.ads-area
-musenboya.com#%#//scriptlet("set-constant", "google_jobrunner", "noopFunc")
+@@||musenboya.com^$generichide
+musenboya.com#$?#div[id] > div[id^="im-"] > script[src^="https://imp-"]:upward(2) { height: 1px !important; }
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
-musenboya.com#@#.adsbygoogle
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=musenboya.com
-@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/*/show_ads_impl_fy2019.js$domain=musenboya.com
+@@||imp-adedge.i-mobile.co.jp/script/v1/spot.js$domain=musenboya.com
+@@||ssp-bidapi.i-mobile.co.jp/api/v1/spot.ashx?$domain=musenboya.com
+@@||spnativeapi-tls.i-mobile.co.jp/api/ad_spot.ashx?$domain=musenboya.com
 !#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95723
 tabtter.jp#@##googlead
@@ -584,6 +583,8 @@ blog.umentu.work#%#//scriptlet('prevent-setInterval', 'isBlanketFound', '4000')
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=blog.umentu.work
 ! https://github.com/AdguardTeam/AdguardFilters/issues/67394
 @@/assets/scripts/fab.js$domain=life-n.jp|point-news.jp
+! https://github.com/AdguardTeam/AdguardFilters/issues/66815
+@@||dl.520cc.cc/*/ad.php?$~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65807
 ||freemen.jp/wp-content/uploads/yIOefayFENNZ/$script
 ||freemen.jp/wp-content/uploads/gftpkzd.js
@@ -863,6 +864,8 @@ otonasalone.jp,sumaiweb.jp#?#._popIn_infinite_page > a._popIn_recommend_article_
 !
 !
 !
+musenboya.com#?#.section-title > p:contains(/^スポンサーリンク$/)
+musenboya.com#?#.text-center > p:contains(/^スポンサーリンク$/)
 yomiuri.co.jp#?#.p-article-reading-recommend-list-item > article > div[id^="ad_dfp"]:upward(2)
 w.atwiki.jp#?##menubar2 > div.atwiki-contents > div > object[id^="Player_"]:upward(3)
 w.atwiki.jp#?##wikibody > h3[id^="id_"] > span[style="font-weight: bold;"] > center:contains(広告):upward(2)
@@ -1508,6 +1511,8 @@ game.nicovideo.jp#%#//scriptlet('adjust-setTimeout', '[native code]', '15000')
 asg.to#%#//scriptlet('prevent-window-open')
 ! www.380cc.cc auto-redirect
 380cc.cc#%#//scriptlet('remove-attr', 'onclick', 'span > a[onclick]')
+! https://github.com/AdguardTeam/AdguardFilters/issues/66815
+dl.520cc.cc#%#//scriptlet('prevent-window-open')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57825
 sexpixbox.com#%#//scriptlet('prevent-setTimeout', 'affId', '2000')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57490
@@ -1772,6 +1777,7 @@ nicovideo-r18.com,pokemon-gsc.g-takumi.com,1rk.net,e-typing.ne.jp,zukai-kikenbut
 !
 ||feed.mikle.com^$domain=blog.livedoor.jp|crx7601.com|fate-rpg.jp|gadgetlife2ch.blomaga.jp|gtoys.blog.fc2.com|h1g.jp|hdouga.com|ibarakinews.jp|obutu.com|totalwar.doorblog.jp|xn--bckadddb2a0d4dnc8dwhngdtb58aya0l4a2om843g5npczp7dwh5g.com|xn--cckea5a6cidcbh6ce7ghug17a2ge3aht3nwigef51658aw7kd.com
 !
+musenboya.com###RecommendArea
 kusurinomadoguchi.com###page-banner
 theav.xyz##.c307ad
 .gif$domain=theav.xyz,third-party
