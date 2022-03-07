@@ -1,7 +1,7 @@
 !
-! OriginalVersion: 202203061421
+! OriginalVersion: 202203071708
 ! Title: ABPVN List
-! Last modified: 06 Mar 2022 14:21 UTC+7
+! Last modified: 07 Mar 2022 17:08 UTC+7
 ! Expires: 1 days (update frequency)
 !
 ! ABPVN List filter
@@ -35,6 +35,7 @@ $popup,third-party,domain=hamtruyenmoi.com|phim1080z.com|fim1080.com|animehay.cl
 /assets/themes/js/wonderfarm$script,domain=huphimtv.com|phim18zz.com
 /banner-ads.
 /banner/*.gif,domain~=tvphapluat.vn
+/baominh.tech\/wp-content\/plugins\/\w+-\w+\/\w+-\w+\.js/$script
 /blueserving.
 /cdn.bongdadem.net/$image
 /content/vast$xmlhttprequest
@@ -104,7 +105,6 @@ vebotv.link##.ibs-bet
 ||baliphim.com^*.gif
 ||banthangtv.b-cdn.net^*.gif
 ||baohaugiang.com.vn/uploads/SlideHomeimg/
-||baominh.tech/wp-content/plugins/wp-*/wp-*.js$script
 ||baonga.com/*quang_cao$image
 ||baonga.com/FileUpload/Images/*banner
 ||baonga.com/image*.gif
@@ -1530,7 +1530,7 @@ zone.tv,ssphim.net##.uniad-zonetype-preload-overlay
 @@||media.nghean24h.vn/thumb$image
 @@||media1.admicro.vn/cms/*$script,domain=tuoitre.vn
 @@||newscon.net/static/js/prebid-ads.js
-@@||pagead2.googlesyndication.com$script,xmlhttprequest,image,domain=upfile.vn|thuthuatmeovat.net|khogamepc.com|win10.vn|loinhacsong.com|kites.vn|phuongtrinhhoahoc.com|vinaurl.com|hhkungfu.tv|thichvn.com|icongnghe.com|vutrung.gnomio.com|letrongdai.vn|romgoc.net|traderviet.com|sum.vn|truyenaudiocv.net|phanmemgoc.com|123link.f4vnn.com|khuchotot.com|laptrinhx.com|1shortlink.com|shortenlink.vip|suckhoe247.top|caohung.net|sachiepvien.net|iot.chinhphucvn.com|thelanb.com|nguyentinhblog.com|cungthi.online|sharescript.net|lehait.net|nhacsong.pro|kientruc360.info|tienichmaytinh.net|giavang.net|qthang.net|vnjpclub.com|753x.blogspot.com|ngohoanganhtuan.com|ngohoanganhtuan.net|toeicexamstore.xyz|vungoctuan.vn|ichi.pro
+@@||pagead2.googlesyndication.com$script,xmlhttprequest,image,domain=upfile.vn|thuthuatmeovat.net|khogamepc.com|win10.vn|loinhacsong.com|kites.vn|phuongtrinhhoahoc.com|vinaurl.com|hhkungfu.tv|thichvn.com|icongnghe.com|vutrung.gnomio.com|letrongdai.vn|romgoc.net|traderviet.com|sum.vn|truyenaudiocv.net|phanmemgoc.com|123link.f4vnn.com|khuchotot.com|laptrinhx.com|1shortlink.com|shortenlink.vip|suckhoe247.top|caohung.net|sachiepvien.net|iot.chinhphucvn.com|thelanb.com|nguyentinhblog.com|cungthi.online|sharescript.net|lehait.net|nhacsong.pro|kientruc360.info|tienichmaytinh.net|giavang.net|qthang.net|vnjpclub.com|753x.blogspot.com|ngohoanganhtuan.com|ngohoanganhtuan.net|toeicexamstore.xyz|vungoctuan.vn|ichi.pro|gocmod.com
 @@||player.phimno1.com$subdocument
 @@||pubads.g.doubleclick.net$xmlhttprequest,domain=vtvgiaitri.vn
 @@||quangcao.tuoitre.vn/customer/banner/2020/V/Vietlot/mb*$subdocument
@@ -1583,7 +1583,7 @@ nhipcaudautu.vn#@#.ads_top
 pops.vn#@##adsContainer
 pops.vn#@#.ad-placement
 razorphimzz.com#@#.adsBox
-sum.vn,qthang.net,ichi.pro#@#.adsbygoogle
+sum.vn,qthang.net,ichi.pro,gocmod.com#@#.adsbygoogle
 tratu.soha.vn#@#.adheader
 truyenaudiocv.net#@#.ads-large
 vtvgiaitri.vn#@#.pub_300x250
@@ -1706,6 +1706,7 @@ aoe.vn#%#//scriptlet('abort-on-property-read', 'parseInt')
 baliphim.com#%#//scriptlet('set-constant', 'time_load_ads_1', '')
 baliphim.com#%#//scriptlet('set-constant', 'time_load_ads_2', '')
 baliphim.com,downloadsachmienphi.com,khophimhd.net,lucaphim.com#%#//scriptlet('abort-current-inline-script', 'JSON.parse', 'break;case $.')
+baominh.tech#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'adsBlocked')
 blog.abit.vn#%#//scriptlet('abort-on-property-read', 'document.cookie')
 bongdahomnay.tech###partner-pop
 ezphimmoi.net#%#//scriptlet('abort-on-property-read', 'open')
