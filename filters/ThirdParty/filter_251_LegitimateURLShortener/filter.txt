@@ -1,6 +1,6 @@
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 01March2022v4
+! OriginalVersion: 07March2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1997,7 +1997,8 @@ $removeparam=affiliate
 ! https://www.greenmangaming.com/?tap_a=1964-996bbb&tap_s=2041734-c9a23b
 ||greenmangaming.com^$removeparam=/^tap_/
 ! https://icedrive.net/?pt=lojxagugwf
-||icedrive.net^$removeparam=pt
+! https://github.com/AdguardTeam/AdguardFilters/issues/112128
+$removeparam=pt,domain=icedrive.net|apple.com
 ! https://www.adorama.com/?sterm=VWlWgE0K8xyIRwNxiAS6PRWLUkBTDLT34xL1Ws0
 ||adorama.com^$removeparam=sterm
 ! https://www.kohls.com/search.jsp?submit-search=web-regular&search=Ninja%20Foodi%20Deluxe%20XLr&kls_sbp=17499784183223295270059026280929794051&cid=affiliate-_-75107
@@ -2114,7 +2115,7 @@ $removeparam=content,domain=eonline.com|bybit.com|t.me|twitter.com|docs.google.c
 $removeparam=cId,domain=apple.com|youtube.com
 $removeparam=lId,domain=apple.com|youtube.com
 $removeparam=/^src=Linkfire$/,domain=apple.com|youtube.com
-||music.apple.com^$removeparam=ct
+||apple.com^$removeparam=ct
 ||music.apple.com^$removeparam=itsct
 ||music.apple.com^$removeparam=itscg
 ! https://tv.apple.com/?ign-itscg=10000&ign-itsct=atv-0-tv_ovp-nav_stm-apl-avl-191111
