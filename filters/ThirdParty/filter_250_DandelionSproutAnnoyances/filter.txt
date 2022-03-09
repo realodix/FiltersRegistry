@@ -6,7 +6,7 @@
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
 ! What this broad compilation doesn't block: Newsletters, cookie banners, social media links to company pages
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-! OriginalVersion: 06February2022v1
+! OriginalVersion: 09March2022v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -429,6 +429,7 @@ soundcloud.com##.footer__appButtonContainer
 soundcloud.com##.upsellBanner__app
 accuweather.com###app-store-links
 .SmartMessage.$script,domain=weather.com
+mobile.twitter.com#%#//scriptlet('ubo-aeld.js', 'scroll', '(e)')
 quora.com#$?#html { overflow: auto !important; user-select: text !important; }
 quora.com#$?#body { overflow: auto !important; user-select: text !important; }
 quora.com#$?#.PageWrapper { filter: none !important; }
@@ -7944,7 +7945,7 @@ get.adobe.com###offersInformationPane
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 07March2022v1
+! OriginalVersion: 07March2022v2
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -8132,6 +8133,8 @@ majorgeeks.com#?#b:-abp-has(a[target^=reimage])
 2-spyware.com,novirus.uk,faravirus.ro,uirusu.jp,virusi.hr,wubingdu.cn,avirus.hu,ioys.gr,odstranitvirus.cz,tanpavirus.web.id,utanvirus.se,virukset.fi,losvirus.es,virusler.info.tr,semvirus.pt,lesvirus.fr,senzavirus.it,dieviren.de,viruset.no,usunwirusa.pl,zondervirus.nl,bedynet.ru,virusai.lt,virusi.bg,viirused.ee,udenvirus.dk#?#.nfc-bottom-right:-abp-contains(Reimage)
 2-spyware.com,novirus.uk,faravirus.ro,uirusu.jp,virusi.hr,wubingdu.cn,avirus.hu,ioys.gr,odstranitvirus.cz,tanpavirus.web.id,utanvirus.se,virukset.fi,losvirus.es,virusler.info.tr,semvirus.pt,lesvirus.fr,senzavirus.it,dieviren.de,viruset.no,usunwirusa.pl,zondervirus.nl,bedynet.ru,virusai.lt,virusi.bg,viirused.ee,udenvirus.dk#?#a:-abp-contains(Reimage)
 2-spyware.com,novirus.uk,faravirus.ro,uirusu.jp,virusi.hr,wubingdu.cn,avirus.hu,ioys.gr,odstranitvirus.cz,tanpavirus.web.id,utanvirus.se,virukset.fi,losvirus.es,virusler.info.tr,semvirus.pt,lesvirus.fr,senzavirus.it,dieviren.de,viruset.no,usunwirusa.pl,zondervirus.nl,bedynet.ru,virusai.lt,virusi.bg,viirused.ee,udenvirus.dk##.quick-download-button-text
+! https://github.com/AdguardTeam/AdguardFilters/issues/111843
+||loadware.org^$document,popup
 ! ¤¤¤ ScanUtilities ¤¤¤
 ! https://www.bynarycodes.com/fix-windows-10-update-error-0x80070006/
 bynarycodes.com##div[class^=bynar-content_]
@@ -15757,7 +15760,7 @@ racefans.net##.sd-social
 gamespot.com##.share--column
 forbes.com##.article-sharing
 ! Title: 🔮 I Don't Want to Download Your Browser
-! OriginalVersion: 08February2022v1-Beta
+! OriginalVersion: 09March2022v1-Beta
 ! Expires: 5 days
 ! Description: Do you already have a favourite browser or PDF reader? Are you tired of seeing "Try out [some browser] now!" on some websites? Then this is a list for you!
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -15797,6 +15800,7 @@ softonic.com##[src*="/avastsecurebrowser/"]
 ! ——— GMX Internet Browser, whatever that is ———
 ||united-infos.net^$third-party
 ! ——— All browsers except Brave ———
+archive.is,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archivecaslytosk.onion,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion,btdig.com#%#//scriptlet('ubo-acis.js', 'document.cookie', 'document.location.href')
 ! ——— Adobe Reader / Adobe Acrobat ———
 ! https://www.asrock.com/mb/Intel/Z390%20Phantom%20Gaming%209/index.asp#Manual
 asrock.com###Manual > .Notice
@@ -16902,7 +16906,7 @@ fandom.com#$?#:root { --theme-body-background-image: none !important }
 ! Hopefully enables the use of all the above anti-image rules in uBlock Origin and AdGuard
 @@||wikia.nocookie.net^*/images/$image,badfilter
 ! Title: 🚤 Anti-'Snow marketing' List
-! OriginalVersion: 20January2022v1-Beta
+! OriginalVersion: 09March2022v1-Beta
 ! Expires: 3 days
 ! Description: With Christmas being full of arcane, complicated, and very, _very_ rigid traditions in large parts of the world, the snow that is everywhere on many websites during that time isn't helping on confused peoples' mood either. So here's a list to remove the snow from those websites.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -16914,6 +16918,7 @@ fandom.com#$?#:root { --theme-body-background-image: none !important }
 ! imgur.com
 ##.SnowFlakesBg:not(html, body)
 ! spleis.no
+spleis.no#%#//scriptlet('ubo-set.js', '__INITIAL_STATE__.features.should-show-snow', 'false')
 ! citysyd.no
 /particles.min.js^
 ! myanimelist.net
@@ -16931,6 +16936,7 @@ fandom.com#$?#:root { --theme-body-background-image: none !important }
 /snowplow$script,domain=casamundo.se|hemnet.se
 /snowplow-tracker$script
 /plugins/christmas-panda^
+alpresor.se#%#//scriptlet('ubo-acis.js', 'snowMax')
 ! From «uBlock Annoyances»
 !#if false
 ||cdnjs.cloudflare.com/ajax/libs/Snowstorm/$script
@@ -16944,6 +16950,7 @@ fandom.com#$?#:root { --theme-body-background-image: none !important }
 /addons/img/merry_christmas
 ##.xenfocus-snow:not(html, body)
 ###snowflakes
+daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 ! From «Fanboy's Annoyances»
 /jquery.snow.js
 /let-it-snow.
@@ -17246,7 +17253,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 07March2022v1
+! OriginalVersion: 08March2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -18930,7 +18937,7 @@ $removeparam=report_recomm_player
 $removeparam=app,domain=tiktok.com|music.apple.*
 ! (Do not add to the below entry: play.google.com; see https://github.com/DandelionSprout/adfilt/issues/475)
 $removeparam=c,domain=tiktok.com|norton.com|farfetch.com|hepsiburada.com|appsflyer.com|onelink.me|shopee.*
-$removeparam=campaign,domain=blue-tomato.com|sitepoint.com|sportler.com|peterhahn.*|outnorth.fi|shopee.*|bybit.com|t.me|twitter.com|docs.google.com|instagram.com|forms.gle|goodcrypto.app|discord.*|eventbrite.*|youtube.com|coinpanel.com|docsend.com|kasta.io|runnode.com|gleam.io|1sol.io
+$removeparam=campaign,domain=blue-tomato.com|sitepoint.com|sportler.com|peterhahn.*|outnorth.fi|shopee.*|bybit.com|t.me|twitter.com|docs.google.com|instagram.com|forms.gle|goodcrypto.app|discord.*|eventbrite.*|youtube.com|coinpanel.com|docsend.com|kasta.io|runnode.com|gleam.io|1sol.io|scmp.com
 $removeparam=/^pf_rd_/,domain=shopbop.com|amazon.*|imdb.com|zappos.com|audible.*|6pm.com
 $removeparam=Source,domain=facebook.com|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|messenger.com|evga.com
 $removeparam=version,domain=mp.weixin.qq.com|us.norton.com
@@ -19041,8 +19048,8 @@ $~xmlhttprequest,removeparam=r,domain=tv2.no|linode.com
 $removeparam=context,domain=imdb.com|fiverr.com
 ! https://adguardteam.github.io/AnonymousRedirect/redirect.html?url=https%3A%2F%2Fwww.nytimes.com%2F2021%2F01%2F21%2Fopinion%2Fpublic-transit-funding.html%3Faction%3Dclick%26module%3DWell%26pgtype%3DHomepage%26section%3DEditorials (24/01/2021)
 $removeparam=action,domain=nytimes.com|nytimes3xbfgragh.onion
-$removeparam=module,domain=nytimes.com|nytimes3xbfgragh.onion
-$removeparam=pgtype,domain=nytimes.com|nytimes3xbfgragh.onion
+$removeparam=module,domain=nytimes.com|nytimes3xbfgragh.onion|scmp.com
+$removeparam=pgtype,domain=nytimes.com|nytimes3xbfgragh.onion|scmp.com
 $removeparam=section,domain=nytimes.com|nytimes3xbfgragh.onion
 ! https://www.imdb.com/title/tt7826036/?ref_=ttep_ep5
 $~xmlhttprequest,removeparam=ref_,domain=imdb.com|amazon.*|primevideo.com|shopbop.com|awesomeopensource.com
@@ -19885,6 +19892,8 @@ $removeparam=mrn_rm,domain=dailymail.co.uk|thisismoney.co.uk
 ! https://www.comodo.com/home/browsers-toolbars/browser.php?track=14596&af=14596
 ||comodo.com^$removeparam=track
 ||comodo.com^$removeparam=af
+! https://fortune.com/2021/03/11/amazon-fresh-retail-stores-vacant-plan/?queryly=related_article
+$removeparam=queryly,domain=fortune.com
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
@@ -20007,20 +20016,20 @@ apis-sklep.pl##.cursor
 !#if !env_safari
 !#if !adguard_app_mac
 ! Title: 🈺 Japanese Text Softener
-! OriginalVersion: 07February2022v1-Alpha
+! OriginalVersion: 09March2022v1-Alpha
 ! Expires: 6 days
 ! Description: The font situation on many Japanese websites is kind-of absolutely atrocious on Windows (Other OSs are much less affected). They use super-stiff janky fonts resemblant of Windows 95 or Amiga. And even worse, many of the sites also default to the stiff Japanese fonts' atrocious Latin letter types. Here's how to use the sites in a way that is compatible with the 3rd decade of the 21st century.
 ! 🇯🇵: Windows における多くの日本語サイトのフォント状況はまったくもってゾッとします（他のOSでは遥かにマシです）。Windows 95 か Amiga を思わせるギッザギザのクズフォントが使用されており、さらに悪いことにそういったサイトの多くは、欧文書体に至ってもこのゾッとするギザギザ日本語フォントをデフォルトとして採用しているのです。令和の時代に相応しくサイトを利用する方法は次のとおりです。
 ! Note: I understand it as such that Japanese tech users can get annoyed about some Unicode font blunders that led to some kanji looking incorrect in many fonts. If any of the below fonts are affected by this, inform me about it on GitHub.
 ! Note 2: Many more sites can be fixed by installing "Optional features → Show features → Extra Japanese fonts" in Windows 10/11 to get the Meiryu font (but whose kana are ugly); or by uninstalling "MS PGothic" from your system entirely. But even then, Latin letters can look slightly strange.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net#$#body { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net#$#div { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net#$#li { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net#$#a { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net#$#strong { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net#$#dd { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net#$#span { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com#$#body { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com#$#div { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com#$#li { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com#$#a { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com#$#strong { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com#$#dd { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com#$#span { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
 store.playstation.com#$#html[lang=ja] body { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
 store.playstation.com#$#html[lang=ja] div { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
 store.playstation.com#$#html[lang=ja] li { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
