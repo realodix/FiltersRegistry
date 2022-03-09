@@ -238,12 +238,6 @@ _campaign=$popup
 ! End: RU AdList
 !#################
 !
-!### void.gr ###
-! Invalid rules
-||www.dwrean.net##a[href="http://www.kratisinow.gr"]
-||www.dwrean.net##iframe[src="http://kratisinow.digitup.eu/widget/widget-artists"]
-!###############
-!
 !### Korean Adblock List ###
 ||yandex.ru^$third-party
 !###########################
@@ -263,6 +257,30 @@ _campaign=$popup
 ! https://github.com/AdguardTeam/AdguardFilters/issues/84173
 /^##\.ad$/
 !###############
+!
+!
+!### Invalid rules ###
+! This section is for known old invalid rules
+!
+! void.gr
+||www.dwrean.net##a[href="http://www.kratisinow.gr"]
+||www.dwrean.net##iframe[src="http://kratisinow.digitup.eu/widget/widget-artists"]
+!
+! Xfiles
+||widgets.outbrain.com/outbrain.js$script,redirect=widgets.outbrain.com/outbrain.js
+@@##.qc-cmp2-container$domain=~ilbianconero.com
+@@##.qc-cmp2-main$domain=~ilbianconero.com
+@@###qc-cmp2-main$domain=~ilbianconero.com
+!
+! Deprecated $collapse and $object-subrequest modifiers
+! https://blog.adblockplus.org/development-builds/removed-support-for-the-collapse-and-object-subrequest-filter-options
+$collapse
+$~collapse
+,~collapse
+$object-subrequest
+$~object-subrequest
+,object-subrequest
+!#####################
 !
 !----- TEMPORARY -----
 !----- TEMPORARY -----
