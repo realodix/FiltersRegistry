@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-03-08 10:19:22 CET
+! Last modified: 2022-03-10 08:51:44 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -52,6 +52,7 @@ aftonbladet.se##a:has-text(Kommersiell text, innehåller annonslänkar)
 aftonbladet.se##aside > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##div[class^="css-"]:has([data-ad-subtype="mega"])
 aftonbladet.se##main > section > div[class^="css-"]:first-child:has(img[src*="closeButton"])
+aftonbladet.se##p:has-text(/^PRESENTERAS AV$/):upward(1)
 aftonbladet.se##section > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##strong:has-text(/ANNONS/i):upward(p)
 airam.fi#$#.body-fixed { position: unset !important; }
@@ -509,8 +510,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
