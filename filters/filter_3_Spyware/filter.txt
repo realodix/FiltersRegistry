@@ -79,6 +79,8 @@
 ! Bad: example.org###rek (should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/109426
+nytimes.com#%#//scriptlet("set-constant", "Navigator.prototype.joinParakeetInterestGroup", "noopFunc")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110697
 freecodecamp.org#%#//scriptlet("abort-current-inline-script", "Function", "b9kEBAW")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/108678
@@ -25120,6 +25122,13 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/112503
+||googletagmanager.com/gtm.js$script,redirect=googletagmanager-gtm,domain=lodgecastiron.com
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||googletagmanager.com/gtm.js$domain=lodgecastiron.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/109426
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||nytimes.com/ads/parakeet.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112287
 @@||collector.appconsent.io/hello$domain=lefigaro.fr
 @@||collector.appconsent.io/save$domain=lefigaro.fr
