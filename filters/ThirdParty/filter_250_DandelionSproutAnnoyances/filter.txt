@@ -15300,7 +15300,7 @@ get.adobe.com###offersInformationPane
 ! Placeholder line for alternate list versions
 !#endif
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! OriginalVersion: 20February2022v1-Alpha
+! OriginalVersion: 12March2022v2-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -15707,16 +15707,16 @@ condoblues.com###milotree_box_wrap
 ~tumblr.com##a[href*="tumblr.com/share/"]
 ~tumblr.com##a[href*="tumblr.com/share?"]
 ~tumblr.com##a[href*="tumblr.com/widgets/share/"]
-~twitter.com##a[class$=share-twitter]
-~twitter.com##a[href*="twitter.com/home?status="]
-~twitter.com##a[href*="twitter.com/intent/tweet?"]
-~twitter.com##a[href*="twitter.com/share?text="]
-~twitter.com##a[href*="twitter.com/share?url="]
-~twitter.com##a[href^="t.me/share/url"]
-~twitter.com##a[onclick*="twitter.com/share?"]
-~twitter.com##a[title="Tweet this post"]
-~twitter.com##button[data-href*="twitter.com/share?text="]
-~twitter.com,~feedly.com##.follow
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[class$=share-twitter]
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/home?status="]
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/intent/tweet?"]
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/share?text="]
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/share?url="]
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href^="t.me/share/url"]
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[onclick*="twitter.com/share?"]
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[title="Tweet this post"]
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##button[data-href*="twitter.com/share?text="]
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion,~feedly.com##.follow
 ~viber.com##a[href^="viber://forward?text"]
 ~vk.com##a[href*="/vk.com/share.php"]
 ~vk.com##iframe[src^="https://vk.com/widget_like.php?"]
@@ -15828,7 +15828,7 @@ deezer.com#?#.page-alerts:-abp-has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:-abp-has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 23February2022v1
+! OriginalVersion: 12March2022v2
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -16018,16 +16018,18 @@ pinterest.*##div[data-test-id=pin-closeup-image] > div[role=button] > div:not([c
 ||pinterest.*mt=signup$removeparam=mt
 ! Twitter
 !! Removes a "See What's Happening" prompt at the bottom of some tweet chains
-twitter.com#?#div[data-testid=primaryColumn] div:-abp-has(> div > div > a[href="/login"])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[data-testid=primaryColumn] div:-abp-has(> div > div > a[href="/login"])
 !! Removes a login prompt when visiting "/intent/follow"-type links in mobile environments
 ! https://twitter.com/intent/follow?screen_name=mesitsu (13/04/2020)
-mobile.twitter.com#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
+mobile.twitter.com,mobile.twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
 !#if env_mobile
-twitter.com#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[href="/i/flow/signup"][dir=auto][role=link][data-focusable=true]:upward(7)
 !#endif
 ! Removes the bottom login sticky banner about logging in, in the April 2020-ish redesign 🔨
-twitter.com#?##layers > div[class*=" "]:first-of-type:-abp-has(a[href="/i/flow/signup"])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class*=" "]:first-of-type:-abp-has(a[href="/i/flow/signup"])
 ! https://twitter.com/hideo_kojima_en/status/319595772981166080
+! Removes an uncloseable prompt overlay
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:-abp-has(> div[data-testid])
 ! The New Republic 📠🔨
 ! https://github.com/easylist/easylist/issues/5331#issuecomment-627813147
 ||validate.onecount.net/onecount/api/public^
@@ -16810,32 +16812,32 @@ dailymotion.com#?#div[class^=DiscoveryQueueDisplay__sectionContainer_]:-abp-cont
 ! Description: Twitter is a place full of distractions, strange things, and people you'd want to stay 200km away from at all times. If you wish to focus strictly on the 2% of Twitter that is actually any good nowadays, here's a list for you.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! Removes the "Related users" sections
-twitter.com##.RelatedUsers
-twitter.com##.WhoToFollow
-twitter.com##div[data-testid=sidebarColumn] > div > div > div > div > div > div > div:nth-of-type(3)
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##.RelatedUsers
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##.WhoToFollow
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##div[data-testid=sidebarColumn] > div > div > div > div > div > div > div:nth-of-type(3)
 ! Removes the Trending list
-twitter.com##div[data-testid=sidebarColumn] section > div[aria-label]
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##div[data-testid=sidebarColumn] section > div[aria-label]
 ||twitter.com/i/trends?
-twitter.com##.trends-inner
-twitter.com##.r-1u4rsef.r-9cbz99
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##.trends-inner
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##.r-1u4rsef.r-9cbz99
 ! Removes the "You might like" section
-twitter.com##div[data-testid=sidebarColumn] div[style="margin-top: 0px;"] + div:last-of-type aside
-twitter.com#?#div[data-testid=sidebarColumn] div[style="margin-top: 0px;"] + div:last-of-type > div > div > div > div:-abp-has(> aside[role])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##div[data-testid=sidebarColumn] div[style="margin-top: 0px;"] + div:last-of-type aside
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[data-testid=sidebarColumn] div[style="margin-top: 0px;"] + div:last-of-type > div > div > div > div:-abp-has(> aside[role])
 ! Removes "Who to follow" box headers and footers from user timelines
-twitter.com#?#div[data-testid=primaryColumn] div:-abp-has(> div > div > h2[role=heading] > div[dir=auto] > span)
-twitter.com#?#div:-abp-has(> div > a[href^="/i/connect_people"])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[data-testid=primaryColumn] div:-abp-has(> div > div > h2[role=heading] > div[dir=auto] > span)
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div:-abp-has(> div > a[href^="/i/connect_people"])
 ! https://github.com/DandelionSprout/adfilt/issues/122
-twitter.com#?#nav[aria-label][role=navigation] + div > section > div[aria-label^=Timeline] > div[style] > div[style]:-abp-has([data-testid$=-follow])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#nav[aria-label][role=navigation] + div > section > div[aria-label^=Timeline] > div[style] > div[style]:-abp-has([data-testid$=-follow])
 ! Removes the topics-group carousel in user timelines
-!!! twitter.com##section[aria-labelledby=accessible-list-1]
+!!! twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##section[aria-labelledby=accessible-list-1]
 ! Removes login nags
-twitter.com#?##layers > div[class*=" "]:first-of-type:-abp-has(a[href="/i/flow/signup"])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class*=" "]:first-of-type:-abp-has(a[href="/i/flow/signup"])
 !#if !adguard
 ! https://mobile.twitter.com/nasuno_Posi
-twitter.com##div[data-testid=sidebarColumn] section[aria-label][role=region]
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##div[data-testid=sidebarColumn] section[aria-label][role=region]
 !#endif
 ! Removes the cookie sticky on bottom
-twitter.com###layers > div > div:nth-of-type(2):last-of-type
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion###layers > div > div:nth-of-type(2):last-of-type
 ! Title: 🎓 Wikia: Pure Browsing Experience
 ! OriginalVersion: 06February2022v1-Beta
 ! Expires: 5 days
