@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-03-11 07:29:25 CET
+! Last modified: 2022-03-14 09:56:56 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -327,12 +327,7 @@ reco.se#$#html.js.js--page-hide body { visibility:visible!important }
 resume.se##aside a[href$="/byracoachen/"]:upward(2)
 sakochliv.se#%#//scriptlet('ubo-acs.js', 'checkCampaignCookie')
 se.azrhymes.com#%#//scriptlet('ubo-nostif.js', '.info-center')
-senses.se##.isobrick:has(a[href*="betting"])
-senses.se##.isobrick:has(a[href*="casino"])
-senses.se##.isobrick:has(a[href*="glhf-gg"])
-senses.se##.isobrick:has(a[title^="Reklam:"])
-senses.se##.isobrick:has(a[title^="Samarbete:"])
-senses.se##.isobrick:has(a[title^="Sponsrat:"])
+senses.se##.item.hentry, .owl-item:has(a[href*="casino"])
 sexpacket.se#%#//scriptlet('ubo-aeld.js', '/contextmenu|cut|copy|paste/')
 shortcut.se##.blockquote:has(strong:has-text(/^annons/i))
 shortcut.se##.employer, article:has(.sponsored)
@@ -511,8 +506,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1033,7 +1028,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /forum/images/_banners
 /forum/img/banners
 /forumannons.$image,script,subdocument
-/freelancer-tracking$script,domain=freelancer.se
 /fusionadloader.$script
 /ga_cookie_track.js$script
 /GA_EEC$domain=osterbottenstidning.fi|sydin.fi|vasabladet.fi
@@ -1067,6 +1061,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /initLogging$script,domain=dn.se|teknikensvarld.se
 /inlist-InlistSponsored$domain=pricerunner.se
 /insight.js$domain=nikkasystems.com
+/intercept-survey.js$domain=smhi.se
 /invisible.js$domain=sportprat.com
 /isbanner/ib.js
 /javascript_nbenhadverts/*
@@ -1124,8 +1119,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /mod.js$domain=icd.internetmedicin.se
 /mod_responsivebannerslider$domain=bjuvsnytt.se
 /modal.js$script,domain=alltforforaldrar.se|mammasidan.se|minbebis.com
-/modules/gdpr-consent$domain=freelancer.se
-/modules/tracking$domain=freelancer.se
 /monetization/ads-module/*
 /monetization/pixel-sdk/*
 /mp_emediate/inc/annons.html
@@ -1177,7 +1170,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /plugins/convertplug/*
 /plugins/convertpro/*
 /plugins/cookie-bar/*
-/plugins/cookie-law-info/*$domain=carup.se|gilla.se|hockeybladet.nu|lundagard.se|nyadagbladet.se|temadagar.se|tidningenresultat.se
+/plugins/cookie-law-info/*$domain=carup.se|gilla.se|hockeybladet.nu|lundagard.se|nyadagbladet.se|startaochdriva.se|temadagar.se|tidningenresultat.se
 /plugins/cookie-notice/*
 /plugins/cookie_consent/*$script
 /plugins/cookies-and-content-security-policy$domain=cannabisifokus.se
@@ -1951,8 +1944,7 @@ motivation.se##.sponsored-item, [class*="banner"], .outsider
 moviezine.se###home_ans, [name="article-advertisment"]
 mytaste.se##[id^="Modal_plugin"]
 mytaste.se##div[id*="panorama_"], [class^="affiliate-container"], .site-header__panorama
-natursidan.se###container > a:not(:first-child)
-natursidan.se###sidebar .widget_text a[target]
+natursidan.se###container > a:not(:first-child), #sidebar .widget_text a[target]
 netdoktor.se##.article-list__item__link--sponsored
 netflixguiden.se##div.lboard, div.instream-dynamic
 news55.se###newsletter-popup, #premium-bottom-bar, #premium-popup
@@ -2016,7 +2008,7 @@ sdhl.se,ssl.se,storvretaibk.se##.rmss_module-block-linked_image
 se.azrhymes.com##.shader, #CookielawBanner, .info-center
 se.moyens.net###rb-cookie
 se.readly.com##.show-consent
-senses.se###text-5
+senses.se##[id^="ct-ultimate-gdpr"]
 sexpacket.se##.info_cookies
 sff.nu###sidebar > li:not(.widget_wp_sidebarlogin), li.widget_sp_image
 shoegazing.se###main-sidebar .widget_media_image, #post-sidebar .widget_media_image, #content > .code-block
@@ -2053,7 +2045,7 @@ sportpanelen.se###text-html-widget-3
 sporttv.nu##a[onclick*="bannerClick"]
 spray.se##.column-left > .article-partial
 spray.se##[class^="ads-"], [class*="article-casino"]
-startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"]
+startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"], .tdm-popup-modal-wrap
 stegforhalsa.se##[class*="jsx-"][style*="position: sticky"]
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
 svd.se###mega-ad-wrapper, .Container--ad, .theme-Native, .AdWrapper, .AdPositionData

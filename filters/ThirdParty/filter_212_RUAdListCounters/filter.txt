@@ -1,8 +1,8 @@
 !
-! Checksum: zbV4qk8GNnLbzzrpHz/1nw
-! OriginalVersion: 202203130044
+! Checksum: 8o1t6BSGkGgm7jceLn1DaA
+! OriginalVersion: 202203140844
 ! Title: RU AdList: Counters
-! Last modified: 13 Mar 2022 00:44 UTC
+! Last modified: 14 Mar 2022 08:44 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1061,6 +1061,7 @@ zannn.top#@?#this-is-a-malicious-site
 ||kp.yandex.net/js/brand$domain=www.kinopoisk.ru
 ||rcm.rambler.ru^$domain=rambler.ru
 ! yandex
+/^https?://(?!turbo-yandex-ru)[^\s]+\.clstorage\.net\/[^\s]+\.js$/$redirect=nooptext,script
 /^https?://mail\.yandex\.[^\s]{125,}/$redirect=nooptext,script,~third-party
 /^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$redirect=nooptext,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.ua|yandex.uz
 @@/^https?://yandex\.ru\/turbo[^\s]+(dni24\.com|fishki\.net|news\.ru|publy\.ru|tsargrad\.tv)/$csp=script-src
@@ -1094,8 +1095,8 @@ yandex.*#?#.feed__row[id^="zen-row-"] .feed__item-wrap:-abp-has(> .feed__item [c
 yandex.*#?#.serp-list > .serp-item:-abp-has(> div > div > [data-event-required])
 yandex.*#?#div[class*="-header"] ~ div[id*="page"] div[class*="__col"]:-abp-has(> div[class*="-feed__"][class*="_type_"] > .root123)
 yandex.*#?#div[class*="-header"] ~ div[id*="page"] div[class*="__col"]:-abp-has(> div[class*="-feed__"][class*="_type_"] > div[class*="loader"])
-||clstorage.net/*.js|$script,redirect=empty
 ||market.yandex.ru/widget/$redirect=nooptext,domain=zen.yandex.by|zen.yandex.kz|zen.yandex.ru|zen.yandex.ua|zen.yandex.uz
+||naydex.net^*.js|$script,redirect=empty
 ||static-storage.net/*.js|$script,redirect=empty
 ||strm.yandex.ru/get/$script,domain=yandex.ru|yastatic.net
 ||strm.yandex.ru/get/*?sid=*&vsid=

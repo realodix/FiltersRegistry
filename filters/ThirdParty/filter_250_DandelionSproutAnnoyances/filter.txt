@@ -17253,7 +17253,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 11March2022v1
+! OriginalVersion: 14March2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -18437,7 +18437,7 @@ $removeparam=returnFromLogin,domain=amazon.com
 ||bing.com^$removeparam=form
 ! https://www.bing.com/search?q=hello&sp=-1&pq=hello&sk=&sc=8-5&qs=n (04/03/2021)
 ||bing.com^$removeparam=sp
-$removeparam=sc,domain=bing.com|qvc.com
+$removeparam=sc,domain=bing.com|qvc.com|startpage.com
 $removeparam=sk,domain=bing.com|aliexpress.*
 ||bing.com^$removeparam=qs
 ! https://www.bing.com/search?PC=U531&q=hello&FORM=ANNTA1 (05/03/2021)
@@ -18474,7 +18474,7 @@ $removeparam=_blrs
 $removeparam=amdata,domain=ebay.*
 $removeparam=epid,domain=ebay.*
 $removeparam=hash,domain=ebay.*
-$removeparam=iid,domain=ebay.*
+!!!$removeparam=iid,domain=ebay.* (https://github.com/DandelionSprout/adfilt/issues/549)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-783185
 ||ebay.$removeparam=mkevt
 ||ebay.$removeparam=mkcid
@@ -19894,6 +19894,10 @@ $removeparam=mrn_rm,domain=dailymail.co.uk|thisismoney.co.uk
 ||comodo.com^$removeparam=af
 ! https://fortune.com/2021/03/11/amazon-fresh-retail-stores-vacant-plan/?queryly=related_article
 $removeparam=queryly,domain=fortune.com
+! https://www.newsweek.com/newsletter?subref=incontent_web_3
+$removeparam=subref,domain=newsweek.com
+! https://www.cbsnews.com/news/gas-prices-high-expensive-come-down-cbs-news-explains/?intcid=CNI-00-10aaa3b
+$removeparam=intcid,domain=cbsnews.com
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
