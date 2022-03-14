@@ -16,6 +16,7 @@ const REQUIRED_LOCALES = [
     'ja',
     'ko',
     'zh_CN',
+    'zh_TW',
 ];
 
 const localesDirPath = path.join(__dirname, LOCALES_DIR_PATH);
