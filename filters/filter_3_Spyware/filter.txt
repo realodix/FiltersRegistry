@@ -79,6 +79,9 @@
 ! Bad: example.org###rek (should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/112998
+ttv.pl#%#//scriptlet("set-constant", "gemiusStream", "noopFunc")
+ttv.pl,tvn24.pl#%#(function(){window.__pix2={event:function(){},track:function(){}}})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109426
 nytimes.com#%#//scriptlet("set-constant", "Navigator.prototype.joinParakeetInterestGroup", "noopFunc")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110697
@@ -5150,7 +5153,6 @@ nethunt.com/api/v1/track/email/$image
 ||logconfig.polarisoffice.com^
 ||t.n.mcdonalds.de^
 ||ploz.mangadex.org^
-||pix2.services.tvn.pl^
 ||frog.yuanfudao.com^
 ||clog*.yuanfudao.com^
 ||analytics.send.cm^
@@ -21349,6 +21351,7 @@ _tracking.php?b=
 !
 /analytics.js$domain=bataryapil.com|journey.com.tr|freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|partifabrik.com|newsmax.com|bolgehastanesi.com|ewtc.de
 !
+||pix2.services.tvn.pl^
 finders.me##.__popin
 finders.me##.__recommendedPosts
 ||ozone.ru/graphics/client-metrics/
@@ -25354,6 +25357,11 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/112998
+!+ NOT_PLATFORM(windows, mac, android, ext_chromium)
+@@||pix2.services.tvn.pl/pix2.js$domain=tvn24.pl|ttv.pl
+!+ PLATFORM(ios, ext_android_cb)
+@@||pro.hit.gemius.pl/gstream.js$domain=ttv.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112205
 @@||tm.jsuol.com.br/uoltm.js$domain=oantagonista.uol.com.br
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112899
