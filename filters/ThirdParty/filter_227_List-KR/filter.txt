@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR
-! OriginalVersion: 2022.317.15
+! OriginalVersion: 2022.317.21
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -122,6 +122,10 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^$third-party
+||ad.kmib.co.kr^
+||ads.kmib.co.kr^
+||adimage.hankookilbo.com^
+||ad.hankookilbo.com^
 ||adimg*.search.naver.net^
 ||ad*.thisisgame.com^
 ||adv.bandi.so^
@@ -212,6 +216,10 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||kmib.co.kr/images/main/bnr
+||hani.co.kr/section-homepage/svc3/js/navtivead.js
+||seoul.co.kr/ad/*.php
+||seoul.co.kr/ad/*.html
 ||realty.chosun.com/RealtyCommon/Promotion*.html
 ||monthly.chosun.com/common/inc/main_right_banner.asp
 ||monthly.chosun.com/images/banner/
@@ -326,6 +334,14 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+kmib.co.kr##.mn_ad
+kmib.co.kr##iframe[src^="https://ads.kmib.co.kr/"]
+hankookilbo.com##.side-ad-box
+nownews.seoul.co.kr##.naside > div[style*="width:"][style*="height:"]
+nownews.seoul.co.kr##.naside > div[style].Rad
+nownews.seoul.co.kr##.ncontent > div[style]:not([class])
+en.seoul.co.kr##[style]#withpang_p
+seoul.co.kr##iframe[src^="/ad/"]
 realty.chosun.com##iframe[src*="//realty.chosun.com/RealtyCommon/Promotion"][src$=".html"]
 monthly.chosun.com##img[src^="/images/banner/"]
 monthly.chosun.com##iframe[src="/common/inc/main_right_banner.asp"]
@@ -474,7 +490,7 @@ mmzone.co.kr###main_premium_spon_block
 mmzone.co.kr##div[id$="_ad"]
 2cpu.co.kr##a[href*="./bbs/banner_link.php?"]
 ruliweb.com##div[id^="adsense_"]
-mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
+kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 m.inven.co.kr##div#page > div[style*="height:50px;"]
 m.inven.co.kr###topslideAd
 m.inven.co.kr##div[id^="mobileTailAd"]
@@ -483,7 +499,7 @@ inven.co.kr###inven_reservation_box
 inven.co.kr##.menuGroup.imt_banner
 inven.co.kr##.banner_box
 inven.co.kr##iframe[src*="//zicf.inven.co.kr/RealMedia/ads/"]
-newspim.com,inven.co.kr##div[class^="ad-"]
+hani.co.kr,hankookilbo.com,newspim.com,inven.co.kr##div[class^="ad-"]
 inven.co.kr##section[class^="ad-"]
 inven.co.kr###topskyAd
 tgd.kr##div[style*="background:url(https://upload.tgd.kr/banner/320x50n.jpg)"]
@@ -504,7 +520,7 @@ coolenjoy.net##.simple_banner_wrap
 coolenjoy.net##img[src^="https://photo.coolenjoy.net/banner/"]
 quasarzone.com##div[class^="main-"][class$="-banner"]
 quasarzone.com##.top-banner
-quasarzone.com##div[class^="banner-"]
+hankookilbo.com,quasarzone.com##div[class^="banner-"]
 okky.kr##img[src^="//file.okky.kr/banner/"]
 m.todayhumor.co.kr##.ad_box_div
 etoland.co.kr##ul.board_list > li.subject.ad_subject
@@ -523,7 +539,7 @@ ppomppu.co.kr##.right > .board-preview.board-ppomppu
 bobaedream.co.kr##.left_con_last
 arca.live##div.ad
 m.clien.net##.shop_naver
-dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
+seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 clien.net###hongboInfoList
 m.ruliweb.com##.fixed_ad_wrapper
 m.ruliweb.com##div[id^="mo_ad_"]
