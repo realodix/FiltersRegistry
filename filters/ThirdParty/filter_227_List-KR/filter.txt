@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR
-! OriginalVersion: 2022.316.16
+! OriginalVersion: 2022.317.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -209,6 +209,8 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||dothome.co.kr/ad/ad_windowsforum.php$document
+||dothome.co.kr/advertisement/
 ||shop.nate.com/shopbox/shopbox.htm$domain=pann.nate.com
 /(http|https):\/\/file\.thisisgame\.com\/upload\/nboard\/news\/[0-9]{4}\/[0-9]{2}\/[0-9]{2}\/[0-9]{14}_[0-9]{4}/
 ||dschool.co.kr//uploadedFiles/ADVERTISE/
@@ -310,6 +312,8 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+m.naver.com###MM_aside_smartad_container
+windowsforum.kr##a[href^="https://www.dothome.co.kr/ad/"][target="new"]
 pann.nate.com##.sidearea.talktalk > .sideiframe
 thisisgame.com##div[id^="ad-"]
 thisisgame.com###divMsnAD
@@ -402,7 +406,7 @@ ilbe.com##img[src^="https://acache.ilbe.com/"]
 tgd.kr###article-list > div[id^="article-list-row-"].notice.featured:nth-child(4)
 berryjam.co.kr##div[class*="slider-banner-"]
 berryjam.co.kr##img[src^="/data/skin/front/udweb_CCC/img/banner/"][alt="2021년 시마노 웹 한글 카다로그"]
-dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
+windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
 toomics.com##img[src*="://thumb.toomics.com/upload/banner/"]
 now.rememberapp.co.kr##.now_content_ads__wrapper
 m.ilbe.com##.banner-wrap
@@ -541,6 +545,7 @@ hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellv
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+windowsforum.kr#$#.content { margin-top: 0px !important; }
 mule.co.kr#$#div.section-leftmiddle-topmiddle.cf { width: 100% !important; }
 coupang.com#$#li.search-product__ad-badge { height: 0px !important; width: 0px !important; visibility: hidden !important; }
 ruliweb.com#$##board_top > div > .top_best.best_list { width: 100% !important; }
@@ -558,10 +563,9 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
+meeco.kr#?#section#cCon > div[style].xe-widget-wrapper:has(> div[style] > div > div[style] > div[style] > .c_widget > div.w_list > ul.page_unit > li > div.w_w2_con > a[style][href^="/Enterprise/"])
 koreaminecraft.net#?#table.table-divider > tbody > tr.notice:has(> td.title > a > strong[style]:contains([프리미엄]))
 koreaminecraft.net#?#.fancybox-wrap:has(> .fancybox-skin > div > div > #dialoga.wst_ad_badge)
-namu.wiki#?#article > p + div div[id]:has(div[id]:has(div > ul > li, div > a[href*="/w/%EB%B6%84%EB%A5%98:"])) ~ div:has(img[src*="//w.namu.la/s/"], img[src^="data:image/png;base64,"])
-namu.wiki#?#article div:has(a[href*="/w/%EB%B6%84%EB%A5%98:"]) ~ div:has(td > img[src*="w.namu.la"], td > img[src^="data:image/png;base64,"])
 m.dcinside.com#?#section.gall-lst-group > ul > li:has(> div.detail-top-lnk > a[href*="//addc.dcinside.com/"].lt > span:contains(AD))
 gall.dcinside.com#?#table.gall_list > tbody > tr:has(> td.gall_subject > b:contains(AD)):has(> td.gall_tit > a[href*="//addc.dcinside.com/"])
 mule.co.kr#?##section-main.cf > div[class^="section-"] > div[class^="section-"] > div:has( > a[href][alt][target="_blank"] > img[alt][src])
