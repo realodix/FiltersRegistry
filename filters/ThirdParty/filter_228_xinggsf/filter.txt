@@ -1,6 +1,6 @@
 !
 ! Title: 乘风 广告过滤规则
-! OriginalVersion: 202201251
+! OriginalVersion: 202203171
 ! Expires: 2 days
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
 !--------------------------百度----------------------------------
@@ -1141,16 +1141,51 @@ subhd.com##div[style^="text-align:center;height:270px"],.col-md-10 > div:nth-of-
 ||168.it168.com$script
 admin5.com##.float_both,div.sherry_ad1,div.specialBox,.content_right_ad
 100.pncdn.cn
+! china evil site
+4009997658.com
+abbyychina.com
+bartender.cc
+beyondcompare.cc
+bingdianhuanyuan.cn
+chemdraw.com.cn
+coreldrawchina.com
+easyrecoverychina.com
+ediuschina.com
+flstudiochina.com
+guitarpro.cc
+huishenghuiying.com.cn
+iconworkshop.cn
+imindmap.cc
+jihehuaban.com.cn
+keyshot.cc
+kingdeecn.cn
+logoshejishi.com
+||mairuan.$all
+mairuanwang.com
+makeding.com
+mathtype.cn
+mindmanager.cc
+mycleanmymac.com
+ntfsformac.cc
+ntfsformac.cn
+parallelsdesktop.cn
+pdfexpert.cc
+shankejingling.com
+vegaschina.cn
+||xmindchina.
+xshellcn.com
+yihuifu.cn
+www.zhzzx.com
 ! Title: 乘风 视频过滤规则
-! OriginalVersion: 202203163
+! OriginalVersion: 202203181
 ! Expires: 1 day
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
-! 屏蔽P2P
+pan.baidu.com,www.bilibili.com,v.qq.com#%#//scriptlet('ubo-aeld.js', 'ratechange')
+! 屏蔽P2P, +js(nowebrtc)无效
+v.qq.com#@%#//scriptlet('ubo-nowebrtc.js')
+bilibili.com,douyu.com,huya.com,v.qq.com#%#//scriptlet('ubo-set.js', 'RTCPeerConnection', 'trueFunc')
+! bilibili.com,huya.com,v.qq.com##+js(set, webkitRTCPeerConnection, trueFunc)
 ||tracker.$xmlhttprequest,websocket,script,ping
-|ws://tracker.$websocket
-|wss://tracker.$websocket
-|ws://p2p.$websocket
-|wss://p2p.$websocket
 v.youku.com##.control-phonewatch,#right-title-ad-banner, .kui-watermark-0
 v.youku.com#%#//scriptlet('ubo-aeld.js', 'dblclick', 'triggerEvent')
 m.youku.com,v.youku.com#%#//scriptlet('ubo-nano-stb.js', 'r--', '', '0.02')
@@ -1177,13 +1212,12 @@ qq.com#%#//scriptlet('ubo-no-xhr-if.js', 'trace.')
 qq.com#%#//scriptlet('ubo-no-fetch-if.js', 'trace.')
 qq.com#%#//scriptlet('ubo-json-prune.js', 'adList.item')
 !qq.com##+js(nano-sib, \u5012\u8ba1\u65f6)
-v.qq.com#@%#//scriptlet('ubo-set.js', 'Beacon.prototype.fail', 'null')
 qq.com#%#//scriptlet('ubo-set.js', 'Beacon.prototype.fail', 'null')
 @@||union.video.qq.com/fcgi-bin/$script,domain=qq.com
 cm.l.qq.com
 ||l.qq.com/lview?
 ||l.qq.com/livemsg?
-||mark.l.qq.com/fcgi-bin/get_video_mark_all?idlist=
+||mark.l.qq.com/fcgi-bin/get_video_mark_all?
 ||gtimg.com/qqlive/
 ||qzonestyle.gtimg.cn/qzone/biz/ac/comm/$script
 |https://imgcache.qq.com/qzone/biz/comm/js/qbs.js
@@ -1252,8 +1286,8 @@ yoyi.com.cn
 zhiziyun.com
 le.com##.min_pause_img
 www.douyu.com#%#//scriptlet('ubo-aeld.js', '/visibilitychange|pagehide/')
-www.douyu.com#%#//scriptlet('ubo-set.js', 'RTCPeerConnection.prototype.addStream', 'noopFunc')
-www.douyu.com#%#//scriptlet('ubo-set.js', 'webkitRTCPeerConnection.prototype.addStream', 'noopFunc')
+!douyu.com##+js(set, RTCPeerConnection.prototype.createDataChannel, noopFunc)
+!douyu.com##+js(set, webkitRTCPeerConnection.prototype.addStream, noopFunc)
 ||douyucdn.cn/adxdsp/$image
 wan.douyu.com
 douyu.com,huya.com##a[href^="https://g.wan."]
@@ -1286,7 +1320,6 @@ hanmidy.com,bimiacg4.net#%#//scriptlet('ubo-acis.js', 'Object.defineProperty', '
 ! ||haitum.com/template/default/static/js/middle.js^$script
 ||alicdn.com/$image,domain=api.xiaomingming.org
 imomoe.*###adl,#adr
-|wss://$websocket,domain=dandanzan10.top|nunuyy10.top
 dandanzan10.top,nunuyy10.top#$#.gm-fp-body video { max-height:100%!important }
 adx1.com
 aqours.today

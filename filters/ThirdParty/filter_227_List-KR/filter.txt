@@ -1,13 +1,14 @@
 !
 ! Title: List-KR
 ! Description: List-KR
-! OriginalVersion: 2022.317.5
+! OriginalVersion: 2022.317.15
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 !
 ! Version must be UTC format.
 !
+||adbinead.com^
 ||cizion.com^
 ||adop.cc^$third-party
 ||stax.kr^$third-party
@@ -121,6 +122,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^$third-party
+||adimg*.search.naver.net^
 ||ad*.thisisgame.com^
 ||adv.bandi.so^
 ||ads.adoffice.11st.co.kr^
@@ -146,6 +148,7 @@
 ||adscdn.orbi.kr^
 ||ads.orbi.kr^
 ||ads.mtgroup.kr^
+##iframe[src*="//www.bodnara.co.kr/advert/advert.php"]
 ##.revenue_unit_item.dable
 ##.revenue_unit_item.adfit
 ###livereAdWrapper
@@ -209,6 +212,17 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||realty.chosun.com/RealtyCommon/Promotion*.html
+||monthly.chosun.com/common/inc/main_right_banner.asp
+||monthly.chosun.com/images/banner/
+||weekly.chosun.com/common/inc_adver/
+||weekly.chosun.com/common/inc/right_banner_roll*.asp
+||weekly.chosun.com/images/banner/
+||hwbattle.com/partner/
+||hwbattle.com/img/partner/
+||bodnara.co.kr/advert/
+||bodnara.co.kr/advert/click.php$document
+||img.kbench.com/banner/
 ||dothome.co.kr/ad/ad_windowsforum.php$document
 ||dothome.co.kr/advertisement/
 ||shop.nate.com/shopbox/shopbox.htm$domain=pann.nate.com
@@ -312,6 +326,23 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+realty.chosun.com##iframe[src*="//realty.chosun.com/RealtyCommon/Promotion"][src$=".html"]
+monthly.chosun.com##img[src^="/images/banner/"]
+monthly.chosun.com##iframe[src="/common/inc/main_right_banner.asp"]
+weekly.chosun.com##iframe[src^="/common/inc_adver"]
+weekly.chosun.com##img[src^="/images/banner/"][onclick^="window.open('/common/inc/adver.asp'"]
+weekly.chosun.com##iframe[src^="/common/inc/right_banner_roll"][src*=".asp"]
+it.chosun.com###POWER_LINK_NAVER
+it.chosun.com##div[id^="mobonDivBanner_"]
+chosun.com##.dfpAd
+chosun.com##div[class~="flex-chain-wrapper"][class*="box--bg-grey-"][class~="box--hidden-sm"][class~="box--hidden-md-only"]
+chosun.com##.arcad-wrapper
+chosun.com##div[class^="layout__article-header"] > div[class^="flex-chain-wrapper"]
+hwbattle.com##div[id^="Partner"]
+hwbattle.com###aside > #partner
+hwbattle.com##div[id$="_sponser"]
+hwbattle.com##div[id^="Aside"][id$="Event"]
+bodnara.co.kr##iframe[src^="/advert/advert.php"]
 m.naver.com###MM_aside_smartad_container
 windowsforum.kr##a[href^="https://www.dothome.co.kr/ad/"][target="new"]
 pann.nate.com##.sidearea.talktalk > .sideiframe
@@ -322,9 +353,6 @@ dschool.co.kr##a[href^="/ws/include/banner_link.asp?"][target="_blank"]
 ddanzi.com##.add_display
 redflame.co.kr###sidebar > div[style="padding:15px 18px; width:300px; height:250px; margin-bottom:8px;"].sidebar_contents_box
 redflame.co.kr##section#content > div[style="height:90px; width:728px; padding:0px; margin:0 0 8px 0;"].main_contents_box
-manatoki124.net,manatoki125.net,manatoki126.net,manatoki127.net,manatoki128.net,manatoki129.net,manatoki130.net,manatoki131.net,manatoki132.net,manatoki133.net,manatoki134.net,manatoki135.net,manatoki136.net##[style="margin-bottom: 20px;"].row.row-15
-manatoki124.net,manatoki125.net,manatoki126.net,manatoki127.net,manatoki128.net,manatoki129.net,manatoki130.net,manatoki131.net,manatoki132.net,manatoki133.net,manatoki134.net,manatoki135.net,manatoki136.net##.basic-banner.row.row-10
-manatoki124.net,manatoki125.net,manatoki126.net,manatoki127.net,manatoki128.net,manatoki129.net,manatoki130.net,manatoki131.net,manatoki132.net,manatoki133.net,manatoki134.net,manatoki135.net,manatoki136.net##.board-tail-banner
 m.naver.com##.ISSUE-BANNER-AD
 busan.com##.wcms_ad
 1412.rest###plusad_widget_wrap
@@ -392,7 +420,7 @@ pcmap.place.naver.com###_pcmap_list_scroll_container > ul > li[data-laim-exp-id=
 map.kakao.com##ul[id="info.search.place.list"] > li.AdItem
 playcraft.tistory.com##.module.module_plugin > a[href^="https://coupa.ng/"]
 dcnewsj.joins.com##div[class^="ab_ad"]
-mbn.co.kr##div[id$="_banner"]
+hwbattle.com,mbn.co.kr##div[id$="_banner"]
 prod.danawa.com##div[class$="_ad_prodlist"]
 epnc.co.kr##div[id^="floating_banner_"]
 epnc.co.kr##div[onmousedown*="'event_label': 'AD'"]
@@ -525,6 +553,9 @@ www.naver.com##iframe[id^="da_iframe_"]
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+manatoki124.net,manatoki125.net,manatoki126.net,manatoki127.net,manatoki128.net,manatoki129.net,manatoki130.net,manatoki131.net,manatoki132.net,manatoki133.net,manatoki134.net,manatoki135.net,manatoki136.net##[style="margin-bottom: 20px;"].row.row-15
+manatoki124.net,manatoki125.net,manatoki126.net,manatoki127.net,manatoki128.net,manatoki129.net,manatoki130.net,manatoki131.net,manatoki132.net,manatoki133.net,manatoki134.net,manatoki135.net,manatoki136.net##.basic-banner.row.row-10
+manatoki124.net,manatoki125.net,manatoki126.net,manatoki127.net,manatoki128.net,manatoki129.net,manatoki130.net,manatoki131.net,manatoki132.net,manatoki133.net,manatoki134.net,manatoki135.net,manatoki136.net##.board-tail-banner
 103.204.13.68##.product-banner
 103.204.13.68##div[class^="mobile-m ad720_"]
 copytoon*.com##a[href*="/bbs/bannerhit.php?"]
@@ -532,6 +563,7 @@ torrentdia12.com##[href*=".com/bbs/bannerhit.php?"]
 torrentonly5.com##a[href^="https://www.torrentonly5.com/bbs/bannerhit.php?"]
 torrentonly5.com#?#tbody > tr:has(> td > a[href^="https://www.torrentonly5.com/bbs/bannerhit.php?"])
 hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellven1"]
+@@||weekly.chosun.com/images/banner/colm$image
 @@||adimg3.search.naver.net/adpost/adpost_show_ads_min.js$domain=search.danawa.com
 @@||ad-img.ebaykorea.com/ADS/$image,domain=auction.co.kr
 @@||t1.daumcdn.net/adfit/static/kp.js$domain=pindirectshop.com
@@ -563,6 +595,9 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
+hwbattle.com#?#tr:has(> td[colspan][rowspan] > a[href*="//prod.danawa.com/"] > img[src^="./partner/"])
+namu.wiki#?#article > p + div div[id]:has(div[id]:has(div > ul > li, div > a[href*="/w/%EB%B6%84%EB%A5%98:"])) ~ div:has(img[src*="//w.namu.la/s/"], img[src^="data:image/png;base64,"])
+namu.wiki#?#article div:has(a[href*="/w/%EB%B6%84%EB%A5%98:"]) ~ div:has(td > img[src*="w.namu.la"], td > img[src^="data:image/png;base64,"])
 meeco.kr#?#section#cCon > div[style].xe-widget-wrapper:has(> div[style] > div > div[style] > div[style] > .c_widget > div.w_list > ul.page_unit > li > div.w_w2_con > a[style][href^="/Enterprise/"])
 koreaminecraft.net#?#table.table-divider > tbody > tr.notice:has(> td.title > a > strong[style]:contains([프리미엄]))
 koreaminecraft.net#?#.fancybox-wrap:has(> .fancybox-skin > div > div > #dialoga.wst_ad_badge)
