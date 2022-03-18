@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR
-! OriginalVersion: 2022.318.12
+! OriginalVersion: 2022.318.16
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -122,6 +122,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^$third-party
+||nad.tf.co.kr^
 ||adc.ohmynews.com^
 ||ad.kmib.co.kr^
 ||ads.kmib.co.kr^
@@ -217,6 +218,9 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||tf.co.kr/public/layout/*/top_menu_bar_*.php
+||tf.co.kr/public/ad/
+||img.tf.co.kr/img/tfad/
 ||ojsimg.ohmynews.com/*_ad_rolling.htm
 ||ojsfile.ohmynews.com/ADSVC_FILE/
 ||image.dnews.co.kr/uhtml/images/banner/
@@ -349,6 +353,13 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+news.tf.co.kr###posLeft > div[style~="width100%;font-size:"][style~="#ececec;margin-bottom:"]
+news.tf.co.kr##iframe[id^="ADFRAME_"]
+news.tf.co.kr##iframe[src^="/public/ad/"]
+tf.co.kr##iframe[src*="tf.co.kr/public/layout/"][src*="/top_menu_bar_"][src*=".php"]
+tf.co.kr##iframe[src*="//www.tf.co.kr/public/ad/"]
+tf.co.kr##iframe[src*="//nad.tf.co.kr/"]
+tf.co.kr##div[id$="_AD"]
 ohmynews.com##.content > ul.ad_area
 ohmynews.com##div[class^="m_ad"]
 ohmynews.com##iframe[src*="//ojsimg.ohmynews.com/"][src*="_ad_rolling.htm"]
@@ -639,6 +650,7 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
+meeco.kr#?#.bd > div[style].xe-widget-wrapper:has(section.w_list.swiper-container-android > ul > li > ul > li > a[href^="/Enterprise/"].list_link)
 hwbattle.com#?#tr:has(> td[colspan][rowspan] > a[href*="//prod.danawa.com/"] > img[src^="./partner/"])
 namu.wiki#?#article > p + div div[id]:has(div[id]:has(div > ul > li, div > a[href*="/w/%EB%B6%84%EB%A5%98:"])) ~ div:has(img[src*="//w.namu.la/s/"], img[src^="data:image/png;base64,"])
 namu.wiki#?#article div:has(a[href*="/w/%EB%B6%84%EB%A5%98:"]) ~ div:has(td > img[src*="w.namu.la"], td > img[src^="data:image/png;base64,"])
@@ -737,6 +749,7 @@ sajuplus.net#%#//scriptlet("set-constant", "checkAds", "noopFunc")
 !#if (adguard_app_android || adguard_app_ios)
 @@||api-ao-list.adison.co^$app=com.nhn.android.webtoon
 @@||api-ao-list.adison.co^$app=com.nhn.android.nbooks
+||img.samsungapps.com/display^$app=com.samsung.android.game.gamehome
 ||adlibr.com^
 ||app.dcinside.com/api/_ad_search_link
 ||ad-display.s.zigzag.kr^
