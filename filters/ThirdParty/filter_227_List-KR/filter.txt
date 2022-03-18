@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR
-! OriginalVersion: 2022.318.1
+! OriginalVersion: 2022.318.12
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -122,6 +122,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^$third-party
+||adc.ohmynews.com^
 ||ad.kmib.co.kr^
 ||ads.kmib.co.kr^
 ||adimage.hankookilbo.com^
@@ -216,6 +217,17 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||ojsimg.ohmynews.com/*_ad_rolling.htm
+||ojsfile.ohmynews.com/ADSVC_FILE/
+||image.dnews.co.kr/uhtml/images/banner/
+||image.munhwa.com/www/banner/
+||img.mk.co.kr/mk/1/*/right_middle/
+/(http|https):\/\/([a-z]|[0-9]){1,}\.ilbe\.com\/images\/([0-9]|[a-z]){4,8}\.[a-z]{3,4}/
+||bloomingbit-media.*.amazonaws.com/real/banner/
+||hankyung.com/js/ad_top.js
+||static.hankyung.com/img/logo/spr-footer-sponsor.svg
+||img.segye.com/static/*_segye/resources/js/ad/
+||img.segye.com/static/*_segye/resources/js/google_AD.js
 ||avjamak.net/thema/ryan_rainbow/widget/iw-adsense/
 ||avjamak.net/data/by_banner/
 ||pandalive.co.kr/code:pandatv/partner/banner/
@@ -337,6 +349,17 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+ohmynews.com##.content > ul.ad_area
+ohmynews.com##div[class^="m_ad"]
+ohmynews.com##iframe[src*="//ojsimg.ohmynews.com/"][src*="_ad_rolling.htm"]
+dnews.co.kr##img[src*="//image.dnews.co.kr/uhtml/images/banner/"]
+munhwa.com##img[src*="//image.munhwa.com/www/banner/"]
+mk.co.kr##div[class^="banner_"]
+mk.co.kr##div[class^="bn_sec"]
+m.ilbe.com##article.cutin-banner
+bloomingbit.io##.promotion
+money.hankyung.com,stock.hankyung.com##aside[id^="ad_"]
+segye.com##div[id^="wps_layout"][data-desc="텍스트광고"][data-box-file^="/news/box/ad"]
 avjamak.net##.widget-box.widget-img
 kmib.co.kr##.mn_ad
 kmib.co.kr##iframe[src^="https://ads.kmib.co.kr/"]
@@ -543,14 +566,14 @@ ppomppu.co.kr##.right > .board-preview.board-ppomppu
 bobaedream.co.kr##.left_con_last
 arca.live##div.ad
 m.clien.net##.shop_naver
-seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
+ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 clien.net###hongboInfoList
 m.ruliweb.com##.fixed_ad_wrapper
 m.ruliweb.com##div[id^="mo_ad_"]
 m.ruliweb.com##div[id^="nbp_container"]
 ruliweb.com##div.board_main > table > tbody tr.table_body.list_inner
 ruliweb.com##.nbp_container
-mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
+land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 m.dcinside.com##ul.all-comment-lst > li.comment:not(li[id^="comment_cnt_"])
 m.dcinside.com##div[class^="adv-group"]
 dcinside.com##div[class^="rightbanner"]
@@ -597,6 +620,7 @@ hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellv
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+hankyung.com#$#.inner_aside { top: 127px !important; }
 windowsforum.kr#$#.content { margin-top: 0px !important; }
 mule.co.kr#$#div.section-leftmiddle-topmiddle.cf { width: 100% !important; }
 coupang.com#$#li.search-product__ad-badge { height: 0px !important; width: 0px !important; visibility: hidden !important; }
