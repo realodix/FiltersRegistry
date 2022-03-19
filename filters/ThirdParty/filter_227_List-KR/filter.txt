@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR
-! OriginalVersion: 2022.319.2
+! OriginalVersion: 2022.319.7
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -122,6 +122,10 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^$third-party
+||ad.yonhapnews.co.kr^
+||nvapi.feeldmc.com^
+||imgnewad.ytn.co.kr^
+||adv.zdnet.co.kr^
 ||nad.tf.co.kr^
 ||adc.ohmynews.com^
 ||ad.kmib.co.kr^
@@ -218,6 +222,9 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||r.yna.co.kr/ad/
+||play.acs.wecandeo.com/html/*/player/src/ad/adManager.js
+||ytn.co.kr/inc_banner/
 ||tf.co.kr/public/layout/*/top_menu_bar_*.php
 ||tf.co.kr/public/ad/
 ||img.tf.co.kr/img/tfad/
@@ -353,6 +360,15 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+yna.co.kr##img[src^="//r.yna.co.kr/ad/"]
+yna.co.kr##aside[id^="boxAds"]
+yna.co.kr##.article-ad-box
+yna.co.kr###asideDeepDive
+yonhapnewstv.co.kr##.cont-row > div[class^="cont-item"] > .detail-rel
+ytn.co.kr##.article > span[style] > #hns_mask
+ytn.co.kr##iframe[src^="/inc_banner/"]
+zdnet.co.kr##div[class$="_ad_box"]
+ppss.kr##img[id^="ppss_title_bn"]
 m.danawa.com##div.power_link
 m.coupang.com##div[id^="sdp-"][id$="-banner"]
 m.clien.net##div[class$="_ad "]
@@ -531,7 +547,7 @@ mmzone.co.kr###main_premium_spon_block
 mmzone.co.kr##div[id$="_ad"]
 2cpu.co.kr##a[href*="./bbs/banner_link.php?"]
 ruliweb.com##div[id^="adsense_"]
-avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
+ytn.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 m.inven.co.kr##div#page > div[style*="height:50px;"]
 m.inven.co.kr###topslideAd
 m.inven.co.kr##div[id^="mobileTailAd"]
@@ -578,7 +594,7 @@ ppomppu.co.kr##div[id^="pp_ban_"]
 ppomppu.co.kr##.left > .shopping-preview
 ppomppu.co.kr##.right > .board-preview.board-ppomppu
 bobaedream.co.kr##.left_con_last
-arca.live##div.ad
+ytn.co.kr,arca.live##div.ad
 m.clien.net##.shop_naver
 ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 clien.net###hongboInfoList
@@ -634,6 +650,9 @@ hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellv
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+inven.co.kr#$##webzineBody aside.commu-right > *:not([class*="right-menu"]) { display: none; overflow: hidden; width: 0; height: 0; transform: translateX(-1vh) scale(0); }
+inven.co.kr#$##webzineBody section.commu-content > *:not(article) { display: none; overflow: hidden; width: 0; height: 0; }
+inven.co.kr#$#div[style^="width: 100%; height: 250px"] { height: 0 !important; }
 hankyung.com#$#.inner_aside { top: 127px !important; }
 windowsforum.kr#$#.content { margin-top: 0px !important; }
 mule.co.kr#$#div.section-leftmiddle-topmiddle.cf { width: 100% !important; }
@@ -692,6 +711,7 @@ m.bobaedream.co.kr#?#div[style^="display:flex;"] > div[id^="div-gpt-ad-"]:upward
 bobaedream.co.kr#?#tr.best > td a[href*="bobaedream.co.kr/event/event_list.php?"]:upward(2)
 orbi.kr#?#a[class="tag"][href^="/list/tag/"][-ext-contains="#제휴사공지"]:upward(li.notice)
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+ygosu.com,ppss.kr#%#//scriptlet("set-constant", "setInterval", "trueFunc")
 imbc.com#%#//scriptlet("set-constant", "vrixadsdk", "undefined")
 lover9.net#%#//scriptlet("set-constant", "app_domains", "emptyObj")
 ~coupang.com,~coupangcdn.com#%#//scriptlet("set-constant", "PartnersCoupang", "undefined")
