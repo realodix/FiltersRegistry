@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR
-! OriginalVersion: 2022.320.15
+! OriginalVersion: 2022.320.19
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -43,7 +43,7 @@
 ||ad.ajitad.co.kr^
 ||simg.imadrep.co.kr^
 ||adv.dailyissue.co.kr^
-||ad.idnad.co.kr^$third-party
+||ad.idnad.co.kr^
 ||adbiz2.co.kr^
 ||deepdive.zum.com^$third-party
 ||minishop.linkprice.com^
@@ -234,6 +234,15 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||m.nongmin.com/m/images/main/*_banner_
+||nongmin.com/upload/kcun/banner/
+||nongmin.com/inc/js/app/default/viewAd.js
+||nongmin.com/images/main/pop_
+||newstof.com/adManager/css/adManager.css
+||newstof.com/bannerpop/uploads/
+||cdn.newsmc.net/adManager/css/adManager.css
+||cdn.newsmc.net/bannerpop/uploads/
+||etoland.co.kr/img/squidland_banner_
 ||humoruniv.com/js/adpost_adsense.js
 ||zdnet.co.kr/template_ad/
 ||shopapi.interpark.com/advertisement/*.json
@@ -407,6 +416,10 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+m.nongmin.com##.banner_zone
+nongmin.com##div[class$="-banner-wrap"]
+newstof.com##div[id^="popup_"]
+etoland.co.kr##div[class$="_banner_div"]
 m.humoruniv.com###comment > ul > table[style~="height:250px;padding:0px"][cellspacing="0"][cellpadding="0"]
 m.humoruniv.com##body > #mobile> div[id][style~="min-height:"][style~="100px;"]:not(class):not(id)
 instiz.net##.responsive_main > div[style] > div[style~="background-color:"][style~="center;border:"][style~="1px"]
@@ -473,7 +486,7 @@ ohmynews.com##div[class^="m_ad"]
 ohmynews.com##iframe[src*="//ojsimg.ohmynews.com/"][src*="_ad_rolling.htm"]
 dnews.co.kr##img[src*="//image.dnews.co.kr/uhtml/images/banner/"]
 munhwa.com##img[src*="//image.munhwa.com/www/banner/"]
-ajunews.com,mk.co.kr##div[class^="banner_"]
+etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
 mk.co.kr##div[class^="bn_sec"]
 m.ilbe.com##article.cutin-banner
 bloomingbit.io##.promotion
@@ -591,7 +604,7 @@ news.v.daum.net##ul.list_column > li.item_ad
 mmzone.co.kr##div[id^="scm_ban"][style*="url(/media/banner/"]
 mmzone.co.kr###scm_premium_spon_block
 ilbe.com##ul.board-body > li[id^="sponser_ad_"]
-ilbe.com##div[class$="-banner"]
+nongmin.com,ilbe.com##div[class$="-banner"]
 ilbe.com##img[src^="https://acache.ilbe.com/"]
 tgd.kr###article-list > div[id^="article-list-row-"].notice.featured:nth-child(4)
 berryjam.co.kr##div[class*="slider-banner-"]
@@ -666,12 +679,12 @@ coolenjoy.net##.simple_banner_wrap
 coolenjoy.net##img[src^="https://photo.coolenjoy.net/banner/"]
 quasarzone.com##div[class^="main-"][class$="-banner"]
 quasarzone.com##.top-banner
-hankookilbo.com,quasarzone.com##div[class^="banner-"]
+nongmin.com,hankookilbo.com,quasarzone.com##div[class^="banner-"]
 okky.kr##img[src^="//file.okky.kr/banner/"]
 m.todayhumor.co.kr##.ad_box_div
 etoland.co.kr##ul.board_list > li.subject.ad_subject
-etoland.co.kr##.img_latest_wrap > a img[src*="_banner.png"]
-etoland.co.kr##.aside_bog_banner_wrap
+etoland.co.kr##.board_gather > .board_area > .img_latest_wrap > a > img
+etoland.co.kr##div[class$="_banner_wrap"]
 etoland.co.kr##td#mw_basic > div[style="height:90px; text-align:center; margin-top:10px; margin-bottom:10px;"]
 etoland.co.kr##.g_banner
 etoland.co.kr##center > a img[src*="//www.etoland.co.kr/data/daumeditor10/"]:not(.shrinkToFit)
@@ -739,6 +752,7 @@ hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellv
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+etoland.co.kr#$#.hit_list_ul_wrap { width: 100% !important; }
 inven.co.kr#$#aside[data-cached].commu-right > div[style]:not(class):not(id) { transform: translateX(-1vh) scale(0); }
 biz.heraldcorp.com#$#.article_area > .article_left { width: 100% !important; }
 inven.co.kr#$##webzineBody aside.commu-right > *:not([class*="right-menu"]) { display: none; overflow: hidden; width: 0; height: 0; transform: translateX(-1vh) scale(0); }
