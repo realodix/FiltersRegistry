@@ -6,7 +6,7 @@
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
 ! What this broad compilation doesn't block: Newsletters, cookie banners, social media links to company pages
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-! OriginalVersion: 17March2022v1
+! OriginalVersion: 19March2022v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -402,6 +402,7 @@ reddit.com##.XPromoPill
 speedtest.net##.mobile-pretest
 instagram.com##main > div[class$="     "]:first-of-type + section:last-of-type
 nova.rs##.banner-footer
+180.no##.ad-fallback
 !#if env_mobile
 twitter.com###layers > div:nth-of-type(2):last-of-type
 !#endif
@@ -438,7 +439,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 16March2022v1
+! OriginalVersion: 19March2022v2
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -458,7 +459,7 @@ linkedin.com#$?#body { overflow: auto !important; }
 ! Palau
 ||pw^$document,domain=~libgen.pw|~petridish.pw|~palaugov.pw|~dpc.pw|~zikrap.pw|~demonoid.pw|~bittor.pw|~buttercup.pw
 ! Legitimate use is almost non-existent, but has a tiny userbase in Japan
-||top^$document,domain=~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top
+||top^$document,domain=~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^$document
 ||agency^$document
@@ -477,7 +478,7 @@ www.google.*##.g:has(a[href*=".loan/"])
 www.google.*##.g:has(a[href*=".agency/"])
 www.google.*##.g:has(a[href*=".gdn/"])
 www.google.*##.g:has(a[href*=".bid/"])
-www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"]))
+www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"]))
 ! ——— You know those ultra-fraudulent auto-generated things that clutter up Google searches? These entries should remove some of them. ———
 www.google.*##.g:has(a[href*=".php?xxx="])
 www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
@@ -496,7 +497,7 @@ www.google.*##a[oncontextmenu][href*=".loan/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".agency/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".gdn/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".bid/"]:upward(2)
-www.google.*##a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"]):upward(2)
+www.google.*##a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".php?xxx="]:upward(2)
 www.google.*##a[oncontextmenu][href^="https://books.google."]:upward(2)
 !#endif
@@ -511,7 +512,7 @@ duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"], [data-domain$="shucks.top"])
 ! ——— For Bing ———
 !!!bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="nbd-media.tk"], [href*="bstweaker.tk"], [href*="gotofap.tk"], [href*="somepythonthings.tk"]))
 bing.com##.b_algo:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
@@ -523,7 +524,7 @@ bing.com##.b_algo:has(a[href*=".loan/"])
 bing.com##.b_algo:has(a[href*=".agency/"])
 bing.com##.b_algo:has(a[href*=".gdn/"])
 bing.com##.b_algo:has(a[href*=".bid/"])
-bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"]))
+bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"]))
 ! ——— Old dead tech-related domains ———
 ! Domains that used to host lists for adblockers or "hosts" tools, but which are now either used by malware pushers, or could potentially be snapped up by them.
 ||adblock.gjtech.net^$document
@@ -907,7 +908,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||54.210.193.115^$document
 ||[2600:1f18:43d1:2a04:ee05:261e:d408:7ba1]^$document
 ||achingpapoosh.cam^$all
-||aidgiltreef.casa^$all
 ||aileddipgird.cam^$all
 ||ailkeyair.com^$all
 ||alcidsduffels.cam^$all
@@ -1743,13 +1743,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ! https://www.virustotal.com/gui/url/826c451929420c4da32552f967fb1cab6467405a29c65b23802aaadb6a8c7505/detection
 ! https://safeweb.norton.com/report/show?url=192.3.110.170
 ||192.3.110.170^$all
-! https://www.virustotal.com/gui/file/0f242e89dd3f1685ace979a248300f7f414932b8a2a75af88585c427f2758c10/community
-! https://www.virustotal.com/gui/url/f66829e7fd9e897db874d352ef7c7b46fce80d070bc24917bc7300559d29d014/detection
-! https://www.virustotal.com/gui/url/75676a0f8d715afa318f380e214bbe7bc1f7b08c66740a320a888c8912212ad9/detection
-||tochmini.mooo.com^$all
-! https://www.virustotal.com/gui/url/ce7a42f35eca4072ab018cb7f5f7fbaaa7f17c10f982a2fa2baa24122385a805/detection
-! https://www.virustotal.com/gui/url/9324c63cab60da5f60dacb4b2b37a02f5a7e2a5b932d96440415a232da6ec0c2/detection
-||leavemylinkpls.mooo.com^$all
 ! https://forums.malwarebytes.com/topic/278209-removal-instructions-for-socialsearchconverter/
 ||socialsearchconverter.com^$document
 ||install.socialsearchconverter.com^$all
@@ -1836,13 +1829,11 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||aieov.com^$all
 ! Relations to the original domain
 ||192.3.194.242^$all
-||fakasafs23asd-adj.ydns.eu^$all
 ||w0hsyejhnbcvzaxi8euyr6tgeya5vml09jysgav27.ydns.eu^$all
 ||hncbeyghfsbvcuabgsbncvzgaioiuyegdbhabbbw.ydns.eu^$all
 ||avira-antivirus.ydns.eu^$all
 ||k2ygoods.ydns.eu^$all
 ||lefteriskkokkiskikinew.ydns.eu^$all
-||kelasdbadlkafg-uhuy28.ydns.eu^$all
 ||nan.ydns.eu^$all
 ||hurricane.ydns.eu^$all
 ||hjjhjkk.ydns.eu^$all
@@ -2014,12 +2005,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||grub-wa-saya.duckdns.org^$all
 ! https://www.virustotal.com/gui/file/a6e89d2bb1c2da1d852fb8e248f39cf7b3d4b0ea05a8d8f343d1b8e74d271d43/relations
 ||driversupport.com^$document
-! Copied over from URLHaus
-||thehotelshowdev.bitkit.dk^$all
-! Domains related to the above
-||big5constructnigeria-staging.bitkit.dk^$all
-||big5-nigeria.bitkit.dk^$all
-||bromic-staging.bitkit.dk^$all
 ! A PUP and scam website
 ||mycleanpc.com^$document
 ! Related domains owned by the same company and used for payment (the first is for 'tech support' scams, the second for their 'ID protection')
@@ -2323,7 +2308,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||115.194.38.143^$all
 ||61.52.79.32^$all
 ! https://scammer.info/t/pihishing-site-claiming-to-hold-a-ups-package-that-needs-payment/84466
-||ups-dk.u1537460.cp.regruhosting.ru^$all
+://ups-dk.$document,denyallow=dk|nu|se|no|fo|gl|ups.com
 ! https://www.virustotal.com/gui/url/269d374b629d7896da1f9e7449bd5afecf6284a9a564244f96a71e5192363635?nocache=1
 ||lowseelan.com^$all
 ! https://www.virustotal.com/gui/file/50fd813cf8fe981e6aee179f8ba394e5527c5128b84c328f9f8347cd994bbc42/community
@@ -7951,7 +7936,7 @@ get.adobe.com###offersInformationPane
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 07March2022v2
+! OriginalVersion: 19March2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -8419,7 +8404,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 54.210.193.115$network
 [2600:1f18:43d1:2a04:ee05:261e:d408:7ba1]$network
 ||achingpapoosh.cam^$redirect=nooptext,important
-||aidgiltreef.casa^$redirect=nooptext,important
 ||aileddipgird.cam^$redirect=nooptext,important
 ||ailkeyair.com^$redirect=nooptext,important
 ||alcidsduffels.cam^$redirect=nooptext,important
@@ -9247,13 +9231,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ! https://www.virustotal.com/gui/url/826c451929420c4da32552f967fb1cab6467405a29c65b23802aaadb6a8c7505/detection
 ! https://safeweb.norton.com/report/show?url=192.3.110.170
 192.3.110.170$network
-! https://www.virustotal.com/gui/file/0f242e89dd3f1685ace979a248300f7f414932b8a2a75af88585c427f2758c10/community
-! https://www.virustotal.com/gui/url/f66829e7fd9e897db874d352ef7c7b46fce80d070bc24917bc7300559d29d014/detection
-! https://www.virustotal.com/gui/url/75676a0f8d715afa318f380e214bbe7bc1f7b08c66740a320a888c8912212ad9/detection
-||tochmini.mooo.com^$redirect=nooptext,important
-! https://www.virustotal.com/gui/url/ce7a42f35eca4072ab018cb7f5f7fbaaa7f17c10f982a2fa2baa24122385a805/detection
-! https://www.virustotal.com/gui/url/9324c63cab60da5f60dacb4b2b37a02f5a7e2a5b932d96440415a232da6ec0c2/detection
-||leavemylinkpls.mooo.com^$redirect=nooptext,important
 ! https://forums.malwarebytes.com/topic/278209-removal-instructions-for-socialsearchconverter/
 ||socialsearchconverter.com^$document
 ||install.socialsearchconverter.com^$redirect=nooptext,important
@@ -9340,13 +9317,11 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||aieov.com^$redirect=nooptext,important
 ! Relations to the original domain
 192.3.194.242$network
-||fakasafs23asd-adj.ydns.eu^$redirect=nooptext,important
 ||w0hsyejhnbcvzaxi8euyr6tgeya5vml09jysgav27.ydns.eu^$redirect=nooptext,important
 ||hncbeyghfsbvcuabgsbncvzgaioiuyegdbhabbbw.ydns.eu^$redirect=nooptext,important
 ||avira-antivirus.ydns.eu^$redirect=nooptext,important
 ||k2ygoods.ydns.eu^$redirect=nooptext,important
 ||lefteriskkokkiskikinew.ydns.eu^$redirect=nooptext,important
-||kelasdbadlkafg-uhuy28.ydns.eu^$redirect=nooptext,important
 ||nan.ydns.eu^$redirect=nooptext,important
 ||hurricane.ydns.eu^$redirect=nooptext,important
 ||hjjhjkk.ydns.eu^$redirect=nooptext,important
@@ -9519,12 +9494,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||grub-wa-saya.duckdns.org^$redirect=nooptext,important
 ! https://www.virustotal.com/gui/file/a6e89d2bb1c2da1d852fb8e248f39cf7b3d4b0ea05a8d8f343d1b8e74d271d43/relations
 ||driversupport.com^$document
-! Copied over from URLHaus
-||thehotelshowdev.bitkit.dk^$redirect=nooptext,important
-! Domains related to the above
-||big5constructnigeria-staging.bitkit.dk^$redirect=nooptext,important
-||big5-nigeria.bitkit.dk^$redirect=nooptext,important
-||bromic-staging.bitkit.dk^$redirect=nooptext,important
 ! A PUP and scam website
 ||mycleanpc.com^$document
 ! Related domains owned by the same company and used for payment (the first is for 'tech support' scams, the second for their 'ID protection')
@@ -9820,7 +9789,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 115.194.38.143$network
 61.52.79.32$network
 ! https://scammer.info/t/pihishing-site-claiming-to-hold-a-ups-package-that-needs-payment/84466
-||ups-dk.u1537460.cp.regruhosting.ru^$redirect=nooptext,important
+://ups-dk.$document,denyallow=dk|nu|se|no|fo|gl|ups.com
 ! https://www.virustotal.com/gui/url/269d374b629d7896da1f9e7449bd5afecf6284a9a564244f96a71e5192363635?nocache=1
 ||lowseelan.com^$redirect=nooptext,important
 ! https://www.virustotal.com/gui/file/50fd813cf8fe981e6aee179f8ba394e5527c5128b84c328f9f8347cd994bbc42/community
@@ -10008,6 +9977,13 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||sites.google.com/mytv/maintenance^$redirect=nooptext,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111970
 /(^|\.|://)[a-z0-9-]{2,}trk\.xyz(/|$)/$document,popup
+! https://bazaar.abuse.ch/sample/d7308dab0110ae3bc79fd15024f5ccfcbd6e676b7c42b27a0112506e8357a6dc/ --> https://app.any.run/tasks/bc53e7a9-5fd7-4682-894d-11e48e9ea89a#
+||pccrackworld.com^$redirect=nooptext,important
+||calsign.xyz^$redirect=nooptext,important
+||jwq98u.xyz^$redirect=nooptext,important
+||nhskuhiuscja.xyz^$redirect=nooptext,important
+||mediafire.com/file/y65v1rk0zy7ot4a/The__Setup__With__File.zip/file^$redirect=nooptext,important
+||download2340.mediafire.com/eift3ac9qmig/y65v1rk0zy7ot4a/The__Setup__With__File.zip^$redirect=nooptext,important
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$redirect=nooptext,important
@@ -16980,7 +16956,7 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 /christmas-snow.js
 ##foxfield-xmas:not(html, body)
 ! Title: 🌭 Falukorv List
-! OriginalVersion: 20December2021v1-Beta
+! OriginalVersion: 20March2022v1-Beta
 ! Expires: 10 days
 ! Description: Originally created because some PR-Chinese filterlist makers decided to block Falun Gong websites in their anti-ad lists for reasons that had absolutely nothing to do with ads, tracking or malware, and despite the sites already being megablocked within their country; this list has since then also expanded to cover other lists' entries that makes one think "Wait, hold up", due to how misplaced they are.
 ! The list is not designed to be used together with anti-'social network' lists.
@@ -17046,14 +17022,6 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 @@||mewe.com^
 @@||wikileaks.org^
 @@||t.me^
-vk.com$badfilter
-www.vk.com$badfilter
-m.vk.com$badfilter
-www.m.vk.com$badfilter
-!#if false
-@@/(^|/)vk\.com/?$/
-@@||vk.com^$stylesheet,script,image,~third-party
-!#endif
 !#endif
 ! Caused by «ABP Japanese Filters» (https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf.txt)
 @@||lemondeinformatique.fr^
