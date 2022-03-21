@@ -1,13 +1,15 @@
 !
 ! Title: List-KR
 ! Description: List-KR
-! OriginalVersion: 2022.321.2
+! OriginalVersion: 2022.321.7
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 !
 ! Version must be UTC format.
 !
+||ad.mrab.co.kr^
+||ad.mediafarm.co.kr^
 ||contentsfeed.com^
 ||mediacategory.com^
 ||innorame.com^
@@ -234,6 +236,12 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||static.hankyung.com/ext/powerlink/
+||hankyung.com/resource/js/m/view.ads.js
+||cloudfront.net/js/hankyung_admaru_moibile_icv_*.js
+||google.com/adsense/
+||m.news1.kr/template/ads/
+||image.news1.kr/system/ads_t/
 ||nocutnews.co.kr/ad/
 ||m.nongmin.com/m/images/main/*_banner_
 ||nongmin.com/upload/kcun/banner/
@@ -400,6 +408,17 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+hankyung.com##.view > .joy_info
+hankyung.com##article.act-body > .wrap_list
+gigglehd.com##div[style~="!important;"] > .nw_box > div:not(class):not(id) > table[cellspacing="0"][class]
+gigglehd.com##.widget_banner_skin > ul.banner_list
+m.news1.kr##div[class^="banner"]
+m.news1.kr##iframe[src^="/template/ads/"]
+m.news1.kr##div[class^="das_article"][class$="_wrap"]
+m.news1.kr##div[class^="ads_"]
+news1.kr##.top_area > .wrap_sl_item > .slick-slider
+news1.kr###article_body_content > .link_news > ul > div[class] > div[style]
+news1.kr##div[data-acidx][data-kind].sideBlock
 m.nocutnews.co.kr##div[class^="ct"] > .section > .view_box > #divViewBox > .viewbox > div[style]
 m.nocutnews.co.kr###pnlContainer > div[class^="ct"] > .con_b > div[style]
 m.nocutnews.co.kr###pnlContainer > div[class^="ct"] > .section > div[style]:not(class)
@@ -637,7 +656,7 @@ mmzone.co.kr###main_premium_spon_block
 mmzone.co.kr##div[id$="_ad"]
 2cpu.co.kr##a[href*="./bbs/banner_link.php?"]
 ruliweb.com##div[id^="adsense_"]
-web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,ytn.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
+hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,ytn.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 m.inven.co.kr##div#page > div[style*="height:50px;"]
 m.inven.co.kr###topslideAd
 m.inven.co.kr##div[id^="mobileTailAd"]
@@ -646,7 +665,7 @@ inven.co.kr###inven_reservation_box
 inven.co.kr##.menuGroup.imt_banner
 inven.co.kr##.banner_box
 inven.co.kr##iframe[src*="//zicf.inven.co.kr/RealMedia/ads/"]
-m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com,inven.co.kr##div[class^="ad-"]
+hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com,inven.co.kr##div[class^="ad-"]
 inven.co.kr##section[class^="ad-"]
 inven.co.kr###topskyAd
 tgd.kr##div[style*="background:url(https://upload.tgd.kr/banner/320x50n.jpg)"]
@@ -867,7 +886,7 @@ sajuplus.net#%#//scriptlet("set-constant", "checkAds", "noopFunc")
 !#if (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android)
 !
 !#endif
-!#if (adguard_app_android || adguard_app_ios)
+!#if (adguard_app_android)
 @@||api-ao-list.adison.co^$app=com.nhn.android.webtoon
 @@||api-ao-list.adison.co^$app=com.nhn.android.nbooks
 ||img.samsungapps.com/display^$app=com.samsung.android.game.gamehome
@@ -881,7 +900,16 @@ sajuplus.net#%#//scriptlet("set-constant", "checkAds", "noopFunc")
 ||ssp-ad.momento.dev^
 ||sdk-bid.exelbid.com^
 ||t1.daumcdn.net/cafe_cj/app/js/*/nativead.js
-! Rules of this file are compatible rules for only an issue that can be reproduced with AdGuard for Android/iOS/iOS Pro.
+! Rules of this file are compatible rules for only an issue that can be reproduced with AdGuard for Android.
+! If a website, mobile version, can be reproduced on a desktop/laptop browser with AdGuard for Windows/AdGuard Browser Extension,
+! please move into specific.txt.
+!
+!#endif
+!#if (adguard_app_ios)
+!
+!
+!
+! Rules of this file are compatible rules for only an issue that can be reproduced with AdGuard for iOS/iOS Pro.
 ! If a website, mobile version, can be reproduced on a desktop/laptop browser with AdGuard for Windows/AdGuard Browser Extension,
 ! please move into specific.txt.
 !#endif
