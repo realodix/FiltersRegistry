@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR
-! OriginalVersion: 2022.322.3
+! OriginalVersion: 2022.322.8
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -239,6 +239,7 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||mobile.newsis.com/ad_list/
 ||img.hani.co.kr/section-image/*/mobile/image/icon/btn_ADclose.png
 ||static.hankyung.com/ext/powerlink/
 ||hankyung.com/resource/js/m/view.ads.js
@@ -412,6 +413,13 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+entertain.daum.net##.aside_g.aside_ad
+entertain.daum.net##.aside_g.aside_shopping
+mobile.newsis.com##section > div[class^="listStyle"] > ul[class^="listStyle"] > li.first
+mobile.newsis.com##div[style~="padding:10px"][style~="10px;"] > div[style="height: 35px;"]
+mobile.newsis.com##article > .article > div[class][style~="100%;"][style~="250px;"][style~="padding:"]
+mobile.newsis.com##iframe[src^="/ad_list/"]
+m.daum.net##div[class][data-ad-media][data-ad-pubuser][data-ad-type][data-ad-width][data-ad-height]
 m.nocutnews.co.kr###pnlContainer > div[class^="ct"] > .section > .ct_box > div[style~="text-align:"][style~="center;"][style~="padding:"][style~="10px"]
 m.hani.co.kr##section[class^="ad"]
 hankyung.com##.view > .joy_info
@@ -710,14 +718,14 @@ ppomppu.co.kr##.right > .board-preview.board-ppomppu
 bobaedream.co.kr##.left_con_last
 ytn.co.kr,arca.live##div.ad
 m.clien.net##.shop_naver
-instiz.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
+news.daum.net,instiz.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 clien.net###hongboInfoList
 m.ruliweb.com##.fixed_ad_wrapper
 m.ruliweb.com##div[id^="mo_ad_"]
 m.ruliweb.com##div[id^="nbp_container"]
 ruliweb.com##div.board_main > table > tbody tr.table_body.list_inner
 ruliweb.com##.nbp_container
-zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
+mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 m.dcinside.com##ul.all-comment-lst > li.comment:not(li[id^="comment_cnt_"])
 m.dcinside.com##div[class^="adv-group"]
 dcinside.com##div[class^="rightbanner"]
@@ -845,10 +853,11 @@ lover9.net,1412.rest,3dpchip.com#%#//scriptlet("prevent-setTimeout", "/\.display
 !  #%#//scriptlet("prevent-bab")
 !
 ! Kakao TV
-entertain.daum.net,play-tv.kakao.com,tv.kakao.com#@##adBlockPixelTag
-entertain.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
-||tv.kakao.com/embed/player/image/ads.png$redirect=32x32-transparent.png,domain=tv.kakao.com|play-tv.kakao.com|entertain.daum.net
-||videoads.kakao.com/adserver/api/v2/vmap$redirect=noopvmap-1.0,domain=tv.kakao.com|play-tv.kakao.com|entertain.daum.net
+kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#ins.kakao_ad_area
+kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@##adBlockPixelTag
+kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
+||tv.kakao.com/embed/player/image/ads.png$redirect=32x32-transparent.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
+||videoads.kakao.com/adserver/api/v2/vmap$redirect=noopvmap-1.0,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
 lover9.net#@#.adsbygoogle
 lover9.net#$#.modal { position: unset !important; }
@@ -878,6 +887,13 @@ sajuplus.net#%#//scriptlet("set-constant", "checkAds", "noopFunc")
 @@||3dpchip.com^$generichide
 @@||1412.rest^$generichide
 !
+!
+! Kakao TV
+kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#ins.kakao_ad_area
+kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@##adBlockPixelTag
+kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
+@@||tv.kakao.com/embed/player/image/ads.png$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
+@@||videoads.kakao.com/adserver/api/v2/vmap$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
 @@||avjamak.net^$generichide
 ||1412.rest/addons/*/adblockDetector.js
