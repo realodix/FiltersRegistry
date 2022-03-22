@@ -1,6 +1,6 @@
 !
 ! Title: 乘风 广告过滤规则
-! OriginalVersion: 202201251
+! OriginalVersion: 202203171
 ! Expires: 2 days
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
 !--------------------------百度----------------------------------
@@ -1141,14 +1141,50 @@ subhd.com##div[style^="text-align:center;height:270px"],.col-md-10 > div:nth-of-
 ||168.it168.com$script
 admin5.com##.float_both,div.sherry_ad1,div.specialBox,.content_right_ad
 100.pncdn.cn
+! china evil site
+4009997658.com
+abbyychina.com
+bartender.cc
+beyondcompare.cc
+bingdianhuanyuan.cn
+chemdraw.com.cn
+coreldrawchina.com
+easyrecoverychina.com
+ediuschina.com
+flstudiochina.com
+guitarpro.cc
+huishenghuiying.com.cn
+iconworkshop.cn
+imindmap.cc
+jihehuaban.com.cn
+keyshot.cc
+kingdeecn.cn
+logoshejishi.com
+||mairuan.$all
+mairuanwang.com
+makeding.com
+mathtype.cn
+mindmanager.cc
+mycleanmymac.com
+ntfsformac.cc
+ntfsformac.cn
+parallelsdesktop.cn
+pdfexpert.cc
+shankejingling.com
+vegaschina.cn
+||xmindchina.
+xshellcn.com
+yihuifu.cn
+www.zhzzx.com
 ! Title: 乘风 视频过滤规则
-! OriginalVersion: 202203101
+! OriginalVersion: 202203191
 ! Expires: 1 day
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
+pan.baidu.com,www.bilibili.com#%#//scriptlet('ubo-aeld.js', 'ratechange')
 ! 屏蔽P2P
-v.qq.com,bilibili.com,huya.com,le.com,mgtv.com,dandanzan10.top,nunuyy10.top#%#//scriptlet('ubo-set.js', 'RTCPeerConnection', 'undefined')
-v.qq.com,bilibili.com,huya.com,le.com,mgtv.com,dandanzan10.top,nunuyy10.top#%#//scriptlet('ubo-set.js', 'webkitRTCPeerConnection', 'undefined')
-v.qq.com,bilibili.com,huya.com,le.com,mgtv.com,dandanzan10.top,nunuyy10.top#%#//scriptlet('ubo-set.js', 'mozRTCPeerConnection', 'undefined')
+qq.com,huya.com,yy.com,le.com#%#//scriptlet('ubo-nowebrtc.js')
+||tracker.$xmlhttprequest,websocket,script,ping
+||p2p.$xmlhttprequest,websocket,ping
 v.youku.com##.control-phonewatch,#right-title-ad-banner, .kui-watermark-0
 v.youku.com#%#//scriptlet('ubo-aeld.js', 'dblclick', 'triggerEvent')
 m.youku.com,v.youku.com#%#//scriptlet('ubo-nano-stb.js', 'r--', '', '0.02')
@@ -1173,17 +1209,18 @@ show.ssports.com
 qq.com##.mod_ad, .txp_ad, div.l_qq_com, .txp-watermark, .txp_ad_link, .txp_zt_video, .adWrap
 qq.com#%#//scriptlet('ubo-no-xhr-if.js', 'trace.')
 qq.com#%#//scriptlet('ubo-no-fetch-if.js', 'trace.')
-qq.com#%#//scriptlet('ubo-json-prune.js', 'ad', 'vinfo')
-qq.com#%#//scriptlet('ubo-nano-sib.js', '\u5012\u8ba1\u65f6')
+qq.com#%#//scriptlet('ubo-json-prune.js', 'adList.item')
+!qq.com##+js(nano-sib, \u5012\u8ba1\u65f6)
+v.qq.com#@%#//scriptlet('ubo-set.js', 'Beacon.prototype.fail', 'null')
 qq.com#%#//scriptlet('ubo-set.js', 'Beacon.prototype.fail', 'null')
-@@||video.qq.com/fcgi-bin/
+@@||union.video.qq.com/fcgi-bin/$script,domain=qq.com
+cm.l.qq.com
 ||l.qq.com/lview?
 ||l.qq.com/livemsg?
-||mark.l.qq.com/fcgi-bin/get_video_mark_all?idlist=
+||mark.l.qq.com/fcgi-bin/get_video_mark_all?
 ||gtimg.com/qqlive/
 ||qzonestyle.gtimg.cn/qzone/biz/ac/comm/$script
 |https://imgcache.qq.com/qzone/biz/comm/js/qbs.js
-!||v.smtcdns.com/*.tc.qq.com/$media,mp4,domain=new.qq.com
 !||ssp.qq.com/static/web/websites/pcnewsplugin/sspad_$script
 new.qq.com#%#//scriptlet('ubo-set.js', 'SSPAd.prototype.loadAd', 'noopFunc')
 ||news.ssp.qq.com/app
@@ -1231,6 +1268,7 @@ tv.sohu.com##.x-dl-shake.x-download-panel, #playerBar > div.area ~a
 ||17173.com/batch_show?ads=
 ||17173.com/if/$script,subdocument
 le.com#%#//scriptlet('ubo-set.js', 'isAdLoaded', 'true')
+||letvimg.com/$object,xmlhttprequest
 ||letvimg.com/*_gugwl/$image
 ||js.letvcdn.com/*_banner_$script
 ||banana.le.com/
@@ -1248,8 +1286,7 @@ yoyi.com.cn
 zhiziyun.com
 le.com##.min_pause_img
 www.douyu.com#%#//scriptlet('ubo-aeld.js', '/visibilitychange|pagehide/')
-www.douyu.com#%#//scriptlet('ubo-set.js', 'RTCPeerConnection.prototype.addStream', 'noopFunc')
-www.douyu.com#%#//scriptlet('ubo-set.js', 'webkitRTCPeerConnection.prototype.addStream', 'noopFunc')
+douyu.com#%#//scriptlet('ubo-set.js', 'RTCPeerConnection.prototype.addTrack', 'noopFunc')
 ||douyucdn.cn/adxdsp/$image
 wan.douyu.com
 douyu.com,huya.com##a[href^="https://g.wan."]
@@ -1282,6 +1319,9 @@ hanmidy.com,bimiacg4.net#%#//scriptlet('ubo-acis.js', 'Object.defineProperty', '
 ! ||haitum.com/template/default/static/js/middle.js^$script
 ||alicdn.com/$image,domain=api.xiaomingming.org
 imomoe.*###adl,#adr
+dandanzan10.top,nunuyy10.top#%#//scriptlet('ubo-set.js', 'RTCPeerConnection', 'null')
+dandanzan10.top,nunuyy10.top#%#//scriptlet('ubo-set.js', 'webkitRTCPeerConnection', 'null')
+dandanzan10.top,nunuyy10.top#@%#//scriptlet('ubo-nowebrtc.js')
 dandanzan10.top,nunuyy10.top#$#.gm-fp-body video { max-height:100%!important }
 adx1.com
 aqours.today
@@ -1295,7 +1335,6 @@ netflix.mom,netflixya.com,yanetflix.com#%#//scriptlet('ubo-aopw.js', 'document.o
 4kya.com###player_pause
 yatu.tv##.dplayer-web-fullscreen-fix #tburl,#loadtop,[id^=myas],#myds1,#daohang
 yatu.tv,yhdm15.com#%#//scriptlet('ubo-set.js', 'document.oncontextmenu', 'trueFunc')
-||tracker.$xmlhttprequest,websocket,script,ping
 geoparker.net
 uxrpkgh.cn
 anquanzhuomian.com
