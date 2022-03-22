@@ -1,13 +1,15 @@
 !
 ! Title: List-KR
 ! Description: List-KR
-! OriginalVersion: 2022.322.8
+! OriginalVersion: 2022.322.18
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 !
 ! Version must be UTC format.
 !
+||ads-twitter.com^
+||2mdn.net^
 ||ad.mrab.co.kr^
 ||ad.mediafarm.co.kr^
 ||contentsfeed.com^
@@ -64,7 +66,7 @@
 ||mobon.net^$third-party
 ||ad*.wisenut.co.kr^
 ||acrosspf.com^$third-party
-||ad.esmplus.com^$third-party
+||ad.esmplus.com^
 ||adcheck.about.co.kr^
 ||ads.mncmedia.co.kr^
 ||advimg.ad-mapps.com^
@@ -127,6 +129,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||ad.danawa.com^
 ||xconf.cauly.co.kr^
 ||kitweb.tadapi.info^
 ||ad.khan.co.kr^
@@ -239,6 +242,12 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||m.ppomppu.co.kr/banner/google_ad.html
+||search.danawa.com/mobile/js/powerClick.min.js
+||search.danawa.com/mobile/ajax/jehuProduct/getPowerLink.ajax.php
+||danawa.com/NBP/powerLinkNew.js.php
+||prod.danawa.com/bridge/loadingBridgePowerClick.php$document
+||static.danawa.com/globaljs/static/adweb_counter_danawa.min.js
 ||mobile.newsis.com/ad_list/
 ||img.hani.co.kr/section-image/*/mobile/image/icon/btn_ADclose.png
 ||static.hankyung.com/ext/powerlink/
@@ -413,6 +422,13 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+m.clien.net##div[id^="naverAd"]
+m.ppomppu.co.kr##iframe[src^="https://m.ppomppu.co.kr/banner/google_ad.html"]
+m.ppomppu.co.kr##div[style]#mainList.community-board-list > ul > li[id$="_ad"][style]:not([class])
+search.danawa.com###productListArea > .goods-list > ul#productListArea_list > li.goods-list__item:not([id]):not([data-itemtype])
+search.danawa.com##.main_prodlist > ul.product_list > li.prod_item:not([id])
+search.danawa.com###powerClickListArea
+danawa.com###danawa_main_container > .main-top > .main-top__center > .main-middlebnr
 entertain.daum.net##.aside_g.aside_ad
 entertain.daum.net##.aside_g.aside_shopping
 mobile.newsis.com##section > div[class^="listStyle"] > ul[class^="listStyle"] > li.first
@@ -762,7 +778,7 @@ hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellv
 @@||adimg3.search.naver.net/adpost/adpost_show_ads_min.js$domain=search.danawa.com
 @@||ad-img.ebaykorea.com/ADS/$image,domain=auction.co.kr
 @@||t1.daumcdn.net/adfit/static/kp.js$domain=pindirectshop.com|dongbanmall.com
-@@||ssl.pstatic.net/adimg3.search/adpost/js/adpost_show_ads_v2.min.js$domain=m.clien.net|m.danawa.com|search.danawa.com
+@@||ssl.pstatic.net/adimg3.search/adpost/js/adpost_show_ads_v2.min.js$domain=m.clien.net|m.danawa.com
 !#if (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_chromium || adguard_ext_edge)
 @@||t1.daumcdn.net/cafeattach/$stealth
 @@||pstatic.net^$stealth,media,image,other
@@ -797,12 +813,12 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
+namu.wiki#?#article div:has(a[href*="/w/%EB%B6%84%EB%A5%98:"]) ~ div:has(div.wiki-paragraph) ~ div:has(img[src*="w.namu.la"])
+gigglehd.com#?#div[style~="!important;"] > .nw_box > div:not(class):not(id) > table[cellspacing="0"][class]:not(:has(a[href*="//gigglehd.com/gg/"]))
 instiz.net#?#.responsive_main > div[style] > .grouping_title:has(> div[style][class] > div[style]:contains(광고))
 ajunews.com#?#.aside_item.banner:has(> h4[style~="font-size:13px;color:#999999;margin:0"]:contains(AD))
 meeco.kr#?#.bd > div[style].xe-widget-wrapper:has(section.w_list.swiper-container-android > ul > li > ul > li > a[href^="/Enterprise/"].list_link)
 hwbattle.com#?#tr:has(> td[colspan][rowspan] > a[href*="//prod.danawa.com/"] > img[src^="./partner/"])
-namu.wiki#?#article > p + div div[id]:has(div[id]:has(div > ul > li, div > a[href*="/w/%EB%B6%84%EB%A5%98:"])) ~ div:has(img[src*="//w.namu.la/s/"], img[src^="data:image/png;base64,"])
-namu.wiki#?#article div:has(a[href*="/w/%EB%B6%84%EB%A5%98:"]) ~ div:has(td > img[src*="w.namu.la"], td > img[src^="data:image/png;base64,"])
 meeco.kr#?#section#cCon > div[style].xe-widget-wrapper:has(> div[style] > div > div[style] > div[style] > .c_widget > div.w_list > ul.page_unit > li > div.w_w2_con > a[style][href^="/Enterprise/"])
 koreaminecraft.net#?#table.table-divider > tbody > tr.notice:has(> td.title > a > strong[style]:contains([프리미엄]))
 koreaminecraft.net#?#.fancybox-wrap:has(> .fancybox-skin > div > div > #dialoga.wst_ad_badge)
@@ -839,6 +855,7 @@ bobaedream.co.kr#?#tr.best > td a[href*="bobaedream.co.kr/event/event_list.php?"
 orbi.kr#?#a[class="tag"][href^="/list/tag/"][-ext-contains="#제휴사공지"]:upward(li.notice)
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+search.danawa.com#%#//scriptlet("set-constant", "getPowerLink", "undefined")
 search.11st.co.kr#%#//scriptlet("set-constant", "searchDataFactory.plusPrdList", "undefined")
 ygosu.com,ppss.kr#%#//scriptlet("set-constant", "setInterval", "trueFunc")
 imbc.com#%#//scriptlet("set-constant", "vrixadsdk", "undefined")
