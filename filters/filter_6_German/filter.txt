@@ -1655,6 +1655,8 @@ teleboy.ch#@#.adWrapper
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/113647
+mbpassion.de#?#.cb-entry-content > div > div:has(> center > font:contains(Anzeige))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112598
 wetter.com#?#.app-layout:has(> div.OUTBRAIN)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111782
@@ -2791,6 +2793,9 @@ drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan
 ! ##.id-Container--proBEEP
 hallo-muenchen.de,az-online.de,lokalo24.de,rosenheim24.de,kreiszeitung.de,nordbuzz.de,mannheim24.de,merkur.de,oktoberfest-live.de,tz.de##.id-Container--proBEEP
 !
+mbpassion.de##a[href^="https://mbpassion.net/url/"]
+mbpassion.de##.cb-post-footer-block.cb-post-large
+||mbpassion.de//wp-*-content/banners^
 wetter.com##.toolbar-wrapper
 about-drinks.com##img[referrerpolicy="unsafe-url"][src*="/wp-content/uploads/"]
 ||cdn.atf-tagmanager.de/config^$third-party
