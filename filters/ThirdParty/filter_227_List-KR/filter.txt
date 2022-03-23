@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR
-! OriginalVersion: 2022.323.2
+! OriginalVersion: 2022.323.6
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -82,7 +82,6 @@
 ||adapi.about.co.kr^
 ||adx.turl.co.kr^
 ||tpc.googlesyndication.com^
-||securepubads.g.doubleclick.net^
 ||adservice.google.co.*
 ||ads-partners.coupang.com^
 ||naverwebtoon-phinf.pstatic.net^
@@ -112,7 +111,6 @@
 ||criteo.net^
 ||pagead2.googlesyndication.com^
 ||safeframe.googlesyndication.com^
-||googleads.g.doubleclick.net^
 ||quantserve.com^$third-party
 ||adservice.google.com^
 ||pubmatic.com^$third-party
@@ -243,6 +241,7 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||googlesyndication.com/pagead/
 ||shoppingcall.me/ad_shoppingCallme.php
 ||api.popin.cc/lib*-lightweight/popIn-*.min.js
 ||m.ppomppu.co.kr/banner/google_ad.html
@@ -818,7 +817,7 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
-namu.wiki#?#article div:has(a[href*="/w/%EB%B6%84%EB%A5%98:"]) ~ div:has(div.wiki-paragraph) ~ div:has(img[src*="w.namu.la"])
+namu.wiki#?#article div:has(> div.wiki-paragraph) ~ div:has(table > tbody > tr > td[class] > div > img[src*="w.namu.la/"])
 gigglehd.com#?#div[style~="!important;"] > .nw_box > div:not(class):not(id) > table[cellspacing="0"][class]:not(:has(a[href*="//gigglehd.com/gg/"]))
 instiz.net#?#.responsive_main > div[style] > .grouping_title:has(> div[style][class] > div[style]:contains(광고))
 ajunews.com#?#.aside_item.banner:has(> h4[style~="font-size:13px;color:#999999;margin:0"]:contains(AD))
@@ -881,6 +880,8 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ||tv.kakao.com/embed/player/image/ads.png$redirect=32x32-transparent.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 ||videoads.kakao.com/adserver/api/v2/vmap$redirect=noopvmap-1.0,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ko.ff14angler.com
+ko.ff14angler.com#@#ins.adsbygoogle
 lover9.net#@#.adsbygoogle
 lover9.net#$#.modal { position: unset !important; }
 lover9.net#%#//scriptlet("abort-on-property-read", "goPage")
@@ -917,6 +918,8 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||tv.kakao.com/embed/player/image/ads.png$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 @@||videoads.kakao.com/adserver/api/v2/vmap$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ko.ff14angler.com
+ko.ff14angler.com#@#ins.adsbygoogle
 @@||avjamak.net^$generichide
 ||1412.rest/addons/*/adblockDetector.js
 @@||adblockanalytics.com^$xmlhttprequest,domain=1412.rest
