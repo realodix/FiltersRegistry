@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
-! Description: List-KR
-! OriginalVersion: 2022.323.7
+! Description: List-KR for AdGuard
+! OriginalVersion: 2022.323.10
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -128,6 +128,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||ads.mobitree.co.kr^
 ||ad.danawa.com^
 ||xconf.cauly.co.kr^
 ||kitweb.tadapi.info^
@@ -177,6 +178,7 @@
 ||adscdn.orbi.kr^
 ||ads.orbi.kr^
 ||ads.mtgroup.kr^
+##iframe[src*="//ads.mobitree.co.kr/"]
 ##iframe[src*="//www.bodnara.co.kr/advert/advert.php"]
 ##.revenue_unit_item.dable
 ##.revenue_unit_item.adfit
@@ -241,6 +243,8 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||ojsfile.ohmynews.com/AD_FILE/
+||ojsfile.ohmynews.com/CMPT_HTM/
 ||googlesyndication.com/pagead/
 ||shoppingcall.me/ad_shoppingCallme.php
 ||api.popin.cc/lib*-lightweight/popIn-*.min.js
@@ -370,7 +374,6 @@
 ||static.afreecatv.com/asset/service/ad/
 ||image.thebell.co.kr/banner/
 ||koya-culture.com/data/banner/
-||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt
 ||api.ruliweb.com/floating_ad|
 ||img.side.mythiell.com/ocenAd*.html
 ||side.mythiell.com/readUrl.php?url=http://adv.imadrep.co.kr/
@@ -424,6 +427,9 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+m.ohmynews.com##main#article > .arc_list
+m.ohmynews.com##div[id^="mobitree"]
+m.ohmynews.com##iframe[src*="//ojsfile.ohmynews.com/AD_FILE/"]
 dispatch.co.kr###dpArticleBlocksWrapper
 dispatch.co.kr##div[id^="ADOP_"][style]
 m.clien.net##div[id^="naverAd"]
@@ -466,7 +472,7 @@ instiz.net##.responsive_main > div[style] > div[style~="background-color:"][styl
 instiz.net##.responsive_main > ul > li[id][class][style]
 instiz.net##.responsive_main > table > tbody > tr > td > div[style~="border:"][style~="1px"][style~="solid"]
 instiz.net##div[id$="ad"]
-m.khan.co.kr,m.dcinside.com##div[id^="ad"]
+m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 zdnet.co.kr##iframe[src^="/template_ad/"]
 yna.co.kr##[class^="aside-bnr"]
 shopping.interpark.com###btnlist > .productImgList.choice
@@ -580,7 +586,7 @@ mule.co.kr##div[class^="section-"][class$="-topad"]
 mule.co.kr##div[class^="section-"][class$="-smallad"]
 mule.co.kr##div[class^="section-"][class$="ad-pc"]
 mule.co.kr##div.section-leftmiddle-bottommiddle.cf
-zdnet.co.kr,biz.heraldcorp.com,slrclub.com,sports.chosun.com##div[class^="ad"]
+m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com,sports.chosun.com##div[class^="ad"]
 postshare.co.kr##div.warp > a[href*="//someblossom.co.kr/product/detail.html?"]
 postshare.co.kr##div[id^="foin_"]
 postshare.co.kr###hd_pop
@@ -841,8 +847,6 @@ ppss.kr#?#section[id^="custom_"]:has(> div.widget_text > h3:contains(SPONSORED).
 m.newspic.kr#?#.aside_wrap > div.box:has(> div > iframe[src^="https://ad.adinc.kr/"])
 m.bunjang.co.kr#?#.app > div > div > div[class]:has(> div[class] > div[class] > div[class]:contains(파워링크))
 m.bunjang.co.kr#?#div:has(> div > div > div:contains(연관상품) > div:has(> div:contains(AD)) > img[alt="AD 가이드"])
-namu.wiki#?#article > div:matches-attr("/data-v-/"):has(> div:matches-attr("/data-v-/") > div > iframe[src*="//arca.live/static/ad/powerlink_"])
-namu.wiki#?#div[class]:matches-attr("/data-v-/"):has(> div:matches-attr("/data-v-/"):not([class]):not(:has(> a[href^="/w/"]:matches-attr("/data-v-/"))):not(:has(> a:matches-attr("/data-v-/"))):not(:contains(/.{1,}/i)))
 mosen.mt.co.kr#?#section.textList > article.row:has(> ul.aritcle-info > li.title > a[href*="//adv.imadrep.co.kr/"])
 berryjam.co.kr#?#table[width="1200"]:has(> tbody > tr > td > div[class*="slider-banner-"])
 community.rememberapp.co.kr#?#div > a.sc-7g611p-0.cAmftz:has(> div > div > div > img[alt="배너 광고 이미지"])
@@ -860,6 +864,9 @@ bobaedream.co.kr#?#tr.best > td a[href*="bobaedream.co.kr/event/event_list.php?"
 orbi.kr#?#a[class="tag"][href^="/list/tag/"][-ext-contains="#제휴사공지"]:upward(li.notice)
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+namu.wiki#?#article > div:matches-attr("/data-v-/"):has(> div:matches-attr("/data-v-/") > div > iframe[src*="//arca.live/static/ad/powerlink_"])
+namu.wiki#?#div[class]:matches-attr("/data-v-/"):not(:has(form[method][enctype] > input[name="token"][type="hidden"])):not(:has(form[action^="/diff/"])):has(> div:matches-attr("/data-v-/"):not([class]):not(:has(> a[href^="/w/"]:matches-attr("/data-v-/"))):not(:has(> a:matches-attr("/data-v-/"))):not(:contains(/.{1,}/i)))
+!
 search.danawa.com#%#//scriptlet("set-constant", "getPowerLink", "undefined")
 search.11st.co.kr#%#//scriptlet("set-constant", "searchDataFactory.plusPrdList", "undefined")
 ygosu.com,ppss.kr#%#//scriptlet("set-constant", "setInterval", "trueFunc")
@@ -896,6 +903,9 @@ sajuplus.net#%#//scriptlet("set-constant", "checkAds", "noopFunc")
 1412.rest##.ADs-BG.center
 ! mbn.co.kr ( https://github.com/AdguardTeam/AdguardFilters/issues/104586 )
 ||ad.smartmediarep.com/NetInsight/video/$redirect=nooptext,domain=mbn.co.kr
+!#endif
+!#if (!adguard_app_ios && !adguard_ext_safari)
+||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt
 !#endif
 !#if (adguard_ext_android_cb)
 @@ad&adv_keywords=$domain=3dpchip.com
