@@ -15837,12 +15837,12 @@ deezer.com#?#.page-alerts:-abp-has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:-abp-has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 12March2022v2
+! OriginalVersion: 24March2022v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! This is an extension file, not an independent list.
-! Extension file's version: 23February2022v1-Extension
+! Extension file's version: 24March2022v1-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -15911,6 +15911,9 @@ chronicle.com#$#.Page-body { overflow: auto !important; height: 100% !important 
 ! Twitter
 !! Re-enables scrolling after closing the "Log in to view more" prompt on users' timelines
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#$#html { overflow: unset !important }
+!! Removes an uncloseable prompt overlay
+!! Moved to here from the main file due to https://github.com/DandelionSprout/adfilt/issues/557
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:-abp-has(> div[data-testid])
 ! Facebook
 !! Reduces the background opacity of the login overlay
 www.facebook.com,www.beta.facebook.com,b-www.facebook.com,secure.facebook.com,pixel.facebook.com,error.facebook.com#$#div[class^=__fb-][class*="-mode "] > div[class*=" "]:first-of-type:nth-last-of-type(2) > div[class]:only-of-type { min-height: 0 !important; height: 0 !important }
@@ -16037,8 +16040,6 @@ twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[h
 ! Removes the bottom login sticky banner about logging in, in the April 2020-ish redesign 🔨
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class*=" "]:first-of-type:-abp-has(a[href="/i/flow/signup"])
 ! https://twitter.com/hideo_kojima_en/status/319595772981166080
-! Removes an uncloseable prompt overlay
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:-abp-has(> div[data-testid])
 ! The New Republic 📠🔨
 ! https://github.com/easylist/easylist/issues/5331#issuecomment-627813147
 ||validate.onecount.net/onecount/api/public^
@@ -17256,7 +17257,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 23March2022v4
+! OriginalVersion: 24March2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -17651,7 +17652,7 @@ $removeparam=ampcid
 $removeparam=affname
 $removeparam=MID
 ! https://www.greatrun.org/train-and-prepare/training-plans/?eid=AJ935930567982484926441023zzzzz64bccfd443fc61ff2c06e3cf8c7b889a2061064e5d5db55e171241354f241bed00
-$removeparam=eid,~xmlhttprequest,denyallow=embed.tapkal.fi,domain=~activationspot.com|~anidb.net|~howlongtobeat.com|~piwigo.org|~vmware.com
+$removeparam=eid,~xmlhttprequest,denyallow=embed.tapkal.fi,domain=~activationspot.com|~anidb.net|~howlongtobeat.com|~piwigo.org|~vmware.com|~eventbrite.*
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1031533
 $removeparam=nr_email_referer
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1046231
