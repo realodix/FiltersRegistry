@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.323.10
+! OriginalVersion: 2022.324.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -427,6 +427,12 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+ppss.kr###custom_html-3
+ppss.kr###genesis-content > :not(.home-top, .post, .author-box, .pagination, .screen-reader-text)
+ppss.kr###ppss_wing_banner_left
+ppss.kr##.ad-video
+ppss.kr##.brand-margin
+ppss.kr##div[onclick*="clickSdrcCheck"]
 m.ohmynews.com##main#article > .arc_list
 m.ohmynews.com##div[id^="mobitree"]
 m.ohmynews.com##iframe[src*="//ojsfile.ohmynews.com/AD_FILE/"]
@@ -867,6 +873,8 @@ mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !importan
 namu.wiki#?#article > div:matches-attr("/data-v-/"):has(> div:matches-attr("/data-v-/") > div > iframe[src*="//arca.live/static/ad/powerlink_"])
 namu.wiki#?#div[class]:matches-attr("/data-v-/"):not(:has(form[method][enctype] > input[name="token"][type="hidden"])):not(:has(form[action^="/diff/"])):has(> div:matches-attr("/data-v-/"):not([class]):not(:has(> a[href^="/w/"]:matches-attr("/data-v-/"))):not(:has(> a:matches-attr("/data-v-/"))):not(:contains(/.{1,}/i)))
 !
+ppss.kr#%#//scriptlet("set-constant", "Element.prototype.removeAttribute", "trueFunc")
+ppss.kr#%#//scriptlet("set-constant", "alert", "trueFunc")
 search.danawa.com#%#//scriptlet("set-constant", "getPowerLink", "undefined")
 search.11st.co.kr#%#//scriptlet("set-constant", "searchDataFactory.plusPrdList", "undefined")
 ygosu.com,ppss.kr#%#//scriptlet("set-constant", "setInterval", "trueFunc")
@@ -905,6 +913,8 @@ sajuplus.net#%#//scriptlet("set-constant", "checkAds", "noopFunc")
 ||ad.smartmediarep.com/NetInsight/video/$redirect=nooptext,domain=mbn.co.kr
 !#endif
 !#if (!adguard_app_ios && !adguard_ext_safari)
+||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon-apstag
+||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt
 !#endif
 !#if (adguard_ext_android_cb)
@@ -996,35 +1006,4 @@ ko.ff14angler.com#@#ins.adsbygoogle
 !
 !
 !
-!#endif
-! list-kr.github.io Detector
-!#if (adguard_app_windows)
-list-kr.github.io###ListKRFilterDetectorWin
-!#endif
-!#if (adguard_app_mac)
-list-kr.github.io###ListKRFilterDetectorMac
-!#endif
-!#if (adguard_app_android)
-list-kr.github.io###ListKRFilterDetectorAnd
-!#endif
-!#if (adguard_app_ios)
-list-kr.github.io###ListKRFilterDetectoriOS
-!#endif
-!#if (adguard_ext_safari)
-list-kr.github.io###ListKRFilterDetectorSafari
-!#endif
-!#if (adguard_ext_chromium)
-list-kr.github.io###ListKRFilterDetectorChrome
-!#endif
-!#if (adguard_ext_firefox)
-list-kr.github.io###ListKRFilterDetectorFirefox
-!#endif
-!#if (adguard_ext_edge)
-list-kr.github.io###ListKRFilterDetectorEdge
-!#endif
-!#if (adguard_ext_opera)
-list-kr.github.io###ListKRFilterDetectorOpera
-!#endif
-!#if (adguard_ext_android_cb)
-list-kr.github.io###ListKRFilterDetectorCon
 !#endif
