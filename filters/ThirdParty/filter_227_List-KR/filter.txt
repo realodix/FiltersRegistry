@@ -1,13 +1,14 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.324.7
+! OriginalVersion: 2022.324.13
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 !
 ! Version must be UTC format.
 !
+||vrixon.com^
 ||piclick.kr^
 ||ads-twitter.com^
 ||2mdn.net^
@@ -128,6 +129,10 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||shoppingbox.zum.com^
+||deepdive.zum.com^
+||ad.zumst.com^
+||adxr.zum.com^
 ||ads.mobitree.co.kr^
 ||ad.danawa.com^
 ||xconf.cauly.co.kr^
@@ -178,6 +183,7 @@
 ||adscdn.orbi.kr^
 ||ads.orbi.kr^
 ||ads.mtgroup.kr^
+##iframe[src*="//shoppingbox.zum.com/"]
 ##iframe[src*="//ads.mobitree.co.kr/"]
 ##iframe[src*="//www.bodnara.co.kr/advert/advert.php"]
 ##.revenue_unit_item.dable
@@ -243,6 +249,10 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||search.zumst.com/scripts/zum.search.power*.js
+||pandora.tv/_adv_img/
+||pandora.tv/nx_pandora/*/js/chAdPlayer.js
+||pandora.tv/nx_pandora/*/player/ptvAdPlayer.min.js
 ||ojsfile.ohmynews.com/AD_FILE/
 ||ojsfile.ohmynews.com/CMPT_HTM/
 ||googlesyndication.com/pagead/
@@ -427,6 +437,20 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+ppss.kr###custom_html-2
+ppss.kr###custom_html-3
+ppss.kr##.ad-video
+ppss.kr##.brand-margin
+ppss.kr##div[onclick*="clickSdrcCheck"]
+zum.com##header > .search_bar > .w_inner > .right_doodle
+search.zum.com###search_result > #powerlinkSc
+search.zum.com###search_result > .naver_power_shopping
+search.zum.com###search_result > .powercont_sc
+zum.com##section.container > .cont_wrap > .left_area > #newsMenu > .recommend_wrap
+zum.com##div[class*="_adbox"]
+zum.com##section.container > .cont_wrap > .left_area > #shoppingMenu
+zum.com##section.container > .cont_wrap > .right_area > div:not([class])
+start.zum.com##.main > .extension-banner
 m.ohmynews.com##main#article > .arc_list
 m.ohmynews.com##div[id^="mobitree"]
 m.ohmynews.com##iframe[src*="//ojsfile.ohmynews.com/AD_FILE/"]
@@ -655,7 +679,7 @@ ilbe.com##img[src^="https://acache.ilbe.com/"]
 tgd.kr###article-list > div[id^="article-list-row-"].notice.featured:nth-child(4)
 berryjam.co.kr##div[class*="slider-banner-"]
 berryjam.co.kr##img[src^="/data/skin/front/udweb_CCC/img/banner/"][alt="2021년 시마노 웹 한글 카다로그"]
-windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
+zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
 toomics.com##img[src*="://thumb.toomics.com/upload/banner/"]
 now.rememberapp.co.kr##.now_content_ads__wrapper
 m.ilbe.com##.banner-wrap
@@ -751,7 +775,7 @@ m.ruliweb.com##div[id^="mo_ad_"]
 m.ruliweb.com##div[id^="nbp_container"]
 ruliweb.com##div.board_main > table > tbody tr.table_body.list_inner
 ruliweb.com##.nbp_container
-mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
+pandora.tv,mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 m.dcinside.com##ul.all-comment-lst > li.comment:not(li[id^="comment_cnt_"])
 m.dcinside.com##div[class^="adv-group"]
 dcinside.com##div[class^="rightbanner"]
@@ -868,6 +892,9 @@ mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !importan
 namu.wiki#?#article > div:matches-attr("/data-v-/"):has(> div:matches-attr("/data-v-/") > div > iframe[src*="//arca.live/static/ad/powerlink_"])
 namu.wiki#?#div[class]:matches-attr("/data-v-/"):not(:has(form[method][enctype] > input[name="token"][type="hidden"])):not(:has(form[action^="/diff/"])):has(> div:matches-attr("/data-v-/"):not([class]):not(:has(> a[href^="/w/"]:matches-attr("/data-v-/"))):not(:has(> a:matches-attr("/data-v-/"))):not(:contains(/.{1,}/i)))
 !
+ppss.kr#%#//scriptlet('set-constant', 'Promise.prototype.catch', 'noopFunc')
+pandora.tv#%#//scriptlet("set-constant", "isnoad_vod", "true")
+pandora.tv#%#//scriptlet("set-constant", "isnoad_banner", "true")
 search.danawa.com#%#//scriptlet("set-constant", "getPowerLink", "undefined")
 search.11st.co.kr#%#//scriptlet("set-constant", "searchDataFactory.plusPrdList", "undefined")
 ygosu.com,ppss.kr#%#//scriptlet("set-constant", "setInterval", "trueFunc")
