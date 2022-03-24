@@ -1,8 +1,8 @@
 !
-! Checksum: gYzkDW5LLbYhpFYRafYXaA
-! OriginalVersion: 202203211012
+! Checksum: oZ1W0LuNzawWTzfpHjevgA
+! OriginalVersion: 202203231429
 ! Title: Hufilter for AdGuard
-! Last modified: 21 Mar 2022 10:12 UTC
+! Last modified: 23 Mar 2022 14:29 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/hufilter/hufilter/wiki
 ! Licence: CC-BY, see https://creativecommons.org/licenses/by/4.0/
@@ -1028,6 +1028,7 @@ otvenentul.hu##[class^="ad"]
 pannonrtv.com##[id^="block-views-block-banners-"]
 partyponty.hu##[class*="banner"]
 partyponty.hu##[id*="banner"]
+pcforum.hu##.zone[data-zoneid]
 pcforum.hu###zone-titleheader
 pcguru.hu##.banner-content
 pcguru.hu##a[href*="banner_click"]
@@ -1658,6 +1659,9 @@ ado.hu###cookieBox
 ado.hu###cookieBox_bg
 adoforum.hu###cookies-alert
 adozona.hu##.floating-help-wrapper
+! https://github.com/AdguardTeam/AdguardFilters/issues/113594
+americantourister.hu##.ui-widget-overlay
+americantourister.hu##[aria-describedby="cookies-dialog"]
 arukereso.hu###cookie-disclaimer
 atv.hu###facebookPopUp
 atv.hu###facebookPopUpBackground
@@ -1811,9 +1815,9 @@ privatbankar.hu##.mfor_cikk_beuszo
 privatbankar.hu##.news-page > div[style*="background: #FFF900;"]:first-child
 profession.hu##.cookie-layer
 prog.hu,pcforum.hu##.slidein.popup.closeablenotification.scripted
+prog.hu,pcforum.hu###cookieconsentbar
 prog.hu,pcforum.hu###subscribepopuppanelalign
 prog.hu##.popup
-prog.hu###cookieconsentbar
 prohardver.hu,mobilarena.hu,gamepod.hu,itcafe.hu,logout.hu,hardverapro.hu,fototrend.hu###accept-container
 propeller.hu##.popup
 raketa.hu##.ui-widget-overlay
@@ -1927,7 +1931,8 @@ infostart.hu#?##sitemodal:-abp-has(.fb-button)
 ||onlinestream.live/js/adb.js
 ! Section: Specific allow
 ! https://github.com/AdguardTeam/AdguardFilters/issues/113211
-@@||apro.bikemag.hu/static/js/adx_blacklist.js^$script
+@@/js/adx_blacklist.js$script,domain=bikemag.hu|testbike.hu
+@@||777blog.hu/wp-content/themes/florence/js/dfp.min.js^$script
 @@||meszotar.hu/scripts/advertising.js
 @@||pro.hit.gemius.pl/gstream.js$domain=embed.rtl.hu
 !---------------------------------------------------------------------------!

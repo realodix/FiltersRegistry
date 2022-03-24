@@ -146,6 +146,8 @@
 ##amp-app-banner
 ##smart-banner
 ##div[class$="-download-app-container"]
+##div[class*=smart-banner i]:not(.smart-banner-visible)
+##div[class*=smartbanner i]
 ##div[class^=download-app_box]
 ##div[class^=DownloadAppBanner__]
 ##div[class^=app-download-wrap]
@@ -154,6 +156,8 @@
 ##div[class^=AppUpsellHeader]
 ##div[class^=mobile-upsell]
 ##div[id$=smart-app-banner]
+##div[id*=smart-banner i]
+##div[id*=smartbanner i]
 ##head[prefix~="medium-com:"] ~ body .js-openInAppButton
 ##head[prefix~="medium-com:"] ~ body .js-postActionsBarContent > .js-readNextInteractions
 ##section[appdownload]
@@ -439,7 +443,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 19March2022v2
+! OriginalVersion: 23March2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -451,7 +455,7 @@ linkedin.com#$?#body { overflow: auto !important; }
 ! Gabon
 ||ga^$document,domain=~google.ga|~filtri-dns.ga|~dgdi.ga|~voitures.ga|~economie-gabon.ga
 ! Mali
-||ml^$document,domain=~google.ml|~mobili.ml|~melody.ml|~dcod.ml|~info-matin.ml|~amap.ml|~mastodon.ml|~worproject.ml|~nothingprivate.ml|~lingva.ml|~lemmy.ml|~bittor.ml|~noic.ml
+||ml^$document,domain=~google.ml|~mobili.ml|~melody.ml|~dcod.ml|~info-matin.ml|~amap.ml|~mastodon.ml|~worproject.ml|~nothingprivate.ml|~lingva.ml|~lemmy.ml|~bittor.ml|~noic.ml|~beatbump.ml
 ! Equatorial Guinea
 ||gq^$document,domain=~deimos.gq|~inege.gq|~tvgelive.gq|~comprarcarros.gq
 ! Central African Republic
@@ -459,7 +463,7 @@ linkedin.com#$?#body { overflow: auto !important; }
 ! Palau
 ||pw^$document,domain=~libgen.pw|~petridish.pw|~palaugov.pw|~dpc.pw|~zikrap.pw|~demonoid.pw|~bittor.pw|~buttercup.pw
 ! Legitimate use is almost non-existent, but has a tiny userbase in Japan
-||top^$document,domain=~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top
+||top^$document,domain=~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^$document
 ||agency^$document
@@ -470,7 +474,7 @@ linkedin.com#$?#body { overflow: auto !important; }
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (Advanced adblockers only) ———
 !!!www.google.*##.g:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"], [href*="gotofap.tk"], [href*="somepythonthings.tk"]))
 www.google.*##.g:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
-www.google.*##.g:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"]))
+www.google.*##.g:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"], [href*="beatbump.ml"]))
 www.google.*##.g:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*="tvgelive.gq"], [href*="comprarcarros.gq"]))
 www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 www.google.*##.g:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"]))
@@ -478,7 +482,7 @@ www.google.*##.g:has(a[href*=".loan/"])
 www.google.*##.g:has(a[href*=".agency/"])
 www.google.*##.g:has(a[href*=".gdn/"])
 www.google.*##.g:has(a[href*=".bid/"])
-www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"]))
+www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"]))
 ! ——— You know those ultra-fraudulent auto-generated things that clutter up Google searches? These entries should remove some of them. ———
 www.google.*##.g:has(a[href*=".php?xxx="])
 www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
@@ -489,7 +493,7 @@ www.google.*##.g:has(a[href^="https://books.google."])
 ! I strongly recommend the use of https://addons.mozilla.org/firefox/addon/google-search-fixer/ for use on Firefox for Android, thus the entries are written for the Chrome version of Google Mobile.
 !!!www.google.*##a[oncontextmenu][href*=".tk/"]:not([href*=coolcmd], [href*=budterence], [href*="google.tk"], [href*=transportnews], [href*=c0d3c], [href*=anonytext], [href*=tokelau-info], [href*=fakaofo], [href*=loljp-wiki], [href*=ninetail], [href*=goshujin], [href*="graph.tk"], [href*=nolfrevival], [href*="steamroller.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"], [href*="gotofap.tk"], [href*="somepythonthings.tk"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".ga/"]:not([href*="google.ga"], [href*=filtri-dns], [href*=anpigabon], [href*="dgdi.ga"], [href*=voitures], [href*="economie-gabon.ga"]):upward(2)
-www.google.*##a[oncontextmenu][href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"]):upward(2)
+www.google.*##a[oncontextmenu][href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"], [href*="beatbump.ml"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*=tvgelive], [href*=comprarcarros]):upward(2)
 www.google.*##a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*=voitures], [href*=assembleenationale-rca], [href*=cps-rca], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"]):upward(2)
@@ -497,14 +501,14 @@ www.google.*##a[oncontextmenu][href*=".loan/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".agency/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".gdn/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".bid/"]:upward(2)
-www.google.*##a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"]):upward(2)
+www.google.*##a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".php?xxx="]:upward(2)
 www.google.*##a[oncontextmenu][href^="https://books.google."]:upward(2)
 !#endif
 ! ——— For DuckDuckGo ———
 !!!duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".tk"]:not([data-domain*="coolcmd.tk"], [data-domain*="budterence.tk"], [data-domain*="google.tk"], [data-domain*="transportnews.tk"], [data-domain*="c0d3c.tk"], [data-domain*="anonytext.tk"], [data-domain*="tokelau-info.tk"], [data-domain*="fakaofo.tk"], [data-domain*="loljp-wiki.tk"], [data-domain*="ninetail.tk"], [data-domain*="goshujin.tk"], [data-domain*="graph.tk"], [data-domain*="nolfrevival.tk"], [data-domain*="coppersurfer.tk"], [data-domain*="restricted-functions.tk"], [data-domain*="nbd-media.tk"], [data-domain*="bstweaker.tk"], [data-domain*="gotofap.tk"], [data-domain*="somepythonthings.tk"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ga"]:not([data-domain*="google.ga"], [data-domain*="filtri-dns.ga"], [data-domain*="anpigabon.ga"], [data-domain*="dgdi.ga"], [data-domain*="voitures.ga"], [data-domain*="economie-gabon.ga"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ml"]:not([data-domain*="google.ml"], [data-domain*="mobili.ml"], [data-domain*="melody.ml"], [data-domain*="dcod.ml"], [data-domain*="info-matin.ml"], [data-domain*="amap.ml"], [data-domain*="mastodon.ml"], [data-domain*="worproject.ml"], [data-domain*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ml"]:not([data-domain*="google.ml"], [data-domain*="mobili.ml"], [data-domain*="melody.ml"], [data-domain*="dcod.ml"], [data-domain*="info-matin.ml"], [data-domain*="amap.ml"], [data-domain*="mastodon.ml"], [data-domain*="worproject.ml"], [data-domain*="nothingprivate.ml"], [data-domain*="lingva.ml"], [data-domain*="lemmy.ml"], [data-domain*="beatbump.ml"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gq"]:not([data-domain*="deimos.gq"], [data-domain*="inege.gq"], [data-domain*="tvgelive.gq"], [data-domain*="comprarcarros.gq"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="voitures.cf"], [data-domain*="assembleenationale-rca.cf"], [data-domain*="cps-rca.cf"], [data-domain*="acap.cf"], [data-domain*="miraculousladybug.cf"], [data-domain*="scrat.cf"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="zikrap.pw"], [data-domain*="buttercup.pw"])
@@ -512,11 +516,11 @@ duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"], [data-domain$="shucks.top"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"], [data-domain$="shucks.top"], [data-domain$="1stream.top"])
 ! ——— For Bing ———
 !!!bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="nbd-media.tk"], [href*="bstweaker.tk"], [href*="gotofap.tk"], [href*="somepythonthings.tk"]))
 bing.com##.b_algo:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"]))
-bing.com##.b_algo:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"]))
+bing.com##.b_algo:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"], [href*="beatbump.ml"]))
 bing.com##.b_algo:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*="tvgelive.gq"], [href*="comprarcarros.gq"]))
 bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 bing.com##.b_algo:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"]))
@@ -524,7 +528,7 @@ bing.com##.b_algo:has(a[href*=".loan/"])
 bing.com##.b_algo:has(a[href*=".agency/"])
 bing.com##.b_algo:has(a[href*=".gdn/"])
 bing.com##.b_algo:has(a[href*=".bid/"])
-bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"]))
+bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"]))
 ! ——— Old dead tech-related domains ———
 ! Domains that used to host lists for adblockers or "hosts" tools, but which are now either used by malware pushers, or could potentially be snapped up by them.
 ||adblock.gjtech.net^$document
@@ -2508,6 +2512,8 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||nhskuhiuscja.xyz^$all
 ||mediafire.com/file/y65v1rk0zy7ot4a/The__Setup__With__File.zip/file^$all
 ||download2340.mediafire.com/eift3ac9qmig/y65v1rk0zy7ot4a/The__Setup__With__File.zip^$all
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1074966240
+||melding.link^$document
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -15476,11 +15482,13 @@ get.adobe.com###offersInformationPane
 ##.twitter_share:not(html, body)
 ##.wpusb:not(html, body)
 ##[app=addtoany]
+##[class*=facebookShare i]:not(html, body)
 ##[class*=fb-share]:not(html, body)
 ##[class*=share-facebook]:not(html, body)
 ##[class*=share-toolbar]:not(html, body)
 ##[class*=social-share]:not(article, html, body, [preload])
 ##[class*=social_share]:not(article, html, body)
+##[class*=socialshare i]:not(html, body)
 ##[data-flip-widget=shareflip]
 ##[socialshare]
 ##a[appshareclick]
@@ -15492,15 +15500,18 @@ get.adobe.com###offersInformationPane
 ##a[class*=BtnShare]
 ##a[class*=google_plus_share]
 ##a[class*=share__button]
+##a[class=facebook i][title="Share this"]
 ##a[class^=pagetools][class*=icon--twitter]
 ##a[class^=pinterest-save]
 ##a[class^=share_btn]
 ##a[class^=sharing-popup-]
+##a[class^=socialbutton i][onclick*="window.open"]
 ##a[data-ga-event-action^="share:"]
 ##a[data-js=facebook-share]
 ##a[data-js=twitter-share]
 ##a[data-pin-do=buttonPin]
 ##a[data-plugin^=sharingButtons]
+##a[data-share$=Facebook i]
 ##a[data-sharer=facebook]
 ##a[data-sharer=twitter]
 ##a[data-ss-ss-type]
@@ -15548,8 +15559,11 @@ get.adobe.com###offersInformationPane
 ##amp-social-share
 ##button[aria-controls=ShareContainer]
 ##button[class*=_fbshare]
+##button[class*=ShareOverlayButton i]
+##button[class*=SharesButton i]
 ##button[class^=share-module__share]
 ##button[data-a-target^=share]
+##button[data-arctrac*=socialShare i]
 ##button[data-fatal-attraction*=":share"]
 ##button[data-share-url]
 ##button[ng-click^=shareOn]
@@ -15563,19 +15577,26 @@ get.adobe.com###offersInformationPane
 ##div[class*=article-share]
 ##div[class*=box--share]
 ##div[class*=footer__share]
+##div[class*=FooterShare i]
 ##div[class*=iconShare]
 ##div[class*=lp_sharing]
 ##div[class*=post-sharing]
 ##div[class*=share-article]
 ##div[class*=share-box]
 ##div[class*=sharer-tool]
+##div[class*=sharethisbutton i]
 ##div[class*=shareToolbar]
 ##div[class*=social-panel]
 ##div[class*=social][class*=sharing]
 ##div[class*=social_sidebar]
 ##div[class*=social_slide]
 ##div[class*=socials-share]
+##div[class=instagram-Share i]
+##div[class=instagram_Share i]
+##div[class=instagramShare i]
+##div[class=twitterShare i]
 ##div[class^=container_NotificationsBanner_]
+##div[class^=fbshare i]
 ##div[class^=icon-share-]
 ##div[class^=share-options]
 ##div[class^=shareLinks]
@@ -15586,6 +15607,7 @@ get.adobe.com###offersInformationPane
 ##div[data-hook=social-sharing]
 ##div[href*="plus.google.com/share?url="]
 ##div[id$=_sharethis]
+##div[id^=btnShare i]
 ##div[id^=dpsp-]
 ##div[id^=sthoverbuttons]
 ##div[pw\:twitter-via]
@@ -15666,11 +15688,13 @@ condoblues.com###milotree_box_wrap
 ~facebook.com,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion,~facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion##a[title="Share this post on Facebook"]
 ~flipboard.com##a[href*="://share.flipboard.com/bookmarklet/popout?"]
 ~hatena.ne.jp##.hatena-bookmark-button
+~kjokkenskriveren.no##[class*=ShareButton i]:not(button, body, html)
 ~line.me##a[href*="/lineit/share?"]
 ~linkedin.com##a[href*="linkedin.com/cws/share?"]
 ~linkedin.com##a[href*="linkedin.com/shareArticle?"]
 ~linkedin.com##a[href*="linkedin.com/sharing/share-offsite/"]
 ~mewe.com##div[class*=share-link]
+~mewe.com,~www.nrk.no##[class*=share-button i]:not(body, html)
 ~mixi.jp##a[href*="mixi.jp/simplepost/voice?status="]
 ~ne.jp##a[href*="b.hatena.ne.jp/add?url="]
 ~ne.jp##iframe[class^=hatena-bookmark]
@@ -15692,6 +15716,7 @@ condoblues.com###milotree_box_wrap
 ~tumblr.com##a[href*="tumblr.com/share?"]
 ~tumblr.com##a[href*="tumblr.com/widgets/share/"]
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[class$=share-twitter]
+~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[class=twitter i][title=Tweet]
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/home?status="]
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/intent/tweet?"]
 ~twitter.com,~twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##a[href*="twitter.com/share?text="]
@@ -15812,12 +15837,12 @@ deezer.com#?#.page-alerts:-abp-has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:-abp-has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 12March2022v2
+! OriginalVersion: 24March2022v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! This is an extension file, not an independent list.
-! Extension file's version: 23February2022v1-Extension
+! Extension file's version: 24March2022v1-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -15886,6 +15911,9 @@ chronicle.com#$#.Page-body { overflow: auto !important; height: 100% !important 
 ! Twitter
 !! Re-enables scrolling after closing the "Log in to view more" prompt on users' timelines
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#$#html { overflow: unset !important }
+!! Removes an uncloseable prompt overlay
+!! Moved to here from the main file due to https://github.com/DandelionSprout/adfilt/issues/557
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:-abp-has(> div[data-testid])
 ! Facebook
 !! Reduces the background opacity of the login overlay
 www.facebook.com,www.beta.facebook.com,b-www.facebook.com,secure.facebook.com,pixel.facebook.com,error.facebook.com#$#div[class^=__fb-][class*="-mode "] > div[class*=" "]:first-of-type:nth-last-of-type(2) > div[class]:only-of-type { min-height: 0 !important; height: 0 !important }
@@ -16012,8 +16040,6 @@ twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[h
 ! Removes the bottom login sticky banner about logging in, in the April 2020-ish redesign 🔨
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class*=" "]:first-of-type:-abp-has(a[href="/i/flow/signup"])
 ! https://twitter.com/hideo_kojima_en/status/319595772981166080
-! Removes an uncloseable prompt overlay
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:-abp-has(> div[data-testid])
 ! The New Republic 📠🔨
 ! https://github.com/easylist/easylist/issues/5331#issuecomment-627813147
 ||validate.onecount.net/onecount/api/public^
@@ -17151,6 +17177,8 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 ! https://45.87.43.43/filmas/bajala-magiski-nuotykiai-online/ (28/07/2021)
 ~imdb.com##.imdb2:not(html, body)
 ! Viaplay (09/10/2021)
+~imdb.com##a[data-tracking-click=IMDB i]
+~imdb.com##a[data-testhook=imdb-link i]
 ! https://www.sfanytime.com/da/search?query=herbie&cursor=20 (03/02/2022)
 ~imdb.com##div[class*=_ImdbLabelWrapper-]
 ! https://blockbuster.no/filmer/en-muppet-julefortelling (2022-03-03)
@@ -17229,7 +17257,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 21March2022v1
+! OriginalVersion: 24March2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -17624,7 +17652,7 @@ $removeparam=ampcid
 $removeparam=affname
 $removeparam=MID
 ! https://www.greatrun.org/train-and-prepare/training-plans/?eid=AJ935930567982484926441023zzzzz64bccfd443fc61ff2c06e3cf8c7b889a2061064e5d5db55e171241354f241bed00
-$removeparam=eid,~xmlhttprequest,denyallow=embed.tapkal.fi,domain=~activationspot.com|~anidb.net|~howlongtobeat.com|~piwigo.org|~vmware.com
+$removeparam=eid,~xmlhttprequest,denyallow=embed.tapkal.fi,domain=~activationspot.com|~anidb.net|~howlongtobeat.com|~piwigo.org|~vmware.com|~eventbrite.*
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1031533
 $removeparam=nr_email_referer
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1046231
@@ -18282,7 +18310,7 @@ $removeparam=cid,domain=abcnews.go.com|adguard.com|adshares.net|ae.com|anntaylor
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=abebooks.com|accounts.binance.com|adobe.com|albiononline.com|altcustoms.com|amazon.*|app.blockfi.com|arvopaperi.fi|audible.*|baidu.com|bestbuy.com|bing.com|bitlox.com|bitwarden.com|blogit.fi|bookdepository.com|brave.com|buzzfeed.com|buzzfeednews.com|bybit.com|catch.com.au|comixology.*|coop.no|deal.no|dell.com|digidip.net|domains.ch|droix.net|eset.com|emag.ro|etsy.com|expo.io|facebook.com|geeksforgeeks.org|github.com|github.io|goodreads.com|hintaopas.fi|hintaseuranta.fi|hs.fi|idenati.com|ikea.com|iltapulu.fi|imdb.com|is.fi|jasonsavard.com|kansanuutiset.fi|kauppalehti.fi|kesaduuni.org|kickstarter.com|mastermind.ac|mediuutiset.fi|megapornfreehd.com|merrell.com|mikrobitti.fi|motouutiset.fi|oikotie.fi|omataloyhtio.fi|protonvpn.com|puutarha.net|rakentaja.fi|reddit.com|sahkovertailu.fi|scandinavianphoto.fi|semrush.com|shein.com|shopping.google.*|sketch.com|spiegel.de|sportskeeda.com|suomi24.fi|talouselama.fi|target.com|tekniikkatalous.fi|telsu.fi|tivi.fi|tokenmetrics.com|twitch.tv|udemy.com|uusisuomi.fi|vultr.com|webhallen.no|woot.com|wormhole.app|yle.fi|zappos.com
+$removeparam=ref,domain=abebooks.com|accounts.binance.com|adobe.com|albiononline.com|altcustoms.com|amazon.*|app.blockfi.com|arvopaperi.fi|audible.*|baidu.com|bestbuy.com|bing.com|bitlox.com|bitwarden.com|blogit.fi|bookdepository.com|brave.com|buzzfeed.com|buzzfeednews.com|bybit.com|catch.com.au|comixology.*|coop.no|deal.no|dell.com|digidip.net|domains.ch|droix.net|eset.com|emag.ro|etsy.com|expo.io|facebook.com|fig.io|geeksforgeeks.org|github.com|github.io|goodreads.com|hintaopas.fi|hintaseuranta.fi|hs.fi|idenati.com|ikea.com|iltapulu.fi|imdb.com|is.fi|jasonsavard.com|kansanuutiset.fi|kauppalehti.fi|kesaduuni.org|kickstarter.com|mastermind.ac|mediuutiset.fi|megapornfreehd.com|merrell.com|mikrobitti.fi|motouutiset.fi|oikotie.fi|omataloyhtio.fi|protonvpn.com|puutarha.net|rakentaja.fi|reddit.com|sahkovertailu.fi|scandinavianphoto.fi|semrush.com|shein.com|shopping.google.*|sketch.com|spiegel.de|sportskeeda.com|suomi24.fi|talouselama.fi|target.com|tekniikkatalous.fi|telsu.fi|tivi.fi|tokenmetrics.com|twitch.tv|udemy.com|uusisuomi.fi|vultr.com|webhallen.no|woot.com|wormhole.app|yle.fi|zappos.com
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 ! (e.g. mirrored.to, tunnistautuminen.suomi.fi)
 $removeparam=tid,domain=clickbank.net|comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.com
@@ -18292,7 +18320,7 @@ $removeparam=src,domain=3cx.com|adafruit.com|ashford.com|bluejeans.com|bose.*|br
 ! No particular example
 ! https://github.com/DandelionSprout/adfilt/pull/474
 ! https://user.qzone.qq.com/1250252459?source=aiostar (01/02/2022)
-$~xmlhttprequest,~media,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|ashford.com|asos.com|att.com|awd-it.*|bankofamerica.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|blavity.com|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|bybit.com|choicehotels.com|chollometro.com|coinpanel.com|contabo.com|cyberghostvpn.com|despegar.*|directv.com|discord.*|docs.google.com|docsend.com|drinkhint.com|edx.org|eonline.com|eventbrite.*|fiverr.com|fool.com|forms.gle|gethotspotshield.com|gleam.io|goodcrypto.app|googleusercontent.com|greenhouse.io|hammacher.com|hanes.com|hobbyhall.fi|hotspotshield.com|hottopic.com|housing.com|hp.com|instagram.com|itnext.io|jacquielawson.com|just-eat.co.uk|kasta.io|medium.com|nautica.com|onehanesplace.com|outnorth.fi|petsupplies.com|phonesoap.com|riteaid.com|runnode.com|search.brave.com|sonos.com|spiceworks.com|squarespace.com|subscribe.gq.com|t.me|thedailybeast.com|tiktok.com|tokopedia.com|tommybahama.com|torrid.com|tous.com|tradingview.com|twitter.com|user.qzone.qq.com|vimeo.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|youtube.com|yubo.live|britishcornershop.co.uk
+$~xmlhttprequest,~media,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|ashford.com|asos.com|att.com|awd-it.*|bankofamerica.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|blavity.com|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|bybit.com|choicehotels.com|chollometro.com|coinpanel.com|contabo.com|cyberghostvpn.com|despegar.*|directv.com|discord.*|docs.google.com|docsend.com|drinkhint.com|edx.org|eonline.com|eventbrite.*|fiverr.com|fool.com|forms.gle|gethotspotshield.com|gleam.io|goodcrypto.app|googleusercontent.com|greenhouse.io|greenvoice.fr|hammacher.com|hanes.com|hobbyhall.fi|hotspotshield.com|hottopic.com|housing.com|hp.com|instagram.com|itnext.io|jacquielawson.com|just-eat.co.uk|kasta.io|medium.com|nautica.com|onehanesplace.com|outnorth.fi|petsupplies.com|phonesoap.com|riteaid.com|runnode.com|search.brave.com|sonos.com|spiceworks.com|squarespace.com|subscribe.gq.com|t.me|thedailybeast.com|tiktok.com|tokopedia.com|tommybahama.com|torrid.com|tous.com|tradingview.com|twitter.com|user.qzone.qq.com|vimeo.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|youtube.com|yubo.live|britishcornershop.co.uk|microsoftedgewelcome.microsoft.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=barrons.com|dowjones.com|fnlondon.com|mansionglobal.com|marketwatch.com|penews.com|wsj.com
@@ -18412,7 +18440,7 @@ $removeparam=returnFromLogin,domain=amazon.com
 @@/b/ref=$removeparam=ie
 !!! ——— Bing ———
 ! https://www.bing.com/search?q=hello&form=QBLH&sp=-1&pq=hello&sc=8-5&qs=n&sk=&cvid=49B83A335B1C4884B71B2FAD4A8027A9 (02/03/2021)
-||bing.com^$removeparam=form
+$removeparam=/^form=/i,domain=bing.com|microsoft.com
 ! https://www.bing.com/search?q=hello&sp=-1&pq=hello&sk=&sc=8-5&qs=n (04/03/2021)
 ||bing.com^$removeparam=sp
 $removeparam=sc,domain=bing.com|qvc.com|startpage.com
@@ -18420,7 +18448,6 @@ $removeparam=sk,domain=bing.com|aliexpress.*
 ||bing.com^$removeparam=qs
 ! https://www.bing.com/search?PC=U531&q=hello&FORM=ANNTA1 (05/03/2021)
 ||bing.com^$removeparam=PC
-||bing.com^$removeparam=FORM
 ! https://www.bing.com/search?pc=MOZI&q=ublock%20origin%20github
 ||bing.com/search^$removeparam=pc
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1342917
@@ -18438,6 +18465,18 @@ $removeparam=cvid,domain=bing.com|msn.com
 ! https://github.com/DandelionSprout/adfilt/pull/504
 ! https://www.bing.com/search?q=Test&cc=CN&setlang=zh-CN&nclid=2F21E165874042D66713EAE9392AD01E&ts=1644819994709&wsso=Moderate (14/02/2022)
 ||bing.com^$removeparam=nclid
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2415549
+||bing.com^$removeparam=crslsl
+||bing.com^$removeparam=ecount
+||bing.com^$removeparam=efirst
+||bing.com^$removeparam=filters
+||bing.com^$removeparam=mkt
+||bing.com^$removeparam=qpvt
+||bing.com^$removeparam=rdr
+||bing.com^$removeparam=rdrig
+||bing.com^$removeparam=rnoreward
+||bing.com^$removeparam=rqpiodemo
+||bing.com^$removeparam=skipopalnative
 !!! ——— eBay ———
 ! https://www.ebay.com/itm/Disney-Fairies-Annual-2008/173553616659?_trkparms=aid%3D111001%26algo%3DREC.SEED%26ao%3D1%26asc%3D20160908105057%26meid%3Da7ecc6d2187f43619ceae843d9c7e96e%26pid%3D100675%26rk%3D1%26rkt%3D15%26sd%3D173553616659%26itm%3D173553616659&_trksid=p2481888.c100675.m4236&_trkparms=pageci%3A87956e3f-3968-11e9-ae7f-74dbd1801ed7%7Cparentrq%3A277c9f541690a861b48415dfffeb1383%7Ciid%3A1 (31/10/2020)
 $removeparam=_trkparms
@@ -18657,8 +18696,8 @@ $removeparam=cardId
 ! http://m.aliexpress.com/item/32475192128.html?aff_click_id=2c7754c8f1174236b64f3b364bfd24a3-1470106049987-05070-eub6yrrBy
 $removeparam=aff_click_id
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2232447
-||aliexpress.com^$removeparam=gatewayAdapt
-||aliexpress.com^$removeparam=pdp_pi
+||aliexpress.*^$removeparam=gatewayAdapt
+||aliexpress.*^$removeparam=pdp_pi
 !!!! ——— Baidu ———
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1425521
 ||baidu.com^$removeparam=/^rsv/
@@ -19880,6 +19919,10 @@ $removeparam=intcid,domain=cbsnews.com
 ||mercadolibre.com.mx^$removeparam=/^matt_/
 ! https://articulo.mercadolibre.com.mx/MLM-1369998343-peluche-stitch-original-de-disney-store-envio-gratis-_JM#reco_item_pos=5&reco_backend=machinalis-seller-items-pdp&reco_backend_type=low_level&reco_client=vip-seller_items-above&reco_id=e859b1d9-86b2-4aa7-ba17-0c9ffd43acfc
 ||mercadolibre.com.mx^$removeparam=/^reco_/
+! https://www.evesleep.co.uk/?mediapartner
+$removeparam=mediapartner,domain=evesleep.co.uk
+! https://gitlab.com/KevinRoebert/ClearUrls/-/issues/1140
+||greenvoice.fr^$removeparam=bucket
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
