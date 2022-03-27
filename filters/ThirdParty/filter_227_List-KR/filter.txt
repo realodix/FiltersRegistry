@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.327.4
+! OriginalVersion: 2022.327.6
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -895,8 +895,6 @@ bobaedream.co.kr#?#tr.best > td a[href*="bobaedream.co.kr/event/event_list.php?"
 orbi.kr#?#a[class="tag"][href^="/list/tag/"][-ext-contains="#제휴사공지"]:upward(li.notice)
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
-namu.wiki#?#article div:has(a[href*="/w/%EB%B6%84%EB%A5%98:"]):has(> h2:contains(분류)):not([class]) ~ div:not(:has(br)):has(div:not([class]) > div:not([class]) > div:not([class]) div:has(span:not([class]) > img[src*="w.namu.la/s/"][class]):not(:has(div.namuwiki-toc-ad)))
-namu.wiki#?#article div:has(a[href*="/w/%EB%B6%84%EB%A5%98:"]):has(> h2:contains(분류)):not([class]) ~ div:not(:has(br)):has(table > tbody > tr > td[style] div:has(img[src*="w.namu.la/s/"][class]):not(:has(div.namuwiki-toc-ad)))
 newreop.com#?#.app-board-section > ul.app-board-template-list > li.notice:has(> a[href] > span > font[color]:contains(AD))
 instiz.net#?#.responsive_main > div[style] > .grouping_title:has(> div[style][class] > div[style]:contains(광고))
 ajunews.com#?#.aside_item.banner:has(> h4[style~="font-size:13px;color:#999999;margin:0"]:contains(AD))
@@ -908,10 +906,15 @@ m.bunjang.co.kr#?#.app > div > div > div[class]:has(> div[class] > div[class] > 
 m.bunjang.co.kr#?#div:has(> div > div > div:contains(연관상품) > div:has(> div:contains(AD)) > img[alt="AD 가이드"])
 tgd.kr#?#div[style^="display:"][style*="flex;"] > div[style^="flex:"]:contains(AD):upward(2)
 m.ppomppu.co.kr#?#div#bbs_inform > ul > li span:contains(AD):upward(1)
+!
+! namu.wiki
+namu.wiki#?#article div:has(a[href*="/w/%EB%B6%84%EB%A5%98:"]):has(> h2:contains(분류)):not([class]) ~ div:not(:has(br)):has(div:not([class]) > div:not([class]) > div:not([class]) div:has(span:not([class]) > img[src^="data:image/png;base64"][class]):not(:has(div.namuwiki-toc-ad)))
+namu.wiki#?#article div:has(a[href*="/w/%EB%B6%84%EB%A5%98:"]):has(> h2:contains(분류)):not([class]) ~ div:not(:has(br)):has(div:not([class]) > div:not([class]) > div:not([class]) div:has(span:not([class]) > img[src*="w.namu.la/s/"][class]):not(:has(div.namuwiki-toc-ad)))
+namu.wiki#?#article div:has(a[href*="/w/%EB%B6%84%EB%A5%98:"]):has(> h2:contains(분류)):not([class]) ~ div:not(:has(br)):has(table > tbody > tr > td[style] div:has(img[src*="w.namu.la/s/"][class]):not(:has(div.namuwiki-toc-ad)))
 namu.wiki#?#article > div:matches-attr("/data-v-/"):has(> div:matches-attr("/data-v-/") > div > iframe[src*="//arca.live/static/ad/powerlink_"])
 namu.wiki#?#div[class]:matches-attr("/data-v-/"):not(:has(form[method][enctype] > input[name="token"][type="hidden"])):not(:has(form[action^="/diff/"])):has(> div:matches-attr("/data-v-/"):not([class]):not(:has(> a[href^="/w/"]:matches-attr("/data-v-/"))):not(:has(> a:matches-attr("/data-v-/"))):not(:contains(/.{1,}/i)))
 !
-ppss.kr,ygosu.com,inven.co.kr,tgd.kr#%#//scriptlet("abort-current-inline-script", "document.currentScript")
+op.gg,etoland.co.kr,sports.donga.com,mlbpark.donga.com,ppss.kr,ygosu.com,inven.co.kr,tgd.kr#%#//scriptlet("abort-current-inline-script", "document.currentScript")
 koreapas.com#%#//scriptlet("set-constant", "random_imglink", "noopFunc")
 pandora.tv#%#//scriptlet("set-constant", "isnoad_vod", "true")
 pandora.tv#%#//scriptlet("set-constant", "isnoad_banner", "true")
@@ -989,7 +992,7 @@ ko.ff14angler.com#@#ins.adsbygoogle
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=1412.rest
 !#endif
 !#if (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android)
-ppss.kr,ygosu.com,inven.co.kr,tgd.kr$$ad-shield-inventory[tag-content="ad-shield-ads"]
+op.gg,etoland.co.kr,sports.donga.com,mlbpark.donga.com,ppss.kr,ygosu.com,inven.co.kr,tgd.kr$$ad-shield-inventory[tag-content="ad-shield-ads"]
 !#endif
 !#if (adguard_app_android)
 @@||api-ao-list.adison.co^$app=com.nhn.android.webtoon
