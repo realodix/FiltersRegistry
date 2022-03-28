@@ -1655,6 +1655,10 @@ teleboy.ch#@#.adWrapper
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/113647
+mbpassion.de#?#.cb-entry-content > div > div:has(> center > font:contains(Anzeige))
+! https://github.com/AdguardTeam/AdguardFilters/issues/112598
+wetter.com#?#.app-layout:has(> div.OUTBRAIN)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111782
 pnp.de#?#.container:has(> div.OUTBRAIN)
 pnp.de#?#.container:has(> div[id^="traffective-ad-"])
@@ -2368,6 +2372,8 @@ amateurbusters.com#?#.sb_area > .sb_area_headline:contains(Urlaub)
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/112598
+wetter.com#%#//scriptlet('set-constant', 'wcomAdFrameworkInit', 'undefined')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/108788
 spielen.com#%#//scriptlet("set-constant", "idhb", "emptyObj")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/107055
@@ -2787,6 +2793,13 @@ drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan
 ! ##.id-Container--proBEEP
 hallo-muenchen.de,az-online.de,lokalo24.de,rosenheim24.de,kreiszeitung.de,nordbuzz.de,mannheim24.de,merkur.de,oktoberfest-live.de,tz.de##.id-Container--proBEEP
 !
+bussgeldkatalog.org##div[class^="azk-native"]
+n-tv.de##.space--showheroes
+mbpassion.de##a[href^="https://mbpassion.net/url/"]
+mbpassion.de##.cb-post-footer-block.cb-post-large
+||mbpassion.de//wp-*-content/banners^
+wetter.com##.toolbar-wrapper
+about-drinks.com##img[referrerpolicy="unsafe-url"][src*="/wp-content/uploads/"]
 ||cdn.atf-tagmanager.de/config^$third-party
 merkur.de##.id-StoryElement-beepWrap[style*="height"]
 blick.ch##aside[id^="appnexus-placement"]
@@ -5718,6 +5731,8 @@ homad-global-configs-eu-fra.schneevonmorgen.com.s3.amazonaws.com/*/config.json$r
 !###############
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/112598
+@@||g.doubleclick.net/gampad/adx?*/sparta/*&t=ad_type%3Dtoolbar%26$document,subdocument,domain=wetter.com,badfilter
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112938
 jobs.weser-kurier.de#@%#//scriptlet('abort-current-inline-script', 'Math', '/="h[\s\S]{0,5}[\s\S]*t[\s\S]*o[\s\S]*e[\s\S]*\/[\s\S]{0,5}co[\s\S]{0,10}",/')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/113049
@@ -8494,7 +8509,7 @@ madchensex.com###au
 digitalfernsehen.de,haus-garten-test.de,nrwhits.de,tvinfo.de###ax-billboard
 tvinfo.de###ax-billboard-sub
 finanzen.ch###balken_top
-apotheken-umschau.de,gamekeyfinder.de,ok-weinstrasse.de,stroxley.de###banner
+apotheken-umschau.de,gamekeyfinder.de,kultur-port.de,ok-weinstrasse.de,stroxley.de###banner
 donnerwetter.at,donnerwetter.ch,donnerwetter.de###banner-container
 macgadget.de###banner-floater
 tff-forum.de###banner-left-1
@@ -9543,6 +9558,7 @@ campervans.de,reisemobil-international.de##.promo-af-wrap
 tvspielfilm.de##.promo-box-any-banner
 wegwerfemailadresse.com##.promobox
 snowsociety.com##.promotion-teaser-container
+stadt-bremerhaven.de##.psw-container
 europa-landmaschinen.de,suedtirolnews.it##.pub
 europa-landmaschinen.de##.pub-content
 tchgdns.de##.pub-footer
@@ -9858,7 +9874,7 @@ erogeschichten.com##a[href^="http://in.mydirtyhobby.com/track/"]
 bbszene.de##a[href^="http://partners.webmasterplan.com/"]
 metacrawler.de,msn.com##a[href^="http://rover.ebay.com/"]
 gamemovieportal.ch##a[href^="http://tidd.ly/"]
-bildschirmarbeiter.com,das-sternzeichen.de,meintomtom.de,metacrawler.de,schule-studium.de,seaofsin.de,seaofsin.info##a[href^="http://www.amazon."][href*="tag="]
+bildschirmarbeiter.com,das-sternzeichen.de,gamingmedia.de,meintomtom.de,metacrawler.de,schule-studium.de,seaofsin.de,seaofsin.info##a[href^="http://www.amazon."][href*="tag="]
 sexfilmegratis.net,sexvideoskostenlos.net##a[href^="http://www.livestrip.com/FreeAccountLanding.aspx?"]
 pcwelt.de##a[href^="http://www.pcwelt.de/pv/"]
 macwelt.de##a[href^="http://www.verleihshop.de/index.html?partner="]
@@ -10099,7 +10115,7 @@ rbleipzig.com##img[alt="Logo Partner"]
 finanzen.net##img[alt="Passende Produkte von Vontobel"]
 finanzen.net##img[alt="Passende Produkte von der Société Générale"]
 t-online.de,www-t--online-de.cdn.ampproject.org##img[alt^="Modetrends"]
-hallespektrum.de##img[alt^="Werbung"]
+hallespektrum.de,kultur-port.de##img[alt^="Werbung"]
 rc-news.de##img[class="bnr"]
 stadt-bremerhaven.de##img[data-image-title="amazonAktion"]
 rendsburgerleben.de##img[height="200"][width="240"]
@@ -10114,7 +10130,7 @@ uniliga.gg##img[width="150"][height="150"]
 architekt.de,glamping.info##img[width="160"][height="600"]
 prewarcar.de##img[width="160"][height="92"]
 mikanews.de##img[width="180"][height="120"]
-utvmagazin.de##img[width="200"][height="600"]
+kultur-port.de,utvmagazin.de##img[width="200"][height="600"]
 messweb.de##img[width="250"]
 fcschweinfurt1905.de##img[width="280"][height="160"]
 buecher-magazin.de,fotoobjektiv.at,iplayapps.de,pi-news.net,radio-oldtimer.de,radiotirol.it,silentworld.eu,suedtirol1.it,tarnkappe.info,uniliga.gg##img[width="300"]

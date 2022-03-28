@@ -1,6 +1,6 @@
 !
 ! Title: 乘风 广告过滤规则
-! OriginalVersion: 202203171
+! OriginalVersion: 202203271
 ! Expires: 2 days
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
 !--------------------------百度----------------------------------
@@ -39,7 +39,11 @@ v.baidu.com##div[videoadv],a[href^="http://g.youxi.v.baidu."]
 ||as2.wenku.baidu.com/$subdocument
 ||wkstatic.bdimg.com/static/wkview/widget/top_ads_banner/$script
 pan.baidu.com#$#.frame-all { overflow-x:hidden }
+pan.baidu.com##.ad-platform-tips, .phone-banner
+||bcebos.com^$image,domain=pan.baidu.com
+||pan.baidu.com/rest/*/adx?$image
 zhidao.baidu.com###left-promotion,#ui-tooltip-0,div.cms-slide.cms-slide-optimus,div.wgt-bottom-ask,div.cms-slide.cms-slide-lazy
+||s1.bdstatic.com/r/www/cache/biz/ecom/common/api/$script
 !--贴吧---
 tiebac.baidu.com,tieba.baidu.com,jump.bdimg.com,jump2.bdimg.com##.tbui_aside_float_bar~*, div[ad-dom-img],#thread_list>li:not(.j_thread_list):not(.thread_top_list_folder),div[data-rank],a.j_click_stats
 @@||tb1.bdstatic.com/??/tb/_/*/ad_$script
@@ -1142,6 +1146,8 @@ subhd.com##div[style^="text-align:center;height:270px"],.col-md-10 > div:nth-of-
 admin5.com##.float_both,div.sherry_ad1,div.specialBox,.content_right_ad
 100.pncdn.cn
 ! china evil site
+17u.cn
+40017.cn
 4009997658.com
 abbyychina.com
 bartender.cc
@@ -1177,7 +1183,7 @@ xshellcn.com
 yihuifu.cn
 www.zhzzx.com
 ! Title: 乘风 视频过滤规则
-! OriginalVersion: 202203191
+! OriginalVersion: 202203261
 ! Expires: 1 day
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
 pan.baidu.com,www.bilibili.com#%#//scriptlet('ubo-aeld.js', 'ratechange')
@@ -1289,6 +1295,7 @@ www.douyu.com#%#//scriptlet('ubo-aeld.js', '/visibilitychange|pagehide/')
 douyu.com#%#//scriptlet('ubo-set.js', 'RTCPeerConnection.prototype.addTrack', 'noopFunc')
 ||douyucdn.cn/adxdsp/$image
 wan.douyu.com
+douyu.com##.Title-ad, .DropMenuList-ad, .DropPane-ad
 douyu.com,huya.com##a[href^="https://g.wan."]
 huya.com###hy-ad,#hy-ab,#huya-ab
 g.huya.com
