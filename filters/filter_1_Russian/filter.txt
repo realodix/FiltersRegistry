@@ -7065,6 +7065,8 @@ livejournal.com#%#//scriptlet("set-constant", "begun_new_callbacks", "undefined"
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/113508
+partnerkin.com#$?#.cstm_popup_overlay { remove: true; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112253
 bessarabiainform.com#?##secondary > aside[id^="execphp-"]:has(> div.execphpwidget a[href="https://admiral.assolgroup.com/"])
 bessarabiainform.com#?##secondary > aside[id^="execphp-"]:has(> div.execphpwidget script[src^="https://rus.redtram.com/"])
@@ -9469,6 +9471,8 @@ disk.yandex.*#%#//scriptlet('remove-class', 'has-fullscreen-banner','.public__ro
 !-----------------------
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/113508
+partnerkin.com#$#html > body.popupMod { overflow: auto !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/114307
 lifehacker.ru#$#.recipes-layout__content { margin-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/113077
@@ -12139,6 +12143,10 @@ sevastopol.su,zn.ua,pravo.ru,lubertsyriamo.ru,kommersant.ru,dvnovosti.ru,kubnews
 !
 !
 !
+partnerkin.com##.sdv-box
+partnerkin.com##.sdv_article_sidebar_inner
+partnerkin.com###sdv_branding
+||partnerkin.com/uploads/*/banners/
 ozerki.ru##.block__ex
 3dnews.ru###ad-menu-video
 rudub.tv##.card__description__adv
