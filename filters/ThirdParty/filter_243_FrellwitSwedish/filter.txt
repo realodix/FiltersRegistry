@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-03-30 08:22:35 CEST
+! Last modified: 2022-04-01 08:06:54 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -155,16 +155,9 @@ etunawebben.se#%#//scriptlet('ubo-nostif.js', 'ad')
 eventeffect.se,executiveeffect.se,saleseffect.se##.post-teaser:has(a[href$="/annons/"])
 evertiq.se#%#//scriptlet('ubo-acs.js', '$', 'banner_loader')
 existenz.se##a[href*="bannerid="]:upward(.link)
-expressen.se##.teaser:has(a[href*="/annons"])
-expressen.se##.teaser:has(a[href*="/brand-studio"])
-expressen.se##.teaser:has(a[href*="/brandstudio"])
-expressen.se##.teaser:has(a[href*="/kampanj."])
-expressen.se##.teaser:has(a[href*="/lanapengar."])
-expressen.se##.teaser:has(a[href*="/rabattkoder."])
-expressen.se##.teaser:has(a[href*="/spel.expressen.se"])
-expressen.se##.vignette--svg + a[href*="teknikensvarld."]:upward(.teaser)
+expressen.se##a[href*="/annons"], a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/kampanj."], a[href*="/lanapengar."], a[href*="/rabattkoder."], a[href*="/spel.expressen.se"], .vignette--svg + a[href*="teknikensvarld."]:upward(.teaser)
 expressen.se##strong:has-text(/annons:/i):upward(p)
-expressen.se,teknikensvarld.se##.teaser:has(.teaser__bottom--ad-marker)
+expressen.se,teknikensvarld.se##.teaser__bottom--ad-marker:upward(.teaser)
 familjeliv.se##article:has-text(/annons:/i)
 feber.se,tjock.se#%#//scriptlet('ubo-set.js', 'dovideostuffAD', 'noopFunc')
 feber.se,tjock.se#%#//scriptlet('ubo-set.js', 'userStatus', 'undefined')
@@ -322,7 +315,7 @@ padeldirekt.se##.h-background--sponsored:upward(.article-row)
 piraja.se##.intro, #hero, #featholder:has(.spons)
 polestarclubsweden.se,svensktgolfforum.se#%#//scriptlet('ubo-acs.js', 'setTimeout', 'test')
 pricerunner.se##span:has-text(/^sponsrad$/i):upward([data-cy="deal-carousel"])
-privataaffarer.se##.data-grid-teaser:has(.teaser-label:has-text(/^annons/i))
+privataaffarer.se##.teaser-label:has-text(/^annons/i):upward(.data-grid-teaser)
 pussad.se#$#html.g1-popup-visible { overflow: initial !important; }
 qx.se##.col-4:has(script)
 qx.se##.qxa-container:upward(1)
@@ -394,7 +387,7 @@ utm_$document,removeparam=/^utm_/,domain=aftonbladet.se|booli.se|expressen.se|te
 varden.se##.carousel-slide:has(.sponsored-label)
 varmepumpsforum.com##.frontlinks tr:has(a[target])
 viafree.se#$#.player-wrapper .viafree-player .vjs-tech { display:initial!important; }
-viivilla.se##.card:has(.article-grid__sponsored)
+viivilla.se##.article-grid__sponsored:upward(.card)
 villalivet.se##a:has-text(/sponsra/i):upward(3)
 vimedbarn.se#$?#button:has-text(/annons/i):upward(.owl-item) { remove: true; }
 vinbanken.se#$#.fancybox-lock { overflow-y: auto !important; }
@@ -1734,7 +1727,7 @@ expo.se##div[class*="expo-ads"], div[class*="pane-openx"], .modal, .header-top.s
 expressen.se##.campaign
 expressen.se##.html-widget > div[style^="text-align: center; font-size: 10px;"]
 expressen.se##.teaser > a[href*="/kampanj."], .teaser > a[href*="/brandstudio"], .teaser > a[href*="/brand-studio"], figure[data-article-data*="/sponsrat"], figure[data-article-data*="/annons"], figure[data-article-data*="/brand-studio"], .teaser--native, .native-article
-expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"], .linked-image-widget a[href*="lifestyle.expressen.se"]
+expressen.se##a[href*="/spel.exp"], a[href*="/lanapengar.exp"], a[href*="/rabattkoder.exp"], a[href*="/annons"], .match-betting, .discount-ad, .b-ad__caption, .pressrelease-teaser, .widget-ad-marker, .widget-ad-marker + a, .promotion-banner, .widget--collaboration, .rotator--external, a[data-click-track*="prisjakt"], .linked-image-widget a[href*="/kampanj/"], .linked-image-widget a[href*="lifestyle.expressen.se"], #premiumAdWrapper
 familjeliv.se##a[href*="/kampanj/"], .flm-kampanj
 familjesidan.se##.cookies-wrapper
 fastighetssverige.se##a[href*="/banner/out/"], .bnr_box
@@ -1988,8 +1981,7 @@ poolforum.se##div.adfit, .cookie_notice, div[style^="width:100%;max-width: 728px
 popularastronomi.se##a.gofollow[data-track]:not([href*="www.popularastronomi.se"])
 pricerunner.se###consent
 pricerunner.se##a[href*="&clickarea=sponsored"]
-privataaffarer.se##.category-promotion
-privataaffarer.se##a.teaser[href*="/annonssamarbete/"], a.teaser[href*="/promotion/"]
+privataaffarer.se##a.teaser[href*="/annonssamarbete/"], a.teaser[href*="/promotion/"], .category-promotion
 proffs.se##.cookie-wrapper
 pussad.se##.g1-popup-newsletter, .g1-slideup-wrap
 quizza.nu###takeover

@@ -16984,7 +16984,7 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 /christmas-snow.js
 ##foxfield-xmas:not(html, body)
 ! Title: 🌭 Falukorv List
-! OriginalVersion: 20March2022v1-Beta
+! OriginalVersion: 01April2022v2-Beta
 ! Expires: 10 days
 ! Description: Originally created because some PR-Chinese filterlist makers decided to block Falun Gong websites in their anti-ad lists for reasons that had absolutely nothing to do with ads, tracking or malware, and despite the sites already being megablocked within their country; this list has since then also expanded to cover other lists' entries that makes one think "Wait, hold up", due to how misplaced they are.
 ! The list is not designed to be used together with anti-'social network' lists.
@@ -17056,6 +17056,10 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 ! Caused by «Phishing URL Blocklist»
 ! https://gitlab.com/curben/phishing-filter/-/issues/9
 @@||157.240.194.
+!#if env_mobile
+! Caused by «Liste AR» (Ensures that DailyMotion pages load properly in at least AdGuard Home)
+@@||vendorlist.dmcdn.net^
+!#endif
 ! Domains that cause Error -105 on my LG 43UH603V TV if they're blocked (Not in any known filterlists)
 @@||connected-devices.viaplay.tv^
 @@||tv.deezer.com^
@@ -17088,7 +17092,7 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 ! https://github.com/easylist/easylist/issues/8367 - Unblocks entries that accidentally blank entire pages
 #@#html
 #@#body
-! Connection pages for hotel/train/boat Wi-Fi networks (Work-in-progress, although delayed)
+! Connection pages for hotel/train/boat Wi-Fi networks (Entries for additional networks are always desired)
 ! Norrtåg
 @@||internet--access.net^
 ! Narvesen
@@ -17121,8 +17125,6 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 @@||wireless.ntnu.no^
 ! HTTPS certificate verifiers
 @@||lencr.org^
-! Section reserved for THEtomaso to add fixes for Fanboy's Social Blocking List and for Fanboy's Annoyances List-exclusive entries (_Not_ for EasyList Cookie List)
-! (Currently empty.)
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
 ! OriginalVersion: 30March2022v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
@@ -17260,7 +17262,7 @@ filmux.to#?#.frating:-abp-contains(IMDB)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 31March2022v1
+! OriginalVersion: 01April2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -18332,7 +18334,7 @@ $removeparam=src,domain=3cx.com|adafruit.com|ashford.com|bluejeans.com|bose.*|br
 ! No particular example
 ! https://github.com/DandelionSprout/adfilt/pull/474
 ! https://user.qzone.qq.com/1250252459?source=aiostar (01/02/2022)
-$~xmlhttprequest,~media,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|ashford.com|asos.com|att.com|awd-it.*|bankofamerica.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|blavity.com|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|bybit.com|choicehotels.com|chollometro.com|coinpanel.com|contabo.com|cyberghostvpn.com|despegar.*|directv.com|discord.*|docs.google.com|docsend.com|drinkhint.com|edx.org|eonline.com|eventbrite.*|fiverr.com|fool.com|forms.gle|gethotspotshield.com|gleam.io|goodcrypto.app|googleusercontent.com|greenhouse.io|greenvoice.fr|hammacher.com|hanes.com|hobbyhall.fi|hotspotshield.com|hottopic.com|housing.com|hp.com|instagram.com|itnext.io|jacquielawson.com|just-eat.co.uk|kasta.io|medium.com|nautica.com|onehanesplace.com|outnorth.fi|petsupplies.com|phonesoap.com|riteaid.com|runnode.com|search.brave.com|sonos.com|spiceworks.com|squarespace.com|subscribe.gq.com|t.me|thedailybeast.com|tiktok.com|tokopedia.com|tommybahama.com|torrid.com|tous.com|tradingview.com|twitter.com|user.qzone.qq.com|vimeo.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|youtube.com|yubo.live|britishcornershop.co.uk|microsoftedgewelcome.microsoft.com
+$document,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|ashford.com|asos.com|att.com|awd-it.*|bankofamerica.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|blavity.com|boscovs.com|boxboat.com|brownells.*|burkesoutlet.com|bybit.com|choicehotels.com|chollometro.com|coinpanel.com|contabo.com|cyberghostvpn.com|despegar.*|directv.com|discord.*|docs.google.com|docsend.com|drinkhint.com|edx.org|eonline.com|eventbrite.*|fiverr.com|fool.com|forms.gle|gethotspotshield.com|gleam.io|goodcrypto.app|googleusercontent.com|greenhouse.io|greenvoice.fr|hammacher.com|hanes.com|hobbyhall.fi|hotspotshield.com|hottopic.com|housing.com|hp.com|instagram.com|itnext.io|jacquielawson.com|just-eat.co.uk|kasta.io|medium.com|nautica.com|onehanesplace.com|outnorth.fi|petsupplies.com|phonesoap.com|riteaid.com|runnode.com|search.brave.com|sonos.com|spiceworks.com|squarespace.com|subscribe.gq.com|t.me|thedailybeast.com|tiktok.com|tokopedia.com|tommybahama.com|torrid.com|tous.com|tradingview.com|twitter.com|user.qzone.qq.com|vimeo.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|youtube.com|yubo.live|britishcornershop.co.uk|microsoftedgewelcome.microsoft.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=barrons.com|dowjones.com|fnlondon.com|mansionglobal.com|marketwatch.com|penews.com|wsj.com
