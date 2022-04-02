@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.402.4
+! OriginalVersion: 2022.402.11
 ! Expires: 1 hours (update frequency)
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -948,6 +948,8 @@ orbi.kr#?#a[class="tag"][href^="/list/tag/"][-ext-contains="#제휴사공지"]:u
 torrentonly7.com,torrentonly8.com,torrentonly9.com,torrentonly10.com,torrentonly11.com,torrentonly12.com,torrentonly13.com,torrentonly14.com,torrentonly15.com,torrentonly16.com,torrentonly17.com,torrentonly18.com#?#tbody > tr:has(> td > a[href^="https://www.torrentonly5.com/bbs/bannerhit.php?"])
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+namu.wiki#?#article div:not([class]):has(> h2:not([class]):contains(분류)) ~ div:has(div ~ .wiki-paragraph):has(span:not([class]) > img[class][src*="w.namu.la/s/"])
+namu.wiki#?#article div:not([class]):has(> h2:not([class]):contains(분류)) ~ div:has(div ~ .wiki-paragraph):has(span:not([class]) > img[class][src^="data:image/"])
 namu.wiki#?#article div[class]:not([id]):not(:has(.wiki-paragraph)):not(:has(h2:not([id]):not([class]):not(:contains(분류)))) > div[id]:not([class])
 newreop.com#?#.app-board-section > ul.app-board-template-list > li.notice:has(> a[href] > span > font[color]:contains(AD))
 instiz.net#?#.responsive_main > div[style] > .grouping_title:has(> div[style][class] > div[style]:contains(광고))
@@ -976,8 +978,12 @@ inven.co.kr#%#//scriptlet('set-constant', 'INVEN.Ad', 'null')
 avjamak.net,untitle.org,seo-marketing.co.kr#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/adscale_slot_id/')
 ! #%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
 lover9.net,1412.rest,3dpchip.com#%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
-!  #%#//scriptlet("prevent-bab")
-!
+! BlockAdBlock
+tistory.com#%#//scriptlet("prevent-bab")
+! FuckAdBlock
+tistory.com#%#//scriptlet("prevent-fab-3.2.0")
+tistory.com#%#//scriptlet("abort-on-property-read", "adBlockDetected")
+||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$redirect=prevent-fab-3.2.0
 ! Kakao TV
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#ins.kakao_ad_area
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@##adBlockPixelTag
@@ -985,8 +991,8 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ||tv.kakao.com/embed/player/image/ads.png$redirect=32x32-transparent.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 ||videoads.kakao.com/adserver/api/v2/vmap$redirect=noopvmap-1.0,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
+persnacons.tistory.com#@#.topAD
 noonnu.cc#%#//scriptlet("abort-on-property-read", "localStorage.getItem", "adBlockMethodology")
-||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication-adsbygoogle,domain=noonnu.cc
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ko.ff14angler.com
 ko.ff14angler.com#@#ins.adsbygoogle
 lover9.net#@#.adsbygoogle
@@ -995,15 +1001,14 @@ lover9.net#%#//scriptlet("abort-on-property-read", "goPage")
 lover9.net#%#//scriptlet("abort-current-inline-script", "setTimeout", "/location/")
 ||adblockanalytics.com^$xmlhttprequest,redirect=nooptext,domain=1412.rest
 ||1412.rest/addons/*/adblockDetector.js
-||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication-adsbygoogle,domain=cpsp.kr
 sajuplus.net##.adsense-alt
-sajuplus.net#%#//scriptlet("set-constant", "checkAds", "noopFunc")
-||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication-adsbygoogle,domain=1412.rest
+tistory.com,sajuplus.net#%#//scriptlet("set-constant", "checkAds", "noopFunc")
 1412.rest##.ADs-BG.center
 ! mbn.co.kr ( https://github.com/AdguardTeam/AdguardFilters/issues/104586 )
 ||ad.smartmediarep.com/NetInsight/video/$redirect=nooptext,domain=mbn.co.kr
 !#endif
 !#if (!adguard_app_ios && !adguard_ext_safari)
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication-adsbygoogle
 ||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon-apstag
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt
@@ -1030,6 +1035,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||tv.kakao.com/embed/player/image/ads.png$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 @@||videoads.kakao.com/adserver/api/v2/vmap$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
+@@||tistory.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=noonnu.cc
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ko.ff14angler.com
 ko.ff14angler.com#@#ins.adsbygoogle
