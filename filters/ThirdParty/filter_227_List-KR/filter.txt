@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.403.2
+! OriginalVersion: 2022.403.5
 ! Expires: 1 hours (update frequency)
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -257,6 +257,7 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||nts.go.kr/images/ad/lgnm/popup/popup_img_openinfo_high.jpg
 ||dogdrip.net/addons/ddnetspt/js/ddnetspt_ad.js
 ||noonnu.cc/ad_banners/$document
 ||allyearcdn.com/img/guanggo/new/
@@ -483,6 +484,8 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+nts.go.kr##.blockUI.blockOverlay
+nts.go.kr##.blockUI.blockMsg.blockPage
 www.daum.net##div[class^="advert_"]
 www.daum.net##.box_shopping
 noonnu.cc##div[data-fonts-target="fontsContainer"] > div.group.min-h-auto:not(.duration-300):not(.justify-between)
@@ -982,11 +985,13 @@ avjamak.net,untitle.org,seo-marketing.co.kr#%#//scriptlet('abort-current-inline-
 ! #%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
 lover9.net,1412.rest,3dpchip.com#%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
 ! BlockAdBlock
-tistory.com#%#//scriptlet("prevent-bab")
+fafan.kr,tistory.com#%#//scriptlet("prevent-bab")
 ! FuckAdBlock
 tistory.com#%#//scriptlet("prevent-fab-3.2.0")
 tistory.com#%#//scriptlet("abort-on-property-read", "adBlockDetected")
 ||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$redirect=prevent-fab-3.2.0
+! ai-adb
+jootc.com#%#//scriptlet("set-constant", "ai_run_scripts", "noopFunc")
 ! Kakao TV
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#ins.kakao_ad_area
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@##adBlockPixelTag
