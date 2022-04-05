@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-04-03 07:40:58 CEST
+! Last modified: 2022-04-05 08:56:41 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -257,7 +257,7 @@ loppi.se,modette.se,nyheter24.se#%#//scriptlet('ubo-ra.js', 'data-isready', '.bb
 lwcdn.com#%#//scriptlet('ubo-aeld.js', '/^(?:adBlocker|contextmenu)$/')
 macken.xyz##.et_pb_text_inner:has-text(/annons/i):upward(.et_pb_section)
 macken.xyz##a[target="_blank"]:not([href^="https://www.macken.xyz"]):upward(.et_pb_section)
-macradion.com,teknikveckan.se##.grid-item:has(.pill:has-text(/spons/i))
+macradion.com,teknikveckan.se##.grid-item, articleFlow-item:has(.pill:has-text(/spons/i))
 majanilssonlindelof.com##article:has(.has-text-align-center:has-text(/samarbete med/i))
 maklarvarlden.se##.td-post-category:has-text(/spons/i):upward(2)
 maklarvarlden.se##.td-pulldown-size:has-text(/spons/i):upward(3)
@@ -508,8 +508,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1557,7 +1557,7 @@ alltomhif.se,kulturimperiet.se,lyckasmedbakning.nu,mat-meny.se,pinkprogramming.s
 alltomstockholm.se##.ad-placement-container, .ad-mark-small, .ad-mark-rotated, [class*="panorama"]
 alpresor.se###toast-container
 animail.se,arkenzoo.se,mustijamirri.fi,petenkoiratarvike.com,vetzoo.se##div.privacy_headsup_overlay
-arbetarskydd.se,lag-avtal.se,nyteknik.se##.alman-teaser, [id^="almad-"]
+arbetarskydd.se,lag-avtal.se,nyteknik.se##.alman-teaser, .alman-teaser-flash, [id^="almad-"]
 arkitekt.se##.Cookie
 arkitekten.se##.post-teaser__wrapper--ad
 arkitektur.se##[class*="panorama"]
@@ -1899,7 +1899,7 @@ lesscarbs.se##.elementor-image > a, a[href*="/affiliates/"]
 leta.se###bookingcom-resor-wrapper, #aktuellaerbjudanden, #sky-left-wide, .topNavItem[href*="casino"], .topNavItem[href*="betting"]
 letarecept.se###cookie_wrapper
 letsgoexplore.se##.tipi-tile.active
-lindasbakskola.se,privataaffarer.se,skk.se##a[href*="/bit.ly/"]
+lindasbakskola.se,privataaffarer.se,realtid.se,skk.se##a[href*="/bit.ly/"]
 lindenytt.com,poolforum.se,varmepumpsforum.com##a[target="_blank"] img[alt]
 linnherbertsson.se##[id^="content-ad"]
 listor.se###ss-floating-bar
@@ -2250,6 +2250,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||camping.se^*/Js/DFP/
 ||capdesign.se^*/agi-annons
 ||careerbuilder.se^$third-party
+||carneoam.com/advert/
 ||casinotoplists.com^$third-party
 ||cdn-sitegainer.com/sitegainer$script
 ||cdn.adt*/atag.js?$third-party
