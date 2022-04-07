@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 7April2022v2
+! OriginalVersion: 7April2022v5
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -70,7 +70,6 @@ iltalehti.fi#$#script[src="https://script.ilcdn.fi/il-iltv-player/iltv-player.mi
 ylilauta.org##.warning.toast:has-text(Virhe ladattaessa mainoksia)
 ylilauta.org##.warning.toast:has-text(Error loading advertisements)
 ||fcdn.lauta.media^$subdocument
-ylilauta.org#%#//scriptlet('ubo-set.js', 'window.toastAlertShown', 'true')
 ! -----GENERAL FILTERS-----
 /bannerCounter.php
 /js/spring.js
@@ -245,6 +244,7 @@ auto1.fi,ilmainensanakirja.fi,telsu.fi,testeri.fi##.box_dt
 auto1.fi,ilmainensanakirja.fi,telsu.fi,testeri.fi##[href^="/clk"]
 auto1.fi,ilmainensanakirja.fi,telsu.fi,testeri.fi,blogit.fi###pb_top
 autot.tori.fi##div[class*="adViewPage_maxWidthWrap"]:not(div[class^="adViewPage_adWrap"])
+autot.tori.fi#?#div[class="w-full py-2 px-2"]:-abp-has([class^="bannerAd"])
 autotalli.com###topBanner
 basso.fi##div[id^=BannerBlock]
 bbs.io-tech.fi##[class~=structItem--thread][data-author=Mainos]
@@ -547,6 +547,7 @@ m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.netti
 m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com##.lazyLoadInhouseBanner
 m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com##.topBannerMinHeight
 m.nettiauto.com,m.nettikaravaani.com,m.nettikone.com,m.nettimarkkina.com,m.nettimokki.com,m.nettimoto.com,m.nettivaraosa.com,m.nettivene.com,m.nettivuokraus.com##[class*=pt][class*=pb][style*="border-top:1px solid #b3b3b3"]
+m.nettimarkkina.com,m.nettimokki.com##.itemlist > li:not(.block_list_li)
 m.tori.fi##.appnexus-container
 maalampofoorumi.fi##div[id=sponsor]
 maaseuduntulevaisuus.fi##.ads__native-tall-teaser
