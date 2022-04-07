@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.407.1
+! OriginalVersion: 2022.407.5
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -258,7 +258,9 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
-||coupang.com/?src*addtag=*&placementid&campaignid*&subid=*&impressionid&campaigntype*&subparam=$document,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
+||mdjournal.kr/banner/
+||mdjournal.kr/bannerManager/
+||coupang.com/?*addtag=*&pageType*&placementid*&impressionid&campaigntype$document
 /\/[0-9a-zA-Z\_?\-]{19,}\.(?!png|jpg|gif|jpeg|html|htm|txt)/$document,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 ||startupn.kr/adManager/css/adManager.css
 ||startupn.kr/bannerpop/uploads/
@@ -752,7 +754,7 @@ ilbe.com##img[src^="https://acache.ilbe.com/"]
 tgd.kr###article-list > div[id^="article-list-row-"].notice.featured:nth-child(4)
 berryjam.co.kr##div[class*="slider-banner-"]
 berryjam.co.kr##img[src^="/data/skin/front/udweb_CCC/img/banner/"][alt="2021년 시마노 웹 한글 카다로그"]
-zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
+mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
 toomics.com##img[src*="://thumb.toomics.com/upload/banner/"]
 now.rememberapp.co.kr##.now_content_ads__wrapper
 m.ilbe.com##.banner-wrap
@@ -922,9 +924,10 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
+namu.wiki#?#article div[class]:has(> table a:not(a[title][href]) span > img[src*="//ww.namu.la/s/"][class])
+namu.wiki#?#article div[class]:has(> table a:not(a[title][href]) span > img[src^="data:image"][class])
 kr-weathernews.com#?#body > article#content > article.block:has(ul#life_slider)
 search.tmon.co.kr#?#section.search_deallist > .deallist_wrap > ul > li[class]:has(> a[href*="//display.admonseller.com/"].anchor)
-namu.wiki#?#div:not([class]):has(> table + .wiki-paragraph)
 namu.wiki#?#aside div[class][id] > div[id]:not([class]):not(:has(> *))
 op.gg#?#div[class]:has( > div:not([id]):not([class]):not([style]) > div[data-display-type="hybrid-banner"][data-publisher-ref="side-bar-ad"])
 everytime.kr#?#div.banners:has(> a[href*="//ad.everytime.kr/"])
@@ -964,8 +967,6 @@ orbi.kr#?#a[class="tag"][href^="/list/tag/"][-ext-contains="#제휴사공지"]:u
 torrentonly7.com,torrentonly8.com,torrentonly9.com,torrentonly10.com,torrentonly11.com,torrentonly12.com,torrentonly13.com,torrentonly14.com,torrentonly15.com,torrentonly16.com,torrentonly17.com,torrentonly18.com#?#tbody > tr:has(> td > a[href^="https://www.torrentonly5.com/bbs/bannerhit.php?"])
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
-namu.wiki#?#article div:not([class]):has(> h2:not([class]):contains(분류)) ~ div:has(div ~ .wiki-paragraph):has(span:not([class]) > img[class][src*="w.namu.la/s/"])
-namu.wiki#?#article div:not([class]):has(> h2:not([class]):contains(분류)) ~ div:has(div ~ .wiki-paragraph):has(span:not([class]) > img[class][src^="data:image/"])
 namu.wiki#?#article div[class]:not([id]):not(:has(.wiki-paragraph)):not(:has(h2:not([id]):not([class]):not(:contains(분류)))) > div[id]:not([class])
 newreop.com#?#.app-board-section > ul.app-board-template-list > li.notice:has(> a[href] > span > font[color]:contains(AD))
 instiz.net#?#.responsive_main > div[style] > .grouping_title:has(> div[style][class] > div[style]:contains(광고))
