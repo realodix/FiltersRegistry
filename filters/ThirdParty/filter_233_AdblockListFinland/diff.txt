@@ -80,6 +80,12 @@ pelaaja.fi##+js(aopr, ga)
 iltalehti.fi##script[src="https://script.ilcdn.fi/il-iltv-player/iltv-player.min.js"] ~ .alma-cmpv2-container:style(display: block !important)
 ! Rule "||fcdn.lauta.media^$frame" converted to: "||fcdn.lauta.media^$subdocument"
 ||fcdn.lauta.media^$frame
+! Rule "ylilauta.org##html[lang="fi"] .warning.toast:not(:has-text(Virhe ladattaessa mainoksia)):style(display: flex !important)" converted to: "ylilauta.org#$?#html[lang="fi"] .warning.toast:not(:has-text(Virhe ladattaessa mainoksia)) { display: flex !important }"
+ylilauta.org##html[lang="fi"] .warning.toast:not(:has-text(Virhe ladattaessa mainoksia)):style(display: flex !important)
+! Rule "ylilauta.org##html[lang="en"] .warning.toast:not(:has-text(Error loading advertisements)):style(display: flex !important)" converted to: "ylilauta.org#$?#html[lang="en"] .warning.toast:not(:has-text(Error loading advertisements)) { display: flex !important }"
+ylilauta.org##html[lang="en"] .warning.toast:not(:has-text(Error loading advertisements)):style(display: flex !important)
+! Rule "ylilauta.org##+js(aopr, console.error)" converted to: "ylilauta.org#%#//scriptlet('ubo-aopr.js', 'console.error')"
+ylilauta.org##+js(aopr, console.error)
 ! Rule "||fcdn.lauta.media/adform.js$1p" converted to: "||fcdn.lauta.media/adform.js$~third-party"
 ||fcdn.lauta.media/adform.js$1p
 ! Rule "||damoh.katsomo.fi^$media,rewrite=abp-resource:blank-mp3,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi" converted to: "||damoh.katsomo.fi^$media,redirect=noopmp3-0.1s,domain=msn.com|mtv.fi|mtvuutiset.fi|studio55.fi|suomiareena.fi"
@@ -102,5 +108,3 @@ kokemaenjokilaakso.fi##^[alt^=Mainos]
 mobiili.fi##^.fullarticle:has([data-lazy-src="https://mobiili.fi/aaa.png"])
 ! Invalid selector:
 tamperelainen.fi##^.display-ad
-! Invalid selector:
-ylilauta.org##+js(alert-buster)

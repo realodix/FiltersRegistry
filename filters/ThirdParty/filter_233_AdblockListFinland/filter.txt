@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 7April2022v5
+! OriginalVersion: 8April2022v3
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -66,10 +66,12 @@ pelaaja.fi#%#//scriptlet('ubo-aopr.js', 'ga')
 ||pelaaja.fi/sites/default/files/googleanalytics/analytics.js$important
 ! https://github.com/easylist/easylist/pull/11542
 iltalehti.fi#$#script[src="https://script.ilcdn.fi/il-iltv-player/iltv-player.min.js"] ~ .alma-cmpv2-container { display: block !important }
-! Ylilauta remove empty space
-ylilauta.org##.warning.toast:has-text(Virhe ladattaessa mainoksia)
-ylilauta.org##.warning.toast:has-text(Error loading advertisements)
+! Ylilauta ads & antiadblock
 ||fcdn.lauta.media^$subdocument
+ylilauta.org##.warning.toast
+ylilauta.org#$?#html[lang="fi"] .warning.toast:not(:has-text(Virhe ladattaessa mainoksia)) { display: flex !important }
+ylilauta.org#$?#html[lang="en"] .warning.toast:not(:has-text(Error loading advertisements)) { display: flex !important }
+ylilauta.org#%#//scriptlet('ubo-aopr.js', 'console.error')
 ! -----GENERAL FILTERS-----
 /bannerCounter.php
 /js/spring.js
