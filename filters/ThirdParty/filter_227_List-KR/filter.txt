@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.408.5
+! OriginalVersion: 2022.408.12
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -132,6 +132,9 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||poweredby.jads.co^
+||ad.a-ads.com^
+||acceptable.a-ads.com^
 ||display.admonseller.com^
 ||ad.ciokorea.com^
 ||ads.netinsight.co.kr^
@@ -191,6 +194,7 @@
 ||adscdn.orbi.kr^
 ||ads.orbi.kr^
 ||ads.mtgroup.kr^
+##iframe[src*="//ad.a-ads.com/"]
 ##iframe[src*="//www.mediabp.kr/"]
 ##iframe[src*="//shoppingbox.zum.com/"]
 ##iframe[src*="//ads.mobitree.co.kr/"]
@@ -258,6 +262,10 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||a.realsrv.com/ad-provider.js
+||watchfreejavonline.co/wp-content/uploads/*.gif
+||i0.wp.com/watchfreejavonline.co/wp-content/uploads/
+||static.javhd.com/h5/files/
 ||mdjournal.kr/banner/
 ||mdjournal.kr/bannerManager/
 ||coupang.com/?*addtag=*&pageType*&placementid*&impressionid&campaigntype$document
@@ -492,7 +500,6 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
-namu.wiki##div:not([class*="wiki"]) > div[class] > table:not([class])
 m.search.naver.com##section[class*="ad_"].sp_power
 m.ytn.co.kr##div[class^="newsview_ad_"]
 m.ytn.co.kr##div[class^="text_ad_"]
@@ -902,6 +909,8 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
+namu.wiki#?#article div[class] > div[id]:not([class]):not(:has(> *))
+namu.wiki#?#article div:not([class*=\"wiki\"]) > div[class] > table[class]:not(:has(a[href][title])):not(:has(iframe))
 kr-weathernews.com#?#body > article#content > article.block:has(ul#life_slider)
 search.tmon.co.kr#?#section.search_deallist > .deallist_wrap > ul > li[class]:has(> a[href*="//display.admonseller.com/"].anchor)
 namu.wiki#?#aside div[class][id] > div[id]:not([class]):not(:has(> *))
@@ -943,6 +952,7 @@ orbi.kr#?#a[class="tag"][href^="/list/tag/"][-ext-contains="#제휴사공지"]:u
 torrentonly7.com,torrentonly8.com,torrentonly9.com,torrentonly10.com,torrentonly11.com,torrentonly12.com,torrentonly13.com,torrentonly14.com,torrentonly15.com,torrentonly16.com,torrentonly17.com,torrentonly18.com#?#tbody > tr:has(> td > a[href^="https://www.torrentonly5.com/bbs/bannerhit.php?"])
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+namu.wiki#?#article div:has(> h2:contains(분류)) ~ div:has(span > img[src*="w.namu.la/s/"]):not(:has(span > span))
 newreop.com#?#.app-board-section > ul.app-board-template-list > li.notice:has(> a[href] > span > font[color]:contains(AD))
 instiz.net#?#.responsive_main > div[style] > .grouping_title:has(> div[style][class] > div[style]:contains(광고))
 ajunews.com#?#.aside_item.banner:has(> h4[style~="font-size:13px;color:#999999;margin:0"]:contains(AD))
@@ -983,6 +993,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ||tv.kakao.com/embed/player/image/ads.png$redirect=32x32-transparent.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 ||videoads.kakao.com/adserver/api/v2/vmap$redirect=noopvmap-1.0,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 @@$generichide,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 webtv.dothome.co.kr##.adblock-on
 persnacons.tistory.com#@#.topAD
