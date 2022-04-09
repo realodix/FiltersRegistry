@@ -1,13 +1,14 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.409.13
+! OriginalVersion: 2022.409.16
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
 !
 ! Version must be UTC format.
 !
+||bizspring.net^
 ||nefing.com^
 ||deployads.com^
 ||mediabp.kr^
@@ -133,6 +134,8 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||api.ezadsystem.com^
+||ad.planbplus.co.kr^
 ||api.linkmine.co.kr^
 ||poweredby.jads.co^
 ||ad.a-ads.com^
@@ -196,6 +199,8 @@
 ||adscdn.orbi.kr^
 ||ads.orbi.kr^
 ||ads.mtgroup.kr^
+##a[href*="//ad.planbplus.co.kr/"]
+##iframe[src*="//api.ezadsystem.com/"]
 ##iframe[src*="//ad.a-ads.com/"]
 ##iframe[src*="//www.mediabp.kr/"]
 ##iframe[src*="//shoppingbox.zum.com/"]
@@ -264,6 +269,8 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||ad.planbplus.co.kr^$document
+||static.coupangcdn.com/image/vendor_inventory/$domain=10000recipe.com
 ||nefing.com^$document,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 ||api.linkmine.co.kr^$document,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 ||arca.live/api/bywiki.json
@@ -512,11 +519,16 @@
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+||toonkor*.com/bann/
+||toonkor*.com/images/*.gif
 ||wwwimageup.angle777899.com/other/atoona/
 ||torrentdia*.com/data/to_list
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+10000recipe.com##dl.container ul.rcp_m_list2 > ul > div:not(li.common_sp_list_li)
+10000recipe.com##div[class^="view"] > .sp_pdt_wrap
+10000recipe.com##div[id^="divEzad"]
 arca.live###namuRank
 djtimes.co.kr##iframe[src^="/banner/"]
 gginews.co.kr##center > .bn
@@ -865,7 +877,7 @@ m.ruliweb.com##div[id^="mo_ad_"]
 m.ruliweb.com##div[id^="nbp_container"]
 ruliweb.com##div.board_main > table > tbody tr.table_body.list_inner
 ruliweb.com##.nbp_container
-pandora.tv,mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
+m.10000recipe.com,pandora.tv,mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 m.dcinside.com##ul.all-comment-lst > li.comment:not(li[id^="comment_cnt_"])
 m.dcinside.com##div[class^="adv-group"]
 dcinside.com##div[class^="rightbanner"]
@@ -888,6 +900,9 @@ www.naver.com##iframe[id^="da_iframe_"]
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+toonkor100.com,toonkor101.com,toonkor102.com,toonkor103.com,toonkor104.com,toonkor105.com,toonkor106.com,toonkor107.com,toonkor108.com,toonkor109.com,toonkor110.com,toonkor111.com,toonkor112.com,toonkor113.com##.bnt > div[class^="bancol"]
+toonkor100.com,toonkor101.com,toonkor102.com,toonkor103.com,toonkor104.com,toonkor105.com,toonkor106.com,toonkor107.com,toonkor108.com,toonkor109.com,toonkor110.com,toonkor111.com,toonkor112.com,toonkor113.com###containerCol .at-content .contents > a[href][target] > img[src^="/bann/"]
+toonkor100.com,toonkor101.com,toonkor102.com,toonkor103.com,toonkor104.com,toonkor105.com,toonkor106.com,toonkor107.com,toonkor108.com,toonkor109.com,toonkor110.com,toonkor111.com,toonkor112.com,toonkor113.com##div[class$="mobile-banner"][style]
 manatoki126.net,manatoki127.net,manatoki128.net,manatoki129.net,manatoki130.net,manatoki131.net,manatoki132.net,manatoki133.net,manatoki134.net,manatoki135.net,manatoki136.net,manatoki137.net,manatoki186.net##[style="margin-bottom: 20px;"].row.row-15
 manatoki126.net,manatoki127.net,manatoki128.net,manatoki129.net,manatoki130.net,manatoki131.net,manatoki132.net,manatoki133.net,manatoki134.net,manatoki135.net,manatoki136.net,manatoki137.net,manatoki186.net##.basic-banner.row.row-10
 manatoki126.net,manatoki127.net,manatoki128.net,manatoki129.net,manatoki130.net,manatoki131.net,manatoki132.net,manatoki133.net,manatoki134.net,manatoki135.net,manatoki136.net,manatoki137.net,manatoki186.net##.board-tail-banner

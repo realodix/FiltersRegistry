@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 9April2022v3
+! OriginalVersion: 9April2022v8
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -15,10 +15,12 @@ feissarimokat.com##div[style="background: rgb(246, 66, 100) none repeat scroll 0
 hardware.fi#$#.top-ad-space { min-height: 0 !important }
 hardware.fi#@#.top-ad-space
 ilkkapohjalainen.fi#$#.site__wrapper { margin-top: 0.5em !important }
+[$path=/raha/]iltalehti.fi## .card.category-double-article-container:empty
 ! Temporary disabling, seems to cause iltalehti to load more slower...
 ! iltalehti.fi##.category-double-article-container:has(.half-article:matches-css(display:none)+ .half-article:matches-css(display:none))
 kaaoszine.fi#$?#article.post:has-text(Kaupallinen yhteistyö) { height: 1px !important; width: 1px !important; margin-right: 0px !important }
 kaaoszine.fi#@#article.post:has-text(Kaupallinen yhteistyö)
+kaksplus.fi#$#body.home #section-0 article:nth-child(1), body.category #om_commercialpostlisting-1 article:nth-child(1) { margin-bottom: unset !important; }
 metsastysjakalastus.fi,tekniikanmaailma.fi##.NoAdBlocker_main
 mobiili.fi#$##headermob { position: static !important }
 mobiili.fi#$##show_merkki { margin-top: 2em !important }
@@ -67,18 +69,19 @@ pelaaja.fi#%#//scriptlet('ubo-aopr.js', 'ga')
 ! https://github.com/easylist/easylist/pull/11542
 iltalehti.fi#$#script[src="https://script.ilcdn.fi/il-iltv-player/iltv-player.min.js"] ~ .alma-cmpv2-container { display: block !important }
 ! Ylilauta ads & antiadblock
-||fcdn.lauta.media^$subdocument
+||fcdn.lauta.media^$subdocument,redirect=noopframe,important
+ylilauta.org#$#iframe[class="a h"] { position: absolute !important; left: -9999px !important; }
 ! For Firefox due to https://bugzilla.mozilla.org/show_bug.cgi?id=1267027
-ylilauta.org#$#[class="toast warning"] { background-color: transparent !important; color: transparent !important; pointer-events: none !important }
-ylilauta.org#$#[class="toast warning"] h3 { color: transparent !important; pointer-events: none !important }
-ylilauta.org#$?#html[lang="fi"] .warning.toast:not(:has-text(Virhe ladattaessa mainoksia)) { background-color: hsla(37, 100%, 55%, 0.8) !important; color: #000 !important; pointer-events: auto !important }
-ylilauta.org#$?#html[lang="fi"] .warning.toast h3:not(:has-text(Virhe ladattaessa mainoksia)) { color: #000 !important; pointer-events: auto !important }
-ylilauta.org#$?#html[lang="en"] .warning.toast:not(:has-text(Error loading advertisements)) { background-color: hsla(37, 100%, 55%, 0.8) !important; color: #000 !important; pointer-events: auto !important }
-ylilauta.org#$?#html[lang="en"] .warning.toast h3:not(:has-text(Error loading advertisements)) { color: #000 !important; pointer-events: auto !important }
+! ylilauta.org##[class="toast warning"]:style(background-color: transparent !important; color: transparent !important; pointer-events: none !important)
+! ylilauta.org##[class="toast warning"] h3:style(color: transparent !important; pointer-events: none !important)
+! ylilauta.org##html[lang="fi"] .warning.toast:not(:has-text(Virhe ladattaessa mainoksia)):style(background-color: hsla(37, 100%, 55%, 0.8) !important; color: #000 !important; pointer-events: auto !important)
+! ylilauta.org##html[lang="fi"] .warning.toast h3:not(:has-text(Virhe ladattaessa mainoksia)):style(color: #000 !important; pointer-events: auto !important)
+! ylilauta.org##html[lang="en"] .warning.toast:not(:has-text(Error loading advertisements)):style(background-color: hsla(37, 100%, 55%, 0.8) !important; color: #000 !important; pointer-events: auto !important)
+! ylilauta.org##html[lang="en"] .warning.toast h3:not(:has-text(Error loading advertisements)):style(color: #000 !important; pointer-events: auto !important)
 ! Only works on Chrome, install https://github.com/JustOff/scriptlet-doctor/releases to get it to work on Firefox.
 ! Add ylilauta.org to domain list in Scriplet Doctor settings
 ! https://bugzilla.mozilla.org/show_bug.cgi?id=1267027
-ylilauta.org#%#//scriptlet('ubo-aost.js', 'document.createElement', '/(?=(content|new))(?!.*(Dropdown|open|Poll).*)/', '2')
+! ylilauta.org##+js(aost, document.createElement, /(?=(content|new))(?!.*(Dropdown|open|Poll).*)/, 2)
 ! -----GENERAL FILTERS-----
 /bannerCounter.php
 /js/spring.js
