@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.410.16
+! OriginalVersion: 2022.410.18
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! License: https://github.com/List-KR/List-KR/blob/master/LICENSE
@@ -134,6 +134,8 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||adgate.gmarket.co.kr^
+||ad-img.ebaykorea.com^
 ||api.ezadsystem.com^
 ||ad.planbplus.co.kr^
 ||api.linkmine.co.kr^
@@ -268,6 +270,7 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||adgate.gmarket.co.kr^$document
 ||issue.dcinside.com/wp-content/plugins/advanced-ads
 ||upto.tk/ads.html
 ||m.ytn.co.kr/ad/
@@ -527,6 +530,7 @@
 ||torrentonly*.com/data/zn_bimg/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+mitem.gmarket.co.kr###goodsDetailTab > div[id^="vipPowerClick"][id$="Layer"]
 m.humoruniv.com##div[class*="_ad"][style]:not([id])
 m.humoruniv.com##body form[id][name][action="boardexp/styleofpower.html"] + div[id][style]
 principlesofknowledge.kr###content > .sub_content > .board_view >  div[align="center"]:not([class]):not([id]):not([style])
@@ -946,6 +950,9 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
+browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap > .box__component:has(button[id^="buttonItemCardAdsLayer"][class="button__ads-layer"])
+browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap:has(> .box__component-bottom-da-banner)
+browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap:has(> .box__component-sponsor-link)
 m.moneys.mt.co.kr#?#.one_line_article > ul.list > li.item:has(> iframe[src*="//adgrp1.ad4989.co.kr/"])
 namu.wiki#?#article div[class] > div[id]:not([class]):not(:has(> *))
 namu.wiki#?#article div:not([class*="wiki"]) > div[class] > table[class]:not(:has(a[href][title])):not(:has(iframe))
@@ -989,6 +996,7 @@ orbi.kr#?#a[class="tag"][href^="/list/tag/"][-ext-contains="#제휴사공지"]:u
 torrentonly7.com,torrentonly8.com,torrentonly9.com,torrentonly10.com,torrentonly11.com,torrentonly12.com,torrentonly13.com,torrentonly14.com,torrentonly15.com,torrentonly16.com,torrentonly17.com,torrentonly18.com#?#tbody > tr:has(> td > a[href^="https://www.torrentonly5.com/bbs/bannerhit.php?"])
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+browse.gmarket.co.kr#?#div[module-design-id].box__module-wrap:has(button[id^="buttonItemCardAdsLayer"][class="button__ads-layer"]):has(.box__itemcard-header > h3:contains(먼저 둘러보세요))
 namu.wiki#?#article div:has(> h2:contains(분류)) ~ div:has(span > img[src*="w.namu.la/s/"]):not(:has(span > span))
 newreop.com#?#.app-board-section > ul.app-board-template-list > li.notice:has(> a[href] > span > font[color]:contains(AD))
 instiz.net#?#.responsive_main > div[style] > .grouping_title:has(> div[style][class] > div[style]:contains(광고))
