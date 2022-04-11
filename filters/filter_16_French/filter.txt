@@ -156,10 +156,6 @@ abcbourse.com#%#//scriptlet("abort-current-inline-script", "document.getElementB
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101188
 vostfr.stream##div[id^="gothamadblock_"]
 vostfr.stream#%#//scriptlet("abort-on-property-read", "gothamBatAdblock")
-! https://github.com/AdguardTeam/AdguardFilters/issues/99887
-7sur7.be#%#//scriptlet("abort-on-property-read", "_sp_detection_")
-!+ PLATFORM(ios, ext_android_cb)
-@@||7sur7.be^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/97689
 @@||mac4ever.com/bundles/*/js/prebid-ads.js
 mac4ever.com#%#//scriptlet("set-constant", "canRunAds", "true")
@@ -1240,6 +1236,9 @@ place.ge#@#.simple-ad
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/115202
+!+ PLATFORM(ext_safari, ios)
+||multinews.me/produit/$popup,badfilter
 ! Frequently blocked by Liste-FR rules
 @@||google.com/recaptcha/api.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/114733
