@@ -1582,6 +1582,8 @@ avgle.com#%#//scriptlet('abort-current-inline-script', '__htapop')
 !-------CSS---------
 !-------------------
 !
+! placeholder on top page
+minpo.jp#$#.ads970 { height: 0 !important; min-height: 0 !important; }
 ! placeholder on floating nav
 young-machine.com#$#.wym-v2022__header.is-scroll-up ~ .wym-v2022__footer-fixed { bottom: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/114901
@@ -1848,6 +1850,8 @@ tv-tokyo.co.jp,financial-field.com,spaia.jp,yomiuri.co.jp,fujinkoron.jp,mikle.jp
 !
 !
 !
+kahoku.news##div[style^="min-width:300px;min-height:250px"]
+kahoku.news##.conteiner__main > div[style="line-height:1; border-bottom:1px solid #ccc; padding:8px;"]
 weather.yahoo.co.jp###bnr2
 idou.me##.side_banner
 dailynk.jp,dailynkjp.com##.rensai_widget
@@ -2330,7 +2334,7 @@ news.biglobe.ne.jp##.news-cpl
 biglobe.ne.jp###join-bnr
 kai-you.net##.l-pc_resp_all_inhouse_1st
 kai-you.net##div[class*="-ad"]
-niigata-nippo.co.jp##.md_adsCover
+niigata-nippo.co.jp##div[class^="m-ad"]
 ||cinemacafe.net/adimgs/
 capa.getnavi.jp,fukuishimbun.co.jp##.text-ad
 fukuishimbun.co.jp##li.pr
@@ -3960,7 +3964,6 @@ yugalab.net##div[id$="_ads"]
 virginbmw.com##.ad300row
 mangapedia.com##.contents-bottom-ads
 mangapedia.com##.description-bottom-ads
-kochinews.co.jp##.pr_area
 web-kanji.com##div[class^="post-ad"]
 tvguide.or.jp##.l--spBanner
 lala.tv##.lala-common-ad
@@ -4094,7 +4097,8 @@ fc2.com###fc2_text_ad
 charmer-media.com,elife-media.jp,frequ.jp,miima.jp,platabi.com,trip-partner.jp,vivre-media.jp##.my-1
 sanin-chuo.co.jp##.m-ad-text
 sakigake.jp##.l-content__header-bnr
-webun.jp##.tileLrecbn
+webun.jp###JP_wbn_pc_all_billboard
+webun.jp###JP_wbn_pc_all_right_2nd
 nnn.co.jp##.txt_pr
 matomehub.jp##.adv_bottom
 ||matomedane.jp/js/right_navi/
@@ -5470,6 +5474,8 @@ gtoys.blog.fc2.com###adright
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
 !
 !
+! fix broken layout on top page
+minpo.jp#@#.ads970
 ! unhide contents https://ananweb.jp/soken/topics/research/406565/
 ananweb.jp#@#.ad-banner:not([style="height: 5px; width: 5px; position: absolute; top: 0;"]):not(.blocker-tester + .ad-banner)
 ! unhide Firework video
