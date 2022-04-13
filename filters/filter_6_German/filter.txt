@@ -1658,6 +1658,8 @@ teleboy.ch#@#.adWrapper
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/115311
+noz.de#?#.outer-wrapper:has(> .inner-wrapper > .nozmhn_ad)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/114682
 der-postillon.com#?##sidebar-top > .widget:has(> .widget > .widget-content > .teasers > .OUTBRAIN)
 der-postillon.com#?##sidebar-top > .widget:has(> .widget-content > div[id^="iqadtile"])
@@ -2805,6 +2807,8 @@ drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan
 ! ##.id-Container--proBEEP
 hallo-muenchen.de,az-online.de,lokalo24.de,rosenheim24.de,kreiszeitung.de,nordbuzz.de,mannheim24.de,merkur.de,oktoberfest-live.de,tz.de##.id-Container--proBEEP
 !
+noz.de##.search-results > .open
+noz.de##.search-results > .open + .article__teaser__separator
 hna.de##.id-Story > .id-Recommendation
 focus.de##.cls_hor_prnt
 focus.de##.cls_ver_prnt
