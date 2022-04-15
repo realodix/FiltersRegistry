@@ -1315,6 +1315,12 @@ westseattleblog.com#@#.header-ad
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/113316
+m.facebook.com#?#div[data-mcomponent="MContainer"] > div[data-mcomponent="MContainer"]:has(> div[data-mcomponent="MContainer"] > div[data-mcomponent="MContainer"] > div[data-mcomponent="TextArea"] > .native-text > span:contains(/^(Sponsored)/))
+m.facebook.com#?#div[data-mcomponent="MContainer"] > div[data-mcomponent="MContainer"][style*="display: none !important;"] + div[data-mcomponent="MContainer"]
+m.facebook.com#?#div[data-mcomponent="MContainer"] > div[data-mcomponent="MContainer"][style*="display: none !important;"] + div[data-mcomponent="MContainer"] + div[data-mcomponent="MContainer"]
+m.facebook.com#?#div[data-mcomponent="MContainer"] > div[data-mcomponent="MContainer"][style*="display: none !important;"] + div[data-mcomponent="MContainer"] + div[data-mcomponent="MContainer"] + div[data-mcomponent="MContainer"]
+m.facebook.com#?#div[data-mcomponent="MContainer"] > div[data-mcomponent="MContainer"][style*="display: none !important;"] + div[data-mcomponent="MContainer"] + div[data-mcomponent="MContainer"] + div[data-mcomponent="MContainer"] + div[data-mcomponent="MContainer"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/115408
 full-count.jp#?#.erase_space-ad ~ div.c-heading:has(> p[class^="c-heading_"]:contains(RECOMMEND))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/113846
@@ -1385,7 +1391,6 @@ m.eprice.com.tw#?#.thread-list > dd[class]:has(> div[id^="div-gpt-ad"])
 womenshealth.de#?#.article__content > div > span.list__header:contains(/^Sponsored$/)
 ! kakaku.com native ad, placeholder
 s.kakaku.com#?#.c-bnr span.c-global_pr:upward(.c-bnr)
-s.kakaku.com#?#.p-bnr span.c-global_pr:upward(.p-bnr)
 waterserver.kakaku.com#?#li.unit > a[href*="/jump.asp?"][onclick^="onclickcatalysttopcs"]:upward(1)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98076
 tsn.ua#?#body > aside[class="l-sheet l-sheet__gap"]:has(> div > amp-ad)
@@ -3544,6 +3549,7 @@ news-postseven.com##div[style$="text-align:center; margin-bottom: 5px; margin-to
 popcornnews.ru##.horizontal-banner
 autodoc.de##.plus-block
 ||k-img.com/script/fixed_bnr_area.js$domain=s.kakaku.com
+s.kakaku.com##.p-bnr
 s.kakaku.com##.p-ad_wrap
 s.kakaku.com##.-pr.p-bnr
 s.kakaku.com##.c-global_pr
