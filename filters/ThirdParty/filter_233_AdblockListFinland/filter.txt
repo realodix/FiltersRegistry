@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 16April2022v1
+! OriginalVersion: 17April2022v2
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -43,6 +43,9 @@ www.suomi24.fi#$#div[width="100%"] + [width="50%"] + div[class^="ThreadGridItemW
 www.suomi24.fi#$#div[width="100%"] + div[width="50%"] + div[width="50%"] + div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] > div { border-right: none !important; border-left: 1px solid lightgray !important }
 www.suomi24.fi#$#div[width="100%"] + div[width="50%"] + div[width="50%"] + div[width="50%"] > div[class^="ThreadGridItemWrapper__CardWrapper"] > div { padding-left: 15px !important }
 www.suomi24.fi#$#div[width="50%"] + div[width="50%"] + [width="50%"] + div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] * div[class^="ThreadCardFooter__CardFooter"] > div[class^="ThreadCardFooter__ColumnContainer"] { padding-right: 15px !important }
+! Trick to overcome blinking issues caused by a slow procedural
+ampparit.com##[class="sidebox-header"]
+ampparit.com#$?#.sidebox-header:not(:has-text(/Nettiauto|Nettix/)) { display: flex !important }
 ! HTML filters for Firefox
 ! -----SPECIFIC FILTERS END-----
 ! -----NETWORK FILTERS-----
@@ -1040,6 +1043,7 @@ iltalehti.fi##[class|="almad-mobile-parade"]
 iltalehti.fi##div.footer-wrapper__item.is-visible.LazyLoad
 iltalehti.fi##div[class=iframe-container]
 iltalehti.fi#?#.card:-abp-has(#il-rantapallo-right-column-box)
+iltalehti.fi#?#.embed-placeholder:-abp-has(> div > .eo-embed-announcements-container.card)
 iltalehti.fi#?#a.small-article:-abp-contains(Kaupallinen yhteistyö)
 iltalehti.fi#?#div.card:-abp-contains(Mainos:)
 iltalehti.fi#?#div.fp-container.card:-abp-contains(Kaupallinen yhteistyö)
