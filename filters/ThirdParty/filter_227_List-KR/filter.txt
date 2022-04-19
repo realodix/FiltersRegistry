@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.418.2
+! OriginalVersion: 2022.419.2
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -272,6 +272,9 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||prod.danawa.com/info/ajax/getPowerClickProductList.ajax.php
+||image.ichannela.com/images/mainbanner/
+||image.ichannela.com/images/common/shinhan_
 ||entertainpost.com/wp/wp-content/uploads/newPS/ad/
 ||entertainpost.com/wp/wp-content/uploads/newPS/css/sub/right_ad.css
 ||fs.jtbc.joins.com/home/img/banner/
@@ -541,6 +544,8 @@
 ||wwwimageup.angle777899.com/other/atoona/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+prod.danawa.com###powerClickProductListArea
+ichannela.com##.sideArea > div[style]:not([class]):not([id])
 entertainpost.com##body > div[style]:not([class])
 www.instiz.net##table tr div.responsive_main
 www.instiz.net##body > .hot_under
@@ -626,7 +631,7 @@ m.hani.co.kr##section[class^="ad"]
 hankyung.com##.view > .joy_info
 hankyung.com##article.act-body > .wrap_list
 gigglehd.com##.widget_banner_skin > ul.banner_list
-m.news1.kr##div[class^="banner"]
+ichannela.com,m.news1.kr##div[class^="banner"]
 m.news1.kr##iframe[src^="/template/ads/"]
 m.news1.kr##div[class^="das_article"][class$="_wrap"]
 talk.op.gg,m.news1.kr##div[class^="ads_"]
@@ -671,7 +676,7 @@ biz.heraldcorp.com##.article_area > .article_right
 insight.co.kr##div.aside-popular > ul.aside-popular-wrap > li > div[style~="300px;height:"][style~="block;width:"]
 edaily.co.kr##section[id^="aside_"] > div[id$="-sticky-wrap"] > div[id$="-sticky"] > div[id^="w_read_"][class^="boxshow_"]
 edaily.co.kr##section[id^="aside_"] > div[id$="-sticky-wrap"] > div[id$="-sticky"] > div[style]:not(class):not(id)
-mediapen.com,edaily.co.kr##div[data-ad][class][style]
+ichannela.com,mediapen.com,edaily.co.kr##div[data-ad][class][style]
 edaily.co.kr##div[class^="gg_"], div[class$="_gg"]
 edaily.co.kr##[class$="_dable"][id^="boxshow_"]
 yeongnam.com##div[class$="-ad"]
@@ -1105,10 +1110,11 @@ tistory.com,sajuplus.net#%#//scriptlet("set-constant", "checkAds", "noopFunc")
 ||ad.smartmediarep.com/NetInsight/video/$redirect=nooptext,domain=mbn.co.kr
 !#endif
 !#if (!adguard_app_ios && !adguard_ext_safari)
+$image,redirect-rule=2x2-transparent.png,domain=ppss.kr
 $subdocument,redirect-rule=noopframe,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 /\/[0-9a-zA-Z\_?\-]{19,}\.(?!png|jpg|gif|jpeg|html|htm|txt)/$document,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 $script,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
-$image,redirect-rule=1x1-transparent.gif,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
+$image,redirect-rule=1x1-transparent.gif,domain=ygosu.com|tgd.kr|inven.co.kr|loawa.com
 $xmlhttprequest,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication-adsbygoogle
 ||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon-apstag
