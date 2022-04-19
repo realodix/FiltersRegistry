@@ -479,6 +479,10 @@ zamaninvarken.com,kredi.biz.tr,kriptoradar.com,morlevha.com,bakimlikadin.net,kor
 iyibeslenme.net,teknop.net,kirtkirtla.com,buneymis.net,ozgunbilgi.com#%#//scriptlet("set-constant", "adblock.check", "noopFunc")
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/115924
+discordsunucu.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
+!+ PLATFORM(ios, ext_android_cb)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=discordsunucu.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/115051
 boxofficeturkiye.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 !+ PLATFORM(ios, ext_android_cb)
@@ -951,6 +955,7 @@ r10.net#%#//scriptlet('abort-on-property-write', 'rInt')
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
 !
+discordsunucu.com#?#.columns.is-multiline > .column > center > .adsbygoogle:upward(2)
 diziyo.*#?##contenedor > div[class*="onceki"]:has(> center > iframe[src^="https://www.diziyo."][src*="/rklm/"])
 trhaber.com#?#.inf_append > div.card:has(> div.text-center > ins.adsbygoogle)
 r10.net#?#body > main > div[class] > .rPanel:has(> .head:contains(/^Reklam $/))
