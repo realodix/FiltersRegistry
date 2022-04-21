@@ -2025,6 +2025,11 @@ facebook.com###ssrb_stories_end ~ div[class] > div[class] > div[class*=" "] > di
 m.facebook.com##span[data-top-of-feed-unit-type="megaphone_story"] > div[data-sigil="m-megaphone"]
 ! corona information in profile timeline
 facebook.com##div[data-pagelet="ProfileTimeline"] a[href^="https://www.facebook.com/coronavirus_info"]
+! Suggested post from a public group when viewing groups feed
+m.facebook.com#?#div[data-type="vscroller"] > div[data-mcomponent="MContainer"]:has(> div[data-actual-height] > div[data-actual-height] > div[data-mcomponent*="TextArea"] > .native-text:contains(Suggested post from a public group))
+m.facebook.com##div[data-type="vscroller"] > div[data-mcomponent="MContainer"][style*="display: none !important;"] + div[style*="height:1px;"]
+! do not enable - will stop loading new posts (sometimes whole page are "Suggested post from a public group")
+! m.facebook.com##div[data-type="vscroller"] > div[data-mcomponent="MContainer"][style*="display: none !important;"] + div[style*="height:1px;"] + div[style*="height:1px;"]
 !
 ! 44.ua - notification about browser extension
 44.ua##.exp-line
@@ -29022,6 +29027,7 @@ theguardian.com##.contributions__adblock
 ||contributions.guardianapis.com^
 !
 financialsense.com##.pane-bundle-promo
+||crio.do/blog/assets/images/crio-offerings
 bookwalker.jp##.ad-new-member
 bookwalker.jp##.side-deals
 bookwalker.jp##.o-beginner-banner
@@ -29901,6 +29907,7 @@ ficbook.net##.header-holder > div.alert
 reform.news,reform.by##div[class="b-r b-r--after_p_1"]
 reform.news,reform.by##.b-r > noindex
 cerave.ru##.sticky-subscribe
+crio.do###ghost-portal-root
 flatout.com.br##.gg-crowdfunding-subscribe
 ||popup-static.unisender.com/service/loader.js
 posthaus.com.br#?##root > div[offset="0"] > div[class]:has(> div[overflow="auto"] > div[class] > form div[name="newsEmail"])
