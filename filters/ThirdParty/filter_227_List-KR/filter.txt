@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.423.0
+! OriginalVersion: 2022.423.4
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -545,6 +545,8 @@
 ||wwwimageup.angle777899.com/other/atoona/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+ppomppu.co.kr##body .contents .container .topSub-nav
+humoruniv.com##script + div:not([id]) + div[id] div[id] > table
 prod.danawa.com###powerClickProductListArea
 ichannela.com##.sideArea > div[style]:not([class]):not([id])
 entertainpost.com##body > div[style]:not([class])
@@ -560,8 +562,6 @@ ohmynews.com###div10Sticky
 ohmynews.com##div[class^="AD-"]
 ohmynews.com##div[class^="new_ad"]
 mitem.gmarket.co.kr###goodsDetailTab > div[id^="vipPowerClick"][id$="Layer"]
-m.humoruniv.com##div[class*="_ad"][style]:not([id])
-m.humoruniv.com##body form[id][name][action="boardexp/styleofpower.html"] + div[id][style]
 principlesofknowledge.kr###content > .sub_content > .board_view >  div[align="center"]:not([class]):not([id]):not([style])
 piku.co.kr##.top-navigation .wrapper > .row.equal > div[class="col-xs-12 col-sm-6 col-lg-4"][style^="padding:"]
 m.ytn.co.kr##ul > li[class^="ad_"][id^="snsAd_area"]
@@ -872,7 +872,7 @@ mmzone.co.kr##div[id$="_ad"]
 2cpu.co.kr##a[href*="./bbs/banner_link.php?"]
 ruliweb.com##div[id^="adsense_"]
 news.jtbc.joins.com,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,ytn.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
-tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
+algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 m.humoruniv.com##div[id^="ddn_ad_"]
 web.humoruniv.com##html > body#body div[style^="clear:both;"]
 web.humoruniv.com##a[onmouseover="ad_choo_over();"]
@@ -1014,8 +1014,6 @@ community.rememberapp.co.kr#?#div > a.sc-7g611p-0.cAmftz:has(> div > div > div >
 coolenjoy.net#?##sidebar > .tab > a img[src^="https://photo.coolenjoy.net/banner/"]:upward(2)
 quasarzone.com#?#div.right-util-area:has(> div > .flexslider > .flex-viewport > ul > li > a[href*="://prod.danawa.com/"] > img[src*=".quasarzone.com/banner/"])
 etoland.co.kr#?#tbody > tr > td > img[src*="/img/adland01.gif"]:upward(2)
-ppomppu.co.kr#?#tbody > tr.list_notice > td img[src="/images/list_icon_ad.png"]:upward(2)
-ppomppu.co.kr#?#ul#new_bbs_best > li > a.title span[style="color:#1264b1;"]:upward(2)
 m.bobaedream.co.kr#?#div[style^="display:flex;"] > div[id^="div-gpt-ad-"]:upward(1)
 bobaedream.co.kr#?#tr.best > td a[href*="bobaedream.co.kr/event/event_list.php?"]:upward(2)
 orbi.kr#?#a[class="tag"][href^="/list/tag/"][-ext-contains="#제휴사공지"]:upward(li.notice)
@@ -1039,11 +1037,20 @@ m.bunjang.co.kr#?#div:has(> div > div > div:contains(연관상품) > div:has(> d
 tgd.kr#?#div[style^="display:"][style*="flex;"] > div[style^="flex:"]:contains(AD):upward(2)
 m.ppomppu.co.kr#?#.community-board-notice-box > #bbs_inform:has(> ul > li span:contains(AD))
 !
+! Ad-Shield
+loawa.com,ygosu.com,inven.co.kr,tgd.kr,ppss.kr#%#//scriptlet("set-constant", "outerHeight", "0")
+loawa.com,ygosu.com,inven.co.kr#%#//scriptlet("set-constant", "innerHeight", "undefined")
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
-loawa.com,ygosu.com,inven.co.kr,tgd.kr,ppss.kr#%#//scriptlet("set-constant", "outerHeight", "0")
-loawa.com,ygosu.com,inven.co.kr#%#//scriptlet("set-constant", "innerHeight", "undefined")
+fmkorea.com#%#//scriptlet("abort-current-inline-script", "jQuery", "__nbp_ad_callback_read_new")
+humoruniv.com#%#//scriptlet("set-constant", "ch2", "noopFunc")
+humoruniv.com#%#//scriptlet("set-constant", "ch2_submit", "noopFunc")
+humoruniv.com#%#//scriptlet("set-constant", "ch4", "noopFunc")
+humoruniv.com#%#//scriptlet("set-constant", "ch4_submit", "noopFunc")
+humoruniv.com#%#//scriptlet("set-constant", "naver_adpost_ch1", "noopFunc")
+humoruniv.com#%#//scriptlet("set-constant", "naver_adpost_ch2_backfill", "noopFunc")
+humoruniv.com#%#//scriptlet("set-constant", "show_adpost", "noopFunc")
 newspic.kr#%#//scriptlet("abort-on-property-write", "document.cookie", "init")
 jtbc.joins.com#%#//scriptlet("set-constant", "jtbcplayer.config.ad", "false")
 koreapas.com#%#//scriptlet("set-constant", "random_imglink", "noopFunc")
