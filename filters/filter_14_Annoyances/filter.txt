@@ -87,6 +87,9 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/116397
+ais.th##.container_float_shop
+||ais.th/asset_index2020/js/chat_and_shop.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116476
 ||wikipedia.su/muzikfon.php
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116246
@@ -26879,6 +26882,7 @@ abendzeitung-muenchen.de###webpush-app
 .name/?pus=$script,third-party
 .site/?pus=$script,third-party
 !
+||yourbestru.site^$third-party
 /webpush.$domain=haberler.com|haberler.com|haberturk.com|soccer.ru|internet-technologies.ru|sondakika.com|brigitte.de
 ||canzocoos.com^
 ||calculator.codes^$third-party
@@ -29976,6 +29980,7 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 !
 poetschke.de#?#.three-widgets > section:has(> div.widget-inner > div.newsletter)
 poetschke.de##.detailsNewsletter
+onmeda.de##.areas-newsletter
 inforeactor.ru##.image-dzen-link
 bikeathome.com###mp-popupwrapper1
 timeturk.com#?#.sidebar > div.sidebar-widget:has(> form.mail-form)
@@ -35693,7 +35698,7 @@ twgreatdaily.com$$script[tag-content="indexOf|css|fn|this|attr|unselectable|cons
 !### 3rd-party assistants, etc #########################
 !#######################################################
 !
-! Blogroll widgets (sougo RSS)
+! START: Blogroll widgets (sougo RSS)
 ||fukugan.com^$third-party
 ||3site-rss.s3-ap-northeast-1.amazonaws.com^
 ||blogroll.livedoor.net^
@@ -35882,6 +35887,7 @@ rebosoku.com##.toprss
 ! https://github.com/AdguardTeam/AdguardFilters/issues/23120
 mindhack2ch.com#?#.article-body > .ad:has(> .adsbygoogle)
 mindhack2ch.com#?#.article-post-bottom > .rss-article:has(> .rss-article-item)
+! END: Blogroll widgets (sougo RSS)
 !
 ! Suggestion widgets
 ||geoapteka.ua/geowidget/loader/geowidget.min.js
@@ -35929,6 +35935,7 @@ full-count.jp#?#section > div.c-heading:has(> p.c-heading__en:contains(RECOMMEND
 !
 ||partner-widget.vse-sdal.com^
 ||perimeterx.widget.insent.ai^
+||askaunjai.ais.co.th/aunjai-get-files/js/aunjai_widget.js
 ozon.ru##div[data-widget="webFeedbackForm"]
 ||kasikornbank.com/SiteCollectionDocuments/js/LiveChat.js
 ||widget.happyfoxchat.com^
