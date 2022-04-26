@@ -1662,6 +1662,10 @@ teleboy.ch#@#.adWrapper
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/116525
+tagblatt.de#?#.WcmsPage > div.WcmsContainer:has(> div[class] span.headLine:contains(/(Firmen|Traumpartner) aus der Region/))
+tagblatt.de#?#.WcmsPage > div.WcmsContainer:has(> div.ListContainer div[style]:contains(Partner))
+tagblatt.de#?#.FourColumnsContainer > div.row > div[class^="col-"]:has(> div[id^="AdServer_Banner_"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116571
 ingolstadt-today.de#?#main > div.text-center:has(> div[id^="traffective-ad-"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116143
@@ -2818,6 +2822,7 @@ drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan
 ! ##.id-Container--proBEEP
 hallo-muenchen.de,az-online.de,lokalo24.de,rosenheim24.de,kreiszeitung.de,mannheim24.de,merkur.de,oktoberfest-live.de,tz.de##.id-Container--proBEEP
 !
+tagblatt.de##div[id^="AdServer_Banner_"]
 finanzmarktwelt.de##body > div.h-a
 brigitte.de##.page__top-ad-wrapper
 onmeda.de##div[id^="sb"]
