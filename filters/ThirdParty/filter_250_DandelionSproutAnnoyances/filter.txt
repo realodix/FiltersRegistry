@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 23April2022v3-Beta-Compilation
+! OriginalVersion: 26April2022v1-Beta-Compilation
 ! Expires: 3 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
@@ -17383,7 +17383,7 @@ hdfilmcehennemi.film##.poster-imdb
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 23April2022v1
+! OriginalVersion: 26April2022v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -17929,7 +17929,7 @@ $removeparam=afd_number
 $removeparam=subacctid
 $removeparam=subacctname
 ! https://www.travelocity.com/?affcid=travelocity-US.network.cj.8807380.10410828&afflid=02TQG4DUCgWzc1pM8DrkmVg
-$removeparam=affcid
+$removeparam=/affcid/i
 $removeparam=afflid
 ! https://www.thingsremembered.com/?fcref=afl%3AOffers.com%20(Offers.com%2C%20LLC)
 $removeparam=fcref
@@ -19369,7 +19369,7 @@ $removeparam=impression_id,domain=nytimes.com|nytimes3xbfgragh.onion
 ! https://blackfriday.com/stores/black-friday
 $removeparam=CID,domain=burpee.com|chegg.com|express.com|farmandfleet.com|marvel.com|mcafee.com|overstock.com|pepboys.com|puritan.com|rosettastone.com|samsung.com|shutterfly.com|staples.com|teleflora.com|ulta.com|virginatlantic.com|vrbo.com|walgreens.com
 $removeparam=DZID,domain=autoanything.com
-$removeparam=PID,domain=1800getlens.com|ae.com|allmodern.com|applevacations.com|ashford.com|autoanything.com|autodesk.com|bedbathandbeyond.com|booksamillion.com|boscovs.com|buschgardens.com|cheapcaribbean.com|chicos.com|choicehotels.com|ecampus.com|expedia.com|express.com|factoryoutletstore.com|farmandfleet.com|hammacher.com|intuit.com|jockey.com|kennethcole.com|landsend.com|lenovo.com|lens.com|mcafee.com|monoprice.com|overstock.com|perfumania.com|samsung.com|sears.com|sierra.com|soma.com|staples.com|teleflora.com|ulta.com|verizon.com|virginatlantic.com|vistaprint.com|walgreens.com|wayfair.com|whitehouseblackmarket.com|wwe.com|yahoo.com|zchocolat.com|hawaiianairlines.com|dermstore.com
+$removeparam=PID,domain=1800getlens.com|ae.com|allmodern.com|applevacations.com|ashford.com|autoanything.com|autodesk.com|bedbathandbeyond.com|booksamillion.com|boscovs.com|buschgardens.com|cheapcaribbean.com|chicos.com|choicehotels.com|ecampus.com|expedia.com|express.com|factoryoutletstore.com|farmandfleet.com|hammacher.com|intuit.com|jockey.com|kennethcole.com|landsend.com|lenovo.com|lens.com|mcafee.com|overstock.com|perfumania.com|samsung.com|sears.com|sierra.com|soma.com|staples.com|teleflora.com|ulta.com|verizon.com|virginatlantic.com|vistaprint.com|walgreens.com|wayfair.com|whitehouseblackmarket.com|wwe.com|yahoo.com|zchocolat.com|hawaiianairlines.com|dermstore.com
 $removeparam=SID,domain=ae.com|anntaylor.com|applevacations.com|ashford.com|autodesk.com|bedbathandbeyond.com|bhphotovideo.com|booksamillion.com|cheapcaribbean.com|chegg.com|chggtrx.com|ecampus.com|expedia.com|express.com|intuit.com|jockey.com|loft.com|mcafee.com|norton.com|overstock.com|perfumania.com|samsung.com|sierra.com|staples.com|taskrabbit.com|teleflora.com|verizon.com|vistaprint.com|walgreens.com|wwe.com|yahoo.com|zchocolat.com|zulily.com
 $removeparam=adref,domain=ancestry.*
 $removeparam=acid,domain=lenovo.com
@@ -20123,6 +20123,16 @@ $removeparam=response_type,domain=udemy.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2597385
 $document,removeparam=_clde
 $document,removeparam=_cldee
+! https://fi.hotels.com/ho134443/?wapa6=&sub_publisher=5350479&sub_site=100415378&sub_ad=13951578
+! http://no.grupper.hotels.com/GroupForm.cfm?locale=no_NO&intlid=OTHER+%3A%3A+header_main_section&kw=header
+$removeparam=intlid,domain=hotels.com
+$removeparam=kw,domain=hotels.com
+$removeparam=sub_ad,domain=hotels.com
+$removeparam=sub_site,domain=hotels.com
+$removeparam=sub_publisher,domain=hotels.com
+$removeparam=wapa6,domain=hotels.com
+! https://www.ebookers.com/lp/deals/sun-and-beach?rfrr=editorial.Sun_&%20beach.click
+$removeparam=rfrr,domain=ebookers.*
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
@@ -20742,6 +20752,7 @@ bloombergquint.com#%#//scriptlet('ubo-aopr.js', 'getSelection')
 /plugins/wp-copy-protect-with-color-design/*
 ! Prevents sites from removing the ability to copy text
 respublika.lt#$#[class^=com_] { user-select: unset !important; -webkit-user-select: unset !important; -moz-user-select: unset !important }
+hirunews.lk,ada.lk#$#body { user-select: unset !important; -webkit-user-select: unset !important; -moz-user-select: unset !important }
 ! Removes strange blurring of comments on non-Nordic sites
 respublika.lt#$##news_comment_container { filter: none !important }
 ! Prevents sites from forcibly always opening pages in new tabs
@@ -20749,6 +20760,7 @@ respublika.lt#$##news_comment_container { filter: none !important }
 autoplius.lt#%#//scriptlet('ubo-ra.js', 'target', '[target="_blank"]', 'stay')
 ! Fake loading screens
 hackintoshshop.com##body > div:first-of-type[style^=background-color][id]
+mppdainik.com###preloader
 ! (From "Nordic Filters")
 nettavisen.no###topover-loader
 nettavisen.no###topover

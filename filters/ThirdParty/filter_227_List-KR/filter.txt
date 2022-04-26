@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.425.4
+! OriginalVersion: 2022.426.2
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -994,7 +994,7 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
-namu.wiki#?#article div:not([class]) div:not([class]) ~ div[class]:not([id="toc"]) > div[class]:has(div:matches-css(display: none)):not(:has(> div:matches-css(overflow-x: hidden)))
+namu.wiki#?#article div:not([class]) div:not([class]) ~ div[class]:not([id="toc"]) > div[class]:has(div:matches-css(display: none)):has(*:matches-css(display: flex)):not(:has(div:matches-css(list-style-type: inherit)))
 namu.wiki#?#div[class] > div[id]:not([class]):has(> iframe[id^="google_ads_"])
 browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap > .box__component:has(button[id^="buttonItemCardAdsLayer"][class="button__ads-layer"])
 browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap:has(> .box__component-bottom-da-banner)
@@ -1057,6 +1057,7 @@ loawa.com,ygosu.com,inven.co.kr#%#//scriptlet("set-constant", "innerHeight", "un
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+post.naver.com,blog.naver.com,cafe.naver.com#%#//scriptlet("set-constant", "adScriptInitialized", "true")
 fmkorea.com#%#//scriptlet("abort-current-inline-script", "jQuery", "__nbp_ad_callback_read_new")
 humoruniv.com#%#//scriptlet("set-constant", "ch2", "noopFunc")
 humoruniv.com#%#//scriptlet("set-constant", "ch2_submit", "noopFunc")
@@ -1136,12 +1137,15 @@ tistory.com,sajuplus.net#%#//scriptlet("set-constant", "checkAds", "noopFunc")
 ||ad.smartmediarep.com/NetInsight/video/$redirect=nooptext,domain=mbn.co.kr
 !#endif
 !#if (!adguard_app_ios && !adguard_ext_safari)
+! Ad-Shield
 $image,redirect-rule=32x32-transparent.png,domain=ppss.kr
 $subdocument,redirect-rule=noopframe,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 /\/[0-9a-zA-Z\_?\-]{19,}\.(?!png|jpg|gif|jpeg|html|htm|txt)/$document,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 $script,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 $image,redirect-rule=1x1-transparent.gif,domain=ygosu.com|tgd.kr|inven.co.kr|loawa.com
 $xmlhttprequest,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
+!
+||ssl.pstatic.net/adimg3.search/adpost/js/ad.js$redirect=noopjs,domain=post.naver.com|blog.naver.com|cafe.naver.com
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication-adsbygoogle
 ||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon-apstag
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt
@@ -1169,6 +1173,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||tv.kakao.com/embed/player/image/ads.png$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 @@||videoads.kakao.com/adserver/api/v2/vmap$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
+@@||ssl.pstatic.net/adimg3.search/adpost/js/ad.js$domain=post.naver.com|blog.naver.com|cafe.naver.com
 @@||tistory.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=noonnu.cc
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ko.ff14angler.com
