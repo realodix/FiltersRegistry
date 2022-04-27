@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.427.3
+! OriginalVersion: 2022.427.4
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -977,7 +977,7 @@ hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellv
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
-!
+! Ad-Shield
 ppss.kr,loawa.com#$#div[style*="text-align:"][style*="position:"] { filter: opacity(0) !important; }
 loawa.com#$#img[style="height: auto;"] { filter: opacity(0) !important; }
 !
@@ -1001,7 +1001,6 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
-namu.wiki#?#div ~ div[class]:has(a[href^="#s-"]) ~ div div[class*="+"]:nth-of-type(1) > table[class*=" "]:not([id]):not([style]):not([colspan])
 namu.wiki#?#div[class] > div[id]:not([class]):has(> iframe[id^="google_ads_"])
 browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap > .box__component:has(button[id^="buttonItemCardAdsLayer"][class="button__ads-layer"])
 browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap:has(> .box__component-bottom-da-banner)
@@ -1045,6 +1044,7 @@ orbi.kr#?#a[class="tag"][href^="/list/tag/"][-ext-contains="#제휴사공지"]:u
 !
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+namu.wiki#?#article div[class] ~ div[class]:has(+ div:not([class])):not(:has(span:matches-attr("id"="/fn-/"))):not(:has(span[id^="s-"])):not(:has(time[datetime]))
 browse.gmarket.co.kr#?#div[module-design-id].box__module-wrap:has(button[id^="buttonItemCardAdsLayer"][class="button__ads-layer"]):has(.box__itemcard-header > h3:contains(먼저 둘러보세요))
 newreop.com#?#.app-board-section > ul.app-board-template-list > li.notice:has(> a[href] > span > font[color]:contains(AD))
 instiz.net#?#.responsive_main > div[style] > .grouping_title:has(> div[style][class] > div[style]:contains(광고))
