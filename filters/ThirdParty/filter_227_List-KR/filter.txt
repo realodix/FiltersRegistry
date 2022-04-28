@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.428.0
+! OriginalVersion: 2022.428.4
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -9,6 +9,8 @@
 !
 ! Version must be UTC format.
 !
+||shukriya90.com^
+||trafficforce.com^
 ||adbc.io^
 ||realssp.co.kr^
 ||bizspring.net^
@@ -277,6 +279,8 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||tcafe2a.com/ad/
+||tistory2.daumcdn.net/tistory/5193955/skin/images/cumpc.js
 ||hompgo.synology.me/banner/$domain=youthassembly.kr
 ||happycampus.com/images/hcBanner/
 ||sportalkorea.com/ad_new/ad_close.png
@@ -961,6 +965,7 @@ manatoki129.net,manatoki130.net,manatoki131.net,manatoki132.net,manatoki133.net,
 103.204.13.68##.product-banner
 103.204.13.68##div[class^="mobile-m ad720_"]
 hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellven1"]
+@@||ssl.pstatic.net/adimg3.search/adpost/js/ad.js$domain=naver.com
 @@/^https:\/\/www\.ehanex\.com\/images\/main\/[a-z]{2}_ad\.gif$/
 @@||weekly.chosun.com/images/banner/colm$image
 @@||adimg3.search.naver.net/adpost/adpost_show_ads_min.js$domain=search.danawa.com
@@ -1064,7 +1069,8 @@ loawa.com,ygosu.com,inven.co.kr#%#//scriptlet("set-constant", "innerHeight", "un
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
-post.naver.com,blog.naver.com,cafe.naver.com#%#//scriptlet("set-constant", "adScriptInitialized", "true")
+naver.com#%#//scriptlet("set-constant", "getAdcrUrl", "")
+lover9.net#%#//scriptlet("abort-on-property-read", "goPage")
 fmkorea.com#%#//scriptlet("abort-current-inline-script", "jQuery", "__nbp_ad_callback_read_new")
 humoruniv.com#%#//scriptlet("set-constant", "ch2", "noopFunc")
 humoruniv.com#%#//scriptlet("set-constant", "ch2_submit", "noopFunc")
@@ -1125,6 +1131,7 @@ googleads.g.doubleclick.net###abgc
 ! AdGlare Ad Server
 luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 !
+||a.realsrv.com/video-outstream.js$redirect=noopjs,domain=lover9.net
 ||googleads.g.doubleclick.net/pagead/ads?*&crui=$redirect=noopmp4-1s,domain=laftel.net
 webtv.dothome.co.kr##.adblock-on
 persnacons.tistory.com#@#.topAD
@@ -1133,7 +1140,6 @@ noonnu.cc#%#//scriptlet("abort-on-property-read", "localStorage.getItem", "adBlo
 exey.io,ko.ff14angler.com#@#ins.adsbygoogle
 webtv.dothome.co.kr,lover9.net#@#.adsbygoogle
 lover9.net#$#.modal { position: unset !important; }
-lover9.net#%#//scriptlet("abort-on-property-read", "goPage")
 lover9.net#%#//scriptlet("abort-current-inline-script", "setTimeout", "/self\.close/")
 ||adblockanalytics.com^$xmlhttprequest,redirect=nooptext,domain=1412.rest
 ||1412.rest/addons/*/adblockDetector.js
@@ -1152,7 +1158,6 @@ $script,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.c
 $image,redirect-rule=1x1-transparent.gif,domain=ygosu.com|tgd.kr|inven.co.kr|loawa.com
 $xmlhttprequest,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 !
-||ssl.pstatic.net/adimg3.search/adpost/js/ad.js$redirect=noopjs,domain=post.naver.com|blog.naver.com|cafe.naver.com
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication-adsbygoogle
 ||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon-apstag
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt
@@ -1180,7 +1185,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||tv.kakao.com/embed/player/image/ads.png$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 @@||videoads.kakao.com/adserver/api/v2/vmap$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
-@@||ssl.pstatic.net/adimg3.search/adpost/js/ad.js$domain=post.naver.com|blog.naver.com|cafe.naver.com
+@@||a.realsrv.com/video-outstream.js$domain=lover9.net
 @@||tistory.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=noonnu.cc
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ko.ff14angler.com
