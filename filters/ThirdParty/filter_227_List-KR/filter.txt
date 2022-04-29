@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.429.0
+! OriginalVersion: 2022.429.11
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -279,6 +279,16 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||mdtoday.co.kr/news/adlink.html$document
+||mdtoday.co.kr/support/_updata/banner
+||thespike.co.kr/news/adlink.html$document
+||thespike.co.kr/support/_updata/banner
+||hobbyen.co.kr/support/_updata/banner
+||iframe.inews24.com/adm/
+||iframe.joynews24.com/adm/
+||usjournal.kr/support/_updata/banner
+||socialvalue.kr/news/adlink.html$document
+||socialvalue.kr/support/_updata/banner
 ||tcafe2a.com/ad/
 ||tistory2.daumcdn.net/tistory/5193955/skin/images/cumpc.js
 ||hompgo.synology.me/banner/$domain=youthassembly.kr
@@ -558,9 +568,13 @@
 ||wwwimageup.angle777899.com/other/atoona/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+www.gmarket.co.kr###skip-navigation-container > .section__main-ad
+www.gmarket.co.kr###skip-navigation-container > .section__main-power
+www.gmarket.co.kr##.box__head-ad
+inews24.com,joynews24.com##container[style~="width:100%;"][style~="position:relative;"]
 youthassembly.kr##.w_article > div[style]:not([id]):not([class]):not([align])
 youthassembly.kr##div[itemprop="articleBody"].main_text > div[style]:not([id]):not([class]):not([align])
-happycampus.com##div[id^="banner"]
+usjournal.kr,socialvalue.kr,happycampus.com##div[id^="banner"]
 happycampus.com##div[id^="power_link_"]
 sportalkorea.com###Contents > #sideBox > div[style]
 sportalkorea.com##p[class^="ad_"]
@@ -732,7 +746,7 @@ ohmynews.com##div[class^="m_ad"]
 ohmynews.com##iframe[src*="//ojsimg.ohmynews.com/"][src*="_ad_rolling.htm"]
 dnews.co.kr##img[src*="//image.dnews.co.kr/uhtml/images/banner/"]
 munhwa.com##img[src*="//image.munhwa.com/www/banner/"]
-news.jtbc.joins.com,etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
+socialvalue.kr,news.jtbc.joins.com,etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
 mk.co.kr##div[class^="bn_sec"]
 m.ilbe.com##article.cutin-banner
 bloomingbit.io##.promotion
@@ -786,7 +800,7 @@ mule.co.kr##div[class^="section-"][class$="-topad"]
 mule.co.kr##div[class^="section-"][class$="-smallad"]
 mule.co.kr##div[class^="section-"][class$="ad-pc"]
 mule.co.kr##div.section-leftmiddle-bottommiddle.cf
-entertainpost.com,m.moneys.mt.co.kr,basketkorea.com,m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com,sports.chosun.com##div[class^="ad"]
+thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m.moneys.mt.co.kr,basketkorea.com,m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com,sports.chosun.com##div[class^="ad"]
 postshare.co.kr##div.warp > a[href*="//someblossom.co.kr/product/detail.html?"]
 postshare.co.kr##div[id^="foin_"]
 principlesofknowledge.kr,postshare.co.kr###hd_pop
@@ -973,6 +987,8 @@ hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellv
 @@||t1.daumcdn.net/adfit/static/kp.js$domain=pindirectshop.com|dongbanmall.com
 @@||ssl.pstatic.net/adimg3.search/adpost/js/adpost_show_ads_v2.min.js$domain=m.clien.net|m.danawa.com
 !#if (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_chromium || adguard_ext_edge)
+@@||thumbnail*.coupangcdn.com/thumbnails/$stealth,image
+@@||asset*.coupangcdn.com^$stealth,image
 @@||cmt.kfani.app/comments/iframe.php$stealth,third-party,domain=mobikf.ncctvgroup.com
 @@||t1.daumcdn.net/cafeattach/$stealth
 @@||pstatic.net^$stealth,media,image,other
@@ -1006,12 +1022,13 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
+namu.wiki#?#article div[class] > div[id]:not([class]):not(:has(> *))
+namu.wiki#?#div:not([class]) > div[class]:has(h2 + div) ~ div[class]
 namu.wiki#?#div[class] > div[id]:not([class]):has(> iframe[id^="google_ads_"])
 browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap > .box__component:has(button[id^="buttonItemCardAdsLayer"][class="button__ads-layer"])
 browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap:has(> .box__component-bottom-da-banner)
 browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap:has(> .box__component-sponsor-link)
 m.moneys.mt.co.kr#?#.one_line_article > ul.list > li.item:has(> iframe[src*="//adgrp1.ad4989.co.kr/"])
-namu.wiki#?#article div[class] > div[id]:not([class]):not(:has(> *))
 kr-weathernews.com#?#body > article#content > article.block:has(ul#life_slider)
 search.tmon.co.kr#?#section.search_deallist > .deallist_wrap > ul > li[class]:has(> a[href*="//display.admonseller.com/"].anchor)
 namu.wiki#?#aside div[class][id] > div[id]:not([class]):not(:has(> *))
@@ -1049,7 +1066,6 @@ orbi.kr#?#a[class="tag"][href^="/list/tag/"][-ext-contains="#제휴사공지"]:u
 !
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
-namu.wiki#?#article div[class] ~ div[class]:has(+ div:not([class])):not(:has(span:matches-attr("id"="/fn-/"))):not(:has(span[id^="s-"])):not(:has(time[datetime])):not(:has(a[class][href="https://board.namu.wiki/b/free"])):not(:has(+ div[style]:not([class]):matches-css(display: flex)))
 browse.gmarket.co.kr#?#div[module-design-id].box__module-wrap:has(button[id^="buttonItemCardAdsLayer"][class="button__ads-layer"]):has(.box__itemcard-header > h3:contains(먼저 둘러보세요))
 newreop.com#?#.app-board-section > ul.app-board-template-list > li.notice:has(> a[href] > span > font[color]:contains(AD))
 instiz.net#?#.responsive_main > div[style] > .grouping_title:has(> div[style][class] > div[style]:contains(광고))
