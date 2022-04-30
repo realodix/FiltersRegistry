@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 30April2022v6
+! OriginalVersion: 30April2022v7
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -46,6 +46,9 @@ www.suomi24.fi#$#div[width="50%"] + div[width="50%"] + [width="50%"] + div[class
 ! Trick to overcome blinking issues caused by a slow procedural
 ampparit.com##[class="sidebox-header"]
 ampparit.com#$?#.sidebox-header:not(:has-text(/Nettiauto|Nettix/)) { display: flex !important }
+karjalainen.fi#@#.breaking-news-container:has-text(mainos:)
+karjalainen.fi##.breaking-news-container
+karjalainen.fi#$?#.breaking-news-container:not(:has-text(mainos:)) { display: flex !important }
 ! HTML filters for Firefox
 ! -----SPECIFIC FILTERS END-----
 ! -----NETWORK FILTERS-----

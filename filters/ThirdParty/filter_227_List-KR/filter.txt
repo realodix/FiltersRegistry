@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.430.1
+! OriginalVersion: 2022.430.3
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -139,6 +139,9 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||ads.tapzin.com^
+||advod.sbs.co.kr^
+||adservice.sbs.co.kr^
 ||cpa.greenp.kr^
 ||api.valista.io^
 ||api.linkmine.co.kr^
@@ -568,6 +571,7 @@
 ||wwwimageup.angle777899.com/other/atoona/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+m.danawa.com##.goods-list__ad
 www.gmarket.co.kr###skip-navigation-container > .section__main-ad
 www.gmarket.co.kr###skip-navigation-container > .section__main-power
 gmarket.co.kr##.box__head-ad
@@ -1084,6 +1088,7 @@ algumon.com,loawa.com,ygosu.com,inven.co.kr,tgd.kr,ppss.kr#%#//scriptlet("json-p
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+m.danawa.com#%#//scriptlet("set-constant", "DANAWA_MOBILE_AD_MANAGER", "emptyObj")
 naver.com#%#//scriptlet("set-constant", "getAdcrUrl", "")
 lover9.net#%#//scriptlet("abort-on-property-read", "goPage")
 fmkorea.com#%#//scriptlet("abort-current-inline-script", "jQuery", "__nbp_ad_callback_read_new")
@@ -1238,6 +1243,7 @@ op.gg,etoland.co.kr,sports.donga.com,mlbpark.donga.com,ppss.kr,ygosu.com,inven.c
 ! If a website, mobile version, can be reproduced on a desktop/laptop browser with AdGuard for Windows/AdGuard Browser Extension,
 ! please move into specific.txt.
 !
+@@||m.dcinside.com/movie/$stealth,app=com.dcinside.app.android
 !#endif
 !#if (adguard_app_ios)
 !
