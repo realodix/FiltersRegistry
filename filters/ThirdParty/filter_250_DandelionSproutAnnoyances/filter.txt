@@ -15949,7 +15949,7 @@ fileinfo.com#?#.top:-abp-has(a[href*="/windows_file_viewer"])
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! This is an extension file, not an independent list.
-! Extension file's version: 24March2022v1-Extension
+! Extension file's version: 30April2022v1-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -16025,6 +16025,12 @@ twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div
 !! Reduces the background opacity of the login overlay
 www.facebook.com,www.beta.facebook.com,b-www.facebook.com,secure.facebook.com,pixel.facebook.com,error.facebook.com#$#div[class^=__fb-][class*="-mode "] > div[class*=" "]:first-of-type:nth-last-of-type(2) > div[class]:only-of-type { min-height: 0 !important; height: 0 !important }
 www.facebook.com,www.beta.facebook.com,b-www.facebook.com,secure.facebook.com,pixel.facebook.com,error.facebook.com#$#div[class^=__fb-][class*="-mode "] > div[class*=" "]:first-of-type:nth-last-of-type(2) > div[class]:only-of-type > div[class]:first-of-type { height: 0 !important }
+! SegmentFault
+!! https://github.com/DandelionSprout/adfilt/issues/581
+segmentfault.com##.modal:has-text(你知道吗？)
+segmentfault.com##.modal-backdrop:has(~ .modal:has-text(你知道吗？))
+segmentfault.com#$#.modal-open { overflow: auto !important; padding-right: 0 !important; }
+segmentfault.com#$?#.modal-open [style]:is([data-padding-right], [data-margin-right]) { padding-right: 0 !important; margin-right: 0 !important; }
 ! ——————————————————————————————————————————————————————————————————————
 ! Entries below are fixed in other lists that are included in uBO as of the 2nd of March 2019, but are also in this list to serve minimal-setup users.
 !! Removing the blurring of random Pinterest images ↪️📛 (Fixed in "uBlock Filters - Annoyances", except for the Redirector portion of it)
@@ -18486,7 +18492,7 @@ $removeparam=dchild
 $~xmlhttprequest,removeparam=qid,domain=~ebay.*|~zhidao.baidu.com
 ||amazon.$removeparam=sr
 ! https://www.amazon.co.uk/dp/B08K443FBQ/ref=asc_df_B08K443FBQ1606003200000/?creative=22374&creativeASIN=B08K443FBQ (28/11/2020)
-$removeparam=creative
+||amazon.$removeparam=creative
 $removeparam=creativeASIN
 ! https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-max-instance-lifetime.html?sc_icampaign=Adoption_Campaign_pac-optimize-2020-console-1-asg-max&sc_ichannel=ha&sc_icontent=awssm-5270&sc_ioutcome=Enterprise_Digital_Marketing&sc_iplace=console-ec2autoscaling_infobar&trk=ha_a121p21423yfe1DAD~ha_awssm-5270&trkCampaign=pac-edm-2019-optimize-autoscaling-instance-asg (28/02/2021)
 $removeparam=/^sc_i/
