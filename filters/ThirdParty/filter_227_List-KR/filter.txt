@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.430.3
+! OriginalVersion: 2022.501.3
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -983,6 +983,8 @@ manatoki129.net,manatoki130.net,manatoki131.net,manatoki132.net,manatoki133.net,
 103.204.13.68##.product-banner
 103.204.13.68##div[class^="mobile-m ad720_"]
 hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellven1"]
+x86.co.kr#@#.download_ad
+@@/^https:\/\/ad-img\.ebaykorea\.com\/ADS\/Contents_\/[0-9_]{19}\/[a-z0-9]{16}\.[A-Za-z]{3,4}$/$domain=gmarket.co.kr
 @@||ssl.pstatic.net/adimg*.search/adpost/js/ad.js$domain=naver.com
 @@/^https:\/\/www\.ehanex\.com\/images\/main\/[a-z]{2}_ad\.gif$/
 @@||weekly.chosun.com/images/banner/colm$image
@@ -1026,7 +1028,7 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
-namu.wiki#?#article div:not([class]) > div[class]:has(div[class] + div:not([class])) ~ div[class]
+namu.wiki#?#article div:not([class]) > div[class]:has(div[id*="category-"] > h1, div[id*="category-"] > h2, div[class] + div[style]:not([class])) ~ div[class]
 namu.wiki#?#article div[class] > div[id]:not([class]):not(:has(> *))
 namu.wiki#?#div[class] > div[id]:not([class]):has(> iframe[id^="google_ads_"])
 browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap > .box__component:has(button[id^="buttonItemCardAdsLayer"][class="button__ads-layer"])
@@ -1149,7 +1151,7 @@ googleads.g.doubleclick.net###abgc
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xmlhttprequest,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 @@$generichide,domain=ygosu.com|tgd.kr|inven.co.kr
 ! AdGlare Ad Server
-luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
+x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 !
 ||a.realsrv.com/video-outstream.js$redirect=noopjs,domain=lover9.net
 ||googleads.g.doubleclick.net/pagead/ads?*&crui=$redirect=noopmp4-1s,domain=laftel.net
@@ -1205,6 +1207,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||tv.kakao.com/embed/player/image/ads.png$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 @@||videoads.kakao.com/adserver/api/v2/vmap$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
+@@||x86.co.kr^$generichide
 @@||a.realsrv.com/video-outstream.js$domain=lover9.net
 @@||tistory.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=noonnu.cc
