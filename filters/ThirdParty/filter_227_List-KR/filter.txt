@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.502.3
+! OriginalVersion: 2022.502.9
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -139,6 +139,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||powerclick.about.co.kr^
 ||ads.tapzin.com^
 ||advod.sbs.co.kr^
 ||adservice.sbs.co.kr^
@@ -212,6 +213,7 @@
 ||adscdn.orbi.kr^
 ||ads.orbi.kr^
 ||ads.mtgroup.kr^
+##iframe[src*="//tab2.clickmon.co.kr/"]
 ##a[href*="//ad.planbplus.co.kr/"]
 ##iframe[src*="//api.ezadsystem.com/"]
 ##iframe[src*="//ad.a-ads.com/"]
@@ -282,6 +284,10 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||danawa.com/jehu/selectNBP.json
+/^http:\/\/simage\.auction\.co\.kr\/itemimage\/[0-9a-z]{2}\/[0-9a-z]{2}\/[0-9a-z]{2}\/[0-9a-z]{8,11}\.[a-z]{3,4}$/$domain=prod.danawa.com
+||www.danawa.com/NBP/powerLink.php
+||zicf.inven.co.kr/RealMedia/ads/
 ||firebasestorage.googleapis.com/v0/b/kimchi-premium.appspot.com/o/banner-imgs
 ||mdtoday.co.kr/news/adlink.html$document
 ||mdtoday.co.kr/support/_updata/banner
@@ -572,6 +578,8 @@
 ||wwwimageup.angle777899.com/other/atoona/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+auth.danawa.com###loginBottomBanner
+prod.danawa.com###ebayPowerClickBottomArea
 kimpga.com##div.max-w-screen-lg > .relative > div > div[class=""]:nth-child(1)
 m.danawa.com##.goods-list__ad
 www.gmarket.co.kr###skip-navigation-container > .section__main-ad
@@ -912,8 +920,8 @@ mmzone.co.kr###main_premium_spon_block
 mmzone.co.kr##div[id$="_ad"]
 2cpu.co.kr##a[href*="./bbs/banner_link.php?"]
 ruliweb.com##div[id^="adsense_"]
-sportalkorea.com,news.jtbc.joins.com,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,ytn.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
-kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
+m.danawa.com,sportalkorea.com,news.jtbc.joins.com,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,ytn.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
+m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 m.humoruniv.com##div[id^="ddn_ad_"]
 web.humoruniv.com##html > body#body div[style^="clear:both;"]
 web.humoruniv.com##a[onmouseover="ad_choo_over();"]
@@ -996,7 +1004,7 @@ x86.co.kr#@#.download_ad
 @@||ssl.pstatic.net/adimg3.search/adpost/js/adpost_show_ads_v2.min.js$domain=m.clien.net|m.danawa.com
 !#if (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_chromium || adguard_ext_edge)
 @@||thumbnail*.coupangcdn.com/thumbnails/$stealth,image
-@@||asset*.coupangcdn.com^$stealth,image
+@@||asset*.coupangcdn.com^$stealth
 @@||cmt.kfani.app/comments/iframe.php$stealth,third-party,domain=mobikf.ncctvgroup.com
 @@||t1.daumcdn.net/cafeattach/$stealth
 @@||pstatic.net^$stealth,media,image,other
@@ -1093,6 +1101,8 @@ algumon.com,loawa.com,ygosu.com,inven.co.kr,tgd.kr,ppss.kr#%#//scriptlet("json-p
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+auth.danawa.com#%#//scriptlet("abort-on-property-read", "$", "#loginAccountRelatedButton")
+m.danawa.com#%#//scriptlet("abort-on-property-read", "callNbpData", "DANAWA_MOBILE_AD_MANAGER")
 m.danawa.com#%#//scriptlet("set-constant", "DANAWA_MOBILE_AD_MANAGER", "emptyObj")
 naver.com#%#//scriptlet("set-constant", "getAdcrUrl", "")
 lover9.net#%#//scriptlet("abort-on-property-read", "goPage")
@@ -1135,24 +1145,24 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ||tv.kakao.com/embed/player/image/ads.png$redirect=32x32-transparent.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 ||videoads.kakao.com/adserver/api/v2/vmap$redirect=noopvmap-1.0,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 ! Ad-Shield
-googleads.g.doubleclick.net##html
-@@||zicf.inven.co.kr/RealMedia/ads/Creatives/default/empty.gif$image,domain=inven.co.kr|~m.inven.co.kr
-@@||zicf.inven.co.kr/RealMedia/ads/adstream_sx.ads/$subdocument,domain=inven.co.kr|~zicf.inven.co.kr|~m.inven.co.kr
-zicf.inven.co.kr##html
-@@||pagead2.googlesyndication.com/getconfig/sodar?$xmlhttprequest,domain=loawa.com
-adver5.clickmon.co.kr##html
-googleads.g.doubleclick.net###google-center-div
-googleads.g.doubleclick.net###abgc
-@@||googleads.g.doubleclick.net/pagead/$xmlhttprequest,subdocument,domain=loawa.com
-@@||clickmon.co.kr/ad_img/$subdocument,domain=ygosu.com
-@@||ad.xc.netinsight.co.kr/xc/h/$subdocument,domain=ygosu.com
-@@||api.dable.io/plugin/services/ppss.kr/prefs2?$script,domain=ppss.kr
-@@||tab2.clickmon.co.kr$script,domain=ygosu.com
-@@||static.dable.io/dist/plugin.min.js$script,xmlhttprequest,domain=ppss.kr|ygosu.com|inven.co.kr|loawa.com
-@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/$script,domain=loawa.com|ppss.kr
-@@||adservice.google.*/adsid/integrator.js?domain=loawa.com$script,domain=loawa.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xmlhttprequest,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
-@@$generichide,domain=ygosu.com|tgd.kr|inven.co.kr
+! googleads.g.doubleclick.net##html
+! @@||zicf.inven.co.kr/RealMedia/ads/Creatives/default/empty.gif$image,domain=inven.co.kr|~m.inven.co.kr
+! @@||zicf.inven.co.kr/RealMedia/ads/adstream_sx.ads/$subdocument,domain=inven.co.kr|~zicf.inven.co.kr|~m.inven.co.kr
+! zicf.inven.co.kr##html
+! @@||pagead2.googlesyndication.com/getconfig/sodar?$xhr,domain=loawa.com
+! adver5.clickmon.co.kr##html
+! googleads.g.doubleclick.net###google-center-div
+! googleads.g.doubleclick.net###abgc
+! @@||googleads.g.doubleclick.net/pagead/$xhr,subdocument,domain=loawa.com
+! @@||clickmon.co.kr/ad_img/$subdocument,domain=ygosu.com
+! @@||ad.xc.netinsight.co.kr/xc/h/$subdocument,domain=ygosu.com
+! @@||api.dable.io/plugin/services/ppss.kr/prefs2?$script,domain=ppss.kr
+! @@||tab2.clickmon.co.kr$script,domain=ygosu.com
+! @@||static.dable.io/dist/plugin.min.js$script,xhr,domain=ppss.kr|ygosu.com|inven.co.kr|loawa.com
+! @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/$script,domain=loawa.com|ppss.kr
+! @@||adservice.google.*/adsid/integrator.js?domain=loawa.com$script,domain=loawa.com
+! @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xhr,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
+! @@$generichide,domain=ygosu.com|tgd.kr|inven.co.kr
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 !
