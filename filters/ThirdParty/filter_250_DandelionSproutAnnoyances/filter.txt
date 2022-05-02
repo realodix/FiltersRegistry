@@ -6,7 +6,7 @@
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
 ! What this broad compilation doesn't block: Newsletters, cookie banners, social media links to company pages
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-! OriginalVersion: 01April2022v1
+! OriginalVersion: 02May2022v2
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -407,9 +407,10 @@ speedtest.net##.mobile-pretest
 instagram.com##main > div[class$="     "]:first-of-type + section:last-of-type
 nova.rs##.banner-footer
 180.no##.ad-fallback
-!#if env_mobile
-twitter.com###layers > div:nth-of-type(2):last-of-type
-!#endif
+##.gh-app-banner:not(html, body)
+playpilot.com##.android-prompt
+! (https://github.com/AdguardTeam/AdguardFilters/issues/116903)
+!!!twitter.com###layers > div:nth-of-type(2):last-of-type
 ! Pinterest
 ##div[data-test-id$=InterstitialUpsell]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/105227
@@ -15949,7 +15950,7 @@ fileinfo.com#?#.top:-abp-has(a[href*="/windows_file_viewer"])
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! This is an extension file, not an independent list.
-! Extension file's version: 30April2022v1-Extension
+! Extension file's version: 02May2022v1-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -16018,9 +16019,12 @@ chronicle.com#$#.Page-body { overflow: auto !important; height: 100% !important 
 ! Twitter
 !! Re-enables scrolling after closing the "Log in to view more" prompt on users' timelines
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#$#html { overflow: unset !important }
+!#if !env_mobile
 !! Removes an uncloseable prompt overlay
 !! Moved to here from the main file due to https://github.com/DandelionSprout/adfilt/issues/557
+!! Can't be used on physical phones due to https://github.com/AdguardTeam/AdguardFilters/issues/116903
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:-abp-has(> div[data-testid])
+!#endif
 ! Facebook
 !! Reduces the background opacity of the login overlay
 www.facebook.com,www.beta.facebook.com,b-www.facebook.com,secure.facebook.com,pixel.facebook.com,error.facebook.com#$#div[class^=__fb-][class*="-mode "] > div[class*=" "]:first-of-type:nth-last-of-type(2) > div[class]:only-of-type { min-height: 0 !important; height: 0 !important }
@@ -17389,7 +17393,7 @@ hdfilmcehennemi.film##.poster-imdb
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 01May2022v1
+! OriginalVersion: 02May2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -17725,7 +17729,7 @@ $removeparam=refer_code
 ! https://github.com/AdguardTeam/AdguardFilters/issues/113875
 $removeparam=AFID,domain=~chggtrx.com|~state.gov
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1412160
-$removeparam=loc,domain=~geizhals.*|~ebay.*|~myanimelist.net
+$removeparam=loc,domain=~geizhals.*|~ebay.*|~myanimelist.net|~microsoft.com
 $removeparam=acampID
 $removeparam=pj_creativeid
 $removeparam=pj_publisherid
