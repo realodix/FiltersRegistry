@@ -30,6 +30,10 @@ yandex.*##.mini-suggest__item:has(> a[href^="http://"]):remove()
 ||yastatic.net/*/front-maps-static/*/chunks/promo/$empty
 ! Rule "||yastatic.net/yandex-video-player-iframe-api-bundles-stable/*?adsdk-try=$empty" converted to: "||yastatic.net/yandex-video-player-iframe-api-bundles-stable/*?adsdk-try=$redirect=nooptext"
 ||yastatic.net/yandex-video-player-iframe-api-bundles-stable/*?adsdk-try=$empty
+! Rule "~yandex.net,yandex.*#?#body.b-page > div[style="position:absolute;left:-10px;top:0;width:1px;height:1px;overflow:hidden;"] div:style(display: block ! important)" converted to: "~yandex.net,yandex.*#$?#body.b-page > div[style="position:absolute;left:-10px;top:0;width:1px;height:1px;overflow:hidden;"] div { display: block ! important }"
+~yandex.net,yandex.*#?#body.b-page > div[style="position:absolute;left:-10px;top:0;width:1px;height:1px;overflow:hidden;"] div:style(display: block ! important)
+! Rule "~yandex.net,yandex.*#?#body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div:style(display: block !important)" converted to: "~yandex.net,yandex.*#$?#body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div { display: block !important }"
+~yandex.net,yandex.*#?#body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div:style(display: block !important)
 ! Rule "4pda.*##+js(abort-current-inline-script, document.querySelectorAll, outerHeight)" converted to: "4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight')"
 4pda.*##+js(abort-current-inline-script, document.querySelectorAll, outerHeight)
 ! Rule "4pda.*##+js(no-setTimeout-if, removeAttr, setTimeout)" converted to: "4pda.*#%#//scriptlet('ubo-no-setTimeout-if.js', 'removeAttr', 'setTimeout')"
@@ -48,6 +52,10 @@ google.*#%#//scriptlet('ubo-remove-attr.js', 'data-jsarwt', '#rcnt [data-ved] a'
 www.google.*#%#//scriptlet('ubo-remove-attr.js', 'jsaction', '#islmp .isv-r > a')
 ! www.google.*#%#//scriptlet('ubo-remove-attr.js', 'jsaction', '#islsp c-wiz a[href^="http"][data-ved][target]', 'stay') is excluded by "#%#//scriptlet" in exclusions-low.txt
 www.google.*#%#//scriptlet('ubo-remove-attr.js', 'jsaction', '#islsp c-wiz a[href^="http"][data-ved][target]', 'stay')
+! !yandex.ru##+js(no-setTimeout-if, b-spec-adv) is excluded by "##+js" in exclusions-low.txt
+!yandex.ru##+js(no-setTimeout-if, b-spec-adv)
+! !yandex.ru##+js(no-setTimeout-if, antiadb, home) is excluded by "##+js" in exclusions-low.txt
+!yandex.ru##+js(no-setTimeout-if, antiadb, home)
 ! 4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight') is excluded by "#%#//scriptlet" in exclusions-low.txt
 4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight')
 ! 4pda.*#%#//scriptlet('ubo-no-setTimeout-if.js', 'removeAttr', 'setTimeout') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -105,15 +113,13 @@ www.rambler.*#?#+js(no-setInterval-if, catch, 500)
 ! Invalid selector:
 ~vp.rambler.ru,~id.rambler.ru,www.afisha.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,rns.online,wmj.*#?#^script:has-text('getPrefixes')
 ! Invalid selector:
-frontend.vh.yandex.*#?#+js(set-constant, Object.prototype._getAutoplay, noopFunc)
+frontend.vh.yandex.*#?#+js(set-constant, Object.prototype.getAutoplay, noopFunc)
 ! Invalid selector:
 frontend.vh.yandex.*#?#+js(set-constant, Object.prototype.initialAutoplay, false)
 ! Invalid selector:
-mail.yandex.*#?#+js(abort-on-property-read, Object.prototype.AdvPresenter)
-! Invalid selector:
 mail.yandex.*#?#+js(remove-attr, data-link-id, a, stay)
-! Invalid selector:
-mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.uz,mail.yandex.*#?#+js(abort-on-property-read, Object.prototype.AdvPresenter)
+Error: "Invalid cosmetic rule, wrong brackets" in the rule: "mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.uz,mail.yandex.*#?#+js(set-constant, Daria.AdvPresenter._config, {})"
+mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.uz,mail.yandex.*#?#+js(set-constant, Daria.AdvPresenter._config, {})
 ! Invalid selector:
 music.yandex.*#?#+js(set-constant, Object.prototype.showBranding, noopFunc)
 ! Invalid selector:
@@ -146,3 +152,5 @@ music.yandex.*#?#+js(set-constant, Object.prototype.showBranding, noopFunc)
 ~yandex.net,yandex.*#?#+js(set-constant, Object.prototype.los, null)
 ! Invalid selector:
 ~yandex.net,yandex.*#?#+js(set-constant, Object.prototype.useAbdBundle, false)
+Error: "Invalid cosmetic rule, wrong brackets" in the rule: "~yandex.net,yandex.*#?#+js(set-constant, home.export.adb, {})"
+~yandex.net,yandex.*#?#+js(set-constant, home.export.adb, {})
