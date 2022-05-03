@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.502.9
+! OriginalVersion: 2022.503.5
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -284,6 +284,9 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||coinpan.com/modules/sejin7940_banner/tpl/js/banner.js
+/^https:\/\/coinpan\.com\/(|[a-z0-9_]{3,10}\/)files\/banner\//
+||ilogen.com/static/images/m/min_n_g.png
 ||danawa.com/jehu/selectNBP.json
 /^http:\/\/simage\.auction\.co\.kr\/itemimage\/[0-9a-z]{2}\/[0-9a-z]{2}\/[0-9a-z]{2}\/[0-9a-z]{8,11}\.[a-z]{3,4}$/$domain=prod.danawa.com
 ||www.danawa.com/NBP/powerLink.php
@@ -578,6 +581,8 @@
 ||wwwimageup.angle777899.com/other/atoona/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+coinpan.com##img[class^="banner_"]
+blackkiwi.net##div[class^="style__GoogleAdSenseContainer-"]
 auth.danawa.com###loginBottomBanner
 prod.danawa.com###ebayPowerClickBottomArea
 kimpga.com##div.max-w-screen-lg > .relative > div > div[class=""]:nth-child(1)
@@ -1097,7 +1102,7 @@ tgd.kr#?#div[style^="display:"][style*="flex;"] > div[style^="flex:"]:contains(A
 m.ppomppu.co.kr#?#.community-board-notice-box > #bbs_inform:has(> ul > li span:contains(AD))
 !
 ! Ad-Shield
-algumon.com,loawa.com,ygosu.com,inven.co.kr,tgd.kr,ppss.kr#%#//scriptlet("json-prune", "[].size")
+! algumon.com,loawa.com,ygosu.com,inven.co.kr,tgd.kr,ppss.kr#%#//scriptlet("json-prune", "[].size")
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
@@ -1166,6 +1171,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 !
+||www3.doubleclick.net/|$redirect=nooptext,domain=blackkiwi.net
 ||a.realsrv.com/video-outstream.js$redirect=noopjs,domain=lover9.net
 ||googleads.g.doubleclick.net/pagead/ads?*&crui=$redirect=noopmp4-1s,domain=laftel.net
 webtv.dothome.co.kr##.adblock-on
@@ -1220,6 +1226,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||tv.kakao.com/embed/player/image/ads.png$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 @@||videoads.kakao.com/adserver/api/v2/vmap$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
+@@||www3.doubleclick.net/|$domain=blackkiwi.net
 @@||x86.co.kr^$generichide
 @@||a.realsrv.com/video-outstream.js$domain=lover9.net
 @@||tistory.com^$generichide
