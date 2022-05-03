@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 26April2022v1-Beta-Compilation
+! OriginalVersion: 03May2022v1-Beta-Compilation
 ! Expires: 3 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and Google results for such), various domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser / Acrobat]" buttons, unnecessary login prompts, blurring of news-article previews, fake notification counters, empty padding on pages, gradients when moving your mouse over video embeds, extra dumb comment sections, webstore coupon aggregator listings that are not actually coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
@@ -444,7 +444,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 29April2022v1
+! OriginalVersion: 03May2022v2
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -2499,7 +2499,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||www.upload-4ever.com^$document
 ||upload-4ever.com^$document
 ||worldcoolfeed.com^$all
-! Fake discord nitro
+! Fake Discord Nitro
 ||myget.org/feed/discord-nitro-hack/package/nuget/Free-discord-nitro-codes-2021^$document
 ||lucymods.com^$all
 ||gluegames.xyz^$all
@@ -2542,6 +2542,9 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||198.199.120.251^$all
 ||mediafire.com/file/8h91fn11fa1dacu/Latest_Setup_active.rar/file^$all
 ||download2325.mediafire.com/pmth9b9cwtkg/8h91fn11fa1dacu/Latest_Setup_active.rar^$all
+! https://www.telia.no/kundeservice/mobil/malware-flubot-android/
+!+ NOT_OPTIMIZED
+/^https?://(www\.)?[a-z0-9-]{1,}\.[a-z]{2,17}/[a-z0-9]/\?[a-z0-9.-]{8,}$/$document
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -8000,7 +8003,7 @@ get.adobe.com###offersInformationPane
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 29April2022v1
+! OriginalVersion: 03May2022v2
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -10034,7 +10037,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||www.upload-4ever.com^$document
 ||upload-4ever.com^$document
 ||worldcoolfeed.com^$redirect=nooptext,important
-! Fake discord nitro
+! Fake Discord Nitro
 ||myget.org/feed/discord-nitro-hack/package/nuget/Free-discord-nitro-codes-2021^$document
 ||lucymods.com^$redirect=nooptext,important
 ||gluegames.xyz^$redirect=nooptext,important
@@ -10077,6 +10080,9 @@ zombooru.com##a[href="http://www.hard55.com"]
 198.199.120.251$network
 ||mediafire.com/file/8h91fn11fa1dacu/Latest_Setup_active.rar/file^$redirect=nooptext,important
 ||download2325.mediafire.com/pmth9b9cwtkg/8h91fn11fa1dacu/Latest_Setup_active.rar^$redirect=nooptext,important
+! https://www.telia.no/kundeservice/mobil/malware-flubot-android/
+!+ NOT_OPTIMIZED
+/^https?://(www\.)?[a-z0-9-]{1,}\.[a-z]{2,17}/[a-z0-9]/\?[a-z0-9.-]{8,}$/$document
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$redirect=nooptext,important
@@ -15950,7 +15956,7 @@ fileinfo.com#?#.top:-abp-has(a[href*="/windows_file_viewer"])
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! This is an extension file, not an independent list.
-! Extension file's version: 02May2022v1-Extension
+! Extension file's version: 03May2022v2-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -16023,7 +16029,8 @@ twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#$#htm
 !! Removes an uncloseable prompt overlay
 !! Moved to here from the main file due to https://github.com/DandelionSprout/adfilt/issues/557
 !! Can't be used on physical phones due to https://github.com/AdguardTeam/AdguardFilters/issues/116903
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:-abp-has(> div[data-testid])
+!!!twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:-abp-has(> div[data-testid])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:has(> div[data-testid]):has(div[role=button][style^="background-color: rgb(15, 20, 25)"])
 !#endif
 ! Facebook
 !! Reduces the background opacity of the login overlay
@@ -20830,3 +20837,10 @@ tv2.no##.banner
 ! https://www.nettavisen.no/okonomi/raser-over-nye-priser-for-boligsalg-pa-finn-no-forbrukerne-er-fratatt-ethvert-valg/s/12-95-3424235759
 ! https://github.com/DandelionSprout/adfilt/issues/466
 www.finn.no#%#//scriptlet('ubo-rc.js', 'ads__unit--premium', '.ads__unit', 'stay')
+! Miniplayers that scroll down alongside articles
+! https://github.com/DandelionSprout/adfilt/issues/587#issuecomment-1116114213
+!#if false
+positivr.fr##.viously-sticked
+!#endif
+positivr.fr#$#.viously-sticked { position: absolute !important; top: 0 !important; left: 0 !important; bottom: 0 !important; right: 0 !important; width: 100% !important;  height: 100% !important; z-index: 1 !important; display: block !important }
+positivr.fr##.viously-sticked #unstick-button

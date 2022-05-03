@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.503.7
+! OriginalVersion: 2022.503.10
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -598,6 +598,7 @@ jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m
 ! ##div[class^="banner_"]
 auth.danawa.com,socialvalue.kr,news.jtbc.joins.com,etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
 !
+game.naver.com##div[class^="styles_Banner"]
 coinpan.com##img[class^="banner_"]
 blackkiwi.net##div[class^="style__GoogleAdSenseContainer-"]
 auth.danawa.com###loginBottomBanner
@@ -1029,6 +1030,7 @@ x86.co.kr#@#.download_ad
 !#endif
 !#if (!adguard_ext_android_cb)
 ! Ad-Shield
+ppss.kr,ygosu.com,tgd.kr,inven.co.kr,loawa.com#$#div[style="text-align: center;"] { -webkit-mask-image: linear-gradient(transparent, transparent) !important; }
 loawa.com#$#iframe[src^="https://googleads.g.doubleclick.net/pagead/ads"] { opacity: 0 !important; }
 ppss.kr,loawa.com#$#div[style*="text-align:"][style*="position:"] { filter: opacity(0) !important; }
 loawa.com#$#img[style="height: auto;"] { filter: opacity(0) !important; }
@@ -1111,7 +1113,7 @@ tgd.kr#?#div[style^="display:"][style*="flex;"] > div[style^="flex:"]:contains(A
 m.ppomppu.co.kr#?#.community-board-notice-box > #bbs_inform:has(> ul > li span:contains(AD))
 !
 ! Ad-Shield
-! algumon.com,loawa.com,ygosu.com,inven.co.kr,tgd.kr,ppss.kr#%#//scriptlet("json-prune", "[].size")
+ppss.kr,ygosu.com,tgd.kr,inven.co.kr#%#//scriptlet("abort-on-property-read", "Node.prototype.textContent")
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !

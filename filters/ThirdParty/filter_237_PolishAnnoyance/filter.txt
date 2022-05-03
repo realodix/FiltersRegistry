@@ -1,12 +1,12 @@
 !
-! Checksum: mWTQgqnWtb2abPEPdTVvJA
+! Checksum: NESN2SvZviudVyz/7RCQSQ
 ! Title: Polskie Filtry Elementów Irytujących
 ! Polish Annoyance Filters
 ! Codename: Annoyance - Main
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
-! Last modified: Sun, 01 May 2022, 17:30 UTC+02
-! OriginalVersion: 2022.5.1.0
+! Last modified: Tue, 03 May 2022, 18:37 UTC+02
+! OriginalVersion: 2022.5.3.1
 ! Expires: 2 days
 ! Najnowsza wersja zawsze na: https://github.com/PolishFiltersTeam/PolishAnnoyanceFilters
 ! Zgłoszenia:
@@ -15,7 +15,7 @@
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: nie, 01 maj 2022, 17:30 UTC+02
+! Aktualizacja: wto, 03 maj 2022, 18:37 UTC+02
 !
 !
 ! Newslettery (nie popupy)
@@ -11227,6 +11227,8 @@ tpa-group.pl###PopupModal, .modal-backdrop
 truphone.com#$#.blur-out { filter: none !important; }
 ttv.pl###specialPopupModal
 tvokazje.pl###tvo-newsletter-popup-new-year, .modal-backdrop
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##div[data-testid="sheetDialog"] div[role="button"] + div[role="button"]:upward(div[role="group"])
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#$#html { overflow: unset !important; }
 twojekwiaty.pl###exitPopup
 ubraniadooddania.pl###popup-dialog, .modal-backdrop
 ubraniadooddania.pl#%#//scriptlet('ubo-ra.js', 'class|style', 'body[class="modal-open"][style^="padding-right: "][style$="px;"]:not([style*="; "])', 'stay')
@@ -11276,8 +11278,6 @@ zozsuchabeskidzka.pl###mpc-modal-4-0
 !rossmann.pl##.modal:has( > div > div > a > img[src*="/GalleryImages/PopupCMS/"]) ~ .modal-backdrop
 !smaker.pl##html > body.scrollingDisabled:style(overflow: visible !important;)
 !smaker.pl###popup.fanPlug, #overlay
-!twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##html:style(overflow: unset !important;)
-!twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#div[class^=css-] > div[tabindex="0"] + div[role=group]:has( > div[data-testid])
 ||mailerlite.com^$third-party,important,domain=beitadmin.pl
 !@ <<<<<<<< https://raw.githubusercontent.com/PolishFiltersTeam/PolishSocialCookiesFiltersDev/master/sections/adblock_social_list/uBO_AG/popupy_suplement.txt + popupy_suplement.txt
 !#if !cap_html_filtering
