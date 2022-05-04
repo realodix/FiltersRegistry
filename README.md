@@ -125,6 +125,12 @@ Possible tags:
 
 `/groups/metadata.json` — filters groups metadata. Each filter should belong to one of the groups.
 
+## Filters optimization
+
+For each filter, AdGuard compiles two versions: full and optimized. Optimized version is much more lightweight and does not contain rules which are not used at all or used rarely. Rules usage frequency comes from the collected [filter rules statistics](https://kb.adguard.com/en/general/filter-rules-statistics) (thanks to the volunteers who enabled it in their AdGuard).
+
+* `optimization_config.json` - defines the target for the optimization process. AdGuard will try to compress the lists by removing the most rarely used rules until the compression goal (defined in percents) is met.
+
 ## Filters localization
 
 If you want to help with filters translations, you can join us on Crowdin: https://crowdin.com/project/adguard-applications/en#/miscellaneous/filters-registry
