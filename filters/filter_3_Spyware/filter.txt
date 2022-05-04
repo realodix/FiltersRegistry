@@ -20301,9 +20301,10 @@ _tracking.php?b=
 !
 /analytics.js$domain=freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|newsmax.com|bolgehastanesi.com|ewtc.de
 !
-||rcontent.services.tvn.pl/gstream.js
-||rcontent.services.tvn.pl/gemiuslib.js
-||rcontent.services.tvn.pl/fpdata.js
+||services.tvn.pl/maertsg.js
+||services.tvn.pl/gstream.js
+||services.tvn.pl/gemiuslib.js
+||services.tvn.pl/fpdata.js
 ||websiteplanet.com/wp-content/themes/websiteplanet/js/header-footer.js
 ||cheaptickets.com/cl/2x2.gif?
 ||portalcms.bm5.pl/Stat/statystyki.aspx
@@ -24349,6 +24350,12 @@ $app=com.miui.analytics
 ||monitor.uu.qq.com/analytics/
 ! Google News
 ||play.google.com/newsstand/api/*/people/me/analytics^
+! SafeGraph tracking URL
+! References:
+! https://github.com/aapiro/openlocate-android
+! https://reports.exodus-privacy.eu.org/en/trackers/44/
+! https://www.vice.com/en/article/m7vzjb/location-data-abortion-clinics-safegraph-planned-parenthood
+||api.safegraph.com^
 
 !-------------------------------------------------------------------------------!
 !-------------- Mobile analytics exceptions  -----------------------------------!
@@ -24456,6 +24463,10 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/117187
+||p.typekit.net/*.css$stylesheet,redirect-rule=noopcss,domain=burnabyvillagemuseum.ca
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||p.typekit.net/*.css$domain=burnabyvillagemuseum.ca
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116955
 @@||tm.jsuol.com.br/uoltm.js$domain=hugogloss.uol.com.br
 ! https://github.com/AdguardTeam/AdguardForWindows/issues/4138
