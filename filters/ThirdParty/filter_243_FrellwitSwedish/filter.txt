@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-05-04 08:27:31 CEST
+! Last modified: 2022-05-06 07:44:49 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -291,6 +291,7 @@ nordfront.se##.post:has(span:not(.post-content):has-text(/annons/i))
 nordichardware.se##.td-big-grid-post:has(a[href*="/sponsrat/"])
 nordichardware.se##.td_block_wrap:has(span:has-text(/sponsrat/i))
 norpan.se,skrattsajten.com#%#//scriptlet('ubo-acs.js', '$', 'e.preventDefault')
+nouw.com##.badge:has-text(/annons/i):upward(li)
 nyadagbladet.se##.widget_media_image:has-text(/annons/i)
 nyan.ax,streamio.com#%#//scriptlet('ubo-aeld.js', 'contextmenu')
 nyheteridag.se##.article-inner:has(h2:has-text(/samarbetslänkar/i))
@@ -362,6 +363,7 @@ tekniknytt.se##.label:has-text(/samarbete|annons|reklam|presenteras av/i):upward
 tekniksmart.se##center:has-text(/annons/i):upward(1)
 temperatur.nu##.holidAds:upward(1)
 tennisportalen.se##.td-pb-row [class*="td-pb-span"]:has(h4:has-text(/spons/i))
+thatsup.se#%#//scriptlet('ubo-set.js', 'canShowAds', 'true')
 thelocal.se##.ra-widget-article-tag:has-text(/partner/i):upward(.ra-widget-panel)
 themoviefreak.se#%#//scriptlet('ubo-acs.js', 'animate')
 tidningenbalans.se##p:has-text(/i annonssamarbete med/i):upward(.flex.overflow-hidden)
@@ -488,8 +490,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1051,7 +1053,6 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /meetrics-tracker
 /mega.$domain=folkbladet.nu|mellanbygden.nu|nordsverige.se|vk.se
 /metrics/bambuser
-/min/1/fpa-$domain=handbollskanalen.se
 /minbostadstatic/js/partner/*
 /mod.js$domain=icd.internetmedicin.se
 /mod_responsivebannerslider$domain=bjuvsnytt.se
@@ -1240,7 +1241,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /prisjakt$xmlhttprequest,domain=fz.se
 /private-browsing.js$domain=thelocal.se
 /prod/adform
-/profile$ping,domain=arbetarskydd.se|feber.se|hamnen.se|lag-avtal.se|lawline.se|marcusoscarsson.se|nyteknik.se|tasteline.com|tjock.se|veckorevyn.com
+/profile$ping,domain=arbetarskydd.se|feber.se|hamnen.se|handbollskanalen.se|lag-avtal.se|lawline.se|marcusoscarsson.se|nyteknik.se|tasteline.com|tjock.se|veckorevyn.com
 /publicPartners$domain=familjehemmet.se|familjehemsbanken.se
 /pulsetracking$script
 /pum/*$domain=biostock.se|flm.nu
