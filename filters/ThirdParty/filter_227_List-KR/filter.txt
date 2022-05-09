@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard
-! OriginalVersion: 2022.508.2
+! OriginalVersion: 2022.509.1
 ! Expires: 1 hour
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -599,6 +599,7 @@ jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m
 ! ##div[class^="banner_"]
 auth.danawa.com,socialvalue.kr,news.jtbc.joins.com,etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
 !
+chosun.com##div[class$="Ad"]
 gall.dcinside.com##.con_banner
 tvchak.com###advertiseInPlayer
 cafe.naver.com###plugFloatingBannerDiv
@@ -811,7 +812,7 @@ weekly.chosun.com##iframe[src^="/common/inc/right_banner_roll"][src*=".asp"]
 it.chosun.com###POWER_LINK_NAVER
 it.chosun.com##div[id^="mobonDivBanner_"]
 chosun.com##.dfpAd
-chosun.com##div[class~="flex-chain-wrapper"][class*="box--bg-grey-"][class~="box--hidden-sm"][class~="box--hidden-md-only"]
+chosun.com##div[class~="arcad-wrapper"]
 chosun.com##.arcad-wrapper
 chosun.com##div[class^="layout__article-header"] > div[class^="flex-chain-wrapper"]
 hwbattle.com##div[id^="Partner"]
@@ -1035,10 +1036,12 @@ x86.co.kr#@#.download_ad
 !#endif
 !#if (!adguard_ext_android_cb)
 ! Ad-Shield
-feedclick.net,ppss.kr,ygosu.com,tgd.kr,inven.co.kr,loawa.com#$#div[style="text-align: center;"] { -webkit-mask-image: linear-gradient(transparent, transparent) !important; }
-loawa.com#$#iframe[src^="https://googleads.g.doubleclick.net/pagead/ads"] { opacity: 0 !important; }
-ppss.kr,loawa.com#$#div[style*="text-align:"][style*="position:"] { filter: opacity(0) !important; }
-loawa.com#$#img[style="height: auto;"] { filter: opacity(0) !important; }
+ppss.kr,ygosu.com,tgd.kr,inven.co.kr,loawa.com,feedclick.net#$#div[style="margin-left: auto; margin-right: auto; display: block;"] * { cursor: default !important; }
+ppss.kr,ygosu.com#$#div[style="margin-left: auto; margin-right: auto; display: block;"] { mix-blend-mode: color-burn !important; }
+tgd.kr,loawa.com,feedclick.net#$#div[style="margin-left: auto; margin-right: auto; display: block;"] { background-color: black !important; }
+tgd.kr,loawa.com,feedclick.net#$#div[style="margin-left: auto; margin-right: auto; display: block;"] * { mix-blend-mode: darken !important; }
+inven.co.kr#$#div[style="margin-left: auto; margin-right: auto; display: block;"] { background-color: white !important; }
+inven.co.kr#$#div[style="margin-left: auto; margin-right: auto; display: block;"] { style(mix-blend-mode: color-burn !important; }
 !
 tvchak.com#$#body { overflow-x: auto !important; overflow-y: auto !important; }
 tvchak.com#$##banner, .modal-backdrop { display: none !important; }
@@ -1120,6 +1123,8 @@ m.bunjang.co.kr#?#div:has(> div > div > div:contains(연관상품) > div:has(> d
 tgd.kr#?#div[style^="display:"][style*="flex;"] > div[style^="flex:"]:contains(AD):upward(2)
 m.ppomppu.co.kr#?#.community-board-notice-box > #bbs_inform:has(> ul > li span:contains(AD))
 !
+! Ad-Shield
+ppss.kr,ygosu.com,tgd.kr,inven.co.kr,loawa.com,feedclick.net#%#//scriptlet("prevent-addEventListener", "", "catch_error")
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
