@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 11May2022v2
+! OriginalVersion: 11May2022v6
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -31,6 +31,7 @@ nyan.ax#$?#.widget_adrotate_widgets { remove: true; }
 nyan.ax#$?#.wpb_column.vc_column_container.td-pb-span8:has(a[onclick*='banner']) { remove: true; }
 outlook.live.com##div[aria-label=Siirtymisruutu] ~ div[data-max-width="2400"] + div[class]
 puhelinvertailu.com#$#.index-wrap { left: 0px !important }
+telsu.fi##div[id^=gpt-]:upward(1)
 telsu.fi##div[style^="font-size:20px;padding:"][style$="px;margin:20px;background:#fff;line-height:25px;"]
 vanha.kaleva.fi#$#.col-sm-12.col-md-8.col-lg-9 { width: 100% !important; }
 vanha.kaleva.fi##.event-detail-ad
@@ -847,9 +848,7 @@ tekniikkatalous.fi#?#.article-body > div[class]:-abp-has(> span:-abp-contains(KA
 tekniikkatalous.fi#?#div#skyscraper-height-div > aside > div > div > a:-abp-contains(Kaupallinen yhteistyö)
 tekniikkatalous.fi#?#div#skyscraper-height-div > section > div > a:-abp-contains(Kaupallinen yhteistyö)
 tekniikkatalous.fi,tivi.fi#?#[width]:-abp-has(.lazyload-wrapper)
-telsu.fi##a[href^="/cllk"]
-telsu.fi###peb_top
-telsu.fi#?#.ch:-abp-contains(SPONSO)
+telsu.fi##div[class*=cmore]
 tennis.fi##.ad-blocks
 tervareitti.fi##.advertisement-banner-row
 tervareitti.fi#?#.article-container.shadow-sm.col:-abp-has(img[alt^="Oma tilausmainos"])
@@ -987,6 +986,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 /*-mainos-$image,domain=futisfani.com|kiekkofani.com|penkkiurheilu.com|uutisankka.com
 /neoproxy.dll$xmlhttprequest,domain=pkank.fi
 /prerolls/*.mp4$domain=gamereactor.fi
+/telsu[.]fi\/\w{5,30}/$image,domain=telsu.fi
 /wp-content/uploads/2022/04/HymyAlibi2022_300x300_pupu.jpg$image,domain=alibi.fi|hymy.fi
 ||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg$image
 ||ad.citycdn.fi^$third-party
