@@ -17447,7 +17447,7 @@ hdfilmcehennemi.film##.poster-imdb
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 11May2022v1
+! OriginalVersion: 14May2022v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -19922,6 +19922,8 @@ $removeparam=promo_position,domain=oikotie.fi|kesaduuni.org
 $removeparam=plink,domain=audible.*
 ! https://github.com/easylist/easylist/issues/10288
 ||startpage.*^$removeparam=segment
+! https://github.com/DandelionSprout/adfilt/issues/592#issuecomment-1126707974
+@@||startpage.com/suggestions$removeparam=segment
 ! https://www.netflix.com/watch/81110875?trackId=254794450&tctx=2%2C1%2C96c1d619-68cd-4cad-ba6c-7e473d76dd30-24305116%2C%2Cunknown%2C%2C%2C (29/12/2021)
 ||netflix.com^$removeparam=trackId
 ||netflix.com^$removeparam=tctx
@@ -20225,6 +20227,13 @@ $removeparam=tc,domain=media-cdn.costco.ca|media-cdn.costco.com
 $removeparam=textadID,domain=media-cdn.costco.ca|media-cdn.costco.com
 ! https://blogs.oracle.com/scoter/post/webinar-ransomware-attacks-alert?source=:so:tw:or:awr:ovbx:::RC_WWMK220223P00060:LinuxSocialG&SC=:so:tw:or:awr:ovbx:::RC_WWMK220223P00060:LinuxSocialG&pcode=WWMK220223P00060
 ||blogs.oracle.com^$removeparam=pcode
+! https://venturebeat.com/2022/05/05/google-goes-passwordless/?__vfz=medium%3Dconversations_top_pages
+$removeparam=__vfz,domain=venturebeat.com
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2751033
+||amazon.*^$removeparam=tag
+||amazon.*^$removeparam=visitId
+||amazon.*^$removeparam=maas
+||amazon.*^$removeparam=channel
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
