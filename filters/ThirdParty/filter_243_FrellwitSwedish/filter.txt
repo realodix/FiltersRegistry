@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-05-14 07:30:07 CEST
+! Last modified: 2022-05-16 07:54:20 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -141,6 +141,8 @@ ehandel.se##.code-block:has-text(/annons/i)
 ehandelstips.se##[href*="/author/sponsradeartiklar/"]:upward(article)
 ehandelstips.se##[href*="/author/sponsradeartiklar/"]:upward(li)
 ekonominyheter.se##.td-fix-index:has(a[href*="casino"])
+elinstallatoren.se,fof.se,fokus.se,spraktidningen.se#$#.mediaconnect-protected-content, .mediaconnect-protected-content--show { max-height: unset !important; overflow: unset !important; }
+elinstallatoren.se,fof.se,fokus.se,spraktidningen.se#$#.mediaconnect-protected-content::after { background: unset !important; }
 elle.se##section.c-native_banner:upward(2)
 espressomedia.se##.penci-block-vc:has([href*="casino"])
 etc.se##.adaptive:upward(1)
@@ -150,9 +152,9 @@ etunawebben.se#%#//scriptlet('ubo-nostif.js', 'ad')
 eventeffect.se,executiveeffect.se,saleseffect.se##.post-teaser:has(a[href$="/annons/"])
 evertiq.se#%#//scriptlet('ubo-acs.js', '$', 'banner_loader')
 existenz.se##a[href*="bannerid="]:upward(.link)
+expressen.se##.teaser__bottom--ad-marker:upward(.teaser)
 expressen.se##a[href*="/annons"], a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/kampanj."], a[href*="/lanapengar."], a[href*="/rabattkoder."], a[href*="/spel.expressen.se"], .vignette--svg + a[href*="teknikensvarld."]:upward(.teaser)
 expressen.se##strong:has-text(/^annons:/i):upward(p)
-expressen.se,teknikensvarld.se##.teaser__bottom--ad-marker:upward(.teaser)
 familjeliv.se##article:has-text(/annons:/i)
 feber.se,tjock.se#%#//scriptlet('ubo-set.js', 'dovideostuffAD', 'noopFunc')
 feber.se,tjock.se#%#//scriptlet('ubo-set.js', 'userStatus', 'undefined')
@@ -162,8 +164,6 @@ findit.se#%#//scriptlet('ubo-set.js', 'testPrebid', 'noopFunc')
 firstclassmagazine.se##a:has(.feat-cat:has-text(/annons/i))
 fiskejournalen.se##.fisher-pinned-post-title.sponsored:upward(1)
 flashback.org#%#//scriptlet('ubo-nostif.js', '#top-banner-container')
-fof.se,fokus.se#$#.mediaconnect-protected-content, .mediaconnect-protected-content--show { max-height: unset !important; overflow: unset !important; }
-fof.se,fokus.se#$#.mediaconnect-protected-content::after { background: unset !important; }
 folkhalsasverige.se#%#//scriptlet('ubo-acs.js', 'showConsentDlg')
 folkhalsasverige.se##.featurette,.vicky-post-whitebox,.vicky-fancybar-inner:has-text(/sponsrad/i)
 foretagande.se##article:has(.sponsored-text)
@@ -357,8 +357,6 @@ swedroid.se#$?#li.Notice:has(a[target="_blank"]) { remove: true; }
 synonymer.se#%#//scriptlet('ubo-cookie-remover.js', '/^ev_did|ev_sid/')
 tasteline.com#$#.popup { overflow: auto !important; }
 teknifik.se##.post:has(.sponsor)
-teknikensvarld.se#$#.article__body__preview::before { background: none !important; }
-teknikensvarld.se#$#.article__body__preview { height: auto !important; overflow: visible !important; }
 tekniknytt.se##.label:has-text(/samarbete|annons|reklam|presenteras av/i):upward(a)
 tekniksmart.se##center:has-text(/annons/i):upward(1)
 temperatur.nu##.holidAds:upward(1)
@@ -379,7 +377,7 @@ tv.nu##header div:matches-css(z-index:999)
 tvdags.se##.article-list__item:has(.sponsor)
 underbaraclaras.se##.jet-listing-grid__item:has(.jet-listing-dynamic-field__content:has-text(/annonssamarbete/i))
 upptack-sverige.se##.front-cta:has-text(/sponsrat innehåll/i)
-utm_$document,removeparam=/^utm_/,domain=aftonbladet.se|booli.se|expressen.se|teknikensvarld.se|tv.nu
+utm_$document,removeparam=/^utm_/,domain=aftonbladet.se|booli.se|expressen.se|tv.nu
 varden.se##.carousel-slide:has(.sponsored-label)
 varmepumpsforum.com##.frontlinks tr:has(a[target])
 viafree.se#$#.player-wrapper .viafree-player .vjs-tech { display:initial!important; }
@@ -1435,7 +1433,7 @@ affarsvarlden.se##.article-list-item--native, .advert-notice-box
 affarsvarlden.se##.cookies-wrap, .Modal
 aftonbladet.se###megaAd-placeholder, #superright-side, a[href^="/brandstudio"], a[href*="/casinoguide"], [id^="adPlacement"], a[href^="https://kampanj.aftonbladet"], a[href*="/rabattkod"][data-test-tag="internal-link"]
 aftonbladet.se,autonytt.se,ekonominyheter.se,hockeybladet.nu,lesscarbs.se,matinspo.se,modette.se,undervarttak.se,xn--snabbalnen-75a.se##a[href*="/track.adtraction."]
-aftonbladet.se,effektmagasin.se,halsasverige.se,nojesmagasinet.nu,spela.se,svenskorientering.se##.advert
+aftonbladet.se,halsasverige.se,nojesmagasinet.nu,svenskorientering.se##.advert
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aikfotboll.se,vaken.se##.banners
 aip.nu##[class*="feed-ad"]
@@ -1521,7 +1519,7 @@ bergsmannen.se##.ann-puff, .headerLinks
 besoksliv.se##a[href*="sponsrat-innehall"]
 bestchampagne.se##aside.section-sm
 betong.se,foodetc.se,livetsgoda.se##a[target$="blank"] img
-bettingstugan.se,bioenergitidningen.se,bovision.se,dagensopinion.se,di.se,dn.se,driva-eget.se,ehandel.se,expressen.se,fordonsproffs.eu,ifokus.se,ifragasatt.se,jaktojagare.se,kamerabild.se,linnherbertsson.se,mobil.se,padelfeber.se,skaraborgsbygden.se,skillingaryd.nu,sportbloggare.com,sv.picmix.com,swedroid.se,tandlakartidningen.se,teknikensvarld.se,teknikveckan.se,tripadvisor.se,vardfokus.se,xn--vrnamo-bua.nu##.ad
+bettingstugan.se,bioenergitidningen.se,bovision.se,dagensopinion.se,di.se,dn.se,driva-eget.se,ehandel.se,expressen.se,fordonsproffs.eu,ifokus.se,ifragasatt.se,jaktojagare.se,kamerabild.se,linnherbertsson.se,mobil.se,padelfeber.se,skaraborgsbygden.se,skillingaryd.nu,sportbloggare.com,sv.picmix.com,swedroid.se,tandlakartidningen.se,teknikveckan.se,tripadvisor.se,vardfokus.se,xn--vrnamo-bua.nu##.ad
 bettips.se##.bettips-am
 bettips.se,borskollen.se##.top-banner
 bicycling.se,runnersworld.se##.modal-plus, .modal-backdrop, .footer-newsletter
@@ -1991,7 +1989,6 @@ synonymer.se##.create-account-banner, .buy-premium-banner
 sysidan.se##.adscolumn
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
 tasteline.com##.popup-overlay
-teknikensvarld.se##.teaser__third-party, .promotion-banner
 tekniksmart.se##.code-block, main > div:last-child:not(:only-child), #uid_08313ba73, #uid_ab3738b5a, .jeg_header_wrapper .jeg_midbar
 testfakta.se##.row-uppdragstest
 thelocal.se##.ad-container-section, .article-sponsored
@@ -2666,6 +2663,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||viforetag.se^$third-party
 ||vinguiden.com^$third-party
 ||vinochmatguiden.se/jsskins/ad.html
+||wa.formas.se/js/container$domain=extrakt.se|formas.se
 ||walls.io^$domain=svensktgolfforum.se
 ||wct-1.com^$third-party
 ||webbannons.ntm.eu^$subdocument
