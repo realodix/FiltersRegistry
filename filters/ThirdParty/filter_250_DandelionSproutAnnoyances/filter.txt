@@ -16514,7 +16514,7 @@ timesofindia.com##.id_track::after
 mewe.com##.chat-avatar_dot
 mewe.com##.h-dot
 ! Title: 🕳 Empty Padding Remover
-! OriginalVersion: 07May2022v1-Alpha
+! OriginalVersion: 18May2022v1-Alpha
 ! Expires: 4 days
 ! Description: Are you tired of having to scroll so much on websites, or you want to keep your eyes on more text and content at once? If so, this list will help you a little extra bit with that.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -16528,7 +16528,8 @@ mewe.com##.h-dot
 ! https://nyheder.tv2.dk/2020-02-02-forfatter-derfor-slipper-sportsstjerner-fra-voldtaegtsanklager-uden-skrammer
 *##p:has-text(/^ $/):not(:has-text(/\S/)):not(:has(img, input, iframe))
 ! As per https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-only-whitespace
-##p:empty
+! (Exception: https://github.com/AdguardTeam/AdguardFilters/issues/119108)
+##p:empty:not([class])
 !#if !env_chromium
 !#endif
 ! lyricsmania.com,songtextemania.com
@@ -20392,7 +20393,7 @@ store.playstation.com#$#html[lang=ja] span { font-family: "Segoe UI", "Calibri",
 !#if adguard_app_mac
 ! No iMacs have had less than 1600px wide monitors since 2006, MacBook Pro since 2012, or MacBook Air since 2017. Thus I'm taking a gamble by embedding this for Mac users:
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! OriginalVersion: 01April2022v1-Beta
+! OriginalVersion: 18May2022v1-Beta
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
@@ -20540,7 +20541,7 @@ pixiv.net#$#header form { margin-left: -120px !important }
 pixiv.net#$#div[role=presentation] > div > form { min-width: 600px !important }
 pixiv.net#$#div:not([class]) + div:not([class=" "]) > div > section { max-width: none !important }
 pixiv.net#$#div:not([class]) + div:not([class=" "]) > div > section > ul > li { margin-right: 4px !important }
-pixiv.net#$#div > div[class*=" "]:nth-of-type(2) > div[class*=" "]:only-of-type > div[class*=" "]:only-of-type { width: 95vw !important; padding-left: 5px !important }
+!!!pixiv.net##div > div[class*=" "]:nth-of-type(2) > div[class*=" "]:only-of-type > div[class*=" "]:only-of-type:style(width: 95vw !important; padding-left: 5px !important) (Moves main images too far right in guest mode.)
 pixiv.net#$#li[size="1"][offset="0"] { margin-right: 4px !important }
 ! https://www.pixiv.net/en/users/2284714/artworks
 pixiv.net#$#nav + div > section { max-width: 97vw !important }
