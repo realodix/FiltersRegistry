@@ -1666,6 +1666,9 @@ teleboy.ch#@#.adWrapper
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/119024
+mux.de#?#.abc .kasten-inhalt:has(> .google_ad_box)
+mux.de#?#.abc .box:has(> div[id^="mux_incontent_"])
 ! wooco.de - left-overs in sidebar
 wooco.de#?##mainWidgets > .widget:has(> p.stitle:contains(/(ANZEIGE|Anzeige)/))
 wooco.de#?##mainWidgets > .widget:has(> .textwidget > div[style] > .adsbygoogle)
@@ -2840,6 +2843,7 @@ drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan
 ! ##.id-Container--proBEEP
 hallo-muenchen.de,az-online.de,lokalo24.de,rosenheim24.de,kreiszeitung.de,mannheim24.de,merkur.de,oktoberfest-live.de,tz.de##.id-Container--proBEEP
 !
+mux.de##.google_ad_box
 wetter.com##div[class^="app-layout pb--"][class$="werbung"]
 filehorst.de##div[style="text-align:center"] > center
 filehorst.de##div[class^="WideSkyscraper"]
@@ -8619,6 +8623,7 @@ tomsnetworking.de###advleft3
 tomsnetworking.de###advleft4
 quoka.de###advlft
 tomsnetworking.de###advlrb1
+teslamag.de###after-header-banner
 fussballnationalmannschaft.net###ai_widget-5
 ariva.de###aktieImFokus
 tiervermittlung.de###amazon_300x90
