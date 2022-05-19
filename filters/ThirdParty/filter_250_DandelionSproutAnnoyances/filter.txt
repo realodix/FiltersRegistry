@@ -17306,7 +17306,7 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 ! HTTPS certificate verifiers
 @@||lencr.org^
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
-! OriginalVersion: 03May2022v1-Beta
+! OriginalVersion: 19May2022v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -17411,6 +17411,9 @@ tv.nu#?#a[title] span:-abp-contains(IMDb)
 ! Denmark
 tvguide.dk##.zk-poster-badges
 cmore.dk##div[class^=AssetPortraitsstyles__Rating]
+! Finland
+telsu.fi##[title*=IMDb i]
+telsu.fi##em[class*=" "]
 ! Germany
 netzkino.de#?#.list-inline > li:-abp-contains(Bewertung)
 ! United States
@@ -17448,7 +17451,7 @@ hdfilmcehennemi.film##.poster-imdb
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 14May2022v2
+! OriginalVersion: 19May2022v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -18029,7 +18032,7 @@ $removeparam=sp_campaign
 ! https://www.moosejaw.com/?ad=63723&ad_id=IR
 $removeparam=ad_id
 ! https://www.michaels.com/home?affSource=1397064_14079089
-$removeparam=affSource
+$removeparam=/^affSource/i
 ! https://www.nflshop.com/?_s=afl_impact
 $removeparam=/^_s=afl_impact$/
 ! https://www.la-z-boy.com/?cid_medium=affiliate&cid_campaign=8807380
@@ -18500,6 +18503,12 @@ $removeparam=amp_gsa
 $removeparam=vgo_ee
 ! https://www.readpeak.com/best-practice/4-4-server-to-server-tracking
 $removeparam=rpcid
+! https://www.spelbutiken.se/produkt/oculus-quest-2-128gb/238WU6/?ref=prisjakt
+$removeparam=/^ref=prisjakt/i
+! https://www.onbuy.com/gb/sony-wh-1000xm4-wireless-noise-canceling-over-ear-headphones-blue~c3241~p48721262/?ref=pricespy
+$removeparam=/^ref=pricespy/i
+! https://www.printerinks.com/16936/2p-n-014/inkjet-cartridges/canon/canon-pg-540xl_cl-541xl-original-high-capacity-ink-cartridge-multipack/?pgid=8449ff20-72de-4233-b817-37a1f4bcda5f&amp;utm_medium=awin&amp;utm_source=cse
+$removeparam=/^amp;utm_/
 ! ——— General blocking rules ——— !
 !! Scripts that solely exist to make URLs longer.
 ! https://github.com/DandelionSprout/adfilt/pull/320
@@ -18518,11 +18527,11 @@ $removeparam=ref,domain=abebooks.com|accounts.binance.com|adobe.com|albiononline
 $removeparam=tid,domain=clickbank.net|comixology.*|gap.com|gapcanada.ca|mintmobile.com|zulily.com
 ! https://addons.thunderbird.net/en-GB/thunderbird/addon/mailbox-alert/?src=cb-dl-users
 ! https://twitter.com/hashtag/mlpg5?src=hashtag_click (23/04/2021)
-$removeparam=src,domain=3cx.com|adafruit.com|ashford.com|bluejeans.com|bose.*|brave.com|buyzero.de|cytron.io|digikey.*|elastix.org|engadget.com|hinta.fi|investors.com|kennethcole.com|kipling-usa.com|kubii.*|melopero.com|mozilla.org|newbalance.com|nexo.io|okdo.com|raspipc.es|reichelt.*|thepihut.com|thunderbird.net|tiendatec.es|tokopedia.com|twitter.com|udemy.com|viking-direct.co.uk|webmd.com|welectron.com|wondershare.*|wuzhuiso.com|yahoo.com
+$removeparam=src,domain=3cx.com|adafruit.com|ashford.com|bluejeans.com|bose.*|brave.com|buyzero.de|cytron.io|digikey.*|elastix.org|engadget.com|hinta.fi|investors.com|kennethcole.com|kipling-usa.com|kubii.*|melopero.com|mozilla.org|newbalance.com|nexo.io|officestationery.co.uk|okdo.com|raspipc.es|reichelt.*|thepihut.com|thunderbird.net|tiendatec.es|tokopedia.com|twitter.com|udemy.com|viking-direct.co.uk|webmd.com|welectron.com|wondershare.*|wuzhuiso.com|yahoo.com
 ! No particular example
 ! https://github.com/DandelionSprout/adfilt/pull/474
 ! https://user.qzone.qq.com/1250252459?source=aiostar (01/02/2022)
-$document,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|ashford.com|asos.com|att.com|awd-it.*|bankofamerica.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|blavity.com|blog.getadblock.com|blogs.oracle.com|boscovs.com|boxboat.com|brownells.*|britishcornershop.co.uk|burkesoutlet.com|bybit.com|choicehotels.com|chollometro.com|coinpanel.com|contabo.com|cyberghostvpn.com|despegar.*|directv.com|discord.*|docs.google.com|docsend.com|drinkhint.com|edx.org|educba.com|eonline.com|eventbrite.*|fiverr.com|fool.com|forms.gle|gethotspotshield.com|gleam.io|goodcrypto.app|googleusercontent.com|greenhouse.io|greenvoice.fr|hammacher.com|hanes.com|hobbyhall.fi|hotspotshield.com|hottopic.com|housing.com|hp.com|instagram.com|itnext.io|jacquielawson.com|just-eat.co.uk|kasta.io|medium.com|microsoftedgewelcome.microsoft.com|nautica.com|nortonsafe.search.ask.com|onehanesplace.com|outnorth.fi|petsupplies.com|phonesoap.com|riteaid.com|runnode.com|search.brave.com|sonos.com|spiceworks.com|squarespace.com|subscribe.gq.com|t.me|thedailybeast.com|tiktok.com|tokopedia.com|tommybahama.com|torrid.com|tous.com|tradingview.com|twitter.com|user.qzone.qq.com|vimeo.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|youtube.com|yubo.live
+$document,removeparam=source,denyallow=googlevideo.com,domain=1sol.io|ashford.com|asos.com|att.com|awd-it.*|bankofamerica.com|barenecessities.com|bedbathandbeyond.com|betterprogramming.pub|blavity.com|blog.getadblock.com|blogs.oracle.com|boscovs.com|boxboat.com|brownells.*|britishcornershop.co.uk|burkesoutlet.com|bybit.com|choicehotels.com|chollometro.com|coinpanel.com|contabo.com|cyberghostvpn.com|despegar.*|directv.com|discord.*|docs.google.com|docsend.com|drinkhint.com|edx.org|educba.com|eonline.com|escentual.com|eventbrite.*|fiverr.com|fool.com|forms.gle|gethotspotshield.com|gleam.io|goodcrypto.app|googleusercontent.com|greenhouse.io|greenvoice.fr|hammacher.com|hanes.com|hobbyhall.fi|hotspotshield.com|hottopic.com|housing.com|hp.com|instagram.com|itnext.io|jacquielawson.com|just-eat.co.uk|kasta.io|medium.com|microsoftedgewelcome.microsoft.com|nautica.com|nortonsafe.search.ask.com|onehanesplace.com|outnorth.fi|petsupplies.com|phonesoap.com|riteaid.com|runnode.com|search.brave.com|sonos.com|spiceworks.com|squarespace.com|studio.co.uk|subscribe.gq.com|t.me|thedailybeast.com|tiktok.com|tokopedia.com|tommybahama.com|torrid.com|tous.com|tradingview.com|twitter.com|user.qzone.qq.com|vimeo.com|webhint.io|wilsonsleather.com|wired.com|ylighting.com|youtube.com|yubo.live
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-525100
 ! https://github.com/DandelionSprout/adfilt/pull/277
 $removeparam=mod,domain=barrons.com|dowjones.com|fnlondon.com|mansionglobal.com|marketwatch.com|penews.com|wsj.com
@@ -18550,7 +18559,7 @@ $removeparam=refRID
 @@||amazon.*/gp/slredirect/picassoRedirect.html^$removeparam
 ! https://www.amazon.com/Disney-Fairies-Lessons-Chapter-ebook-ebook/dp/B007R6UWG2/ref=sr_1_16?dchild=1&keywords=disney+fairies&qid=1606488113&sr=8-16 (27/11/2020)
 $removeparam=dchild
-$~xmlhttprequest,removeparam=qid,domain=~ebay.*|~zhidao.baidu.com
+$~xmlhttprequest,removeparam=qid,domain=~ebay.*|~zhidao.baidu.com|~tastedive.com
 ||amazon.$removeparam=sr
 ! https://www.amazon.co.uk/dp/B08K443FBQ/ref=asc_df_B08K443FBQ1606003200000/?creative=22374&creativeASIN=B08K443FBQ (28/11/2020)
 ||amazon.$removeparam=creative
@@ -19943,7 +19952,7 @@ $removeparam=rx_p,domain=cvshealth.*
 $removeparam=cbsclick,domain=paramountplus.com|cbs.com
 $removeparam=vndid,domain=paramountplus.com|cbs.com
 ! https://www.bikester.fi/cube-aim-pro-M894786.html?vgid=G1281243&_cid=22_-2859_90206_90207_281846_3688119_0_Hintaopas.fi
-$removeparam=_cid,domain=addnature.*|bikester.fi
+$removeparam=_cid,domain=addnature.*|bikester.*
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1892152
 $removeparam=rep,domain=shein.com
 $removeparam=ret,domain=shein.com
@@ -20047,7 +20056,7 @@ $removeparam=/traffic_source=Connatix/i
 ! https://www.alina.se/Produkt.aspx?site=prisjakt&T2=0045496453435
 $removeparam=site,domain=alina.se
 ! https://www.davids.se/produkt/mlpg3qn-a?variant=15818&prisjakt=1
-$removeparam=prisjakt,domain=davids.se|poradio.se|teleradio.nu
+$removeparam=prisjakt,domain=davids.se|larsbengtsson.se|poradio.se|teleradio.nu
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2043678
 $removeparam=refresh,domain=cnn.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2052109
@@ -20235,6 +20244,10 @@ $removeparam=__vfz,domain=venturebeat.com
 ||amazon.*^$removeparam=visitId
 ||amazon.*^$removeparam=maas
 ||amazon.*^$removeparam=channel
+! https://www.boots.com/dior-sauvage-eau-de-toilette-100ml-gift-box-10300220?affwin
+$removeparam=affwin,domain=boots.com
+! https://www.studio.co.uk/shop/health---beauty/dental-care/oral-b-pro3-black-edition-cross-action-electric-toothbrush-with-travel-case?source=TQ45&ch=aw
+$removeparam=ch,domain=studio.co.uk
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
@@ -20393,7 +20406,7 @@ store.playstation.com#$#html[lang=ja] span { font-family: "Segoe UI", "Calibri",
 !#if adguard_app_mac
 ! No iMacs have had less than 1600px wide monitors since 2006, MacBook Pro since 2012, or MacBook Air since 2017. Thus I'm taking a gamble by embedding this for Mac users:
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! OriginalVersion: 18May2022v1-Beta
+! OriginalVersion: 19May2022v1-Beta
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
@@ -20629,7 +20642,7 @@ fandom.com#$#body[class*=gamepedia] #bodyContent { width: unset !important }
 ! Front page
 finn.no#$#.ad-stream__unit { width: 230px !important }
 finn.no#$#.pageholder { max-width: none !important }
-finn.no#$#.market-grid__item { width: 20% !important }
+!!!finn.no##.market-grid__item:style(width: 20% !important)
 
 ! Torget category list page
 finn.no#$#.container.bg-ice.pbs { max-width: none !important; padding-top: 0 !important }
