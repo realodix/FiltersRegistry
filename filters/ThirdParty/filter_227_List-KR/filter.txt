@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.519.0
+! OriginalVersion: 2022.519.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -9,6 +9,7 @@
 !
 ! Version must be UTC format.
 !
+||admixer.co.kr^
 ||xlviirdr.com^
 ||xn--s-4z5e652a53k.com^
 ||ds.11st.co.kr^
@@ -289,6 +290,8 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||ppss.kr/wp-content/uploads/2021/09/ktx_
+||ppss.kr/wp-content/uploads/2022/02/cartax-
 ||dpg.danawa.com/powerLink|
 ||image.happymoney.co.kr/extimage/mobileBanner/
 ||img.etnews.com/*/etnews/photos/ad_
@@ -354,7 +357,7 @@
 ||static.javhd.com/h5/files/
 ||mdjournal.kr/banner/
 ||mdjournal.kr/bannerManager/
-||coupang.com/?*addtag=*&pageType*&placementid*&impressionid&campaigntype$document
+||coupang.com/*&addtag=*ptag=*&redirect=landing&traceid=*&placementid=*&impressionid=&campaigntype=$document,popup
 ||startupn.kr/adManager/css/adManager.css
 ||startupn.kr/bannerpop/uploads/
 ||dr9xthplobr1x.cloudfront.net/smart/MWEB/img/
@@ -822,7 +825,6 @@ yonhapnewstv.co.kr##.cont-row > div[class^="cont-item"] > .detail-rel
 ytn.co.kr##.article > span[style] > #hns_mask
 ytn.co.kr##iframe[src^="/inc_banner/"]
 zdnet.co.kr##div[class$="_ad_box"]
-ppss.kr##img[id^="ppss_title_bn"]
 m.danawa.com##div.power_link
 m.coupang.com##div[id^="sdp-"][id$="-banner"]
 m.clien.net##div[class$="_ad "]
@@ -1102,12 +1104,8 @@ x86.co.kr#@#.download_ad
 !#endif
 !#if (!adguard_ext_android_cb)
 ! Ad-Shield
-ppss.kr,ygosu.com,tgd.kr,inven.co.kr,loawa.com,feedclick.net#$#div[style="margin-left: auto; margin-right: auto; display: block;"] * { cursor: default !important; }
-ppss.kr,ygosu.com#$#div[style="margin-left: auto; margin-right: auto; display: block;"] { mix-blend-mode: color-burn !important; }
-tgd.kr,loawa.com,feedclick.net#$#div[style="margin-left: auto; margin-right: auto; display: block;"] { background-color: black !important; }
-tgd.kr,loawa.com,feedclick.net#$#div[style="margin-left: auto; margin-right: auto; display: block;"] * { mix-blend-mode: darken !important; }
-inven.co.kr#$#div[style="margin-left: auto; margin-right: auto; display: block;"] { background-color: white !important; }
-inven.co.kr#$#div[style="margin-left: auto; margin-right: auto; display: block;"] { mix-blend-mode: color-burn !important; }
+ppss.kr#$#a[href*="president.go.kr"] { pointer-events: none !important; }
+ppss.kr#$#a[href*="cartax.biz"] { pointer-events: none !important; }
 !
 inews24.com#$#header ~ header { margin-top: 100px !important; }
 tvchak.com#$#body { overflow-x: auto !important; overflow-y: auto !important; }
@@ -1131,7 +1129,7 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
-namu.wiki#?#article div[class] > div[class] ~ div:has(table[style*=" "]):has(div[class^="_"])
+namu.wiki#?#article div[class] > div[class] ~ div:has(div:not([style]):matches-css(overflow-x: hidden)):has(div[class]:matches-css(display: none), table[src*=" "])
 namu.wiki#?#article div[class] > div[id]:not([class]):not(:has(> *))
 namu.wiki#?#div[class] > div[id]:not([class]):has(> iframe[id^="google_ads_"])
 browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap > .box__component:has(button[id^="buttonItemCardAdsLayer"][class="button__ads-layer"])
@@ -1255,24 +1253,20 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ||tv.kakao.com/embed/player/image/ads.png$redirect=32x32-transparent.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 ||videoads.kakao.com/adserver/api/v2/vmap$redirect=noopvmap-1.0,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 ! Ad-Shield
-! googleads.g.doubleclick.net##html
-! @@||zicf.inven.co.kr/RealMedia/ads/Creatives/default/empty.gif$image,domain=inven.co.kr|~m.inven.co.kr
-! @@||zicf.inven.co.kr/RealMedia/ads/adstream_sx.ads/$subdocument,domain=inven.co.kr|~zicf.inven.co.kr|~m.inven.co.kr
-! zicf.inven.co.kr##html
-! @@||pagead2.googlesyndication.com/getconfig/sodar?$xhr,domain=loawa.com
-! adver5.clickmon.co.kr##html
-! googleads.g.doubleclick.net###google-center-div
-! googleads.g.doubleclick.net###abgc
-! @@||googleads.g.doubleclick.net/pagead/$xhr,subdocument,domain=loawa.com
-! @@||clickmon.co.kr/ad_img/$subdocument,domain=ygosu.com
-! @@||ad.xc.netinsight.co.kr/xc/h/$subdocument,domain=ygosu.com
-! @@||api.dable.io/plugin/services/ppss.kr/prefs2?$script,domain=ppss.kr
-! @@||tab2.clickmon.co.kr$script,domain=ygosu.com
-! @@||static.dable.io/dist/plugin.min.js$script,xhr,domain=ppss.kr|ygosu.com|inven.co.kr|loawa.com
-! @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/$script,domain=loawa.com|ppss.kr
-! @@||adservice.google.*/adsid/integrator.js?domain=loawa.com$script,domain=loawa.com
-! @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xhr,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
-! @@$generichide,domain=ygosu.com|tgd.kr|inven.co.kr
+@@||clickmon.co.kr/ad_img/$subdocument,domain=ygosu.com
+@@||ad.xc.netinsight.co.kr/xc/h/$subdocument,domain=ygosu.com
+@@||tab2.clickmon.co.kr$script,domain=ygosu.com
+@@||ad.doubleclick.net/ddm/adj/bkne/bdfs$xmlhttprequest,domain=ppss.kr
+@@||static.dable.io/dist/plugin.min.js$xmlhttprequest,domain=ppss.kr
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ppss.kr
+@@||static.dable.io/dist/plugin.min.js$script,domain=ppss.kr
+@@||api.dable.io/plugin/services/ppss.kr/prefs2?$script,domain=ppss.kr
+@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/$script,domain=ppss.kr
+@@||r-log.dable.io/s/ppss.kr/u/$script,domain=ppss.kr
+@@||ad.doubleclick.net/ddm/adj/bkne/bdfs$xmlhttprequest,domain=ppss.kr
+@@||r-log.dable.io/s/ppss.kr/u/$script,domain=ppss.kr
+@@$generichide,domain=ppss.kr|ygosu.com|feedclick.net|inven.co.kr|loawa.com
+ygosu.com,feedclick.net,inven.co.kr#%#//scriptlet("prevent-fetch", "/doubleclick\.net|static\.dable\.io|adsbygoogle/")
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 !
@@ -1301,11 +1295,11 @@ downloads.descendant.me,html5.gamedistribution.com,paraphraser.io,sekai-kabuka.c
 !#if (!adguard_app_ios && !adguard_ext_safari)
 ! Ad-Shield
 $image,redirect-rule=32x32-transparent.png,domain=ppss.kr
-$subdocument,redirect-rule=noopframe,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
-/\/[0-9a-zA-Z\_?\-]{19,}\.(?!png|jpg|gif|jpeg|html|htm|txt)/$document,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
+$subdocument,redirect-rule=noopframe,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
+/\/[0-9a-zA-Z\/\_?]{14,}\.(?!png|jpg|gif|jpeg|html|htm|txt|php|com|kr|net|svg|[a-zA-Z0-9\/]{5,})/$document,popup,~third-party,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
 $script,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
-$image,redirect-rule=1x1-transparent.gif,domain=ygosu.com|tgd.kr|inven.co.kr|loawa.com
-$xmlhttprequest,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
+$image,redirect-rule=1x1-transparent.gif,domain=ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
+$xmlhttprequest,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
 !
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication-adsbygoogle
 ||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon-apstag
