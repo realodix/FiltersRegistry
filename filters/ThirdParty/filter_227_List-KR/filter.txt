@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.520.1
+! OriginalVersion: 2022.520.5
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -290,6 +290,7 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+/^https:\/\/thumb\.toomics\.com\/upload\/banner\/(?!main)/
 ||ppss.kr/wp-content/uploads/2021/09/ktx_
 ||ppss.kr/wp-content/uploads/2022/02/cartax-
 ||dpg.danawa.com/powerLink|
@@ -540,7 +541,6 @@
 ||file.osen.co.kr/*/css/ad.css
 ||img.mbn.co.kr/ad/
 ||techworld.speedgabia.com/epnc.co.kr/ad/
-||thumb.toomics.com/upload/banner/
 ||s3-ap-northeast-1.amazonaws.com/*.rememberapp.co.kr/production/uploads/banner/
 /:\/\/m\.ilbe\.com\/images\/([a-z]|[0-9]|_){8,11}\.gif/
 ||clien.net/service/api/coupang/ad?
@@ -635,6 +635,7 @@ rhythmer.net##div[class$="Banner"]
 ! div[class$="banner"]
 dcinside.com##div[class$="banner"]
 !
+inven.co.kr###topskyAd
 tgd.kr###board-upper-banner-area > a[href]
 coupang.com##li.search-product__ad-badge
 inews24.com##section > container > .ad
@@ -1270,6 +1271,7 @@ ygosu.com,feedclick.net,inven.co.kr#%#//scriptlet("prevent-fetch", "/doubleclick
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 !
+@@||googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=na.op.gg
 lover91.net#%#//scriptlet("abort-on-property-read", "open", "/(\/|a|d|b|l|o|c|k|[0-9]){7,}\.html/")
 $script,redirect-rule=noopjs,domain=lover91.net
 ||www3.doubleclick.net/|$redirect=nooptext,domain=blackkiwi.net
@@ -1294,9 +1296,11 @@ downloads.descendant.me,html5.gamedistribution.com,paraphraser.io,sekai-kabuka.c
 !#endif
 !#if (!adguard_app_ios && !adguard_ext_safari)
 ! Ad-Shield
+!#if (!adguard_app_android && !adguard_app_ios && !adguard_app_mac && !adguard_app_windows)
+/\/[0-9a-zA-Z\/\_?]{14,}\.(?!png|jpg|gif|jpeg|html|htm|txt|php|com|kr|net|svg|[a-zA-Z0-9\/]{5,})/$document,popup,~third-party,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
+!#endif
 $image,redirect-rule=32x32-transparent.png,domain=ppss.kr
 $subdocument,redirect-rule=noopframe,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
-/\/[0-9a-zA-Z\/\_?]{14,}\.(?!png|jpg|gif|jpeg|html|htm|txt|php|com|kr|net|svg|[a-zA-Z0-9\/]{5,})/$document,popup,~third-party,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
 $script,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
 $image,redirect-rule=1x1-transparent.gif,domain=ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
 $xmlhttprequest,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
