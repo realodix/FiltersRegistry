@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.520.5
+! OriginalVersion: 2022.522.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -290,7 +290,12 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
-/^https:\/\/thumb\.toomics\.com\/upload\/banner\/(?!main)/
+||cdn.011st.com/browsing/banner/
+||recipe1.ezmember.co.kr/cache/shop/$domain=10000recipe.com
+||webapi2.edaily.co.kr/BoardMgnt/popup|
+/^https:\/\/image\.edaily\.co\.kr\/images\/content\/[A-z0-9]{1,}640x100\./
+/^https:\/\/image\.edaily\.co\.kr\/images\/content\/[A-z0-9]{1,}1080x128\./
+/^https:\/\/thumb\.toomics\.com\/upload\/banner\/(?!main|cut)/
 ||ppss.kr/wp-content/uploads/2021/09/ktx_
 ||ppss.kr/wp-content/uploads/2022/02/cartax-
 ||dpg.danawa.com/powerLink|
@@ -615,7 +620,7 @@
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
 ! ##div[id^="ad_"]
-hani.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,m.10000recipe.com,pandora.tv,mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
+m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,m.10000recipe.com,pandora.tv,mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
 news.daum.net,instiz.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 ! ##div[class^="ad_"]
@@ -625,16 +630,33 @@ dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,d
 ! ##.banner
 m.sedaily.com,bloter.net,mosen.mt.co.kr,hinfomax.kr,hinfomax.co.kr,pressian.com,kukinews.com##.banner
 ! ##div[class$="_banner"]
-m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
+toomics.com,m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
 ! ##div[class^="ad"]
 jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m.moneys.mt.co.kr,basketkorea.com,m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com,sports.chosun.com##div[class^="ad"]
 ! ##div[class^="banner_"]
 auth.danawa.com,socialvalue.kr,news.jtbc.joins.com,etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
-! div[class$="Banner"]
+! ##div[class$="Banner"]
 rhythmer.net##div[class$="Banner"]
-! div[class$="banner"]
+! ##div[class$="banner"]
 dcinside.com##div[class$="banner"]
+! ##div[class$="-banner"]
+toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
+! ##div[class^="banner"]
+m.edaily.co.kr,ichannela.com,m.news1.kr##div[class^="banner"]
 !
+thecall.co.kr##[class^="adsense"]
+coolenjoy.net###sidebar > .tab
+quasarzone.com##div.right-util-area > .top-util-box,.bot-util-box
+m.bobaedream.co.kr##.wrap > div[style$="height:100px;"]:not([class])
+login.11st.co.kr##.login_banner
+quasarzone.com##[class^="banner-"]
+m.edaily.co.kr##div[class$="_banners"]
+m.edaily.co.kr##.article_body > div[class]
+m.edaily.co.kr##.article_body > #innoramegbLodK
+edaily.co.kr###contents > section.mt50 ~ .mt50 div[class*="width"].fl ~ div[class*="width"].fl
+edaily.co.kr###edailywrap > [style$="128px;"].special_area
+toomics.com##body.home #contents > .floating
+toomics.com##img[src*="://thumb.toomics.com/upload/banner/"]:not([src*="/main/"]):not([src*="/cut/"])
 inven.co.kr###topskyAd
 tgd.kr###board-upper-banner-area > a[href]
 coupang.com##li.search-product__ad-badge
@@ -764,7 +786,6 @@ m.hani.co.kr##section[class^="ad"]
 hankyung.com##.view > .joy_info
 hankyung.com##article.act-body > .wrap_list
 gigglehd.com##.widget_banner_skin > ul.banner_list
-ichannela.com,m.news1.kr##div[class^="banner"]
 m.news1.kr##iframe[src^="/template/ads/"]
 m.news1.kr##div[class^="das_article"][class$="_wrap"]
 talk.op.gg,m.news1.kr##div[class^="ads_"]
@@ -957,11 +978,9 @@ news.v.daum.net##ul.list_column > li.item_ad
 mmzone.co.kr##div[id^="scm_ban"][style*="url(/media/banner/"]
 mmzone.co.kr###scm_premium_spon_block
 ilbe.com##ul.board-body > li[id^="sponser_ad_"]
-nongmin.com,ilbe.com##div[class$="-banner"]
 ilbe.com##img[src^="https://acache.ilbe.com/"]
 berryjam.co.kr##div[class*="slider-banner-"]
 berryjam.co.kr##img[src^="/data/skin/front/udweb_CCC/img/banner/"][alt="2021년 시마노 웹 한글 카다로그"]
-toomics.com##img[src*="://thumb.toomics.com/upload/banner/"]
 now.rememberapp.co.kr##.now_content_ads__wrapper
 m.ilbe.com##.banner-wrap
 clien.net###coupangAd
@@ -1008,7 +1027,7 @@ coolenjoy.net##.simple_banner_wrap
 coolenjoy.net##img[src^="https://photo.coolenjoy.net/banner/"]
 quasarzone.com##div[class^="main-"][class$="-banner"]
 quasarzone.com##.top-banner
-nongmin.com,hankookilbo.com,quasarzone.com##div[class^="banner-"]
+nongmin.com,hankookilbo.com##div[class^="banner-"]
 okky.kr##img[src^="//file.okky.kr/banner/"]
 m.todayhumor.co.kr##.ad_box_div
 etoland.co.kr##ul.board_list > li.subject.ad_subject
@@ -1109,6 +1128,7 @@ x86.co.kr#@#.download_ad
 ppss.kr#$#a[href*="president.go.kr"] { pointer-events: none !important; }
 ppss.kr#$#a[href*="cartax.biz"] { pointer-events: none !important; }
 !
+toomics.com#$#.banner-open .contents { padding-top: 68px !important; }
 inews24.com#$#header ~ header { margin-top: 100px !important; }
 tvchak.com#$#body { overflow-x: auto !important; overflow-y: auto !important; }
 tvchak.com#$##banner, .modal-backdrop { display: none !important; }
@@ -1131,6 +1151,7 @@ ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
 hankyung.com#$#.module_wrap.poll { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
+10000recipe.com#?#body .view_sp_banner .swipe-slide:has(img[src^="https://recipe1.ezmember.co.kr/cache/shop/"])
 namu.wiki#?#article div[class] > div[class] ~ div:has(div:not([style]):matches-css(overflow-x: hidden)):has(div[class]:matches-css(display: none), table[src*=" "])
 namu.wiki#?#article div[class] > div[id]:not([class]):not(:has(> *))
 namu.wiki#?#div[class] > div[id]:not([class]):has(> iframe[id^="google_ads_"])
@@ -1161,13 +1182,7 @@ m.newspic.kr#?#.aside_wrap > div.box:has(> div > iframe[src^="https://ad.adinc.k
 mosen.mt.co.kr#?#section.textList > article.row:has(> ul.aritcle-info > li.title > a[href*="//adv.imadrep.co.kr/"])
 berryjam.co.kr#?#table[width="1200"]:has(> tbody > tr > td > div[class*="slider-banner-"])
 community.rememberapp.co.kr#?#div > a.sc-7g611p-0.cAmftz:has(> div > div > div > img[alt="배너 광고 이미지"])
-2cpu.co.kr#?#tbody > tr > td a[href^="../ad_board/"]:upward(2)
-coolenjoy.net#?##sidebar > .tab > a img[src^="https://photo.coolenjoy.net/banner/"]:upward(2)
-quasarzone.com#?#div.right-util-area:has(> div > .flexslider > .flex-viewport > ul > li > a[href*="://prod.danawa.com/"] > img[src*=".quasarzone.com/banner/"])
 etoland.co.kr#?#tbody > tr > td > img[src*="/img/adland01.gif"]:upward(2)
-m.bobaedream.co.kr#?#div[style^="display:flex;"] > div[id^="div-gpt-ad-"]:upward(1)
-bobaedream.co.kr#?#tr.best > td a[href*="bobaedream.co.kr/event/event_list.php?"]:upward(2)
-orbi.kr#?#a[class="tag"][href^="/list/tag/"][-ext-contains="#제휴사공지"]:upward(li.notice)
 !
 ! Each domain of website in this section is forbidden by Internet censorship of S. Korea.
 ! Some listed domains have been changed by their administrators regularly.
@@ -1177,6 +1192,7 @@ skytoon32.com,skytoon33.com,skytoon34.com,skytoon35.com,skytoon36.com,skytoon37.
 toonkor109.com,toonkor110.com,toonkor111.com,toonkor112.com,toonkor113.com,toonkor114.com,toonkor115.com,toonkor116.com,toonkor117.com,toonkor118.com,toonkor119.com#?#.navbar-nav > li[class]:has(> a[href$="/토토보증업체"][alt="토토보증업체"])
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+2cpu.co.kr#?#tr.is_notice:has(span:contains((광고)))
 arca.live#?#.topbar-area:has(> .badge:contains(뉴스))
 browse.gmarket.co.kr#?#div[module-design-id].box__module-wrap:has(button[id^="buttonItemCardAdsLayer"][class="button__ads-layer"]):has(.box__itemcard-header > h3:contains(먼저 둘러보세요))
 newreop.com#?#.app-board-section > ul.app-board-template-list > li.notice:has(> a[href] > span > font[color]:contains(AD))
@@ -1202,7 +1218,7 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! Topics API for advertisement
 #%#//scriptlet("set-constant", "document.browsingTopics", "undefined")
 ! Ad-Shield
-ppss.kr,ygosu.com,tgd.kr,loawa.com,inven.co.kr,feedclick.net#%#//scriptlet("prevent-setTimeout", "", "10")
+dailian.co.kr,ppss.kr,ygosu.com,tgd.kr,loawa.com,inven.co.kr,feedclick.net#%#//scriptlet("prevent-setTimeout", "", "10")
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
@@ -1297,14 +1313,15 @@ downloads.descendant.me,html5.gamedistribution.com,paraphraser.io,sekai-kabuka.c
 !#if (!adguard_app_ios && !adguard_ext_safari)
 ! Ad-Shield
 !#if (!adguard_app_android && !adguard_app_ios && !adguard_app_mac && !adguard_app_windows)
-/\/[0-9a-zA-Z\/\_?]{14,}\.(?!png|jpg|gif|jpeg|html|htm|txt|php|com|kr|net|svg|[a-zA-Z0-9\/]{5,})/$document,popup,~third-party,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
+/\/[0-9a-zA-Z\/\_?]{14,}\.(?!png|jpg|gif|jpeg|html|htm|txt|php|com|kr|net|svg|[a-zA-Z0-9\/]{5,})/$document,popup,~third-party,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net|dailian.co.kr
 !#endif
 $image,redirect-rule=32x32-transparent.png,domain=ppss.kr
-$subdocument,redirect-rule=noopframe,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
-$script,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com
-$image,redirect-rule=1x1-transparent.gif,domain=ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
-$xmlhttprequest,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net
+$subdocument,redirect-rule=noopframe,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net|dailian.co.kr
+$script,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net|dailian.co.kr
+$image,redirect-rule=1x1-transparent.gif,domain=ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net|dailian.co.kr
+$xmlhttprequest,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net|dailian.co.kr
 !
+||ds.11st.co.kr/NetInsight/text/11st/11st_product/product@$redirect=noopframe
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication-adsbygoogle
 ||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon-apstag
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt
@@ -1387,6 +1404,8 @@ op.gg,etoland.co.kr,sports.donga.com,mlbpark.donga.com,ppss.kr,ygosu.com,inven.c
 !
 !
 ||videoads.kakao.com/adserver/api/v*/vmap$redirect=noopvmap-1.0,app=PotPlayer.exe
+||admin.clipdown.co.kr/app/advert.php
+||admin.helpstart.co.kr/app/shortcut_bookmark_config.php
 ||cf-xdn.altools.co.kr/Ex_image/alyac/EndBanner/
 ||bandisoft.com/bandizip/ad/
 ||polink-static-contents.polarisoffice.com^
