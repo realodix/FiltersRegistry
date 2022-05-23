@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-05-21 07:03:12 CEST
+! Last modified: 2022-05-23 08:07:22 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -294,7 +294,7 @@ nordichardware.se##.td_block_wrap:has(span:has-text(/sponsrat/i))
 norpan.se,skrattsajten.com#%#//scriptlet('ubo-acs.js', '$', 'e.preventDefault')
 nouw.com##.badge:has-text(/annons/i):upward(li)
 nyadagbladet.se##.widget_media_image:has-text(/annons/i)
-nyan.ax,streamio.com#%#//scriptlet('ubo-aeld.js', 'contextmenu')
+nyan.ax,spelhubben.se,streamio.com#%#//scriptlet('ubo-aeld.js', 'contextmenu')
 nyheteridag.se##.article-inner:has(h2:has-text(/samarbetslänkar/i))
 nyheteridag.se##article:has-text(/sponsrat innehåll/i)
 nyteknik.se#%#//scriptlet('ubo-no-xhr-if.js', '/premium/ method:HEAD')
@@ -333,7 +333,9 @@ skargarden.se##article:has([title^="Annons"])
 so-rummet.se##.sponsrad-over:upward(.article-list)
 so-rummet.se##.view-nya-lankar-front:has(h3:has-text(/annonser/i))
 so-rummet.se##img[src*="sponsrad"]:upward(.link-list-item)
-spelhubben.se#%#//scriptlet('ubo-acs.js', 'stopPrntScr')
+spelhubben.se#%#//scriptlet('ubo-set.js', 'disable_copy_ie', 'noopFunc')
+spelhubben.se#%#//scriptlet('ubo-set.js', 'nocontext', 'noopFunc')
+spelhubben.se#$#html, .unselectable { -moz-user-select:initial!important; -webkit-user-select:initial!important; -webkit-touch-callout:initial!important; user-select:initial!important; -webkit-tap-highlight-color:initial!important; cursor:initial!important; }
 spelochfilm.se##a[href*="casino"]:upward(.mh-posts-stacked-wrap)
 sportbladetplay.se##[class^="CookieConsentPopup"]:upward(.ui.page.dimmer)
 sportbladetplay.se#$#body.dimmed { overflow:unset!important }
@@ -707,6 +709,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ##div.widget_widget_dfp
 ##div.wppasrotate
 ##div[class$="popup-and-layer-ads"]
+##div[class*="bsaProContainer"]
 ##div[class^="borka-insider"]
 ##div[class^="borka-panorama"]
 ##div[class^="borka-widescreen"]
@@ -1089,6 +1092,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /plugins/all-in-one-seo-pack$script
 /plugins/angwp
 /plugins/annonstorget$script
+/plugins/ap-plugin-scripteo
 /plugins/appbanners/*
 /plugins/arscode-social-slider
 /plugins/beautiful-and-responsive-cookie-consent$script
@@ -1234,6 +1238,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /plugins/wp-power-stats
 /plugins/wp-sentry-integration$domain=chef.se
 /plugins/wp-snow-effect
+/plugins/wplinktrade
 /plugins/wpx-bannerize$script
 /plugins/wysija-newsletters
 /plugins/yeloni-free-exit-popup
@@ -1949,7 +1954,6 @@ smhi.se##.polopolyNotification
 so-rummet.se##.block-rr
 spanaren.se##.textwidget a[target="blank"] img
 spelagratis.se##.sidebar-right, .ad_header + p
-spelhubben.se##.g-particlesjs
 spelo.se##.banner-container
 spelochfilm.se##.mh-sidebar .textwidget
 spelrum.net##a[href*="casino.com"], .main-container > div.vc_row:last-child
@@ -2035,7 +2039,7 @@ vinochmatguiden.se##.popup_missa-inget
 viseniorer.se##.topheaderinfo
 visitskargarden.se##a[onclick*="Banner"], .boss-loader-overlay
 vm-fotboll.se##a[href*="/go/"][target], .category-kampanjer
-voister.se##.campaign, .cookiebanner
+voister.se##.campaign
 wappare.se##.cookie-consent-modal
 webb-tv.nu##[id^="adservice"]
 webbjobb.io##.cookie
@@ -2147,6 +2151,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||breakit.se/js/google-analytics
 ||breakit.se/js/hotjar
 ||bstatic.com/static/affiliate$third-party
+||btcswe.com^$third-party
 ||btikon.se/analytics
 ||btikon.se/btstats
 ||bulletproof-analytics.com^$third-party
@@ -2200,7 +2205,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$domain=minbostad.se|viivilla.se
 ||cookieinfoscript.com^$third-party
-||cookielaw.org^$domain=arbetet.se|booli.se|cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|ilikeradio.se|internetkunskap.se|internetstiftelsen.se|ka.se|kokaihop.se|koket.se|livetochdiabetes.se|malarnasfacktidning.se|manpower.se|mtv.se|natgeotv.com|nvp.se|recept.se|sekotidningen.se|spisa.nu|sv.bab.la|svenskarnaochinternet.se|sydkusten.es|tidningenelektrikern.se|tripadvisor.se|tv4.se|tv4play.se|yelp.se
+||cookielaw.org^$domain=arbetet.se|booli.se|cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|ilikeradio.se|internetkunskap.se|internetstiftelsen.se|ka.se|kokaihop.se|koket.se|livetochdiabetes.se|malarnasfacktidning.se|manpower.se|mtv.se|natgeotv.com|nvp.se|recept.se|sekotidningen.se|spisa.nu|sv.bab.la|svenskarnaochinternet.se|sydkusten.es|tidningenelektrikern.se|tripadvisor.se|tv4.se|tv4play.se|voister.se|yelp.se
 ||cookienotice.co^$third-party
 ||cookiepolicy.peytz.dk^$third-party
 ||cookiepro.com^$domain=aktiespararna.se|birthday.se|djurskyddet.se|friendsarena.se|fz.se|hastnet.se|havet.nu|sd.se|spela.se|svenskfast.se|sweclockers.com
