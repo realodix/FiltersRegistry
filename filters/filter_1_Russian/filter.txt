@@ -6694,6 +6694,7 @@ okko.sport#?#div[class]:has(> div[class] > div[class]:contains(/^коэффиц�
 okko.sport#?#button:has(> span:contains(/^прогнозы$/))
 okko.sport##div[class]:has(> iframe[src^="https://clients-static.okko.tv/web/banners/winline/"])
 !
+kp.ru#?#div:not([class]) > div[class]:has(> div[class] > div.smi24__informer)
 fontanka.ru#?#section[itemprop="articleBody"] > div > div > div > div[id^="adv_"]:upward(2)
 pravda.com.ua,glavred.info#?#.nts-video-wrapper
 koolinar.ru#?#.b-page-block > div.b-ad-video-lentainform:upward(1)
@@ -8641,6 +8642,8 @@ disk.yandex.*#%#//scriptlet('remove-class', 'has-fullscreen-banner','.public__ro
 !-----------------------
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/119646
+kp.ru#$?#div:not([class]) > div[class^="sc-"]:has(> div:not([class]) > div:not([class]) > div[class] > div[class] > div.smi24__informer) { min-height: auto!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/119375
 d-zholik.livejournal.com#$#.html-s2-no-adaptive { padding-bottom: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117298
@@ -11316,6 +11319,8 @@ sevastopol.su,zn.ua,pravo.ru,lubertsyriamo.ru,kommersant.ru,dvnovosti.ru,kubnews
 !
 !
 !
+kp.ru##div[style="text-align:center;height:250px;overflow:hidden"]
+kp.ru##div[data-name]
 d-zholik.livejournal.com##.j-beta-adv
 gdz.ru##.task-banner
 gdz.ru##.box-menu > div > ul.sidebar__films
@@ -11401,7 +11406,7 @@ unsch.edu.pe##.pm-ads-inplayer
 citydog.io,citydog.by##.banner_post_footer_top
 ||newsapi.fontanka.ru/v1/public/auto/offers/
 fontanka.ru##div[style="width:728px;"]
-news.sportbox.ru##.ligastavok-coef-link
+matchtv.ru,news.sportbox.ru##.ligastavok-coef-link
 ||adebiportal.kz/media/image/podkast_kk.jpg
 inform.kz###redtram
 adebiportal.kz,inform.kz###wrap_informer_ru
