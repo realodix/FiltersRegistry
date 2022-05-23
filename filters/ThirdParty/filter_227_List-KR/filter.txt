@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.523.3
+! OriginalVersion: 2022.523.9
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -289,6 +289,8 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||compuzone.co.kr/img/multi_brandshop/
+/^https:\/\/image[0-9]{1,2}\.compuzone\.co\.kr\/img\/images\/main[0-9]{4}\/[A-z]{1,2}\/[A-z]{3,}Banner(|[0-9])_(|add_)[0-9]{5,6}\./
 ||daumcdn.net/tistory/927313/skin/images/book_300_poster.png
 ||img.peterpanz.com/images/banner/adimUpload/
 ||cdn.011st.com/browsing/banner/
@@ -645,6 +647,21 @@ toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
 ! ##div[class^="banner"]
 m.edaily.co.kr,ichannela.com,m.news1.kr##div[class^="banner"]
 !
+compuzone.co.kr##.pdtl_cm_detail .md_software
+compuzone.co.kr###searchArea #side_ad
+compuzone.co.kr##form > div[id$="wing_section"][class*="wing_section"]
+compuzone.co.kr###container #content > .cpz_inner[style]
+compuzone.co.kr###content > #start_mainslide.cpz_mainslide
+compuzone.co.kr###container #content > .gradation_area
+compuzone.co.kr###rightwing_section .rightwing_boxNew > .rightwing_bnr
+compuzone.co.kr###container .cpz_inner > #brandshop
+compuzone.co.kr###container #main_five_fixbnr ul.five_fixbnr_list
+compuzone.co.kr##.cpz_inner .category_set_area div[class^="second_cate_area"] div[class^="catebnr_area"]
+compuzone.co.kr##body > #container > .cpz_inner
+compuzone.co.kr###container > #contnet > .gradation_area
+compuzone.co.kr###container > div[class][style*="/GNBBottomLineBanner_"][style^="background-image:url("]
+compuzone.co.kr##.cpz_inner .sta_rolling_banner
+compuzone.co.kr##.cpz_inner .recommend_wrap > .recommend_list
 poro.gg###__layout > div:not([class]) > [class]:not(footer) > div[class]:not([sm]):not(.page-container)
 mathbang.net##.sidebar_book
 thecall.co.kr##[class^="adsense"]
@@ -1130,6 +1147,9 @@ x86.co.kr#@#.download_ad
 ppss.kr#$#a[href*="president.go.kr"] { pointer-events: none !important; }
 ppss.kr#$#a[href*="cartax.biz"] { pointer-events: none !important; }
 !
+compuzone.co.kr#$#.viewType_L .product_list li .prd_info { width: 700px !important; }
+compuzone.co.kr#$#.wrap_list .standard { width: 100% !important; }
+compuzone.co.kr#$##searchArea .title_wrap { width: calc(100% - 50px) !important; }
 toomics.com#$#.banner-open .contents { padding-top: 68px !important; }
 inews24.com#$#header ~ header { margin-top: 100px !important; }
 tvchak.com#$#body { overflow-x: auto !important; overflow-y: auto !important; }
@@ -1276,10 +1296,10 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||clickmon.co.kr/ad_img/$subdocument,domain=ygosu.com
 @@||ad.xc.netinsight.co.kr/xc/h/$subdocument,domain=ygosu.com
 @@||tab2.clickmon.co.kr$script,domain=ygosu.com
-@@||static.dable.io/dist/plugin.min.js$script,xmlhttprequest,domain=ppss.kr|loawa.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ppss.kr|loawa.com|feedclick.net
+@@||static.dable.io/dist/plugin.min.js$script,xmlhttprequest,domain=ppss.kr|loawa.com|dailian.co.kr
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ppss.kr|loawa.com|feedclick.net|dailian.co.kr
 @@||api.dable.io/plugin/services/ppss.kr/prefs2?$script,domain=ppss.kr
-@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/$script,domain=ppss.kr|loawa.com|feedclick.net
+@@||pagead2.googlesyndication.com/pagead/managed/js/adsense/$script,domain=ppss.kr|loawa.com|feedclick.net|dailian.co.kr
 @@||r-log.dable.io/s/ppss.kr/u/$script,domain=ppss.kr
 @@||ad.doubleclick.net/ddm/adj/bkne/bdfs$xmlhttprequest,domain=ppss.kr
 @@||r-log.dable.io/s/ppss.kr/u/$script,domain=ppss.kr
@@ -1287,7 +1307,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||googleads.g.doubleclick.net/pagead/$subdocument,domain=loawa.com
 @@||pagead2.googlesyndication.com/getconfig/sodar?$xmlhttprequest,domain=loawa.com
 @@||tpc.googlesyndication.com/sodar/sodar2.js$script,domain=loawa.com
-@@$generichide,domain=ppss.kr|ygosu.com|feedclick.net|inven.co.kr|loawa.com
+@@$generichide,domain=ppss.kr|ygosu.com|feedclick.net|inven.co.kr|loawa.com|dailian.co.kr
 googleads.g.doubleclick.net##html
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
