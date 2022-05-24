@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.524.1
+! OriginalVersion: 2022.524.9
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -647,6 +647,10 @@ toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
 ! ##div[class^="banner"]
 m.edaily.co.kr,ichannela.com,m.news1.kr##div[class^="banner"]
 !
+compuzone.co.kr###contents #recomN.recomend_main
+compuzone.co.kr###contents > #EP_Rbnr, #contents > #EP_linebnr
+compuzone.co.kr##.contentsWrap .product_list_wrap > div[class^="ad_"], .contentsWrap .product_list_wrap > div + ul.product_list
+compuzone.co.kr##.contentsWrap > .product_list_linebnr, .contentsWrap > .brand_area, .contentsWrap > .topBanner_area
 compuzone.co.kr##.pdtl_cm_detail .md_software
 compuzone.co.kr###searchArea #side_ad
 compuzone.co.kr##form > div[id$="wing_section"][class*="wing_section"]
@@ -1149,7 +1153,7 @@ ppss.kr#$#a[href*="cartax.biz"] { pointer-events: none !important; }
 loawa.com#$#div[id^="ad_"] { position: absolute !important; top: 100% !important; }
 loawa.com#$#div[class="p-0 m-0 mb-2 d-none d-md-block text-center "] { position: absolute !important; top: 100% !important; }
 !
-compuzone.co.kr#$#.viewType_L .product_list li .prd_info { width: 700px !important; }
+compuzone.co.kr#$##searchArea .viewType_L .product_list li .prd_info { width: 700px !important; }
 compuzone.co.kr#$#.wrap_list .standard { width: 100% !important; }
 compuzone.co.kr#$##searchArea .title_wrap { width: calc(100% - 50px) !important; }
 toomics.com#$#.banner-open .contents { padding-top: 68px !important; }
@@ -1239,7 +1243,13 @@ frtoon115.com,frtoon116.com,frtoon117.com,frtoon118.com,frtoon119.com,frtoon120.
 hdhd133.net,hdhd134.net,hdhd135.net,hdhd136.net,hdhd137.net,hdhd138.net,hdhd139.net,hdhd140.net,hdhd141.net,hdhd142.net,hdhd143.net,hdhd144.net#?#.menu-ul > .menu-li:has(> a:contains(보증토토))
 blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181.com,blacktoon182.com,blacktoon183.com,blacktoon184.com,blacktoon185.com,blacktoon186.com,blacktoon187.com,blacktoon188.com#?#.alert.alert-danger:has(> a:contains([AD]))
 !
+! FLEDGE API for advertisement
+#%#//scriptlet("set-constant", "navigator.joinAdInterestGroup", "undefined")
+#%#//scriptlet("set-constant", "navigator.leaveAdInterestGroup", "undefined")
+#%#//scriptlet("set-constant", "navigator.runAdAuction", "undefined")
+#%#//scriptlet("set-constant", "navigator.adAuctionComponents", "undefined")
 ! Topics API for advertisement
+#%#//scriptlet("set-constant", "Document.prototype.browsingTopics", "undefined")
 #%#//scriptlet("set-constant", "document.browsingTopics", "undefined")
 ! Ad-Shield
 dailian.co.kr,ppss.kr,ygosu.com,tgd.kr,loawa.com,inven.co.kr,feedclick.net#%#//scriptlet("prevent-setTimeout", "", "10")
@@ -1392,6 +1402,7 @@ ff14angler.com#@#ins.adsbygoogle
 !#endif
 !#if (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android)
 op.gg,etoland.co.kr,sports.donga.com,mlbpark.donga.com,ppss.kr,ygosu.com,inven.co.kr,tgd.kr$$ad-shield-inventory[tag-content="ad-shield-ads"]
+ppss.kr,ygosu.com,tgd.kr,inven.co.kr,loawa.com,feedclick.net,dailian.co.kr$$script[tag-content="adshield_analytics_entrypoint"]
 !#endif
 !#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_firefox || adguard_ext_chromium || adguard_ext_edge )
 ||newspic.kr^$removeparam=cp
