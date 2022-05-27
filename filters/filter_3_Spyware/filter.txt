@@ -84,6 +84,8 @@
 ! https://developer.chrome.com/docs/privacy-sandbox/topics/
 ! TODO: replace with a scriptlet later: https://github.com/AdguardTeam/Scriptlets/issues/214
 #%#//scriptlet('set-constant', 'Document.prototype.browsingTopics', 'undefined')
+! https://github.com/AdguardTeam/AdguardFilters/pull/119949
+m.card-gorilla.com,pindirectshop.com,dongbanmall.com#%#//scriptlet("set-constant", "kakaoPixel", "undefined")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/119873
 athabascau.ca#%#//scriptlet("set-constant", "WURFL", "emptyObj")
 ! https://github.com/AdguardTeam/AdguardFilters/pull/119657#discussion_r881483259
@@ -338,6 +340,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 !||i.snssdk.com/log/*
 !||i.snssdk.com/slardar/sdk.js
 !
+||heatmap.emma.tools^
 ||reports.koalametrics.com^
 ||js.go2sdk.com^
 ||dbfocus.jp^$third-party
@@ -5127,6 +5130,7 @@ nethunt.com/api/v1/track/email/$image
 ! Disabled in DNS filter
 ||telemetry.mozilla.org^
 !
+||teralog.techhub.co.kr^
 ||data.mimikama.at^
 ||sayac.tmgrup.com.tr^
 ||t.melhorplano.net^
@@ -24913,6 +24917,8 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/easylist/easylist/commit/7be53e2a32d4e556d48b5cfc2529bae8ddced145
+@@||analytics.analytics-egain.com/onetag/$script,domain=boohoo.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120016
 ! url: https://www.beleuchtung.de/hue-intelligente-beleuchtung/
 @@||googletagmanager.com/gtm.js$domain=beleuchtung.de
