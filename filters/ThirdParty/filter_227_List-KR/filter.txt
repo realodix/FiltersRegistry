@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.527.0
+! OriginalVersion: 2022.527.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -626,6 +626,9 @@
 ||wwwimageup.angle777899.com/other/atoona/
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
+! Ad-Shield
+loawa.com##ad-shield-inventory
+!
 ! ##div[id^="ad_"]
 m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,m.10000recipe.com,pandora.tv,mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
@@ -1162,8 +1165,9 @@ x86.co.kr#@#.download_ad
 ! Ad-Shield
 ppss.kr#$#a[href*="president.go.kr"] { pointer-events: none !important; }
 ppss.kr#$#a[href*="cartax.biz"] { pointer-events: none !important; }
-loawa.com#$#div[id^="ad_"] { position: absolute !important; top: 100% !important; }
-loawa.com#$#div[class="p-0 m-0 mb-2 d-none d-md-block text-center "] { position: absolute !important; top: 100% !important; }
+loawa.com#$#div[id*="ad_"][style*="position: absolute; top:"] { top: 100% !important; position: absolute !important; }
+loawa.com#$#div[class*="p-0 m-0 mb-2 d-none d-md-block text-center "] { position: relative !important; top: -200px !important; }
+loawa.com#$##ad_center_v.adsense-ch { position: relative !important; top: 420px !important; }
 !
 compuzone.co.kr#$##searchArea .viewType_L .product_list li .prd_info { width: 700px !important; }
 compuzone.co.kr#$#.wrap_list .standard { width: 100% !important; }
@@ -1264,8 +1268,7 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 #%#//scriptlet("set-constant", "Document.prototype.browsingTopics", "undefined")
 #%#//scriptlet("set-constant", "document.browsingTopics", "undefined")
 ! Ad-Shield
-dailian.co.kr,ppss.kr,ygosu.com,tgd.kr,loawa.com,inven.co.kr,feedclick.net#%#//scriptlet("prevent-setTimeout", "", "10")
-ppss.kr#%#//scriptlet("abort-on-property-read", "document.querySelectorAll")
+ppss.kr,feedclick.net#%#//scriptlet("abort-on-property-write", "document.writeln")
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
@@ -1319,13 +1322,12 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||clickmon.co.kr/ad_img/$subdocument,domain=ygosu.com
 @@||ad.xc.netinsight.co.kr/xc/h/$subdocument,domain=ygosu.com
 @@||tab2.clickmon.co.kr$script,domain=ygosu.com
-@@||static.dable.io/dist/plugin.min.js$script,xmlhttprequest,domain=ppss.kr|loawa.com|dailian.co.kr
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ppss.kr|loawa.com|feedclick.net|dailian.co.kr
+@@||static.dable.io/dist/plugin.min.js$script,xmlhttprequest,domain=ppss.kr|ygosu.com|inven.co.kr|feedclick.net|loawa.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xmlhttprequest,domain=ppss.kr|ygosu.com|inven.co.kr|feedclick.net|loawa.com
 @@||api.dable.io/plugin/services/ppss.kr/prefs2?$script,domain=ppss.kr
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/$script,domain=ppss.kr|loawa.com|feedclick.net|dailian.co.kr
 @@||r-log.dable.io/s/ppss.kr/u/$script,domain=ppss.kr
-@@||ad.doubleclick.net/ddm/adj/bkne/bdfs$xmlhttprequest,domain=ppss.kr
-@@||r-log.dable.io/s/ppss.kr/u/$script,domain=ppss.kr
+@@||ad.doubleclick.net/ddm/adj/Bkne/Bdfs$xmlhttprequest,domain=ppss.kr|ygosu.com|inven.co.kr|feedclick.net|loawa.com
 @@||adservice.google.*/adsid/integrator.js?domain=loawa.com$script,domain=loawa.com
 @@||googleads.g.doubleclick.net/pagead/$subdocument,domain=loawa.com
 @@||pagead2.googlesyndication.com/getconfig/sodar?$xmlhttprequest,domain=loawa.com
