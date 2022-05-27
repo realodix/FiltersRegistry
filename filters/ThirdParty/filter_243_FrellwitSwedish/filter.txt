@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-05-27 10:23:15 CEST
+! Last modified: 2022-05-27 14:41:27 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -303,6 +303,7 @@ omni.se,omniekonomi.se##a[href*="article-ad-"]:upward(.resource--link)
 oru.se,tui.se#$#.no-scroll { overflow: initial !important; }
 outsidesweden.se##div[style^="font-size: 0.7"]:has-text(Annons:):upward(1)
 padeldirekt.se##.h-background--sponsored:upward(.article-row)
+padeldirekt.se##a[href*="/sponsrat"]:upward(.c-featured-article)
 piraja.se##.intro, #hero, #featholder:has(.spons)
 polestarclubsweden.se,svensktgolfforum.se#%#//scriptlet('ubo-acs.js', 'setTimeout', 'test')
 pricerunner.se##span:has-text(/^sponsrad$/i):upward([data-cy="deal-carousel"])
@@ -487,8 +488,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1422,6 +1423,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 @@||createsend1.com/css/
 @@||feed.meltwater.com^$subdocument
 @@||freeride.nu/js/ads.js
+@@||fwmrm.net/crossdomain.xml$domain=embed.viaplay.com
 @@||happyride.se/img/admarket/$~third-party
 @@||imasdk.googleapis.com/js/sdkloader/ima3.$script,domain=ekuriren.se|gamereactor.se|kkuriren.se|padelgo.tv|sn.se|strengnastidning.se
 @@||js.createsend1.com/js/jquery
