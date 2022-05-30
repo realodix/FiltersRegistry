@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.530.0
+! OriginalVersion: 2022.530.8
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -144,6 +144,8 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||ads.gamemeca.com^
+||adcdn.gamemeca.com^
 ||adgate.auction.co.kr^
 ||trendpick.shopping.naver.com^
 ||powerclick.about.co.kr^
@@ -295,6 +297,12 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||cdn.insightkorea.co.kr/bannerpop/uploads/
+||cdn.insightkorea.co.kr/adManager/css/adManager.css
+||ch.yes24.com/Scripts/wingbanner.js
+||newsnjoy.or.kr/bannerpop/uploads/
+||newsnjoy.or.kr/adManager/css/adManager.css
+||einfomax.co.kr/bannerpop/uploads/
 ||weekly.chosun.com/bannerpop/uploads/
 ||ilbe.com/oa/loader.js
 ||playwares.com/api/redirectAd.php$document
@@ -662,7 +670,13 @@ dcinside.com##div[class$="banner"]
 toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
 ! ##div[class^="banner"]
 m.edaily.co.kr,ichannela.com,m.news1.kr##div[class^="banner"]
+! ##div[class$="-ad"]
+gamemeca.com,yeongnam.com##div[class$="-ad"]
+! ##div[id^="ad"]
+gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 !
+gamemeca.com##div[id$="AD"]
+gamemeca.com##iframe[src^="https://ads.gamemeca.com/"]
 mobile.newsis.com##div[class$="adPos"][class^="listStyle"][style]
 news.sbs.co.kr###sn_banner_side_top
 sign.dcinside.com##.ban_box
@@ -857,7 +871,6 @@ instiz.net##.responsive_main > div[style] > div[style~="background-color:"][styl
 instiz.net##.responsive_main > ul > li[id][class][style]
 instiz.net##.responsive_main > table > tbody > tr > td > div[style~="border:"][style~="1px"][style~="solid"]
 instiz.net##div[id$="ad"]
-m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 zdnet.co.kr##iframe[src^="/template_ad/"]
 yna.co.kr##[class^="aside-bnr"]
 shopping.interpark.com###btnlist > .productImgList.choice
@@ -886,7 +899,6 @@ edaily.co.kr##section[id^="aside_"] > div[id$="-sticky-wrap"] > div[id$="-sticky
 ichannela.com,mediapen.com,edaily.co.kr##div[data-ad][class][style]
 edaily.co.kr##div[class^="gg_"], div[class$="_gg"]
 edaily.co.kr##[class$="_dable"][id^="boxshow_"]
-yeongnam.com##div[class$="-ad"]
 yeongnam.com##table[class^="ad-"]
 yeongnam.com##img[id^="ad_"]
 5donews.co.kr##.leftad2
@@ -1290,8 +1302,7 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 #%#//scriptlet("set-constant", "Document.prototype.browsingTopics", "undefined")
 #%#//scriptlet("set-constant", "document.browsingTopics", "undefined")
 ! Ad-Shield
-ppss.kr,feedclick.net#%#//scriptlet("abort-on-property-write", "document.writeln")
-ygosu.com,tgd.kr,loawa.com,inven.co.kr#%#//scriptlet("prevent-setTimeout", "const", "11")
+ppss.kr,feedclick.net,ygosu.com,tgd.kr,loawa.com,inven.co.kr#%#//scriptlet("prevent-setTimeout", "/const[A-z0-9\(\)\]\[ =;,\.?:]{1,}return[A-z0-9\(\)\]\[ =;,\.?:]{1,}typeof/")
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
