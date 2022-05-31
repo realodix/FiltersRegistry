@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.531.1
+! OriginalVersion: 2022.531.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -297,6 +297,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||images.coocha.co.kr/static/images/deal/ad.png
 ||cdn.insightkorea.co.kr/bannerpop/uploads/
 ||cdn.insightkorea.co.kr/adManager/css/adManager.css
 ||ch.yes24.com/Scripts/wingbanner.js
@@ -675,6 +676,7 @@ gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
 gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 !
+coocha.co.kr##.group-deal .list > .group-power-link
 gamemeca.com##div[id$="AD"]
 gamemeca.com##iframe[src^="https://ads.gamemeca.com/"]
 mobile.newsis.com##div[class$="adPos"][class^="listStyle"][style]
@@ -1227,6 +1229,7 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+coocha.co.kr#?#.group-deal .list > div:has(span.ad:matches-css(background-image: /images\/deal\/ad\.png/))
 m.shopping.naver.com#?#content li[role="presentation"]:has(a[href*="://trendpick.shopping.naver.com/"])
 10000recipe.com#?#body .view_sp_banner .swipe-slide:has(img[src^="https://recipe1.ezmember.co.kr/cache/shop/"])
 namu.wiki#?#article div[class] > div[id]:not([class]):not(:has(> *))
@@ -1268,8 +1271,8 @@ skytoon32.com,skytoon33.com,skytoon34.com,skytoon35.com,skytoon36.com,skytoon37.
 toonkor109.com,toonkor110.com,toonkor111.com,toonkor112.com,toonkor113.com,toonkor114.com,toonkor115.com,toonkor116.com,toonkor117.com,toonkor118.com,toonkor119.com#?#.navbar-nav > li[class]:has(> a[href$="/토토보증업체"][alt="토토보증업체"])
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+~board.namu.wiki,namu.wiki#?#article div:has( ~ footer) > div[class] ~ div:has(> div:not([style])):has(div[class]:not([style*="display"][style*="none"]):matches-css(display: none), table[src*=" "])
 gall.dcinside.com#?#table.gall_list tr:has(> td:contains(AD).gall_num)
-~board.namu.wiki,namu.wiki#?#article div[class] > div[class] ~ div:has(> div:not([style])):has(div[class]:not([style^="display"][style*="none"]):matches-css(display: none), table[src*=" "])
 browse.auction.co.kr#?##section--inner_content_body_container div[class*="component--item_card type--"]:has(a[href*="//adgate.auction.co.kr/"].link--itemcard, p.text--title ~ .section--advertisement)
 2cpu.co.kr#?#tr.is_notice:has(span:contains((광고)))
 arca.live#?#.topbar-area:has(> .badge:contains(뉴스))
