@@ -364,6 +364,10 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/120433
+koyi.pub#@#.main_ad
+@@||koyi.pub/wp-content/plugins/fuzqing-ad-plus/assets/js/*.js
+koyi.pub#%#//scriptlet("set-constant", "fuzqingAdPlus", "emptyObj")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120000
 pincong.rocks#%#//scriptlet("prevent-setInterval", "Ad Block")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117369
@@ -883,6 +887,7 @@ nfmovies.com#$?#body > .hidden-xs > div[id]:has(> img[src^="/static/"][onclick*=
 nfmovies.com#$?#div[id^="aaaDiv"] { remove: true; }
 !
 !
+url56.ctfile.com#?##main-content > .container > .card > .card-body:has(> div[id="760ad"])
 cw.com.tw#?#.adActive > div[class^="leaflet"]:has(> div[id^="div-gpt-ad"])
 cw.com.tw#?#.adActive > .list-link:has(> ul > li > div[id^="div-gpt-ad"])
 breathofthewild-link.com#?#div[id^="cc-matrix-"] > div.j-htmlCode:has(> ins.adsbygoogle)
@@ -3815,8 +3820,8 @@ ubmcmm.baidustatic.com
 ##.yd_ad3
 ##.yd_ad5
 ##.yd_ad6
-##.leo-container > .ssr1
-##.leo-mod > .ssr1
+##.leo-container .ssr1
+##.nav-area + .wrapper .tuiguang
 ##.zhanzhang_tuijian_btn
 ##.zhedangceng_ggg
 ##.zone_wap_banner2
@@ -16314,7 +16319,7 @@ hao123.com##.treasure-item
 megatime.com.tw,pchome.com.tw##.tripplead
 ts.cn##.tsggding
 huya.com##.tt[style*="1200px"]
-7060.la,bimiacg4.net,bimiacg5.net,dodoge.me##.tuiguang
+7060.la##.tuiguang
 m.hao123.com##.tuizhan
 meizhou.cn##.tuwengg
 qq.com##.txp_ad_link
