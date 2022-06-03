@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.602.7
+! OriginalVersion: 2022.603.0
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -297,6 +297,8 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||ssl.pstatic.net/melona/libs/
+/^https:\/\/s\.pstatic\.net\/static\/www\/mobile\/edit\/[0-9]{8}\/mobile_[0-9]{12}\./$domain=www.naver.com
 ||sjpost.co.kr/bannerpop/uploads/
 ||sjpost.co.kr/adManager/
 ||images.coocha.co.kr/static/images/deal/ad.png
@@ -678,6 +680,7 @@ gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
 gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 !
+www.naver.com##div[id^="NM_"][id$="_BANNER"]
 m.coocha.co.kr##.container > section#id_section_deal_list ~ section[id][class]
 coocha.co.kr##.group-deal .list > .group-power-link
 gamemeca.com##div[id$="AD"]
@@ -927,7 +930,7 @@ news.tf.co.kr##iframe[src^="/public/ad/"]
 tf.co.kr##iframe[src*="tf.co.kr/public/layout/"][src*="/top_menu_bar_"][src*=".php"]
 tf.co.kr##iframe[src*="//www.tf.co.kr/public/ad/"]
 tf.co.kr##iframe[src*="//nad.tf.co.kr/"]
-tf.co.kr##div[id$="_AD"]
+m.naver.com,tf.co.kr##div[id$="_AD"]
 ohmynews.com##.content > ul.ad_area
 ohmynews.com##div[class^="m_ad"]
 ohmynews.com##iframe[src*="//ojsimg.ohmynews.com/"][src*="_ad_rolling.htm"]
@@ -1136,7 +1139,6 @@ osen.mt.co.kr##div#close_mask
 fmkorea.com###adpost
 www.naver.com##div.column_fix_wrap > div#shopcast
 lol.ps##.ad-banner_wide
-www.naver.com###NM_TOP_BANNER
 www.naver.com###contents_productAd
 www.naver.com##iframe[id^="da_iframe_"]
 !
