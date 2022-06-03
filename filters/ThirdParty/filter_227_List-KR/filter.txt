@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.603.0
+! OriginalVersion: 2022.603.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -297,6 +297,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+/^https:\/\/nng-phinf\.pstatic\.net\/[A-z0-9]{16}\/[A-z0-9.-]{110}\.[A-Z]{3,4}\/APP-/
 ||ssl.pstatic.net/melona/libs/
 /^https:\/\/s\.pstatic\.net\/static\/www\/mobile\/edit\/[0-9]{8}\/mobile_[0-9]{12}\./$domain=www.naver.com
 ||sjpost.co.kr/bannerpop/uploads/
@@ -1201,6 +1202,8 @@ ppss.kr#$#a[href*="cartax.biz"] { pointer-events: none !important; }
 loawa.com#$#div[id*="ad_"][style*="position: absolute; top:"] { top: 100% !important; position: absolute !important; }
 loawa.com#$##ad_center_v.adsense-ch { position: relative !important; top: 420px !important; }
 !
+game.naver.com#$#div[class^="loungehome_event_popup_container"] { display: none !important; }
+game.naver.com#$#body { overflow: auto !important; }
 bbs.ruliweb.com#$##board_read .board_main_top .member_reward_wrapper { float: right !important; margin-right: 35px !important; }
 sign.dcinside.com#$#.login_inputbox .inner { width: calc(100% - 115px) !important; }
 compuzone.co.kr#$##searchArea .viewType_L .product_list li .prd_info { width: 700px !important; }
@@ -1276,7 +1279,7 @@ skytoon32.com,skytoon33.com,skytoon34.com,skytoon35.com,skytoon36.com,skytoon37.
 toonkor109.com,toonkor110.com,toonkor111.com,toonkor112.com,toonkor113.com,toonkor114.com,toonkor115.com,toonkor116.com,toonkor117.com,toonkor118.com,toonkor119.com#?#.navbar-nav > li[class]:has(> a[href$="/토토보증업체"][alt="토토보증업체"])
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
-~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(table[class*=" "]):has(tbody > tr > td a[href*="/"] span[class^="_"] span[class^="_"] img[src*="w.namu.la/s/"])
+~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(table[class*=" "]):has(tbody > tr > td a[href*="/"] img[src*="w.namu.la/s/"])
 gall.dcinside.com#?#table.gall_list tr:has(td:contains(AD))
 browse.auction.co.kr#?##section--inner_content_body_container div[class*="component--item_card type--"]:has(a[href*="//adgate.auction.co.kr/"].link--itemcard, p.text--title ~ .section--advertisement)
 2cpu.co.kr#?#tr.is_notice:has(span:contains((광고)))
@@ -1317,6 +1320,8 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+~board.namu.wiki,namu.wiki#%#//scriptlet("json-prune", "*", "adcr.naver.com")
+~board.namu.wiki,namu.wiki#%#//scriptlet("json-prune", "*", "ww.namu.la")
 ~board.namu.wiki,namu.wiki#%#//scriptlet("prevent-eval-if", "adcr.naver.com")
 dpg.danawa.com#%#//scriptlet("abort-current-inline-script", "$", "/danawa-dpg-common-sponsorBanner-/")
 dpg.danawa.com#%#//scriptlet("abort-current-inline-script", "$", "myScript[myScript.length - 1 ]")
