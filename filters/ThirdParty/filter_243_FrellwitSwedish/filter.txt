@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-06-03 08:33:11 CEST
+! Last modified: 2022-06-05 07:23:43 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -158,6 +158,7 @@ expressen.se##.teaser__bottom--ad-marker:upward(.teaser)
 expressen.se##a[href*="/annons"], a[href*="/brandstudio"], a[href*="/brand-studio"], a[href*="/kampanj."], a[href*="/lanapengar."], a[href*="/rabattkoder."], a[href*="/spel.expressen.se"], .vignette--svg + a[href*="teknikensvarld."]:upward(.teaser)
 expressen.se##strong:has-text(/^annons:/i):upward(p)
 familjeliv.se##article:has-text(/annons:/i)
+fastighetssverige.se##.badge-partner-text:upward(.featured-article)
 feber.se,tjock.se#%#//scriptlet('ubo-set.js', 'dovideostuffAD', 'noopFunc')
 feber.se,tjock.se#%#//scriptlet('ubo-set.js', 'userStatus', 'undefined')
 filmtipset.se##.row.news:has(em:has-text(/sponsrad/i))
@@ -205,7 +206,7 @@ hemnet.se##.article-news__link, .listing-articles__article-link, .featured-news_
 hemnet.se##.recent-news__item:has(.recent-news__category:has-text(/sponsrad/i))
 hemnet.se##.start-page-hero__caption:has(.start-page-hero__caption-category:has-text(/sponsrad av/i))
 hippson.se##.toolboxheader:has-text(/aktuella samarbeten/i) ~ a.more
-hrnytt.se##article:has(.sponsored-article)
+hrnytt.se##.sponsored-article:upward(article)
 ibnytt.se##.widget:has(h3:has-text(Speltips))
 idg.se#%#//scriptlet('ubo-nostif.js', 'gFail')
 idg.se##[data-styled="SpLabel"]:upward(article)
@@ -275,7 +276,7 @@ mobilanyheter.net#%#//scriptlet('ubo-set.js', 'ai_run_scripts', 'noopFunc')
 modernalivet.se#$#body.modal-active { overflow:unset!important }
 modernalivet.se##h3:has-text(/annons/i):upward(.sidebar-widget)
 monasuniversum.se##article > div > p:has-text(/annonssamarbete/i):upward(article)
-motivation.se##.card:has(.sponsored)
+motivation.se##.sponsored:upward(.card)
 moviezine.se##strong:has-text(ANNONS:)
 mygatemagazine.se##.textwidget:has-text(Annons)
 mytaste.se#$#.recipe-modal[data-state=default] .modal-container.open, .recipe-modal[data-state=panorama] .modal-container.open { padding-top: 0 !important; }
@@ -598,6 +599,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ##a.card.-sponsored
 ##a[data-bid="1"][href*="/linkout"]
 ##a[href$=".se/go/betsafe"]
+##a[href*="/annonsartiklar/"]
 ##a[href*="/banner/klick/"] img
 ##a[href*="/click.adrecord"] img
 ##a[href*="/click.linksynergy"] img
@@ -1688,6 +1690,7 @@ folkbladet.nu,mellanbygden.nu,nordsverige.se,vk.se##[class^="adContainer"], div[
 foodfolder.se###myModal, .adImage
 foodora.se##.top-banner-container
 foreca.se###ckieconsent
+foretagande.se##div[id*="panorama"]
 foretagarna.se##.c-cookie
 forum.macworld.se,idg.se##.idgcp__layer
 forum.mustangclubsweden.org##a[href*="&do=advertisement&ad=1"]
@@ -2000,7 +2003,7 @@ thelocal.se##.ad-container-section, .article-sponsored
 tidningen.djurskyddet.se##.ai-track
 tidningen.se##.sidebar .widget_widget_code
 tidningenbalans.se##div[style*="z-index: 999; background-color: rgba(0, 0, 0, 0.5)"], .bg-grey.hideOnPrint, .bg-adYellow
-tidningenglobal.se##.elementor-image a[target="_blank"]
+tidningenglobal.se##.elementor-image a[target="_blank"], .revive-box
 tidningenridsport.se##.subscribe_now_popup, .type-native, #captive
 tittapavideon.se##.adv
 tjanstebilen.se##.container-banner-sidebar
