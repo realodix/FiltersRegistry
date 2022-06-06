@@ -84,6 +84,8 @@
 ! https://developer.chrome.com/docs/privacy-sandbox/topics/
 ! TODO: replace with a scriptlet later: https://github.com/AdguardTeam/Scriptlets/issues/214
 #%#//scriptlet('set-constant', 'Document.prototype.browsingTopics', 'undefined')
+! https://github.com/AdguardTeam/AdguardFilters/issues/120883
+nettiauto.com#%#//scriptlet("set-constant", "listingGoogleEETracking", "noopFunc")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120143
 lcwaikiki.com#%#//scriptlet("set-constant", "dataLayer", "emptyArr")
 ! https://github.com/AdguardTeam/AdguardFilters/pull/119949
@@ -25625,6 +25627,9 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/120883
+!+ PLATFORM(ios, ext_android_cb)
+@@||script.nettix.fi/auto/extra/template/nettiauto_analytics.js$domain=nettiauto.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120776
 @@||js.monitor.azure.com/scripts/*/ms.analytics-web-*.min.js$domain=remoteassistance.support.services.microsoft.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120570
