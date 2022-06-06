@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.605.4
+! OriginalVersion: 2022.606.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -297,6 +297,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+/^https:\/\/ssp\.igaw\.io\/bak\/[0-9]{3}x[0-9]{2}\./
 ||dailysecu.com/adManager/css/adManager.css
 ||dailysecu.com/bannerpop/uploads/
 /^https:\/\/nng-phinf\.pstatic\.net\/[A-z0-9]{16}\/[A-z0-9.-]{110}\.[A-Z]{3,4}\/APP-/
@@ -685,6 +686,7 @@ gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
 gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 !
+mylgid.com##.mainTopBanner
 tistory.com##.adsense
 www.naver.com##div[id^="NM_"][id$="_BANNER"]
 m.coocha.co.kr##.container > section#id_section_deal_list ~ section[id][class]
@@ -1207,6 +1209,7 @@ ppss.kr#$#a[href*="cartax.biz"] { pointer-events: none !important; }
 loawa.com#$#div[id*="ad_"][style*="position: absolute; top:"] { top: 100% !important; position: absolute !important; }
 loawa.com#$##ad_center_v.adsense-ch { position: relative !important; top: 420px !important; }
 !
+mylgid.com#$#.hasBanner header { top: 0px !important; }
 game.naver.com#$#div[class^="loungehome_event_popup_container"] { display: none !important; }
 game.naver.com#$#body { overflow: auto !important; }
 bbs.ruliweb.com#$##board_read .board_main_top .member_reward_wrapper { float: right !important; margin-right: 35px !important; }
@@ -1286,7 +1289,7 @@ toonkor109.com,toonkor110.com,toonkor111.com,toonkor112.com,toonkor113.com,toonk
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
 ! namu.wiki
-~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(div[class] + div[class] *:not(table) a[href*="/"] span:not([style*="width:"]) img[src*="w.namu.la/s/"]:not([alt^="external/"])):not(:has(img[src^="data:image/svg"]:matches-css(display: inline-block) + img[src*="w.namu.la/s/"]:not([alt^="external/"])))
+~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td + td a[title][class][href^="/w/"] + div[class]:contains(.) + div[class])
 ~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:not([class*=" "]):has(table[class*=" "]):has(tbody > tr > td a[href*="/"]:not([style*="width:"]) span:not([style*="width:"]) span:not([style*="width:"]) img[src*="w.namu.la/s/"])
 !
 2cpu.co.kr#?#tr:has(> td > a[href^="../ad_board/"]:contains(광고))
@@ -1331,9 +1334,6 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 ! namu.wiki
-~board.namu.wiki,namu.wiki#%#//scriptlet("abort-on-stack-trace", "Promise.prototype.then", "a.doc")
-~board.namu.wiki,namu.wiki#%#//scriptlet("abort-on-stack-trace", "Promise", "mount")
-~board.namu.wiki,namu.wiki#%#//scriptlet("abort-on-stack-trace", "Promise", "a.<anonymous>")
 !
 dpg.danawa.com#%#//scriptlet("abort-current-inline-script", "$", "/danawa-dpg-common-sponsorBanner-/")
 dpg.danawa.com#%#//scriptlet("abort-current-inline-script", "$", "myScript[myScript.length - 1 ]")
