@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.607.6
+! OriginalVersion: 2022.607.9
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -297,6 +297,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+/^(http|https):\/\/image\.gmarket\.co\.kr\/service_image\/[0-9]{4}\/[0-9]{2}\/[0-9]{2}\/[0-9]{20}/
 ||image.ygosu.com/images/ico_ad_black.png
 /^https:\/\/ssp\.igaw\.io\/bak\/[0-9]{3}x[0-9]{2}\./
 ||dailysecu.com/adManager/css/adManager.css
@@ -669,7 +670,7 @@ dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,d
 ! ##.banner
 m.sedaily.com,bloter.net,mosen.mt.co.kr,hinfomax.kr,hinfomax.co.kr,pressian.com,kukinews.com##.banner
 ! ##div[class$="_banner"]
-toomics.com,m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
+mitem.gmarket.co.kr,toomics.com,m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
 ! ##div[class^="ad"]
 peterpanz.com,jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m.moneys.mt.co.kr,basketkorea.com,m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com,sports.chosun.com##div[class^="ad"]
 ! ##div[class^="banner_"]
@@ -1292,9 +1293,9 @@ toonkor109.com,toonkor110.com,toonkor111.com,toonkor112.com,toonkor113.com,toonk
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
 ! namu.wiki
 ! SKT Mobile
-~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td img[class*=" "][src*="/s/"] ~ div:contains(.) ~ div[class*=" "])
+~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td img[src*="w.namu.la/s/"] ~ div:contains(.) ~ div[class]:contains(/./))
 ! SKT
-~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td + td a[href^="/w/"] ~ span[class]:contains(.) ~ div[class*=" "])
+~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td + td a[href^="/w/"] ~ span[class]:contains(.) ~ div[class]:contains(/./))
 ! LG U+
 ~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(div[class]:has(div[class*=" "]) + div[class] div[class*=" "]:contains(.))
 !
