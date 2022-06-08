@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.608.3
+! OriginalVersion: 2022.608.9
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -402,6 +402,7 @@
 ||mdjournal.kr/banner/
 ||mdjournal.kr/bannerManager/
 ||coupang.com/*&addtag=*ptag=*&redirect=landing&traceid=*&placementid=*&impressionid=&campaigntype=$document,popup
+||coupang.com/*&addtag=*ptag=*wPcid=*&wRef=*&redirect=landing&traceid=*&subid$document,popup
 ||startupn.kr/adManager/css/adManager.css
 ||startupn.kr/bannerpop/uploads/
 ||dr9xthplobr1x.cloudfront.net/smart/MWEB/img/
@@ -657,7 +658,7 @@
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
 ! Ad-Shield
-loawa.com##ad-shield-inventory
+inven.co.kr,loawa.com,ppss.kr,feedclick.net,ygosu.com##style+div:nth-last-child(1)
 !
 ! ##div[id^="ad_"]
 m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,m.10000recipe.com,pandora.tv,mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
@@ -1295,11 +1296,11 @@ toonkor109.com,toonkor110.com,toonkor111.com,toonkor112.com,toonkor113.com,toonk
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
 ! namu.wiki
 ! SKT Mobile
-~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td div[class]:has(img[src*="w.namu.la/w/"] ~ span:contains(.)) ~ div[class]:contains(/./))
+~board.namu.wiki,namu.wiki#?#div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td div[class] span[class]:contains(/./) ~ span:contains(.) ~ div[class]:contains(/./))
 ! SKT
-~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td + td a[href^="/w/"] ~ span:contains(.) ~ div[class]:contains(/./))
+~board.namu.wiki,namu.wiki#?#div[class*="senkawa"] div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td + td a[href^="/w/"] ~ span:contains(.) ~ span[class]:contains(/./))
 ! LG U+
-~board.namu.wiki,namu.wiki#?#article div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(div[class] ~ div[class] div:contains(/./) ~ div[class]:contains(.) ~ div[class]:contains(/./))
+~board.namu.wiki,namu.wiki#?#div[class*="senkawa"] div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(div[class] + div[class] div[class] div:contains(/./) ~ div[class]:contains(.) ~ div[class]:contains(/./))
 !
 2cpu.co.kr#?#tr:has(> td > a[href^="../ad_board/"]:contains(광고))
 2cpu.co.kr#?#ul > li:has(> a[href^="./ad_board/"]:contains(광고))
@@ -1327,16 +1328,9 @@ frtoon115.com,frtoon116.com,frtoon117.com,frtoon118.com,frtoon119.com,frtoon120.
 hdhd133.net,hdhd134.net,hdhd135.net,hdhd136.net,hdhd137.net,hdhd138.net,hdhd139.net,hdhd140.net,hdhd141.net,hdhd142.net,hdhd143.net,hdhd144.net#?#.menu-ul > .menu-li:has(> a:contains(보증토토))
 blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181.com,blacktoon182.com,blacktoon183.com,blacktoon184.com,blacktoon185.com,blacktoon186.com,blacktoon187.com,blacktoon188.com#?#.alert.alert-danger:has(> a:contains([AD]))
 !
-! FLEDGE API for advertisement
-#%#//scriptlet("set-constant", "navigator.joinAdInterestGroup", "undefined")
-#%#//scriptlet("set-constant", "navigator.leaveAdInterestGroup", "undefined")
-#%#//scriptlet("set-constant", "navigator.runAdAuction", "undefined")
-#%#//scriptlet("set-constant", "navigator.adAuctionComponents", "undefined")
-! Topics API for advertisement
-#%#//scriptlet("set-constant", "Document.prototype.browsingTopics", "undefined")
-#%#//scriptlet("set-constant", "document.browsingTopics", "undefined")
 ! Ad-Shield
-inven.co.kr,loawa.com,ppss.kr,ygosu.com,feedclick.net#%#//scriptlet("json-prune", "tracker_urls.[].url")
+inven.co.kr,loawa.com,ppss.kr,feedclick.net,ygosu.com#%#//scriptlet("set-constant", "HTMLImageElement.prototype.removeAttribute", "noopFunc")
+inven.co.kr,loawa.com,ppss.kr,feedclick.net,ygosu.com#%#//scriptlet("set-constant", "outerHeight", "0")
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 ! namu.wiki
