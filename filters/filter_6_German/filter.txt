@@ -1668,6 +1668,8 @@ teleboy.ch#@#.adWrapper
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! computerbase.de - ad at main page
+computerbase.de#?#.content-list > .article:has(> a[href*="-anzeige-"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121005
 24garten.de#?#.id-g--oneCol > div[data-id-module="col-width-watcher"] > .id-Container--hasHeadline:has(> .id-Container-content > .OUTBRAIN)
 ! kirche-und-leben.de - ad mainpage and in article
@@ -2869,6 +2871,12 @@ drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan
 ! ##.id-Container--proBEEP
 hallo-muenchen.de,az-online.de,lokalo24.de,rosenheim24.de,kreiszeitung.de,mannheim24.de,merkur.de,oktoberfest-live.de,tz.de##.id-Container--proBEEP
 !
+bild.de##.article-ad-link
+sueddeutsche.de###article-app-container a[href*="advertorial.sueddeutsche.de"]
+bz-berlin.de##.w-mrec > div[style*="width: 300px;"][style*="height: 250px"]
+computerbase.de##a[data-affiliated="true"]
+computerbase.de##.content-list > .article > a[href*="-anzeige-"]
+computerbase.de##.content-list > .article > a[href*="-anzeige-"] + .article__main
 ||24garten.de/bilder/*/*.jpg$script
 ||kirche-und-leben.de/fileadmin/redaktion/anzeigen
 ||kirche-und-leben.de/fileadmin/redaktion/bild/*/Anzeige_
