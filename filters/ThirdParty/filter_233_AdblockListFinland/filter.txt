@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 9June2022v9
+! OriginalVersion: 9June2022v13
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -876,7 +876,10 @@ tekniikkatalous.fi#?#div#skyscraper-height-div > section > div > a:-abp-contains
 tekniikkatalous.fi,tivi.fi#?#[width]:-abp-has(.lazyload-wrapper)
 telsu.fi##a[href^="/"][target=blank] > img[src^="/"]
 telsu.fi##img:not(#foot1 img, #foot2 img, #prg img, .data img, .pop img, .stat img, img[src^="/img/"])
+telsu.fi###prg img:not(.ch img)
 telsu.fi#?#.ch:-abp-contains(/S.*P.*(?:0|O).*N.*S.*(?:0|O).*R.*(?:0|O).*I.*T.*U/)
+telsu.fi#?#.ch:-abp-contains(/SPON|SPONS|SPONSO|SPONSOR|SPONSORO|SPONSOROI|SPONSOROIT|SPONSOROITU/)
+telsu.fi#?#.ch:-abp-has(em>a)
 tennis.fi##.ad-blocks
 tervareitti.fi##.advertisement-banner-row
 tervareitti.fi#?#.article-container.shadow-sm.col:-abp-has(img[alt^="Oma tilausmainos"])
@@ -1021,7 +1024,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 /telsu\.fi\/s\/[\w\d]{30,40}$/$image,domain=telsu.fi
 /telsu\.fi\/(?![^>]*\.\w{3}$).+/$image,domain=telsu.fi
 /telsu\.fi\/(?![^>].*\.(jpg|png|svg|ico)$).+/$image,domain=www.telsu.fi
-/telsu\.fi\/img\/(?!mindmax|cloudcity|navibg|tvohjelmat)/$image,domain=telsu.fi
+/telsu\.fi\/img\/(?!cloudcity|mindmax|navibg|prg|tvohjelmat)/$image,domain=telsu.fi
 /wp-content/uploads/2022/04/HymyAlibi2022_300x300_pupu.jpg$image,domain=alibi.fi|hymy.fi
 ||aamuset.fi/Content/app/img/Latkaliiga_banneri.jpg$image
 ||ad.citycdn.fi^$third-party
