@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.609.2
+! OriginalVersion: 2022.609.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -297,6 +297,11 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+/^https:\/\/[a-z]{1,}\.hungryapp\.co\.kr\/main\/main[0-9]{4}\/_main_event\.php$/
+||appdata.hungryapp.co.kr//event/
+||hungryapp.co.kr/banner/banner_*.php
+||appdata.hungryapp.co.kr/banner/
+||appdata.hungryapp.co.kr/event/mobi/
 /^(http|https):\/\/image\.gmarket\.co\.kr\/service_image\/[0-9]{4}\/[0-9]{2}\/[0-9]{2}\/[0-9]{20}/
 ||image.ygosu.com/images/ico_ad_black.png
 /^https:\/\/ssp\.igaw\.io\/bak\/[0-9]{3}x[0-9]{2}\./
@@ -676,18 +681,22 @@ m.newsen.com,peterpanz.com,jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialv
 ! ##div[class^="banner_"]
 auth.danawa.com,socialvalue.kr,news.jtbc.joins.com,etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
 ! ##div[class$="Banner"]
-rhythmer.net##div[class$="Banner"]
+hungryapp.co.kr,rhythmer.net##div[class$="Banner"]
 ! ##div[class$="banner"]
 dcinside.com##div[class$="banner"]
 ! ##div[class$="-banner"]
 toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
 ! ##div[class^="banner"]
-m.edaily.co.kr,ichannela.com,m.news1.kr##div[class^="banner"]
+m.hungryapp.co.kr,m.edaily.co.kr,ichannela.com,m.news1.kr##div[class^="banner"]
 ! ##div[class$="-ad"]
 gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
 gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 !
+hungryapp.co.kr###cont_warp table[style]
+hungryapp.co.kr##iframe[src^="/banner/banner_"]
+m.hungryapp.co.kr###popUP_ZONE
+m.hungryapp.co.kr##a[href^="javascript:"][onclick^="banner_open("]
 newsen.com##table table > tbody table[width][cellspacing][cellpadding].black > tbody td[height="90"]
 m.newsen.com##.googlead
 mitem.gmarket.co.kr##div[class^="box__item-detailinfo"] .plcc_banner
@@ -784,7 +793,7 @@ gmarket.co.kr##.box__head-ad
 inews24.com,joynews24.com##container[style~="width:100%;"][style~="position:relative;"]
 youthassembly.kr##.w_article > div[style]:not([id]):not([class]):not([align])
 youthassembly.kr##div[itemprop="articleBody"].main_text > div[style]:not([id]):not([class]):not([align])
-usjournal.kr,socialvalue.kr,happycampus.com##div[id^="banner"]
+hungryapp.co.kr,usjournal.kr,socialvalue.kr,happycampus.com##div[id^="banner"]
 happycampus.com##div[id^="power_link_"]
 sportalkorea.com###Contents > #sideBox > div[style]
 sportalkorea.com##p[class^="ad_"]
@@ -1299,7 +1308,7 @@ mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !importan
 ! SKT Mobile
 ~board.namu.wiki,namu.wiki#?#div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td div[class] span[class]:contains(/./) ~ span:contains(.) ~ div[class]:contains(/./))
 ! SKT
-~board.namu.wiki,namu.wiki#?#div[class*="senkawa"] div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td + td a[href^="/w/"] ~ span:contains(.) ~ span[class]:contains(/./))
+~board.namu.wiki,namu.wiki#?#div[class*="senkawa"] div:has(div:matches-css-after(content: 분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td + td a[href^="/w/"] ~ span:contains(/[A-z0-9-]{2,}\.[A-z0-9]{2,}/) ~ span[class]:contains(/./))
 ! LG U+
 ~board.namu.wiki,namu.wiki#?#div[class*="senkawa"] div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(div[class] + div[class] div[class] div:contains(/./) ~ div[class]:contains(.) ~ div[class]:contains(/./))
 !
