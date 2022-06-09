@@ -84,6 +84,9 @@
 ! https://developer.chrome.com/docs/privacy-sandbox/topics/
 ! TODO: replace with a scriptlet later: https://github.com/AdguardTeam/Scriptlets/issues/214
 #%#//scriptlet('set-constant', 'Document.prototype.browsingTopics', 'undefined')
+! https://github.com/AdguardTeam/AdguardFilters/issues/118441
+! Related to removeparam rules
+qiita.com#%#//scriptlet("prevent-addEventListener", "load", "navigator")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120883
 nettiauto.com#%#//scriptlet("set-constant", "listingGoogleEETracking", "noopFunc")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120143
@@ -3961,6 +3964,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ! These domains are used for tracking purposes according to the data that is being sent there.
 ! More info: https://getadmiral.com/products/measure
 !
+||fearlessfaucet.com^$third-party
 ||terrifictooth.com^$third-party
 ||parchedsofa.com^$third-party
 ||pleasantpump.com^$third-party
