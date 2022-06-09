@@ -1668,6 +1668,10 @@ teleboy.ch#@#.adWrapper
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! pnp.de - left-over at end of article
+pnp.de#?#.article-detail > .share-row + div[class]:has(> div[class] > .row > div[class] > div[class] > div[style] > div[id^="traffective-ad"])
+! gamestar.de - sponsored story main page
+gamestar.de#?#.scroll-container article:has(> .item-info > data[value="Sponsored Story"])
 ! computerbase.de - ad at main page
 computerbase.de#?#.content-list > .article:has(> a[href*="-anzeige-"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121005
@@ -2025,6 +2029,7 @@ freundin.de#?#div[class^="pls"] > div[class^="pls"] > div:has(> div[class] div[c
 freundin.de#?#div[class^="adykos"]:has(> div[class] > div[class] > span > svg > g#harpers_bezahlte_partnerschaft)
 freundin.de#?#.adykos-0:has(> div > a + div > span > svg#main > #harpers_bezahlte_partnerschaft)
 freundin.de#?#.freundinPagePresenter > div[class] > div[class]:has(> a > div[class] > div[class] > svg > g#harpers_bezahlte_partnerschaft)
+freundin.de#?#.freundinPagePresenter > div[class] > div[class]:has(> a > div[class] > div[class]:contains(Anzeige))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38629
 rennrad-news.de#?#.js-replyNewMessageContainer > .message--post[data-author="MTB-News.de"]:has(div[id^="div-gpt-ad"])
 ! winfuture-forum.de - ad category
@@ -2871,6 +2876,10 @@ drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan
 ! ##.id-Container--proBEEP
 hallo-muenchen.de,az-online.de,lokalo24.de,rosenheim24.de,kreiszeitung.de,mannheim24.de,merkur.de,oktoberfest-live.de,tz.de##.id-Container--proBEEP
 !
+fuersie.de##kas[type^="placement"]
+urbia.de##.group--adtag-with-fallbackcontent
+gamestar.de##a[data-category="homebanner"]
+gamestar.de##a[rel*="sponsored"]
 bild.de##.article-ad-link
 sueddeutsche.de###article-app-container a[href*="advertorial.sueddeutsche.de"]
 bz-berlin.de##.w-mrec > div[style*="width: 300px;"][style*="height: 250px"]
