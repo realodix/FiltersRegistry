@@ -6,8 +6,8 @@
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies i EasyList/AdGuard Base!
 ! Collaborators: MajkiIT, F4z, xxcriticxx, blocker999, hawkeye116477, krystian3w
 ! Homepage: https://www.certyficate.it/
-! OriginalVersion: 2022.5.22.1
-! Last modified: Sun, 22 May 2022, 20:09 UTC+02
+! OriginalVersion: 2022.6.9.0
+! Last modified: Thu, 09 Jun 2022, 23:14 UTC+02
 ! Expires: 2 days
 ! Support:
 !   Email => errorsfilters@certyficate.it
@@ -18,7 +18,7 @@
 ! Copyright © 2022 Certyficate IT
 ! Copyright © 2022 Filters Heroes
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock/
-! v.2022.5.22.1 aktualizacja: nie, 22 maj 2022, 20:09 UTC+02
+! v.2022.6.9.0 aktualizacja: czw, 09 cze 2022, 23:14 UTC+02
 !
 !
 ! Specyficzne reguły ukrywające
@@ -2342,6 +2342,7 @@ rck.pila.pl#?#.alert-message.alert:-abp-has(.plg_system_eprivacy_message)
 rck.rydultowy.pl#?#.cherry-popup:-abp-has(a[href*="/cookies/"])
 realbus.pl#?#.alert:-abp-contains(🍪)
 rebalance.pl##.cookie-info_container
+receptagemini.pl##.cookies-banner-overlay
 recticelinsulation.com###js-cookie-alert.c-alert-cookie
 redark.pl##div[class*="cookiesPopup__PopupContainer"]
 redbullmobile.pl###more1
@@ -3133,13 +3134,13 @@ com##.cnil-banner-v2:not(body):not(html)
 com##.cnil-banner:not(body):not(html)
 com,eu,pl###cookie-notice:not(body):not(html)
 com,pl##.cc-revoke:not(body):not(html)
+eu,pl##body:not(.cli-barmodal-open) #cookie-law-info-again
+eu,pl##body:not(.cli-barmodal-open) #cookie-law-info-bar:not(.cli-bar-popup):not(.cli-modal-content)
 org,pl##amp-consent
 org,pl###amp-user-notification1:not(body):not(html)
 pl##aside[class*="Cookie"]
 pl##aside[class*="cookie"]
 pl##body > div[style*="top"][style*="left"][style*="background"][style*="cookies_tlo"]:not([id]):not([class])
-pl##body:not(.cli-barmodal-open) #cookie-law-info-again
-pl##body:not(.cli-barmodal-open) #cookie-law-info-bar:not(.cli-bar-popup):not(.cli-modal-content)
 pl##div.cookieKontener
 pl##div#cook
 pl##div#cookiepopupdiv
@@ -3190,8 +3191,8 @@ pl###band-cookies:not(body):not(html)
 pl###banner-cookies:not(body):not(html)
 pl###barritaloca:not(body):not(html)
 pl###bar_bottom_cookie:not(body):not(html)
-pl###ba_eu_cookie_law
 pl###ba_eu_cookie_law ~ .ba_popup_cookie
+pl###ba_eu_cookie_law:not(form)
 pl###bbccookies:not(body):not(html)
 pl###blockPopupInformation:not(body):not(html)
 pl###box_cookie:not(body):not(html)
@@ -3995,7 +3996,11 @@ visa.pl#@##CookieReportsPanel
 volcano.pl#@##cookiesModal
 winnicalidla.pl#@#.privacy-policy
 wolframalpha.com##footer ~ section
+###ba_eu_cookie_law:not(form)
+#@##ba_eu_cookie_law
 @@/jquery.cookiebar$domain=pl
+@@/wp-content/plugins/cookie-law-info/admin/*
+@@/wp-content/plugins/cookie-law-info/images/*
 @@/wp-content/plugins/cookie-law-info/public/*$stylesheet
 @@||consent.cookiebot.com^$domain=forth.gr|lyko.com
 @@||footroll.pl/js/vendor/cookiebox.min.js
@@ -4097,8 +4102,8 @@ alejapokoju83.pl,atal.pl,atalbaltica.pl,atalkliny.pl,atalmarina.pl,atalresidence
 allegro.pl#$#body[class] { overflow: visible !important; }
 allegro.pl##div[data-analytics-category="allegro.gdpr.consents"], div[data-analytics-category="allegro.rodo.consents"]
 aluna.eu,pureveg.pl#$#html { padding-bottom: 0 !important; }
-al.to,combat.pl,x-kom.pl#$#body[style] { overflow-y: auto !important; padding-right: 0 !important; }
-al.to,combat.pl,x-kom.pl##div[class*="ReactModal_"]:has(a[href="/cookies"])
+al.to,combat.pl#$#body[style] { overflow-y: auto !important; padding-right: 0 !important; }
+al.to,combat.pl##div[class*="ReactModal_"]:has(a[href="/cookies"])
 amica.pl#$#body[style] { position: static !important; }
 amica.pl##.popup__mask
 analizy.pl##.nl_rodo, .ui-widget-overlay
@@ -4239,7 +4244,7 @@ dropbox.com#$#.top-notification-bar-container + .preview-box .react-file-viewer,
 dyzurnet.pl##.cookies-modal:upward(.modal)
 dzialoszyn.pl,falkow.pl,grebkow.pl,jaktorow.pl,korytnica.pl,osieck.pl,reczno.pl,rosciszewo.pl,sobieniejeziory.pl,sobolew.pl,zwolen.pl###g_toplayer, .modal-backdrop
 dziennikbaltycki.pl,dzienniklodzki.pl,dziennikpolski24.pl,dziennikwschodni.pl,dziennikzachodni.pl,e-ogrodek.pl,echodnia.eu,expressbydgoski.pl,expressilustrowany.pl,forumogrodowe.pl,gazetakrakowska.pl,gazetalubuska.pl,gazetawroclawska.pl,gk24.pl,gloswielkopolski.pl,gol24.pl,gp24.pl,gra.pl,gs24.pl,kurierlubelski.pl,motofakty.pl,naszemiasto.pl,nowiny24.pl,nowosci.com.pl,nto.pl,polskatimes.pl,pomorska.pl,poranny.pl,regiodom.pl,sportowy24.pl,strefaagro.pl,strefabiznesu.pl,stronakobiet.pl,stronakuchni.pl,telemagazyn.pl,to.com.pl,wspolczesna.pl##div[class*="didomi-consent-popup__"]
-dziennikbaltycki.pl,dzienniklodzki.pl,dziennikpolski24.pl,dziennikwschodni.pl,dziennikzachodni.pl,e-ogrodek.pl,echodnia.eu,expressbydgoski.pl,expressilustrowany.pl,forumogrodowe.pl,gazetakrakowska.pl,gazetalubuska.pl,gazetawroclawska.pl,gk24.pl,gloswielkopolski.pl,gol24.pl,gp24.pl,gra.pl,gs24.pl,kurierlubelski.pl,motofakty.pl,naszemiasto.pl,nowiny24.pl,nowosci.com.pl,nto.pl,polskatimes.pl,pomorska.pl,poranny.pl,regiodom.pl,sportowy24.pl,strefaagro.pl,strefabiznesu.pl,stronakobiet.pl,stronakuchni.pl,telemagazyn.pl,to.com.pl,wspolczesna.pl#$#html > body.didomi-popup-open { overflow: auto !important; }
+dziennikbaltycki.pl,dzienniklodzki.pl,dziennikpolski24.pl,dziennikwschodni.pl,dziennikzachodni.pl,e-ogrodek.pl,echodnia.eu,expressbydgoski.pl,expressilustrowany.pl,forumogrodowe.pl,gazetakrakowska.pl,gazetalubuska.pl,gazetawroclawska.pl,gk24.pl,gloswielkopolski.pl,gol24.pl,gp24.pl,gra.pl,gs24.pl,kurierlubelski.pl,motofakty.pl,naszemiasto.pl,nowiny24.pl,nowosci.com.pl,nto.pl,polskatimes.pl,pomorska.pl,poranny.pl,regiodom.pl,sportowy24.pl,strefaagro.pl,strefabiznesu.pl,stronakobiet.pl,stronakuchni.pl,t-mobile.pl,telemagazyn.pl,to.com.pl,wspolczesna.pl#$#html > body.didomi-popup-open, html > body.didomi-notification-open { overflow: visible !important; }
 echo24.tv#$#.on-top { top: 0 !important; }
 echomedia.info###rodoModal
 edupolis.pl###sgpb-popup-dialog-main-div-wrapper, .sg-popup-overlay
@@ -4630,6 +4635,7 @@ tvgo.orange.pl##body > div[role="dialog"]:not([id]):not([class]):has(.rodo-wrapp
 tvp.pl##.tvp-cookie-overlay
 tvp.pl#$#.tvp-cookie-scroll-lock { position: static !important; overflow: auto !important; }
 twitter.com##div[class*=" "] > div[class][dir="auto"]:has( > a[href*="twitter-cookies"][role="link"]) ~ div[role="button"]:upward(1)
+t-mobile.pl###didomiBlockNavigation
 ukraina.com.pl#$#body > table:nth-child(3) > tbody > tr > td[style="border-bottom:solid 1px #CCCCCC"][align] { color: #0000 }
 ukraina.com.pl#$?#body > table:nth-child(3) > tbody > tr > td[style="border-bottom:solid 1px #CCCCCC"][align]:upward(table) { margin: -54px }
 um.warszawa.pl###popup-overlay.popup-overlay
@@ -4869,6 +4875,7 @@ belsat.eu,buddyzm.info.pl,eurologistics.pl,homedesign.pl,masterleasing.pl,mobile
 berendsen.pl$$script[data-module="CookieBanner"]
 bioagris.pl$$#policy-accept-div
 bmw-motorrad.pl$$.cookielayer
+bosch-home.pl,siemens-home.bsh-group.com#@%#//scriptlet('ubo-set.js', 'T.Module.Layer.CookieLaw', 'noopFunc')
 brieftip.pl,kaliber.pl#$?#.modal-open { overflow: auto !important; padding-right: 0 !important; }
 brieftip.pl,kaliber.pl$$#cookieModal
 cenapaliw.pl$$#CBCookieMsg
@@ -4911,7 +4918,6 @@ muzeumazji.pl$$script[tag-content="doRODO"]
 natura2000.gdos.gov.pl$$#apla-banner
 neucamed.pl$$.cookies-alert
 norgips.pl$$#cookiemodal
-oculus.com#%#//scriptlet('ubo-ra.js', '_31e', 'body > ._li')
 ogloszenia.plock.pl$$#dialog-rodo
 okazik.pl$$script[tag-content="#cookie-dialog"]
 pamiatki.pl$$#hw_cookie_law
