@@ -18323,12 +18323,12 @@ deezer.com#?#.page-alerts:-abp-has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:-abp-has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 08May2022v1
+! OriginalVersion: 10June2022v2
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
 ! This is an extension file, not an independent list.
-! Extension file's version: 31May2022v2-Extension
+! Extension file's version: 10June2022v1-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -18418,6 +18418,10 @@ segmentfault.com#$?#.modal-open [style]:is([data-padding-right], [data-margin-ri
 !! Uncloseable prompt saying "We know you were really enjoying yourself, but we're going to need a little more info." (31/05/2022)
 tumblr.com#$?#style:has-text(/^body /) { remove: true; }
 tumblr.com###glass-container
+! The Epoch Times USA
+!! https://github.com/DandelionSprout/adfilt/issues/603
+theepochtimes.com##.modal__overlay
+theepochtimes.com#$#body.single-post { overflow: unset !important }
 ! ——————————————————————————————————————————————————————————————————————
 ! Entries below are fixed in other lists that are included in uBO as of the 2nd of March 2019, but are also in this list to serve minimal-setup users.
 !! Removing the blurring of random Pinterest images ↪️📛 (Fixed in "uBlock Filters - Annoyances", except for the Redirector portion of it)
@@ -19209,7 +19213,7 @@ twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion##div[
 ! Removes the cookie sticky on bottom
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion###layers > div > div:nth-of-type(2):last-of-type
 ! Title: 🎓 Wikia: Pure Browsing Experience
-! OriginalVersion: 26May2022v1-Beta
+! OriginalVersion: 10June2022v2-Beta
 ! Expires: 5 days
 ! Description: Do you like to browse casually through different Wikia wikis, but are tired of FANDOM promotions, and promotions for movies that you don't care about? Then this list will save your day.
 ! Note: To make Wikia pages wider, check out https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Dandelion%20Sprout's%20Website%20Stretcher.txt. The Wikia rules that were previously in this list, were removed by request and for being arguably superfluous.
@@ -19277,6 +19281,8 @@ fandom.com#$?#:root { --oasis-community-background-image: none !important }
 fandom.com#$?#:root { --theme-body-background-image: none !important }
 ! Hopefully enables the use of all the above anti-image rules in uBlock Origin and AdGuard
 @@||wikia.nocookie.net^*/images/$image,badfilter
+! Genshin Impact survey prompt that appears to vehemently refuse to acknowledge earlier closings of it
+fandom.com###SurveyModule
 ! Title: 🚤 Anti-'Snow marketing' List
 ! OriginalVersion: 09March2022v1-Beta
 ! Expires: 3 days
