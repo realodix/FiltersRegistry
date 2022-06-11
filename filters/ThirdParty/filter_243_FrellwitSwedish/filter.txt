@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-06-09 08:18:38 CEST
+! Last modified: 2022-06-11 07:59:16 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -246,6 +246,7 @@ lexbase.se#%#//scriptlet('ubo-cookie-remover.js', 'lmt')
 listor.se##a[href*="casino"], a[href*="betting"]:upward(.elementor-widget)
 listor.se##article.feed-item:has-text(/låna pengar|casino|betting/i)
 listor.se##article:has(a[href*="/annons/"])
+livinguppsala.se##.fusion-post-content-container:has-text(/^annons/i):upward(article)
 livsmedelsverket.se#$#.lock-scroll { overflow:unset!important }
 ljudochbild.se#$#.thecontent, .entry-content { max-height: unset !important; overflow: initial !important; height: unset !important; }
 ljudochbild.se#$#.wp-caption { display:initial!important }
@@ -495,8 +496,8 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -952,6 +953,7 @@ bohuslaningen.se,gp.se,hallandsposten.se,hn.se,stromstadstidning.se,ttela.se#$#b
 /DynamicGAFunctions$script,domain=morningstar.se
 /dyTracker.js?bust=release
 /egmont-ads/*
+/egmont-continuous-scroll/continuous-scroll-analytics.js
 /elementor/assets/lib/share-link$script
 /emediate-responsive-wp-plugin
 /emg-dfp$domain=allastudier.se
@@ -1455,7 +1457,7 @@ aftonbladet.se,halsasverige.se,langd.se,nojesmagasinet.nu,stoppapressarna.se,sve
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aikfotboll.se,vaken.se##.banners
 aip.nu##[class*="feed-ad"]
-akaskidor.se,husohem.se,praktisktbatagande.se,svenskgolf.se,tidningenhalsa.se,vagabond.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image
+akaskidor.se,husohem.se,praktisktbatagande.se,svenskgolf.se,tidningenhalsa.se,vagabond.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image, .category-partner
 akaviaaspekt.se##.article-list-item--native
 akaviaaspekt.se,lakartidningen.se,nyheter24.se,tidningenkulturen.se##.advertisement
 aktiespararna.se##.analysguiden-promote-articles
