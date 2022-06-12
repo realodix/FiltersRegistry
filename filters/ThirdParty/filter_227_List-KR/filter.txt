@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.612.1
+! OriginalVersion: 2022.612.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1319,11 +1319,11 @@ toonkor118.com,toonkor119.com,toonkor120.com,toonkor121.com,toonkor122.com,toonk
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
 ! namu.wiki
 ! SKT Mobile
-~board.namu.wiki,namu.wiki#?#div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td div[class] span[class]:contains(/./) ~ span:contains(.) ~ div[class]:contains(/./))
+~board.namu.wiki,namu.wiki#?#div[class*="senkawa"] div:has(div:matches-css-after(content: 분류), h2:contains(분류)) ~ div[class] > div[class] div[class]:contains(/./) ~ div:has(tbody > tr + tr > td div[class] span[class]:contains(/./) ~ span:contains(/[A-z0-9- ]{2,}[\.,][A-z0-9 ]{2,}/) ~ div[class]:contains(/./))
 ! SKT
-~board.namu.wiki,namu.wiki#?#div[class*="senkawa"] div:has(div:matches-css-after(content: 분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(tbody > tr + tr > td + td a[href^="/w/"] ~ span:contains(/[A-z0-9-]{2,}\.[A-z0-9]{2,}/) ~ span[class]:contains(/./))
+~board.namu.wiki,namu.wiki#?#div[class*="senkawa"] div:has(div:matches-css-after(content: 분류), h2:contains(분류)) ~ div[class] > div[class] div[class]:contains(/./) ~ div:has(tbody > tr + tr > td + td a[href^="/w/"] ~ span:contains(/[A-z0-9- ]{2,}[\.,][A-z0-9 ]{2,}/) ~ span[class]:contains(/./))
 ! LG U+
-~board.namu.wiki,namu.wiki#?#div[class*="senkawa"] div:has(h2:contains(분류)) ~ div[class] > div[class] div[class]:not(:has(> *)) ~ div:has(div[class] + div[class] div[class] div:contains(/./) ~ div[class]:contains(/[A-z0-9-]{2,}\.[A-z0-9]{2,}/) ~ div[class]:contains(/./))
+~board.namu.wiki,namu.wiki#?#div[class*="senkawa"] div:has(div:matches-css-after(content: 분류), h2:contains(분류)) ~ div[class] > div[class] div[class]:contains(/./) ~ div:has(div[class] + div[class] div[class] div:contains(/./) ~ div[class]:contains(/[A-z0-9- ]{2,}[\.,][A-z0-9 ]{2,}/) ~ div[class]:contains(/./))
 !
 2cpu.co.kr#?#tr:has(> td > a[href^="../ad_board/"]:contains(광고))
 2cpu.co.kr#?#ul > li:has(> a[href^="./ad_board/"]:contains(광고))
