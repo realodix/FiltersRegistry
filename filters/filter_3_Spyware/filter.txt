@@ -84,6 +84,8 @@
 ! https://developer.chrome.com/docs/privacy-sandbox/topics/
 ! TODO: replace with a scriptlet later: https://github.com/AdguardTeam/Scriptlets/issues/214
 #%#//scriptlet('set-constant', 'Document.prototype.browsingTopics', 'undefined')
+! https://github.com/AdguardTeam/AdguardFilters/issues/121510
+kartell.com#%#//scriptlet('prevent-element-src-loading', 'script', 'vivocha.js')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121558
 forfun.ist#%#//scriptlet('prevent-fetch', 'ssl.geoplugin.net/javascript.gp')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118441
@@ -347,6 +349,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 !||i.snssdk.com/log/*
 !||i.snssdk.com/slardar/sdk.js
 !
+||yottlyscript.com^
 ||wpfc.ml^
 ||weborama.com^$third-party
 ||quesid.com^
@@ -24840,6 +24843,10 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/121510
+||vivocha.com/a/kartell/api/vivocha.js$script,redirect=noopjs,domain=kartell.com
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||vivocha.com/a/kartell/api/vivocha.js$domain=kartell.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121558
 !+ PLATFORM(ios, ext_android_cb)
 @@||ssl.geoplugin.net/javascript.gp$domain=forfun.ist
