@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.613.1
+! OriginalVersion: 2022.613.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1272,6 +1272,8 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+ygosu.com#?#table.bd_list tbody > tr:has(> td a[href^="https://ygosu.com/banner"])
+m.ygosu.com#?#ul#article_list > li.notice:has(a[href^="https://ygosu.com/banner"])
 ygosu.com#?#table.bd_list tr:has(img[src^="/images/ico_ad_black.png?"])
 coocha.co.kr#?#.group-deal .list > div:has(span.ad:matches-css(background-image: /images\/deal\/ad\.png/))
 m.shopping.naver.com#?#content li[role="presentation"]:has(a[href*="://trendpick.shopping.naver.com/"])
@@ -1349,10 +1351,8 @@ frtoon119.com,frtoon120.com,frtoon121.com,frtoon122.com,frtoon123.com,frtoon124.
 hdhd139.net,hdhd140.net,hdhd141.net,hdhd142.net,hdhd143.net,hdhd144.net,hdhd145.net,hdhd146.net,hdhd147.net,hdhd148.net,hdhd149.net,hdhd150.net#?#.menu-ul > .menu-li:has(> a:contains(보증토토))
 blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181.com,blacktoon182.com,blacktoon183.com,blacktoon184.com,blacktoon185.com,blacktoon186.com,blacktoon187.com,blacktoon188.com#?#.alert.alert-danger:has(> a:contains([AD]))
 !
-! Ad-Shield
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
-! namu.wiki
 !
 dpg.danawa.com#%#//scriptlet("abort-current-inline-script", "$", "/danawa-dpg-common-sponsorBanner-/")
 dpg.danawa.com#%#//scriptlet("abort-current-inline-script", "$", "myScript[myScript.length - 1 ]")
@@ -1403,17 +1403,17 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||clickmon.co.kr/ad_img/$subdocument,domain=ygosu.com
 @@||ad.xc.netinsight.co.kr/xc/h/$subdocument,domain=ygosu.com
 @@||tab2.clickmon.co.kr$script,domain=ygosu.com
-@@||static.dable.io/dist/plugin.min.js$script,xmlhttprequest,domain=ppss.kr|ygosu.com|inven.co.kr|feedclick.net|loawa.com
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xmlhttprequest,domain=ppss.kr|ygosu.com|inven.co.kr|feedclick.net|loawa.com
+@@||static.dable.io/dist/plugin.min.js$script,xmlhttprequest,domain=ppss.kr|ygosu.com|feedclick.net|loawa.com
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,xmlhttprequest,domain=ppss.kr|ygosu.com|feedclick.net|loawa.com
 @@||api.dable.io/plugin/services/ppss.kr/prefs2?$script,domain=ppss.kr
 @@||pagead2.googlesyndication.com/pagead/managed/js/adsense/$script,domain=ppss.kr|loawa.com|feedclick.net|dailian.co.kr
 @@||r-log.dable.io/s/ppss.kr/u/$script,domain=ppss.kr
-@@||ad.doubleclick.net/ddm/adj/Bkne/Bdfs$xmlhttprequest,domain=ppss.kr|ygosu.com|inven.co.kr|feedclick.net|loawa.com
+@@||ad.doubleclick.net/ddm/adj/Bkne/Bdfs$xmlhttprequest,domain=ppss.kr|ygosu.com|feedclick.net|loawa.com
 @@||adservice.google.*/adsid/integrator.js?domain=loawa.com$script,domain=loawa.com
 @@||googleads.g.doubleclick.net/pagead/$subdocument,domain=loawa.com
 @@||pagead2.googlesyndication.com/getconfig/sodar?$xmlhttprequest,domain=loawa.com
 @@||tpc.googlesyndication.com/sodar/sodar2.js$script,domain=loawa.com
-@@$generichide,domain=ppss.kr|ygosu.com|feedclick.net|inven.co.kr|loawa.com|dailian.co.kr
+@@$generichide,domain=ppss.kr|ygosu.com|feedclick.net|loawa.com|dailian.co.kr
 googleads.g.doubleclick.net##html
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
@@ -1444,15 +1444,15 @@ tamrieltradecentre.com,downloads.descendant.me,html5.gamedistribution.com,paraph
 !#if (!adguard_app_ios && !adguard_ext_safari)
 ! Ad-Shield
 !#if (!adguard_app_android && !adguard_app_ios && !adguard_app_mac && !adguard_app_windows)
-/:\/\/[a-z\.]+\/[a-zA-Z\.\_]{1,30}\/[a-zA-Z\.\_]{1,30}\/[a-zA-Z0-9\.\_\/]+\.(eps|jar|pls|pict|xls|xlsx|mid|midi|avif|pdf|ps|webp|ppt|csv|doc|docx|tif|tiff|class|pptx)$/$document,popup,~third-party,domain=ppss.kr|ygosu.com|inven.co.kr|loawa.com|feedclick.net|dailian.co.kr
-/:\/\/[a-z\.]+\/[a-zA-Z0-9]{10,15}\.(eps|jar|pls|pict|xls|xlsx|mid|midi|avif|pdf|ps|webp|ppt|csv|doc|docx|tif|tiff|class|pptx)$/$document,popup,~third-party,domain=ppss.kr|ygosu.com|inven.co.kr|loawa.com|feedclick.net|dailian.co.kr
-/:\/\/[a-z\.]+\/[a-zA-Z\.\_]{1,15}\/[a-zA-Z0-9\.]{5,25}\.(eps|jar|pls|pict|xls|xlsx|mid|midi|avif|pdf|ps|webp|ppt|csv|doc|docx|tif|tiff|class|pptx)$/$document,popup,~third-party,domain=ppss.kr|ygosu.com|inven.co.kr|loawa.com|feedclick.net|dailian.co.kr
+/:\/\/[a-z\.]+\/[a-zA-Z\.\_]{1,30}\/[a-zA-Z\.\_]{1,30}\/[a-zA-Z0-9\.\_\/]+\.(eps|jar|pls|pict|xls|xlsx|mid|midi|avif|pdf|ps|webp|ppt|csv|doc|docx|tif|tiff|class|pptx)$/$document,popup,~third-party,domain=ppss.kr|ygosu.com|loawa.com|feedclick.net|dailian.co.kr
+/:\/\/[a-z\.]+\/[a-zA-Z0-9]{10,15}\.(eps|jar|pls|pict|xls|xlsx|mid|midi|avif|pdf|ps|webp|ppt|csv|doc|docx|tif|tiff|class|pptx)$/$document,popup,~third-party,domain=ppss.kr|ygosu.com|loawa.com|feedclick.net|dailian.co.kr
+/:\/\/[a-z\.]+\/[a-zA-Z\.\_]{1,15}\/[a-zA-Z0-9\.]{5,25}\.(eps|jar|pls|pict|xls|xlsx|mid|midi|avif|pdf|ps|webp|ppt|csv|doc|docx|tif|tiff|class|pptx)$/$document,popup,~third-party,domain=ppss.kr|ygosu.com|loawa.com|feedclick.net|dailian.co.kr
 !#endif
 $image,redirect-rule=32x32-transparent.png,domain=ppss.kr
-$subdocument,redirect-rule=noopframe,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net|dailian.co.kr
-$script,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net|dailian.co.kr
-$image,redirect-rule=1x1-transparent.gif,domain=ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net|dailian.co.kr
-$xmlhttprequest,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|inven.co.kr|loawa.com|feedclick.net|dailian.co.kr
+$subdocument,redirect-rule=noopframe,domain=ppss.kr|ygosu.com|tgd.kr|loawa.com|feedclick.net|dailian.co.kr
+$script,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|loawa.com|feedclick.net|dailian.co.kr
+$image,redirect-rule=1x1-transparent.gif,domain=ygosu.com|tgd.kr|loawa.com|feedclick.net|dailian.co.kr
+$xmlhttprequest,redirect-rule=noopjs,domain=ppss.kr|ygosu.com|tgd.kr|loawa.com|feedclick.net|dailian.co.kr
 !
 ||ds.11st.co.kr/NetInsight/text/11st/11st_product/product@$redirect=noopframe
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$redirect=googlesyndication-adsbygoogle
