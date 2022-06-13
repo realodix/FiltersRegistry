@@ -84,6 +84,8 @@
 ! https://developer.chrome.com/docs/privacy-sandbox/topics/
 ! TODO: replace with a scriptlet later: https://github.com/AdguardTeam/Scriptlets/issues/214
 #%#//scriptlet('set-constant', 'Document.prototype.browsingTopics', 'undefined')
+! https://github.com/AdguardTeam/AdguardFilters/issues/121558
+forfun.ist#%#//scriptlet('prevent-fetch', 'ssl.geoplugin.net/javascript.gp')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118441
 ! Related to removeparam rules
 qiita.com#%#//scriptlet("prevent-addEventListener", "load", "navigator")
@@ -5155,6 +5157,7 @@ nethunt.com/api/v1/track/email/$image
 ! Disabled in DNS filter
 ||telemetry.mozilla.org^
 !
+||adat.freemail.hu^
 ||ia.51.la^
 ||d.sondakika.com^
 ||tracking.channelsight.com^
@@ -24837,6 +24840,9 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/121558
+!+ PLATFORM(ios, ext_android_cb)
+@@||ssl.geoplugin.net/javascript.gp$domain=forfun.ist
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120461
 @@||googletagmanager.com/gtm.js$domain=bigc.co.th
 ! https://github.com/AdguardTeam/AdguardFilters/issues/119730
