@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 22.6.61
+! OriginalVersion: 22.6.63
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 16 Jun 2022 17:16 UTC
+! Last modified: 17 Jun 2022 04:51 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -2160,8 +2160,8 @@ _GIF1200x120-
 ~uptobox.com##a[href^="https://uptobox.com/affiliate"]
 /[0-9a-f]{32}\/invoke\.js/$third-party,script
 /^https?:\/\/(?:www\.|[0-9a-z]{7,10}\.)?[-0-9a-z]{5,}\.com\/(?:[0-9a-f]{2}\/){2,3}[0-9a-f]{32}\.js/$third-party,script,xmlhttprequest
-/^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{7,16}\.com\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/(?:[1-5]\d{4}|[3-9]\d{3})(?:\?_=\d+)?$/$third-party,subdocument,match-case,popup,script,xmlhttprequest
-/^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{7,16}\.website\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/(?:[1-5]\d{4}|[3-9]\d{3})(?:\?_=\d+)?$/$third-party,subdocument,match-case,popup,script,xmlhttprequest
+/^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{7,16}\.com\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/(?:[1-5]\d{4}|[3-9]\d{3})\??(?:_=\d+|v=\d)?$/$third-party,subdocument,match-case,popup,script,xmlhttprequest
+/^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{7,16}\.website\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/(?:[1-5]\d{4}|[3-9]\d{3})\??(?:_=\d+|v=\d)?$/$third-party,subdocument,match-case,popup,script,xmlhttprequest
 /^https:\/\/[0-9a-f]{10}\.[0-9a-f]{10}\.com\/[0-9a-f]{32}\.js$/$third-party,script
 /get/*?zoneid=$script
 /1clkn/*$script
@@ -4965,6 +4965,7 @@ $third-party,script,xmlhttprequest,denyallow=disqus.com|disquscdn.com|fastlylb.n
 ||bebasdownloadfilm.com/iframe/content.php$subdocument
 ||dewanonton.cc/static/img/banner/$image,media
 ||gm21.download/*.webp$image
+||konveti.onicdn.xyz/adam/*.mp4$redirect=noopmp4-1s,media
 103.194.171.75##.bnner
 103.194.171.75,idtube.me##.overlay
 103.194.171.75##.top-banner
