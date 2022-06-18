@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-06-16 08:55:41 CEST
+! Last modified: 2022-06-18 07:26:14 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -135,6 +135,7 @@ djungeltrumman.se#%#//scriptlet('ubo-nano-sib.js', 'dt_fullpage_ad')
 djungeltrumman.se##.label-sponsored:upward(.post)
 djungeltrumman.se#$?#strong:has-text(/samarbete|sponsrat/i):upward(li) { remove: true; }
 dn.se#%#//scriptlet('ubo-acs.js', 'DN', 'initAds')
+dn.se#$#body { position:unset!important;overflow-y:scroll!important; }
 duochjobbet.se##.editor_content.post:has(p:has-text(/^annons/i))
 e55.se##a[href]:not([href*="/e55.se"]):upward(section.sidebar)
 ehandel.se##.aside-list--heading:has-text(/^sponsra/i):upward(.aside-list)
@@ -383,7 +384,6 @@ trendenser.se##.post_feed_post:has(.sponsor-info)
 trendenser.se##a[href*="/category/reklam"], a[href*="/category/annons"]:upward(.featured-post)
 tripadvisor.se##div:has-text(Sponsrat av):upward(div[data-curated-shelf-id])
 tv.nu###tv-schedule section:has-text(ANNONS)
-tv.nu##header div:matches-css(z-index:999)
 tvdags.se##.article-list__item:has(.sponsor)
 underbaraclaras.se##.jet-listing-grid__item:has(.jet-listing-dynamic-field__content:has-text(/annonssamarbete/i))
 upptack-sverige.se##.front-cta:has-text(/sponsrat innehåll/i)
@@ -449,7 +449,7 @@ branschkoll.se,datormagazin.se,kimura.se,polistidningen.se,rocknytt.net,samnytt.
 /themes/*/js/smoothscroll
 /themes/buzzy/assets/js/modules/plugins/smoothPageScroll
 /themes/Jaz/inc/js/*nicescroll
-affarsstaden.se,boktugg.se,kitsverige.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsidesweden.se#%#//scriptlet('ubo-aeld.js', 'wheel')
+affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsidesweden.se#%#//scriptlet('ubo-aeld.js', 'wheel')
 !#endif
 ! --- End browser/extension specific filters
 ###_ning_gdpr_approve
@@ -493,8 +493,8 @@ affarsstaden.se,boktugg.se,kitsverige.se,kurera.se,lundagard.se,macken.xyz,morot
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1063,6 +1063,7 @@ affarsstaden.se,boktugg.se,kitsverige.se,kurera.se,lundagard.se,macken.xyz,morot
 /mediehuset-gront/img/*banner
 /meetrics-tracker
 /mega.$domain=folkbladet.nu|lokaltidningen.nu|mellanbygden.nu|nordsverige.se|vasterbottningen.se|vk.se
+/messagingNoTcfApi.js$domain=tv.nu
 /metrics/bambuser
 /minbostadstatic/js/partner/*
 /mod.js$domain=icd.internetmedicin.se
@@ -2023,7 +2024,6 @@ travronden.se##a[href*="/sponsrat/"]
 tripadvisor.se##[class$="banner_ad"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
 turistmal.se###col_right
-tv.nu###app > div > div[class]:nth-of-type(2)
 tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box
 tvprogram.se##.backdrop, .fcb
