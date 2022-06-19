@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 22.6.70
+! OriginalVersion: 22.6.76
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 18 Jun 2022 04:45 UTC
+! Last modified: 18 Jun 2022 19:09 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -1742,6 +1742,8 @@ _GIF1200x120-
 ##.mobileads
 ##.mobileadstop
 ##.navbar-ad-section
+##.newkarma-core-banner-aftercontent
+##.newkarma-core-banner-beforecontent
 ##.newkarma-core-banner-insidecontent
 ##.newkarma-core-center-ads
 ##.newkarma-core-topbanner
@@ -2032,6 +2034,7 @@ _GIF1200x120-
 ##img[width="1280"][height="330"]
 ##img[width="1300"][height="393"]
 ##img[width="1482"][height="120"]
+##img[width="150"][height="560"]
 ##img[width="1500"][height="250"]
 ##img[width="160"][height="600"]
 ##img[width="1600"][height="267"]
@@ -3002,7 +3005,6 @@ feedme.id##.native-ads
 koinworks.com##.navbar1
 wowkeren.com##.ne-banner-layout1
 detik.com##.new_banner_reg_100
-terasnews.id##.newkarma-core-banner-aftercontent
 dailysocial.id##.news__banner
 motorplus-online.com##.nkt__stick
 rencanamu.id##.old_left a[target="_blank"] img
@@ -4744,6 +4746,7 @@ lampost.co##.pop_ads
 bagas31.info##.popup-rl-custom3
 indotimur.com##.popup-transparent
 seputarforex.com##.show.modal-backdrop
+paired.my.id##div:matches-css(position:fixed) > #hide:has(center > img)
 ||embed.dugout.com^$third-party,domain=bolasport.com|indosport.com|skor.id
 ||tv.kaskus.co.id/api/embed/widget/?autoplayInViewPort=true$subdocument,redirect=click2load.html,domain=kaskus.co.id
 cakaplah.com#$?##content-right .embed-responsive { remove: true; }
@@ -4777,11 +4780,13 @@ theasianparent.com#$?#.player-ivideosmart-wrap { remove: true; }
 grid.id,japanesestation.com,magdalene.co,momsmoney.id,motorplus-online.com,parapuan.co,tempo.co,wartaekonomi.co.id#$?#[class^=ivs-] { remove: true; }
 ||player.ivideosmart.com/ivsplayer/$script,domain=bolasport.com|brilio.net|grid.id|gridoto.com|herstory.co.id|id.theasianparent.com|indosport.com|momsmoney.id|motorplus-online.com|parapuan.co|populis.id|sonora.id|tempo.co
 alex71.com##.content .aligncenter[alt="download" i][src*=".gif"]
+abbaspc.net##.entry-content > center > button:has-text(/download/i)
 gigapurbalingga.cc##.entry-content center button.user
 mazterize.com,mazterize.info,mazterize.net##.post-content center > a[href="javascript:void(0);"]
 mazterize.com,mazterize.info,mazterize.net##.post-content p:matches-css(text-align: center) > button[class^="dl-"]
 kuyhaa-me.com##[type="image"][src*="/sd.png"]
 kuyhaa.net##a[href*="xshared.link"][target="blank"]
+rgames31.com##article .code-block > center:has(a[target*="blank"]) input[type="button"]
 gendroid.id##article a > img
 bagas3-1.com,bagas31.one,bagas31.pw,kuyhaa-me.pw##article center > a[href="javascript:void(0);"]
 freesoft.id##button[onclick^="window.open("][rel]
@@ -5352,7 +5357,7 @@ toolss.net#%#//scriptlet('ubo-aeld.js', 'load', 'daadb_get_data')
 tmearn.*#%#//scriptlet('ubo-aopr.js', 'AaDetector')
 adikinfo.my.id,mangindo.xyz,nurhamka.com,rikucan.com#%#//scriptlet('ubo-aopr.js', 'adBlockDetected')
 ta2deem7arbya.com#%#//scriptlet('ubo-aopr.js', 'adsBlocked')
-adsafelink.com,aii.sh,bevru.club,bolssc.com,cuts-url.com,dz4link.com,eio.io,eririo.club,exe.app,exee.io,exey.io,fotodovana.com,jameeltips.us,linkpoi.me,megaurl.in,metroupdate.biz,rancah.com,sekilastekno.com,shrinke.me,shrinkme.in,skiped.me,srek.net,stfly.io,stfly.me,tei.ai,tmearn.*,viral-topics.com,wi.cr#%#//scriptlet('ubo-aopr.js', 'app_vars.force_disable_adblock')
+adsafelink.com,aii.sh,bevru.club,bolssc.com,cuts-url.com,dz4link.com,eio.io,eririo.club,exe.app,exee.io,exey.io,fotodovana.com,jameeltips.us,linkpoi.me,megaurl.in,metroupdate.biz,paired.my.id,rancah.com,sekilastekno.com,shrinke.me,shrinkme.in,skiped.me,srek.net,stfly.io,stfly.me,tei.ai,tmearn.*,viral-topics.com,wi.cr#%#//scriptlet('ubo-aopr.js', 'app_vars.force_disable_adblock')
 linkpoi.me#%#//scriptlet('ubo-aopr.js', 'disableItToContinue')
 ljutkeunvpn.blogspot.com,safelkmeong.blogspot.com,usesafelink.blogspot.com#%#//scriptlet('ubo-aopr.js', 'mql')
 menjelajahi.com,rancah.com,saungfirmware.id#%#//scriptlet('ubo-aopr.js', 'short_url_app_vars.force_disable_adblock')
@@ -5371,7 +5376,7 @@ short2fly.xyz#%#//scriptlet('ubo-acis.js', 'onclick', 'window.open')
 stfly.me,tei.ai#%#//scriptlet('ubo-aopr.js', 'open')
 tmearn.*#%#//scriptlet('ubo-aopw.js', '_pop')
 belinfo.my.id#%#//scriptlet('ubo-ra.js', 'onclick', '[onclick*="window.open"]')
-bevru.club,bolssc.com,cararegistrasi.com,ceesty.com,cuts-url.com,eio.io,eririo.club,exe.app,exee.io,exey.io,fc-lc.com,fc.lc,fcc.lc,liveshootv.com,luangusaha.com,miuiku.com,oceantech.xyz,onlinecorp.me,p4link.com,ponselharian.com,sekilastekno.com,semawur.com,shrinke.me,srek.net,tmearn.*#%#//scriptlet('ubo-window.open-defuser.js')
+bevru.club,bolssc.com,cararegistrasi.com,ceesty.com,cuts-url.com,eio.io,eririo.club,exe.app,exee.io,exey.io,fc-lc.com,fc.lc,fcc.lc,liveshootv.com,luangusaha.com,miuiku.com,oceantech.xyz,onlinecorp.me,p4link.com,paired.my.id,ponselharian.com,sekilastekno.com,semawur.com,shrinke.me,srek.net,tmearn.*#%#//scriptlet('ubo-window.open-defuser.js')
 cararegistrasi.com,modebaca.com,saungfirmware.id,teknorizen.blogspot.com#%#//scriptlet('ubo-nano-sib.js')
 urbharat.xyz#%#//scriptlet('ubo-nano-sib.js', 'timePassed', '1300')
 adikinfo.my.id,inafut.com#%#//scriptlet('ubo-nano-stb.js')

@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.618.1
+! OriginalVersion: 2022.618.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -687,7 +687,7 @@ dcinside.com##div[class$="banner"]
 ! ##div[class$="-banner"]
 toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
 ! ##div[class^="banner"]
-m.hungryapp.co.kr,m.edaily.co.kr,ichannela.com,m.news1.kr##div[class^="banner"]
+signinssl.gmarket.co.kr,m.hungryapp.co.kr,m.edaily.co.kr,ichannela.com,m.news1.kr##div[class^="banner"]
 ! ##div[class$="-ad"]
 gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
@@ -695,6 +695,7 @@ gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
 newsworker.co.kr##div[id^="AD"]
 !
+memberssl.auction.co.kr##div[id*="_AD_"]
 m.search.naver.com##section[class*="ad_"][data-ui]
 comic.naver.com##table.viewList tr.band_banner:not(.v2)
 comic.naver.com##.band_banner > a[onclick^="callWebAdBannerClick"]
@@ -1208,7 +1209,7 @@ manatoki141.net,manatoki142.net,manatoki143.net,manatoki144.net,manatoki145.net,
 hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellven1"]
 @@||advimg.ad-mapps.com/sdk/js/ver/*/ad_movie_script.js$domain=ichannela.com
 x86.co.kr#@#.download_ad
-@@/^https:\/\/ad-img\.ebaykorea\.com\/ADS\/Contents_\/[0-9_]{19}\/[a-z0-9]{16}\.[A-Za-z]{3,4}$/$domain=gmarket.co.kr
+@@/^https:\/\/ad-img\.ebaykorea\.com\/ADS\/Contents_\/[0-9_]{19}\/[a-z0-9]{16}\.[A-Za-z]{3,4}$/$domain=gmarket.co.kr|~signinssl.gmarket.co.kr
 @@||ssl.pstatic.net/adimg*.search/adpost/js/ad.js$domain=naver.com
 @@/^https:\/\/www\.ehanex\.com\/images\/main\/[a-z]{2}_ad\.gif$/
 @@||adimg3.search.naver.net/adpost/adpost_show_ads_min.js$domain=search.danawa.com
@@ -1228,6 +1229,9 @@ x86.co.kr#@#.download_ad
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+signinssl.gmarket.co.kr#$#.login-cont .login { margin-left: 25% !important; }
+search.danawa.com#$#body { overflow: auto !important; }
+memberssl.auction.co.kr#$#div[class="box__login"] > * { width: 100% !important; }
 mylgid.com#$#.hasBanner header { top: 0px !important; }
 game.naver.com#$#div[class^="loungehome_event_popup_container"] { display: none !important; }
 game.naver.com#$#body { overflow: auto !important; }
@@ -1339,6 +1343,7 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+memberssl.auction.co.kr#%#//scriptlet("abort-current-inline-script", "$", "adDisp")
 dpg.danawa.com#%#//scriptlet("abort-current-inline-script", "$", "/danawa-dpg-common-sponsorBanner-/")
 dpg.danawa.com#%#//scriptlet("abort-current-inline-script", "$", "myScript[myScript.length - 1 ]")
 cultureland.co.kr#%#//scriptlet("abort-on-property-read", "checkCookie", "popup_AD")
