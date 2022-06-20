@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.619.0
+! OriginalVersion: 2022.620.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -296,6 +296,9 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||shop-redapi.daum.net/red-apigate/shopad/
+||t1.daumcdn.net/kas/static/ka-middle-ad-event-handler.js
+||t1.kakaocdn.net/gamepub/daumgame/gamebar/
 ||ssl.pstatic.net/adimg3.search/*/nx_powerlink.css
 /^https:\/\/t1\.daumcdn\.net\/b2\/creative\/[0-9]{6}\/[a-z0-9]{32}\./
 /^https:\/\/www\.filecity\.co\.kr\/img\/btn\/top_banner_[a-z]{4}\./
@@ -695,6 +698,8 @@ gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
 newsworker.co.kr##div[id^="AD"]
 !
+shoppinghow.kakao.com###contEtc > #nativeAdWrap
+pubg.game.daum.net##.ggb-bnr
 memberssl.auction.co.kr##div[id*="_AD_"]
 m.search.naver.com##section[class*="ad_"][data-ui]
 comic.naver.com##table.viewList tr.band_banner:not(.v2)
@@ -1269,6 +1274,8 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+shoppinghow.kakao.com#?##contEtc > #rightContentbox:has(#SearchRightAdWrap)
+search.daum.net#?#article#mArticle [disp-attr].g_comp:has(.adLinkColl) + .line
 ygosu.com#?#table.bd_list tbody > tr:has(> td a[href^="https://ygosu.com/banner"])
 m.ygosu.com#?#ul#article_list > li.notice:has(a[href^="https://ygosu.com/banner"])
 ygosu.com#?#table.bd_list tr:has(img[src^="/images/ico_ad_black.png?"])
@@ -1343,6 +1350,7 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+shoppinghow.kakao.com#%#//scriptlet("json-prune", "ads")
 memberssl.auction.co.kr#%#//scriptlet("abort-current-inline-script", "$", "adDisp")
 dpg.danawa.com#%#//scriptlet("abort-current-inline-script", "$", "/danawa-dpg-common-sponsorBanner-/")
 dpg.danawa.com#%#//scriptlet("abort-current-inline-script", "$", "myScript[myScript.length - 1 ]")
