@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.621.0
+! OriginalVersion: 2022.621.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -143,6 +143,9 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||nkwadv.nate.com^
+||ad.search.nate.com^
+||cyad.nate.com^
 ||ads.gamemeca.com^
 ||adcdn.gamemeca.com^
 ||adgate.auction.co.kr^
@@ -668,7 +671,7 @@
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
 ! ##div[id^="ad_"]
-m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,m.10000recipe.com,pandora.tv,mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
+www.nate.com,m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,m.10000recipe.com,pandora.tv,mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
 news.daum.net,instiz.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 ! ##div[class^="ad_"]
@@ -698,6 +701,9 @@ gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
 newsworker.co.kr##div[id^="AD"]
 !
+search.daum.net##iframe[src*="//ad.search.nate.com/"]
+www.nate.com###news_area ~ div[class*="_shopping"]
+www.nate.com###breakingNews.overlay_break
 shoppinghow.kakao.com###contEtc > #nativeAdWrap
 pubg.game.daum.net##.ggb-bnr
 memberssl.auction.co.kr##div[id*="_AD_"]
@@ -1234,6 +1240,8 @@ x86.co.kr#@#.download_ad
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+www.nate.com#$#.area_ranking { top: 400px !important; }
+www.nate.com#$##header { margin-bottom: 0px !important; }
 signinssl.gmarket.co.kr#$#.login-cont .login { margin-left: 25% !important; }
 search.danawa.com#$#body { overflow: auto !important; }
 memberssl.auction.co.kr#$#div[class="box__login"] > * { width: 100% !important; }
@@ -1274,6 +1282,9 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+search.daum.net#?#body.nate article#mArticle [disp-attr].g_comp:has(iframe[src*="//ad.search.nate.com/"])
+search.daum.net#?#body.nate article#mArticle [disp-attr].g_comp:has(#bizDirtColl)
+search.daum.net#?#body.nate article#mArticle [disp-attr].g_comp:has(iframe[src*="//ad.search.nate.com/"]) + .line
 shoppinghow.kakao.com#?##contEtc > #rightContentbox:has(#SearchRightAdWrap)
 search.daum.net#?#article#mArticle [disp-attr].g_comp:has(.adLinkColl) + .line
 ygosu.com#?#table.bd_list tbody > tr:has(> td a[href^="https://ygosu.com/banner"])
@@ -1478,7 +1489,7 @@ ppss.kr,ygosu.com,tgd.kr,inven.co.kr,loawa.com,feedclick.net,dailian.co.kr$$scri
 !#if (adguard_app_android)
 @@||api-ao-list.adison.co^$app=com.nhn.android.webtoon
 @@||api-ao-list.adison.co^$app=com.nhn.android.nbooks
-||firebaseinstallations.googleapis.com^$domain=instasaver.instagram.video.downloader.photo
+||firebaseinstallations.googleapis.com^$app=instasaver.instagram.video.downloader.photo
 ||ds.11st.co.kr/NetInsight/text/11st/11st_mobile/mobile_product
 /^https:\/\/cdn\.011st\.com\/11dims/resize/[0-9]{3,4}x[0-9]{3,4}\//
 ||centaurs-rest.coupang.com^$app=com.timespread.Timetable2
