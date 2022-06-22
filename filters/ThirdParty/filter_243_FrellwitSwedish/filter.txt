@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-06-20 08:31:07 CEST
+! Last modified: 2022-06-22 08:31:13 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -301,6 +301,7 @@ nordichardware.se##.td_block_wrap:has(span:has-text(/sponsrat/i))
 norpan.se,skrattsajten.com#%#//scriptlet('ubo-acs.js', '$', 'e.preventDefault')
 nouw.com##.badge:has-text(/annons/i):upward(li)
 nyadagbladet.se##.widget_media_image:has-text(/annons/i)
+nyfiknainvesterare.se##article.post:has-text(/annons från/i)
 nyheteridag.se##.article-inner:has(h2:has-text(/samarbetslänkar/i))
 nyheteridag.se##article:has-text(/sponsrat innehåll/i)
 nyteknik.se#%#//scriptlet('ubo-no-xhr-if.js', '/premium/ method:HEAD')
@@ -315,6 +316,7 @@ padeldirekt.se##.h-background--sponsored:upward(.article-row)
 padeldirekt.se##a[href*="/sponsrat"]:upward(.c-featured-article)
 paulas.me##em:has-text(/Annons|Reklam/i):upward(article)
 piraja.se##.intro, #hero, #featholder:has(.spons)
+podtail.se##.item-list__item:has-text(/annons från/i)
 polestarclubsweden.se,svensktgolfforum.se#%#//scriptlet('ubo-acs.js', 'setTimeout', 'test')
 pricerunner.se##span:has-text(/^sponsrad$/i):upward([data-cy="deal-carousel"])
 privataaffarer.se##.teaser-label:has-text(/^annons/i):upward(.data-grid-teaser)
@@ -494,8 +496,8 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1508,7 +1510,7 @@ atl.nu##a[href*="/atl-tv-annons/"], [class^="Ad_"]
 atvmag.se,snowmobile.se##.location-header_before
 atvmag.se,snowmobile.se##.more-stories
 autolife.se###Banners
-automation.se,batliv.se,borattforum.se,brollopsmagasinet.se,bussmagasinet.se,elinor.se,em-fotboll.se,fotbollsresultat.com,globalpolitics.se,nyhetersto.se,svenskbyggtidning.se,vm-fotboll.se##a.gofollow[data-track]
+automation.se,batliv.se,borattforum.se,brollopsmagasinet.se,bussmagasinet.se,elinor.se,em-fotboll.se,fotbollsresultat.com,globalpolitics.se,husbyggaren.se,nyhetersto.se,svenskbyggtidning.se,vm-fotboll.se##a.gofollow[data-track]
 automation.se,metalcentral.net,transportnytt.se,verkstadstidningen.se##.bannergroup
 automobil.se,bettips.se,campingsverige.se,caroftheyear.se,dh.se,djungeltrumman.se,endurobloggen.se,eniro.se,entreprenadaktuellt.se,fightermag.se,frillesasbandy.se,husbilhusvagn.se,ja.se,klassiker.nu,ljuskultur.se,maskinbladet.se,mopedgaraget.se,omni.se,realtid.se,riksettan.net,skik.se,skogsaktuellt.se,spelo.se,svenskjakt.se,vibilagare.se##.banner
 autonytt.se###main > .col-links
@@ -2136,7 +2138,6 @@ ysektionen.se##.yweb-news-paper-banner
 ||axess.se^*/track-views
 ||axier.se/i/commercials/
 ||azurewebsites.net/partnerArticle
-||bannerboo.com^$third-party
 ||bannerutbyte.se^$third-party
 ||barnebys.sh/js/btag
 ||bcm.interactives.dk/script/
@@ -2181,6 +2182,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||careerbuilder.se^$third-party
 ||carneoam.com/advert/
 ||casinotoplists.com^$third-party
+||casono.se^$third-party
 ||cdn-sitegainer.com/sitegainer
 ||cdn.adt*/atag.js?$third-party
 ||cdn.adt*/jsTag?$third-party
@@ -2305,6 +2307,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||fasttrack.webstream.dk/statistik
 ||fathom.wheresmar.co/tracker.js
 ||feed.mikle.com^$third-party,domain=ekonominyheter.se
+||feedblitz.com^$third-party
 ||feeds.feedburner.com^$image
 ||files.cdn.spilcloud.com/pb/$script
 ||filmtopp.se/upload/*/annons$image
@@ -2355,12 +2358,14 @@ ysektionen.se##.yweb-news-paper-banner
 ||images.fotboll.com^*/*casino
 ||imgix.net^*/analytics.$script
 ||imp.laget.se^
+||inboxads.com^$third-party
 ||inevserver.com/~tournreport/$image
 ||insertcoin.se^$third-party
 ||insplanet.com^$third-party
 ||instaforex.com^$third-party
 ||instawidget.net^$domain=themoviefreak.se
 ||instiengage.com^$domain=stoppapressarna.se
+||intagme.com^$third-party
 ||interactiveads.ai^$third-party
 ||internetlankar.se/*/Annons/
 ||internetmedicin.se/log.php
@@ -2405,6 +2410,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||laget.se^*/retarget.js
 ||laikabook.se/ib/banner
 ||lajvo.se/addImpression
+||lanapengar.expressen.se^
 ||lantbruksnet.se/files/reklan/
 ||lararen.se/siteassets/lf-puffar
 ||laromedia.se/Annonssystem/
