@@ -524,8 +524,7 @@ g-pc.info#%#//scriptlet('set-constant', 'adsbygoogle.loaded', 'true')
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=g-pc.info
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103488
 @@||musenboya.com^$generichide
-musenboya.com#$?#div[id] > .ad-wrap:upward(1) { height: 1px !important; }
-musenboya.com#$?#div[id] > div[id^="im-"] > script[src^="https://imp-"]:upward(2) { height: 1px !important; }
+musenboya.com#%#//scriptlet('prevent-setTimeout', '/location\.href|document\./')
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
 @@||imp-adedge.i-mobile.co.jp/script/v1/spot.js$domain=musenboya.com
 @@||ssp-bidapi.i-mobile.co.jp/api/v1/spot.ashx?$domain=musenboya.com
@@ -1969,6 +1968,7 @@ goetheweb.jp,mono-money.com,tetsudo-ch.com,home.kingsoft.jp,coco-tte.jp,johndoeb
 !
 !
 !
+chanto.jp.net###cha_pc_all_header
 headline.mtfj.net##.sub_adv
 headline.mtfj.net###middle_adv
 tanu-soku.com##div[style="overflow:auto;height:550px;"]
@@ -4071,7 +4071,7 @@ news.fresheye.com##.ad_box_double
 news.fresheye.com##.listing-ad
 news.fresheye.com##.nw-ad
 news.fresheye.com##.bk2.spsite
-biz-journal.jp###ad1
+enno.jp,biz-journal.jp###ad1
 biz-journal.jp###ad2
 1242.com##div.page_side_bnr
 stats-japan.com##.kiji_adsense
