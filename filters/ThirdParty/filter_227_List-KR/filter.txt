@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.622.0
+! OriginalVersion: 2022.622.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -299,6 +299,10 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||humoruniv.com/js/adpost.kakao.ad.js
+/^https:\/\/shop\.nate\.com\/shopbox\/shopbox.{1,}&svcpage=news/
+||shop.nate.com/shopbox/shopbox_ad_controller_
+/^https:\/\/(comm\.|m\.|)news\.nate\.com\/(etc|Etc)\/[A-z]{0,}(ad|Ad|AD)[A-z]{0,}/
 ||clien.net/service/api/hongbo/
 ||shop-redapi.daum.net/red-apigate/shopad/
 ||t1.daumcdn.net/kas/static/ka-middle-ad-event-handler.js
@@ -672,7 +676,7 @@
 ||hellven.net/data/apms/banner/
 ||hellven.net/data/apms/adver_photo/
 ! ##div[id^="ad_"]
-m.nate.com,www.nate.com,m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,m.10000recipe.com,pandora.tv,mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
+news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,m.10000recipe.com,pandora.tv,mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
 news.daum.net,instiz.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 ! ##div[class^="ad_"]
@@ -702,6 +706,10 @@ gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
 newsworker.co.kr##div[id^="AD"]
 !
+m.humoruniv.com###comment > ul > div[id][style]
+news.nate.com##div[class*="ad"]
+news.nate.com###newsSidebar > div[class$="AD"]
+news.nate.com###newsSidebar > div[id$="Banner"]
 m.nate.com###mainContainer #content  .ct2 > section ~ *
 search.daum.net##iframe[src*="//ad.search.nate.com/"]
 www.nate.com###news_area ~ div[class*="_shopping"]
@@ -1105,7 +1113,7 @@ now.rememberapp.co.kr##.now_content_ads__wrapper
 m.ilbe.com##.banner-wrap
 clien.net###coupangAd
 ppomppu.co.kr##tr > td div.bridge
-boribori.co.kr##div[class*="_banner"]
+news.nate.com,boribori.co.kr##div[class*="_banner"]
 boribori.co.kr##.bFloatingBanner
 ondisk.co.kr##div[id^="wingBanner-"]
 enuri.com##ul#evt_banner
@@ -1363,6 +1371,7 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+m.humoruniv.com#%#//scriptlet("abort-current-inline-script", "spwp", "spwp.addAdUnits")
 m.nate.com#%#//scriptlet("json-prune", "shopping")
 shoppinghow.kakao.com#%#//scriptlet("json-prune", "ads")
 memberssl.auction.co.kr#%#//scriptlet("abort-current-inline-script", "$", "adDisp")
