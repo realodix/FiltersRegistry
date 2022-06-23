@@ -5184,6 +5184,11 @@ nethunt.com/api/v1/track/email/$image
 ! Disabled in DNS filter
 ||telemetry.mozilla.org^
 !
+||analytics.portal.gov.bd^
+||stats.tehila.gov.il^
+||statistiek.rijksoverheid.nl^
+||analytics.kemlu.go.id^
+||seuranta.finland.fi^
 ||log.dav.edu.vn^
 ||events.getsitectrl.com^
 ||d90z5o386dhs7.cloudfront.net^
@@ -24610,6 +24615,14 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/122396
+!+ PLATFORM(ios, ext_safari)
+!#safari_cb_affinity(general,privacy)
+@@||cdn.segmentify.com^$domain=gratis.com
+!#safari_cb_affinity
+!+ NOT_PLATFORM(ios, ext_safari)
+@@||cdn.segmentify.com/*/segmentify.js$domain=gratis.com
+||cdn.segmentify.com/*/segmentify.js$script,important,redirect=noopjs,domain=gratis.com
 ! https://github.com/uBlockOrigin/uAssets/issues/13782
 @@||marketingautomation.services^$script,domain=leeuwerik.nl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122424
@@ -24676,9 +24689,6 @@ $app=com.miui.analytics
 ! https://github.com/AdguardTeam/AdguardFilters/issues/119018
 !+ PLATFORM(ios, ext_safari)
 @@||googletagmanager.com/gtag/js$domain=snake.io
-! https://github.com/AdguardTeam/AdguardFilters/issues/119178
-||cdn.segmentify.com/*/segmentify.js$script,important,redirect=noopjs,domain=gratis.com
-@@||cdn.segmentify.com/*/segmentify.js$domain=gratis.com
 ! https://github.com/easylist/easylist/pull/12019
 @@||pvtag.yahoo.co.jp^$script,domain=paypaymall.yahoo.co.jp
 ! https://github.com/uBlockOrigin/uAssets/issues/13222
