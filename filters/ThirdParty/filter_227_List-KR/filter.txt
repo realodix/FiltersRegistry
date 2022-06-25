@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.625.0
+! OriginalVersion: 2022.625.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -695,7 +695,7 @@ newsen.com,toomics.com,m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsfor
 ! ##div[class^="ad"]
 ppomppu.co.kr,m.newsen.com,peterpanz.com,jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m.moneys.mt.co.kr,basketkorea.com,m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com,sports.chosun.com##div[class^="ad"]
 ! ##div[class^="banner_"]
-auth.danawa.com,socialvalue.kr,news.jtbc.joins.com,etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
+prod.danawa.com,auth.danawa.com,socialvalue.kr,news.jtbc.joins.com,etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
 ! ##div[class$="Banner"]
 hungryapp.co.kr,rhythmer.net##div[class$="Banner"]
 ! ##div[class$="banner"]
@@ -711,6 +711,11 @@ gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
 newsworker.co.kr##div[id^="AD"]
 !
+##.main__grid.main__grid--line .main__grid__right
+dpg.danawa.com##div[id*="_ad_"] ~ div[style^="min-height"]
+dpg.danawa.com##div[id*="-ad-"]
+dpg.danawa.com##div[id*="_ad_"]
+m.humoruniv.com##body > div[style^="margin:"]:not([class]):not([id]) > div[style^="width:"]:not([class]):not([id])
 thelec.kr##div[onclick^="wcs.event("]
 m.star.mt.co.kr###content > div[style^="background:"][class]
 11st.co.kr##.b_main_md_recommend
@@ -1383,6 +1388,7 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+dpg.danawa.com#%#//scriptlet("set-constant", "COMMUNITY_AD_UTILS", "emptyObj")
 m.dcinside.com#%#//scriptlet("set-constant", "reple_dori", "noopFunc")
 gall.dcinside.com#%#//scriptlet("remove-attr", "src", ".comment_box li.ub-content.dory img", "asap stay")
 11st.co.kr#%#//scriptlet("json-prune", "[].displayBeginDate [].displayEndDate")
