@@ -9255,7 +9255,7 @@ get.adobe.com###offersInformationPane
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 25June2022v2
+! OriginalVersion: 26June2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -9282,6 +9282,10 @@ get.adobe.com###offersInformationPane
 ||gdn^$document
 ||bid^$document
 ||ooo^$document
+! Experimental attempt to cover a few hardcore spam ASNs
+.buzz/*/?*=*&*=*&*=*&*=*&*=$document
+.life/*/?*=*&*=*&*=*&*=*&*=$document
+.live/*/?*=*&*=*&*=*&*=*&*=$document
 !#if !env_mobile
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (Advanced adblockers only) ———
 !!!www.google.*##.g:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"], [href*="gotofap.tk"], [href*="somepythonthings.tk"]))
@@ -9402,6 +9406,7 @@ play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:-abp-has([
 ||viaarena.com^$redirect=nooptext,important
 ||qasirgame.com^$redirect=nooptext,important
 ||willyousurvive.com^$redirect=nooptext,important
+||underthegarden.com^$redirect=nooptext,important
 ! ——— IQ test sites that make you waste heaps of time by taking the test, and then try to charge you to see the results. ———
 ||funeducation.com^$document
 ||iq-research.info^$document
@@ -11450,6 +11455,8 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||viixyr.com^$redirect=nooptext,important
 ||viiyhn.com^$redirect=nooptext,important
 31.220.27.134$network
+! https://github.com/AdguardTeam/AdguardFilters/issues/122757
+://adbrbk.$document
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$redirect=nooptext,important
