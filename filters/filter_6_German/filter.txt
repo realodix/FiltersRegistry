@@ -80,6 +80,7 @@
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
 !
+||a.zdg.de^
 ||cockpit.symplr.de^$third-party
 ||afl-static-cdn.newbiz-prod.stroeerws.de^$third-party
 ||embed.contentverticals.de^$third-party
@@ -1669,6 +1670,8 @@ teleboy.ch#@#.adWrapper
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/122983
+zentrum-der-gesundheit.de#?#main > div > div.bg-white:has(> div > div#bottom-1)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122945
 praxistipps.focus.de#?#.wrapper-safe > div.fb:has(> div > div.Article__Ad)
 ! bild.de ads on main page
@@ -2898,6 +2901,7 @@ drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan
 ! ##.id-Container--proBEEP
 hallo-muenchen.de,az-online.de,lokalo24.de,rosenheim24.de,kreiszeitung.de,mannheim24.de,merkur.de,oktoberfest-live.de,tz.de##.id-Container--proBEEP
 !
+zentrum-der-gesundheit.de##div[id^="incontent-"]
 praxistipps.focus.de##.BC-Container
 gartentipps.com##div[class^="adunit-container"]
 zeit.de##.zon-teaser-standard--ad
