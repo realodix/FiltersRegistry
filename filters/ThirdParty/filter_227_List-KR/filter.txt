@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.629.0
+! OriginalVersion: 2022.629.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -144,6 +144,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||imasdk.googleapis.com^
 ||nkwadv.nate.com^
 ||ad.search.nate.com^
 ||cyad.nate.com^
@@ -300,6 +301,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+/^https:\/\/h5\.dcinside\.com\/assets\/(aaa%20|banner|[%A-F0-9]{20,})/
 ||res.heraldm.com/banner/
 ||ilbe.com/oa/ad_bbs_list.js
 ||aitimes.com/adManager/
@@ -719,6 +721,7 @@ gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
 newsworker.co.kr##div[id^="AD"]
 !
+h5.dcinside.com##.side .login-box ~ .img-wrap
 mbiz.heraldcorp.com##a[class^="ad_"]
 echrecipe.co.kr##div[id*="_adsense_"]
 edufindkorea.com###body_wrap > #body_main > div[style]:nth-child(2)
@@ -1462,6 +1465,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 !
+||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=noopjs,domain=game.hotsharegames.com
 @@||googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=na.op.gg
 lover91.net#%#//scriptlet("abort-on-property-read", "open", "/(\/|a|d|b|l|o|c|k|[0-9]){7,}\.html/")
 $script,redirect-rule=noopjs,domain=lover91.net
