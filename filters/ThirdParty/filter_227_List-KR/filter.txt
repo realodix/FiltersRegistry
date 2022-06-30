@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.630.0
+! OriginalVersion: 2022.630.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1328,6 +1328,7 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+pedia.watcha.com#?#div[class*="-ContentSections"] div[class^="css-"] section:has(section[class*="-ContentSection"] div[class*="-AdContainer"])
 search.daum.net#?#body.nate article#mArticle [disp-attr].g_comp:has(iframe[src*="//ad.search.nate.com/"])
 search.daum.net#?#body.nate article#mArticle [disp-attr].g_comp:has(#bizDirtColl)
 search.daum.net#?#body.nate article#mArticle [disp-attr].g_comp:has(iframe[src*="//ad.search.nate.com/"]) + .line
@@ -1409,6 +1410,7 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+pedia.watcha.com#%#//scriptlet("remove-attr", "class|src", "a[class*='-StylelessHref-AdImage']", "asap stay")
 op.gg#%#//scriptlet("json-prune", "text_banner image_banner")
 dpg.danawa.com#%#//scriptlet("set-constant", "COMMUNITY_AD_UTILS", "emptyObj")
 m.dcinside.com#%#//scriptlet("set-constant", "reple_dori", "noopFunc")
