@@ -8,7 +8,7 @@ We may add third-party filters to AdGuard Filters Registry. When making a decisi
 1. The filter should be oriented towards browser content blockers.
 2. The filter should be legal. If it has rules for paywall circumvention, we won't add such a filter.
 3. The filter should have a place for receiving user complaints and holding discussions, such as a repository on github.com, or a website open to public.
-4. The filter should be relatively popular, meaning: 
+4. The filter should be relatively popular, meaning:
     * if there is a repository on GitHub, the number of stars should be at least 50
     * if there is no repository on GitHub, the number of analyzed issues and discussions is estimated at 10 per month on the filter's website
     * the filter should be actively supported for at least 6 months
@@ -16,7 +16,7 @@ We may add third-party filters to AdGuard Filters Registry. When making a decisi
 6. The filter should be compatible with AdGuard products. You can familiarize yourself with AdGuard syntax here: https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters.
 7. If the filter works only in some operating systems and satisfies all other criteria, it will be added but only for the supported platforms.
 8. Previously added filters that haven't received any support for a year will be removed. We reserve the right to remove the filter earlier, depending on circumstances.
-9. If the filter contains too many problematic rules, it will not be added. A rule is considered problematic if it causes false positives or otherwise displays unitended behavior. Decisions about filters with problematic rules are arbitrary and there may be exceptions (see items 9 and 10, for example).
+9. If the filter contains too many problematic rules, it will not be added. A rule is considered problematic if it causes false positives or otherwise displays unintended behavior. Decisions about filters with problematic rules are arbitrary and there may be exceptions (see items 9 and 10, for example).
     * If the filter intentionally blocks or restricts access to any services for no reason other than being a reflection of the filter author's opinion, the filter will not get added, or will get removed if already added.
 10. If the filter is popular in a specific region and there are no alternatives to it, then it can be added as is.
 11. If the filter gets added, it receives a so-called [trustLevel](#trustLevel) (Low, High, Full), based on the number of problematic rules it contains and some other factors. Filters without "Full" trust level may have part of their rules disabled.
@@ -46,9 +46,9 @@ We may add third-party filters to AdGuard Filters Registry. When making a decisi
     * `groupId` — [group](#groups) identifier
     * `subscriptionUrl` — default filter subscription URL
     * `tags` — a list of [tags](#tags)
-    * <a id="trustLevel"></a> `trustLevel` — level of trust which describe [allowed and permited rules types](https://github.com/AdguardTeam/FiltersCompiler/tree/master/src/main/utils/trust-levels); possible values:
+    * <a id="trustLevel"></a> `trustLevel` — level of trust which describe [allowed and permitted rules types](https://github.com/AdguardTeam/FiltersCompiler/tree/master/src/main/utils/trust-levels); possible values:
         * `low` — only low-risk rule types are allowed; defaults to **low** if trust level is not configured at all
-        * `high` — trusted third-party filter lists; some particular rules from there are still permited
+        * `high` — trusted third-party filter lists; some particular rules from there are still permitted
         * `full` — all types of filter rules are allowed; only AdGuard filter lists have full trust at the moment
     * `platformsIncluded` — [the list of platforms](https://kb.adguard.com/general/how-to-create-your-own-ad-filters#platform-and-not_platform-hints) to compile the filter for, e.g. `["mac", "windows", "android"]`. If you need to compile the filter for all platforms remove this property
     * `platformsExcluded` — [the list of platforms](https://kb.adguard.com/general/how-to-create-your-own-ad-filters#platform-and-not_platform-hints) to skip while filter compiling, e.g. `["ios", "ext_safari"]`. If you need to compile the filter for all platforms remove this property
