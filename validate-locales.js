@@ -5,7 +5,7 @@ const compiler = require("adguard-filters-compiler");
 const LOCALES_DIR_PATH = './locales';
 
 const REQUIRED_LOCALES = [
-    // kepp base locale here as well
+    // keep base locale here as well
     'en',
     // + other our locales
     'ru',
