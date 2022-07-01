@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.701.1
+! OriginalVersion: 2022.701.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -144,6 +144,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||adimg.newstomato.com^
 ||imasdk.googleapis.com^
 ||nkwadv.nate.com^
 ||ad.search.nate.com^
@@ -702,7 +703,7 @@ dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,d
 ! ##.banner
 m.sedaily.com,bloter.net,mosen.mt.co.kr,hinfomax.kr,hinfomax.co.kr,pressian.com,kukinews.com##.banner
 ! ##div[class$="_banner"]
-newsen.com,toomics.com,m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
+newstomato.com,newsen.com,toomics.com,m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
 ! ##div[class^="ad"]
 ppomppu.co.kr,m.newsen.com,peterpanz.com,jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m.moneys.mt.co.kr,basketkorea.com,m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com,sports.chosun.com##div[class^="ad"]
 ! ##div[class^="banner_"]
@@ -718,10 +719,11 @@ signinssl.gmarket.co.kr,m.hungryapp.co.kr,m.edaily.co.kr,ichannela.com,m.news1.k
 ! ##div[class$="-ad"]
 gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
-gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
+newstomato.com,gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
 newsworker.co.kr##div[id^="AD"]
 !
+newstomato.com##.rns_bn
 sumpic.com##section.content .thumbnail-area
 h5.dcinside.com##.side .login-box ~ .img-wrap
 mbiz.heraldcorp.com##a[class^="ad_"]
@@ -1411,6 +1413,7 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+newstomato.com#%#//scriptlet("abort-current-inline-script", "getAdvertise")
 m.search.naver.com#%#//scriptlet("abort-on-property-read", "Element.prototype.className", "_initializePlayer")
 pedia.watcha.com#%#//scriptlet("remove-attr", "class|src", "a[class*='-StylelessHref-AdImage']", "asap stay")
 op.gg#%#//scriptlet("json-prune", "text_banner image_banner")
@@ -1551,7 +1554,6 @@ ppss.kr,ygosu.com,tgd.kr,inven.co.kr,loawa.com,feedclick.net,dailian.co.kr$$scri
 @@||api-ao-list.adison.co^$app=com.nhn.android.nbooks
 ||firebaseinstallations.googleapis.com^$app=instasaver.instagram.video.downloader.photo
 ||ds.11st.co.kr/NetInsight/text/11st/11st_mobile/mobile_product
-/^https:\/\/cdn\.011st\.com\/11dims/resize/[0-9]{3,4}x[0-9]{3,4}\//$app=com.elevenst
 ||centaurs-rest.coupang.com^$app=com.timespread.Timetable2
 ||img.samsungapps.com/display^$app=com.samsung.android.game.gamehome
 ||adlibr.com^
