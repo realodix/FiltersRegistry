@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.703.1
+! OriginalVersion: 2022.703.5
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -302,6 +302,8 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||image.kyobobook.co.kr/ink/images/prom/
+||kyobobook.co.kr/newimages/adcenter/
 ||sumpic.com/shop/upload/banner/
 /^https:\/\/h5\.dcinside\.com\/assets\/(aaa%20|banner|[%A-F0-9]{20,})/
 ||res.heraldm.com/banner/
@@ -695,9 +697,9 @@
 ! ##div[id^="ad_"]
 news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,m.10000recipe.com,pandora.tv,mobile.newsis.com,zdnet.co.kr,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
-sports.news.naver.com,news.daum.net,instiz.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
+kyobobook.co.kr,sports.news.naver.com,news.daum.net,instiz.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 ! ##div[class^="ad_"]
-mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.joins.com,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,ytn.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
+kyobobook.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.joins.com,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,ytn.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 ! ##div[class^="ad-"]
 dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 ! ##.banner
@@ -723,6 +725,14 @@ newstomato.com,gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^=
 ! ##div[id^="AD"]
 newsworker.co.kr##div[id^="AD"]
 !
+kyobobook.co.kr##body.welcome .content_middle div[class^="ad_"]
+kyobobook.co.kr##body.welcome #container > div[class^="bg_welcome_"]:not([style]):nth-child(-n+3)
+kyobobook.co.kr##body.welcome #wing_ad
+kyobobook.co.kr##body.welcome .box_welcome_best
+kyobobook.co.kr###mainEventDiv
+kyobobook.co.kr##.top_header > .searchbook_main_new
+etoland.co.kr##div[id^="mobile_banner_"]
+etoland.co.kr###mw_mobile > style ~ center >  a[href] > img[src]
 newstomato.com##.rns_bn
 sumpic.com##section.content .thumbnail-area
 h5.dcinside.com##.side .login-box ~ .img-wrap
@@ -1288,6 +1298,14 @@ x86.co.kr#@#.download_ad
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+kyobobook.co.kr#$#.search_input > input#searchKeyword { background-image: none !important; }
+kyobobook.co.kr#$#.box_welcome_kyobo.type_2, .box_welcome_kyobo.type_2 .list_welcome_kyobo { width: 100% !important; }
+kyobobook.co.kr#$#.box_welcome_kyobo.type_2 .list_welcome_kyobo .layer { width: 237% !important; }
+kyobobook.co.kr#$#.box_welcome_kyobo.type_2 .list_welcome_kyobo .cover { left: 221.5px !important; }
+kyobobook.co.kr#$#.box_welcome_kyobo.type_2 .tab_welcome_round { left: 160px !important; }
+kyobobook.co.kr#$#.tab_welcome_kyobo li.book_3 { left: 172.5px !important; }
+kyobobook.co.kr#$#.tab_welcome_kyobo li.book_1 { left: 207.5px !important; }
+kyobobook.co.kr#$#.tab_welcome_kyobo li.book_2 { left: 273.5px !important; }
 edufindkorea.com#$##body_wrap > #body_main > div[style]:nth-child(1), #body_wrap > #body_main > div[style]:nth-child(3) { width: calc(50% - 5px) !important; }
 bbs.ruliweb.com#$##board_read .board_main_top .member_reward_wrapper { margin-top: 20px !important; float: right !important; margin-right: 20px !important; }
 www.nate.com#$#.area_ranking { top: 400px !important; }
@@ -1413,6 +1431,8 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+kyobobook.co.kr#%#//scriptlet("abort-current-inline-script", "jQuery", "#mainEventDiv")
+kyobobook.co.kr#%#//scriptlet("abort-current-inline-script", "shuffleItsbest", "itsbestArray")
 newstomato.com#%#//scriptlet("abort-current-inline-script", "getAdvertise")
 m.search.naver.com#%#//scriptlet("abort-on-property-read", "Element.prototype.className", "_initializePlayer")
 pedia.watcha.com#%#//scriptlet("remove-attr", "class|src", "a[class*='-StylelessHref-AdImage']", "asap stay")
