@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.703.5
+! OriginalVersion: 2022.703.9
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -302,6 +302,8 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||image.kyobobook.co.kr//ink/images/prom/
+||imac.kyobobook.co.kr/html/INK/$subdocument
 ||image.kyobobook.co.kr/ink/images/prom/
 ||kyobobook.co.kr/newimages/adcenter/
 ||sumpic.com/shop/upload/banner/
@@ -705,7 +707,7 @@ dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,d
 ! ##.banner
 m.sedaily.com,bloter.net,mosen.mt.co.kr,hinfomax.kr,hinfomax.co.kr,pressian.com,kukinews.com##.banner
 ! ##div[class$="_banner"]
-newstomato.com,newsen.com,toomics.com,m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
+order.kyobobook.co.kr,newstomato.com,newsen.com,toomics.com,m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
 ! ##div[class^="ad"]
 ppomppu.co.kr,m.newsen.com,peterpanz.com,jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m.moneys.mt.co.kr,basketkorea.com,m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com,sports.chosun.com##div[class^="ad"]
 ! ##div[class^="banner_"]
@@ -725,6 +727,7 @@ newstomato.com,gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^=
 ! ##div[id^="AD"]
 newsworker.co.kr##div[id^="AD"]
 !
+kyobobook.co.kr##.box_login_inner > div[class^="popup_content"]
 kyobobook.co.kr##body.welcome .content_middle div[class^="ad_"]
 kyobobook.co.kr##body.welcome #container > div[class^="bg_welcome_"]:not([style]):nth-child(-n+3)
 kyobobook.co.kr##body.welcome #wing_ad
@@ -1160,7 +1163,7 @@ now.rememberapp.co.kr##.now_content_ads__wrapper
 m.ilbe.com##.banner-wrap
 clien.net###coupangAd
 ppomppu.co.kr##tr > td div.bridge
-news.nate.com,boribori.co.kr##div[class*="_banner"]
+search.kyobobook.co.kr,news.nate.com,boribori.co.kr##div[class*="_banner"]
 boribori.co.kr##.bFloatingBanner
 ondisk.co.kr##div[id^="wingBanner-"]
 enuri.com##ul#evt_banner
@@ -1298,6 +1301,7 @@ x86.co.kr#@#.download_ad
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+kyobobook.co.kr#$#.box_login_inner > div[class^="login_content"] { margin-left: calc(50% - 166px) !important; }
 kyobobook.co.kr#$#.search_input > input#searchKeyword { background-image: none !important; }
 kyobobook.co.kr#$#.box_welcome_kyobo.type_2, .box_welcome_kyobo.type_2 .list_welcome_kyobo { width: 100% !important; }
 kyobobook.co.kr#$#.box_welcome_kyobo.type_2 .list_welcome_kyobo .layer { width: 237% !important; }
