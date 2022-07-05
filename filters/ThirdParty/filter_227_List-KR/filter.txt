@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.704.3
+! OriginalVersion: 2022.705.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -303,6 +303,10 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||resources-rmcnmv.pstatic.net/ditto/c/
+||search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F
+||ssl.pstatic.net/adimg3.search/o/ditto/
+/^https:\/\/[a-z0-9]{3,4}-g-naver-vod\.pstatic\.net\/ditto\/c\/read\/v[0-9]{1,3}\/VOD_ALPHA\/ditto_/
 ||api.pping.kr/front/*/ad/
 ||cdnjs.happyshopping.kr/_*/css/*/pages/adv.css
 ||api.pping.kr/front/*/ads/
@@ -1449,7 +1453,6 @@ pping.kr#%#//scriptlet("remove-attr", "placeholder", "input.search_input", "asap
 kyobobook.co.kr#%#//scriptlet("abort-current-inline-script", "jQuery", "#mainEventDiv")
 kyobobook.co.kr#%#//scriptlet("abort-current-inline-script", "shuffleItsbest", "itsbestArray")
 newstomato.com#%#//scriptlet("abort-current-inline-script", "getAdvertise")
-m.search.naver.com#%#//scriptlet("abort-on-property-read", "Element.prototype.className", "_initializePlayer")
 pedia.watcha.com#%#//scriptlet("remove-attr", "class|src", "a[class*='-StylelessHref-AdImage']", "asap stay")
 op.gg#%#//scriptlet("json-prune", "text_banner image_banner")
 dpg.danawa.com#%#//scriptlet("set-constant", "COMMUNITY_AD_UTILS", "emptyObj")
