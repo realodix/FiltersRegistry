@@ -13,6 +13,7 @@ const REQUIRED_LOCALES = [
     'de',
     'fr',
     'it',
+    'ja',
     'ko',
     'zh_CN',
     'zh_TW',
