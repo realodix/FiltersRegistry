@@ -1683,6 +1683,8 @@ teleboy.ch#@#.adWrapper
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/123504
+spieleforum.de#?#.p-body-sidebar > .block:has(> div[id^="spieleforum.de_sitebar_"]:empty)
 ! cosmopolitan.de - ad on main page
 cosmopolitan.de#?#.bx-teaser:has(> a > figure > .bx-badge--ad)
 ! spox.com - ad left-overs
@@ -2921,6 +2923,8 @@ drwindows.de,wiesbadenaktuell.de,rauchmeldungen.de,simfans.de,wn.de,cosmopolitan
 ! ##.id-Container--proBEEP
 hallo-muenchen.de,az-online.de,lokalo24.de,rosenheim24.de,kreiszeitung.de,mannheim24.de,merkur.de,oktoberfest-live.de,tz.de##.id-Container--proBEEP
 !
+spieleforum.de##div[data-widget-definition="fh_ad_position"]
+spieleforum.de##.block-body > article:not([data-author])
 caravaning.de##.v-A_-article__tag--ad
 fachwerk.de##.header-base[style^="padding-top:"]
 entsorgen.org##.entso-widget
@@ -10442,6 +10446,7 @@ coincierge.de##div[id^="coinc-"]
 forum.golem.de##div[id^="csi_forum"][style="min-height: 100px; padding: 0px; display: block;"]
 20min.ch##div[id^="digital__inside-"]
 boerse.sx##div[id^="edit"][style="padding:0px 0px 6px 0px"] > table[id^="post"][width="100%"][cellspacing="0"][cellpadding="6"][border="0"][align="center"] + br + .tborder[width="100%"][cellspacing="0"][cellpadding="6"][border="0"][align="center"]
+finanzmarktwelt.de##div[id^="finan-"]
 vrnerds.de##div[id^="findexp-"]
 foodwissen.de##div[id^="foodw-"]
 windowspro.de##div[id^="gWrapper-"]
@@ -10514,6 +10519,7 @@ raptastisch.net##div[style="height: 300px;"]
 reiseuhu.de##div[style="height: 600px !important; max-width: 320px; margin: 15px auto;"]
 hdfilme.cx##div[style="height: 90px; width: 728px;"]
 boerse-social.com##div[style="height:80px;background-color:#fff"]
+photaq.com##div[style="height:90px"]
 nydus.org##div[style="height:90px;overflow:hidden;text-align:center;"]
 iphone-tricks.de##div[style="margin-bottom:.5em;padding-top:.5em;min-height: 270px;display: flex;justify-content: center;align-items: center"]
 digitalfernsehen.de##div[style="margin-bottom:10px"]
