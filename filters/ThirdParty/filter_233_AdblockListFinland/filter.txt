@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 5July2022v2
+! OriginalVersion: 7July2022v1
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -63,6 +63,8 @@ karjalainen.fi#$?#.breaking-news-container:not(:has-text(mainos:)) { display: fl
 aamulehti.fi,satakunnankansa.fi,valkeakoskensanomat.fi,nokianuutiset.fi,janakkalansanomat.fi,kmvlehti.fi,jamsanseutu.fi,suurkeuruu.fi,kankaanpaanseutu.fi,rannikkoseutu.fi,tyrvaansanomat.fi,merikarvialehti.fi,sydansatakunta.fi#%#//scriptlet('ubo-nostif.js', 'adblockDetected', '0')
 afterdawn.com,download.fi,high.fi,muropaketti.com#%#//scriptlet('ubo-nostif.js', 'f.parentNode.removeChild(f)', '100')
 ap-cdn.sanomagames.com#%#//scriptlet('ubo-rc.js', 'st__hidden', '#gamewrapper')
+finder.fi#%#//scriptlet('ubo-rc.js', 'Profile__TopCard--advertisement', '', 'stay')
+finder.fi#%#//scriptlet('ubo-rc.js', 'SearchResultList--advertisement', '', 'stay')
 gamereactor.fi#%#//scriptlet('ubo-aopr.js', 'adblockEnabled')
 happypancake.fi#%#//scriptlet('ubo-aopr.js', 'Object.prototype.adUnits')
 iltalehti.fi#$?#.double-column > a[href]:has(.article-container:has-text(Kaupallinen yhteistyö)) { remove: true; }
@@ -343,7 +345,9 @@ findance.com##div[id^=adslot_sidebar]
 findance.com#?#p:has(> [rel=sponsored])
 findance.com#?#p:has(a[rel="nofollow no-referrer sponsored"])
 finder.fi##.Advertisement__Box
+finder.fi##.Advertisement__Box--with-padding
 finder.fi##.Advertisement__Top
+finder.fi##.FrontPageSpots__Ad
 finnkino.fi,fum.fi,tilt.fi,vuokraovi.com##.advertising
 fonecta.fi##.map-ad
 fonecta.fi##[class*=adBox]
