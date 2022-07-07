@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.707.1
+! OriginalVersion: 2022.707.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -303,6 +303,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+/^https:\/\/moyo-cdn\.[a-z0-9]{2,3}\.[a-z0-9-]{12,15}\.amazonaws\.com\/img\/banner\//
 ||file.mk.co.kr/sports/AD/
 ||resources-rmcnmv.pstatic.net/ditto/c/
 ||search.pstatic.net/common/?src=https%3A%2F%2Fditto-phinf.pstatic.net%2F
@@ -738,6 +739,8 @@ gamemeca.com,yeongnam.com##div[class$="-ad"]
 newstomato.com,gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
 newsworker.co.kr##div[id^="AD"]
+! ##div[class^="Banner"]
+moyoplan.com##div[class^="Banner"]
 !
 mksports.co.kr###container_right > div[id^="slot"]
 oracionspace.com##aside > .revenue_unit_wrap
@@ -1506,15 +1509,12 @@ tistory.com#%#//scriptlet("abort-on-property-read", "adBlockDetected")
 ! ai_front anti-adblock
 jootc.com,ehpub.co.kr#%#//scriptlet("abort-current-inline-script", "ai_run_scripts")
 ! Kakao TV
-!#if (adguard_app_android || adguard_app_ios || adguard_app_mac || adguard_app_windows)
-$csp=connect-src "self" *.kakaopage.com *.kakaocdn.net *.kakao.com *.daum.net *.daumcdn.net,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
-!#endif
+tv.kakao.com,play-tv.kakao.com,kakaotv.daum.net#%#//scriptlet("prevent-fetch", "^https:\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]{1,2}\/vmap$")
 ||kakaotv.daum.net/embed/player/image/ads.png$redirect=32x32-transparent.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#ins.kakao_ad_area
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@##adBlockPixelTag
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ||tv.kakao.com/embed/player/image/ads.png$redirect=32x32-transparent.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
-||videoads.kakao.com/adserver/api/v2/vmap$redirect=noopvmap-1.0,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 !
