@@ -21,9 +21,12 @@
 ! ||cdn.hostdl.com/*/*.gif
 ! ##[href^="https://gameup.ir/"]
 ! /najva.js
+! /jwplayer/vast.js
 !-------------------------^ Experimental Generic Filters ^-----------------------!
 !-------------------------v Persian Ads/Trackers/Annoyances Filters v-----------------------!
 ! >> A <<
+||adtube.ir^$all
+||advn.ir^$all
 ||amaroid.net^$all
 ||lnk.amaroid.net^$all
 !#if adguard
@@ -57,17 +60,20 @@
 ||abzarfa.com/services/onlineusres
 ||abzarfa.com/tools/ip
 ! >> B <<
+||radar.bayan.ir^$all
 ||backlink.behtarinseo.ir/ads
-||backority.ir^$third-party
+||backority.ir^$all
 ! https://github.com/AdguardTeam/AdguardFilters/issues/99240
 ||blogfa.com/a/
 ! >> C <<
+||clickaval.com^$all
 ||congoro.com^$all
 ! @@||clickyab.com^$1p
 ||clickyab.com^$badfilter
 ||clickyab.com^$all
 ||chabok.io^$all
 ! >> D <<
+||davedbux.ir^$all
 ||denutility.com/*/tabligh/
 ! ^ Used by eghtesadnews.com
 ||deemanetwork.com^$all
@@ -82,6 +88,7 @@
 !#endif
 ||e-earn.ir^$third-party
 ! >> F <<
+||facepop.org^$all
 ||farsbux.ir^$all
 ||fastclick.ir^$all
 ||fa-tools.ir/code/rightclick/right-click1.js
@@ -121,6 +128,7 @@
 ||netbina.com^$all
 ! >> O <<
 ! >> P <<
+||popina.ir^$all
 ||popunder.ir^$all
 ! TODO: Remove it, Used by marzfun.com
 ||popupdl.ir^$all
@@ -133,7 +141,7 @@
 ! ||phoenixad.io^$popup
 ! ||phoenixad.io/click^$all
 ||partclick.ir^$third-party
-||persianrank.ir^$third-party
+||persianrank.ir^$all
 ||popgozar.com^$all
 ||popupplus.ir^$all
 ||popupme.net^$all
@@ -149,6 +157,7 @@
 ||rozblog.com/include/rozblog_ads_js
 /include/rozblog_ads_js
 ! >> S <<
+||slideskin.ir/ads/pop.php^$all
 ||sendword.ir^$all
 ! Used by i-video.ir
 !#if adguard
@@ -161,6 +170,8 @@
 ||sabavision.com^$all
 ||seyedrezabazyar.com/codetools/files/close-right-click.js
 ! >> T <<
+||te1.ir^$all
+||talapop.ir^$all
 ||titr.online^$third-party
 ! ^ Used by my-film.pw
 ||tabligheirani.ir^$all
@@ -179,7 +190,7 @@
 ! ||tavoos.net/services/vast/*$xhr
 ! ||tavoos.net/tavoos_player/pushvideo/tavoos_push.js
 ! ||tavoos.net/services/retargeting
-||cashback.takhfifan.com^$third-party
+||cashback.takhfifan.com^$all
 ! TODO: Investigate ^
 ||tapsell.ir^$all
 ||toppopup.com^$all
@@ -484,6 +495,7 @@ boyernews.com##.tarh-forosh.panel-heading:nth-of-type(23)
 boyernews.com##center
 boyernews.com##.table-striped.table
 ! >> C <<
+||sentry.cafebazaar.org^$all
 ! coffeeapps.ir##+js(nowoif)
 coffeeapps.ir#%#//scriptlet('ubo-aopr.js', 'nocontext')
 coffeeapps.ir#%#//scriptlet('ubo-acis.js', 'disableSelection', 'reEnable')
@@ -666,6 +678,18 @@ estekhtam.com#@#.ads-bottom
 ||api.enama.ir/WebFiles/_AdsBanner/
 ! TODO: Investigate more filters
 ! >> F <<
+||fb-gw.bef.rest^$all
+||api.footballi.net/api/*/user/init^$all
+||api.footballi.net/api/*/news/visit^$all
+||sentry.footballiapp.com^$all
+||footballi.net/assets/shared-application/scripts/analytics
+||footballi.net/assets/shared-application/scripts/jwplayer/vast.js
+||footballi.net/video/*/undefined/vast.js
+footballi.net##.ads-row
+footballi.net##.ads-row-left
+footballi.net##.mediaad-top-row
+footballi.net##.mediaad-row-top
+footballi.net##.mediaad-row
 farskids.me#@#.ads-banner
 ||freedownload.ir/images/customer/
 freedownload.ir##.custom
@@ -895,6 +919,8 @@ kojaro.com##.banner-wrapper
 kojaro.com##.advertisement-in-topic
 kojaro.com##.bannercontainer
 kojaro.com##.mobileBanner
+kojaro.com##.homepage-content
+kojaro.com##.article-mobile-inContent
 @@||images.kojaro.com/assets/ad/advertise-$image,~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/33437
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101735
@@ -939,6 +965,7 @@ lahzeakhar.com#%#//scriptlet('ubo-set.js', 'customnotify', 'noopFunc')
 ||lahzeakhar.com/ShowAds
 ! ||lahzeakhar.com/sw.js
 ! >> M <<
+||myket.ir^$removeparam=/utm/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56886
 mobile.ir##.b
 mobile.ir##.apnl
@@ -1123,6 +1150,7 @@ par30games.net#@#.sideads
 par30games.net##.fixedbanner
 par30games.net##.sidebar-box-shop
 par30games.net##.adbox
+par30games.net##.mobilebanner
 @@||par30games.net/wp-content/uploads/*/advertise-plan$image,~third-party
 ||paperhub.ir/images/*.gif
 p30world.com##.post-ads
@@ -1584,6 +1612,7 @@ zoomg.ir##.top-ads
 zoomit.ir#%#//scriptlet('ubo-aopr.js', 'banner')
 ||zoomit.ir/common/visitcount/
 zoomit.ir##.wide-adv-box
+zoomit.ir##.wide-adv-row-home
 zoomit.ir##div[class^="item-list-row col-xs-"]:has(div>div>div>div>ul>li>a:has-text(آگهی))
 @@||cdn01.zoomit.ir/assets/img/advertise-$image,~third-party
 zoomtech.org###top_ads
