@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.708.1
+! OriginalVersion: 2022.708.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -744,6 +744,11 @@ newsworker.co.kr##div[id^="AD"]
 ! ##div[class^="Banner"]
 moyoplan.com##div[class^="Banner"]
 !
+te31.com##table.adsbygoogle ~ table #honey > div[style^="background-color:"]:not([class])
+te31.com###contentmemo ~ .adsbygoogle > div[style^="background-color:"]
+te31.com###menu_right.adsbygoogle
+te31.com##table.adsbygoogle ~ table[style^="min-height:"]
+te31.com###bbs > table[style^="color:#"] ~ div[style*="padding:"][style*="border-left"]
 mksports.co.kr###container_right > div[id^="slot"]
 oracionspace.com##aside > .revenue_unit_wrap
 search.11st.co.kr##.search_content section.search_section[data-log-actionid-area="recommend"]
@@ -773,7 +778,7 @@ op.gg##header ~ div[class^="css-"] > div.search-contaienr ~ div[class^="css-"]
 www.danawa.com##.main__grid.main__grid--line .main__grid__right
 dpg.danawa.com##div[id*="_ad_"] ~ div[style^="min-height"]
 dpg.danawa.com##div[id*="-ad-"]
-dpg.danawa.com##div[id*="_ad_"]
+news.naver.com,dpg.danawa.com##div[id*="_ad_"]
 m.humoruniv.com##body > div[style^="margin:"]:not([class]):not([id]) > div[style^="width:"]:not([class]):not([id])
 thelec.kr##div[onclick^="wcs.event("]
 m.star.mt.co.kr###content > div[style^="background:"][class]
@@ -1317,6 +1322,8 @@ x86.co.kr#@#.download_ad
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+te31.com#$##contentmemo ~ .adsbygoogle > div[style^="font-size:"] { width: 100% !important; }
+news.naver.com#$##section_body { border-top: none !important; }
 sso.pping.kr#$#.content_join { margin-left: calc(50% - 200px) !important; }
 kyobobook.co.kr#$#.box_login_inner > div[class^="login_content"] { margin-left: calc(50% - 166px) !important; }
 kyobobook.co.kr#$#.search_input > input#searchKeyword { background-image: none !important; }
@@ -1505,8 +1512,8 @@ tistory.com,lover91.net,1412.rest,3dpchip.com#%#//scriptlet("prevent-setTimeout"
 ! BlockAdBlock
 shana.pe.kr,fafan.kr,tistory.com#%#//scriptlet("prevent-bab")
 ! FuckAdBlock
-tistory.com#%#//scriptlet("prevent-fab-3.2.0")
-tistory.com#%#//scriptlet("abort-on-property-read", "adBlockDetected")
+te31.com,tistory.com#%#//scriptlet("prevent-fab-3.2.0")
+te31.com,tistory.com#%#//scriptlet("abort-on-property-read", "adBlockDetected")
 ||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$redirect=prevent-fab-3.2.0
 ! ai_front anti-adblock
 jootc.com,ehpub.co.kr#%#//scriptlet("abort-current-inline-script", "ai_run_scripts")
@@ -1520,6 +1527,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 !
+te31.com#@#.adsbygoogle
 ||fundingchoicesmessages.google.com^$domain=mksports.co.kr
 ||cdn.kollhong.com/wp-content/custom-js/fuckadblock.min.js
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=noopjs,domain=game.hotsharegames.com
