@@ -6,7 +6,7 @@
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
 ! What this broad compilation does not block: Newsletters, cookie banners, social media links to company pages
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-! OriginalVersion: 03July2022v1
+! OriginalVersion: 09July2022v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -409,6 +409,8 @@ nova.rs##.banner-footer
 180.no##.ad-fallback
 ##.gh-app-banner:not(html, body)
 playpilot.com##.android-prompt
+##div[class^=AppBanner__]
+##.mob-app-redirect:not(html, body)
 ! (https://github.com/AdguardTeam/AdguardFilters/issues/116903)
 !!!twitter.com###layers > div:nth-of-type(2):last-of-type
 ! Pinterest
@@ -421,8 +423,6 @@ playpilot.com##.android-prompt
 ##.amp-push-notification:not(html, body)
 ##.pushbtn.align-center-button:not(html, body)
 ###___ndtvpushdiv
-! Can't use ":not" due to https://github.com/AdguardTeam/FiltersRegistry/blob/master/filters/exclusions.txt
-##.mob-app-redirect
 ! Below are entries that I borrowed from "I Don't Want Your App", which is maintained by https://github.com/lassekongo83 at https://raw.githubusercontent.com/lassekongo83/Frellwits-filter-lists/master/i-dont-want-your-app.txt, and which is licenced as GPLv3
 ! Generic
 ##a[href*=".app.link/"]
