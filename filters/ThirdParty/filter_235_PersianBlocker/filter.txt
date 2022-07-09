@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-07-08
+! Last modified: 2022-07-09
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: GPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 !
@@ -686,11 +686,14 @@ estekhtam.com#@#.ads-bottom
 ||footballi.net/assets/shared-application/scripts/analytics
 ||footballi.net/assets/shared-application/scripts/jwplayer/vast.js
 ||footballi.net/video/*/undefined/vast.js
+!#if env_mobile
 footballi.net##.ads-row
+footballi.net#$#.mobile-header { top: 0 !important }
 footballi.net##.ads-row-left
 footballi.net##.mediaad-top-row
 footballi.net##.mediaad-row-top
 footballi.net##.mediaad-row
+!#endif
 farskids.me#@#.ads-banner
 ||freedownload.ir/images/customer/
 freedownload.ir##.custom
@@ -1607,13 +1610,24 @@ zoomg.ir#%#//scriptlet('ubo-aopr.js', 'banner')
 zoomg.ir##.main-top-ads
 zoomg.ir##.main-inside-ads
 zoomg.ir##.top-ads
+zoomg.ir##.afterintro
+!#if env_mobile
+zoomg.ir###mobileBannerAfterTags
+!#endif
 @@||cdn.zoomg.ir/banners/demo/advertise-$image,~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78626
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79988
 zoomit.ir#%#//scriptlet('ubo-aopr.js', 'banner')
 ||zoomit.ir/common/visitcount/
-zoomit.ir##.wide-adv-box
+||analytics.zoomit.ir^$all
+zoomit.ir##.wide-adv-row
 zoomit.ir##.wide-adv-row-home
+zoomit.ir##.bannercontainer
+!#if env_mobile
+zoomit.ir##.InsideArticleIntro
+zoomit.ir##.article-mobile-inContent
+zoomit.ir###mobileBannerAfterTags
+!#endif
 zoomit.ir##div[class^="item-list-row col-xs-"]:has(div>div>div>div>ul>li>a:has-text(آگهی))
 @@||cdn01.zoomit.ir/assets/img/advertise-$image,~third-party
 zoomtech.org###top_ads
