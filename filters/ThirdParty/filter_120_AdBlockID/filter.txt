@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 22.7.118
+! OriginalVersion: 22.7.125
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 07 Jul 2022 19:06 UTC
+! Last modified: 09 Jul 2022 07:47 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -751,6 +751,7 @@ _promosi.
 -790-90.
 -798x230.
 -800-x-70.$image
+-800x100-$image
 -800x140-$image
 -800X70.
 -80x300-
@@ -1314,6 +1315,7 @@ _GIF1200x120-
 ###le_header_ads
 ###left_ads_float_phonedevelop
 ###lmd-iklan
+###me-div-gpt-ad-stickyad
 ###myadsmodal
 ###obi_random_banners_posts
 ###popup_bawah
@@ -1394,6 +1396,7 @@ _GIF1200x120-
 ##.ads-middle-list-news
 ##.ads-mr
 ##.ads-nontonfilm
+##.ads-paralax
 ##.ads-pop
 ##.ads-position-here
 ##.ads-sidebar-1
@@ -1845,6 +1848,7 @@ _GIF1200x120-
 ##.videoOverAdBig
 ##.vlog-banner
 ##.vlog-bnr
+##.warp-ads-paralax
 ##.widget-ads-top
 ##.widget-ads3
 ##.widget-ads4
@@ -1986,6 +1990,7 @@ _GIF1200x120-
 ##[id^="div-adx-ad-"]
 ##[id^="rn_ad_native_"]
 ##[id^="utp_ads_"]
+##a[title="iklan" i]
 ##banner-besar--top
 ##div[id^="dfp-gpt-ad"]
 ##gmn-companion-ad-renderer
@@ -2888,7 +2893,7 @@ sumselnian.com##.add-inner
 dialeksis.com##.add-space
 nonton.com##.adds
 matamata.com,suara.com##.adds-top
-ayocirebon.com,duwitmu.com,gridoto.com,harianjogja.com,koran-jakarta.com,minangsatu.com,motorplus-online.com,pikiran-rakyat.com,rmol.id,tempo.co##.ads
+ayocirebon.com,duwitmu.com,gridoto.com,harianjogja.com,koran-jakarta.com,minangsatu.com,motorplus-online.com,pikiran-rakyat.com,rmol.id,tempo.co,wowbabel.com##.ads
 harpersbazaar.co.id,motherandbeyond.id##.ads-belt
 kompas.tv##.ads-big
 kontan.co.id##.ads-billboard
@@ -2979,7 +2984,7 @@ brainly.co.id##.brn-new-ad-placeholder--with-background
 brainly.co.id##.brn-new-ad-placeholder__below-question-rectangles
 brainly.co.id##.brn-new-ad-placeholder__bridge
 katadata.co.id##.close-ads-sticky
-diadona.id##.col-banner
+diadona.id,dream.co.id##.col-banner
 parapuan.co##.comm--fixed
 kompas.tv##.container_skinad
 kepogaul.com,posbagus.com##.content .box-height-100px-250px
@@ -3258,7 +3263,7 @@ trikinet.com##.widget:not(:has(a[href*="trikinet.com"])) > a > img
 bangkitmedia.com##aside p:matches-css(text-align: center):has(> a > img)
 gardapapua.com##aside:has-text(/adv/i)
 tempo.co#%#//scriptlet('ubo-rc.js', 'pad-apps', 'body')
-sindonews.com#%#//scriptlet('ubo-rc.js', 't480', '.parallax-non')
+sindonews.com#%#//scriptlet('ubo-rc.js', 't480', '.content-paralax')
 today.line.me##.midAdModule-root:has-text(/iklan/i)
 viva.co.id###_popIn_recommend
 viva.co.id###_popIn_recommend_middle
@@ -3334,6 +3339,7 @@ investor.id##.sticky
 populis.id,tvonenews.com##.sticky-bottom
 ggwp.id##.sticky-footer:has([id^="div-gpt-ad"])
 genpi.co##.text-center:has([id*="div-gpt-ad-"])
+suaramuhammadiyah.id##.widget img[style="max-width: 100%; height: auto;"]
 bantenraya.com,infoberita.id,infontt.com,jatimtimes.com,jurnalkepri.com,legaleraindonesia.com,malangtimes.com,meduonline.co.id,metromanado.com,nusadaily.com,pilarjambi.com,prokepri.com,suara-ntt.com##.widget:has-text(/adv/i)
 swara-bengkulu.com##.widget:has-text(/space available/i)
 mariodevan.com,motorrio.com##.wpa:has-text(/adv/i)
@@ -3398,6 +3404,7 @@ dutaislam.com#$#.outer-wrapper { margin-top:60px!important; }
 gridoto.com#$#.read_content { padding-top: 0!important; }
 uzone.id#$#.section-top { margin: 100px auto 0 auto!important; }
 m.akurat.co#$#body { padding-top: 0!important; }
+wowbabel.com#$#script + .container { padding-top: 160px!important; }
 #@#.adsBox
 dropshipin.id#%#//scriptlet('ubo-acis.js', '$', 'ads')
 teksnologi.com#%#//scriptlet('ubo-acis.js', 'String.fromCharCode', 'decodeURIComponent')
@@ -3695,7 +3702,7 @@ gadgetidn.id,nomis.id,seputarkuliah.com#%#//scriptlet('ubo-aeld.js', '/dragstart
 alamatbank.com,amskyindonesia.com,asianami.com,destiku.net,fachmycasofa.com,headlinekaltim.co,ilmumemikatwanita.com,majalahponsel.org,oliswel.com,paketsoundsystem.com,panduanteknisi.com,rajasanews.com,sahamok.net,santridrajat.com#%#//scriptlet('ubo-aopr.js', 'disableSelection')
 kaltaraaktual.com#%#//scriptlet('ubo-aopr.js', 'document.ondragstart')
 kerajaannusantara.com,rajasanews.com#%#//scriptlet('ubo-aopr.js', 'document.onmousedown')
-akupakarblog.blogspot.com,amplaumplu.com,ardra.biz,balimediakomputer.com,balipost.com,blog-dnz.com,broexcel.com,chiarafarina.blogspot.com,dailysocial.id,dedyakas.com,dinaspajak.com,dosenonline.id,duniamu38.com,fendydjael.blogspot.com,gudangcoding.com,gudangcodingaplikasi.blogspot.com,gurupenyemangat.com,hazamusik.com,heru.my.id,icloudice.com,invesnesia.com,iwakbuncit.com,jagoanredesign.eu.org,listrik-praktis.com,mediametropolitan.id,menoreh.net,metodepraktis.com,miuitutorial.com,pintudunia.com,rajaonline.my.id,rajasanews.com,sahabat-akmi.blogspot.com,satugoogle.blogspot.com,scanharga.com,sheptyiecha.com,steffifauziah.com,techno-ct2.eu.org,upahminimum.com#%#//scriptlet('ubo-aopr.js', 'document.onselectstart')
+akupakarblog.blogspot.com,amplaumplu.com,ardra.biz,balimediakomputer.com,balipost.com,blog-dnz.com,broexcel.com,chiarafarina.blogspot.com,dailysocial.id,dedyakas.com,dinaspajak.com,dosenonline.id,duniamu38.com,fendydjael.blogspot.com,gudangcoding.com,gudangcodingaplikasi.blogspot.com,gurupenyemangat.com,hazamusik.com,heru.my.id,icloudice.com,invesnesia.com,iwakbuncit.com,jagoanredesign.eu.org,kabarmakkah.com,listrik-praktis.com,mediametropolitan.id,menoreh.net,metodepraktis.com,miuitutorial.com,pintudunia.com,rajaonline.my.id,rajasanews.com,sahabat-akmi.blogspot.com,satugoogle.blogspot.com,scanharga.com,sheptyiecha.com,steffifauziah.com,techno-ct2.eu.org,upahminimum.com#%#//scriptlet('ubo-aopr.js', 'document.onselectstart')
 detikbanten.com#%#//scriptlet('ubo-aopw.js', 'disableSelection')
 1001tutorial.com,2lodoe.net,alternatifmu.com,animenyus.com,apabedanya.com,bacamalang.com,barusinopsis.blogspot.com,besoksore.com,binarayaberkahutama.com,bloggermuntilan.com,bospajak.com,burungnya.com,cilegonnews.com,contohsurat.co,daftarhewan.com,egsean.com,ekor9.com,hargacampur.com,hitlava.com,jakartastudio.com,jayaherlambang.com,kagetweb.com,kanzalia.com,lesiaso.com,malangnews.id,mditack.co.id,mengapa.net,miuiarena.com,nandatrio.com,nusramedia.com,overlordfree.web.id,radiokucing.com,renovrainbow.com,selatsunda.com,siantarupdate.com,smppgrisatubdl.com,sorodot.com,suaraindonesianews.com,suarapapua.com,teraa.net,tipssehatcantik.com,tobasatu.comx,yunoya.id#%#//scriptlet('ubo-aopw.js', 'document.onselectstart')
 digiaudiostore.com##.anticopas
@@ -5265,7 +5272,6 @@ _topbandar_$image
 ||134.209.154.182^$third-party,stylesheet,image,script
 ||134.209.205.104^$third-party,stylesheet,image,script
 ||134.209.78.30^$third-party,stylesheet,image,script
-||134.209.99.197^$third-party,stylesheet,image,script
 ||135.148.1.139^$third-party,stylesheet,image,script
 ||138.197.139.68^$third-party,stylesheet,image,script
 ||138.68.80.19^$third-party,stylesheet,image,script
@@ -5348,7 +5354,6 @@ _topbandar_$image
 ||14.128.35.107^$third-party,stylesheet,image,script
 ||14.128.35.112^$third-party,stylesheet,image,script
 ||14.128.40.154^$third-party,stylesheet,image,script
-||142.11.241.8^$third-party,stylesheet,image,script
 ||142.44.131.249^$third-party,stylesheet,image,script
 ||142.44.144.187^$third-party,stylesheet,image,script
 ||142.93.141.94^$third-party,stylesheet,image,script
@@ -5501,7 +5506,6 @@ _topbandar_$image
 ||175.41.170.147^$third-party,stylesheet,image,script
 ||178.128.103.205^$third-party,stylesheet,image,script
 ||178.128.16.130^$third-party,stylesheet,image,script
-||178.128.19.6^$third-party,stylesheet,image,script
 ||178.128.202.118^$third-party,stylesheet,image,script
 ||178.128.210.189^$third-party,stylesheet,image,script
 ||178.128.218.201^$third-party,stylesheet,image,script
@@ -5687,7 +5691,6 @@ _topbandar_$image
 ||66.29.142.216^$third-party,stylesheet,image,script
 ||66.42.50.236^$third-party,stylesheet,image,script
 ||66.42.53.234^$third-party,stylesheet,image,script
-||66.42.61.3^$third-party,stylesheet,image,script
 ||66.70.192.248^$third-party,stylesheet,image,script
 ||67.205.139.89^$third-party,stylesheet,image,script
 ||67.215.252.130^$third-party,stylesheet,image,script
@@ -5726,13 +5729,11 @@ _topbandar_$image
 ||91.233.198.123^$third-party,stylesheet,image,script
 ||91.233.198.15^$third-party,stylesheet,image,script
 ||91.233.198.17^$third-party,stylesheet,image,script
-||91.233.198.1^$third-party,stylesheet,image,script
 ||91.233.198.25^$third-party,stylesheet,image,script
 ||91.233.198.28^$third-party,stylesheet,image,script
 ||91.233.198.29^$third-party,stylesheet,image,script
 ||91.233.198.32^$third-party,stylesheet,image,script
 ||91.233.198.33^$third-party,stylesheet,image,script
-||91.233.198.5^$third-party,stylesheet,image,script
 ||91.233.198.77^$third-party,stylesheet,image,script
 ||91.233.198.78^$third-party,stylesheet,image,script
 ||91.233.198.98^$third-party,stylesheet,image,script
