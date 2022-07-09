@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.708.9
+! OriginalVersion: 2022.709.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -303,6 +303,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||image.fmkorea.com/images/ad/
 ||cdn.funshop.co.kr/BannerImage/
 ||amazonaws.com/adpick.co.kr/apis/adpick_cps.js
 ||static.uni1id.com/resource/adver.config.json|
@@ -718,7 +719,7 @@ news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.
 ! ##div[class$="_ad"]
 kyobobook.co.kr,news.naver.com,news.daum.net,instiz.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 ! ##div[class^="ad_"]
-kyobobook.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.joins.com,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,ytn.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
+news.sbs.co.kr,kyobobook.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.joins.com,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,ytn.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 ! ##div[class^="ad-"]
 dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 ! ##.banner
@@ -750,7 +751,8 @@ m.humoruniv.com##table[class^="ad_"]
 ! ##div[class*="_ad"]
 m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 !
-m.fmkorea.com##.adpost
+fmkorea.com###sidebar div[style^="height:"]:not(.li)
+fmkorea.com##.adpost
 te31.com##table.adsbygoogle ~ table #honey > div[style^="background-color:"]:not([class])
 te31.com###contentmemo ~ .adsbygoogle > div[style^="background-color:"]
 te31.com###menu_right.adsbygoogle
@@ -1008,7 +1010,7 @@ news1.kr##div[data-acidx][data-kind].sideBlock
 m.nocutnews.co.kr##div[class^="ct"] > .section > .view_box > #divViewBox > .viewbox > div[style]
 m.nocutnews.co.kr###pnlContainer > div[class^="ct"] > .con_b > div[style]
 m.nocutnews.co.kr###pnlContainer > div[class^="ct"] > .section > div[style]:not(class)
-nocutnews.co.kr##div[id^="dablewidget_"]
+news.sbs.co.kr,nocutnews.co.kr##div[id^="dablewidget_"]
 m.nongmin.com##.banner_zone
 nongmin.com##div[class$="-banner-wrap"]
 newstof.com##div[id^="popup_"]
@@ -1466,6 +1468,7 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+fmkorea.com#%#//scriptlet("set-constant", "link_url", "")
 search.11st.co.kr#%#//scriptlet("set-constant", "searchDataFactory.bottomFocusPrdList", "undefined")
 search.11st.co.kr#%#//scriptlet("set-constant", "searchDataFactory.focusPrdList", "undefined")
 search.11st.co.kr#%#//scriptlet("set-constant", "searchDataFactory.DABanner", "undefined")
@@ -1525,6 +1528,7 @@ te31.com,tistory.com#%#//scriptlet("abort-on-property-read", "adBlockDetected")
 ! ai_front anti-adblock
 jootc.com,ehpub.co.kr#%#//scriptlet("abort-current-inline-script", "ai_run_scripts")
 ! Kakao TV
+||videoads.kakao.com/adserver/api/v2/vmap$redirect=noopvmap-1.0,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 tv.kakao.com,play-tv.kakao.com,kakaotv.daum.net#%#//scriptlet("prevent-fetch", "^https:\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]{1,2}\/vmap$")
 ||kakaotv.daum.net/embed/player/image/ads.png$redirect=32x32-transparent.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#ins.kakao_ad_area
