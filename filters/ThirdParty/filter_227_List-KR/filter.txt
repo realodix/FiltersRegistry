@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.709.6
+! OriginalVersion: 2022.710.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -303,6 +303,9 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||3p.ampproject.net/*/vendor/dable.js
+||cdn.ampproject.org/v0/amp-ad-*.js
+||cdn.ampproject.org/rtv/*/v0/amp-ad-*.js
 ||ssl.pstatic.net/static/kin/*/promotion/
 ||image.fmkorea.com/images/ad/
 ||cdn.funshop.co.kr/BannerImage/
@@ -750,10 +753,11 @@ moyoplan.com##div[class^="Banner"]
 ! ##table[class^="ad_"]
 m.humoruniv.com##table[class^="ad_"]
 ! ##div[class*="_ad"]
-buy.11st.co.kr,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
+m.munhwa.com,buy.11st.co.kr,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 ! ##div[id*="Banner"]
 kin.naver.com##div[id*="Banner"]
 !
+m.munhwa.com###news_content > div[style]
 fmkorea.com###sidebar div[style^="height:"]:not(.li)
 fmkorea.com##.adpost
 te31.com##table.adsbygoogle ~ table #honey > div[style^="background-color:"]:not([class])
@@ -795,7 +799,7 @@ m.humoruniv.com##body > div[style^="margin:"]:not([class]):not([id]) > div[style
 thelec.kr##div[onclick^="wcs.event("]
 m.star.mt.co.kr###content > div[style^="background:"][class]
 m.humoruniv.com###comment > ul > div[id][style]
-news.nate.com##div[class*="ad"]
+m.nocutnews.co.kr,news.nate.com##div[class*="ad"]
 news.nate.com###newsSidebar > div[class$="AD"]
 news.nate.com###newsSidebar > div[id$="Banner"]
 m.nate.com###mainContainer #content  .ct2 > section ~ *
@@ -836,7 +840,7 @@ browse.auction.co.kr###region--content_body .component.component--chance_shoppin
 browse.auction.co.kr###region--content_body .component--sponsor_link
 kormedi.com##div[id^="better-ads-"]
 kormedi.com##iframe[src*="/wp-content/uploads/ads/"]
-xportsnews.com##div[class*="_ad_"]
+salgoonews.com,xportsnews.com##div[class*="_ad_"]
 shoppinghow.kakao.com##div[data-gg="{s1:shopping}"] h2 + div[class^="#banner"]
 m.naver.com##div[data-panel-code="SHOP_VOGUE"] ._MM_TREND_PICK
 compuzone.co.kr###gamezone .bnrList_area > ul.rollbnr_list

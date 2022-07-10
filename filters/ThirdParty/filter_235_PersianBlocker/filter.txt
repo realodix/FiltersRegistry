@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-07-09
+! Last modified: 2022-07-10
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: GPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 !
@@ -679,6 +679,8 @@ estekhtam.com#@#.ads-bottom
 ||api.enama.ir/WebFiles/_AdsBanner/
 ! TODO: Investigate more filters
 ! >> F <<
+! https://github.com/MasterKia/PersianBlocker/issues/4
+! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1179570047
 ||fb-gw.bef.rest^$all
 ||api.footballi.net/api/*/user/init^$all
 ||api.footballi.net/api/*/news/visit^$all
@@ -774,6 +776,7 @@ gooyait.com#@#.page-ads
 gooyait.com#@#.banner-ads
 gsm.ir##[href^="/ads/"]
 gsm.ir##.sidebar_tabliq
+! https://github.com/MasterKia/PersianBlocker/issues/8
 ||gamefa.com/wp-content/uploads/*/*.gif
 ||gamefa.com/wp-content/uploads/*/ad
 ||gamefa.com/wp-content/uploads/*/gamefabanner
@@ -782,6 +785,8 @@ gamefa.com##.baners
 gamefa.com###image-advertise
 gamefa.com##.fix-ads
 gamefa.com##.single-advertise:nth-of-type(3)
+gamefa.com###fix-advertise
+! TODO: Remove ".fix-ads"
 ||ghatreh.com/ads/
 ||ghatreh.com/skins/default/js/analytics.js
 ||ghatreh.com/skins/default/images/ads
@@ -918,13 +923,16 @@ khabarfarsi.com###ads_f
 khabarfarsi.com###banners_120_top_1
 khabarfarsi.com###block-block-120
 ||karpishe.com/api/collect/job-click/
+! https://github.com/MasterKia/PersianBlocker/issues/4
 ||kojaro.com/kojaro/ui/js/banner.js
 kojaro.com##.banner-wrapper
 kojaro.com##.advertisement-in-topic
 kojaro.com##.bannercontainer
-kojaro.com##.mobileBanner
 kojaro.com##.homepage-content
+!#if env_mobile
+kojaro.com##.mobileBanner
 kojaro.com##.article-mobile-inContent
+!#endif
 @@||images.kojaro.com/assets/ad/advertise-$image,~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/33437
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101735
@@ -1148,6 +1156,7 @@ parsnews.com##.adv_img
 parsipet.ir##.ad_global_header
 parsipet.ir##.body_wrapper > div:nth-of-type(4)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83232
+! https://github.com/MasterKia/PersianBlocker/issues/4
 ! ||par30games.net/wp-content/uploads/*.gif
 par30games.net##[href^="https://playpod.ir/"]
 par30games.net#@#.sideads
@@ -1299,11 +1308,17 @@ simcart.com##.banner9
 ! shenoto.com##.ads-image
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78626
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81762
+! https://github.com/MasterKia/PersianBlocker/issues/7
 ||shahrsakhtafzar.com/fa/images/banners/
+! shahrsakhtafzar.com##[href^="/fa/component/flexbanners/click/"]
 shahrsakhtafzar.com##.ads2col
+shahrsakhtafzar.com##.flexbanneritem
+shahrsakhtafzar.com##.pishnahad.custom > p
+shahrsakhtafzar.com###g-top
+!#if env_mobile
 shahrsakhtafzar.com##.ads2colmobile
-shahrsakhtafzar.com##.advert
-shahrsakhtafzar.com##[href^="/fa/component/flexbanners/click/"]
+shahrsakhtafzar.com##.mobile-fix-bottom
+!#endif
 sakhtafzar.com#@#.ads-title
 sakhtafzar.com#@#.ads-content
 sakhtafzar.com#@#.ads_box
@@ -1602,6 +1617,7 @@ zohur12.ir##.sideads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78626
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79988
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110569
+! https://github.com/MasterKia/PersianBlocker/issues/4
 zoomg.ir#%#//scriptlet('ubo-aopr.js', 'banner')
 ||zoomg.ir/common/visitcount/
 ||zoomg.ir/cdn-cgi/apps/head/*$script
@@ -1617,6 +1633,7 @@ zoomg.ir###mobileBannerAfterTags
 @@||cdn.zoomg.ir/banners/demo/advertise-$image,~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78626
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79988
+! https://github.com/MasterKia/PersianBlocker/issues/4
 zoomit.ir#%#//scriptlet('ubo-aopr.js', 'banner')
 ||zoomit.ir/common/visitcount/
 ||analytics.zoomit.ir^$all
