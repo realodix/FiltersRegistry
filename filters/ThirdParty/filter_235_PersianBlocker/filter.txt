@@ -129,6 +129,8 @@
 ||netbina.com^$all
 ! >> O <<
 ! >> P <<
+||phonroid.com^$all
+! ^ Example: par30games.net
 ||popina.ir^$all
 ||popunder.ir^$all
 ! TODO: Remove it, Used by marzfun.com
@@ -1156,13 +1158,14 @@ parsipet.ir##.ad_global_header
 parsipet.ir##.body_wrapper > div:nth-of-type(4)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83232
 ! https://github.com/MasterKia/PersianBlocker/issues/4
-! ||par30games.net/wp-content/uploads/*.gif
+! https://github.com/MasterKia/PersianBlocker/issues/9
 par30games.net##[href^="https://playpod.ir/"]
-par30games.net#@#.sideads
+par30games.net##.fixedadv:upward(3)
 par30games.net##.fixedbanner
 par30games.net##.sidebar-box-shop
-par30games.net##.adbox
+!#if env_mobile
 par30games.net##.mobilebanner
+!#endif
 @@||par30games.net/wp-content/uploads/*/advertise-plan$image,~third-party
 ||paperhub.ir/images/*.gif
 p30world.com##.post-ads
