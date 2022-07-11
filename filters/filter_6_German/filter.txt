@@ -1034,6 +1034,7 @@ urbia.de,essen-und-trinken.de#@#.playerAd
 !
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123855
+||computerbase.de^$replace=/function showMessage\(\)//,~stylesheet,~script,~xmlhttprequest
 computerbase.de#@#.adbox
 computerbase.de#@#.adbox1
 @@||computerbase.de/img/ads/
@@ -1688,6 +1689,8 @@ teleboy.ch#@#.adWrapper
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/123891
+codecheck.info#?#div[style] > span:contains(Anzeige):upward(1)
 ! sueddeutsche.de - left-over in category view
 sueddeutsche.de#?#div[data-teaserlist-element]:has(> .flexible-teaser-wrapper--ad)
 ! stern.de - ad at end of article
