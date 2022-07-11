@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.711.1
+! OriginalVersion: 2022.711.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -303,6 +303,10 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||cdn.jayupress.com/adManager/
+||cdn.jayupress.com/bannerpop/uploads/
+||unipress.co.kr/adManager/css/adManager.css
+||unipress.co.kr/bannerpop/uploads/
 ||3p.ampproject.net/*/vendor/dable.js
 ||cdn.ampproject.org/v0/amp-ad-*.js
 ||cdn.ampproject.org/rtv/*/v0/amp-ad-*.js
@@ -723,7 +727,7 @@ news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.
 ! ##div[class$="_ad"]
 kyobobook.co.kr,news.naver.com,news.daum.net,instiz.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 ! ##div[class^="ad_"]
-news.sbs.co.kr,kyobobook.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.joins.com,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,ytn.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
+nocutnews.co.kr,news.sbs.co.kr,kyobobook.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.joins.com,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,ytn.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 ! ##div[class^="ad-"]
 dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 ! ##.banner
@@ -757,6 +761,7 @@ m.munhwa.com,buy.11st.co.kr,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 ! ##div[id*="Banner"]
 kin.naver.com##div[id*="Banner"]
 !
+m.nocutnews.co.kr###pnlContainer .con_b >.ct_box:not([style])
 m.munhwa.com###news_content > div[style]
 fmkorea.com###sidebar div[style^="height:"]:not(.li)
 fmkorea.com##.adpost
@@ -1338,6 +1343,7 @@ x86.co.kr#@#.download_ad
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+m.nocutnews.co.kr#$##pnlContainer .con_b > .reply_b { margin: 0px auto !important; }
 m.humoruniv.com#$##read_menu_btn_div > div[style][class] { margin-top: 0px !important; }
 kin.naver.com#$#.wrap_home .section_spot { width: 100% !important; }
 kin.naver.com#$#.wrap_home .section_spot .best_qna_wrap { width: 100% !important; }
