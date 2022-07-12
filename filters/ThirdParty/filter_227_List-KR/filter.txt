@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.712.0
+! OriginalVersion: 2022.712.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -303,6 +303,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+/^https:\/\/ohli24\.net\/img\/[0-9]{4}\/[A-z]{1,}\.[a-z]{3}$/
 ||dpg.danawa.com/news/powerLink|
 ||cdn.jayupress.com/adManager/
 ||cdn.jayupress.com/bannerpop/uploads/
@@ -631,7 +632,6 @@
 ||danawa.com/NBP/powerLink.js.php
 ||image.ruliweb.com/view/view.js?zoneid=
 ||noonoo-images.studiouniversal.net/banner/
-||ohli24.net/img/*/*.gif
 ||vogue.co.kr/wp-content/plugins/wppas/
 ||sslimg.appstory.co.kr/@files/snc/eventbanner/
 ||shop-redapi.daum.net/red-apigate/daumtop/
@@ -762,6 +762,8 @@ m.munhwa.com,buy.11st.co.kr,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 ! ##div[id*="Banner"]
 kin.naver.com##div[id*="Banner"]
 !
+ohli24.net##nav ~ .at-title
+aagag.com##.la
 m.nocutnews.co.kr###pnlContainer .con_b >.ct_box:not([style])
 m.munhwa.com###news_content > div[style]
 fmkorea.com###sidebar div[style^="height:"]:not(.li)
@@ -1164,7 +1166,6 @@ ggoorr.net##.content > div.bd > div > center
 m.comic.naver.com##[id^="flex_ad_"]
 comic.naver.com##div[id^="ppl_"][id$="_section"]
 noonoo.tv##.partner-banner-wrap
-ohli24.net##img[src^="/img/"][src$=".gif"]
 m.newspic.kr##div[style^="text-align"][style*="z-index:999999999999;"]
 newspic.kr###dionAdArea
 1412.rest##div[id^="plusad_"]
