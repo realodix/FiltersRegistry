@@ -2599,7 +2599,7 @@ hi-tech.mail.ru##.sticky_footer div[class^="block block_padding rb-block-"]
 ##.td_block_social_counter
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124102
-e1.ru#$#button[data-test="report-news-button"] + div[class] { visibility: hidden !important; }
+e1.ru##button[data-test="report-news-button"] + div[class]
 ! pianoweb.fr
 pianoweb.fr##a[class="fleche-basdepage"] ~ a[class^="logo-"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123184
@@ -17008,7 +17008,7 @@ bilyoner.com#%#//scriptlet('set-local-storage-item', 'desktop/acceptAnalyticalCo
 bilyoner.com#%#//scriptlet('set-local-storage-item', 'desktop/isCookiePrefBannerShowed', 'true')
 robinhood.com#%#//scriptlet('set-cookie', 'gdpr_consent', '1')
 publikationen.dguv.de#%#//scriptlet('set-cookie', 'allowCookie', '1')
-schleswig-holstein.de,verfassungsschutz.de,aufstiegs-bafoeg.de,bne-portal.de,bmbf.de#%#document.cookie="gsbbanner=closed; path=/;";
+ble.de,schleswig-holstein.de,verfassungsschutz.de,aufstiegs-bafoeg.de,bne-portal.de,bmbf.de#%#document.cookie="gsbbanner=closed; path=/;";
 mubi.com#%#//scriptlet('set-cookie', 'mubi-cookie-consent', 'true')
 gut-leben-in-deutschland.de#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("gut-leben-cookie-banner-hidden", "true") } } catch (ex) {} })();
 starfieldtech.com#%#//scriptlet('set-cookie', 'pwinteraction', '1')
@@ -17710,6 +17710,9 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !+ PLATFORM(windows, mac, android)
 @@||geolocation.onetrust.com/cookieconsentpub/*/geo/location
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/123986
+ble.de#@##cookiebanner
+ble.de#@#.cookiebanner:not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123888
 @@||ap*.usercentrics.eu^$domain=wohnglueck.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124034
