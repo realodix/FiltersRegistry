@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-07-10
+! Last modified: 2022-07-13
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: GPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 !
@@ -536,6 +536,8 @@ download1music.ir##[id^="pos-article-display-"]
 download1music.ir##a:has(a>img[class^="aligncenter size-full "])
 ||digiro.ir/wp-content/plugins/better-ads
 ||digiro.ir/wp-content/uploads/*/*.gif
+digiro.ir##.texttab
+digiro.ir##.uizv
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42827
 ||dlfox.com/wp-content/uploads/*/*.gif
 ||dlfox.com/wp-admin/admin-ajax.php?action=adwised
@@ -1432,9 +1434,18 @@ tigatravel.com##.popup_block
 timecity.ir##.banner
 timecity.ir##.sidebar-banners
 timecity.ir##.inner-wrapper-sticky > .mb-3
+! https://github.com/MasterKia/PersianBlocker/pull/12
+tabnak.ir#%#//scriptlet('ubo-acis.js', 'document.write', 'renderAds')
 ||tabnak.ir/files/adv
-tabnak.ir##.footer_adv
+||tabnak.ir/fa/ads/redirect^$all
+tabnak.ir##[href*="/ads/redirect/"]
+tabnak.ir##.adv_logo
+tabnak.ir##.film_box:has-text(مدرسه آنلاین)
+tabnak.ir##.stitle_box:has(.top_title:has-text(وب گردی))
 tabnak.ir##.home_adv_height
+!#if env_mobile
+tabnak.ir##.adv_header_fixed
+!#endif
 ! ||checks.telewebion.com
 ||adengine.telewebion.com
 ||rokhdad.telewebion.com

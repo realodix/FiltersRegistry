@@ -1,8 +1,8 @@
 !
-! Checksum: fzByhgQFyDWsm0rmHeDcHQ
-! OriginalVersion: 202207130844
+! Checksum: Wl9ZHd3uzDpx0Zl0mVCSAw
+! OriginalVersion: 202207131244
 ! Title: RU AdList: Counters
-! Last modified: 13 Jul 2022 08:44 UTC
+! Last modified: 13 Jul 2022 12:44 UTC
 ! Expires: 2 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1089,6 +1089,7 @@ zannn.top#@?#this-is-a-malicious-site
 @@/^https?://yandex\.ru\/turbo[^\s]+(dni24\.com|fishki\.net|news\.ru|publy\.ru|tsargrad\.tv)/$csp=script-src
 @@://yandex.*/news/$generichide
 @@://yandex.*/news|$generichide
+disk.yandex.*##.Base-Onboarding
 docs.yandex.*##a[href^="https://360.yandex."][href$="/?from=documents-header-360"]
 mail.yandex.*#$?#html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href^="https://yandex."] { top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important }
 newssearch.yandex.*##.news-advert__column
@@ -1117,7 +1118,7 @@ yandex.*##div[data-bem*="climate-calendar-"] ~ .content > .content__section:firs
 yandex.*##section ~ .news-top-rubric-heading > h1:only-child:if-not(> a)
 yandex.*#?#.feed__row[id^="zen-row-"] .feed__item-wrap:-abp-has(> .feed__item [class$="header-subtitle"]:-abp-contains(реклама))
 yandex.*#?#.feed__row[id^="zen-row-"] .feed__item-wrap:-abp-has(> .feed__item [class^="zen-ui-channel-info"][class$="subtitle-text"]:-abp-contains(промо))
-yandex.*#?#.serp-list > .serp-item:-abp-has(> .bno ~ style ~ style)
+yandex.*#?#.serp-list > .serp-item:-abp-has(> .bno .serp-adv__counter)
 yandex.*#?#.serp-list > .serp-item:-abp-has(> div > div > [data-event-required])
 yandex.*#?#div[class*="-header"] ~ div[id*="page"] div[class*="__col"]:-abp-has(> div[class*="-feed__"][class*="_type_"] > .root123)
 yandex.*#?#div[class*="-header"] ~ div[id*="page"] div[class*="__col"]:-abp-has(> div[class*="-feed__"][class*="_type_"] > div[class*="loader"])
@@ -1318,6 +1319,7 @@ utm_$document,removeparam=ig_rid,domain=instagram.com
 ||imdb.com/*pf_rd_$document,removeparam=|pf_rd_,domain=imdb.com
 ||imdb.com/*ref_=$document,removeparam=|ref,domain=imdb.com
 ||mail.ru^*exp_id=$document,removeparam=|,domain=mail.ru
+||my.mail.ru/apps$document,removeparam=ref,domain=my.mail.ru
 ||sportmail.ru^*exp_id=$document,xmlhttprequest,removeparam=|,domain=sportmail.ru
 ||www.google.*/search?$removeparam=aqs
 ||www.google.*/search?$removeparam=authuser
