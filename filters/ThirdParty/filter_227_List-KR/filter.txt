@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.713.3
+! OriginalVersion: 2022.713.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -303,6 +303,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||m.11st.co.kr/MW/api/app/elevenst/ad/
 ||m.11st.co.kr/MW/html/nc/getGNBTextListAjax.js|
 ||image-comic.pstatic.net/mobilewebimg/*/*/contents_banner_MOBILE_$image
 ||image-comic.pstatic.net/webtoon/*/*/contents_banner_$image
@@ -765,6 +766,8 @@ m.munhwa.com,buy.11st.co.kr,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 ! ##div[id*="Banner"]
 kin.naver.com##div[id*="Banner"]
 !
+search.11st.co.kr##section#cts.main .l-grid._searchHotProduct
+search.11st.co.kr##section#cts.main div[class="l-grid l-grid--nobg"]
 search.11st.co.kr##section.search_section[data-log-actionid-area="plus"]
 11st.co.kr###rcmdPrd
 11st.co.kr##.hotClick_wrap
@@ -1501,6 +1504,8 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+search.11st.co.kr#%#//scriptlet("remove-attr", "src", "section#cts.main .l-grid._searchHotProduct img", "asap stay")
+search.11st.co.kr#%#//scriptlet("remove-attr", "src", "section#cts.main div[class='l-grid l-grid--nobg'] img", "asap stay")
 search.11st.co.kr#%#//scriptlet("remove-attr", "src", "section.search_section[data-log-actionid-area='plus'] img", "asap stay")
 11st.co.kr#%#//scriptlet("remove-attr", "src", "#rcmdPrd img", "asap stay")
 11st.co.kr#%#//scriptlet("remove-attr", "src", ".hotClick_wrap img", "asap stay")

@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 22.7.156
+! OriginalVersion: 22.7.168
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 13 Jul 2022 11:04 UTC
+! Last modified: 13 Jul 2022 19:01 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -634,6 +634,7 @@ _promosi.
 -339x450.
 -350x464.
 -355x250px.
+-360x90.$image
 -361x65-
 -369x90.
 -370-x-100.
@@ -1454,6 +1455,7 @@ _GIF1200x120-
 ##.ads__top
 ##.ads__top-big
 ##.ads__top-big250
+##.ads_area_go
 ##.ads_below_photo
 ##.ads_besar
 ##.ads_bottom_insGP
@@ -1461,6 +1463,7 @@ _GIF1200x120-
 ##.ads_box_2_2
 ##.ads_box_3
 ##.ads_box_5
+##.ads_gofilm
 ##.ads_image
 ##.ads_kecil
 ##.ads_r1
@@ -1591,6 +1594,7 @@ _GIF1200x120-
 ##.dt-left-ads
 ##.dt-right-ads
 ##.dt-top-ads
+##.dual_ads
 ##.ezoic-adpicker-ad
 ##.ezoic-ads-adaptive
 ##.fixed-ads
@@ -1996,18 +2000,6 @@ _GIF1200x120-
 ##amp-img[width="364"][height="60"]
 ##amp-img[width="533"][height="60"]
 ##amp-img[width="640"][height="60"]
-##img[data-original-height="720"][data-original-width="180"]
-##img[data-original-height="90"][data-original-width="728"]
-##img[data-original-width="720"][data-original-height="120"]
-##img[data-srcset*="-1024x215."]
-##img[data-srcset*="-1536x322."]
-##img[data-srcset*="-2048x429."]
-##img[data-srcset*="-768x161."]
-##img[height="70"][width="1100"]
-##img[srcset*="-1024x215."]
-##img[srcset*="-1536x322."]
-##img[srcset*="-2048x429."]
-##img[srcset*="-768x161."]
 ##img[style="height: 70px; width: 1080px;"]
 ##img[style="height: 70px; width: 540px;"]
 ##img[style="height: 70px; width: 728px;"]
@@ -2033,6 +2025,7 @@ _GIF1200x120-
 ##img[width="1080px"][height="95px"]
 ##img[width="1100"][height="140"]
 ##img[width="1100"][height="210"]
+##img[width="1100"][height="70"]
 ##img[width="1100px"][height="100px"]
 ##img[width="1110"][height="180"]
 ##img[width="1110"][height="208"]
@@ -2050,6 +2043,7 @@ _GIF1200x120-
 ##img[width="1280"][height="328"]
 ##img[width="1280"][height="330"]
 ##img[width="1280"][height="402"]
+##img[width="130"][height="385"]
 ##img[width="1300"][height="393"]
 ##img[width="1482"][height="120"]
 ##img[width="150"][height="560"]
@@ -2057,6 +2051,7 @@ _GIF1200x120-
 ##img[width="160"][height="600"]
 ##img[width="1600"][height="267"]
 ##img[width="1654"][height="355"]
+##img[width="180"][height="300"]
 ##img[width="295"][height="410"]
 ##img[width="300"][height="600"]
 ##img[width="370px"][height="60"]
@@ -2083,6 +2078,7 @@ _GIF1200x120-
 ##img[width="530"][height="90"]
 ##img[width="532px"][height="90px"]
 ##img[width="533"][height="909"]
+##img[width="535"][height="100"]
 ##img[width="535"][height="70"]
 ##img[width="537"][height="80"]
 ##img[width="540"][height="80px"]
@@ -2120,21 +2116,25 @@ _GIF1200x120-
 ##img[width="750"][height="158"]
 ##img[width="765"][height="96"]
 ##img[width="770"][height="117"]
+##img[width="782"][height="132"]
 ##img[width="790"][height="100"]
 ##img[width="799"][height="90"]
 ##img[width="800"][height="200"]
 ##img[width="800"][height="2548"]
 ##img[width="800"][height="90"]
 ##img[width="800"][height="99"]
+##img[width="800px"][height="90px"]
 ##img[width="818"][height="1280"]
 ##img[width="820"][height="80"]
 ##img[width="820"][height="90"]
+##img[width="848"][height="148"]
 ##img[width="900"][height="150"]
 ##img[width="900"][height="179"]
 ##img[width="900"][height="232"]
 ##img[width="900"][height="280"]
 ##img[width="92"][height="958"]
 ##img[width="920"][height="126"]
+##img[width="960"][height="150"]
 ##img[width="970"][height="90"]
 ##img[width="980"][height="120"]
 ##img[width="980"][height="150"]
@@ -3848,12 +3848,13 @@ _usafelink.$third-party,script
 /VoreCorporation/Customer-Host/*$third-party,script
 /xmithzyl/safelink/*$third-party,script
 $third-party,script,xmlhttprequest,denyallow=disqus.com|disquscdn.com|fastlylb.net|googleapis.com,domain=nanimein.xyz|nonton08.com
-.gif$image,domain=104.161.33.116|104.161.33.126|139.99.33.193|144.126.141.214|144.126.148.112|144.91.105.32|144.91.91.20|148.163.72.66|148.163.72.88|148.163.72.92|149.102.137.68|149.3.170.35|149.56.24.226|161.97.125.184|161.97.86.165|173.212.200.71|173.212.216.207|173.212.244.21|176.119.30.88|185.194.217.81|185.218.126.74|185.224.83.54|185.53.88.162|188.166.39.172|193.164.131.42|193.178.172.113|194.135.33.63|194.163.139.52|194.163.150.84|194.29.53.46|195.242.110.99|198.96.92.123|199.231.164.17|199.231.164.29|207.244.250.114|213.136.91.132|216.250.252.24|23.29.126.0|23.92.69.100|23.92.79.80|37.49.229.132|38.242.129.194|45.148.122.192|51.161.56.238|51.79.180.107|62.141.43.154|62.171.145.31|62.182.82.224|62.182.85.159|65.108.132.145|80.209.252.67|91.209.70.70|anoboy.online|bioskopkeren.monster|bioskopvirtual.com|conan.id|dutafilm.photography|idlix.link|idlix.xn--6frz82g|indofilm.wtf|juraganfilm.asia|kotakputih.casa|layardrama21.guru|layarfilm21.website|layarlebar24.digital|lengket.com|lk21.art|moflix.my.id|nobar24.bond|oploverz.asia|oploverz.cyou|oploverz.web.id|otakudesu.watch
+.gif$image,domain=104.161.21.25|104.161.33.111|104.161.33.116|104.161.33.126|104.219.250.236|139.99.33.193|144.126.141.214|144.126.148.112|144.91.105.32|144.91.91.20|148.163.72.66|148.163.72.88|148.163.72.92|149.102.137.68|149.3.170.35|149.56.24.226|161.97.125.184|161.97.144.237|161.97.149.35|161.97.86.165|167.99.71.200|173.212.200.71|173.212.216.207|173.212.244.21|176.119.30.88|185.194.217.81|185.218.126.74|185.224.83.54|185.53.88.162|188.166.39.172|193.164.131.42|193.178.172.113|194.135.33.63|194.163.139.52|194.163.150.84|194.29.53.46|195.242.110.99|198.96.92.123|199.231.164.17|199.231.164.29|207.244.250.114|213.136.91.132|216.250.252.24|23.29.126.0|23.92.69.100|23.92.79.80|37.49.229.132|38.242.129.194|38.242.140.66|38.242.237.91|45.148.122.192|51.161.56.238|51.79.180.107|62.141.43.154|62.171.145.31|62.182.82.224|62.182.85.159|65.108.132.145|80.209.252.67|91.209.70.70|anoboy.online|bioskopkeren.monster|bioskopvirtual.com|conan.id|dutafilm.photography|idlix.link|idlix.xn--6frz82g|indofilm.wtf|juraganfilm.asia|kotakputih.casa|layardrama21.guru|layarfilm21.website|layarlebar24.digital|lengket.com|lk21.art|moflix.my.id|nobar24.bond|oploverz.asia|oploverz.cyou|oploverz.web.id|otakudesu.watch
 /banner-$image,domain=maxnime.com
 ||imgbox.com/*.gif$image,domain=195.2.81.61
 ||jwplayer21.com/images/*.gif$image
 ||161.97.125.184/wp-content/uploads/$~image,redirect=noopmp4-1s,media
 ||213.136.91.132/wp-content/uploads/$~image,redirect=noopmp4-1s,media
+||38.242.215.228/wp-content/uploads/$~image,redirect=noopmp4-1s,media
 ||80.209.252.146/images/*.mp4$media
 ||api.nontongo.win/promomenubola.xml$xmlhttprequest
 ||bebasdownloadfilm.com/iframe/content.php$subdocument
@@ -3887,7 +3888,13 @@ animekompi.web.id,mmsubs.com##.addads
 95.216.153.180##.advertising-box
 139.99.120.222##.ban_empat
 193.164.131.42##.banner
+nontonfilms24.com##.banner-float
 139.99.33.192##.banner-float-bottom
+nontonfilms24.com##.banner-left
+nontonfilms24.com##.banner-player
+nontonfilms24.com##.banner-right
+nontonfilms24.com##.banner-top
+nontonfilms24.com##.banner_cen
 93.104.211.22#$?#.bannerplayer { remove: true; }
 159.65.11.63,indoxx1film.me##.bannerx
 188.166.39.172##.float-bottom-banner
@@ -3910,7 +3917,7 @@ anoboy.online##[id$="_bnr"]
 185.217.95.238##a[href*="_medium=banners"] video
 176.119.30.88##a[href^="http://bit.ly/"] > img
 otakudere.net##a[rel^="nofollow"] > img
-104.161.21.25,104.161.33.116,104.161.33.126,109.234.34.246,112mov.xyz,139.99.33.192,139.99.33.193,144.126.141.214,144.126.148.112,144.91.91.20,148.163.67.238,148.163.72.66,148.163.72.79,148.163.72.92,149.3.170.35,149.56.198.206,149.56.24.226,154.53.35.209,154.53.44.57,161.97.125.184,161.97.86.165,173.212.200.71,173.212.216.207,176.119.30.88,185.224.83.54,185.231.223.76,185.53.88.162,188.166.39.172,193.178.172.113,194.135.33.63,194.163.139.52,194.163.150.84,194.29.53.46,198.96.92.123,199.231.164.17,199.231.164.29,207.244.250.114,213.136.91.132,23.29.126.0,37.49.229.132,38.242.129.194,38.242.237.91,45.148.122.192,51.161.56.238,51.79.180.107,54.39.39.151,62.141.43.154,62.171.145.31,62.182.82.224,62.182.85.159,65.108.132.145,75.119.147.15,80.209.252.67,91.209.70.70,beenime.com,bioskop-nonton.art,bioskop47.net,bioskopvirtual.com,drachindo.us,ganooll.xyz,idlix.link,idlix.xn--6frz82g,indoxx1.space,inidramaku.us,kebioskop21.xyz,koenime.com,layardrama21.guru,layarfilm21.website,layarlebar24.digital,lengket.com,memekviral.site,nobar24.bond,oploverz.asia,otakudere.net,otakudesu.watch,topfilm21.com##a[target*="blank"] > img
+104.161.21.25,104.161.33.111,104.161.33.116,104.161.33.126,104.219.250.236,109.234.34.246,112mov.xyz,139.99.33.192,139.99.33.193,144.126.141.214,144.126.148.112,144.91.91.20,148.163.67.238,148.163.72.66,148.163.72.79,148.163.72.92,149.3.170.35,149.56.198.206,149.56.24.226,154.53.35.209,154.53.44.57,161.97.125.184,161.97.86.165,167.99.71.200,173.212.200.71,173.212.216.207,176.119.30.88,185.224.83.54,185.231.223.76,185.53.88.162,188.166.39.172,193.178.172.113,194.135.33.63,194.163.139.52,194.163.150.84,194.29.53.46,198.96.92.123,199.231.164.17,199.231.164.29,207.244.250.114,213.136.91.132,23.29.126.0,37.49.229.132,38.242.129.194,38.242.140.66,38.242.237.91,45.148.122.192,51.161.56.238,51.79.180.107,54.39.39.151,62.141.43.154,62.171.145.31,62.182.82.224,62.182.85.159,65.108.132.145,75.119.147.15,80.209.252.67,91.209.70.70,beenime.com,bioskop-nonton.art,bioskop47.net,bioskopvirtual.com,drachindo.us,ganooll.xyz,idlix.link,idlix.xn--6frz82g,indoxx1.space,inidramaku.us,kebioskop21.xyz,koenime.com,layardrama21.guru,layarfilm21.website,layarlebar24.digital,lengket.com,memekviral.site,nobar24.bond,oploverz.asia,otakudere.net,otakudesu.watch,topfilm21.com##a[target*="blank"] > img
 185.224.83.128##a[target*="blank"] > video
 139.99.120.222##a[target="_blank"][rel*="nofollow"] > video
 62.182.83.93##a[target="_blank"][rel^="nofollow"] > amp-img
@@ -5866,13 +5873,18 @@ _topbandar_$image
 ##img[alt^="situs togel online" i]
 ##img[alt^="slot online termurah" i]
 ##[href="https://bit.ly/2Sifbtu"]
+##[href="https://bit.ly/3GffHx7"]
 ##[href="https://bit.ly/3NHWFBK"]
 ##[href="https://bit.ly/3NLPb0r"]
 ##[href="https://bit.ly/3ONgzfX"]
+##[href="https://bit.ly/3aC7oj0"]
+##[href="https://bit.ly/3apCv17"]
 ##[href="https://bit.ly/3ghYkz2"]
 ##[href="https://bit.ly/3pxoGRM"]
 ##[href="https://bit.ly/3taIjSG"]
+##[href="https://bit.ly/3xyBITK"]
 ##[href="https://bit.ly/3y1RRT6"]
+##[href="https://bit.ly/3ypQRZn"]
 ##[href="https://cutt.ly/JH5W5LG"]
 ##[href="https://klik.gg/bccwY"]
 ##[href="https://rebrand.ly/20crwl38"]
