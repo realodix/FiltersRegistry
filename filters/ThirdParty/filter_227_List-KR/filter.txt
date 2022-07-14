@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.714.3
+! OriginalVersion: 2022.714.7
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -306,6 +306,9 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||polinews.co.kr/data/banner/
+||m.11st.co.kr/products/v1/mw/recommend/branding-banner/
+||m.11st.co.kr/MW/api/app/elevenst/product/getProductHotClkRcmListJSON.tmall
 /^https:\/\/ohlitv\.com\/img\/[0-9]{4}\/[a-z]{1,}\.gif$/
 ||reurl.kr/data/bbs/
 ||m.11st.co.kr/MW/api/app/elevenst/ad/
@@ -757,7 +760,7 @@ item.gmarket.co.kr,toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
 ! ##div[class^="banner"]
 signinssl.gmarket.co.kr,m.hungryapp.co.kr,m.edaily.co.kr,ichannela.com,m.news1.kr##div[class^="banner"]
 ! ##div[class$="-ad"]
-gamemeca.com,yeongnam.com##div[class$="-ad"]
+tipsandtrickskorea.com,gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
 newstomato.com,gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
@@ -771,10 +774,16 @@ m.munhwa.com,buy.11st.co.kr,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 ! ##div[id*="Banner"]
 kin.naver.com##div[id*="Banner"]
 !
+polinews.co.kr##.news_con div[style]:not([class])
+polinews.co.kr###news_body_area > div[style]:not([class])
+tipsandtrickskorea.com##.thecontent > .in-article-container
+tipsandtrickskorea.com##aside#sidebar > div[id^="text-"]
+search.11st.co.kr##section#cts.main ._SearchProductAd
+m.11st.co.kr###dtl01 #brandingBannerDiv
+m.11st.co.kr###productImgWrap ~ #hotclick-recm-container-top
 ohlitv.com##img[src^="/img/"][src$=".gif"]
 reurl.kr##a[onclick^="go_banner"]
 search.11st.co.kr##section#cts.main .l-grid._searchHotProduct
-search.11st.co.kr##section#cts.main div[class="l-grid l-grid--nobg"]
 search.11st.co.kr##section.search_section[data-log-actionid-area="plus"]
 11st.co.kr###rcmdPrd
 11st.co.kr##.hotClick_wrap
@@ -1426,6 +1435,8 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+tipsandtrickskorea.com#?#div.article ~ aside#sidebar:has(.facebook_like:matches-css(display: none))
+search.11st.co.kr#?#section#cts.main div[class="l-grid l-grid--nobg"]:has(ul > li:not([class*="_common"]))
 m.11st.co.kr#?#article#puiWrap div[id^="carrier_"] li.swiper-slide:has(a[href^="https://ds.11st.co.kr/click/11st/11st_mobile/"][href*="?ads_id"])
 webtoon.kakao.com#?#div[class^="left"] ~ div[class]:not([style]):has(ins.kakao_ad_area)
 pping.kr#?#.main_contents > div[class^="sc-"]:has(img[src*="//cdnimg.happyshopping.kr/img_ad/"])
@@ -1511,8 +1522,9 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+search.11st.co.kr#%#//scriptlet("remove-attr", "src", "section#cts.main div[class='l-grid l-grid--nobg'] ul > li:not([class*='_common']) img", "asap stay")
+search.11st.co.kr#%#//scriptlet("remove-attr", "src", "section#cts.main ._SearchProductAd img", "asap stay")
 search.11st.co.kr#%#//scriptlet("remove-attr", "src", "section#cts.main .l-grid._searchHotProduct img", "asap stay")
-search.11st.co.kr#%#//scriptlet("remove-attr", "src", "section#cts.main div[class='l-grid l-grid--nobg'] img", "asap stay")
 search.11st.co.kr#%#//scriptlet("remove-attr", "src", "section.search_section[data-log-actionid-area='plus'] img", "asap stay")
 11st.co.kr#%#//scriptlet("remove-attr", "src", "#rcmdPrd img", "asap stay")
 11st.co.kr#%#//scriptlet("remove-attr", "src", ".hotClick_wrap img", "asap stay")
