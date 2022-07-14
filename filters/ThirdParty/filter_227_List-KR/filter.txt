@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.714.1
+! OriginalVersion: 2022.714.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -144,6 +144,8 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||ad.3dpop.kr^
+||cdndn.3dpop.kr^
 ||ad.pping.kr^
 ||adimg.newstomato.com^
 ||imasdk.googleapis.com^
@@ -228,6 +230,7 @@
 ||adscdn.orbi.kr^
 ||ads.orbi.kr^
 ||ads.mtgroup.kr^
+##iframe[src*="//ad.3dpop.kr/"]
 ##div[id^="div-gpt-"]
 ##iframe[src*="//tab2.clickmon.co.kr/"]
 ##a[href*="//ad.planbplus.co.kr/"]
@@ -303,6 +306,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+/^https:\/\/ohlitv\.com\/img\/[0-9]{4}\/[a-z]{1,}\.gif$/
 ||reurl.kr/data/bbs/
 ||m.11st.co.kr/MW/api/app/elevenst/ad/
 ||m.11st.co.kr/MW/html/nc/getGNBTextListAjax.js|
@@ -757,7 +761,7 @@ gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
 newstomato.com,gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
-newsworker.co.kr##div[id^="AD"]
+mediatoday.co.kr,newsworker.co.kr##div[id^="AD"]
 ! ##div[class^="Banner"]
 moyoplan.com##div[class^="Banner"]
 ! ##table[class^="ad_"]
@@ -767,6 +771,7 @@ m.munhwa.com,buy.11st.co.kr,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 ! ##div[id*="Banner"]
 kin.naver.com##div[id*="Banner"]
 !
+ohlitv.com##img[src^="/img/"][src$=".gif"]
 reurl.kr##a[onclick^="go_banner"]
 search.11st.co.kr##section#cts.main .l-grid._searchHotProduct
 search.11st.co.kr##section#cts.main div[class="l-grid l-grid--nobg"]
