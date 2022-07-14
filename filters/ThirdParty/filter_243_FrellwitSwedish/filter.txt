@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-07-13 08:49:43 CEST
+! Last modified: 2022-07-14 08:55:11 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -198,6 +198,7 @@ futsalmagasinet.se##.wp-block-column > h2:has-text(/annonser/i) ~ p
 fz.se##.card:has(.article-sponsored)
 fz.se##.fp-carousel .fpci-kicker:has-text(/^sponsr/i):upward(.fpc-item)
 fz.se##a[href*="/sponsrat"]:upward(.card)
+gaffa.se##h4:has-text(/sponsrade länkar/i):upward(.link-list)
 gamereactor.se###grtvbelt_Sponsored:upward(1)
 gamereactor.se#%#//scriptlet('ubo-ra.js', 'data-autoplay', 'video', 'stay')
 goon.se##.cpt-collab-text-ct1:has-text(/samarbete|annons/i):upward(.cpt-alm-main)
@@ -214,6 +215,7 @@ hemnet.se##.article-news__link, .listing-articles__article-link, .featured-news_
 hemnet.se##.recent-news__item:has(.recent-news__category:has-text(/sponsrad/i))
 hemnet.se##.start-page-hero__caption:has(.start-page-hero__caption-category:has-text(/sponsrad av/i))
 hippson.se##.toolboxheader:has-text(/aktuella samarbeten/i) ~ a.more
+hogsby-nytt.se,monsteras-nytt.se,oskarshamns-nytt.se##h3:has-text(/Annons/i):upward(.widget)
 hrnytt.se##.sponsored-article:upward(article)
 ibnytt.se##.widget:has(h3:has-text(Speltips))
 idg.se#%#//scriptlet('ubo-nostif.js', 'gFail')
@@ -412,6 +414,7 @@ wellness.se##[id^="adPlacement"]:upward(1)
 wellness.se##article:has(.ad)
 wellness.se##p:has-text(/^kommersiellt innehåll/i):upward(article)
 wellness.se##p:has-text(/^kommersiellt innehåll|^annons$/i):upward(a)
+welma.se##.label--black:has-text(/sponsrat/i):upward(article)
 www.aftonbladet.se#%#//scriptlet('ubo-nostif.js', 'TAKEOVER')
 www.aftonbladet.se#$#.sp-message-open { overflow:initial!important; position:unset!important; }
 www.expressen.se#%#//scriptlet('ubo-acs.js', 'Bau', 'preloadAds')
@@ -504,8 +507,8 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -545,6 +548,7 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 ##.category-annonssamarbete:not(body):not(html)
 ##.category-om-samarbeten:not(body):not(html)
 ##.category-samarbeten:not(body):not(html)
+##.category-sponsrad-artikel:not(body):not(html)
 ##.category-sponsrad:not(body):not(html)
 ##.category-sponsrade-inlagg:not(body):not(html)
 ##.category-sponsrade-reklaminlagg:not(body):not(html)
@@ -1743,7 +1747,7 @@ friluftsframjandet.se##[id^="ad-"]
 funnygames.se,nyckelspel.se##.slot-container
 fuska.se##.alert-success
 fz.se##.article-facebook
-gaffa.se##.external-branding, .feed-item-link-section
+gaffa.se##a[href*="/annonser/"]
 gamereactor.se###cookielawwarning
 gamereactor.se###eventad, [id^="sky"], [id^="ad_lead"], a[rel="sponsored"], .external_div_bigVideoAd, #mpu, #leftToLogo, .itsanad, .ad_Bumper, div[style="min-height: 600px; margin-bottom: 20px;"]
 garaget.org##.gorg-side-content > div.small:nth-last-child(2)
