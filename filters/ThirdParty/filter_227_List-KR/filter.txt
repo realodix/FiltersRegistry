@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.714.9
+! OriginalVersion: 2022.715.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -307,6 +307,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+/^(https|http):\/\/(www|)\.stockinfo7\.com\/img\/(banner\/|%E)/
 ||cdn.khgames.co.kr/bannerpop/uploads/
 ||cdn.khgames.co.kr/adManager/
 ||polinews.co.kr/data/banner/
@@ -1379,7 +1380,8 @@ x86.co.kr#@#.download_ad
 @@||t1.daumcdn.net/cafeattach/$stealth
 @@||pstatic.net^$stealth,media,image,other
 @@||player*.studiouniversal.net/video/$stealth,domain=noonoo.tv
-@@||dcinside.co.kr/viewimage.php?$media,image,stealth
+! Referrer
+@@||dcinside.co.kr/viewimage.php?$stealth
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98466 [Stealth Mode - Referrer]
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
@@ -1529,15 +1531,6 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
-search.11st.co.kr#%#//scriptlet("remove-attr", "src", "section#cts.main div[class='l-grid l-grid--nobg'] ul > li:not([class*='_common']) img", "asap stay")
-search.11st.co.kr#%#//scriptlet("remove-attr", "src", "section#cts.main ._SearchProductAd img", "asap stay")
-search.11st.co.kr#%#//scriptlet("remove-attr", "src", "section#cts.main .l-grid._searchHotProduct img", "asap stay")
-search.11st.co.kr#%#//scriptlet("remove-attr", "src", "section.search_section[data-log-actionid-area='plus'] img", "asap stay")
-11st.co.kr#%#//scriptlet("remove-attr", "src", "#rcmdPrd img", "asap stay")
-11st.co.kr#%#//scriptlet("remove-attr", "src", ".hotClick_wrap img", "asap stay")
-11st.co.kr#%#//scriptlet("remove-attr", "src", ".top_favorite.cfix img", "asap stay")
-11st.co.kr#%#//scriptlet("remove-attr", "src", "#product_listing .power_prd img", "asap stay")
-11st.co.kr#%#//scriptlet("remove-attr", "src", "#product_listing .plus_prd img", "asap stay")
 fmkorea.com#%#//scriptlet("set-constant", "link_url", "")
 search.11st.co.kr#%#//scriptlet("set-constant", "searchDataFactory.bottomFocusPrdList", "undefined")
 search.11st.co.kr#%#//scriptlet("set-constant", "searchDataFactory.focusPrdList", "undefined")
@@ -1549,10 +1542,8 @@ pping.kr#%#//scriptlet("remove-attr", "placeholder", "input.search_input", "asap
 kyobobook.co.kr#%#//scriptlet("abort-current-inline-script", "jQuery", "#mainEventDiv")
 kyobobook.co.kr#%#//scriptlet("abort-current-inline-script", "shuffleItsbest", "itsbestArray")
 newstomato.com#%#//scriptlet("abort-current-inline-script", "getAdvertise")
-pedia.watcha.com#%#//scriptlet("remove-attr", "class|src", "a[class*='-StylelessHref-AdImage']", "asap stay")
 op.gg#%#//scriptlet("json-prune", "text_banner image_banner")
 m.dcinside.com#%#//scriptlet("set-constant", "reple_dori", "noopFunc")
-gall.dcinside.com#%#//scriptlet("remove-attr", "src", ".comment_box li.ub-content.dory img", "asap stay")
 11st.co.kr#%#//scriptlet("json-prune", "[].displayBeginDate [].displayEndDate")
 m.humoruniv.com#%#//scriptlet("abort-current-inline-script", "spwp", "spwp.addAdUnits")
 m.nate.com#%#//scriptlet("json-prune", "shopping")
@@ -1607,6 +1598,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 !
+stockinfo7.com#%#//scriptlet("prevent-setTimeout", "ad.innerHTML.replace")
 te31.com#@#.adsbygoogle
 ||fundingchoicesmessages.google.com^$domain=mksports.co.kr
 ||cdn.kollhong.com/wp-content/custom-js/fuckadblock.min.js
@@ -1664,6 +1656,8 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||tv.kakao.com/embed/player/image/ads.png$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 @@||videoads.kakao.com/adserver/api/v2/vmap$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
+stockinfo7.com#@#ins.adsbygoogle
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=stockinfo7.com
 ||cdn.kollhong.com/wp-content/custom-js/fuckadblock.min.js
 @@||cdn.tapioni.com/asg_embed.js$domain=lover91.net
 @@||www3.doubleclick.net/|$domain=blackkiwi.net
@@ -1680,9 +1674,7 @@ ff14angler.com#@#ins.adsbygoogle
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=1412.rest
 !#endif
 !#if (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android)
-op.gg,etoland.co.kr,sports.donga.com,mlbpark.donga.com,ppss.kr,ygosu.com,inven.co.kr,tgd.kr$$ad-shield-inventory[tag-content="ad-shield-ads"]
-ppss.kr,ygosu.com,tgd.kr,inven.co.kr,loawa.com,feedclick.net,dailian.co.kr$$script[tag-content="Fingerprint"]
-ppss.kr,ygosu.com,tgd.kr,inven.co.kr,loawa.com,feedclick.net,dailian.co.kr$$script[tag-content="_0x51"]
+!
 !#endif
 !#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_firefox || adguard_ext_chromium || adguard_ext_edge )
 ||newspic.kr^$removeparam=cp
