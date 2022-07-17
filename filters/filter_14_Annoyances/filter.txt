@@ -79,12 +79,8 @@
 ! Bad:  ||example.org^$third-party (it's an adserver and should be in adservers.txt)
 !
 !
-!
-!==================================================================================================================
-!============================================section===============================================================
-! TODO: TEMPORARY SECTION ============must be removed after moving the rules to new files==========================
-!
 !######### Annoying elements (not ads)
+! SECTION: Other annoyances - Uncategorized
 !
 ! Test for youtube. Look for feedback
 !youtube.com#%#//scriptlet("set-constant", "ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible", "false")
@@ -2150,8 +2146,6 @@ afisha.ru##section[data-id="yandex-zen"]
 dailypost.co.uk##.float-and-park
 ! https://forum.adguard.com/index.php?threads/20225/
 simplest-image-hosting.net##div#extensionBar
-! medium.com - register popup (Never miss a story from ...)
-##.screenContent > main[role="main"] ~ .js-stickyFooter.u-bottom0.u-sizeFullWidth
 ! livejournal.com - suggestion bar
 livejournal.com##.b-discoverytimes-wrapper
 ! https://forum.adguard.com/index.php?threads/19501/
@@ -2318,9 +2312,12 @@ youtube-nocookie.com,youtube.com##.ytp-paid-content-overlay
 ! https://forum.adguard.com/index.php?threads/11119/
 youtube-nocookie.com,youtube.com###yt-lang-alert-container
 ! END: YouTube annoyances
+! NOTE: Other annoyances - Uncategorized end ⬆️
+! !SECTION: Other annoyances - Uncategorized
 !
 !
 ! START: Yandex
+! SECTION: Other annoyances - Yandex
 !
 ! Yandex main page
 ! Login suggest
@@ -2558,9 +2555,12 @@ yandex.ru##body > div.banner-root
 yandex.ru##body > div.page-root > div.head-promo
 !
 ! END: Yandex
+! NOTE: Other annoyances - Yandex end ⬆️
+! !SECTION: Other annoyances - Yandex
 !
 !
-! START: mail.ru
+! START: VK group
+! SECTION: Other annoyances - VK group
 !
 ! Main page - self promo
 mail.ru#?#.pulse-lenta div[class*="_"] > div > div[class*=" "]:has(> div[class] > a[href^="https://pulse.mail.ru/"][target="_blank"] > div[class] span[class]:contains(Промо))
@@ -2597,14 +2597,13 @@ dobro.mail.ru##.dobro-subscription_inline
 dobro.mail.ru##.dobro-popup-subscribe
 ! coupons
 hi-tech.mail.ru##.sticky_footer div[class^="block block_padding rb-block-"]
-! END: mail.ru
+! NOTE: Other annoyances - VK group end ⬆️
+! !SECTION: Other annoyances - VK group
 !
-!==================================================================================================================
-!============================================section===============================================================
-! TODO: TEMPORARY SECTION ============must be removed after moving the rules to new files==========================
 !
-!######### Social annoyances
-! TODO: social locker?
+!
+! SECTION: Other annoyances - Social
+! Annoying elements, related to social networks, which we do not block in the main Social filter
 !
 ##.arcontactus-message-button
 ##.arcontactus-prompt
@@ -2871,6 +2870,8 @@ jianshu.com#$#body { overflow: auto !important; }
 jianshu.com##.dt-open-bg[data-scene="leftBtn"]
 jianshu.com##.note-comment-above-ad-wrap
 instiz.net#$?#.backlogo { background-image: none !important; }
+! NOTE: Other annoyances - Social end ⬆️
+! !SECTION: Other annoyances - Social
 
 !
 ! First of all, this section has common rules that prevent most known ad block detections. In that case domain should be added to the common rules.
@@ -38637,7 +38638,7 @@ warezcrack.net#$#.onp-sl-content > [data-lock-id^="onpLock"] { display: block!im
 !-------------------------------------------------------------------!
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test1
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38652,7 +38653,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test2
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38667,7 +38668,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test3
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38685,7 +38686,7 @@ dummy.rule###machete_cookie_container
 !-------------------------------------------------------------------!
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test10
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38700,7 +38701,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test11
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38715,7 +38716,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test12
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38730,7 +38731,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test13
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38745,7 +38746,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test14
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38760,7 +38761,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test15
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38775,7 +38776,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test16
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38790,7 +38791,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test17
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38805,7 +38806,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test18
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38820,7 +38821,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test19
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38838,7 +38839,7 @@ dummy.rule###machete_cookie_container
 !-------------------------------------------------------------------!
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test4
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38853,7 +38854,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test5
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38868,7 +38869,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test6
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38886,7 +38887,7 @@ dummy.rule###machete_cookie_container
 !-------------------------------------------------------------------!
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test7
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38901,7 +38902,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test8
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38916,7 +38917,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test9
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38934,7 +38935,7 @@ dummy.rule###machete_cookie_container
 !-------------------------------------------------------------------!
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test20
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38949,7 +38950,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test21
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
@@ -38964,7 +38965,7 @@ dummy.rule###machete_cookie_container
 
 !
 ! dummy. Content must be replaced by corresponding rules
-!
+!test22
 ||dummy.rule^$badfilter
 dummy.rule###mfn-gdpr
 dummy.rule##.Cms_CookieConsent
