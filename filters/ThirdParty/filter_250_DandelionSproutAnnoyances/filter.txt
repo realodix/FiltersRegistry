@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 14July2022v1-Beta-Compilation
+! OriginalVersion: 18July2022v2-Beta-Compilation
 ! Expires: 3 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
@@ -19177,7 +19177,7 @@ deezer.com#?#.page-alerts:has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 03July2022v1
+! OriginalVersion: 18July2022v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -19437,6 +19437,8 @@ tekinvestor.no###full-page-signup-cta
 ! Tumblr
 !! Removes a floaty prompt on bottom
 tumblr.com##div[class][style^="background: rgb(124, 92, 255); "]:only-of-type
+! https://github.com/AdguardTeam/AdguardFilters/issues/124718
+##.tmblr-iframe--follow-teaser
 ! deviantART ↪️📛
 ! https://www.deviantart.com/radasus/art/Patreon-Rubber-Judy-863232827 (NSFW; thankfully not NSFL, which is what most other DA art is)
 deviantart.com##div[style] > div[class^=_] + div:not([class^=_]):nth-of-type(2):last-of-type
@@ -20213,7 +20215,7 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 /christmas-snow.js
 ##foxfield-xmas:not(html, body)
 ! Title: 🌭 Falukorv List
-! OriginalVersion: 01April2022v2-Beta
+! OriginalVersion: 18July2022v2-Beta
 ! Expires: 10 days
 ! Description: Originally created because some PR-Chinese filterlist makers decided to block Falun Gong websites in their anti-ad lists for reasons that had absolutely nothing to do with ads, tracking or malware, and despite the sites already being megablocked within their country; this list has since then also expanded to cover other lists' entries that makes one think "Wait, hold up", due to how misplaced they are.
 ! The list is not designed to be used together with anti-'social network' lists.
@@ -20282,9 +20284,6 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 !#endif
 ! Caused by «ABP Japanese Filters» (https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf.txt)
 @@||lemondeinformatique.fr^
-! Caused by «Phishing URL Blocklist»
-! https://gitlab.com/curben/phishing-filter/-/issues/9
-@@||157.240.194.
 !#if env_mobile
 ! Caused by «Liste AR» (Ensures that DailyMotion pages load properly in at least AdGuard Home)
 @@||vendorlist.dmcdn.net^
@@ -24231,3 +24230,7 @@ positivr.fr##.viously-sticked
 !#endif
 positivr.fr#$#.viously-sticked { position: absolute !important; top: 0 !important; left: 0 !important; bottom: 0 !important; right: 0 !important; width: 100% !important;  height: 100% !important; z-index: 1 !important; display: block !important }
 positivr.fr##.viously-sticked #unstick-button
+!#if !env_mobile
+! https://github.com/AdguardTeam/AdguardFilters/issues/124667 (Probably can't be in Falukorv List because that list adds whitelistings, not remove them.)
+@@://googleadservices.com^|$badfilter
+!#endif
