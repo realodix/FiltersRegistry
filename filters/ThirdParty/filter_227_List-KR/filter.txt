@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.719.5
+! OriginalVersion: 2022.720.0
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -309,6 +309,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+/https:\/\/(www|)\.0db\.co\.kr\/files\/attach\/images\/[0-9]{5}\/[a-z0-9]{32}\.jpg$/
 ||e-himart.co.kr/app/goods/getBannerAjax|
 /^https:\/\/static[0-9]\.e-himart\.co\.kr\/contents\/content\/display\/cornerContents\/imageBanner\/[0-9]{3}\/imageBanner_/
 ||e-himart.co.kr/contents/content/display/special/
@@ -811,6 +812,8 @@ m.humoruniv.com##table[class^="ad_"]
 m.munhwa.com,buy.11st.co.kr,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 ! ##div[id*="Banner"]
 e-himart.co.kr,kin.naver.com##div[id*="Banner"]
+! ##div[class*="_AD"]
+0db.co.kr##div[class*="_AD"]
 !
 e-himart.co.kr##input ~ .searchRolling
 m.11st.co.kr##section#cts:not(.main) .ctg_loc ~ section.list_bx.hotclick
@@ -1507,6 +1510,7 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+0db.co.kr#?#.wrap_body .clearBoth ~ div[class^="margin_bottom"]:not(:has(+ *))
 tipsandtrickskorea.com#?#div.article ~ aside#sidebar:has(.facebook_like:matches-css(display: none))
 search.11st.co.kr#?#section#cts.main div[class="l-grid l-grid--nobg"]:has(ul > li:not([class*="_common"]))
 m.11st.co.kr#?#article#puiWrap div[id^="carrier_"] li.swiper-slide:has(a[href^="https://ds.11st.co.kr/click/11st/11st_mobile/"][href*="?ads_id"])
