@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.720.0
+! OriginalVersion: 2022.720.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -309,6 +309,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||soccerline.kr/ads/
 /https:\/\/(www|)\.0db\.co\.kr\/files\/attach\/images\/[0-9]{5}\/[a-z0-9]{32}\.jpg$/
 ||e-himart.co.kr/app/goods/getBannerAjax|
 /^https:\/\/static[0-9]\.e-himart\.co\.kr\/contents\/content\/display\/cornerContents\/imageBanner\/[0-9]{3}\/imageBanner_/
@@ -814,7 +815,10 @@ m.munhwa.com,buy.11st.co.kr,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 e-himart.co.kr,kin.naver.com##div[id*="Banner"]
 ! ##div[class*="_AD"]
 0db.co.kr##div[class*="_AD"]
+! ##section[class$="-ads"]
+soccerline.kr##section[class$="-ads"]
 !
+soccerline.kr##div[class$="Bann"]
 e-himart.co.kr##input ~ .searchRolling
 m.11st.co.kr##section#cts:not(.main) .ctg_loc ~ section.list_bx.hotclick
 m.11st.co.kr##section#cts:not(.main) .ctg_loc ~ section#powerLink
