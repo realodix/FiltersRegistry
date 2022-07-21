@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-07-20
+! Last modified: 2022-07-21
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 !
@@ -69,8 +69,6 @@
 ! >> C <<
 ||clickaval.com^$all
 ||congoro.com^$all
-! @@||clickyab.com^$1p
-||clickyab.com^$badfilter
 ||clickyab.com^$all
 ||chabok.io^$all
 ! >> D <<
@@ -1504,10 +1502,17 @@ tourismonline.co##.stream-item-mag.mag-box
 tourismonline.co##.stream-item-above-post.stream-item
 tourismonline.co##.ads-title
 tourismonline.co##.widget_custom_html.widget.container-wrapper.widget_text
-||toranji.ir/wp-content/uploads/*/*/Toranji-Ad
+! https://github.com/MasterKia/PersianBlocker/issues/17
+! ||toranji.ir/wp-content/uploads/*/*/Toranji-Ad
+||toranji.ir/wp-content/uploads/*/*.gif
+||toranji.ir/najva-messaging-sw.js^$all
+toranji.ir##.content-container:has(.ad-reportage)
 toranji.ir###fpc-banner-top
-toranji.ir##.square-ad
+toranji.ir#@#.square-ad
+toranji.ir##.square-ad:not(:has(#featured-posts))
+toranji.ir###mostvisited:has(.widget-title:has-text(تبلیغات متنی))
 toranji.ir###top-right-ad
+@@||toranji.ir/wp-content/uploads/*/Toranji-Banner-Ad-$image,~third-party
 topnaz.com##.light-text.footer-widgets
 ||st-n.ads1-adnow.com/js/a.js
 top2download.com##.ads-box-red
@@ -1689,11 +1694,13 @@ zohur12.ir##.sideads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79988
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110569
 ! https://github.com/MasterKia/PersianBlocker/issues/4
+! https://github.com/MasterKia/PersianBlocker/issues/4#issuecomment-1191150998
 zoomg.ir#%#//scriptlet('ubo-aopr.js', 'banner')
 ||zoomg.ir/common/visitcount/
 ||zoomg.ir/cdn-cgi/apps/head/*$script
 ||zoomg.ir/Themes/Zoomg.ir/Content/css/img/AD.svg
 ||namava.ir/ZoomitAds/
+zoomg.ir##.wide-adv-box
 zoomg.ir##.main-top-ads
 zoomg.ir##.main-inside-ads
 zoomg.ir##.top-ads
@@ -1705,12 +1712,15 @@ zoomg.ir###mobileBannerAfterTags
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78626
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79988
 ! https://github.com/MasterKia/PersianBlocker/issues/4
+! https://github.com/MasterKia/PersianBlocker/issues/4#issuecomment-1190674411
 zoomit.ir#%#//scriptlet('ubo-aopr.js', 'banner')
-||zoomit.ir/common/visitcount/
+||zoomit.ir/common/visitcount/^
 ||analytics.zoomit.ir^$all
+zoomit.ir##.wide-adv-box
 zoomit.ir##.wide-adv-row
 zoomit.ir##.wide-adv-row-home
 zoomit.ir##.bannercontainer
+zoomit.ir##.price-sticky
 !#if env_mobile
 zoomit.ir##.InsideArticleIntro
 zoomit.ir##.article-mobile-inContent
