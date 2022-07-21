@@ -2127,6 +2127,12 @@ whats-on-netflix.com#$#html.sp-message-open body { overflow-y: visible !importan
 !
 !
 !
+foerch.de##.anonymous-consent-banner
+dehn.de#$#html { overflow: auto !important; }
+dehn.de#$#.cookie-layer { display: none !important; }
+sera.de#$#body { overflow: auto !important; }
+sera.de#$##cookieman-modal { display: none !important; }
+sera.de#$##cookieman-modal ~ div.modal-backdrop { display: none !important; }
 thomann.de##.spicy-consent-wrapper
 ||gdpr-settings.s3.amazonaws.com/rcp-rollei/pandectes-asset.
 lectra.com##div[class^="awe-popkies"]
@@ -14441,7 +14447,12 @@ lg.com#@#.cookie-check
 mycard2go.com#@#.cookiebar
 fashionette.de#@##cookies-notice
 foodnetwork.co.uk#@#.cookie-message:not(html):not(body)
-
+!
+! NOTE: Fixing problems on platform withut CSS rules support
+!#if (adguard_ext_android_cb)
+dehn.de#@##cookie-layer
+dehn.de#@#.cookie-layer
+!#endif
 !-------------------------------------------------------------------!
 !---------------------- Popups -------------------------------------!
 !-------------------------------------------------------------------!
