@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.723.1
+! OriginalVersion: 2022.723.5
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -837,6 +837,10 @@ edit.incruit.com##div[class*="Banner"]
 ! ##section[class*="-ad"]
 m.inven.co.kr##section[class*="-ad"]
 !
+quasarzone.com##div[class*="search-"] > .price-compare-srch
+quasarzone.com##.mid-content-area .left-util-wrap .bot-util-area
+quasarzone.com##.bot-content-area .mid-util-wrap .right-util-area
+quasarzone.com###container .logo-area
 m.inven.co.kr##section.mo-top-nav ~ div[class^="mobileDaNs"]
 m.inven.co.kr##section.mo-top-nav ~ div[style]:not([id])
 m.inven.co.kr##div[id^="mobileTailAd"]
@@ -996,7 +1000,6 @@ poro.gg###__layout > div:not([class]) > [class]:not(footer) > div[class]:not([sm
 mathbang.net##.sidebar_book
 thecall.co.kr##[class^="adsense"]
 coolenjoy.net###sidebar > .tab
-quasarzone.com##div.right-util-area > .top-util-box,.bot-util-box
 m.bobaedream.co.kr##.wrap > div[style$="height:100px;"]:not([class])
 login.11st.co.kr##.login_banner
 m.inven.co.kr,quasarzone.com##[class^="banner-"]
@@ -1495,6 +1498,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+quasarzone.com#$#.bot-content-area .mid-util-wrap > div { width: calc(50% - 5px) !important; }
 m.inven.co.kr#$##mainSlider { padding-bottom: 0px !important; }
 tgd.kr#$##header-menu-left { border-right: none !important; }
 tgd.kr#$##header-menu-right { float: right !important; border-left: none !important; }
@@ -1827,6 +1831,7 @@ ff14angler.com#@#ins.adsbygoogle
 ! If a website, mobile version, can be reproduced on a desktop/laptop browser with AdGuard for Windows/AdGuard Browser Extension,
 ! please move into specific.txt.
 !
+@@||om-apis.sk-pay.co.kr^$stealth,app=com.elevenst
 @@||m.dcinside.com/movie/$stealth,app=com.dcinside.app
 @@||m.dcinside.com/movie/$stealth,app=com.dcinside.app.android
 !#endif
