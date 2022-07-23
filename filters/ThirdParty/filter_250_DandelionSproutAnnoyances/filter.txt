@@ -23695,7 +23695,7 @@ ourcodeworld.com##.mouse-cursor
 ! No iMacs have had less than 1600px wide monitors since 2006, MacBook Pro since 2012, or MacBook Air since 2017. Thus I'm taking a gamble by embedding this for Mac users:
 !+ NOT_OPTIMIZED
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! OriginalVersion: 19July2022v3-Beta
+! OriginalVersion: 23July2022v1-Beta
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
@@ -24057,9 +24057,10 @@ nintendo.com#$##game-set { column-count: 8 !important }
 !!!wikipedia.org,wiktionary.org##.mw-content-container:style(max-width: none !important)
 wikipedia.org,wiktionary.org#$##mw-navigation + .mw-content-container { margin-left: 176px !important }
 ! Hopefully most mainstream implementations of the Vector wiki skin, for instance on https://wiki.pcsx2.net/Main_Page
-net,org,com#$#html.vector-sticky-header-enabled .mw-page-container { max-width: 97vw !important }
-net,org,com#$#html.vector-sticky-header-enabled .mw-workspace-container { max-width: none !important }
-net,org,com#$#html.vector-sticky-header-enabled .mw-content-container { max-width: 98vw !important; margin-left: 175px !important }
+! ":not(.ve-available)" is needed for https://www.mediawiki.org/wiki/Help:Range_blocks/IPv6
+net,org,com#$#html.vector-sticky-header-enabled:not(.ve-available) .mw-page-container { max-width: 97vw !important }
+net,org,com#$#html.vector-sticky-header-enabled:not(.ve-available) .mw-workspace-container { max-width: none !important }
+net,org,com#$#html.vector-sticky-header-enabled:not(.ve-available) .mw-content-container { max-width: 98vw !important; margin-left: 175px !important }
 ! —————————————————————————————————————————————————————————————————————
 ! Category: Bulbapedia
 bulbapedia.bulbagarden.net#$#.bg-global-menu + #globalWrapper #content { margin-left: 10px !important; margin-right: 10px !important; max-width: 95vw !important }
