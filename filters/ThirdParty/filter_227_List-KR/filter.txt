@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.723.5
+! OriginalVersion: 2022.724.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -9,6 +9,7 @@
 !
 ! Version must be UTC format.
 !
+||amazon-adsystem.com^
 ||tsyndicate.com^
 ||vntsm.com^
 ||optad360.io^
@@ -311,6 +312,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||backstage.bada.io/vueController/getAmazonProductCode|
 ||inven.co.kr/common/lib/style/ad.css
 ||static.marketinven.com/data/brand/
 ||panel.co.kr/user/img/banner/
@@ -837,6 +839,8 @@ edit.incruit.com##div[class*="Banner"]
 ! ##section[class*="-ad"]
 m.inven.co.kr##section[class*="-ad"]
 !
+duo.op.gg##section[class=""] > div[class^="bg-gray"][class~="justify-center"]
+bada.io##div[id*="amazon_shopping"]
 quasarzone.com##div[class*="search-"] > .price-compare-srch
 quasarzone.com##.mid-content-area .left-util-wrap .bot-util-area
 quasarzone.com##.bot-content-area .mid-util-wrap .right-util-area
@@ -1062,7 +1066,7 @@ www.instiz.net##body > .hot_under
 www.instiz.net##span#menufoot > .hot_under
 m.joongna.com##article[class^="SearchList_listWrap"] + div
 www.naver.com##div[id^="veta_"]
-arca.live##div.ad
+bada.io,arca.live##div.ad
 news.jtbc.joins.com##div[id^="right_banner"]
 news.jtbc.joins.com###articlebody > div[style]:not([itemprop="articleBody"]).article_content
 ohmynews.com###div10Sticky
@@ -1468,6 +1472,7 @@ manatoki144.net,manatoki145.net,manatoki146.net,manatoki147.net,manatoki148.net,
 103.204.13.68##.product-banner
 103.204.13.68##div[class^="mobile-m ad720_"]
 hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellven1"]
+@@||muirim.com/admin/data/banner/
 @@/^(http|https):\/\/image\.kyobobook\.co\.kr\/ink\/images\/prom\/[0-9]{4}\/general\/[0-9]{6}_dailyCheck\//
 @@||advimg.ad-mapps.com/sdk/js/ver/*/ad_movie_script.js$domain=ichannela.com
 x86.co.kr#@#.download_ad
