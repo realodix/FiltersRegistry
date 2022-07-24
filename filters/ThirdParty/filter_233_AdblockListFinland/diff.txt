@@ -1,11 +1,9 @@
 ! facebook.com#?#div[aria-label="Hakutulokset"][role="main"] [role="feed"] > [role="article"]:has(b[class]:has-text(Sponsoroitu)) is excluded by "facebook.com#?#" in exclusions.txt
 facebook.com#?#div[aria-label="Hakutulokset"][role="main"] [role="feed"] > [role="article"]:has(b[class]:has-text(Sponsoroitu))
+! facebook.com#?#div[role="feed"] > span:has(a[class]:has-text(Sponsoroitu)) is excluded by "facebook.com#?#" in exclusions.txt
+facebook.com#?#div[role="feed"] > span:has(a[class]:has-text(Sponsoroitu))
 ! facebook.com#?#div[role=complementary] > div > div > div > div > div:not([class], [data-visualcompletion]) > span:has([aria-label=Mainostaja]) is excluded by "facebook.com#?#" in exclusions.txt
 facebook.com#?#div[role=complementary] > div > div > div > div > div:not([class], [data-visualcompletion]) > span:has([aria-label=Mainostaja])
-! facebook.com#?#div[role=feed] > div:not([class]):has(b[class]:has-text(Sponsoroitu)) is excluded by "facebook.com#?#" in exclusions.txt
-facebook.com#?#div[role=feed] > div:not([class]):has(b[class]:has-text(Sponsoroitu))
-! facebook.com#?#div[role=feed] > div:not([class]):has(div[class][role="button"]:has-text(Sponsoroitu)) is excluded by "facebook.com#?#" in exclusions.txt
-facebook.com#?#div[role=feed] > div:not([class]):has(div[class][role="button"]:has-text(Sponsoroitu))
 ! m.facebook.com#?#article:has(> * header > * span:has-text(Sponsoroitu)) is excluded by "facebook.com#?#" in exclusions.txt
 m.facebook.com#?#article:has(> * header > * span:has-text(Sponsoroitu))
 ! ||ts.fi/adframe.js$script,domain=ts.fi is excluded by "/adframe." in exclusions.txt
@@ -104,6 +102,8 @@ iltalehti.fi##script[src="https://script.ilcdn.fi/il-iltv-player/iltv-player.min
 ||sanoma-prod.integration-x.com^$media,rewrite=abp-resource:blank-mp3,domain=ruutu.fi
 ! Rule "@@||s1.adform.net/banners/scripts/adx.js$xhr,domain=ylilauta.org" converted to: "@@||s1.adform.net/banners/scripts/adx.js$xmlhttprequest,domain=ylilauta.org"
 @@||s1.adform.net/banners/scripts/adx.js$xhr,domain=ylilauta.org
+! Rule "microsoft.com#@#body,html:style(overflow: auto !important; position: initial !important;)" converted to: "microsoft.com#@$#body,html { overflow: auto !important; position: initial !important; }"
+microsoft.com#@#body,html:style(overflow: auto !important; position: initial !important;)
 ! Invalid selector:
 gamereactor.fi##^.ad_top
 ! Invalid selector:
