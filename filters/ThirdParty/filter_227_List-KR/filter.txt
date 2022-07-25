@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.725.1
+! OriginalVersion: 2022.725.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -312,6 +312,10 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||image.newsis.com/h_www/common/*_banner_
+||image.newsis.com/new_www/banner/
+||newsis.com/view/ad/
+||image.newsis.com/h_www/advertise/
 ||backstage.bada.io/vueController/getAmazonProductCode|
 ||inven.co.kr/common/lib/style/ad.css
 ||static.marketinven.com/data/brand/
@@ -805,7 +809,7 @@ inven.co.kr,~m.inven.co.kr,funshop.co.kr,m.sedaily.com,bloter.net,mosen.mt.co.kr
 ! ##div[class$="_banner"]
 order.kyobobook.co.kr,newstomato.com,newsen.com,toomics.com,m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
 ! ##div[class^="ad"]
-search.danawa.com,ppomppu.co.kr,m.newsen.com,peterpanz.com,jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m.moneys.mt.co.kr,basketkorea.com,m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com,sports.chosun.com##div[class^="ad"]
+newsis.com,search.danawa.com,ppomppu.co.kr,m.newsen.com,peterpanz.com,jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m.moneys.mt.co.kr,basketkorea.com,m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com,sports.chosun.com##div[class^="ad"]
 ! ##div[class^="banner_"]
 search.11st.co.kr,prod.danawa.com,auth.danawa.com,socialvalue.kr,news.jtbc.joins.com,etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
 ! ##div[class$="Banner"]
@@ -839,6 +843,12 @@ edit.incruit.com##div[class*="Banner"]
 ! ##section[class*="-ad"]
 m.inven.co.kr##section[class*="-ad"]
 !
+newsis.com##.articleView div[class^="botBox"]:not(.twinBox)
+newsis.com##.articleView + .aside .smallbox
+newsis.com##div[id][style~="height:100px;"]
+newsis.com##iframe[src^="/view/ad/"]
+newsis.com##div[class^="w_header_"]:nth-child(1)
+newsis.com##table[class*="Ad"]
 jootc.com,funissu.com##aside[id^="ai_widget-"]
 poro.gg##div[class^="flex"][class$="h-[250px]"]
 lolchess.gg##.ap_top
@@ -1506,6 +1516,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+newsis.com#$#.articleView + .aside .asideBox.line { border-top: none !important; }
 quasarzone.com#$#.bot-content-area .mid-util-wrap > div { width: calc(50% - 5px) !important; }
 m.inven.co.kr#$##mainSlider { padding-bottom: 0px !important; }
 tgd.kr#$##header-menu-left { border-right: none !important; }

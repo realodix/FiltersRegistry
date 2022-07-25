@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-07-24 05:58:21 CEST
+! Last modified: 2022-07-25 12:06:19 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -222,6 +222,7 @@ hippson.se##.toolboxheader:has-text(/aktuella samarbeten/i) ~ a.more
 hogsby-nytt.se,monsteras-nytt.se,oskarshamns-nytt.se##h3:has-text(/Annons/i):upward(.widget)
 hrnytt.se##.sponsored-article:upward(article)
 ibnytt.se##.widget:has(h3:has-text(Speltips))
+icscards.nl#$#body > [class^="page-"][style^="filter:"] { filter:none!important }
 idg.se#%#//scriptlet('ubo-nostif.js', 'gFail')
 idg.se##[data-styled="SpLabel"]:upward(article)
 illvet.se##.teaser__category:has-text(/annons/i):upward(article)
@@ -513,8 +514,8 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
