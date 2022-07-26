@@ -26,7 +26,7 @@ We may add third-party filters to AdGuard Filters Registry. When making a decisi
 
 - `template.txt`
 
-    Template file is used by the filters compiler to prepare the final filter version.
+    [Template file](#templates) is used by the filters compiler to prepare the final filter version.
 
 - `exclude.txt`
 
@@ -137,7 +137,7 @@ If you want to help with filters translations, you can join us on Crowdin: https
 
 Please learn more about translating our products: https://kb.adguard.com/general/adguard-translations
 
-## Filters templates
+## <a id="templates"></a> Filters templates
 `@include` directive allows to include contents of specified file into the filter.
 
 If you want to add a filter and keep all their rules during optimization, use the `/notOptimized` parameter.
