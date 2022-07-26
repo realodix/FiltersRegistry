@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.725.3
+! OriginalVersion: 2022.726.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -724,6 +724,9 @@
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+/^https:\/\/yagong[0-9]{1,}\.com\/storage\/upload\/banners\//
+/^https:\/\/yagong[0-9]{1,}\.com\/images\/[A-z0-9-]{1,}\.gif$/
+/^https:\/\/www\.xcity[0-9]{1,}\.me\/imgad\//
 /^https:\/\/www\.jinyi[0-9]{1,}\.me\/imgad\//
 /^https:\/\/www\.redsun[0-9]{1,}\.me\/ad\//
 /^https:\/\/manamoa[0-9]{1,}\.com\/data\/apms\/background\//
@@ -843,6 +846,7 @@ edit.incruit.com##div[class*="Banner"]
 ! ##section[class*="-ad"]
 m.inven.co.kr##section[class*="-ad"]
 !
+megabox.co.kr##div[class*="-ad"]:not(.container):not([style])
 newsis.com##.articleView div[class^="botBox"]:not(.twinBox)
 newsis.com##.articleView + .aside .smallbox
 newsis.com##div[id][style~="height:100px;"]
@@ -1431,6 +1435,7 @@ www.naver.com##iframe[id^="da_iframe_"]
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+yagong40.com,yagong41.com,yagong42.com,yagong43.com,yagong44.com,yagong45.com,yagong46.com,yagong47.com,yagong48.com,yagong49.com,yagong50.com,yagong51.com,yagong52.com,yagong53.com,yagong54.com,yagong55.com,yagong56.com,yagong57.com,yagong58.com,yagong59.com,yagong60.com,yagong61.com,yagong62.com##div[x-data="popups()"]
 redsun22.me,redsun23.me,redsun24.me,redsun25.me,redsun26.me,redsun27.me,redsun28.me,redsun29.me,redsun30.me,redsun31.me,redsun32.me,redsun33.me,redsun34.me,redsun35.me,redsun36.me,redsun37.me,redsun38.me,redsun39.me,redsun40.me,redsun41.me,redsun42.me,redsun43.me,redsun44.me,redsun45.me,redsun46.me##div[id*="ads"]
 manamoa21.com,manamoa22.com,manamoa23.com,manamoa24.com,manamoa25.com,manamoa26.com,manamoa27.com,manamoa28.com,manamoa29.com,manamoa30.com,manamoa31.com,manamoa32.com,manamoa33.com,manamoa34.com,manamoa35.com,manamoa36.com,manamoa37.com,manamoa38.com,manamoa39.com,manamoa40.com,manamoa41.com##div[class*="banner"]
 mkmk26.link,mkmk27.link,mkmk28.link,mkmk29.link,mkmk30.link,mkmk31.link,mkmk32.link,mkmk33.link,mkmk34.link,mkmk35.link,mkmk36.link,mkmk37.link,mkmk38.link,mkmk39.link,mkmk40.link,mkmk41.link,mkmk42.link,mkmk43.link,mkmk44.link,mkmk45.link,mkmk46.link,mkmk47.link##div[class^="baner_"]
@@ -1515,6 +1520,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+megabox.co.kr#$#header.main-header { top: 0px !important; }
 newsis.com#$#.articleView + .aside .asideBox.line { border-top: none !important; }
 quasarzone.com#$#.bot-content-area .mid-util-wrap > div { width: calc(50% - 5px) !important; }
 m.inven.co.kr#$##mainSlider { padding-bottom: 0px !important; }
@@ -1636,6 +1642,7 @@ etoland.co.kr#?#tbody > tr > td > img[src*="/img/adland01.gif"]:upward(2)
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+yagong40.com,yagong41.com,yagong42.com,yagong43.com,yagong44.com,yagong45.com,yagong46.com,yagong47.com,yagong48.com,yagong49.com,yagong50.com,yagong51.com,yagong52.com,yagong53.com,yagong54.com,yagong55.com,yagong56.com,yagong57.com,yagong58.com,yagong59.com,yagong60.com,yagong61.com,yagong62.com#?#div[class*="border"]:has(> a[href][target*="_blank"])
 torrentlee37.com,torrentlee38.com,torrentlee39.com,torrentlee40.com,torrentlee41.com,torrentlee42.com,torrentlee43.com,torrentlee44.com,torrentlee45.com,torrentlee46.com,torrentlee47.com,torrentlee48.com,torrentlee49.com,torrentlee50.com,torrentlee51.com#?#.widget-box ~ .widget-box:has(img[src*="/data/editor/"][src$=".gif"])
 torrentwiz47.com,torrentwiz48.com,torrentwiz49.com,torrentwiz50.com,torrentwiz51.com,torrentwiz52.com,torrentwiz53.com,torrentwiz54.com,torrentwiz55.com,torrentwiz56.com,torrentwiz57.com,torrentwiz58.com,torrentwiz59.com,torrentwiz60.com,torrentwiz61.com#?#.row > div:has(img[src*="/data/editor/"])
 torrentwiz47.com,torrentwiz48.com,torrentwiz49.com,torrentwiz50.com,torrentwiz51.com,torrentwiz52.com,torrentwiz53.com,torrentwiz54.com,torrentwiz55.com,torrentwiz56.com,torrentwiz57.com,torrentwiz58.com,torrentwiz59.com,torrentwiz60.com,torrentwiz61.com#?#.row.hidden-xs ~ .row.hidden-xs:has(img[src*="//i.imgur.com/"])
