@@ -6,7 +6,7 @@
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
 ! What this broad compilation does not block: Newsletters, cookie banners, social media links to company pages
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
-! OriginalVersion: 09July2022v1
+! OriginalVersion: 26July2022v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -411,6 +411,7 @@ nova.rs##.banner-footer
 playpilot.com##.android-prompt
 ##div[class^=AppBanner__]
 ##.mob-app-redirect:not(html, body)
+###getTheAppFooter
 ! (https://github.com/AdguardTeam/AdguardFilters/issues/116903)
 !!!twitter.com###layers > div:nth-of-type(2):last-of-type
 ! Pinterest
@@ -446,7 +447,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 25July2022v1
+! OriginalVersion: 26July2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -9363,6 +9364,91 @@ toorgle.net##.join
 ||192.243.59.13^$document
 ||192.243.59.20^$document
 ||192.243.61.225^$document
+! https://twitter.com/medicinehelp/status/1550250932394409985
+! https://securitytrails.com/list/ip/147.135.16.27
+||2spendless.$document
+||acrx.co^$document
+||acrx.monster^$document
+||acrx.news^$document
+||acrx.online^$document
+||acrx.org^$document
+||acrx.press^$document
+||acrx.shop^$document
+||acrx.xyz^$document
+||acrxcards.$document
+||acrxcoupon.$document
+||acrxcoupons.$document
+||acrxnews.$document
+||acrxpetcare.press^$document
+||americanconsultantrx.$document
+||americanconsultantsrx.$document
+||covidrelief.cyou^$document
+||covidrelief.digital^$document
+||covidrelief.guru^$document
+||covidrelief.icu^$document
+||covidrelief.news^$document
+||covidrelief.online^$document
+||covidrelief.press^$document
+||covidrelief.shop^$document
+||covidrelief.today^$document
+||covidrelief.website^$document
+||covidrelief.xyz^$document
+||discountdrug.cheap^$document
+||discountdrug.monster^$document
+||discountdrug.news^$document
+||discountdrug.online^$document
+||discountdrug.press^$document
+||discountdrug.site^$document
+||discountdrugs.digital^$document
+||discountdrugs.icu^$document
+||discountdrugs.news^$document
+||discountdrugs.online^$document
+||discountdrugs.press^$document
+||discountdrugs.store^$document
+||discountprescription.xyz^$document
+||drugcoupon.news^$document
+||drugcoupon.online^$document
+||drugcoupon.press^$document
+||drugcoupon.xyz^$document
+||drugcoupons.news^$document
+||drugcoupons.xyz^$document
+||freehealthcare.press^$document
+||freemedication.news^$document
+||freemedication.press^$document
+||freemedicine.digital^$document
+||freemedicine.guru^$document
+||freemedicine.info^$document
+||freemedicine.monster^$document
+||freemedicine.news^$document
+||freemedicine.online^$document
+||freemedicine.press^$document
+||freemedicine.quest^$document
+||freemedicine.services^$document
+||freemedicine.website^$document
+||freemedicine.xyz^$document
+||freemedicinecoupons.com^$document
+||freemedicinecoupons.monster^$document
+||freemedicinecoupons.press^$document
+||freemedicinecoupons.site^$document
+||freemedicinecoupons.website^$document
+||freemedicinehelp.com^$document
+||freemedicinehelp.digital^$document
+||freemedicinehelp.monster^$document
+||freemedicinehelp.online^$document
+||freemedicinehelp.press^$document
+||medication.coupons^$document
+||medication.monster^$document
+||medication.quest^$document
+||medicinecoupons.digital^$document
+||medicinecoupons.space^$document
+||medicinecoupons.xyz^$document
+||medicinehelp.news^$document
+||ppesupplies.club^$document
+||ppesupplies.info^$document
+||ppesupplies.news^$document
+||ppesupplies.shop^$document
+||ppesupplies.xyz^$document
+||147.135.16.27^$document
 ! Other
 ||foxsportnetwork.com^$all
 ||pksauniversity.com^$all
