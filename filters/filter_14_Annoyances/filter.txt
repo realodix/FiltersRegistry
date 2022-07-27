@@ -2127,7 +2127,9 @@ whats-on-netflix.com#$#html.sp-message-open body { overflow-y: visible !importan
 ||cdn.privacy-mgmt.com^$important,domain=promipool.de|android-hilfe.de|wsj.com
 !
 !
-!
+ebilet.pl#$##cookies-info { display: none !important; }
+ebilet.pl#$#.stop-scrolling { height: inherit !important; overflow: auto !important; touch-action: unset !important; }
+priem45.hse.ru##body > div[style^="position: fixed; bottom: 0px; left: 0px; width: 100%; z-index:"]
 pensoft.net###warningCookie
 dagsavisen.no##.consent
 blumixx.de##.cookieConf
@@ -3466,7 +3468,7 @@ eapteka.ru##.cookie-informer
 topchretien.com###rgpd
 diocese-quimper.fr###wpca-popup-modal
 xn--d1aiavecq8cxb.xn--p1ai##app-block-page-header > div.shell
-bursahayat.com.tr,webursa.com,lifebursa.com,bursahakimiyet.com.tr,yenidonem.com.tr##.kvkkpop
+sozbursa.com,bursahayat.com.tr,webursa.com,lifebursa.com,bursahakimiyet.com.tr,yenidonem.com.tr##.kvkkpop
 tapipol.pl###panel_cookie_bottom
 zoomtventertainment.com##div[class^="GdprCSS-container-"]
 macron.com#$#body { overflow: auto !important; }
@@ -11807,6 +11809,10 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !+ PLATFORM(windows, mac, android)
 @@||geolocation.onetrust.com/cookieconsentpub/*/geo/location
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/125379
+ebilet.pl#@##cookies-info
+! https://github.com/AdguardTeam/AdguardFilters/issues/125374
+@@||priem45.hse.ru/vuzjs/gdpr.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125097
 ||sdk.privacy-center.org/*/loader.js$script,redirect=didomi-loader,domain=france24.com,important
 @@||sdk.privacy-center.org^$domain=france24.com
@@ -14554,8 +14560,9 @@ otzovik.com#%#//scriptlet("abort-on-property-read", "Object.prototype.RtbBlockRe
 !
 !
 ! spletnik.ru
+spletnik.ru##[class] > :not(div):not(article):not(main):not(section):not([class])[id][style^="background:#f9f9f9;"]
+spletnik.ru$$script[wildcard="*insertAfter*params*"][min-length="1000"][max-length="7000"]
 spletnik.ru#%#//scriptlet('abort-on-property-write', 'Object.prototype.encodeJsonpScriptSrc')
-spletnik.ru##o-aoft[id][style^="background:#f9f9f9;"]:not([class])
 ! 24smi.org
 24smi.org#%#//scriptlet('abort-on-property-read', 'Object.prototype.getAdbBits')
 ! sdamgia.ru
@@ -17681,6 +17688,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - generic rules
 !
+###wpd-bubble-wrapper
 ##.tmblr-iframe--follow-teaser
 ###siradaki-haberler
 ###trd-exitintentbox
@@ -17795,6 +17803,8 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! Specific sites
 ! SECTION: Popups - Specific
+speedcheck.org#$#body { overflow: auto !important; }
+speedcheck.org#$#.dontleave { display: none !important; }
 newegg.com###modal-Website
 techcrunch.com##.piano-ribbon-container iframe[id^="offer_"]
 cinehdplus.net###mdl-help
@@ -23310,7 +23320,6 @@ zlavomat.sk#@##credential_picker_container
 ||checkpost.club^$third-party
 ||chensenconter.com^$third-party
 ||chgilks.com^
-||chitai-gorod.ru/*/js/push_subscribe_firebase.js
 ||clairpixum.com^$third-party
 ||click-to-win-prize.com^
 ||clicktimes.bid^
@@ -23450,7 +23459,6 @@ zlavomat.sk#@##credential_picker_container
 ||notify-guru.com^
 ||notify-master.net^
 ||notify-service.com^$third-party
-||notify.hindustantimes.com/resources/js/dm-script.js
 ||notify.premium-news.me^
 ||notify.rocks^
 ||ntsecd.com^
@@ -23548,7 +23556,6 @@ zlavomat.sk#@##credential_picker_container
 ||redpsh.pro^$third-party
 ||relateddigital.com^$third-party
 ||reprocautious.com^$third-party
-||robot.net.ua/upload/crm/site_button/loader_$third-party
 ||rocket-push.com^$third-party
 ||rokettsaince.com^$third-party
 ||rushhips.com^$third-party
@@ -23649,6 +23656,9 @@ zlavomat.sk#@##credential_picker_container
 /firebase.js$domain=novayagazeta.ru|comments.ua|kinosimka.net|ilan365.net|cnbcindonesia.com|haberzamani.net|oxy.cloud|allbasketball.org|auslogics.com|kartalyuvasi.com.tr|cnnindonesia.com|fbc.ua|astv.ru|pln-pskov.ru|aylink.co
 /firebase-messaging.js$domain=webursa.com|s.akiba-souken.com|bfm.ru|theswagsports.com|focus.ua|ukranews.com|comments.ua|coub.com|porno90.me|cnnamador.com|giallozafferano.it|wcostream.com|fptplay.vn|jooble.org|mobile01.com|myinstants.com|pdalife.ru|rg.ru|m.iguides.ru|donanimhaber.com|profile.ru|womanhit.ru|news.noteru.com|narodna-pravda.ua|newstm.in|sabah.com.tr|dreamstime.com|popbee.com|avtovzglyad.ru|allbasketball.org|tw.news.yahoo.com|takvim.com.tr|jn.pt|ria.ru|pars.host|calculator-online.net|operanewsapp.com|ahaber.com.tr|tamindir.com|concursosnobrasil.com.br|kompas.com|news.ebc.net.tw|recyclingtoday.com|homedecoratione.com|khersondaily.com|mirtesen.ru|womanhit.ru|belsat.eu|gearbest.com|op.gg|novayagazeta.ru|pocket-lint.com|turunculevye.com|bloomberght.com|stardima.com|aksam.com.tr|portamur.ru|fishki.net|ranking.goo.ne.jp|ohmymag.com|mgronline.com|semnasem.org|bluradio.com|carwale.com|finanznachrichten.de|home.kingsoft.jp|sputnik.kg
 !
+||robot.net.ua/upload/crm/site_button/loader_$third-party
+||notify.hindustantimes.com/resources/js/dm-script.js
+||chitai-gorod.ru/*/js/push_subscribe_firebase.js
 ||1mg.com/notifyvisitors_push/
 africaintelligence.com##.message-push-notification
 aliexpress.ru##div[class^="WebPush_WebPush"]
@@ -23684,7 +23694,7 @@ kojikisokuhou.com##.notification
 /notification.js$domain=jauns.lv|a2zapk.com|rt.com
 tproger.ru##.push-modal
 carwale.com#?#div[data-skin="bg-transparent"] > div > div > button:contains(Subscribe Now):upward(2)
-bursahayat.com.tr,bursahakimiyet.com.tr###notificationPopup
+sozbursa.com,bursahayat.com.tr,bursahakimiyet.com.tr###notificationPopup
 ||s.akiba-souken.com/firebase/push_notification.js
 ||boredpanda.com/blog/wp-content/themes/boredpanda/push/sw.js
 ||trashbox.ru/push-worker.js
@@ -24248,6 +24258,7 @@ techwafer.com,moonshot.news,radiokp.ru,brestcity.com,aykiri.com.tr,yenicaggazete
 turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.as
 turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com###_s_fan
 !
+reform.by,reform.news##blockquote.info
 vestiprim.ru##.fullsingup
 gymglish.com#%#//scriptlet("set-cookie", "a9-beforeyouleave-popin", "1")
 fcbayern.com##div[class^="newsletter__Wrapper"]
@@ -34631,6 +34642,8 @@ theguardian.com##.contributions__adblock
 ||contributions.guardianapis.com^
 !
 ! SECTION: Self-promo - Regular rules
+101.ru##.bnr-wide
+101.ru##.bnr-flyup__wrapper
 radarbox.com##.student-offer
 wired.com##.paywall-bar__consumer-marketing-unit
 medvestnik.by##body .container .bannergroupbanner-top
