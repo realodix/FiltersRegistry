@@ -138,9 +138,9 @@ If you want to help with filters translations, you can join us on Crowdin: https
 Please learn more about translating our products: https://kb.adguard.com/general/adguard-translations
 
 ## <a id="templates"></a> Filters templates
-`@include` directive allows to include contents of specified file into the filter.
+`@include` directive allows to include the content of specified file into the filter.
 
-If you want to add a filter and keep all their rules during optimization, use the `/notOptimized` parameter.
+If you want to add a filter and keep all its rules during optimization, use the `/notOptimized` parameter.
 
 Example:
 ```
