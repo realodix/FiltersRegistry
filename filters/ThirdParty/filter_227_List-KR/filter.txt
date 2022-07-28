@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.728.3
+! OriginalVersion: 2022.728.6
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -850,6 +850,7 @@ edit.incruit.com##div[class*="Banner"]
 ! ##section[class*="-ad"]
 m.inven.co.kr##section[class*="-ad"]
 !
+googlewph.com,gyeomipang.co.kr###right-sidebar
 club.pdpop.com##div[id^="lftwing"]
 www.ebs.co.kr##div[class^="codad_ban"]
 www.ebs.co.kr##.evt_area
@@ -1530,6 +1531,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+googlewph.com,gyeomipang.co.kr#$##primary { width: 100% !important }
 www.ebs.co.kr#$#.ebs_item .inner > div[class] { width: 50% !important; }
 megabox.co.kr#$#header.main-header { top: 0px !important; }
 newsis.com#$#.articleView + .aside .asideBox.line { border-top: none !important; }
@@ -1763,7 +1765,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 !
-meeco.kr#%#//scriptlet("prevent-setTimeout", ".adsbygoogle")
+meeco.kr#%#//scriptlet("abort-current-inline-script", "$", ".adsbygoogle")
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=nooptext,domain=spotvnow.co.kr
 ||opgg-gnb.akamaized.net/static/images/banners/$redirect=1x1-transparent.gif
 @@||googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=op.gg
@@ -1779,7 +1781,7 @@ webtv.dothome.co.kr##.adblock-on
 persnacons.tistory.com#@#.topAD
 noonnu.cc#%#//scriptlet("abort-on-property-read", "localStorage.getItem", "adBlockMethodology")
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ff14angler.com
-meeco.kr,uda1004.tistory.com,exey.io,ff14angler.com#@#ins.adsbygoogle
+uda1004.tistory.com,exey.io,ff14angler.com#@#ins.adsbygoogle
 webtv.dothome.co.kr,lover91.net#@#.adsbygoogle
 lover91.net#$#.modal { position: unset !important; }
 ||adblockanalytics.com^$xmlhttprequest,redirect=nooptext,domain=1412.rest
@@ -1822,6 +1824,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||tv.kakao.com/embed/player/image/ads.png$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 @@||videoads.kakao.com/adserver/api/v2/vmap$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=meeco.kr
 @@||cdn.tapioni.com/vast-im.js$domain=lover91.net
 meeco.kr#@#ins.adsbygoogle
 @@||iphonedev.co.kr^$generichide
