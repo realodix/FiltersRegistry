@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.728.8
+! OriginalVersion: 2022.729.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -312,6 +312,13 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||ohmytaxi.cafe24.com/banner/
+||ohmytaxi.cafe24.com/img/spontitile.gif
+||ggjil.com/happy_banner_scroll.php
+||ggjil.com/master/banner/
+||cadgraphics.co.kr/UPLOAD/board/
+||mt.co.kr/news/articleBanner/
+||mt.co.kr/news/wingBanner/
 ||pdpop.com/images/images_re/banner/
 /^https:\/\/dvdprime\.com\/g2\/data\/cheditor[0-9]\/[0-9]{4}\/[0-9]{14}_[a-z]{8}\./
 ||boannews.com/images/event
@@ -852,6 +859,8 @@ edit.incruit.com##div[class*="Banner"]
 ! ##section[class*="-ad"]
 m.inven.co.kr##section[class*="-ad"]
 !
+ggjil.com##iframe[id^="happy_banner_scroll_"]
+cadgraphics.co.kr##header > div[style].wrap
 googlewph.com,gyeomipang.co.kr###right-sidebar
 club.pdpop.com##div[id^="lftwing"]
 www.ebs.co.kr##div[class^="codad_ban"]
@@ -1600,6 +1609,7 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+ohmytaxinews.com#?#table[bgcolor][cellspacing] td[bgcolor] table[width][cellspacing]:not([bgcolor]):has(tr marquee#innovationGA)
 dvdprime.com#?##view_warning .relative:has(ins.adsbygoogle):not([class*="_content"])
 namu.wiki#?#div[class*="senkawa"] div[class] > div[id]:not([class]):not(:has(> *))
 op.gg#?#div:not([id]):has(> div:not([class]):not([id]) > div[data-publisher-ref$="-ad"])
