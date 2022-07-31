@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.731.1
+! OriginalVersion: 2022.731.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -880,6 +880,9 @@ edit.incruit.com##div[class*="Banner"]
 ! ##section[class*="-ad"]
 m.inven.co.kr##section[class*="-ad"]
 !
+miraetv.net##div[id*="-banner-"]
+miraetv.net##.gdl-left-sidebar
+ddengle.com###content > .article > div[class][style]
 sports.chosun.com##div[style].row.no-gutters > .col-3:not([style])
 ggjil.com##iframe[id^="happy_banner_scroll_"]
 cadgraphics.co.kr##header > div[style].wrap
@@ -1308,7 +1311,7 @@ bodnara.co.kr##iframe[src^="/advert/advert.php"]
 m.naver.com###MM_aside_smartad_container
 windowsforum.kr##a[href^="https://www.dothome.co.kr/ad/"][target="new"]
 pann.nate.com##.sidearea.talktalk > .sideiframe
-thisisgame.com##div[id^="ad-"]
+ddengle.com,thisisgame.com##div[id^="ad-"]
 thisisgame.com###divMsnAD
 thisisgame.com##iframe[src^="//ad"][src*=".thisisgame.com/ad"]
 dschool.co.kr##a[href^="/ws/include/banner_link.asp?"][target="_blank"]
@@ -1564,6 +1567,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+miraetv.net#$#.gdl-page-item { width: 100% !important; }
 sports.chosun.com#$#div[style].row.no-gutters > .col-6 { max-width: 75% !important; flex-basis: 75% !important; }
 googlewph.com,gyeomipang.co.kr#$##primary { width: 100% !important }
 www.ebs.co.kr#$#.ebs_item .inner > div[class] { width: 50% !important; }
