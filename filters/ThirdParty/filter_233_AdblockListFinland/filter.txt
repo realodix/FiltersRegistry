@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 31July2022v1
+! OriginalVersion: 01August2022v1
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -506,6 +506,7 @@ irc-galleria.net,tilannehuone.fi##div[id^=Nostemedia_Desktop]
 irc-galleria.net##div[id^=open_]
 iskelma.fi##section.sbs-articleitems[data-module_position_id="814"]
 is.fi###kumppaneiden-tarjoukset
+is.fi##.advertorial-teaser
 is.fi##.border-b.lg\:w-main-lane.bg-is-ad-blue.mb-16
 is.fi##.is-advertorial.external.full-width.teaser
 is.fi##.ticker-promo-10
@@ -1066,7 +1067,6 @@ www.io-tech.fi#?#.artikkeli-slide:has(img[src*="-nostokuva"])
 www.io-tech.fi#?#.artikkeli-slide:has(img[src*="Ad-otsikko"])
 www.io-tech.fi#?#.artikkeli-slide:has(img[src*="natiivi-otsikko"])
 www.io-tech.fi#?#.view-full.uutinen:has(a[href="https://www.io-tech.fi/category/mainos/"])
-www.is.fi##.advertorial-teaser
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###homeBottomBoxBanner
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###homeTopBoxBanner
 www.nettiauto.com,www.nettikaravaani.com,www.nettikone.com,www.nettimarkkina.com,www.nettimokki.com,www.nettimoto.com,www.nettivaraosa.com,www.nettivene.com,www.nettivuokraus.com###huge_banner
@@ -1329,9 +1329,8 @@ kotiliesi.fi##.placeholder
 @@||click.redditmail.com^$~third-party
 ! Lowe's list exception, cookie dialog won't open
 @@||googletagmanager.com/gtm.js$script,domain=arvopaperi.fi|kauppalehti.fi|mediuutiset.fi|mikrobitti.fi|talouselama.fi|tekniikkatalous.fi|tivi.fi|uusisuomi.fi
-! To fix the opening of dna.fi / cdon.fi product links on hinta.fi
-@@||adform.net^$~third-party
-@@||tradedoubler.com^$~third-party
+! To fix the opening of dna.fi product links on hinta.fi
+@@||track.adform.net/*dna.fi/*$document,domain=track.adform.net
 ! Unbreak Telia password change (maybe other functions as well), endless loading
 @@||telia.fi/fi/B2B_Portal/resources/js/b2b.portal.eventTracking.js$script,domain=telia.fi
 ! Unbreak netstat.ayy.fi
@@ -1358,3 +1357,5 @@ tuntopalvelu.fi#@#.list-ads
 @@||almamedia.fi/almacmp/$script
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/commit/8bf469a005a552a6c6819ed8daa92aa1aa72da42
 ! https://github.com/easylist/easylist/pull/11542
+! https://github.com/easylist/easylist/issues/12778
+@@||fwmrm.net/crossdomain.xml$xmlhttprequest,domain=embed.viaplay.com
