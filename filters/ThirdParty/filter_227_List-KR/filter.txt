@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.731.4
+! OriginalVersion: 2022.801.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -313,6 +313,11 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||noteforum.co.kr/file/_banner/
+||susailbo.com/banner/
+||esuwon.net/data/esuwon_net/banner/
+||cgeimage.commutil.kr/phpwas/restmb_allidxmake.php
+||cgeimage.commutil.kr/smartfn_www/img/*/*_banner*.
 ||db-times.com/banner/
 ||dailymedipharm.com/bannerManager/
 ||djmail.co.kr/data/intnews_net/banner/
@@ -880,6 +885,10 @@ edit.incruit.com##div[class*="Banner"]
 ! ##section[class*="-ad"]
 m.inven.co.kr##section[class*="-ad"]
 !
+noteforum.co.kr##table[width][cellspacing][cellpadding][border] tr:not([height]) > td[width]:not([id]) ~ td[id]
+esuwon.net###r_aside center > div[class="bn"]
+smartfn.co.kr##.mt30 .con_rt > style + div[style]:not([class])
+smartfn.co.kr##div[class*="Ad"]
 miraetv.net##div[id*="-banner-"]
 miraetv.net##.gdl-left-sidebar
 ddengle.com###content > .article > div[class][style]
@@ -1567,6 +1576,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+noteforum.co.kr#$#table[style][width][cellspacing][cellpadding] tr[valign] > td[style] > div[style] { width: 100% !important; }
 miraetv.net#$#.gdl-page-item { width: 100% !important; }
 sports.chosun.com#$#div[style].row.no-gutters > .col-6 { max-width: 75% !important; flex-basis: 75% !important; }
 googlewph.com,gyeomipang.co.kr#$##primary { width: 100% !important }
@@ -1636,6 +1646,7 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+noteforum.co.kr#?#table[style][width][cellspacing][cellpadding] tr[valign] > td[style]:has(img[src^="/file/_banner/"])
 sports.chosun.com#?#.popular-news-widget:has(> *:matches-css(display: none))
 pohangnews.co.kr#?#table td[valign][width] table > tbody > tr:not([bgcolor]) > td[height]:has(a[target="_blank"])
 ohmytaxinews.com#?#table[bgcolor][cellspacing] td[bgcolor] table[width][cellspacing]:not([bgcolor]):has(tr marquee#innovationGA)

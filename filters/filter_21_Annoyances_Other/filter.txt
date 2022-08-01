@@ -88,6 +88,9 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/124908
+meduza.io#?#.GeneralMaterial-article > hr[class^="SimpleBlock-module_divider__"]
+meduza.io#?#.GeneralMaterial-article > p[class^="SimpleBlock-module_p__"] > a[href$="-skachat-v-pdf"]:upward(1)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125403
 ||static.insurancedekho.com/pwa/js/bundle/Newsdetail.
 insurancedekho.com##.leadformV3
@@ -5646,6 +5649,12 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/125122
+recipesdelite.com#%#//scriptlet("adjust-setInterval", "/download|Please/", "", "0.02")
+! https://github.com/AdguardTeam/AdguardFilters/issues/125037
+edumaz.com#%#//scriptlet("adjust-setInterval", "downloadButton", "", "0.02")
+! https://github.com/AdguardTeam/AdguardFilters/pull/125964
+malzero.xyz#%#//scriptlet("adjust-setTimeout", "count", "", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125496
 notipostingt.com#%#//scriptlet("adjust-setInterval", "window.location.href= atob(", "1000", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123883
@@ -7199,7 +7208,7 @@ xiebruce.top#$##main .entry-content p { -webkit-touch-callout: default!important
 sajuplus.net,tistory.com,bingotingo.com,promocode99.in,nawalakarsa.id#$#html > body * :not(input):not(textarea) { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 satupiston.com,enttechub.com,geograpik.blogspot.com#$#.post-body { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 ltnovel.com,lightnovelpub.com,lightnovelworld.com#$#.chapter-content { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
-ezms.link,comeinsidebox.com,7days2die.info#$#:not(input,select,textarea) { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
+ezms.link,comeinsidebox.com,7days2die.info#$#:not(input,select,textarea):not(#style_important) { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
 mediafire.com#$#.nonDLContentWrap { min-height: 1300px !important; }
 lanacion.com.ar#$#.sidebar__aside { background: none!important; }
 gamegame.kr#$#body div { -webkit-touch-callout: default!important; -moz-user-select: text!important; -webkit-user-select: text!important; -ms-user-select: text!important; -o-user-select: text!important; user-select: text!important; -khtml-user-select: text!important; }
