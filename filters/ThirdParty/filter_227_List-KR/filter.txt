@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.803.8
+! OriginalVersion: 2022.803.10
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -315,6 +315,8 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||cast.imp.joins.com/bid/
+||fs.jtbc.co.kr/home/img/banner/
 ||yonhapnewsi.com/n_news/nad/
 ||yhinews.com/cms_images/banner/
 ||ycehn.net/bannerManager/
@@ -531,7 +533,6 @@
 ||image.ichannela.com/images/common/shinhan_
 ||entertainpost.com/wp/wp-content/uploads/newPS/ad/
 ||entertainpost.com/wp/wp-content/uploads/newPS/css/sub/right_ad.css
-||fs.jtbc.joins.com/home/img/banner/
 ||res.afreecatv.com/script/da/af_da_block.js
 ||res.afreecatv.com/script/da/ad_check.js
 ||ojsfile.ohmynews.com/BBS_ADM_FILE/
@@ -862,7 +863,7 @@ dvdprime.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,hani.co.kr,m.s
 ! ##div[class$="_ad"]
 kyobobook.co.kr,news.naver.com,news.daum.net,instiz.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net,busan.com##div[class$="_ad"]
 ! ##div[class^="ad_"]
-dvdprime.com,nocutnews.co.kr,news.sbs.co.kr,kyobobook.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.joins.com,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
+dvdprime.com,nocutnews.co.kr,news.sbs.co.kr,kyobobook.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.co.kr,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 ! ##div[class^="ad-"]
 police112.co.kr,dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 ! ##.banner
@@ -872,7 +873,7 @@ order.kyobobook.co.kr,newstomato.com,newsen.com,toomics.com,m.ytn.co.kr,djtimes.
 ! ##div[class^="ad"]
 ytn.co.kr,www.ebs.co.kr,newsis.com,search.danawa.com,ppomppu.co.kr,m.newsen.com,peterpanz.com,jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m.moneys.mt.co.kr,basketkorea.com,m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com##div[class^="ad"]
 ! ##div[class^="banner_"]
-www.ebs.co.kr,search.11st.co.kr,prod.danawa.com,auth.danawa.com,socialvalue.kr,news.jtbc.joins.com,etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
+www.ebs.co.kr,search.11st.co.kr,prod.danawa.com,auth.danawa.com,socialvalue.kr,news.jtbc.co.kr,etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
 ! ##div[class$="Banner"]
 hungryapp.co.kr,rhythmer.net##div[class$="Banner"]
 ! ##div[class$="banner"]
@@ -904,6 +905,8 @@ edit.incruit.com##div[class*="Banner"]
 ! ##section[class*="-ad"]
 m.inven.co.kr##section[class*="-ad"]
 !
+news.jtbc.co.kr##div[id^="right_banner"]
+news.jtbc.co.kr###articlebody > div[style]:not([itemprop="articleBody"]).article_content
 modoodoc.com##a[id^="ad-"]
 modoodoc.com##div[class~="hospital-images-box"] ~ .row > .col-4
 namu.wiki##iframe[src*="//arca.live/external/callad"]
@@ -1162,8 +1165,6 @@ www.instiz.net##span#menufoot > .hot_under
 m.joongna.com##article[class^="SearchList_listWrap"] + div
 www.naver.com##div[id^="veta_"]
 mimint.co.kr,bada.io,arca.live##div.ad
-news.jtbc.joins.com##div[id^="right_banner"]
-news.jtbc.joins.com###articlebody > div[style]:not([itemprop="articleBody"]).article_content
 ohmynews.com###div10Sticky
 ohmynews.com##div[class^="AD-"]
 ohmynews.com##div[class^="new_ad"]
@@ -1808,7 +1809,6 @@ humoruniv.com#%#//scriptlet("set-constant", "naver_adpost_ch1", "noopFunc")
 humoruniv.com#%#//scriptlet("set-constant", "naver_adpost_ch2_backfill", "noopFunc")
 humoruniv.com#%#//scriptlet("set-constant", "show_adpost", "noopFunc")
 newspic.kr#%#//scriptlet("abort-on-property-write", "document.cookie", "init")
-jtbc.joins.com#%#//scriptlet("set-constant", "jtbcplayer.config.ad", "false")
 koreapas.com#%#//scriptlet("set-constant", "random_imglink", "noopFunc")
 pandora.tv#%#//scriptlet("set-constant", "isnoad_vod", "true")
 pandora.tv#%#//scriptlet("set-constant", "isnoad_banner", "true")
