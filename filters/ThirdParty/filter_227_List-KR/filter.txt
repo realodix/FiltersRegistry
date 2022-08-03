@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.803.2
+! OriginalVersion: 2022.803.8
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -9,6 +9,7 @@
 !
 ! Version must be UTC format.
 !
+||adxcorp.kr^
 ||mmnneo.com^
 ||amazon-adsystem.com^
 ||tsyndicate.com^
@@ -314,6 +315,11 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||yonhapnewsi.com/n_news/nad/
+||yhinews.com/cms_images/banner/
+||ycehn.net/bannerManager/
+||ycehn.net/popupManagerVer2/
+||osannews.net/data/osannews_net/banner/
 ||ytn.co.kr/img/banner/
 ||d23zwvh2kbhdec.cloudfront.net/media/public/sale/
 ||opgg-gnb.akamaized.net/static/images/banners/$image
@@ -860,7 +866,7 @@ dvdprime.com,nocutnews.co.kr,news.sbs.co.kr,kyobobook.co.kr,mbiz.heraldcorp.com,
 ! ##div[class^="ad-"]
 police112.co.kr,dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 ! ##.banner
-funshop.co.kr,m.sedaily.com,bloter.net,mosen.mt.co.kr,hinfomax.kr,hinfomax.co.kr,pressian.com,kukinews.com##.banner
+yhinews.com,funshop.co.kr,m.sedaily.com,bloter.net,mosen.mt.co.kr,hinfomax.kr,hinfomax.co.kr,pressian.com,kukinews.com##.banner
 ! ##div[class$="_banner"]
 order.kyobobook.co.kr,newstomato.com,newsen.com,toomics.com,m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
 ! ##div[class^="ad"]
@@ -1834,12 +1840,13 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ||tv.kakao.com/embed/player/image/ads.png$redirect=32x32-transparent.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
+! meeco.kr
+meeco.kr#$#.xe_content { opacity: 1 !important; }
+meeco.kr#%#//scriptlet("abort-current-inline-script", "$", ".adsbygoogle")
 !
-meeco.kr#%#//scriptlet("prevent-setTimeout", "$('.adsbygoogle')")
 !#if (adguard_app_ios || adguard_ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=1412.rest
 !#endif
-meeco.kr#%#//scriptlet("abort-current-inline-script", "$", ".adsbygoogle")
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=nooptext,domain=spotvnow.co.kr
 @@||googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=op.gg
 stockinfo7.com#%#//scriptlet("prevent-setTimeout", "ad.innerHTML.replace")
