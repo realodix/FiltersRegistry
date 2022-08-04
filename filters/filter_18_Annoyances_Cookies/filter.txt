@@ -2137,6 +2137,11 @@ whats-on-netflix.com#$#html.sp-message-open body { overflow-y: visible !importan
 ||cdn.privacy-mgmt.com^$important,domain=promipool.de|android-hilfe.de|wsj.com
 !
 !
+igbce.de#$#body.orejimeBody-WithModalOpen { position: static !important; overflow: auto !important; }
+igbce.de#$#.orejime-NoticePortal { display: none !important; }
+betriebsrat.de#$#.modal-no-scroll-body { overflow: auto !important; }
+betriebsrat.de#$##cookie-modal-app { display: none !important; }
+beko.com#$#body { overflow: auto !important; }
 ikea.com.cy###required-cc
 ikea.com.cy##.nvcookies
 dbl-ev.de##.tx-ggcookiebanner
@@ -4656,7 +4661,7 @@ formulare-bfinv.de###datenschutz
 parlament.gv.at##.cookieContent
 parlament.gv.at##.popupOverlay
 tt.com##nmo-consent-banner
-schummelmelder.de,staedtetag.de,ifw-kiel.de,oeko.de,foodwatch.org,gruene-bundestag.de,zfk.de##.cn-wrapper
+ngg.net,schummelmelder.de,staedtetag.de,ifw-kiel.de,oeko.de,foodwatch.org,gruene-bundestag.de,zfk.de##.cn-wrapper
 ||consent.finanzen.net^
 loomi.tv,nv-online.de##.cookie-background
 ammerlaender-versicherung.de#$#.cookieModalBackdrop { display: none !important; }
@@ -11407,7 +11412,7 @@ oventrop.com#%#//scriptlet("abort-current-inline-script", "$", "ConsentModalCont
 gq-magazine.co.uk#%#AG_onLoad(function() { setTimeout(function() { var el = document.querySelector('button[id="onetrust-accept-btn-handler"]'); if(el) { el.click(); } }, 800); });
 rxlist.com#%#//scriptlet('set-cookie', 'gdpreu', '1')
 mdv-group.com#%#//scriptlet('remove-class', 'cookie-hint', 'body.cookie-hint')
-sourcepoint.theguardian.com#%#AG_onLoad(function(){if(window.location.href.includes("consentUUID")){var a=new MutationObserver(function(){var b=document.querySelector('button[title^="Yes, I’m happy"]');b&&(a.disconnect(),b.click())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
+theguardian.com#%#AG_onLoad(function(){if(window.location.href.includes("consentUUID")){var a=new MutationObserver(function(){var b=document.querySelector('button[title^="Yes, I’m happy"]');b&&(a.disconnect(),b.click())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
 sourcepoint.wetter.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button[title*="Einstellungen"]');b&&b.click();},1000);setTimeout(function(){var c=document.querySelectorAll('.page-action'); c[0]&&c[0].click();},500);setTimeout(function(){var d=document.querySelectorAll('.is-checked'); if(d.length>0){d[0].click();}},500); var f=document.querySelector('button[title="Auswahl speichern""]'); setTimeout(function(){f&&f.click();},900);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},10E4)}});
 cmp-sp.reisereporter.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,1,0,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelectorAll('.page-action'); c[0]&&c[0].click();},300);setTimeout(function(){var d=document.querySelector('.is-checked'); d.click();},800); var f=document.querySelector('button.no-children[path="\[0,2,0,0\]"]'); setTimeout(function(){f&&f.click();},500);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 freeletics.com#%#//scriptlet('set-cookie', 'cookie_consent', 'false')
@@ -11870,6 +11875,11 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !+ PLATFORM(windows, mac, android)
 @@||geolocation.onetrust.com/cookieconsentpub/*/geo/location
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/125871
+!#if (adguard_ext_android_cb)
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=beko.com
+beko.com#@##onetrust-consent-sdk
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126249
 @@||cdn.privacy-mgmt.com^$domain=gala.fr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126146
