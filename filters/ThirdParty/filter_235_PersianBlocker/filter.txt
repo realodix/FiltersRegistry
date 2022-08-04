@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 0.5 days
-! Last modified: 2022-08-03
+! Last modified: 2022-08-04
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -1033,6 +1033,8 @@ lahzeakhar.com#%#//scriptlet('ubo-set.js', 'customnotify', 'noopFunc')
 ||lahzeakhar.com/ShowAds
 ! ||lahzeakhar.com/sw.js
 ! >> M <<
+! https://github.com/MasterKia/PersianBlocker/issues/27
+mobo.news##.ads-full-banner-img
 ! https://github.com/MasterKia/PersianBlocker/commit/95d658b142fc88014fad465373e07ceeb75f2fc6#commitcomment-78854099
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1189425786
 mopon.ir#%#//scriptlet('ubo-aeld.js', 'click', '720')
@@ -1344,35 +1346,20 @@ softgozar.com##.DTOPBan
 ! https://github.com/uBlockOrigin/uAssets/issues/10883
 ! https://github.com/MasterKia/PersianBlocker/issues/23
 ! کاربران باید این آزادی را داشته باشند که چه چیزی وارد مرورگرشان میشود، نه صاحب سایت
-soft98.ir#%#//scriptlet('ubo-nostif.js', 'hasAttributes')
-soft98.ir#%#//scriptlet('ubo-nostif.js', '{e()}')
-soft98.ir#%#//scriptlet('ubo-nosiif.js', 'remove')
-soft98.ir#$#article.card > div[class]:nth-child(5) { pointer-events:none !important }
-soft98.ir##[class$="-link"] > .text-danger:upward(2)
-soft98.ir,~forum.soft98.ir#$?#img[src*="forum.soft98.ir/"]:upward(1) { pointer-events:none !important }
-! ! soft98.ir##div[id] img[src*="file.soft98.ir"]:remove()
-soft98.ir#$?#[class^=b][class*=d][class$="-link"]:upward(2) { remove: true; }
-soft98.ir#$?#.b8d4y3 { remove: true; }
-soft98.ir#$?##logo__wrap > .row { remove: true; }
-soft98.ir#$?#[src*="file.soft98.ir"]:upward(3) { remove: true; }
-soft98.ir#$?#[title*="خرید"]:upward(2) { remove: true; }
-soft98.ir#$?#div[id] a[title*="azon"]:upward(2) { remove: true; }
-soft98.ir#$?##header img[src*="file.soft98.ir"]:upward(2) { remove: true; }
-soft98.ir#$?##linkdo1oni { remove: true; }
-soft98.ir#$?#[id*="linkd"] { remove: true; }
-soft98.ir###content2top > .row > div.col-l2g:nth-of-type(2)
-soft98.ir#$?#.row > div.col-l2g:nth-of-type(2) { remove: true; }
-soft98.ir#$?#img[src*="hostdl"]:upward(3) { remove: true; }
-soft98.ir#$?#.bg-light.container { remove: true; }
-soft98.ir#$?##sidebar { remove: true; }
-soft98.ir#$##main { max-width: 100% !important; flex-grow: 1 !important; }
+soft98.ir#$?#[src*="file.soft98.ir"]:upward(5) { remove: true; }
+soft98.ir#$?#[href*="linkdoni.soft98.ir"]:upward(3) { remove: true; }
+soft98.ir#$?#[href*="instagram.com"]:upward(5) { remove: true; }
+soft98.ir#$?#[src*="cdn.hostdl.com"]:upward(6) { remove: true; }
+soft98.ir#$?#.text-center.card-body:not(:has([src*="cdn.soft98.ir"])):upward(2) { remove: true; }
 ||linkdoni.soft98.ir^$all
-||file.soft98.ir^$all
-||cdn.hostdl.com^$all,domain=soft98.ir
 ||iranicard.ir^$all,domain=soft98.ir
 ||asiatech.ir^$all,domain=soft98.ir
-||webzi.ir^$all,domain=soft98.ir
-||hostdl.com^$all,domain=soft98.ir
+!#if ext_ublock
+soft98.ir#$#.show.t2oast::before { content: "برای خلاص شدن از شر این پیغام مزخرف کافیست به تنظیمات افزونه مسدودسازتان بروید و لیست PersianBlocker و Quick-Fixes را بروز کنید." !important; color: #E6000D !important; visibility: visible; font-size: xx-large !important; }
+!#endif
+!#if adguard
+soft98.ir#$#.show.t2oast::before { content: "برای خلاص شدن از شر این پیغام مزخرف کافیست به تنظیمات افزونه مسدودسازتان بروید و لیست PersianBlocker را بروز کنید." !important; color: #E6000D !important; visibility: visible; font-size: xx-large !important; }
+!#endif
 @@||soft98.ir^$generichide
 ! TOOD: Keep an eye on it
 ! ||subf2m.co/files/*.gif
@@ -1709,6 +1696,8 @@ video-learn.ir#@#.header-adv
 vista.ir##[href^="/ad/"]
 vista.ir##.textad
 ! >> W <<
+! https://github.com/MasterKia/PersianBlocker/issues/29
+||wcity4.site/wp-json/wp-statistics^
 wikisemnan.com###text-12
 wikisemnan.com###text-24
 wikisemnan.com#@#.ads-image
