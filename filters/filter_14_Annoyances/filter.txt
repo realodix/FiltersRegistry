@@ -2137,6 +2137,7 @@ whats-on-netflix.com#$#html.sp-message-open body { overflow-y: visible !importan
 ||cdn.privacy-mgmt.com^$important,domain=promipool.de|android-hilfe.de|wsj.com
 !
 !
+beko.com#$#body { overflow: auto !important; }
 ikea.com.cy###required-cc
 ikea.com.cy##.nvcookies
 dbl-ev.de##.tx-ggcookiebanner
@@ -11870,6 +11871,11 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !+ PLATFORM(windows, mac, android)
 @@||geolocation.onetrust.com/cookieconsentpub/*/geo/location
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/125871
+!#if (adguard_ext_android_cb)
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=beko.com
+beko.com#@##onetrust-consent-sdk
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126249
 @@||cdn.privacy-mgmt.com^$domain=gala.fr
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126146
