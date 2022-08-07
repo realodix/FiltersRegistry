@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 04August2022v4
+! OriginalVersion: 06August2022v8
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -134,7 +134,6 @@ _mainosnappi.
 ###ylamainokset
 ###ylamainos
 ##.adbox_content
-##.bottomads
 ##.card--native
 ##.dfpBoxBottom
 ##.dfpListNativeBanner
@@ -176,14 +175,10 @@ _mainosnappi.
 ##div[class*=element--nativead]
 ##div[class*=newsFrontAd]
 ##div[class="ad container-right"]
-##div[class="ad partners box"]
 ##div[class=AgAdCarousel_Container]
 ##div[class=AgAdCarousel_LightBox]
-##div[class=ad-wrapper]
-##div[class=block-ad]
 ##div[id=commercial-carousel]
 ##div[id^=ads-content-bottom]
-##td[class=adbanner]
 ~nettimokki.com##div[id*=AdContainer]
 ! -----GENERAL FILTERS END-----
 ! -----SPECIFIC FILTERS-----
@@ -205,6 +200,8 @@ afterdawn.com#?#.video:has(+ div#bb-iawr-defaultPlayout-afterdawn_com_)
 afterdawn.com,puhelinvertailu.com#?#br:has(+ br + ins[class=adsbygoogle])
 afterdawn.com,puhelinvertailu.com#?#br:has(+ ins[class=adsbygoogle])
 aijaa.com##div.text-center.col-sm-6 > a[rel$=nofollow]
+aitiydenihme.fi,askelterveyteen.com,mielenihmeet.fi,myanimals.com##.bc--grey-neutral-50
+aitiydenihme.fi,askelterveyteen.com,mielenihmeet.fi,myanimals.com##.card-article-ads
 akaanseutu.fi,lvs.fi,shl.fi,ylojarvenuutiset.fi##[href="/tilaa-lehti"]
 aksa.fi##.vaihtuvamainos
 aksa.fi##div[class="w-full md:w-2/5 pt-6 md:pt-0 pl-0 md:pl-8"]
@@ -264,7 +261,6 @@ arvopaperi.fi##.ads-parade-wrapper
 arvopaperi.fi##a[href^="https://www.arvopaperi.fi/kumppanisisallot/"][target="_self"]:not(section > a)
 arvopaperi.fi#?#div#skyscraper-height-div > aside > div:has(a[href^="https://www.arvopaperi.fi/kumppanisisallot/"])
 arvopaperi.fi,uusisuomi.fi#?#[width]:has(.lazyload-wrapper):not(aside)
-askelterveyteen.com##.ads__article__header
 assembly.org#?#div[class] + div[class] ~ div[class]:has(> .lazyload-wrapper [data-adfscript])
 assembly.org#?#section:not(section[id], section[class]):has-text(Mainos)
 audiovideo.fi##.head.the-wrap
@@ -595,7 +591,7 @@ kiinteistolehti.fi##.mpc-row.vc_custom_1515749959295.vc_row-fluid.wpb_row.vc_row
 kiinteistolehti.fi##.mpc-row.vc_custom_1515750168978.vc_row-fluid.wpb_row.vc_row
 kilipailut.fi##.bannerlink
 kinuskikissa.fi##app-ad
-klangi.fi##.banner
+klangi.fi,paakallo.fi##.banner
 kodinviilennys.fi#?#.wp-block-image:has-text(mainos)
 kokemaenjokilaakso.fi#?#.ai-attributes:has-text(Mainos)
 kokemaenjokilaakso.fi#?#p:has([alt^=Mainos])
@@ -711,7 +707,6 @@ meillakotona.fi,terve.fi##div[class*=feed__adSlot]
 metropoli.net##.ads-desktop
 metropoli.net##.ads-mobile
 metropoli.net#?#.block-box.news-post:has(a[href^="https://www.metropoli.net/rahapelit/"])
-mielenihmeet.fi##.card-article-ads
 mikrobitti,talouselama.fi##div[id|=almad]
 mikrobitti.fi##.is-visible.LazyLoad
 mikrobitti.fi##aside > div > div > a[href^="https://studio.mikrobitti.fi/mikrobitti-studiovieras/"]
@@ -1075,7 +1070,10 @@ viisasraha.fi##.d-md-block.d-lg-block.d-none
 viisasraha.fi##.kumppani-artikkelit
 viisasraha.fi##div[class*=native-article] > div[class=ezrichtext-field] > p > a[href^="https://danskebank.fi/"]
 viisasraha.fi##div[class^=banner] > a[href="https://www.viisasraha.fi/Taloushaltuun"]
+viranomaisuutiset.fi##.td-a-rec
 viranomaisuutiset.fi##[href^="https://track.adtraction.com/"]
+viranomaisuutiset.fi##div[id|=nm-300x300]
+viranomaisuutiset.fi#?#div[id|=polii]:has(br + br + div[id|=nm-300x300] + br + br)
 voice.fi##.article-sponsored
 voice.fi##a[class="article-item articlestream-item unloaded"][data-sponsored="1"]
 voice.fi##section[class^=sbsads] + section[class^="sbs-articleitems full-size-list"][data-module_position_id="612"]

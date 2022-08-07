@@ -19095,7 +19095,7 @@ racefans.net##.sd-social
 gamespot.com##.share--column
 forbes.com##.article-sharing
 ! Title: 🔮 I Don't Want to Download Your Browser
-! OriginalVersion: 25May2022v1-Beta
+! OriginalVersion: 06August2022v1-Beta
 ! Expires: 5 days
 ! Description: Do you already have a favourite browser or PDF reader? Are you tired of seeing "Try out [some browser] now!" on some websites? Then this is a list for you!
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -19138,6 +19138,10 @@ softonic.com##[src*="/avastsecurebrowser/"]
 ||united-infos.net^$third-party
 ! ——— All browsers except Brave ———
 archive.is,archive.today,archive.vn,archive.fo,archive.md,archive.li,archive.ph,archivecaslytosk.onion,archiveiya74codqgiixo33q62qlrqtkgmcitqx5u2oeqnmn5bpcbiyd.onion,btdig.com#%#//scriptlet('ubo-acis.js', 'document.cookie', 'document.location.href')
+! ——— Unknown browsers ———
+! https://www.kongregate.com/games/hapiwakuproject/incremental-epic-hero (05/08/2022)
+##.browser-notice--downloads
+kongregate.com##.browser-notice
 ! ——— Adobe Reader / Adobe Acrobat ———
 ! https://www.asrock.com/mb/Intel/Z390%20Phantom%20Gaming%209/index.asp#Manual
 asrock.com###Manual > .Notice
@@ -19167,7 +19171,7 @@ deezer.com#?#.page-alerts:has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 02August2022v1
+! OriginalVersion: 06August2022v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -19355,12 +19359,16 @@ nijie.info##.warning_illust
 nijie.info##.twit-button
 ! Onet Zapytaj
 ! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-520486904
-! Removes a (relatively friendly) account creation box
+!! Removes a (relatively friendly) account creation box
 zapytaj.onet.pl##.know-better-answer
 ! Instagram
 ! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-534171953
-! Removes a login overlay
+!! Removes a login overlay
 instagram.com###fb-root + div[role=presentation]
+! https://www.instagram.com/explore/tags/melowy/?hl=en (2022-08-05)
+!! "Log in to continue"
+instagram.com##div[style*=spectrum-cherry]
+instagram.com##div[class^=" _"][style]
 ! SpanishDict
 ! https://github.com/DandelionSprout/adfilt/issues/7#issuecomment-559903607
 ! Removes a one-time account creation prompt
@@ -20658,7 +20666,7 @@ cinerama.uz##div[class^=MovieDescription_rating__]:nth-of-type(1)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 5August2022v1
+! OriginalVersion: 6August2022v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -23532,7 +23540,7 @@ $removeparam=x50878,domain=pmctraining.com
 ! https://www.bloomberg.com/news/articles/2022-07-07/stocks-set-to-rise-as-recession-obsession-cools-markets-wrap?fromMostRead=true
 $removeparam=fromMostRead,domain=bloomberg.com
 ! https://tapahtumat.kaleva.fi/fi-FI/page/62a4b7e53c0a7d6ffc202c24?source_widget_id=6278daeaee198105849d0a0d
-$removeparam=source_widget_id,domain=tapahtumat.kaleva.fi
+||tapahtumat.*.fi^$removeparam=source_widget_id
 ! https://www.autoblog.com/best-deal/?referrer_id=ZAOL000026048
 $removeparam=referrer_id,domain=autoblog.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3196901
@@ -23542,6 +23550,12 @@ $removeparam=ocid,domain=msn.com
 ||linkedin.com^$removeparam=refId
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3283595
 $removeparam=mode,domain=omaha.com
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3233027
+$removeparam=skip,domain=privatehomeclips.com
+$removeparam=plimit,domain=privatehomeclips.com
+$removeparam=source,domain=privatehomeclips.com
+$removeparam=fr,domain=hclips.com
+$removeparam=rp,domain=hclips.com
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———

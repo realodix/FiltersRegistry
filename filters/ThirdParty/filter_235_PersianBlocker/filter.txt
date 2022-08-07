@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 0.5 days
-! Last modified: 2022-08-04
+! Last modified: 2022-08-06
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -34,7 +34,7 @@
 !#endif
 ||asreasia.com/piwik
 ||analytics.aasaam.com^$all
-||analytics-.aasaam.com^$all
+||analytics-*.aasaam.com^$all
 ||adwised.com^$all
 ||adwisedfs.com^$all
 ||adwised.azureedge.net^$all
@@ -77,6 +77,7 @@
 ! ^ Used by eghtesadnews.com
 ||deemanetwork.com^$all
 ||deema.agency^$all
+||deemaagency.ir^$all
 ! https://forum.adguard.com/index.php?threads/vigiato-net-resolved.44366/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79983
 ||click.digiato.com^$all
@@ -456,10 +457,14 @@ bultannews.com##.parent_txt_adv_container2
 ||boursenews.ir/files/adv/
 ||boursenews.ir/fa/generate/userid
 binanews.ir#%#//scriptlet('ubo-set.js', 'openTelegram', 'noopFunc')
+! https://github.com/MasterKia/PersianBlocker/issues/31
 ||bartarinha.ir/statics/
 ||bartarinha.ir/servev*/*.gif
 bartarinha.ir##.zxc
 bartarinha.ir##.all_adv
+!#if env_mobile
+bartarinha.ir##.fixed_adv_mob
+!#endif
 ||barato.ir/wp-content/*/ad/
 barato.ir###featured > .owl-stage-outer
 buzdid.ir##.linkbox
@@ -959,6 +964,21 @@ jobinja.ir##.c-forceToLogin__message.o-box
 jobinja.ir#$#[class*="forceToLogin"] [class*="forceToLogin"] { filter: none !important }
 ||javanmobile.com/wp-content/cache/min/*/wp-content/plugins/adrotate
 ! >> K <<
+! https://github.com/MasterKia/PersianBlocker/issues/33
+||konkur.in/image/ads/
+@@||dl.konkur.in/image/ads/gold.png$image,~third-party
+konkur.in##[id^="tabligh"]
+konkur.in#$#.sidebar-taliq { visibility: hidden; !important; }
+konkur.in##.text-center:has-text(پست تبلیغاتی):upward(3)
+konkur.in##.tabliqat-text
+!#if env_mobile
+konkur.in###mobileBottomAd
+!#endif
+! https://github.com/MasterKia/PersianBlocker/issues/32
+||konkur.info/wp-content/uploads/*.gif
+konkur.info##.size-large.attachment-large
+konkur.info##.elementor-element-d41b3d1
+konkur.info##.adsside
 ! https://github.com/uBlockOrigin/uAssets/issues/13658#issuecomment-1153092391
 khanoumi.com#%#//scriptlet('ubo-rc.js', 'ads-track', '', 'stay')
 ||ads.khanoumi.com/api/services/app/adstrackingpanel^$all
@@ -1347,30 +1367,39 @@ softgozar.com##.DTOPBan
 ! https://github.com/uBlockOrigin/uAssets/issues/10883
 ! https://github.com/MasterKia/PersianBlocker/issues/23
 ! کاربران باید این آزادی را داشته باشند که چه چیزی وارد مرورگرشان میشود، نه صاحب سایت
-soft98.ir#%#//scriptlet('ubo-acis.js', 'document.oncontextmenu')
-soft98.ir#$?#[src*="file.soft98.ir"]:upward(8) { remove: true; }
+!#if adguard
+soft98.ir#$?#header[id]:has(.row) { remove: true; }
+soft98.ir#$?#:xpath(/html/body/div[1]/div/div[2]) { remove: true; }
+soft98.ir#$?#:xpath(/html/body/div[2]/div/div[2]) { remove: true; }
 soft98.ir#$?#[href*="linkdoni.soft98.ir"]:upward(3) { remove: true; }
-soft98.ir#$?#[href*="instagram.com"]:upward(9) { remove: true; }
-soft98.ir#$?#[src*="cdn.hostdl.com"]:upward(5) { remove: true; }
-soft98.ir#$?#.text-center.card-body:not(:has([src*="cdn.soft98.ir"])):upward(2) { remove: true; }
-soft98.ir#$?#[style="color:#d95f47"]:upward(3) { remove: true; }
+soft98.ir#$?#[href*="facebook.com"]:upward(15) { remove: true; }
+soft98.ir#$?#:xpath(/html/body/div[3]/div/aside/section[1]/header) { remove: true; }
+soft98.ir#$?#:xpath(/html/body/div[4]/div/aside/section[1]/header) { remove: true; }
+soft98.ir#$?#:xpath(/html/body/div[3]/div/aside/section[1]/div) { remove: true; }
+soft98.ir#$?#:xpath(/html/body/div[4]/div/aside/section[1]/div) { remove: true; }
+soft98.ir#$?#[src*="cdn.hostdl.com"]:upward(8) { remove: true; }
+soft98.ir#$?#:xpath(/html/body/div[3]/div/aside/div/section/header) { remove: true; }
+soft98.ir#$?#:xpath(/html/body/div[4]/div/aside/div/section/header) { remove: true; }
+soft98.ir#$?#:xpath(/html/body/div[3]/div/aside/div/section/div) { remove: true; }
+soft98.ir#$?#:xpath(/html/body/div[4]/div/aside/div/section/div) { remove: true; }
+soft98.ir#$?#.text-center.card-body:not(:has([src*="cdn.soft98.ir"])):upward(1) { remove: true; }
+soft98.ir#$?#[style*="color:"]:upward(2) { remove: true; }
 soft98.ir#$?#[href*="SMostafa.ir"] { remove: true; }
-||file.soft98.ir^$all,redirect=nooptext
-||cdn.hostdl.com^$all,redirect=nooptext
+soft98.ir#$?#*:has-text(F5) { remove: true; }
+||soft98.ir/engine/modules/antibot/antibot.php^$all
+||soft98.ir/engine/ajax/controller.php^$all
+||file.soft98.ir^$image,redirect=nooptext
+||cdn.hostdl.com^$image,redirect=nooptext
 ||linkdoni.soft98.ir^$all
 ||iranicard.ir^$all,domain=soft98.ir
 ||asiatech.ir^$all,domain=soft98.ir
 ||sysban.ir^$all,domain=soft98.ir
 ||smostafa.ir^$all,domain=soft98.ir
-!#if ext_ublock
-soft98.ir#$#header[id]::after { content: "در صورت دیدن هرگونه مشکل در سایت و یا پیغامی برای غیرفعال کردن افزونه حذف تبلیغات، کافیست به تنظیمات افزونه مسدودسازتان بروید و لیست PersianBlocker و Quick-Fixes را بروز کنید." !important; color: #ffffff !important; visibility: visible; font-size: large !important; }
-soft98.ir#$#.show.t3oast::before { content: "برای خلاص شدن از شر این پیغام مزخرف کافیست به تنظیمات افزونه مسدودسازتان بروید و لیست PersianBlocker و Quick-Fixes را بروز کنید." !important; color: #E6000D !important; visibility: visible; font-size: xx-large !important; }
-!#endif
-!#if adguard
-soft98.ir#$#header[id]::after { content: "در صورت دیدن هرگونه مشکل در سایت و یا پیغامی برای غیرفعال کردن افزونه حذف تبلیغات، کافیست به تنظیمات افزونه مسدودسازتان بروید و لیست PersianBlocker را بروز کنید." !important; color: #ffffff !important; visibility: visible; font-size: large !important; }
-soft98.ir#$#.show.t3oast::before { content: "برای خلاص شدن از شر این پیغام مزخرف کافیست به تنظیمات افزونه مسدودسازتان بروید و لیست PersianBlocker را بروز کنید." !important; color: #E6000D !important; visibility: visible; font-size: xx-large !important; }
-!#endif
+soft98.ir#$#.show.fade.tooltip { display: none !important; }
+soft98.ir#$#.card-body:nth-of-type(2)::before { content: "در صورت دیدن هرگونه مشکل در سایت و یا پیغامی برای غیرفعال کردن افزونه حذف تبلیغات، کافیست به تنظیمات افزونه مسدودسازتان بروید و لیست PersianBlocker را بروز کنید." !important; color: #E6000D !important; visibility: visible !important; font-size: medium !important; }
+soft98.ir#$#.card-body:nth-of-type(3)::before { content: "در صورت دیدن هرگونه مشکل در سایت و یا پیغامی برای غیرفعال کردن افزونه حذف تبلیغات، کافیست به تنظیمات افزونه مسدودسازتان بروید و لیست PersianBlocker را بروز کنید." !important; color: #E6000D !important; visibility: visible !important; font-size: medium !important; }
 @@||soft98.ir^$generichide
+!#endif
 ! TOOD: Keep an eye on it
 ! ||subf2m.co/files/*.gif
 ! subf2m.co##.ads
