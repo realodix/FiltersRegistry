@@ -1,6 +1,6 @@
 !
 ! Title: 乘风 广告过滤规则
-! OriginalVersion: 202208061
+! OriginalVersion: 202208081
 ! Expires: 2 days
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
 !--------------------------百度----------------------------------
@@ -199,6 +199,8 @@ greenxiazai.com##a[rel="nofollow"],.sinfo>div.s1,td.down-rr,.down-bd>div,div.lis
 onlinedown.net##div.downDz>:first-child,a[href*=".9377wan.cn/"],div.downgs,div.downxzqad,div.srolltool~div,#ItemXGJC,#ItemXGXZ,#ItemXGZT,#ItemSSZT
 ||pc6.com/$subdocument
 ! pcbeta.com##.adsbygoogle:upward(#wp>div)
+pcbeta.com##.x_m.pb_tan:upward(1)
+pcbeta.com##div[class^="_jc"]:upward(4)
 pcbeta.com###sitefocus
 ||pbcdn.com/data/attachment/album/$image
 ||pcbeta.com/static/image/biz/$image
@@ -316,7 +318,7 @@ mail.163.com,mail.126.com##.emailSuggest,#theme,.gWel-bottom
 ||sina.com.cn/iframe/76/$subdocument
 ||sina.com.cn/litong/
 ||adbox.sina.com.cn/
-||beacon.
+||beacon.$domain=~v.qq.com
 ||sbeacon.sina.com.cn/
 ||d1.sina.com.cn/
 ||d2.sina.com.cn/
@@ -1189,11 +1191,11 @@ xshellcn.com
 yihuifu.cn
 www.zhzzx.com
 ! Title: 乘风 视频过滤规则
-! OriginalVersion: 202208051
+! OriginalVersion: 202208085
 ! Expires: 1 day
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
 ! 屏蔽P2P
-qq.com,yy.com,le.com#%#//scriptlet('ubo-nowebrtc.js')
+yy.com,le.com#%#//scriptlet('ubo-nowebrtc.js')
 ||tracker.$xmlhttprequest,websocket,script,ping
 ||p2p.$xmlhttprequest,websocket,ping,domain=~huya.com
 v.youku.com##.control-phonewatch,#right-title-ad-banner, .kui-watermark-0
@@ -1220,8 +1222,6 @@ static.g.iqiyi.com
 ||ssports.iqiyi.com/json/shop/shopInfo
 show.ssports.com
 qq.com##.mod_ad, .txp_ad, div.l_qq_com, .txp-watermark, .txp_ad_link, .txp_zt_video, .adWrap
-qq.com#%#//scriptlet('ubo-no-xhr-if.js', 'trace.')
-qq.com#%#//scriptlet('ubo-no-fetch-if.js', 'trace.')
 qq.com#%#//scriptlet('ubo-json-prune.js', 'adList.item')
 !qq.com##+js(nano-sib, \u5012\u8ba1\u65f6)
 qq.com#%#//scriptlet('ubo-aopr.js', 'Beacon.prototype.fail')
