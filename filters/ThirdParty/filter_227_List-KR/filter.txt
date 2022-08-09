@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.808.5
+! OriginalVersion: 2022.809.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -936,6 +936,8 @@ soccerline.kr##section[class$="-ads"]
 edit.incruit.com##div[class*="Banner"]
 ! ##section[class*="-ad"]
 m.inven.co.kr##section[class*="-ad"]
+! ##div[id*="-ad"]
+m.hani.co.kr##div[id*="-ad"]
 !
 kr1.4kjav.co##a[href][target="_blank"] > img[src*="maxsocdn.net/images/"]
 bigkinds.or.kr##.news-cont ~ .news-special
@@ -1696,8 +1698,9 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+namu.wiki#?#div[class*="senkawa"] div[class] ~ div[class] div:matches-css(padding-bottom: /^[0-9]{2}/):has(iframe[src*="//arca.live/external/callad"])
+op.gg#?#div:not([class]) + div[class^="css-"]:has(div[data-format="isvideo"])
 etoland.co.kr#?#tbody > tr:has(> td > img[src*="/img/adland01.gif"])
-namu.wiki#?#div[class*="senkawa"] div[class] > div:has(> div[class] > iframe[src*="//arca.live/external/callad"])
 cocstorage.com#?#div[class^="css-"]:has(> ins.adsbygoogle)
 modoodoc.com#?#div:not([class$="-mobile"]) > div[class]:has(> [class*="_ad_"]):not([data-review-count])
 dak.gg#?#main[class^="py-"] div[class]:has(> div[id^="div-gpt-ad-"])
