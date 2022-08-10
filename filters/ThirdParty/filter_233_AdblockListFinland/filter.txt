@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 08August2022v2
+! OriginalVersion: 10August2022v2
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -9,6 +9,7 @@
 ! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues
 ! -----SPECIFIC FILTERS-----
 afterdawn.com,download.fi,edukas.fi#$##ad-top-banner-placeholder { min-height: 0px !important }
+ampparit.com##.ad-slot
 ap-cdn.sanomagames.com##.banner-slot-preroll
 etn.fi#$#tbody > tr > td[style="width:468px"][valign=top] { width: unset !important }
 feissarimokat.com##div[style="background: rgb(246, 66, 100) none repeat scroll 0% 0%; color: rgb(255, 255, 255); padding: 20px;"]
@@ -42,13 +43,15 @@ www.suomi24.fi#$#div[width="100%"] + [width="50%"] + div[class^="ThreadGridItemW
 www.suomi24.fi#$#div[width="100%"] + div[width="50%"] + div[width="50%"] + div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] > div { border-right: none !important; border-left: 1px solid lightgray !important }
 www.suomi24.fi#$#div[width="100%"] + div[width="50%"] + div[width="50%"] + div[width="50%"] > div[class^="ThreadGridItemWrapper__CardWrapper"] > div { padding-left: 15px !important }
 www.suomi24.fi#$#div[width="50%"] + div[width="50%"] + [width="50%"] + div[class^="ThreadGridItemWrapper__CardCol"][width="50%"] * div[class^="ThreadCardFooter__CardFooter"] > div[class^="ThreadCardFooter__ColumnContainer"] { padding-right: 15px !important }
-! Trick to overcome blinking issues caused by a slow procedural
+! Trick to overcome flickering issues caused by a slow procedural
 ampparit.com##[class="sidebox-header"]
 ampparit.com#$?#.sidebox-header:not(:has-text(/Nettiauto|Nettix|Etuovi.com/)) { display: flex !important }
 karjalainen.fi#@#.breaking-news-container:has-text(mainos:)
 karjalainen.fi##.breaking-news-container
 karjalainen.fi#$?#.breaking-news-container:not(:has-text(mainos:)) { display: flex !important }
-! HTML filters for Firefox
+! HTML filters for browsers that support them e.g. Firefox
+!#if cap_html_filtering
+!#endif
 ! -----SPECIFIC FILTERS END-----
 ! -----NETWORK FILTERS-----
 ||doubleclick.net^$xmlhttprequest,redirect=nooptext,domain=puhekupla.com
@@ -65,7 +68,6 @@ findit.fi#%#//scriptlet('ubo-acs.js', 'testPrebid')
 gamereactor.fi#%#//scriptlet('ubo-aopr.js', 'adblockEnabled')
 happypancake.fi#%#//scriptlet('ubo-aopr.js', 'Object.prototype.adUnits')
 iltalehti.fi#$?#.double-column > a[href]:has(.article-container:has-text(Kaupallinen yhteistyö)) { remove: true; }
-kiuruvesilehti.fi,urjalansanomat.fi#%#//scriptlet('ubo-aeld.js', 'scroll', 'innerHeight')
 mikrobitti.fi#%#//scriptlet('ubo-nostif.js', 'bait')
 proxyproxy.fi,pirateproxy.fi#%#//scriptlet('ubo-nowoif.js')
 savonsanomat.fi,ess.fi,itahame.fi,ksml.fi#%#//scriptlet('ubo-nostif.js', 'linkEl')
@@ -77,8 +79,6 @@ pelaaja.fi#%#//scriptlet('ubo-aopr.js', 'ga')
 ||pelaaja.fi/sites/default/files/googleanalytics/analytics.js$important
 ! https://github.com/easylist/easylist/pull/11542
 iltalehti.fi#$#script[src="https://script.ilcdn.fi/il-iltv-player/iltv-player.min.js"] ~ .alma-cmpv2-container { display: block !important }
-! Ylilauta ads & antiadblock
-! ylilauta.org##^div[class="a h"]
 ! -----GENERAL FILTERS-----
 /bannerCounter.php
 /js/spring.js
@@ -1073,6 +1073,7 @@ viisasraha.fi##.kumppani-artikkelit
 viisasraha.fi##div[class*=native-article] > div[class=ezrichtext-field] > p > a[href^="https://danskebank.fi/"]
 viisasraha.fi##div[class^=banner] > a[href="https://www.viisasraha.fi/Taloushaltuun"]
 viranomaisuutiset.fi##.td-a-rec
+viranomaisuutiset.fi##[href^="https://in.matsmart.fi/t/"]
 viranomaisuutiset.fi##[href^="https://track.adtraction.com/"]
 viranomaisuutiset.fi##div[id|=nm-300x300]
 viranomaisuutiset.fi#?#div[id|=polii]:has(br + br + div[id|=nm-300x300] + br + br)
