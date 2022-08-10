@@ -131,6 +131,11 @@ For each filter, AdGuard compiles two versions: full and optimized. Optimized ve
 
 * `optimization_config.json` - defines the target for the optimization process. AdGuard will try to compress the lists by removing the most rarely used rules until the compression goal (defined in percents) is met.
 
+## Filters compiler customization
+
+`custom_platforms.js` customizes the way filters are compiled for certain platforms. We should use it if we need to
+temporary change rules for a platform. In all other cases, we should prefer the default configuration.
+
 ## Filters localization
 
 If you want to help with filters translations, you can join us on Crowdin: https://crowdin.com/project/adguard-applications/en#/miscellaneous/filters-registry

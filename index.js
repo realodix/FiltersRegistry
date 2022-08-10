@@ -26,6 +26,7 @@ if (whitelist.length > 0 || blacklist.length > 0) {
     reportPath = null;
 }
 
+const customPlatformsConfig = require('./custom_platforms.js');
 const platformsPath = path.join(__dirname, './platforms');
 
-compiler.compile(filtersDir, logPath, reportPath, platformsPath, whitelist, blacklist);
+compiler.compile(filtersDir, logPath, reportPath, platformsPath, whitelist, blacklist, customPlatformsConfig);
