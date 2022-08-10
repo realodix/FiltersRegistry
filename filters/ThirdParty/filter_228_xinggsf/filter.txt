@@ -1,6 +1,6 @@
 !
 ! Title: 乘风 广告过滤规则
-! OriginalVersion: 202208101
+! OriginalVersion: 202208111
 ! Expires: 2 days
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
 !--------------------------百度----------------------------------
@@ -27,6 +27,7 @@ kstj.baidu.com
 ||znsv.baidu.com/
 ||pups.bdimg.com/
 baike.baidu.com##.after-content,#adLayerSideWrap
+baike.baidu.com##.squareAni.square.super-layer-promote
 ||baike.baidu.com/api/wikiad/
 fanyi.baidu.com##div.banner-wrap
 ||s1.bdstatic.com/r/www/cache/biz/ecom/common/api/$script
@@ -56,10 +57,11 @@ tiebac.baidu.com,tieba.baidu.com,jump.bdimg.com,jump2.bdimg.com###thread_list>li
 */ad.
 */ad/$script,subdocument,media
 */ad_
-@@||www.microsoft.com/onerfstatics/marketingsites-wcus-prod/shell/_scrf/js/themes=default/$script
+@@||www.microsoft.com/onerfstatics/marketingsites-*/ad-$script
 */ad-
 */ad0$script
 */ad1$script
+@@||www.youtube.com/s/desktop/ad$script
 */ad2$script
 */ad3$script
 */adbox/
@@ -74,6 +76,7 @@ tiebac.baidu.com,tieba.baidu.com,jump.bdimg.com,jump2.bdimg.com###thread_list>li
 @@||g.alicdn.com/$script,subdocument
 @@||g.tbcdn.cn/
 ||g.$third-party,subdocument,script
+!@@||downloads.essential.gg
 ||gg.
 ||ggg.
 37cs.com
@@ -111,13 +114,13 @@ tanx.com
 ||vamaker.com/$third-party
 */vamaker/
 wegowan.com
-windows.net
 wrating.com
 *##.ad
 *##.ad960-90
 *##.adbox
 *##.adtable
 ~news.sina.com.cn##[id^=ad_]
+*##[id$="-ad"],[class|=ad],[id|=ad]
 *##div.a_mu,div.a_h,div.ad_pic,div.wp.a_f,div.wp.a_t,div.a_pb,div.a_pt,div.a_pr,div.a_cn,#ggPar,#preAdContent
 ~google.com,~mediafire.com##.ads
 ~google.com##.adsbygoogle
@@ -149,11 +152,14 @@ pageMediaControl*$script
 ||go.$domain=kickass.cd|thepiratebay.*|btsow.*
 */index_banner_
 ! *_banner.$script,object,image
+@@||static.realme.net/v1/knowledge/images/banner.jpg$image
 */images/banner$domain=~ipo.chinairn.com|~www.shuame.com|~exp.qq.com
 */impservice$script
 */market.$script,domain=~jin10.com|~streamcommunity.com
 */market_$script
 @@|https://media.amazon.map.fastly.net^$script
+! https://www.zelda.com/
+@@||media.nintendo.com/share/nclood/stable/en-us/bundles/microsite.min.js$script
 ||media.$third-party,script,subdocument
 */pagead$script
 */s.php?id=$script,third-party
@@ -1191,13 +1197,13 @@ xshellcn.com
 yihuifu.cn
 www.zhzzx.com
 ! Title: 乘风 视频过滤规则
-! OriginalVersion: 202208101
+! OriginalVersion: 202208111
 ! Expires: 1 day
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
 ! 屏蔽P2P
 yy.com,le.com#%#//scriptlet('ubo-nowebrtc.js')
 ||tracker.$xmlhttprequest,websocket,script,ping
-||p2p.$xmlhttprequest,websocket,ping,domain=~huya.com
+||p2p.$xmlhttprequest,websocket,ping,domain=~huya.com|~binance.com
 v.youku.com##.control-phonewatch,#right-title-ad-banner, .kui-watermark-0
 m.youku.com,v.youku.com#%#//scriptlet('ubo-nano-stb.js', 'r--', '', '0.02')
 !m.youku.com,v.youku.com##+js(cookie-remover, cna)
@@ -1331,6 +1337,7 @@ jads.co
 !btsow.*##body>div[id]:last-child>a:only-child
 ! 2022 https://rarbgprx.org
 statsy.net
+@@||dyncdn.me/static/20/js/jquery$script
 ||dyncdn.me/static/20/js/showads.js$script
 ||dyncdn.me/static/20/js/expla$script
 age.tv,agemys.cc#%#//scriptlet('ubo-noeval-if.js', 'devtoolsDetector')

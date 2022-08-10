@@ -106,8 +106,8 @@ www.360doc.com##+js(set,u_v,1)
 yy.com,le.com##+js(nowebrtc)
 ! Rule "||tracker.$xhr,websocket,script,ping" converted to: "||tracker.$xmlhttprequest,websocket,script,ping"
 ||tracker.$xhr,websocket,script,ping
-! Rule "||p2p.$xhr,websocket,ping,domain=~huya.com" converted to: "||p2p.$xmlhttprequest,websocket,ping,domain=~huya.com"
-||p2p.$xhr,websocket,ping,domain=~huya.com
+! Rule "||p2p.$xhr,websocket,ping,domain=~huya.com|~binance.com" converted to: "||p2p.$xmlhttprequest,websocket,ping,domain=~huya.com|~binance.com"
+||p2p.$xhr,websocket,ping,domain=~huya.com|~binance.com
 ! Rule "m.youku.com,v.youku.com##+js(nano-stb, r--,, 0.02)" converted to: "m.youku.com,v.youku.com#%#//scriptlet('ubo-nano-stb.js', 'r--', '', '0.02')"
 m.youku.com,v.youku.com##+js(nano-stb, r--,, 0.02)
 ! Rule "iqiyi.com##+js(set, Object.prototype.parseXML, noopFunc)" converted to: "iqiyi.com#%#//scriptlet('ubo-set.js', 'Object.prototype.parseXML', 'noopFunc')"
@@ -158,11 +158,7 @@ dandanzan10.top,nunuyy2.org##.gm-fp-body video:style(max-height:100%!important)
 netflix.mom,netflixya.com,yanetflix.com##+js(aopw,document.onkeydown)
 ! Rule "yatu.tv,yhdm15.com##+js(set,document.oncontextmenu,trueFunc)" converted to: "yatu.tv,yhdm15.com#%#//scriptlet('ubo-set.js', 'document.oncontextmenu', 'trueFunc')"
 yatu.tv,yhdm15.com##+js(set,document.oncontextmenu,trueFunc)
-Error: "The rule is too wide, add domain restriction or make the pattern more specific" in the rule: "@@*$stylesheet"
-@@*$stylesheet
 Error: "Unknown modifier: popunder" in the rule: "||greenet.cn/$popunder"
 ||greenet.cn/$popunder
 Error: "Unknown modifier: popunder" in the rule: "||click.taobao.com/$third-party,popunder"
 ||click.taobao.com/$third-party,popunder
-! Invalid selector:
-*##[id$="-ad"],[class|=ad],[id|=ad],
