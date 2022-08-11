@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.811.2
+! OriginalVersion: 2022.811.6
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -321,6 +321,9 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||paxnet.co.kr/banner/
+||image.paxnet.co.kr/rpan/common/js/mobile_ad.js
+||paxnet.co.kr/common/*BannerAjax|
 ||sisajournal.com/bannerpop/uploads/
 ||maxsocdn.net/images/$domain=kr1.4kjav.co
 ||jejusori.net/adManager/
@@ -900,7 +903,7 @@ m.mk.co.kr,m.cafe.naver.com,dvdprime.com,nocutnews.co.kr,news.sbs.co.kr,kyoboboo
 ! ##div[class^="ad-"]
 interfootball.co.kr,police112.co.kr,dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 ! ##.banner
-ajl.co.kr,yhinews.com,funshop.co.kr,m.sedaily.com,bloter.net,mosen.mt.co.kr,hinfomax.kr,hinfomax.co.kr,pressian.com,kukinews.com##.banner
+paxnet.co.kr,ajl.co.kr,yhinews.com,funshop.co.kr,m.sedaily.com,bloter.net,mosen.mt.co.kr,hinfomax.kr,hinfomax.co.kr,pressian.com,kukinews.com##.banner
 ! ##div[class$="_banner"]
 etoland.co.kr,order.kyobobook.co.kr,newstomato.com,newsen.com,toomics.com,m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
 ! ##div[class^="ad"]
@@ -912,7 +915,7 @@ bigkinds.or.kr,hungryapp.co.kr,rhythmer.net##div[class$="Banner"]
 ! ##div[class$="banner"]
 sports.chosun.com,dcinside.com##div[class$="banner"]
 ! ##div[class$="-banner"]
-bigkinds.or.kr,item.gmarket.co.kr,toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
+paxnet.co.kr,bigkinds.or.kr,item.gmarket.co.kr,toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
 ! ##div[class^="banner"]
 bgchang.co.kr,edit.incruit.com,signinssl.gmarket.co.kr,m.hungryapp.co.kr,m.edaily.co.kr,ichannela.com,m.news1.kr##div[class^="banner"]
 ! ##div[class$="-ad"]
@@ -941,7 +944,11 @@ m.inven.co.kr##section[class*="-ad"]
 m.hani.co.kr##div[id*="-ad"]
 ! ##div[id*="Ad"]
 m.seoul.co.kr##div[id*="Ad"]
+! ##div[class*="ad_"]
+paxnet.co.kr##div[class*="ad_"]
 !
+eomisae.co.kr##.eq.section div[class^="col-md-"] > center
+star.mt.co.kr###wrap > div[style^="overflow:"][style$="background:#ddd;"]
 op.gg##.vm-placement
 m.nocutnews.co.kr##.section div[class$="con_b"][style]
 kr1.4kjav.co##a[href][target="_blank"] > img[src*="maxsocdn.net/images/"]
@@ -1173,7 +1180,7 @@ happymoney.co.kr###content  > .mainBanner
 cultureland.co.kr##.slider > div[id$="_popup"]
 cultureland.co.kr##.main-evn > .main-visual
 tcafe2a.com##.side-event-img
-chosun.com##div[class$="Ad"]
+paxnet.co.kr,chosun.com##div[class$="Ad"]
 gall.dcinside.com##.con_banner
 tvchak.com###advertiseInPlayer
 cafe.naver.com###plugFloatingBannerDiv
@@ -1205,7 +1212,7 @@ www.instiz.net##body > .hot_under
 www.instiz.net##span#menufoot > .hot_under
 m.joongna.com##article[class^="SearchList_listWrap"] + div
 www.naver.com##div[id^="veta_"]
-mimint.co.kr,bada.io,arca.live##div.ad
+star.mt.co.kr,mimint.co.kr,bada.io,arca.live##div.ad
 ohmynews.com###div10Sticky
 ohmynews.com##div[class^="AD-"]
 ohmynews.com##div[class^="new_ad"]
@@ -1632,6 +1639,10 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+paxnet.co.kr#$#html[class*="pc-size"] .m-contents > .side-area > div:nth-child(-n+4) { top: auto !important; left: auto !important; }
+paxnet.co.kr#$#html[class*="pc-size"] .m-contents > .side-area > .analysis-ranking1 { top: 475px !important; left: auto !important; width: 100% !important; }
+paxnet.co.kr#$#html[class*="pc-size"] .av-area-fot { display: none !important; }
+paxnet.co.kr#$#html[class*="pc-size"] .side-area + .m-guide { margin-bottom: 150px !important; }
 op.gg#$##content-header form.FormItem { width: 100% !important; }
 bigkinds.or.kr#$#.news-cate + .news-box { padding-right: 0px !important; }
 hankyung.com#$#.article ~ aside > .aside-inner { bottom: 25% !important; }
@@ -1895,6 +1906,7 @@ kr1.4kjav.co##.adde_modal-overlay
 !#endif
 kr1.4kjav.co#%#//scriptlet("abort-on-property-read", "adsBlocked")
 !
+focuskr.tistory.com#%#//scriptlet("abort-current-inline-script", "document.getElementById", "ad_blocks")
 news.jtbc.co.kr,mnews.jtbc.co.kr#@#.adBanner
 !#if (adguard_app_ios || adguard_ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=1412.rest
@@ -1961,6 +1973,8 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 kr1.4kjav.co##.adde_modal_detector
 kr1.4kjav.co##.adde_modal-overlay
 !
+@@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/*/fuckadblock.min.js$domain=focuskr.tistory.com
+@@||focuskr.tistory.com^$generichide
 @@||blog.dalso.org^$generichide
 @@||svrforum.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=meeco.kr
