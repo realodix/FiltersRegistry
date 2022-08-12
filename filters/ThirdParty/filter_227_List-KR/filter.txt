@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.811.7
+! OriginalVersion: 2022.812.0
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -947,7 +947,6 @@ m.seoul.co.kr##div[id*="Ad"]
 ! ##div[class*="ad_"]
 paxnet.co.kr##div[class*="ad_"]
 !
-meeco.kr##div[style*="absolute"]:not([class]):not([id])
 eomisae.co.kr##.eq.section div[class^="col-md-"] > center
 star.mt.co.kr###wrap > div[style^="overflow:"][style$="background:#ddd;"]
 op.gg##.vm-placement
@@ -1714,8 +1713,6 @@ orbi.kr#$#.global-top { top: 0px!important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
-!#if (adguard_app_ios)
-!#endif
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
@@ -1900,6 +1897,9 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ! AdGlare Ad Server
 x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 ! meeco.kr
+!#if (adguard_app_ios)
+meeco.kr##div[style*="absolute"]:not([class]):not([id])
+!#endif
 meeco.kr#$#.xe_content { opacity: 1 !important; }
 meeco.kr#%#//scriptlet("abort-current-inline-script", "$", ".adsbygoogle")
 ! adde_modal_detector
