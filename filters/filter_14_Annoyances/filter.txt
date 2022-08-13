@@ -2036,6 +2036,7 @@ strunz.com###v-cookielaw
 !
 /consent.[\s\S]*.de/$domain=mopo.de|duda-kinderzeitung.de|dumont.de|dumont-rheinland.de|rheinische-anzeigenblaetter.de|yourjob.de
 !
+! SECTION: Cookies - Popular rules
 ! common name
 ! ##.cc-overlay
 foodbrothers.com,semikolon.com,leuchtturm1917.de,laenderbahn.com,jhdversicherungen.de,computerwelt.at,torquato.de,dtv.de,vinzenz-klinik.de,herold.at,internorm.com,colop.com##.cc-overlay
@@ -2142,6 +2143,8 @@ whats-on-netflix.com#$#html.sp-message-open body { overflow-y: visible !importan
 /wrapperMessagingWithoutDetection.js$script,domain=caravaning.de|chesterstandard.co.uk|vkz.de|rheinpfalz.de|lovelybooks.de|hannover.de|visit-hannover.com|wetteronline.de|autozeitung.de|sportbible.com|vox.de|essen-und-trinken.de|jameda.de|gutefrage.net|planetiphone.de|computerfrage.net|helpster.de|dpd.com|dpd.de|duden.de|sky.de|sky.com|cardscout.de|meineorte.com|tecchannel.de|itpro.co.uk|tvnow.at|tvnow.de|netdoktor.de|computerwoche.de|thescottishsun.co.uk|thesun.co.uk|handelsblatt.com|macwelt.de|lancashiretelegraph.co.uk|idealo.de|myhomebook.de|4players.de|n-page.de|planet3ds.de|planetds.de|planetgameboy.de|planetswitch.de|planetvita.de|playstationportable.de|portablegaming.de|denofgeek.com|classicfm.com|globalplayer.com|radio.pl|politico.eu|expertreviews.co.uk|radio.net|rtlplus.de|rtl-passion.de|geo-television.de|gruenderkueche.de|techstage.de|praxisvita.de|kn-online.de|nnn.de|leserreisen.mz-web.de|kuechengoetter.de|cio.de|cio.com|tv14.de|nitro-tv.de|elektroauto-news.net|channelpartner.de|nowtv.it|macworld.com|radio.de|svz.de|axelspringer.com|businessinsider.es|sueddeutsche.de|livingathome.de|jetzt.de|leonberger-kreiszeitung.de|finanzfrage.net|frag-mutti.de|bestcheck.de|dexerto.com|techadvisor.com|stuff.tv|baby-und-familie.de|netmoms.de|testedich.de|toggo.de|senioren-ratgeber.de|autoexpress.co.uk|shz.de|prignitzer.de|meine.noz.de|mediaimpact.de|ad-alliance.de|studyflix.de|speed.io|computerhoy.com|liberation.fr|auto-motor-und-sport.de|mcnmotorcycleshow.com|familie.de|oekotest.de|csoonline.com|dailyresearchplot.com|menshealth.de|camping.info|badoo.com|eiu.com|stern.de|7sur7.be|flugrevue.de|playpilot.com|kachelmannwetter.com|muehlacker-tagblatt.de|hobbyconsolas.com|roadbike.de|finanzen100.de|cavallo.de|lepoint.fr|swmh.de|zvw.de|gladbachlive.de|noz.de|thepeoplesperson.com|whats-on-netflix.com|mountainbike-magazin.de|krzbb.de|reisefrage.net|capital.de
 /wrapperMessagingWithoutDetection.*.js$script,domain=netzwelt.de
 ||cdn.privacy-mgmt.com^$important,domain=promipool.de|android-hilfe.de|wsj.com
+! NOTE: Popular rules ⬆️
+! !SECTION: Cookies - Popular rules
 !
 !
 plente.com##div[data-react-toolbox="snackbar"]
@@ -17963,7 +17966,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 ! Bad: @@||example.org^ (should be in AdGuard Base - popups_whitelist.txt)
 !
 ! Specific sites
-! SECTION: Popups - Specific
+! SECTION: Popups - Regular rules
 download.cnet.com##.c-adShoppingExit_modal
 disqus.com##.login-overlay__wrapper.is-footer
 ukrhealth.net#?#div[id^="pum-"]:has(> div[id^="popmake-"] > div.pum-content > div.popup > div.fb-dialog)
@@ -23305,8 +23308,10 @@ bomb01.com#$#.modal-open { overflow: visible!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5310
 easy-deutsch.de#%#AG_onLoad(function() { document.querySelector('html').style.cssText+=';overflow: auto!important'; });
 easy-deutsch.de#%#AG_onLoad(function() { setTimeout(function() { var el = document.querySelector('.tve-leads-slide-in.tve-tl-anim'); if (el) {el.remove()} }, 2500); });
+! NOTE: Regular rules end ⬆️
+! !SECTION: Popups - Regular rules
 !
-!   SECTION: Popups - Mobile sites only
+! SECTION: Popups - Mobile sites only
 !#if (adguard_app_android || adguard_app_ios || adguard_ext_android_cb)
 unian.net#$#.main-menu__content > div[class^="popup-"] { display: none !important; }
 theoryandpractice.ru#$#div[data-qa="mobile-modal"] { display: none !important; }
@@ -23318,8 +23323,8 @@ unn.com.ua##body > .fancybox-opened
 unn.com.ua##body > .fancybox-opened + .fancybox-overlay
 metrolyrics.com###videoContainer
 !#endif
-!   NOTE: Mobile sites only end ⬆️
-!   !SECTION: Popups - Mobile sites only
+! NOTE: Mobile sites only end ⬆️
+! !SECTION: Popups - Mobile sites only
 !
 !+ NOT_OPTIMIZED
 clubdam.com##.l-page-bottom__cv
@@ -23341,8 +23346,6 @@ medonet.pl##body.withFPU::before
 kurashiru.com#$##dly-LandingPopupBanner { display: none!important; }
 !+ NOT_OPTIMIZED
 kurashiru.com#$#html.dly-modal-active { overflow: auto!important; }
-! NOTE: Specific end ⬆️
-! !SECTION: Popups - Specific
 !
 
 !
@@ -23843,7 +23846,7 @@ zlavomat.sk#@##credential_picker_container
 ! Good: any type of the rules will be good
 ! Bad: @@||push.org^$domain=example.org (should be in AdGuard Base - push-notifications_whitelist.txt)
 !
-! SECTION: Push notifications - Specific
+! SECTION: Push notifications - Popular rules
 !
 /firebase.js$domain=novayagazeta.ru|comments.ua|kinosimka.net|ilan365.net|cnbcindonesia.com|haberzamani.net|oxy.cloud|allbasketball.org|auslogics.com|kartalyuvasi.com.tr|cnnindonesia.com|fbc.ua|astv.ru|pln-pskov.ru|aylink.co
 /firebase-messaging.js$domain=webursa.com|s.akiba-souken.com|bfm.ru|theswagsports.com|focus.ua|ukranews.com|comments.ua|coub.com|porno90.me|cnnamador.com|giallozafferano.it|wcostream.com|fptplay.vn|jooble.org|mobile01.com|myinstants.com|pdalife.ru|rg.ru|m.iguides.ru|donanimhaber.com|profile.ru|womanhit.ru|news.noteru.com|narodna-pravda.ua|newstm.in|sabah.com.tr|dreamstime.com|popbee.com|avtovzglyad.ru|allbasketball.org|tw.news.yahoo.com|takvim.com.tr|jn.pt|ria.ru|pars.host|calculator-online.net|operanewsapp.com|ahaber.com.tr|tamindir.com|concursosnobrasil.com.br|kompas.com|news.ebc.net.tw|recyclingtoday.com|homedecoratione.com|khersondaily.com|mirtesen.ru|womanhit.ru|belsat.eu|gearbest.com|op.gg|novayagazeta.ru|pocket-lint.com|turunculevye.com|bloomberght.com|stardima.com|aksam.com.tr|portamur.ru|fishki.net|ranking.goo.ne.jp|ohmymag.com|mgronline.com|semnasem.org|bluradio.com|carwale.com|finanznachrichten.de|home.kingsoft.jp|sputnik.kg|sportskeeda.com
@@ -23854,7 +23857,10 @@ zlavomat.sk#@##credential_picker_container
 reddit.com,life.ru#%#//scriptlet("set-constant", "Notification.requestPermission", "noopFunc")
 wallstreet-online.de,dni.ru,polit.info#%#if (window.PushManager) { window.PushManager.prototype.subscribe = function () { return { then: function (func) { } }; }; }
 macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFunc")
+! NOTE: Specific end ⬆️
+! !SECTION: Push notifications - Popular rules
 !
+! SECTION: Push notifications - Regular rules
 ||piano.io/public/sdk/$domain=pravda.com.ua
 pcworld.cz##.js-push-notifications-modal-dialog
 ||drevostavitel.cz/js/notification
@@ -24337,9 +24343,8 @@ armeniasputnik.am,sputniknewslv.com##.modal-push
 aol.com#$#.m-notifications-banner { display: none !important; }
 aol.com#$#.banner-active { margin-top: 0 !important; }
 !
-! NOTE: Specific end ⬆️
-! !SECTION: Push notifications - Specific
-!
+! NOTE: Regular rules end ⬆️
+! !SECTION: Push notifications - Regular rules
 
 !
 ! This section contains the list of rules that fix the problems, caused by incorrect blocking of website push notifications.
@@ -24437,7 +24442,7 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 ! Good: any type of the rules will be good
 ! Bad: @@||signup.e2ma.net^$domain=example.org (should be in AdGuard Base - subscriptions_whitelist.txt)
 !
-! SECTION: Subscriptions - Specific
+! SECTION: Subscriptions - Popular rules
 ! common names
 ! ##.cta-component-half-width
 andoveradvertiser.co.uk,asianimage.co.uk,banburycake.co.uk,barryanddistrictnews.co.uk,basildonstandard.co.uk,basingstokegazette.co.uk,bicesteradvertiser.net,borehamwoodtimes.co.uk,braintreeandwithamtimes.co.uk,brentwoodlive.co.uk,bridportnews.co.uk,bromsgroveadvertiser.co.uk,bucksfreepress.co.uk,burytimes.co.uk,campaignseries.co.uk,chelmsfordweeklynews.co.uk,chorleycitizen.co.uk,clactonandfrintongazette.co.uk,cotswoldjournal.co.uk,cravenherald.co.uk,croydonguardian.co.uk,dailyecho.co.uk,darlingtonandstocktontimes.co.uk,dorsetecho.co.uk,droitwichadvertiser.co.uk,dudleynews.co.uk,ealingtimes.co.uk,echo-news.co.uk,enfieldindependent.co.uk,eppingforestguardian.co.uk,epsomguardian.co.uk,eveningtimes.co.uk,eveshamjournal.co.uk,falmouthpacket.co.uk,freepressseries.co.uk,gazette-news.co.uk,gazetteherald.co.uk,gazetteseries.co.uk,greenocktelegraph.co.uk,guardian-series.co.uk,halesowennews.co.uk,halsteadgazette.co.uk,hampshirechronicle.co.uk,harrowtimes.co.uk,harwichandmanningtreestandard.co.uk,heraldscotland.com,heraldseries.co.uk,herefordtimes.com,hillingdontimes.co.uk,ilkleygazette.co.uk,keighleynews.co.uk,kidderminstershuttle.co.uk,knutsfordguardian.co.uk,lancashiretelegraph.co.uk,ledburyreporter.co.uk,leighjournal.co.uk,ludlowadvertiser.co.uk,maldonandburnhamstandard.co.uk,malverngazette.co.uk,messengernewspapers.co.uk,middlewichguardian.co.uk,milfordmercury.co.uk,newsshopper.co.uk,northwichguardian.co.uk,northyorkshireadvertiser.co.uk,oxfordmail.co.uk,oxfordtimes.co.uk,penarthtimes.co.uk,prestwichandwhitefieldguide.co.uk,redditchadvertiser.co.uk,richmondandtwickenhamtimes.co.uk,romseyadvertiser.co.uk,runcornandwidnesworld.co.uk,salisburyjournal.co.uk,smallholder.co.uk,southendstandard.co.uk,southwalesargus.co.uk,southwalesguardian.co.uk,southwestfarmer.co.uk,stalbansreview.co.uk,sthelensstar.co.uk,stourbridgenews.co.uk,surreycomet.co.uk,suttonguardian.co.uk,swindonadvertiser.co.uk,tewkesburyadmag.co.uk,theargus.co.uk,theboltonnews.co.uk,thenational.scot,thenorthernecho.co.uk,theoldhamtimes.co.uk,thescottishfarmer.co.uk,thetelegraphandargus.co.uk,thetottenhamindependent.co.uk,thewestmorlandgazette.co.uk,thurrockgazette.co.uk,times-series.co.uk,tivysideadvertiser.co.uk,wandsworthguardian.co.uk,warringtonguardian.co.uk,watfordobserver.co.uk,wearvalleyadvertiser.co.uk,westerntelegraph.co.uk,wharfedaleobserver.co.uk,wilmslowguardian.co.uk,wiltsglosstandard.co.uk,wiltshiretimes.co.uk,wimbledonguardian.co.uk,wirralglobe.co.uk,witneygazette.co.uk,worcesternews.co.uk,yorkpress.co.uk,yourlocalguardian.co.uk##.cta-component-half-width
@@ -24460,7 +24465,10 @@ techwafer.com,moonshot.news,radiokp.ru,brestcity.com,aykiri.com.tr,yenicaggazete
 ! Turkish digital magazines
 turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.as
 turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com###_s_fan
+! NOTE: Popular rules ⬆️
+! !SECTION: Subscriptions - Popular rules
 !
+! SECTION: Subscriptions - Regular rules
 ekathimerini.com##.inline-newsletter-form-wrap
 cloudflare.com##.bottom-0.bg-blue0
 tv-lida.by##.stream-item-below-post
@@ -28628,8 +28636,8 @@ magazine.skyeng.ru##.tg-banner
 !#if (adguard_app_ios || adguard_ext_android_cb || adguard_app_android)
 tvrain.ru##.menu3__foreign-agent-wrapper
 !#endif
-! NOTE: Specific end ⬆️
-! !SECTION: SECTION: Subscriptions - Specific
+! NOTE: Regular rules end ⬆️
+! !SECTION: Subscriptions - Regular rules
 !
 
 !
@@ -28688,7 +28696,7 @@ tvrain.ru##.menu3__foreign-agent-wrapper
 !
 ! HINTS are at the end of Specific section
 !
-! SECTION: Mobile apps - Specific
+! SECTION: Mobile apps - Regular rules
 openrice.com###smart-banner-collection
 wear.jp###appAd
 beauty.hotpepper.jp##.nativeAppliArea
@@ -30646,8 +30654,8 @@ honeysanime.com#$##wrap-app-notice { display: none !important; }
 !+ NOT_OPTIMIZED
 m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 !
-! NOTE: Specific end ⬆️
-! !SECTION: Mobile apps - Specific
+! NOTE: Regular rules end ⬆️
+! !SECTION: Mobile apps - Regular rules
 !
 !   SECTION: Mobile apps - Mobile sites only
 !#if (adguard_app_android || adguard_app_ios || adguard_ext_android_cb)
@@ -33344,6 +33352,26 @@ hi-tech.mail.ru##.sticky_footer div[class^="block block_padding rb-block-"]
 ##.hs-sosyal
 ##.sosyal:not(body):not(html)
 ##.td_block_social_counter
+!
+! NOTE: Social locker widget
+! Social Locker - WordPress content locking plugin
+/wp-content/plugins/sociallocker-
+! onp-sl-social-locker
+trickswire.com#$#.mts-cl-overlap-mode > .mts-cl-overlap-box { display: none!important; }
+trickswire.com#$#.mts-cl-overlap-mode > .mts-cl-blur-area { filter: none!important; }
+/pandalocker.$script,domain=lanka.ru
+0lik.ru##.onp-sl-outer-wrap
+0lik.ru$replace=/locker:{\s+timer:\s'\d\d'/locker: { timer: '1'/
+animaunt.tv##.icon-bar > .fl-fl
+cracxpro.com,hackintoshzone.com,gigadownloads.co,techsini.com##.onp-sl-overlap-box
+psdfreebies.com#$#.onp-locker-call { display: block!important; }
+rbc.ua##.telegram-link
+hackstore.net,activationkeys.co,bicfic.com,boxcracked.com,idmcrackpatch.com,activationkey.net,activatorproductkey.org,androidride.com,c4crack.com,chserialkey.com,ckfile.com,crack4us.com,cracksmod.com,cracxsoftwares.com,creativefabrica.com,downloadmockup.com,f4freesoftware.com,freeappstorepc.com,fullpcsoftz.com,gomovies.co,hentairon.net,latestcracked.com,megawarez.org,procrackerz.org,profullcrack.com,psdfreebies.com,realhax.com,sajidpc.com,serialkeypro.com,shehrozpc.com,sjcrack.com,soft7star.com,warezcrack.net,workingkeys.org#$#.onp-sl-content { display: block!important; }
+hackstore.net,activationkeys.co,bicfic.com,boxcracked.com,idmcrackpatch.com,activationkey.net,activatorproductkey.org,androidride.com,c4crack.com,chserialkey.com,ckfile.com,crack4us.com,cracksmod.com,cracxsoftwares.com,creativefabrica.com,downloadmockup.com,f4freesoftware.com,freeappstorepc.com,fullpcsoftz.com,gomovies.co,hentairon.net,latestcracked.com,megawarez.org,procrackerz.org,profullcrack.com,psdfreebies.com,realhax.com,sajidpc.com,serialkeypro.com,shehrozpc.com,sjcrack.com,soft7star.com,warezcrack.net,workingkeys.org#$#.onp-sl-social-locker { display: none!important; }
+latestcracked.com#$#.onp-sl-signin-locker { display: none!important; }
+warezcrack.net#$#.onp-sl-content > [data-lock-id^="onpLock"] { display: block!important; }
+!
+!
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124102
 e1.ru##button[data-test="report-news-button"] + div[class]
@@ -39316,25 +39344,6 @@ samlab.ws##iframe[src^="https://yoomoney.ru/"]
 !
 hromadske.ua#$#.DonateModal-overlay { display: none !important; }
 hromadske.ua#$#body { overflow: visible !important; }
-!
-!   NOTE: Social locker widget
-!
-! Social Locker - WordPress content locking plugin
-/wp-content/plugins/sociallocker-
-! onp-sl-social-locker
-trickswire.com#$#.mts-cl-overlap-mode > .mts-cl-overlap-box { display: none!important; }
-trickswire.com#$#.mts-cl-overlap-mode > .mts-cl-blur-area { filter: none!important; }
-/pandalocker.$script,domain=lanka.ru
-0lik.ru##.onp-sl-outer-wrap
-0lik.ru$replace=/locker:{\s+timer:\s'\d\d'/locker: { timer: '1'/
-animaunt.tv##.icon-bar > .fl-fl
-cracxpro.com,hackintoshzone.com,gigadownloads.co,techsini.com##.onp-sl-overlap-box
-psdfreebies.com#$#.onp-locker-call { display: block!important; }
-rbc.ua##.telegram-link
-hackstore.net,activationkeys.co,bicfic.com,boxcracked.com,idmcrackpatch.com,activationkey.net,activatorproductkey.org,androidride.com,c4crack.com,chserialkey.com,ckfile.com,crack4us.com,cracksmod.com,cracxsoftwares.com,creativefabrica.com,downloadmockup.com,f4freesoftware.com,freeappstorepc.com,fullpcsoftz.com,gomovies.co,hentairon.net,latestcracked.com,megawarez.org,procrackerz.org,profullcrack.com,psdfreebies.com,realhax.com,sajidpc.com,serialkeypro.com,shehrozpc.com,sjcrack.com,soft7star.com,warezcrack.net,workingkeys.org#$#.onp-sl-content { display: block!important; }
-hackstore.net,activationkeys.co,bicfic.com,boxcracked.com,idmcrackpatch.com,activationkey.net,activatorproductkey.org,androidride.com,c4crack.com,chserialkey.com,ckfile.com,crack4us.com,cracksmod.com,cracxsoftwares.com,creativefabrica.com,downloadmockup.com,f4freesoftware.com,freeappstorepc.com,fullpcsoftz.com,gomovies.co,hentairon.net,latestcracked.com,megawarez.org,procrackerz.org,profullcrack.com,psdfreebies.com,realhax.com,sajidpc.com,serialkeypro.com,shehrozpc.com,sjcrack.com,soft7star.com,warezcrack.net,workingkeys.org#$#.onp-sl-social-locker { display: none!important; }
-latestcracked.com#$#.onp-sl-signin-locker { display: none!important; }
-warezcrack.net#$#.onp-sl-content > [data-lock-id^="onpLock"] { display: block!important; }
 !
 ! NOTE: Another end ⬆️
 ! !SECTION: Widgets - Another
