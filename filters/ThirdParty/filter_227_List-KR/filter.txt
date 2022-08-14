@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.814.7
+! OriginalVersion: 2022.814.11
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -326,6 +326,8 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||hogaeng.co.kr/data/file/sponsor_
+||hogaeng.co.kr/data/banner/
 ||talk.gamemarket.kr/images/*%EB%B0%B0%EB%84%88
 /^https:\/\/coolenjoy\.net\/data\/editor\/[0-9]{4}\/[0-9]{14}_[a-z]{8}\./
 ||paxnet.co.kr/banner/
@@ -906,7 +908,7 @@ dvdprime.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,hani.co.kr,m.s
 ! ##div[class$="_ad"]
 ppomppu.co.kr,m.nocutnews.co.kr,kyobobook.co.kr,news.naver.com,news.daum.net,instiz.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net,busan.com##div[class$="_ad"]
 ! ##div[class^="ad_"]
-m.mk.co.kr,m.cafe.naver.com,dvdprime.com,nocutnews.co.kr,news.sbs.co.kr,kyobobook.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.co.kr,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
+www.hogaeng.co.kr,m.mk.co.kr,m.cafe.naver.com,dvdprime.com,nocutnews.co.kr,news.sbs.co.kr,kyobobook.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.co.kr,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,search.naver.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 ! ##div[class^="ad-"]
 ppomppu.co.kr,interfootball.co.kr,police112.co.kr,dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 ! ##.banner
@@ -954,13 +956,17 @@ m.seoul.co.kr##div[id*="Ad"]
 ! ##div[class*="ad_"]
 paxnet.co.kr##div[class*="ad_"]
 !
+quasarplay.com##[class^="img_wrapper"]
+~www.hogaeng.co.kr,hogaeng.co.kr##.tbl_wrap ul > li:not([class])
+www.hogaeng.co.kr###main_con > .latest1
+www.hogaeng.co.kr##div[class$="_bn"]
+hogaeng.co.kr##div[class^="sponsor"]
 wiki.hash.kr##div[class^="bann_"]
 wiki.hash.kr##div[class^="bnn_"]
 all-mice.co.kr###main_visual
 cgv.co.kr##div[class$="ad"][style]
 cgv.co.kr##div[id$="_PlaceHolderContent_divMovieSelection_wrap"][class]
 quasarplay.com##div[class^="panel_img_bottom_"][style]
-quasarplay.com##div[style].img_wrapper
 mule.co.kr##.modal-login-wrapper .right-box
 ppomppu.co.kr##table .list-notice-alarm-sponsor-tr
 m.ppomppu.co.kr###bbs_inform li[class^="bbs_ad"]
@@ -1659,6 +1665,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+tgd.kr#$#div[align="center"] + .row > .col-xs-6 { width: 100% !important; }
 ppomppu.co.kr#$#div[class^="ppom_newSub"] .top_newSub .left_wt { width: 100% !important; }
 all-mice.co.kr#$##main_sec { margin-top: 100px !important; }
 cgv.co.kr#$#.wrap-login > .sect-login { margin-left: calc(50% - 270px) !important; }
@@ -1740,6 +1747,8 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+tgd.kr#?#.row > div[class^="col-xs-"]:not([id]):has(#focus-area > div[id^="div-gpt-ad-"])
+hogaeng.co.kr#?#.tbl_wrap .bo_notice:has(span[class^="spon_b_icon"])
 issuelink.co.kr#?#table.table-stripped tr:has(.ad)
 coolenjoy.net#?#div[class^="floating"]:has(a[target="_blank"] > img[src])
 op.gg#?#div:not([class]) + div[class^="css-"]:has(> div[data-format="isvideo"])
@@ -1820,6 +1829,7 @@ toonkor134.com,toonkor135.com,toonkor136.com,toonkor137.com,toonkor138.com,toonk
 news.op.gg#$?#header + div[class] div[class^="css-"] > div[class^="css-"] > div[class^="css-"]:has( ~ .youtube-iframe) { margin-top: 8px !important; }
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+~www.hogaeng.co.kr,hogaeng.co.kr#?##container > .latest_box:has(span.lt_title:contains(스폰서광고))
 dailymedipharm.com#?#table:has(> tbody > tr > td:contains(bannerManager):not(:has(> *)))
 tgd.kr#?#div[style] > div[style]:has(div[style]:contains(AD))
 eggrank.com#?##right-sidebar > .inside-right-sidebar > div[class]:not(:contains(Hi there, I'm EGG.))
