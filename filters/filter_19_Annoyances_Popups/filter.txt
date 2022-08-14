@@ -1896,7 +1896,7 @@ channel4.com###all4gn-adBlock-notification
 ! NOTE: Regular rules end ⬆️
 ! !SECTION: Anti-adblock - Regular rules
 !
-! Common '!#safari_cb_affinity(general)' directive for all platforms
+! Common '!#safari_cb_affinity(general)' directive for all content blockers
 ! SECTION: Anti-adblock - Common '!#safari_cb_affinity(general)' directive
 !#safari_cb_affinity(general)
 !
@@ -3356,7 +3356,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 ! Bad: @@||example.org^ (should be in AdGuard Base - popups_whitelist.txt)
 !
 ! Specific sites
-! SECTION: Popups - Specific
+! SECTION: Popups - Regular rules
 download.cnet.com##.c-adShoppingExit_modal
 disqus.com##.login-overlay__wrapper.is-footer
 ukrhealth.net#?#div[id^="pum-"]:has(> div[id^="popmake-"] > div.pum-content > div.popup > div.fb-dialog)
@@ -8698,8 +8698,10 @@ bomb01.com#$#.modal-open { overflow: visible!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5310
 easy-deutsch.de#%#AG_onLoad(function() { document.querySelector('html').style.cssText+=';overflow: auto!important'; });
 easy-deutsch.de#%#AG_onLoad(function() { setTimeout(function() { var el = document.querySelector('.tve-leads-slide-in.tve-tl-anim'); if (el) {el.remove()} }, 2500); });
+! NOTE: Regular rules end ⬆️
+! !SECTION: Popups - Regular rules
 !
-!   SECTION: Popups - Mobile sites only
+! SECTION: Popups - Mobile sites only
 !#if (adguard_app_android || adguard_app_ios || adguard_ext_android_cb)
 unian.net#$#.main-menu__content > div[class^="popup-"] { display: none !important; }
 theoryandpractice.ru#$#div[data-qa="mobile-modal"] { display: none !important; }
@@ -8711,8 +8713,8 @@ unn.com.ua##body > .fancybox-opened
 unn.com.ua##body > .fancybox-opened + .fancybox-overlay
 metrolyrics.com###videoContainer
 !#endif
-!   NOTE: Mobile sites only end ⬆️
-!   !SECTION: Popups - Mobile sites only
+! NOTE: Mobile sites only end ⬆️
+! !SECTION: Popups - Mobile sites only
 !
 !+ NOT_OPTIMIZED
 clubdam.com##.l-page-bottom__cv
@@ -8734,8 +8736,6 @@ medonet.pl##body.withFPU::before
 kurashiru.com#$##dly-LandingPopupBanner { display: none!important; }
 !+ NOT_OPTIMIZED
 kurashiru.com#$#html.dly-modal-active { overflow: auto!important; }
-! NOTE: Specific end ⬆️
-! !SECTION: Popups - Specific
 !
 
 !
@@ -9236,7 +9236,7 @@ zlavomat.sk#@##credential_picker_container
 ! Good: any type of the rules will be good
 ! Bad: @@||push.org^$domain=example.org (should be in AdGuard Base - push-notifications_whitelist.txt)
 !
-! SECTION: Push notifications - Specific
+! SECTION: Push notifications - Popular rules
 !
 /firebase.js$domain=novayagazeta.ru|comments.ua|kinosimka.net|ilan365.net|cnbcindonesia.com|haberzamani.net|oxy.cloud|allbasketball.org|auslogics.com|kartalyuvasi.com.tr|cnnindonesia.com|fbc.ua|astv.ru|pln-pskov.ru|aylink.co
 /firebase-messaging.js$domain=webursa.com|s.akiba-souken.com|bfm.ru|theswagsports.com|focus.ua|ukranews.com|comments.ua|coub.com|porno90.me|cnnamador.com|giallozafferano.it|wcostream.com|fptplay.vn|jooble.org|mobile01.com|myinstants.com|pdalife.ru|rg.ru|m.iguides.ru|donanimhaber.com|profile.ru|womanhit.ru|news.noteru.com|narodna-pravda.ua|newstm.in|sabah.com.tr|dreamstime.com|popbee.com|avtovzglyad.ru|allbasketball.org|tw.news.yahoo.com|takvim.com.tr|jn.pt|ria.ru|pars.host|calculator-online.net|operanewsapp.com|ahaber.com.tr|tamindir.com|concursosnobrasil.com.br|kompas.com|news.ebc.net.tw|recyclingtoday.com|homedecoratione.com|khersondaily.com|mirtesen.ru|womanhit.ru|belsat.eu|gearbest.com|op.gg|novayagazeta.ru|pocket-lint.com|turunculevye.com|bloomberght.com|stardima.com|aksam.com.tr|portamur.ru|fishki.net|ranking.goo.ne.jp|ohmymag.com|mgronline.com|semnasem.org|bluradio.com|carwale.com|finanznachrichten.de|home.kingsoft.jp|sputnik.kg|sportskeeda.com
@@ -9247,7 +9247,10 @@ zlavomat.sk#@##credential_picker_container
 reddit.com,life.ru#%#//scriptlet("set-constant", "Notification.requestPermission", "noopFunc")
 wallstreet-online.de,dni.ru,polit.info#%#if (window.PushManager) { window.PushManager.prototype.subscribe = function () { return { then: function (func) { } }; }; }
 macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFunc")
+! NOTE: Specific end ⬆️
+! !SECTION: Push notifications - Popular rules
 !
+! SECTION: Push notifications - Regular rules
 ||piano.io/public/sdk/$domain=pravda.com.ua
 pcworld.cz##.js-push-notifications-modal-dialog
 ||drevostavitel.cz/js/notification
@@ -9730,9 +9733,8 @@ armeniasputnik.am,sputniknewslv.com##.modal-push
 aol.com#$#.m-notifications-banner { display: none !important; }
 aol.com#$#.banner-active { margin-top: 0 !important; }
 !
-! NOTE: Specific end ⬆️
-! !SECTION: Push notifications - Specific
-!
+! NOTE: Regular rules end ⬆️
+! !SECTION: Push notifications - Regular rules
 
 !
 ! This section contains the list of rules that fix the problems, caused by incorrect blocking of website push notifications.
@@ -9830,7 +9832,7 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 ! Good: any type of the rules will be good
 ! Bad: @@||signup.e2ma.net^$domain=example.org (should be in AdGuard Base - subscriptions_whitelist.txt)
 !
-! SECTION: Subscriptions - Specific
+! SECTION: Subscriptions - Popular rules
 ! common names
 ! ##.cta-component-half-width
 andoveradvertiser.co.uk,asianimage.co.uk,banburycake.co.uk,barryanddistrictnews.co.uk,basildonstandard.co.uk,basingstokegazette.co.uk,bicesteradvertiser.net,borehamwoodtimes.co.uk,braintreeandwithamtimes.co.uk,brentwoodlive.co.uk,bridportnews.co.uk,bromsgroveadvertiser.co.uk,bucksfreepress.co.uk,burytimes.co.uk,campaignseries.co.uk,chelmsfordweeklynews.co.uk,chorleycitizen.co.uk,clactonandfrintongazette.co.uk,cotswoldjournal.co.uk,cravenherald.co.uk,croydonguardian.co.uk,dailyecho.co.uk,darlingtonandstocktontimes.co.uk,dorsetecho.co.uk,droitwichadvertiser.co.uk,dudleynews.co.uk,ealingtimes.co.uk,echo-news.co.uk,enfieldindependent.co.uk,eppingforestguardian.co.uk,epsomguardian.co.uk,eveningtimes.co.uk,eveshamjournal.co.uk,falmouthpacket.co.uk,freepressseries.co.uk,gazette-news.co.uk,gazetteherald.co.uk,gazetteseries.co.uk,greenocktelegraph.co.uk,guardian-series.co.uk,halesowennews.co.uk,halsteadgazette.co.uk,hampshirechronicle.co.uk,harrowtimes.co.uk,harwichandmanningtreestandard.co.uk,heraldscotland.com,heraldseries.co.uk,herefordtimes.com,hillingdontimes.co.uk,ilkleygazette.co.uk,keighleynews.co.uk,kidderminstershuttle.co.uk,knutsfordguardian.co.uk,lancashiretelegraph.co.uk,ledburyreporter.co.uk,leighjournal.co.uk,ludlowadvertiser.co.uk,maldonandburnhamstandard.co.uk,malverngazette.co.uk,messengernewspapers.co.uk,middlewichguardian.co.uk,milfordmercury.co.uk,newsshopper.co.uk,northwichguardian.co.uk,northyorkshireadvertiser.co.uk,oxfordmail.co.uk,oxfordtimes.co.uk,penarthtimes.co.uk,prestwichandwhitefieldguide.co.uk,redditchadvertiser.co.uk,richmondandtwickenhamtimes.co.uk,romseyadvertiser.co.uk,runcornandwidnesworld.co.uk,salisburyjournal.co.uk,smallholder.co.uk,southendstandard.co.uk,southwalesargus.co.uk,southwalesguardian.co.uk,southwestfarmer.co.uk,stalbansreview.co.uk,sthelensstar.co.uk,stourbridgenews.co.uk,surreycomet.co.uk,suttonguardian.co.uk,swindonadvertiser.co.uk,tewkesburyadmag.co.uk,theargus.co.uk,theboltonnews.co.uk,thenational.scot,thenorthernecho.co.uk,theoldhamtimes.co.uk,thescottishfarmer.co.uk,thetelegraphandargus.co.uk,thetottenhamindependent.co.uk,thewestmorlandgazette.co.uk,thurrockgazette.co.uk,times-series.co.uk,tivysideadvertiser.co.uk,wandsworthguardian.co.uk,warringtonguardian.co.uk,watfordobserver.co.uk,wearvalleyadvertiser.co.uk,westerntelegraph.co.uk,wharfedaleobserver.co.uk,wilmslowguardian.co.uk,wiltsglosstandard.co.uk,wiltshiretimes.co.uk,wimbledonguardian.co.uk,wirralglobe.co.uk,witneygazette.co.uk,worcesternews.co.uk,yorkpress.co.uk,yourlocalguardian.co.uk##.cta-component-half-width
@@ -9853,7 +9855,10 @@ techwafer.com,moonshot.news,radiokp.ru,brestcity.com,aykiri.com.tr,yenicaggazete
 ! Turkish digital magazines
 turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.as
 turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com###_s_fan
+! NOTE: Popular rules ⬆️
+! !SECTION: Subscriptions - Popular rules
 !
+! SECTION: Subscriptions - Regular rules
 ekathimerini.com##.inline-newsletter-form-wrap
 cloudflare.com##.bottom-0.bg-blue0
 tv-lida.by##.stream-item-below-post
@@ -14021,8 +14026,8 @@ magazine.skyeng.ru##.tg-banner
 !#if (adguard_app_ios || adguard_ext_android_cb || adguard_app_android)
 tvrain.ru##.menu3__foreign-agent-wrapper
 !#endif
-! NOTE: Specific end ⬆️
-! !SECTION: SECTION: Subscriptions - Specific
+! NOTE: Regular rules end ⬆️
+! !SECTION: Subscriptions - Regular rules
 !
 
 !
