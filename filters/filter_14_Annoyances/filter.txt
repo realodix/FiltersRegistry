@@ -2147,6 +2147,8 @@ whats-on-netflix.com#$#html.sp-message-open body { overflow-y: visible !importan
 ! !SECTION: Cookies - Popular rules
 !
 !
+securityconference.org#$#body { overflow: auto !important; }
+securityconference.org#$#.cookiebanner { display: none !important; }
 konsument.at#$#body { overflow: auto !important; }
 konsument.at#$##cc-overlay { display: none !important; }
 material.io##mio-cookie-notice
@@ -11956,6 +11958,11 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !+ PLATFORM(windows, mac, android)
 @@||geolocation.onetrust.com/cookieconsentpub/*/geo/location
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/126955
+securityconference.org#@#.cookiebanner:not(body)
+! ekstraklasa.tv - fixing video player
+@@||sdk.privacy-center.org^$domain=ekstraklasa.tv
+||sdk.privacy-center.org/*/loader.js$script,redirect=didomi-loader,domain=ekstraklasa.tv,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125720
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=rts.ch
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127061
