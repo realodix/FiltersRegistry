@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.817.3
+! OriginalVersion: 2022.817.6
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -969,6 +969,8 @@ m.seoul.co.kr##div[id*="Ad"]
 ! ##div[class*="ad_"]
 paxnet.co.kr##div[class*="ad_"]
 !
+biz.chosun.com,www.chosun.com###fusion-app footer
+biz.chosun.com,www.chosun.com##.flex-chain-wrapper[class*="-pad-top-"][class*="-margin-"][class*="-bg-grey-"]
 m.sportschosun.com###footer_container
 m.sportschosun.com##aticle div[style]:not([id]):not([class]):not([itemprop])
 mnews.jtbc.co.kr##.shopping_wrap div[class$="_ad"]
@@ -1430,9 +1432,7 @@ weekly.chosun.com##img[src^="/images/banner/"][onclick^="window.open('/common/in
 weekly.chosun.com##iframe[src^="/common/inc/right_banner_roll"][src*=".asp"]
 it.chosun.com###POWER_LINK_NAVER
 anewsa.com,sports.chosun.com,it.chosun.com##div[id^="mobonDivBanner_"]
-chosun.com##.dfpAd
 chosun.com##div[class~="arcad-wrapper"]
-chosun.com##.arcad-wrapper
 chosun.com##div[class^="layout__article-header"] > div[class^="flex-chain-wrapper"]
 hwbattle.com##div[id^="Partner"]
 hwbattle.com###aside > #partner
@@ -1859,9 +1859,9 @@ toonkor134.com,toonkor135.com,toonkor136.com,toonkor137.com,toonkor138.com,toonk
 news.op.gg#$?#header + div[class] div[class^="css-"] > div[class^="css-"] > div[class^="css-"]:has( ~ .youtube-iframe) { margin-top: 8px !important; }
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+tgd.kr#?#div[style*="padding:"]:has(div[style] div[style]:contains(AD))
 ~www.hogaeng.co.kr,hogaeng.co.kr#?##container > .latest_box:has(span.lt_title:contains(스폰서광고))
 dailymedipharm.com#?#table:has(> tbody > tr > td:contains(bannerManager):not(:has(> *)))
-tgd.kr#?#div[style] > div[style]:has(div[style]:contains(AD))
 eggrank.com#?##right-sidebar > .inside-right-sidebar > div[class]:not(:contains(Hi there, I'm EGG.))
 2cpu.co.kr#?#tr:has(> td > a[href^="../ad_board/"]:contains(광고))
 2cpu.co.kr#?#ul > li:has(> a[href^="./ad_board/"]:contains(광고))
