@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.816.1
+! OriginalVersion: 2022.817.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -9,6 +9,7 @@
 !
 ! Version must be UTC format.
 !
+||pltapad.com^
 ||mobwithad.com^
 ||adxcorp.kr^
 ||mmnneo.com^
@@ -247,6 +248,7 @@
 ||adscdn.orbi.kr^
 ||ads.orbi.kr^
 ||ads.mtgroup.kr^
+##iframe[src*="//stt.pltapad.com/"]
 ##iframe[src*="//mediaindex.co.kr/DABanner.php"]
 ##ins[class^="MediaIndex_AD_"]
 ##iframe[src*="//www.mobwithad.com/"]
@@ -326,6 +328,9 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||m.sportschosun.com/ad/
+||sportschosun.com/data/file/scad/
+||sportschosun.com/update/$image
 ||manhwa.co.kr/xml/*banner_*_json.php
 ||menu.mt.co.kr/mobile*/images/mobileLineBanner_
 ||image.ichannela.com/images/common/overray_onair
@@ -946,7 +951,7 @@ moyoplan.com##div[class^="Banner"]
 ! ##table[class^="ad_"]
 m.humoruniv.com##table[class^="ad_"]
 ! ##div[class*="_ad"]
-m.munhwa.com,buy.11st.co.kr,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
+fnnews.com,m.munhwa.com,buy.11st.co.kr,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 ! ##div[id*="Banner"]
 e-himart.co.kr,kin.naver.com##div[id*="Banner"]
 ! ##div[class*="_AD"]
@@ -964,6 +969,10 @@ m.seoul.co.kr##div[id*="Ad"]
 ! ##div[class*="ad_"]
 paxnet.co.kr##div[class*="ad_"]
 !
+m.sportschosun.com###footer_container
+m.sportschosun.com##aticle div[style]:not([id]):not([class]):not([itemprop])
+mnews.jtbc.co.kr##.shopping_wrap div[class$="_ad"]
+mnews.jtbc.co.kr##.news > div[class$="_ad"][style]
 manhwa.co.kr##.container > div[style][id^="slider"]
 m.mt.co.kr###container.atcpage div[style]:not([class]):not([id])
 m.mt.co.kr##[class^="ad"]
@@ -1684,6 +1693,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+fnnews.com#$#.inner_contents { margin-bottom: 0px !important; }
 tgd.kr#$#div[align="center"] + .row > .col-xs-6 { width: 100% !important; }
 ppomppu.co.kr#$#div[class^="ppom_newSub"] .top_newSub .left_wt { width: 100% !important; }
 all-mice.co.kr#$##main_sec { margin-top: 100px !important; }
