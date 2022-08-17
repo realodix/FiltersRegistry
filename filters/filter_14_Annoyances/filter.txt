@@ -2148,6 +2148,8 @@ whats-on-netflix.com#$#html.sp-message-open body { overflow-y: visible !importan
 ! !SECTION: Cookies - Popular rules
 !
 !
+aplikuj.pl##div[x-data="cookie"]
+rockstargames.com##div[class^="RockstarCookiesBanner_"]
 pubs.acs.org###gdpr-message-modal
 olini.pl##.cookiesloaded
 chariz.com##.toast-cookie-notice
@@ -10943,7 +10945,7 @@ dsny.pl#%#document.cookie.includes("dsny_gdpr_consent=")||(document.cookie="dsny
 blutspendedienst.com#%#AG_onLoad(function() {var b=new MutationObserver(function() {var c=document.querySelector('button[data-cookiefirst-action="accept"]'); c&&(b.disconnect(),c.click()) });b.observe(document, {childList: !0,subtree: !0});setTimeout(function() {b.disconnect()}, 1E4)});
 wildvogel-futter.de#%#document.cookie="complianz_consent_status=allow; path=/;";
 smule.com#%#document.cookie = "smule_consent={%22cookieBannerVersionValue%22:2%2C%22acceptedCookies%22:[%22marketing%22%2C%22functionality%22]}";
-lavanguardia.com,ledauphine.com#%#AG_onLoad(function(){if(-1===document.cookie.indexOf('euconsent-v2')){var b=new MutationObserver(function(){var a=document.querySelector('button[id="didomi-notice-agree-button"]');a&&a.click()});b.observe(document,{childList:!0,subtree:!0});setTimeout(function(){b.disconnect()},1E4)}});
+dhnet.be,lavanguardia.com,ledauphine.com#%#AG_onLoad(function(){if(-1===document.cookie.indexOf('euconsent-v2')){var b=new MutationObserver(function(){var a=document.querySelector('button[id="didomi-notice-agree-button"]');a&&a.click()});b.observe(document,{childList:!0,subtree:!0});setTimeout(function(){b.disconnect()},1E4)}});
 ranking.perspektywy.pl#%#//scriptlet('set-cookie', 'perspektywy_cookies', '1')
 flynorse.com#%#document.cookie = "N0_CONSENT=essential";
 rynekpierwotny.pl#%#//scriptlet('set-local-storage-item', 'lscache-cookieMessageIsRead', 'true')
@@ -11972,6 +11974,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !+ PLATFORM(windows, mac, android)
 @@||geolocation.onetrust.com/cookieconsentpub/*/geo/location
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/127381
+@@||sdk.privacy-center.org^$domain=dhnet.be
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126936
 @@||wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js$domain=zone.msn.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126955
@@ -24532,6 +24536,9 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 ! !SECTION: Subscriptions - Popular rules
 !
 ! SECTION: Subscriptions - Regular rules
+informpskov.ru###telegramButton
+informpskov.ru###telegramButton ~ br
+dhnet.be###selligent-newsletters
 dailymail.co.uk##div[data-track-module="newsletter-sign-up"]
 sotoguide.ru###button_tg
 trans.info##.newsletter-subscribe-popup
