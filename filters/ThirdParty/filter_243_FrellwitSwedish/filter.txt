@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-08-15 09:46:58 CEST
+! Last modified: 2022-08-17 06:17:43 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -73,7 +73,7 @@ avanza.se##.section:has(a:has-text(/^annons/i))
 bandyfeber.com##.avia-content-slider:has(.slide-entry-excerpt:has-text(/annons:/i))
 bandyfeber.com##article:has(a[href*="/annons-"])
 barnistan.se##.label:has-text(/sponsra/i):upward(.post-teaser)
-barometern.se,blt.se,borasdly.se,bt.se,goteborgdirekt.se,kalmarposten.se,klt.nu,kristianstadsbladet.se,lokalti.se,meraosterlen.se,mitti.se,nsk.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vasterastidning.se,vaxjobladet.se,vxonews.se,ystadsallehanda.se#%#//scriptlet('ubo-aeld.js', 'scroll', 'helpers.scroll(id)')
+barometern.se,blt.se,borasdly.se,bt.se,goteborgdirekt.se,kalmarposten.se,klt.nu,kristianstadsbladet.se,lokalti.se,meraosterlen.se,mitti.se,nsk.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vasterastidning.se,vaxjobladet.se,viivilla.se,vxonews.se,ystadsallehanda.se#%#//scriptlet('ubo-aeld.js', 'scroll', 'helpers.scroll(id)')
 barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,klt.nu,kristianstadsbladet.se,meraosterlen.se,nsk.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vaxjobladet.se,vxonews.se,ystadsallehanda.se###root > div:first-child:matches-css(position: fixed)
 barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,klt.nu,kristianstadsbladet.se,meraosterlen.se,nsk.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vaxjobladet.se,vxonews.se,ystadsallehanda.se##[id*="_panorama"],[id*="_mobil"]:upward(div[display="block"])
 barometern.se,blt.se,borasdly.se,bt.se,kalmarposten.se,klt.nu,kristianstadsbladet.se,meraosterlen.se,nsk.se,olandsbladet.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vaxjobladet.se,vxonews.se,ystadsallehanda.se##[id*="_panorama"],[id*="_outsider"],[id*="_insider"],[id*="_mobil"]:upward(1)
@@ -297,6 +297,7 @@ minimalisterna.se##.post:has(p:has-text(/i samarbete med/i))
 missatsamtal.se##.nosnaj:upward(.comment)
 mmanytt.se##.img-featured-posts-image:has(a[href$="/annons/"])
 mobilanyheter.net#%#//scriptlet('ubo-set.js', 'ai_run_scripts', 'noopFunc')
+modernalivet.se##.excerpt:has-text(/annons/i):upward(article)
 modernalivet.se#$#body.modal-active { overflow:unset!important }
 modernalivet.se##h3:has-text(/annons/i):upward(.sidebar-widget)
 monasuniversum.se##article > div > p:has-text(/annonssamarbete/i):upward(article)
@@ -524,8 +525,8 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1972,6 +1973,7 @@ osterbottenstidning.fi,sydin.fi,vasabladet.fi##.online-teaser--advertorial
 padelfeber.se##.o-ad, .pfm-partners, .pff-partners, .c-widget-ad, .c-teaser--native
 piraja.se###panoramaholder, #parallax
 playradio.se##.sidealtcol
+podcasts.nu##.sponsor-list, .cookie-law-wrapper
 poddtoppen.se##.txs-a
 pomu.se##[class^="Banner"]
 poolforum.se##div.adfit, .cookie_notice, div[style^="width:100%;max-width: 728px;"] > div[align="center"], div[style^="width:100%;max-width: 728px;"] > br
@@ -2042,7 +2044,7 @@ spray.se##.column-left > .article-partial
 spray.se##[class^="ads-"], [class*="article-casino"]
 startaochdriva.se##.banner-right, .banner-left, .wpb_single_image a[target="_blank"], .tdm-popup-modal-wrap
 stegforhalsa.se##[class*="jsx-"][style*="position: sticky"]
-stoppapressarna.se##.premium-page-ad
+stoppapressarna.se##.premium-page-ad, .footer-banner-wrapper
 surfa.se##div[class*="-promo"], div[class*="prisjakt-"]
 svd.se###mega-ad-wrapper, .Container--ad, .theme-Native, .AdWrapper, .AdPositionData, .Teaser--fullAdLabel
 svenskafans.com##.puff__ad-heading
@@ -2611,7 +2613,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||pushpushgo.com^$third-party
 ||pushwhy.com^
 ||pxl.host^$third-party
-||quantcast.com^$domain=flashback.org|hippson.se
+||quantcast.com^$domain=flashback.org|hippson.se|stoppapressarna.se
 ||rabattkoder.ifragasatt.se^
 ||rabble-res.cloudinary.com^$third-party
 ||radio.se/iomm
