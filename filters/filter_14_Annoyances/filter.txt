@@ -84,6 +84,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##.sqs-cookie-banner-v2
 ###idxrcookies
 ##.sf_cookie_container
 ###acceptCookiesBar
@@ -1599,6 +1600,7 @@
 !#######################################################
 !
 ! SECTION: Cookies - General URL
+/ccnst/ccbundle.min.js
 /wp-content/plugins/ninja-gdpr-compliance/*
 /simplyflex_cookies.
 /borlabs-cookie/*$~script
@@ -2148,6 +2150,9 @@ whats-on-netflix.com#$#html.sp-message-open body { overflow-y: visible !importan
 ! !SECTION: Cookies - Popular rules
 !
 !
+pamprofi.cz#$#.modal-backdrop { display: none !important; }
+pamprofi.cz#$##cookiesConsentDialog { display: none !important; }
+pamprofi.cz#$#body.modal-open { overflow: auto !important; padding-right: 0 !important; }
 ||infowarslife.com/assets/templates/common-core/lib/iCookie/iCookie.
 librarul.ro##.gdpr_popup
 xing.com##div[title="Dimmer"]
@@ -2933,7 +2938,6 @@ boehringer-ingelheim.de###it-eprivacy-root
 /eprivacy-templates/production/it-eprivacy.js$domain=boehringer-ingelheim.de
 vitacig.eu.com##.vctheme-cookies-popup
 novayagazeta.eu##div[class^="CookiesInformer_box_"]
-inenglishwithlove.com##div[class^="sqs-cookie-banner-"]
 raiffeisen-duengershop.de##.nptbccm
 fascicolo-sanitario.it###cookie_privacy
 guidaservizi.fascicolo-sanitario.it###cookie_guidaservizi
@@ -3411,7 +3415,6 @@ dehogerielen.be#$##cookies-banner { display: none !important; }
 sberbank.ru##.kitt-cookie-warning
 mailchi.mp##.mcnTemplatePageBanner
 ||iracing.com/wp-content/themes/*/cookiesettings/js/checkcookies.js
-televio.pl###ccnst__main
 smallpdf.com##.hsWwHK
 ||tags.tiqcdn.com/utag/*/utag.$domain=firstdirect.com
 belot.com#$##modal-cookies { display: none !important; }
@@ -7004,7 +7007,6 @@ elektrospank.com,bcspbologna.it,hadithcollection.com,playisgame.com,playway.com#
 netkom.de,danbolig.dk#$#div[id^="CybotCookiebotDialog"] { display: none!important; }
 netkom.de,danbolig.dk#$#html { overflow: visible!important; }
 netkom.de,danbolig.dk#$#body { overflow: visible!important; }
-gtamaxprofit.com##.sqs-cookie-banner-v2-enabled
 unifrance.org##div[class="appMobileOff headerInfos"]
 safeposter.com##.wpfresh5-cookie-pop
 bat.com###sysCookieMessage
@@ -8915,7 +8917,6 @@ kurier.at##.siteCookie
 skoda.hu##.skoda5-statisticsOptBox
 daybreakgames.com##.soe-cookie-policy
 tekzen.com.tr##.sp-fancybox-wrap.fancybox-type-iframe
-scarbir.com,purposedisruptors.org,ip3-press.com,sketchbook.com,salzwedelerbaumkuchen.de,gentlemanstationer.com,nakedandfamousdenim.com,velkase.com,audiophileon.com,annaclemens.com,worldnaturephotographyawards.com,praxis-alex-berlin.com,zahnarzt-kyber.de,eduardo-monica.com,neverware.com,turk.net,hearthmusic.com,huskichocolate.com,linnbad.no,podtrac.com,quillsoft.ca,redthreadgames.com,welcome.volleyballworld.tv##.sqs-cookie-banner-v2
 audi.hu##.statisticsOptBox
 hrs.de##.sw-cookie-layer
 amplitude-studios.com##.system-notification-container > div[id*="-policy-"]
@@ -24441,6 +24442,8 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 !
 !--- Whitelist
 ! SECTION: Push notifications - Whitelist
+! https://github.com/AdguardTeam/AdguardFilters/issues/126988
+@@||cdn.onesignal.com/sdks/amp/amp-helper-frame.js$domain=lelum.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121072
 @@||powr.io/powr.js$domain=lavatools.co
 @@||powr.io/form-builder/$domain=lavatools.co
@@ -27937,7 +27940,7 @@ livesport.ws##.ads-fullstory
 telegraaf.nl##.Col .Newsletter__body
 ||cbn.com.ua/wp-content/uploads/2019/06/20061924.jpg
 m.timesofindia.com##.newsletter_wdgt
-eyestech.in,simpleflying.com,netpeak.net##.post-subscribe
+turkcetarih.com,eyestech.in,simpleflying.com,netpeak.net##.post-subscribe
 oknamedia.ru##.social-media-and-subscription-buttons
 avclub.com,clickhole.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kotaku.com,lifehacker.com,splinternews.com,theinventory.com,theonion.com,theroot.com,thetakeout.com##.js_related-stories-inset
 trashexpert.ru,leverageedu.com,andpro.ru,mskc.pro,gastronom.ru,makeup.ru,migranturus.com,te-st.ru,bosco.ru,makeup.com.ua,netdoktor.de,sierratradingpost.com,rizonesoft.com,avclub.com,clickhole.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kotaku.com,lifehacker.com,splinternews.com,theinventory.com,theonion.com,theroot.com,thetakeout.com##.footer-subscribe
@@ -38868,6 +38871,7 @@ huyosoku.com##.blogrolls
 !   !SECTION: Widgets - Marketing(third-party services)
 !
 !   SECTION: Widgets - Marketing(specific)
+infranken.de###singlewidget_standalone
 /motchat/design/defaulttheme/js/widgetv*/index.js$domain=incredibleindia.org
 24.rakuten.co.jp##.WidgetForm-Form > div.Nps
 24tv.ua###user-vote-trigger
@@ -39364,6 +39368,7 @@ spiegel.de##div[data-settings*="https://widget.civey.com/"]
 ##.opinarywidget
 ##amp-embed[type="opinary"]
 ##.opinary-widget-wrapper
+##.opinary-wrapper
 ##iframe[src^="https://widget.civey.com"]
 ##amp-iframe[src^="https://widget.civey.com"]
 ##iframe[src*="compass.pressekompass.net/compasses"]
