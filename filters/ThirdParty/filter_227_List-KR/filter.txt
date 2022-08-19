@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.819.1
+! OriginalVersion: 2022.819.7
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -329,6 +329,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||newsis.com/assets/js/ad.js
 ||m.sportschosun.com/ad/
 ||sportschosun.com/data/file/scad/
 ||sportschosun.com/update/$image
@@ -970,6 +971,7 @@ m.seoul.co.kr##div[id*="Ad"]
 ! ##div[class*="ad_"]
 paxnet.co.kr##div[class*="ad_"]
 !
+mobile.newsis.com##.article > div[style][class]
 m.fmkorea.com##.fm_vote ~ div[style*="max-width:"]
 m.mbn.co.kr###news_main_all_wrp .today_issue ~ section[class="today_issue"]
 biz.chosun.com,www.chosun.com###fusion-app footer
@@ -1019,7 +1021,7 @@ noteforum.co.kr##table[width][cellspacing][cellpadding][border] tr:not([height])
 esuwon.net###r_aside center > div[class="bn"]
 smartfn.co.kr##.mt30 .con_rt > style + div[style]:not([class])
 m.g-enews.com,smartfn.co.kr##div[class*="Ad"]
-miraetv.net##div[id*="-banner-"]
+tgd.kr,miraetv.net##div[id*="-banner-"]
 miraetv.net##.gdl-left-sidebar
 ddengle.com###content > .article > div[class][style]
 sports.chosun.com##div[style].row.no-gutters > .col-3:not([style])
@@ -1349,7 +1351,7 @@ news1.kr##div[data-acidx][data-kind].sideBlock
 m.nocutnews.co.kr##div[class^="ct"] > .section > .view_box > #divViewBox > .viewbox > div[style]
 m.nocutnews.co.kr###pnlContainer > div[class^="ct"] > .con_b > div[style]
 m.nocutnews.co.kr###pnlContainer > div[class^="ct"] > .section > div[style]:not(class)
-news.sbs.co.kr,nocutnews.co.kr##div[id^="dablewidget_"]
+m.edaily.co.kr,news.sbs.co.kr,nocutnews.co.kr##div[id^="dablewidget_"]
 m.nongmin.com##.banner_zone
 nongmin.com##div[class$="-banner-wrap"]
 newstof.com##div[id^="popup_"]
@@ -1696,6 +1698,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+newsis.com#$#.articleView + .aside .smallbox + .smallbox { border-top: none !important; }
 unsin.co.kr#$#.content_area .todayBox { width: 100% !important; }
 fnnews.com#$#.inner_contents { margin-bottom: 0px !important; }
 tgd.kr#$#div[align="center"] + .row > .col-xs-6 { width: 100% !important; }
@@ -1717,7 +1720,6 @@ sports.chosun.com#$#div[style].row.no-gutters > .col-6 { max-width: 75% !importa
 googlewph.com,gyeomipang.co.kr#$##primary { width: 100% !important }
 www.ebs.co.kr#$#.ebs_item .inner > div[class] { width: 50% !important; }
 megabox.co.kr#$#header.main-header { top: 0px !important; }
-newsis.com#$#.articleView + .aside .asideBox.line { border-top: none !important; }
 quasarzone.com#$#.bot-content-area .mid-util-wrap > div { width: calc(50% - 5px) !important; }
 m.inven.co.kr#$##mainSlider { padding-bottom: 0px !important; }
 tgd.kr#$##header-menu-left { border-right: none !important; }
@@ -1780,6 +1782,8 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+tgd.kr#?#div[style^="display:"]:has(div[style*="width:"] > div[id^="div-gpt-ad-"])
+newsis.com#?#.articleView + .aside .smallbox:has(iframe[src^="/view/ad/"])
 danawa.com#?##danawa_main_container ul.prod-list.swiper-slide > li:has(span.ad)
 tgd.kr#?#.row > div[class^="col-xs-"]:not([id]):has(#focus-area > div[id^="div-gpt-ad-"])
 hogaeng.co.kr#?#.tbl_wrap .bo_notice:has(span[class^="spon_b_icon"])
@@ -1990,7 +1994,7 @@ jtbc.co.kr#@#.adBanner
 @@||googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=op.gg
 stockinfo7.com#%#//scriptlet("prevent-setTimeout", "ad.innerHTML.replace")
 te31.com#@#.adsbygoogle
-||fundingchoicesmessages.google.com^$domain=mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr
+||fundingchoicesmessages.google.com^$domain=mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr|tistory.com
 ||cdn.kollhong.com/wp-content/custom-js/fuckadblock.min.js
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=noopjs,domain=game.hotsharegames.com
 $script,redirect-rule=noopjs,domain=lover91.net

@@ -658,6 +658,8 @@ reddit.com#@#.ADBAR
 !
 ! SECTION: Anti-adblock - Regular rules
 ! Do not forget about '!#safari_cb_affinity' section for exclusions
+uploadhub.ws#?#center > h2:contains(Kindly Disable Adblocker)
+andrialive.it#%#//scriptlet('prevent-setTimeout', '#rbm_block_active')
 businessinsider.jp###tpModal
 commentpicker.com##.premium-banner
 slazag.pl,bytomski.pl,piekary.info,twojknurow.pl,nowinytyskie.pl,ngs24.pl,24kato.pl,rudzianin.pl,zabrzenews.pl,chorzowski.pl,tarnowskiegory.info,24zaglebie.pl##.js-block-plugin-popup
@@ -1912,6 +1914,7 @@ uwaterloo.ca##div[aria-label="Ad Blocker Detected"]
 ! SECTION: Anti-adblock - Common '!#safari_cb_affinity(general)' directive
 !#safari_cb_affinity(general)
 !
+@@||andrialive.it/*/app/assets/js/prebid-ads.js
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=shellshock.io
 @@||js.wpadmngr.com/static/adManager.js$domain=luscious.net
 @@||winiso.pl/sailthru.js
@@ -3279,6 +3282,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 /wp-content/plugins/icegram/*
 /wp-content/plugins/mailchimp/*
 /wp-content/plugins/modesco-zen-subscribe/*
+/wp-content/plugins/newspack-popups/*
 /wp-content/plugins/popup-maker/*$~stylesheet
 /wp-content/plugins/thrive-leads/*
 /wp-content/themes/Newspaper-child/*$~stylesheet,domain=~dyvys.info|~capital.de|~inside-digital.de|~expressvpn.com|~botanichka.ru
@@ -3301,6 +3305,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 ||chat.whatsappx.xyz^$third-party
 ||chatinator.com^$third-party
 ||code.clicktex.ru^$third-party
+||data.pendo.io/data/guide.js^$third-party
 ||delivery.satr.jp^$third-party
 ||downloads.mailchimp.com/js/signup-forms/
 ||elp.evolok.net^$third-party
@@ -4676,7 +4681,6 @@ hubspot.com###hs-modal__wrapper
 readbrightly.com###rise-up
 futureoflife.org##.mo-optin-form-wrapper.mo-has-name-email
 irishpost.com###overlay-form-container
-annaclemens.com,retail-insider.com,fireflysci.com,escomponents.com,thepracticalpsych.com##.sqs-popup-overlay
 ||ecb.qualquantsignals.com/invite/*.js$domain=alstom.com
 purina.co.uk##.nppe-modal
 humanesociety.org##.region-windowshade
@@ -9846,6 +9850,7 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 !
 ! Genegic rules
 ! SECTION: Subscriptions - Generic
+##.sqs-popup-overlay
 ##.followit--follow-form-container
 ##.widget_blog_subscription
 ~theoatmeal.com,~copays.org,~nothing.tech,~mega-debrid.eu,~curvegames.com,~news.un.org,~norwichzen.org.uk,~dereferer.me###mc_embed_signup
@@ -9897,6 +9902,14 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 ! !SECTION: Subscriptions - Popular rules
 !
 ! SECTION: Subscriptions - Regular rules
+overclockers.ru##div[itemprop="articleBody"] + div.sixteen > div.warning.message
+it-tehnik.ru##.widget-soc
+prezydent.pl##.widget-subscription
+otodom.pl#%#//scriptlet('set-local-storage-item', 'isNotificationsReleaseModalVisible', 'false')
+hightech.fm##.contentArea > div.article-telegram
+ua-football.com##div[class="row"][style="margin-top: 15px;"]
+dev.ua##.subscription-block
+mmafighting.com##.c-toaster[data-cdata*="newsletter"]
 psyche.co##aside[class^="styled_"][class*="InSituNewsletterSignup-"]
 allsoft.ru##.b-footer-subscription--injected
 theguardian.com##figure[data-spacefinder-type$=".NewsletterSignupBlockElement"]
@@ -12414,7 +12427,6 @@ thehindu.com##.newsletter_rhs
 runnersworld.com,prevention.com##journey-inline-newsletter
 washingtontimes.com##.email-alerts
 washingtontimes.com###newsletter-form-story
-worldnaturephotographyawards.com##.sqs-popup-overlay
 minsknews.by##.video-subscribe-header
 thenextweb.com##.p-channel-subscribe
 magazine.skyeng.ru##.ske-email-subscription
