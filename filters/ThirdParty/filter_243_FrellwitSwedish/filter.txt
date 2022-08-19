@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-08-17 06:17:43 CEST
+! Last modified: 2022-08-19 07:07:50 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -254,6 +254,8 @@ kimura.se##article:has(img[src$="/sponsrad.png"])
 kingsizemag.se##a:has(.disclaimer-tag-img)
 kittad.se##.kittad-label-sponsored:upward(li)
 klart.se##.content-box-list__item:has(.ad-text:has-text(/annons/i))
+kobe.se##a[href*="casino"]:upward(.post)
+kobe.se##p:has-text(/annonser:/i):upward(.widget_block)
 kokaihop.se#$?#.cookieBarWrapper { remove: true; }
 kokaihop.se#$#body { overflow-y: auto !important; }
 koket.se##[class*="carousel_item"]:has([class*="carousel_sponsored"])
@@ -525,8 +527,8 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -943,6 +945,7 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 /bmbFusionUtils.$script
 /bnrscr?$domain=cleannet.se|dagenshandel.se|entreprenad.com|food-supply.se|foodnet.se|fri-kopenskap.se|habit.se|kemivarldenbiotech.se|lifesciencesweden.se|medtechmagazine.se|motormagasinet.se|packnet.se|plastnet.se|processnet.se|recyclingnet.se|rt-forum.se|skyddosakerhet.se|transportnet.se|uochd.se|verkstaderna.se|woodnet.se
 /brand-metrics$domain=hemnet.se
+/bsa.js$domain=alltombrollop.com
 /bundles/comscore$domain=expressen.se
 /bundles/exp-analytics$domain=expressen.se
 /bundles/ga-$script,domain=expressen.se
@@ -1044,7 +1047,9 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 /images/*casino$domain=festivalinfo.se
 /images/visningar/*$domain=hundkartan.se
 /img/allalanse$image,domain=ekonominyheter.se
+/img/annons$domain=alltomsallskapsspel.se
 /img/banklan/*$image,domain=ekonominyheter.se
+/img/banner$domain=alltomsallskapsspel.se
 /img/bettingstugan.$image
 /img/compricer$image,domain=ekonominyheter.se
 /initLogging$domain=dn.se
@@ -1289,7 +1294,7 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 /plugins/wp-facebook-pixel
 /plugins/wp-gdpr-compliance/*$script
 /plugins/wp-lrf-paywall
-/plugins/wp-popups-lite$domain=grillbaronen.se|sameforeningen-stockholm.se|spelochfilm.se
+/plugins/wp-popups-lite$domain=grillbaronen.se|norrkopingshistoria.se|sameforeningen-stockholm.se|spelochfilm.se
 /plugins/wp-power-stats
 /plugins/wp-sentry-integration$domain=chef.se
 /plugins/wp-snow-effect
@@ -1447,7 +1452,7 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 /wp-content/uploads/*unibet$image
 /wp-content/uploads/addtoany$domain=chefstidningen.se
 /wp-content/uploads/html5ads/*
-/wp-content\/uploads\/[0-9]+/$script,domain=automation.se|dackavisen.se|skanesport.se|villalivet.se
+/wp-content\/uploads\/[0-9]+/$script,domain=automation.se|dackavisen.se|datormagazin.se|skanesport.se|villalivet.se
 /wp-json/wp-statistics
 /wp-json/wpstatistics
 /wp-native-ads.json
@@ -1535,6 +1540,7 @@ allsvenskan.se,superettan.se##.app-cookie-line, .partners-slideshow-widgets, .pa
 alltforforaldrar.se,bytbil.com,di.se,mammasidan.se,minbebis.com,upphandling24.se##.panorama
 alltforforaldrar.se,mammasidan.se,minbebis.com###partnerMenuContainer, #partnerMenuContainerFiller
 alltforforaldrar.se,mammasidan.se,minbebis.com##.spons-artc, a[href^="/native/"]
+alltombrollop.com,alltomsallskapsspel.se##a[onclick*="Banner"]
 alltomhif.se##.sek-module-inner a[target="_blank"]
 alltomhif.se,kulturimperiet.se,luthagsnytt.se,lyckasmedbakning.nu,mat-meny.se,pinkprogramming.se,soja.se,tonyhatefnejad.se,vitaestilo.se##.preloader
 alltomstockholm.se##.ad-placement-container, .ad-mark-small, .ad-mark-rotated, [class*="panorama"]
@@ -2024,6 +2030,7 @@ skk.se##.campaigns, [id*="GlobalCampaigns"]
 skogsforum.se##.masthead, .col-right, a[href^="https://goo.gl/"], a[href*="//bit.ly/"]
 skolfamiljen.se##.right-sidebar aside[id^="block"], .right-sidebar aside[id^="adguru"]
 skrattnet.se,webben7.se##.region-sidebar-second
+skyltat.se##.sidebar
 skyscanner.se###cookie-banner-root
 smartsenior.se##.ss-modal, .modal-mobile-app
 smhi.se##.polopolyNotification
