@@ -1707,8 +1707,12 @@ teleboy.ch#@#.adWrapper
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! motorsport-total.com ads on main page
+motorsport-total.com#?#.picture-content-wrapper:has(> a > figure > .txt-small > span:contains(ANZEIGE))
+motorsport-total.com#?#.picture-content-wrapper:has(> a + p > a:contains(Anzeige))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126610
-wetterkontor.de#?#.uk-text-center > .uk-text-small:contains(/^Anzeige$/)
+wetterkontor.de#?#.uk-panel:has(> div[class^="adunit-container"])
+wetterkontor.de#?#.uk-panel:has(> .adsbygoogle)
 ! mopo.de - ticker ads
 mopo.de#?#.js-marquee:has(> a[href*="campaign"][target="_blank"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124978
@@ -2991,7 +2995,7 @@ vergleich.focus.de,chip.de,gutefrage.net,reisefrage.net,motorradfrage.net,autofr
 ! ##.adsbygoogle
 winfuture.de,netzwelt.de,quoka.de,farmeramania.de,bravofly.de,computerbild.de,digitalfernsehen.de,hl-live.de,chinamobilemag.de,focus.de,pcwelt.de##.adsbygoogle
 !
-community.spontacts.com##.fs-flicker-box
+community.spontacts.com,community.gemeinsamerleben.com##.responsive-smart-wrapper
 infranken.de##.teaser-section_special
 infranken.de##section[data-module="Shopping-Deal"]
 inrlp.de###billboard-wrapper
