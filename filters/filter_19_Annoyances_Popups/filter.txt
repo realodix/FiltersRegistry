@@ -509,7 +509,7 @@ email-checker.net,annelertoplandik.com,dosyaupload.com,izle7.com,tv100.com,thehi
 /^https?:\/\/[^\/]+\.[^\/]+\/[a-zA-Z0-9_-]{32,}$/$script,third-party,domain=boredpanda.com|digitaltrends.com|geekspin.co|cleveland.com|veliainn.com|inquirer.net|winhelponline.com|bloody-disgusting.com|bigleaguepolitics.com|sportskeeda.com|golf.com
 ! can be closed
 comingsoon.net,playstationlifestyle.net,worldpopulationreview.com,nationalreview.com,wrestlezone.com,dualshockers.com,thethaiger.com,worldtravelguide.net,sportskeeda.com,gamerant.com,gamerjournalist.com,voetbalzone.nl,theurbanlist.com,golf.com,xda-developers.com,metv.com,nbcnews.com,wegotthiscovered.com,savvytime.com,nbcsportsedge.com,haber3.com,androidpolice.com,news.com.au,forums.radioreference.com,boston.com,reviewgeek.com,technicpack.net,theblaze.com,morfix.co.il,factinate.com,phonearena.com,stripes.com,progameguides.com,weatherbug.com,patheos.com,online-tech-tips.com,digitaltrends.com,helpdeskgeek.com,britannica.com,wrestlinginc.com,superherohype.com,news24.com,pgatour.com,wral.com,gamepur.com,fin24.com,geekzone.co.nz,upi.com,thewindowsclub.com,androidcure.com,secondnexus.com,health24.com,wokesloth.com,sport24.co.za,onmsft.com,cultofmac.com,washingtontimes.com#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'admiral')
-onmsft.com#%#//scriptlet("abort-current-inline-script", "EventTarget.prototype.addEventListener", "admiral")
+onmsft.com#%#//scriptlet("prevent-addEventListener", "DOMContentLoaded", "admiral")
 mangasee123.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "googletag")
 grandprix247.com,familyminded.com,xcalibrscans.com,cbsnews.com,finviz.com,ign.com,workandmoney.com,today.com,rottentomatoes.com,walterfootball.com,dotesports.com,boredpanda.com,cleveland.com#%#//scriptlet("set-constant", "admiral", "noopFunc")
 ! cannot be closed
@@ -544,6 +544,7 @@ reddit.com#@#.ADBAR
 !#safari_cb_affinity
 !
 ! Add same rules to the Admiral section of Tracking Protection filter
+||dapperfloor.com^$third-party
 ||flowerstreatment.com^$third-party
 ||pocketfaucet.com^$third-party
 ||childlikecrowd.com^$third-party
@@ -3396,7 +3397,6 @@ reqbin.com##.toast-poll
 ||cnet.com/*/fly/js/components/shopping-modal-promo-*-rev.js
 pisni.org.ua###socialNotifier
 macapp.org.cn##.web_notice
-fandom.com###WikiaBar
 facebook.com#?#div[role="main"] ~ div[data-nosnippet]:has(a[aria-label="Accessible login button"])
 7k7k.com##.pendant
 wpri.com##.desktop-floating-player
@@ -7321,7 +7321,8 @@ creativemarket.com#$##site-modals { display:none!important; }
 creativemarket.com#$#.no-scroll { overflow:visible!important; }
 wyborcza.pl##.mcBan > .mod_swimmer[data-cta-category="plywak"]
 deine-tierwelt.de#$##hunde_kontakt_warnung { display: none!important; }
-deine-tierwelt.de#$#body { overflow: visible!important; }
+deine-tierwelt.de#$#body { overflow: visible!important; position: relative!important; }
+deine-tierwelt.de#$#.modal-backdrop { display: none !important; }
 emart.ssg.com###floatWrap3
 anlegen-in-immobilien.de##.showAiiNewsletterLayer
 aktiencheck.de###side_teaser_topleft
@@ -8828,6 +8829,7 @@ zlavomat.sk#@##credential_picker_container
 !
 !
 ! SECTION: Push notifications - Generic rules
+!
 ###kp-subscribe-window
 ###NotificationsAskMsg
 ###onesignal-popover-container
@@ -9294,6 +9296,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 ! !SECTION: Push notifications - Popular rules
 !
 ! SECTION: Push notifications - Regular rules
+!
 androidmakale.com,simulasyonturk.com##.widget_onesignalwidget
 ||acasa.ro/js/web-push-sdk.js
 timesofindia.indiatimes.com##.bluy8
@@ -9790,8 +9793,8 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 ! Good: @@||popups.org^$domain=example.org
 ! Bad: ||example.org^
 !
-!--- Whitelist
 ! SECTION: Push notifications - Whitelist
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126988
 @@||cdn.onesignal.com/sdks/amp/amp-helper-frame.js$domain=lelum.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121072
@@ -9853,10 +9856,9 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 ! Good: any type of the rules will be good
 ! Bad: @@||signup.e2ma.net^$domain=example.org (should be in AdGuard Base - subscriptions_whitelist.txt)
 !
-!
-!
 ! Genegic rules
 ! SECTION: Subscriptions - Generic
+!
 ##.sqs-popup-overlay
 ##.followit--follow-form-container
 ##.widget_blog_subscription
@@ -9883,6 +9885,7 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 ! Bad: @@||signup.e2ma.net^$domain=example.org (should be in AdGuard Base - subscriptions_whitelist.txt)
 !
 ! SECTION: Subscriptions - Popular rules
+!
 ! common names
 ! ##.cta-component-half-width
 andoveradvertiser.co.uk,asianimage.co.uk,banburycake.co.uk,barryanddistrictnews.co.uk,basildonstandard.co.uk,basingstokegazette.co.uk,bicesteradvertiser.net,borehamwoodtimes.co.uk,braintreeandwithamtimes.co.uk,brentwoodlive.co.uk,bridportnews.co.uk,bromsgroveadvertiser.co.uk,bucksfreepress.co.uk,burytimes.co.uk,campaignseries.co.uk,chelmsfordweeklynews.co.uk,chorleycitizen.co.uk,clactonandfrintongazette.co.uk,cotswoldjournal.co.uk,cravenherald.co.uk,croydonguardian.co.uk,dailyecho.co.uk,darlingtonandstocktontimes.co.uk,dorsetecho.co.uk,droitwichadvertiser.co.uk,dudleynews.co.uk,ealingtimes.co.uk,echo-news.co.uk,enfieldindependent.co.uk,eppingforestguardian.co.uk,epsomguardian.co.uk,eveningtimes.co.uk,eveshamjournal.co.uk,falmouthpacket.co.uk,freepressseries.co.uk,gazette-news.co.uk,gazetteherald.co.uk,gazetteseries.co.uk,greenocktelegraph.co.uk,guardian-series.co.uk,halesowennews.co.uk,halsteadgazette.co.uk,hampshirechronicle.co.uk,harrowtimes.co.uk,harwichandmanningtreestandard.co.uk,heraldscotland.com,heraldseries.co.uk,herefordtimes.com,hillingdontimes.co.uk,ilkleygazette.co.uk,keighleynews.co.uk,kidderminstershuttle.co.uk,knutsfordguardian.co.uk,lancashiretelegraph.co.uk,ledburyreporter.co.uk,leighjournal.co.uk,ludlowadvertiser.co.uk,maldonandburnhamstandard.co.uk,malverngazette.co.uk,messengernewspapers.co.uk,middlewichguardian.co.uk,milfordmercury.co.uk,newsshopper.co.uk,northwichguardian.co.uk,northyorkshireadvertiser.co.uk,oxfordmail.co.uk,oxfordtimes.co.uk,penarthtimes.co.uk,prestwichandwhitefieldguide.co.uk,redditchadvertiser.co.uk,richmondandtwickenhamtimes.co.uk,romseyadvertiser.co.uk,runcornandwidnesworld.co.uk,salisburyjournal.co.uk,smallholder.co.uk,southendstandard.co.uk,southwalesargus.co.uk,southwalesguardian.co.uk,southwestfarmer.co.uk,stalbansreview.co.uk,sthelensstar.co.uk,stourbridgenews.co.uk,surreycomet.co.uk,suttonguardian.co.uk,swindonadvertiser.co.uk,tewkesburyadmag.co.uk,theargus.co.uk,theboltonnews.co.uk,thenational.scot,thenorthernecho.co.uk,theoldhamtimes.co.uk,thescottishfarmer.co.uk,thetelegraphandargus.co.uk,thetottenhamindependent.co.uk,thewestmorlandgazette.co.uk,thurrockgazette.co.uk,times-series.co.uk,tivysideadvertiser.co.uk,wandsworthguardian.co.uk,warringtonguardian.co.uk,watfordobserver.co.uk,wearvalleyadvertiser.co.uk,westerntelegraph.co.uk,wharfedaleobserver.co.uk,wilmslowguardian.co.uk,wiltsglosstandard.co.uk,wiltshiretimes.co.uk,wimbledonguardian.co.uk,wirralglobe.co.uk,witneygazette.co.uk,worcesternews.co.uk,yorkpress.co.uk,yourlocalguardian.co.uk##.cta-component-half-width
@@ -9909,6 +9912,7 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 ! !SECTION: Subscriptions - Popular rules
 !
 ! SECTION: Subscriptions - Regular rules
+!
 potokmedia.ru#?#.td-is-sticky div.textwidget > h4:contains(ПОДПИШИСЬ):upward(1)
 hellotech.com#%#document.cookie = "emailwall_instant_guide=visited";
 hellotech.com#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("emailwall_instant_guide", "visited") } } catch (ex) {} })();
@@ -14132,8 +14136,8 @@ tvrain.ru##.menu3__foreign-agent-wrapper
 ! Good: @@||signup.e2ma.net^$domain=example.org
 ! Bad: ||example.org^ (should be in AdGuard Base - subscriptions_specific.txt)
 !
-!--- Whitelist
 ! SECTION: Subscriptions - Whitelist
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116753
 @@||artivive.activehosted.com/*/embed.php$domain=artivive.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111595

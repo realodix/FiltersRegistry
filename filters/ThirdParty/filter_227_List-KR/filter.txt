@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.820.0
+! OriginalVersion: 2022.820.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -330,6 +330,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+/^http(s|):\/\/img.tf.co.kr\/ss\/[0-9]{4}\/fns\/ads_/
 ||newsis.com/assets/js/ad.js
 ||m.sportschosun.com/ad/
 ||sportschosun.com/data/file/scad/
@@ -946,7 +947,7 @@ bgchang.co.kr,edit.incruit.com,signinssl.gmarket.co.kr,m.hungryapp.co.kr,m.edail
 ! ##div[class$="-ad"]
 cgv.co.kr,m.inven.co.kr,tipsandtrickskorea.com,gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
-fmkorea.com,newstomato.com,gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
+moneys.mt.co.kr,fmkorea.com,newstomato.com,gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
 mediatoday.co.kr,newsworker.co.kr##div[id^="AD"]
 ! ##div[class^="Banner"]
@@ -972,6 +973,11 @@ m.seoul.co.kr##div[id*="Ad"]
 ! ##div[class*="ad_"]
 paxnet.co.kr##div[class*="ad_"]
 !
+m.tf.co.kr###artContent > div[style]:not([class])
+m.tf.co.kr##div[class^="AD_"]
+m.tf.co.kr##ul[class$="Ad"]
+m.tf.co.kr##div[class^="swiper-topbanner"]
+news.tf.co.kr###tfHeader > div[style]:not([class])
 cm.asiae.co.kr##div[class^="fortune_module"]
 mbiz.heraldcorp.com###articleText > section[style*="height:"]
 fmkorea.com,~m.fmkorea.com##.adpost
@@ -1407,10 +1413,8 @@ m.danawa.com##div.power_link
 m.coupang.com##div[id^="sdp-"][id$="-banner"]
 m.clien.net##div[class$="_ad "]
 news.tf.co.kr###posLeft > div[style~="width100%;font-size:"][style~="#ececec;margin-bottom:"]
-news.tf.co.kr##iframe[id^="ADFRAME_"]
 news.tf.co.kr##iframe[src^="/public/ad/"]
 tf.co.kr##iframe[src*="tf.co.kr/public/layout/"][src*="/top_menu_bar_"][src*=".php"]
-tf.co.kr##iframe[src*="//www.tf.co.kr/public/ad/"]
 tf.co.kr##iframe[src*="//nad.tf.co.kr/"]
 m.naver.com,tf.co.kr##div[id$="_AD"]
 ohmynews.com##.content > ul.ad_area

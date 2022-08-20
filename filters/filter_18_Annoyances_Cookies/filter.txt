@@ -1602,6 +1602,7 @@
 !#######################################################
 !
 ! SECTION: Cookies - General URL
+!
 /ccnst/ccbundle.min.js
 /wp-content/plugins/ninja-gdpr-compliance/*
 /simplyflex_cookies.
@@ -2016,6 +2017,7 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 !
 ! For the sites with '$generichide' exclusions
 !   SECTION: Cookies - Specific rules($generichide)
+!
 adzsafe.com##.cookie-block
 nyaa.net###cookie-warning
 lego.com#$#aside[class^="Modalstyles__Container"] { display: none !important; }
@@ -2042,6 +2044,7 @@ strunz.com###v-cookielaw
 /consent.[\s\S]*.de/$domain=mopo.de|duda-kinderzeitung.de|dumont.de|dumont-rheinland.de|rheinische-anzeigenblaetter.de|yourjob.de
 !
 ! SECTION: Cookies - Popular rules
+!
 ! common name
 ! ##.cc-overlay
 foodbrothers.com,semikolon.com,leuchtturm1917.de,laenderbahn.com,jhdversicherungen.de,computerwelt.at,torquato.de,dtv.de,vinzenz-klinik.de,herold.at,internorm.com,colop.com##.cc-overlay
@@ -2100,7 +2103,8 @@ ferienwiki.de,eurovisionworld.com,joiebaby.com,opy.com,mwave.me,toptal.com,ikea.
 talent-soft.com,moviepilot.de,jofogas.hu,m.rtl.be,elmundo.es,vecernji.hr,zive.cz,gamepro.de#$##didomi-host { display: none !important; }
 talent-soft.com,moviepilot.de,jofogas.hu,m.rtl.be,elmundo.es,vecernji.hr,zive.cz,gamepro.de#$#html > body.didomi-popup-open { overflow: auto !important; position: unset !important; }
 ! realCookieBanner
-viel-unterwegs.de,ahorn-camp.de,mmo-sankar.de,der-windows-papst.de#@%#//scriptlet("set-constant", "realCookieBanner", "undefined")
+viel-unterwegs.de,ahorn-camp.de,mmo-sankar.de,der-windows-papst.de#%#//scriptlet("set-constant", "realCookieBanner", "undefined")
+! viel-unterwegs.de,ahorn-camp.de,mmo-sankar.de,der-windows-papst.de#@%#//scriptlet("set-constant", "realCookieBanner", "undefined")
 /\/wp-content\/[a-f0-9]{32}.js/$domain=viel-unterwegs.de|ahorn-camp.de|mmo-sankar.de|der-windows-papst.de
 !
 ! cmpbox cookies
@@ -9139,6 +9143,8 @@ zeropln.antyweb.pl#$#body[style="overflow: hidden;"] { overflow: visible!importa
 ||weblio.hs.llnwd.net/e7/script/include/free_or_premium_registration_cookie.js
 ||zgody.infor.pl/build/assets/js/main.js$domain=~sklep.infor.pl
 abda.de,globetrotter.de,knappschaft.de,statisticshowto.com,lootboy.de,compress-or-die.com,adventuregamers.com,benzinekosten-berekenen.nl,deine-tierwelt.de,jofogas.hu,wickr.com###CybotCookiebotDialog
+deine-tierwelt.de#$#.modal-backdrop { display: none !important; }
+deine-tierwelt.de#$#body { overflow: visible!important; position: relative!important; }
 kbb.com.br,kbb.sapo.pt###KBBCookieNotifier
 diariodeleon.es###LegalCookies
 reddit.com###SHORTCUT_FOCUSABLE_DIV > div > div:not([class]):not([id]):not([style]) > .hvdZkC
@@ -11449,7 +11455,6 @@ krolewskie.pl#%#//scriptlet('set-cookie', 'HEINEKEN_ENSIGHTEN_PRIVACY_BANNER_VIE
 11freunde.de#%#AG_onLoad(function() {if (!document.cookie.includes("gdpr_data")) {var g = new MutationObserver(function() {var b = document.querySelector('#czgdpr-notice-wrp #save');b&&b.click();});g.observe(document, {childList: !0,subtree: !0});setTimeout(function() {g.disconnect()}, 1E4)}});
 24ur.com#%#AG_onLoad(function() {var g = new MutationObserver(function() {if (document.querySelector("onl-cookie")) { var b = document.querySelector('.cookies__right > a.button--primary');b&&b.click();}});g.observe(document, {childList: !0,subtree: !0});setTimeout(function() {g.disconnect()}, 1E4)});
 diebank.de#%#AG_onLoad(function() {if (!document.cookie.includes("cookieConsent")) {var g = new MutationObserver(function() {var b = document.querySelector('button.btn-cta');b&&b.click();});g.observe(document, {childList: !0,subtree: !0});setTimeout(function() {g.disconnect()}, 1E4)}});
-viel-unterwegs.de,ahorn-camp.de,mmo-sankar.de,der-windows-papst.de#%#//scriptlet("set-constant", "realCookieBanner", "undefined")
 desired.de#%#//scriptlet("set-constant", "consentIsActive", "false")
 ga.de#%#//scriptlet("set-constant", "consentUrl", "undefined")
 telenor.se#%#//scriptlet('set-cookie', 'telenorcookiepolicy', '1')
@@ -11964,6 +11969,7 @@ stockmann.com#$#.cookie-dialog-screen { display: none!important; }
 !--- HTML rules ---
 !
 ! SECTION: Cookies - Specific rules(HTML)
+!
 m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ! NOTE: Specific rules(HTML) end ⬆️
 ! !SECTION: Cookies - Specific rules(HTML)
@@ -11971,6 +11977,7 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !--- Replace rules---
 !
 ! SECTION: Cookies - Specific rules(replace)
+!
 ||vpolshchi.pl/$replace=/return .\.isVendorAllowed\(.\)&&.\.filter\(.=>.\.isPurposeAllowed\(.\)\)\.length===.\.length/return/,script
 ||o2.pl/$replace=/return .\.isVendorAllowed\(.\)&&.\.filter\(\(function\(.\){return .\.isPurposeAllowed\(.\)\}\)\)\.length===.\.length/return/,script
 ||abczdrowie.pl/$replace=/return .\.isVendorAllowed\(.\)&&.\.filter\(\(function\(.\){return .\.isPurposeAllowed\(.\)\}\)\)\.length===.\.length/return/,script
@@ -14764,6 +14771,7 @@ fashionette.de#@##cookies-notice
 foodnetwork.co.uk#@#.cookie-message:not(html):not(body)
 !
 ! NOTE: Fixing problems on platform withut CSS rules support
+!
 !#if (adguard_ext_android_cb)
 dehn.de#@##cookie-layer
 dehn.de#@#.cookie-layer
