@@ -1602,6 +1602,7 @@
 !#######################################################
 !
 ! SECTION: Cookies - General URL
+!
 /ccnst/ccbundle.min.js
 /wp-content/plugins/ninja-gdpr-compliance/*
 /simplyflex_cookies.
@@ -2016,6 +2017,7 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 !
 ! For the sites with '$generichide' exclusions
 !   SECTION: Cookies - Specific rules($generichide)
+!
 adzsafe.com##.cookie-block
 nyaa.net###cookie-warning
 lego.com#$#aside[class^="Modalstyles__Container"] { display: none !important; }
@@ -2042,6 +2044,7 @@ strunz.com###v-cookielaw
 /consent.[\s\S]*.de/$domain=mopo.de|duda-kinderzeitung.de|dumont.de|dumont-rheinland.de|rheinische-anzeigenblaetter.de|yourjob.de
 !
 ! SECTION: Cookies - Popular rules
+!
 ! common name
 ! ##.cc-overlay
 foodbrothers.com,semikolon.com,leuchtturm1917.de,laenderbahn.com,jhdversicherungen.de,computerwelt.at,torquato.de,dtv.de,vinzenz-klinik.de,herold.at,internorm.com,colop.com##.cc-overlay
@@ -2100,7 +2103,8 @@ ferienwiki.de,eurovisionworld.com,joiebaby.com,opy.com,mwave.me,toptal.com,ikea.
 talent-soft.com,moviepilot.de,jofogas.hu,m.rtl.be,elmundo.es,vecernji.hr,zive.cz,gamepro.de#$##didomi-host { display: none !important; }
 talent-soft.com,moviepilot.de,jofogas.hu,m.rtl.be,elmundo.es,vecernji.hr,zive.cz,gamepro.de#$#html > body.didomi-popup-open { overflow: auto !important; position: unset !important; }
 ! realCookieBanner
-viel-unterwegs.de,ahorn-camp.de,mmo-sankar.de,der-windows-papst.de#@%#//scriptlet("set-constant", "realCookieBanner", "undefined")
+viel-unterwegs.de,ahorn-camp.de,mmo-sankar.de,der-windows-papst.de#%#//scriptlet("set-constant", "realCookieBanner", "undefined")
+! viel-unterwegs.de,ahorn-camp.de,mmo-sankar.de,der-windows-papst.de#@%#//scriptlet("set-constant", "realCookieBanner", "undefined")
 /\/wp-content\/[a-f0-9]{32}.js/$domain=viel-unterwegs.de|ahorn-camp.de|mmo-sankar.de|der-windows-papst.de
 !
 ! cmpbox cookies
@@ -9139,6 +9143,8 @@ zeropln.antyweb.pl#$#body[style="overflow: hidden;"] { overflow: visible!importa
 ||weblio.hs.llnwd.net/e7/script/include/free_or_premium_registration_cookie.js
 ||zgody.infor.pl/build/assets/js/main.js$domain=~sklep.infor.pl
 abda.de,globetrotter.de,knappschaft.de,statisticshowto.com,lootboy.de,compress-or-die.com,adventuregamers.com,benzinekosten-berekenen.nl,deine-tierwelt.de,jofogas.hu,wickr.com###CybotCookiebotDialog
+deine-tierwelt.de#$#.modal-backdrop { display: none !important; }
+deine-tierwelt.de#$#body { overflow: visible!important; position: relative!important; }
 kbb.com.br,kbb.sapo.pt###KBBCookieNotifier
 diariodeleon.es###LegalCookies
 reddit.com###SHORTCUT_FOCUSABLE_DIV > div > div:not([class]):not([id]):not([style]) > .hvdZkC
@@ -11449,7 +11455,6 @@ krolewskie.pl#%#//scriptlet('set-cookie', 'HEINEKEN_ENSIGHTEN_PRIVACY_BANNER_VIE
 11freunde.de#%#AG_onLoad(function() {if (!document.cookie.includes("gdpr_data")) {var g = new MutationObserver(function() {var b = document.querySelector('#czgdpr-notice-wrp #save');b&&b.click();});g.observe(document, {childList: !0,subtree: !0});setTimeout(function() {g.disconnect()}, 1E4)}});
 24ur.com#%#AG_onLoad(function() {var g = new MutationObserver(function() {if (document.querySelector("onl-cookie")) { var b = document.querySelector('.cookies__right > a.button--primary');b&&b.click();}});g.observe(document, {childList: !0,subtree: !0});setTimeout(function() {g.disconnect()}, 1E4)});
 diebank.de#%#AG_onLoad(function() {if (!document.cookie.includes("cookieConsent")) {var g = new MutationObserver(function() {var b = document.querySelector('button.btn-cta');b&&b.click();});g.observe(document, {childList: !0,subtree: !0});setTimeout(function() {g.disconnect()}, 1E4)}});
-viel-unterwegs.de,ahorn-camp.de,mmo-sankar.de,der-windows-papst.de#%#//scriptlet("set-constant", "realCookieBanner", "undefined")
 desired.de#%#//scriptlet("set-constant", "consentIsActive", "false")
 ga.de#%#//scriptlet("set-constant", "consentUrl", "undefined")
 telenor.se#%#//scriptlet('set-cookie', 'telenorcookiepolicy', '1')
@@ -11964,6 +11969,7 @@ stockmann.com#$#.cookie-dialog-screen { display: none!important; }
 !--- HTML rules ---
 !
 ! SECTION: Cookies - Specific rules(HTML)
+!
 m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ! NOTE: Specific rules(HTML) end ⬆️
 ! !SECTION: Cookies - Specific rules(HTML)
@@ -11971,6 +11977,7 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !--- Replace rules---
 !
 ! SECTION: Cookies - Specific rules(replace)
+!
 ||vpolshchi.pl/$replace=/return .\.isVendorAllowed\(.\)&&.\.filter\(.=>.\.isPurposeAllowed\(.\)\)\.length===.\.length/return/,script
 ||o2.pl/$replace=/return .\.isVendorAllowed\(.\)&&.\.filter\(\(function\(.\){return .\.isPurposeAllowed\(.\)\}\)\)\.length===.\.length/return/,script
 ||abczdrowie.pl/$replace=/return .\.isVendorAllowed\(.\)&&.\.filter\(\(function\(.\){return .\.isPurposeAllowed\(.\)\}\)\)\.length===.\.length/return/,script
@@ -14764,6 +14771,7 @@ fashionette.de#@##cookies-notice
 foodnetwork.co.uk#@#.cookie-message:not(html):not(body)
 !
 ! NOTE: Fixing problems on platform withut CSS rules support
+!
 !#if (adguard_ext_android_cb)
 dehn.de#@##cookie-layer
 dehn.de#@#.cookie-layer
@@ -15210,6 +15218,7 @@ email-checker.net,annelertoplandik.com,dosyaupload.com,izle7.com,tv100.com,thehi
 /^https?:\/\/[^\/]+\.[^\/]+\/[a-zA-Z0-9_-]{32,}$/$script,third-party,domain=boredpanda.com|digitaltrends.com|geekspin.co|cleveland.com|veliainn.com|inquirer.net|winhelponline.com|bloody-disgusting.com|bigleaguepolitics.com|sportskeeda.com|golf.com
 ! can be closed
 comingsoon.net,playstationlifestyle.net,worldpopulationreview.com,nationalreview.com,wrestlezone.com,dualshockers.com,thethaiger.com,worldtravelguide.net,sportskeeda.com,gamerant.com,gamerjournalist.com,voetbalzone.nl,theurbanlist.com,golf.com,xda-developers.com,metv.com,nbcnews.com,wegotthiscovered.com,savvytime.com,nbcsportsedge.com,haber3.com,androidpolice.com,news.com.au,forums.radioreference.com,boston.com,reviewgeek.com,technicpack.net,theblaze.com,morfix.co.il,factinate.com,phonearena.com,stripes.com,progameguides.com,weatherbug.com,patheos.com,online-tech-tips.com,digitaltrends.com,helpdeskgeek.com,britannica.com,wrestlinginc.com,superherohype.com,news24.com,pgatour.com,wral.com,gamepur.com,fin24.com,geekzone.co.nz,upi.com,thewindowsclub.com,androidcure.com,secondnexus.com,health24.com,wokesloth.com,sport24.co.za,onmsft.com,cultofmac.com,washingtontimes.com#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'admiral')
+onmsft.com#%#//scriptlet("prevent-addEventListener", "DOMContentLoaded", "admiral")
 mangasee123.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "googletag")
 grandprix247.com,familyminded.com,xcalibrscans.com,cbsnews.com,finviz.com,ign.com,workandmoney.com,today.com,rottentomatoes.com,walterfootball.com,dotesports.com,boredpanda.com,cleveland.com#%#//scriptlet("set-constant", "admiral", "noopFunc")
 ! cannot be closed
@@ -15244,6 +15253,7 @@ reddit.com#@#.ADBAR
 !#safari_cb_affinity
 !
 ! Add same rules to the Admiral section of Tracking Protection filter
+||dapperfloor.com^$third-party
 ||flowerstreatment.com^$third-party
 ||pocketfaucet.com^$third-party
 ||childlikecrowd.com^$third-party
@@ -22020,7 +22030,8 @@ creativemarket.com#$##site-modals { display:none!important; }
 creativemarket.com#$#.no-scroll { overflow:visible!important; }
 wyborcza.pl##.mcBan > .mod_swimmer[data-cta-category="plywak"]
 deine-tierwelt.de#$##hunde_kontakt_warnung { display: none!important; }
-deine-tierwelt.de#$#body { overflow: visible!important; }
+deine-tierwelt.de#$#body { overflow: visible!important; position: relative!important; }
+deine-tierwelt.de#$#.modal-backdrop { display: none !important; }
 emart.ssg.com###floatWrap3
 anlegen-in-immobilien.de##.showAiiNewsletterLayer
 aktiencheck.de###side_teaser_topleft
@@ -23527,6 +23538,7 @@ zlavomat.sk#@##credential_picker_container
 !
 !
 ! SECTION: Push notifications - Generic rules
+!
 ###kp-subscribe-window
 ###NotificationsAskMsg
 ###onesignal-popover-container
@@ -23993,6 +24005,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 ! !SECTION: Push notifications - Popular rules
 !
 ! SECTION: Push notifications - Regular rules
+!
 androidmakale.com,simulasyonturk.com##.widget_onesignalwidget
 ||acasa.ro/js/web-push-sdk.js
 timesofindia.indiatimes.com##.bluy8
@@ -24489,8 +24502,8 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 ! Good: @@||popups.org^$domain=example.org
 ! Bad: ||example.org^
 !
-!--- Whitelist
 ! SECTION: Push notifications - Whitelist
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126988
 @@||cdn.onesignal.com/sdks/amp/amp-helper-frame.js$domain=lelum.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121072
@@ -24552,10 +24565,9 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 ! Good: any type of the rules will be good
 ! Bad: @@||signup.e2ma.net^$domain=example.org (should be in AdGuard Base - subscriptions_whitelist.txt)
 !
-!
-!
 ! Genegic rules
 ! SECTION: Subscriptions - Generic
+!
 ##.sqs-popup-overlay
 ##.followit--follow-form-container
 ##.widget_blog_subscription
@@ -24582,6 +24594,7 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 ! Bad: @@||signup.e2ma.net^$domain=example.org (should be in AdGuard Base - subscriptions_whitelist.txt)
 !
 ! SECTION: Subscriptions - Popular rules
+!
 ! common names
 ! ##.cta-component-half-width
 andoveradvertiser.co.uk,asianimage.co.uk,banburycake.co.uk,barryanddistrictnews.co.uk,basildonstandard.co.uk,basingstokegazette.co.uk,bicesteradvertiser.net,borehamwoodtimes.co.uk,braintreeandwithamtimes.co.uk,brentwoodlive.co.uk,bridportnews.co.uk,bromsgroveadvertiser.co.uk,bucksfreepress.co.uk,burytimes.co.uk,campaignseries.co.uk,chelmsfordweeklynews.co.uk,chorleycitizen.co.uk,clactonandfrintongazette.co.uk,cotswoldjournal.co.uk,cravenherald.co.uk,croydonguardian.co.uk,dailyecho.co.uk,darlingtonandstocktontimes.co.uk,dorsetecho.co.uk,droitwichadvertiser.co.uk,dudleynews.co.uk,ealingtimes.co.uk,echo-news.co.uk,enfieldindependent.co.uk,eppingforestguardian.co.uk,epsomguardian.co.uk,eveningtimes.co.uk,eveshamjournal.co.uk,falmouthpacket.co.uk,freepressseries.co.uk,gazette-news.co.uk,gazetteherald.co.uk,gazetteseries.co.uk,greenocktelegraph.co.uk,guardian-series.co.uk,halesowennews.co.uk,halsteadgazette.co.uk,hampshirechronicle.co.uk,harrowtimes.co.uk,harwichandmanningtreestandard.co.uk,heraldscotland.com,heraldseries.co.uk,herefordtimes.com,hillingdontimes.co.uk,ilkleygazette.co.uk,keighleynews.co.uk,kidderminstershuttle.co.uk,knutsfordguardian.co.uk,lancashiretelegraph.co.uk,ledburyreporter.co.uk,leighjournal.co.uk,ludlowadvertiser.co.uk,maldonandburnhamstandard.co.uk,malverngazette.co.uk,messengernewspapers.co.uk,middlewichguardian.co.uk,milfordmercury.co.uk,newsshopper.co.uk,northwichguardian.co.uk,northyorkshireadvertiser.co.uk,oxfordmail.co.uk,oxfordtimes.co.uk,penarthtimes.co.uk,prestwichandwhitefieldguide.co.uk,redditchadvertiser.co.uk,richmondandtwickenhamtimes.co.uk,romseyadvertiser.co.uk,runcornandwidnesworld.co.uk,salisburyjournal.co.uk,smallholder.co.uk,southendstandard.co.uk,southwalesargus.co.uk,southwalesguardian.co.uk,southwestfarmer.co.uk,stalbansreview.co.uk,sthelensstar.co.uk,stourbridgenews.co.uk,surreycomet.co.uk,suttonguardian.co.uk,swindonadvertiser.co.uk,tewkesburyadmag.co.uk,theargus.co.uk,theboltonnews.co.uk,thenational.scot,thenorthernecho.co.uk,theoldhamtimes.co.uk,thescottishfarmer.co.uk,thetelegraphandargus.co.uk,thetottenhamindependent.co.uk,thewestmorlandgazette.co.uk,thurrockgazette.co.uk,times-series.co.uk,tivysideadvertiser.co.uk,wandsworthguardian.co.uk,warringtonguardian.co.uk,watfordobserver.co.uk,wearvalleyadvertiser.co.uk,westerntelegraph.co.uk,wharfedaleobserver.co.uk,wilmslowguardian.co.uk,wiltsglosstandard.co.uk,wiltshiretimes.co.uk,wimbledonguardian.co.uk,wirralglobe.co.uk,witneygazette.co.uk,worcesternews.co.uk,yorkpress.co.uk,yourlocalguardian.co.uk##.cta-component-half-width
@@ -24608,6 +24621,7 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 ! !SECTION: Subscriptions - Popular rules
 !
 ! SECTION: Subscriptions - Regular rules
+!
 potokmedia.ru#?#.td-is-sticky div.textwidget > h4:contains(ПОДПИШИСЬ):upward(1)
 hellotech.com#%#document.cookie = "emailwall_instant_guide=visited";
 hellotech.com#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("emailwall_instant_guide", "visited") } } catch (ex) {} })();
@@ -28831,8 +28845,8 @@ tvrain.ru##.menu3__foreign-agent-wrapper
 ! Good: @@||signup.e2ma.net^$domain=example.org
 ! Bad: ||example.org^ (should be in AdGuard Base - subscriptions_specific.txt)
 !
-!--- Whitelist
 ! SECTION: Subscriptions - Whitelist
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116753
 @@||artivive.activehosted.com/*/embed.php$domain=artivive.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111595
@@ -28854,6 +28868,7 @@ tvrain.ru##.menu3__foreign-agent-wrapper
 ! Bad: example.org###amp-app-banner (should be in mobile-app_specific.txt)
 !
 ! SECTION: Mobile apps - generic rules
+!
 /wp-content/plugins/ioimedia-app-banner/*
 /js/jquery.smartbanner.js
 ||2app.lk^$third-party
@@ -28881,13 +28896,12 @@ tvrain.ru##.menu3__foreign-agent-wrapper
 ! HINTS are at the end of Specific section
 !
 ! SECTION: Mobile apps - Regular rules
+!
 aliexpress.com##.mobile-app
 mzh.moegirl.org.cn#?#.header > div:not([class]) > button.download-app:upward(1)
 mzh.moegirl.org.cn###open-in-app-wrapper
 mojagazetka.com##article[data-cy="FeatureMobileAppAdvertisement"]
 yandex.com##div[class^="shortcut-popup"]
-m.bilibili.com##.home-float-openapp
-m.bilibili.com##.openapp-dialog.large
 m.bilibili.com#?#.story-nav.bottom:has(> .launch-app-btn)
 zowa.app##.l-header__appInstall
 speedtest.vn##.jconfirm-open
@@ -30860,6 +30874,7 @@ m.tokopedia.com#$#div[data-testid="divOverlay"] { display: none!important; }
 ! !SECTION: Mobile apps - Regular rules
 !
 !   SECTION: Mobile apps - Mobile sites only
+!
 !#if (adguard_app_android || adguard_app_ios || adguard_ext_android_cb || ext_ublock)
 !+ PLATFORM(ios)
 google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,google.be,google.bf,google.bg,google.bi,google.bj,google.bs,google.bt,google.by,google.ca,google.cat,google.cd,google.cf,google.cg,google.ch,google.ci,google.cl,google.cm,google.cn,google.co.ao,google.co.bw,google.co.ck,google.co.cr,google.co.id,google.co.il,google.co.in,google.co.jp,google.co.ke,google.co.kr,google.co.ls,google.co.ma,google.co.mz,google.co.nz,google.co.th,google.co.tz,google.co.ug,google.co.uk,google.co.uz,google.co.ve,google.co.vi,google.co.za,google.co.zm,google.co.zw,google.com,google.com.af,google.com.ag,google.com.ai,google.com.ar,google.com.au,google.com.bd,google.com.bh,google.com.bn,google.com.bo,google.com.br,google.com.bz,google.com.co,google.com.cu,google.com.cy,google.com.do,google.com.ec,google.com.eg,google.com.et,google.com.fj,google.com.gh,google.com.gi,google.com.gt,google.com.hk,google.com.jm,google.com.kh,google.com.kw,google.com.lb,google.com.ly,google.com.mm,google.com.mt,google.com.mx,google.com.my,google.com.na,google.com.nf,google.com.ng,google.com.ni,google.com.np,google.com.om,google.com.pa,google.com.pe,google.com.pg,google.com.ph,google.com.pk,google.com.pr,google.com.py,google.com.qa,google.com.sa,google.com.sb,google.com.sg,google.com.sl,google.com.sv,google.com.tj,google.com.tr,google.com.tw,google.com.ua,google.com.uy,google.com.vc,google.com.vn,google.cv,google.cz,google.de,google.dj,google.dk,google.dm,google.dz,google.ee,google.es,google.fi,google.fm,google.fr,google.ga,google.ge,google.gg,google.gl,google.gm,google.gp,google.gr,google.gy,google.hn,google.hr,google.ht,google.hu,google.ie,google.im,google.iq,google.is,google.it,google.je,google.jo,google.kg,google.ki,google.kz,google.la,google.li,google.lk,google.lt,google.lu,google.lv,google.md,google.me,google.mg,google.mk,google.ml,google.mn,google.ms,google.mu,google.mv,google.mw,google.ne,google.nl,google.no,google.nr,google.nu,google.pl,google.pn,google.ps,google.pt,google.ro,google.rs,google.ru,google.rw,google.sc,google.se,google.sh,google.si,google.sk,google.sm,google.sn,google.so,google.sr,google.st,google.td,google.tg,google.tk,google.tl,google.tm,google.tn,google.to,google.tt,google.vg,google.vu,google.ws###stUuGf
@@ -30982,6 +30997,7 @@ deliveroo.hk##[class^="AppBanner-"]
 ! Bad:  example.org###smartbanner.ios (should be in cookies_specific.txt)
 !
 ! SECTION: Mobile apps - Whitelist
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118200 RECOMMEND not shown
 @@||fashion-headline.com/js/jquery.smartbanner.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/113325
@@ -35285,6 +35301,7 @@ theguardian.com##.contributions__adblock
 ||contributions.guardianapis.com^
 !
 ! SECTION: Self-promo - Regular rules
+!
 map.yahoo.co.jp###yjSub > div.banner
 dvdsreleasedates.com##.fieldtable-light > .disccell
 hindustantimes.com##.freemium-card
@@ -38529,6 +38546,7 @@ twgreatdaily.com$$script[tag-content="indexOf|css|fn|this|attr|unselectable|cons
 !#######################################################
 !
 ! SECTION: Widgets (sougo RSS) - Blogroll
+!
 ! NOTE: Blogroll generic
 ||komatech.net^$third-party
 ||fukugan.com^$third-party
@@ -38787,6 +38805,7 @@ huyosoku.com##.blogrolls
 ! SECTION: Widgets - marketing
 !
 !   SECTION: Widgets - Marketing(generic rules)
+!
 ! Lexprofit
 .info/proxy_*.php?init_widget=$script
 .net/proxy_*.php?init_form=$script
@@ -38960,6 +38979,7 @@ huyosoku.com##.blogrolls
 !   !SECTION: Widgets - Marketing(third-party services)
 !
 !   SECTION: Widgets - Marketing(specific)
+!
 infranken.de###singlewidget_standalone
 /motchat/design/defaulttheme/js/widgetv*/index.js$domain=incredibleindia.org
 24.rakuten.co.jp##.WidgetForm-Form > div.Nps
@@ -39144,6 +39164,7 @@ yuristznaet.ru##iframe[src^="http://form.cloudleadia.com/"]
 indoxxi.show##.tawkto-btn
 !
 !   SECTION: Widgets - Suggestion widgets
+!
 ||geoapteka.ua/geowidget/loader/geowidget.min.js$domain=pharmencyclopedia.com.ua
 pharmencyclopedia.com.ua###geo_wgt
 ixbt.com##div[id^="marketWidget"]
@@ -39188,6 +39209,7 @@ full-count.jp#?#section > div.c-heading:has(> p.c-heading__en:contains(RECOMMEND
 ! SECTION: Widgets - Chats
 !
 !   SECTION: Widgets - Chats(generic)
+!
 /js/chat/edu_chat.js
 /wp-content/plugins/creame-whatsapp-me/public/js/joinchat.
 !
@@ -39329,6 +39351,7 @@ zebratechnologies.force.com##.zbrbot-container
 ! SECTION: Widgets - Another
 !
 !   SECTION: Uncategorized
+!
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124323
 laptopmag.com##.hawk-nest
 ||hawk.laptopmag.com^
