@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.821.0
+! OriginalVersion: 2022.821.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -330,6 +330,9 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||iframe.inews24.com/ad/
+||api-zero.livere.com/*/comments/list/ad
+||djf7qc4xvps5h.cloudfront.net/ad/
 /^http(s|):\/\/img.tf.co.kr\/ss\/[0-9]{4}\/fns\/ads_/
 ||newsis.com/assets/js/ad.js
 ||m.sportschosun.com/ad/
@@ -973,6 +976,11 @@ m.seoul.co.kr##div[id*="Ad"]
 ! ##div[class*="ad_"]
 paxnet.co.kr##div[class*="ad_"]
 !
+playcraft.tistory.com##.module.module_plugin a[href*="//coinone.co.kr/user/signup?ref="]
+playcraft.tistory.com##.module.module_plugin a[href*="//link.coupang.com/"]
+quasarzone.com##div[class*="-banner-"]
+minimap.net##div[class*="-ad"]:not(.container):not([style])
+minimap.net##.feed-list-wrap .feed-item-wrap-SPONSORED
 mediatoday.co.kr##div[id^="popup_"][style]
 www.inven.co.kr##.invenbanner
 m.tf.co.kr###artContent > div[style]:not([class])
@@ -1518,7 +1526,6 @@ search.daum.net###splinkColl
 search.daum.net##.adLinkColl
 pcmap.place.naver.com###_pcmap_list_scroll_container > ul > li[data-laim-exp-id="undefined*e"]
 map.kakao.com##ul[id="info.search.place.list"] > li.AdItem
-playcraft.tistory.com##.module.module_plugin > a[href^="https://coupa.ng/"]
 dcnewsj.joins.com##div[class^="ab_ad"]
 all-mice.co.kr,dvdprime.com,hwbattle.com,mbn.co.kr##div[id$="_banner"]
 prod.danawa.com##div[class$="_ad_prodlist"]
