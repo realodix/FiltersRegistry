@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 4 days
-! Last modified: 2022-08-20
+! Last modified: 2022-08-23
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -714,6 +714,7 @@ estekhtam.com#@#.ads-bottom
 ||api.enama.ir/WebFiles/_AdsBanner/
 ! TODO: Investigate more filters
 ! >> F <<
+||fidibo.com^$removeparam=/^utm_/
 ! https://github.com/MasterKia/PersianBlocker/issues/4
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1179570047
 ! https://github.com/MasterKia/PersianBlocker/issues/4#issuecomment-1194334858
@@ -1028,10 +1029,16 @@ kojaro.com##.article-mobile-inContent
 @@||images.kojaro.com/assets/ad/advertise-$image,~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/33437
 ! https://github.com/AdguardTeam/AdguardFilters/issues/101735
-khabaronline.ir#$?#.container:has(#ads-container) { max-width: 95% !important; flex-grow: 1 !important; }
+! https://github.com/MasterKia/PersianBlocker/issues/41
+khabaronline.ir#$#.container { max-width: 95% !important; flex-grow: 1 !important; }
+khabaronline.ir#$#.main-content { max-width: 60% !important; flex: 0 0 60% !important; }
+khabaronline.ir#$#.col-md-3 { max-width: 40% !important; flex: 0 0 40% !important; }
 khabaronline.ir###header-ad
 khabaronline.ir##.ads
+khabaronline.ir##[href^="/redirect/ads/"]
 khabaronline.ir##.bg-gray-links.box
+khabaronline.ir###ads-container > .list-thumbs.title-only.list.box
+khabaronline.ir#@##ads-container
 ||koolakmag.ir/wp-admin/admin-ajax.php?postviews_id=
 koolakmag.ir##.widget_custom_html.widget.container-wrapper.widget_text
 ! ||khabarpu.com/js/all_sc_without_yektanet.js
@@ -1651,6 +1658,9 @@ taknaz.ir##.ads120000
 tamin.ir#@#.ads2
 @@||tamin.ir/content/ads/
 ! >> U <<
+uplod.ir##.free_ad_con
+uplod.ir##.footer-back-link
+uplod.ir##.logo_full_view
 ||upera.tv^$removeparam=ref
 ! ||affil.charkhoneh.com^$removeparam=affiliateId
 ||upmusics.com/najva.js
@@ -1968,5 +1978,19 @@ zoomtech.org###posts_single_ads
 ||smartgalaxy.finance^$document
 ! https://github.com/Webamoozcom/warning-list/discussions/94
 ||bahatoken.site^$document
+! https://github.com/Webamoozcom/warning-list/discussions/119
+||shamining.com^$document
+! https://github.com/Webamoozcom/warning-list/discussions/121
+||teeth1.info^$document
+! https://github.com/Webamoozcom/warning-list/discussions/125
+||t.me/BITBOD_TRADING_CLUB^$document
+! https://github.com/Webamoozcom/warning-list/discussions/127
+! What domain?
+! https://github.com/Webamoozcom/warning-list/discussions/130
+||wintap.io^$document
+! https://github.com/Webamoozcom/warning-list/discussions/131
+! What domain?
+! https://github.com/Webamoozcom/warning-list/discussions/132
+||frzss.com^$document
 !-------------------------^ Scam Exchange/Cryptocurrency Sites ^-----------------------!
 
