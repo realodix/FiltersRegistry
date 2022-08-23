@@ -84,6 +84,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+##body:not(.cookie-modal-open) > div#dm-cookie-popup-container
 ##.inpage_cookieOptOutForm
 ##.optanon-show-settings
 ##.sqs-cookie-banner-v2
@@ -2156,6 +2157,9 @@ whats-on-netflix.com#$#html.sp-message-open body { overflow-y: visible !importan
 ! !SECTION: Cookies - Popular rules
 !
 !
+silvini.sk,silvini.cz,norwayshop.cz,neviditelnepradlo.cz#$#body.cookie-modal-open { overflow: auto !important; }
+silvini.sk,silvini.cz,norwayshop.cz,neviditelnepradlo.cz#$##dm-cookie-popup-container { display: none !important; }
+||cdn.complyauto.com/cookiebanner/banner.js
 nejlevnejsi-barvy-laky.cz###Box1002
 anadibank.com#$##sliding-popup { display: none !important; }
 anadibank.com#$#.modal-backdrop { display: none !important; }
@@ -24667,6 +24671,8 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 !
 ! SECTION: Subscriptions - Regular rules
 !
+allsaints.com##.sign-up-popup
+indiewire.com##.right-side > div.u-padding-tb-20
 novinhastop.com##.telegram-call-to-action
 apptractor.ru###custom_html-30
 potokmedia.ru#?#.td-is-sticky div.textwidget > h4:contains(ПОДПИШИСЬ):upward(1)
@@ -33659,6 +33665,8 @@ warezcrack.net#$#.onp-sl-content > [data-lock-id^="onpLock"] { display: block!im
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/127605
+blog.themarfa.name#?#.sidebar > div.sidebar__block:has(> div.sidebar__social)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127818
 cgtips.org#$#div[class][data-locker-id] { display: block !important; }
 cgtips.org#$#.mts-cl[id^="content-locker-"] { display: none !important; }
