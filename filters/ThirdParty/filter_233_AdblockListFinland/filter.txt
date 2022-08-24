@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 24August2022v1
+! OriginalVersion: 24August2022v4
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -333,7 +333,10 @@ epari.fi,ilkkapohjalainen.fi,jarviseutu-lehti.fi,jurvansanomat.fi,komiat.fi,suup
 epari.fi,ilkkapohjalainen.fi,jarviseutu-lehti.fi,jurvansanomat.fi,komiat.fi,suupohjansanomat.fi,vaasanikkuna.fi,viiskunta.fi#?#._3GUme._1hdYd:has(a[href^="https://pointti.fi"])
 epari.fi,ilkkapohjalainen.fi,jarviseutu-lehti.fi,jurvansanomat.fi,komiat.fi,suupohjansanomat.fi,vaasanikkuna.fi,viiskunta.fi#?#article > div[class]:has-text(Mainos (sisältö jatkuu alla))
 epari.fi,jarviseutu-lehti.fi,jurvansanomat.fi,komiat.fi,suupohjansanomat.fi,vaasalehti.fi,viiskunta.fi#?#div[class] > div[id^="sas_"] + div:has-text(Mainos)
+episodi.fi##.bg-elisa-dark
 episodi.fi#?#.main-article > div:has-text(Mainos)
+episodi.fi,inferno.fi#?#.px-4.py-2.bg-white.w-full:has(.poppartners)
+episodi.fi,inferno.fi,rumba.fi###tilt-ad-top-stay-away
 esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuoksi.fi##.box.ads
 esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuoksi.fi##article[class="article-preview content-marketing box"]
 esaimaa.fi,ita-savo.fi,kouvolansanomat.fi,kymensanomat.fi,lansi-savo.fi,uutisvuoksi.fi##div.section:nth-of-type(2) > .row > .show-for-large.columns.xxlarge-6.xlarge-7.large-8.sidebar
@@ -511,8 +514,6 @@ impe.fi##[class^=mainospaikka]
 inarilainen.fi,sompio.fi##.paraati1
 inarilainen.fi,sompio.fi##.pikkusentteri1
 inarilainen.fi,sompio.fi##[href^="/ilmoitus/mainostajan-artikkeli"]
-inferno.fi,rumba.fi###tilt-ad-top-stay-away
-inferno.fi#?#.px-4.py-2.bg-white.w-full:has(.poppartners)
 inferno.fi#?#p:has([href^="https://track.adform.net/"])
 inssinosingot.fi##.block-mainos
 inssinosingot.fi##.button-mainos
@@ -1212,6 +1213,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||improveads.fi^$third-party
 ||io-tech.fi/images/*_290x290px.png$image
 ||is.fi/kampanjat/taloussanomat/startel_600x300px.jpg$image,domain=is.fi
+||fcdn.lauta.media/adform.js$~third-party
 ||kaasujalka.fi/assets/banners/$image,domain=kaasujalka.fi
 ||kake.fi^$third-party
 ||kaksplus.fi/upotukset/hintaopas^
@@ -1240,6 +1242,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||nayadaya.com^$third-party
 ||nettiauto.com/en/ampparitBanner*.php$subdocument,domain=ampparit.com
 ||no-cache.hubspot.com/cta/$image,domain=sijoittaja.fi
+||nostemedia.bbvms.com^$script,third-party
 ||nyt.tassa.fi/ctxwidget/ipCtxWidget.js$script,domain=ilkkapohjalainen.fi
 ||otavamedia.fi/ad/$script
 ||pirkkalainen.com/images/mainospaikat/3.jpg$image,domain=pirkkalainen.com
@@ -1251,6 +1254,7 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||seksitreffit.fi/*popunder.js$script,domain=seksitreffit.fi
 ||seksitreffit.fi/banners/*$domain=seksitreffit.fi
 ||sf.nm-ovp.nelonenmedia.fi/player/games/ruutu-player-loader.js$script,domain=alypaa.com
+||strongbox.nostemedia.fi^$script,third-party
 ||superskills.fi/fi*?isIframe=true$subdocument
 ||telsu.fi/telsu_top
 ||testeri.fi/ext_telsu$subdocument
@@ -1262,7 +1266,6 @@ yrittajat.fi##div[class$=kaupallinen-yhteistyo]
 ||urbaanisanakirja.com/static/img/portsaad.png$image
 ||vertaa.fi^*/showads.js$script,domain=vertaa.fi
 ||vg.is.fi/autotie-is-*/$subdocument
-||fcdn.lauta.media/adform.js$~third-party
 ! -----NETWORK FILTERS END-----
 ! -----UNSORTED-----
 ! Iltalehti.fi ads
@@ -1394,7 +1397,3 @@ hs.fi,tilannehuone.fi#@#.mainos
 tuntopalvelu.fi#@#.list-ads
 ! -----UNBREAK END-----
 ! Will be removed after PR's accepted (whitelistings for issues caused by other lists or additions to the main Easylist)
-! https://github.com/easylist/easylist/pull/9343
-@@||almamedia.fi/almacmp/$script
-! https://github.com/finnish-easylist-addition/finnish-easylist-addition/commit/8bf469a005a552a6c6819ed8daa92aa1aa72da42
-! https://github.com/easylist/easylist/pull/11542
