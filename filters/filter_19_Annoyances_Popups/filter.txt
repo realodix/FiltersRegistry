@@ -3259,7 +3259,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 ! At the bottom of this file, you can find the allowlist that fixes issues caused by the rules from this file.
 !
 ! Good: any type of the rules will be good
-! Bad: example.org#@##credential_picker_container (should be in AdGuard Base - popups_whitelist.txt)
+! Bad: example.org#@##credential_picker_container (should be in AdGuard Base - popups_allowlist.txt)
 !
 !
 ! SECTION: Popups - generic rules
@@ -3377,7 +3377,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 ! At the bottom of this file, you can find the allowlist that fixes issues caused by the rules from this file.
 !
 ! Good: any type of the rules will be good
-! Bad: @@||example.org^ (should be in AdGuard Base - popups_whitelist.txt)
+! Bad: @@||example.org^ (should be in AdGuard Base - popups_allowlist.txt)
 !
 ! Specific sites
 ! SECTION: Popups - Regular rules
@@ -3478,7 +3478,7 @@ boxil.jp#$#body { overflow: auto!important; padding-right: 0!important; }
 yanmaga.jp##.cv-banner
 gunze.jp##div[style="margin:auto 0;text-align:center;"] > a[href="/store/e/esummersale/"]
 gunze.jp###st-SmartBanner
-123freemovies.net###md-share
+0123movies.com,123freemovies.net###md-share
 souq-design.com#$#.cp-visited-popup { display: none !important }
 souq-design.com#$#html.cp-overflow-hidden { overflow: auto !important; }
 sports.yahoo.com###Col1-4-Interstitial-Proxy
@@ -8803,8 +8803,8 @@ kurashiru.com#$#html.dly-modal-active { overflow: auto!important; }
 ! Good: @@||popups.org^$domain=example.org
 ! Bad: ||example.org^
 !
-!--- Whitelist
-! SECTION: Popups - Whitelist
+!--- Allowlist
+! SECTION: Popups - Allowlist
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126265
 @@||celloworld.com/wp-content/plugins/popup-maker/assets/js/vendor/mobile-detect.min.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118320
@@ -8833,13 +8833,13 @@ zlavomat.sk#@##credential_picker_container
 @@||my.leadpages.net/template/$script,domain=weddingjams.com|thesaturdaypaper.com.au|careercontessa.com
 @@||my.leadpages.net^*/public/
 ! NOTE: Section end
-! !SECTION: Popups - Whitelist
+! !SECTION: Popups - Allowlist
 
 !
 ! This section contains the list of generic rules that block website push notifications ("subscribe to the news" kind of notifications).
 !
 ! Good: any type of the rules will be good
-! Bad: @@||example.org^$stealth (should be in AdGuard Base - whitelist_stealth.txt)
+! Bad: @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
 ! SECTION: Push notifications - Generic rules
@@ -9293,7 +9293,7 @@ zlavomat.sk#@##credential_picker_container
 ! This section contains the list of rules that block website push notifications ("subscribe to the news" kind of notifications).
 !
 ! Good: any type of the rules will be good
-! Bad: @@||push.org^$domain=example.org (should be in AdGuard Base - push-notifications_whitelist.txt)
+! Bad: @@||push.org^$domain=example.org (should be in AdGuard Base - push-notifications_allowlist.txt)
 !
 ! SECTION: Push notifications - Popular rules
 !
@@ -9809,7 +9809,7 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 ! Good: @@||popups.org^$domain=example.org
 ! Bad: ||example.org^
 !
-! SECTION: Push notifications - Whitelist
+! SECTION: Push notifications - Allowlist
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126988
 @@||cdn.onesignal.com/sdks/amp/amp-helper-frame.js$domain=lelum.pl
@@ -9862,15 +9862,15 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 @@||cdn.sendpulse.com/js/push/*.js$domain=surfingbird.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/73132
 @@||api.savemedia.website^$domain=convert2mp3.club
-! NOTE: Whitelist end ⬆️
-! !SECTION: Push notifications - Whitelist
+! NOTE: Allowlist end ⬆️
+! !SECTION: Push notifications - Allowlist
 
 !
 ! This section contains the list of generic rules that block the promotion of subscriptions, newsletters.
 ! Examples: "subscribe to our blog", "subscribe to our newsletter" blocks in all kinds of blocks.
 !
 ! Good: any type of the rules will be good
-! Bad: @@||signup.e2ma.net^$domain=example.org (should be in AdGuard Base - subscriptions_whitelist.txt)
+! Bad: @@||signup.e2ma.net^$domain=example.org (should be in AdGuard Base - subscriptions_allowlist.txt)
 !
 ! Genegic rules
 ! SECTION: Subscriptions - Generic
@@ -9900,7 +9900,7 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 ! Examples: "subscribe to our blog", "subscribe to our newsletter" blocks in all kinds of blocks.
 !
 ! Good: any type of the rules will be good
-! Bad: @@||signup.e2ma.net^$domain=example.org (should be in AdGuard Base - subscriptions_whitelist.txt)
+! Bad: @@||signup.e2ma.net^$domain=example.org (should be in AdGuard Base - subscriptions_allowlist.txt)
 !
 ! SECTION: Subscriptions - Popular rules
 !
@@ -9931,6 +9931,7 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 !
 ! SECTION: Subscriptions - Regular rules
 !
+topcor.ru##.block_news
 atlas.ru##.subscribe-sticky-wrapper
 nato.int##.subscription-box
 ||glassdoor.com/garnish/static/js/gd-user-hardsell-overlay.bundle.js
@@ -14169,7 +14170,7 @@ tvrain.ru##.menu3__foreign-agent-wrapper
 ! Good: @@||signup.e2ma.net^$domain=example.org
 ! Bad: ||example.org^ (should be in AdGuard Base - subscriptions_specific.txt)
 !
-! SECTION: Subscriptions - Whitelist
+! SECTION: Subscriptions - Allowlist
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116753
 @@||artivive.activehosted.com/*/embed.php$domain=artivive.com
@@ -14178,7 +14179,7 @@ tvrain.ru##.menu3__foreign-agent-wrapper
 ! https://github.com/AdguardTeam/AdguardFilters/issues/95023
 @@||sibforms.com/serveUnsub/
 @@||sibforms.com/serve/$domain=camelactive.com
-! NOTE: Whitelist end ⬆️
-! !SECTION: Subscriptions - Whitelist
+! NOTE: Allowlist end ⬆️
+! !SECTION: Subscriptions - Allowlist
 !
 
