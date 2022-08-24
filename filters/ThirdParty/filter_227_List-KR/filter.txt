@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.823.0
+! OriginalVersion: 2022.824.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -9,6 +9,13 @@
 !
 ! Version must be UTC format.
 !
+||advertising.com^
+||contextweb.com^
+||ndexww.com^
+||adsrvr.org^
+||admanmedia.com^
+||sitescout.com^
+||undertone.com^
 ||admaru.net^
 ||pltapad.com^
 ||mobwithad.com^
@@ -330,6 +337,10 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||cdn.edujin.co.kr/adManager/
+||cdn.edujin.co.kr/bannerpop/uploads/
+||jobkorea.co.kr/*/ADLink/Banner/
+||jobkorea.co.kr/Banner/
 ||cdn.epnc.co.kr/adManager/
 ||etnews.com/static/js/hns_ad.js
 ||iframe.joynews24.com/ad/
@@ -980,7 +991,16 @@ m.seoul.co.kr##div[id*="Ad"]
 paxnet.co.kr##div[class*="ad_"]
 ! ##div[class*="ad-"]
 lol.ps##div[class*="ad-"]
+! ##div[id^="Banner"]
+jobkorea.co.kr##div[id^="Banner"]
+! ##section[id*="_ads_"]
+eegosa.com##section[id*="_ads_"]
 !
+themomstory.co.kr##.ezmob-footer
+themomstory.co.kr##.ezoic-ad
+eegosa.com##section[id^="block-"].widget_block
+jobkorea.co.kr##.grand_banner_wrap li.item_adagency
+jobkorea.co.kr##.byWd div[id^="bl_"]
 meeco.kr##.adsbygoogle
 www.clien.net##.section_list.hongbo
 m.joynews24.com##hr[style].blank
@@ -1719,6 +1739,8 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+jobkorea.co.kr#$##loginFormWrite { margin-left: 25% !important; }
+jobkorea.co.kr#$#.byWd .matchingContWrap { margin-top: 0px !important; }
 ~m.joynews24.com,joynews24.com,~m.inews24.com,inews24.com#$#header ~ header { margin-top: 50px !important; }
 newsis.com#$#.articleView + .aside .smallbox + .smallbox { border-top: none !important; }
 unsin.co.kr#$#.content_area .todayBox { width: 100% !important; }
