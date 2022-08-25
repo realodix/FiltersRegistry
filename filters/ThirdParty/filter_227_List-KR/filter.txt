@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.825.1
+! OriginalVersion: 2022.825.5
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -337,6 +337,8 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||cdn.topstarnews.net/adManager/
+||cdn.topstarnews.net/bannerpop/
 ||news.chungbuk.go.kr/adManager/
 ||wikileaks-kr.org/bannerpop/uploads/
 ||ksw-news.com/bannerpop/uploads/
@@ -1002,6 +1004,7 @@ jobkorea.co.kr##div[id^="Banner"]
 ! ##section[id*="_ads_"]
 eegosa.com##section[id*="_ads_"]
 !
+m.daum.net##.mtop_adfit
 clien.net##div[class*="_outline"]
 coupang.com##div[data-use-adzerk][id$="-banner"]
 themomstory.co.kr##.ezmob-footer
@@ -2037,7 +2040,7 @@ kr1.4kjav.co##.adde_modal-overlay
 !#endif
 kr1.4kjav.co#%#//scriptlet("abort-on-property-read", "adsBlocked")
 ! namu.wiki
-@@||arca.live/static/ad/$subdocument,domain=namu.wiki
+@@/^https:\/\/[A-z0-9\.-]{0,}(namu\.wiki|arca\.live|namu\.news|newliweb\.com)\//$subdocument,domain=namu.wiki|~board.namu.wiki
 !
 focuskr.tistory.com#%#//scriptlet("abort-current-inline-script", "document.getElementById", "ad_blocks")
 jtbc.co.kr#@#.adBanner
@@ -2105,6 +2108,8 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ! adde_modal_detector
 kr1.4kjav.co##.adde_modal_detector
 kr1.4kjav.co##.adde_modal-overlay
+! namu.wiki
+@@/^https:\/\/[A-z0-9\.-]{0,}(namu\.wiki|arca\.live|namu\.news|newliweb\.com)\//$subdocument,domain=namu.wiki|~board.namu.wiki
 !
 meeco.kr#@#.adsbygoogle
 ||fundingchoicesmessages.google.com^$domain=mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr
