@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 4 days
-! Last modified: 2022-08-23
+! Last modified: 2022-08-25
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -13,7 +13,7 @@
 ! /files/adv/*
 ! /statics/*$xhr
 ! .ir/ads/
-! /admin-ajax.php?postviews_id=
+! /admin-ajax.php?postviews_id= => some sites use it to show "بازدید: "
 ! /admin-ajax.php?action=adwised
 ! wp-content/plugins/google-analytics
 ! wp-content/plugins/better-ads
@@ -714,6 +714,16 @@ estekhtam.com#@#.ads-bottom
 ||api.enama.ir/WebFiles/_AdsBanner/
 ! TODO: Investigate more filters
 ! >> F <<
+! https://github.com/MasterKia/PersianBlocker/issues/42
+||farachart.com/wp-content/plugins/google-analytics-for-wordpress^
+||farachart.com/wp-content/plugins/ultimate-member/assets/js/um-gdpr
+||farachart.com/wp-content/uploads/pum/pum-site-scripts
+||farachart.com/wp-content/plugins/adrotate-pro^
+farachart.com##.top-banner-ads
+farachart.com##.clearfix.boxed-content-wrapper img[alt="Advertising"]
+farachart.com##.sidebar > :has(.widget-title:has-text(تبلیغات))
+farachart.com##.kpl_linktable
+farachart.com#$?#.p-single.blog-post:upward(1) { width: 100% !important; }
 ||fidibo.com^$removeparam=/^utm_/
 ! https://github.com/MasterKia/PersianBlocker/issues/4
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-1179570047
