@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.825.5
+! OriginalVersion: 2022.825.9
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -9,6 +9,7 @@
 !
 ! Version must be UTC format.
 !
+||tnkad.net^
 ||advertising.com^
 ||contextweb.com^
 ||ndexww.com^
@@ -1004,6 +1005,7 @@ jobkorea.co.kr##div[id^="Banner"]
 ! ##section[id*="_ads_"]
 eegosa.com##section[id*="_ads_"]
 !
+svrforum.com###xt_sticker_wrap
 m.daum.net##.mtop_adfit
 clien.net##div[class*="_outline"]
 coupang.com##div[data-use-adzerk][id$="-banner"]
@@ -1124,9 +1126,6 @@ tgd.kr###main-menu div[style][align]
 hunnek.tistory.com##a[href^="https://www.panel.co.kr/user/join/etcpath/"]
 m.seoul.co.kr,m.nownews.seoul.co.kr###contentsBodyDiv > table[width]
 seoul.co.kr###articleContent > table[width][height][border]
-!#if (!adguard_ext_android_cb)
-lover91.net##.xe_content span ~ div[style]
-!#endif
 soccerline.kr##div[class$="Bann"]
 e-himart.co.kr##input ~ .searchRolling
 m.11st.co.kr##section#cts:not(.main) .ctg_loc ~ section.list_bx.hotclick
@@ -1656,6 +1655,9 @@ www.naver.com##iframe[id^="da_iframe_"]
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+!#if (!adguard_ext_android_cb)
+lover92.net,lover93.net,lover94.net,lover95.net,lover96.net,lover97.net,lover98.net,lover99.net,lover100.net,lover101.net##.xe_content span ~ div[style]
+!#endif
 todawa79.top,todawa80.top,todawa81.top,todawa82.top,todawa83.top,todawa84.top,todawa85.top,todawa86.top,todawa87.top,todawa88.top,todawa89.top##.sub-contener-wraper > div:not(.sub-cont)
 agit521.xyz,agit522.xyz,agit523.xyz,agit524.xyz,agit525.xyz,agit526.xyz,agit527.xyz,agit528.xyz,agit529.xyz,agit530.xyz,agit531.xyz,agit532.xyz,agit533.xyz,agit534.xyz,agit535.xyz,agit536.xyz,agit537.xyz,agit538.xyz,agit539.xyz,agit540.xyz,agit541.xyz,agit542.xyz,agit543.xyz,agit544.xyz,agit545.xyz##.banner
 yagong42.com,yagong43.com,yagong44.com,yagong45.com,yagong46.com,yagong47.com,yagong48.com,yagong49.com,yagong50.com,yagong51.com,yagong52.com,yagong53.com,yagong54.com,yagong55.com,yagong56.com,yagong57.com,yagong58.com,yagong59.com,yagong60.com,yagong61.com,yagong62.com,yagong63.com,yagong64.com##div[x-data="popups()"]
@@ -1959,7 +1961,6 @@ tvchosun.com#%#//scriptlet("set-constant", "player.advertisement_finished", "tru
 cfnews.kr#%#//scriptlet("abort-current-inline-script", "window.open", "/gears/popup/default.aspx")
 sjtoday.kr#%#//scriptlet("abort-current-inline-script", "window.open", "notice_view_html.php")
 inven.co.kr,~m.inven.co.kr#%#//scriptlet("set-constant", "INVEN.Ad", "undefined")
-lover91.net#%#//scriptlet("adjust-setTimeout", "count", "*", "0.001")
 filetender.com#%#//scriptlet("prevent-setTimeout", "", "15000")
 fmkorea.com#%#//scriptlet("set-constant", "link_url", "")
 search.11st.co.kr#%#//scriptlet("set-constant", "searchDataFactory.bottomFocusPrdList", "undefined")
@@ -2000,11 +2001,18 @@ imbc.com#%#//scriptlet("set-constant", "vrixadsdk", "undefined")
 ~coupang.com,~coupangcdn.com#%#//scriptlet("set-constant", "PartnersCoupang", "undefined")
 m.inven.co.kr#%#//scriptlet("set-constant", "MOBILE.Ad", "null")
 !
+! Each domain of website in this section is forbidden by Internet censorship of S. Korea.
+! Some listed domains have been changed by their administrators regularly.
+! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
+!
+lover92.net#%#//scriptlet("adjust-setTimeout", "count", "*", "0.001")
+lover92.net#%#//scriptlet("abort-current-inline-script", "popMagic.init")
+!
 !
 ! #%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/adscale_slot_id/')
 tistory.com,love.asdn.kr,avjamak.net,untitle.org,seo-marketing.co.kr#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/adscale_slot_id/')
 ! #%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
-iphonedev.co.kr,tistory.com,lover91.net,1412.rest,3dpchip.com#%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
+iphonedev.co.kr,tistory.com,1412.rest,3dpchip.com#%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
 ! BlockAdBlock
 blog.dalso.org,svrforum.com,shana.pe.kr,fafan.kr,tistory.com#%#//scriptlet("prevent-bab")
 ! FuckAdBlock
@@ -2054,7 +2062,6 @@ te31.com#@#.adsbygoogle
 ||fundingchoicesmessages.google.com^$domain=mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr|tistory.com
 ||cdn.kollhong.com/wp-content/custom-js/fuckadblock.min.js
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=noopjs,domain=game.hotsharegames.com
-$script,redirect-rule=noopjs,domain=lover91.net
 ||www3.doubleclick.net/|$redirect=nooptext,domain=blackkiwi.net
 ||googleads.g.doubleclick.net/pagead/ads?*&crui=$redirect=noopmp4-1s,domain=laftel.net
 webtv.dothome.co.kr##.adblock-on
@@ -2062,8 +2069,7 @@ persnacons.tistory.com#@#.topAD
 noonnu.cc#%#//scriptlet("abort-on-property-read", "localStorage.getItem", "adBlockMethodology")
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ff14angler.com
 uda1004.tistory.com,exey.io,ff14angler.com#@#ins.adsbygoogle
-webtv.dothome.co.kr,lover91.net#@#.adsbygoogle
-lover91.net#$#.modal { position: unset !important; }
+webtv.dothome.co.kr#@#.adsbygoogle
 ||adblockanalytics.com^$xmlhttprequest,redirect=nooptext,domain=1412.rest
 ||1412.rest/addons/*/adblockDetector.js
 sajuplus.net##.adsense-alt
@@ -2073,6 +2079,12 @@ tistory.com,sajuplus.net#%#//scriptlet("set-constant", "checkAds", "noopFunc")
 ||ad.smartmediarep.com/NetInsight/video/$redirect=nooptext,domain=mbn.co.kr
 ! foreign website
 play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistribution.com,paraphraser.io,sekai-kabuka.com,teemo.gg,xtremestream.co#@#ins.adsbygoogle
+!
+! Each domain of website in this section is forbidden by Internet censorship of S. Korea.
+! Some listed domains have been changed by their administrators regularly.
+! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
+!
+$redirect-rule=nooptext,domain=lover92.net|lover93.net|lover94.net|lover95.net|lover96.net|lover97.net|lover98.net|lover99.net|lover100.net|lover101.net
 !#endif
 !#if (!adguard_app_ios && !adguard_ext_safari)
 ||bigkinds.or.kr/resources/files/banner/$redirect=2x2-transparent.png
@@ -2119,7 +2131,6 @@ jtbc.co.kr#@#.adBanner
 @@||blog.dalso.org^$generichide
 @@||svrforum.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=meeco.kr
-@@||cdn.tapioni.com/vast-im.js$domain=lover91.net
 meeco.kr#@#ins.adsbygoogle
 @@||iphonedev.co.kr^$generichide
 @@||iphonedev.co.kr/files/attach/images/*/*#ad&adv_keywords=-page-peel
