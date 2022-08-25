@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-08-24 06:29:57 CEST
+! Last modified: 2022-08-25 13:31:01 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -212,6 +212,7 @@ gaffa.se##h4:has-text(/sponsrade länkar/i):upward(.link-list)
 gamereactor.se###grtvbelt_Sponsored:upward(1)
 gamereactor.se#%#//scriptlet('ubo-ra.js', 'data-autoplay', 'video', 'stay')
 gmfk.nu##p:has-text(Annons):upward(.n2-ss-slide)
+godare.se,wellness.se##[id^="adPlacement"]:upward(1)
 goon.se##.cpt-collab-text-ct1:has-text(/samarbete|annons/i):upward(.cpt-alm-main)
 goteborg.com#$#body { overflow-y:initial!important }
 goteborgdirekt.se,mitti.se,vasterastidning.se#$?##cruncho_now_iframe { remove: true; }
@@ -432,7 +433,6 @@ voister.se##.voister .campaign-vignette:upward(.voister .brief)
 voodoofilm.org##span[id*="Sponsored"]:upward(.content-news)
 vovve.net##span:has-text(/^i samarbete med/i):upward(2)
 wellness.se##.ad:upward(article)
-wellness.se##[id^="adPlacement"]:upward(1)
 wellness.se##p:has-text(/^kommersiellt innehåll/i):upward(article)
 wellness.se##p:has-text(/^kommersiellt innehåll|^annons$/i):upward(a)
 welma.se##.label--black:has-text(/sponsrat/i):upward(article)
@@ -920,6 +920,7 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 /assets/site/modules/ctm-
 /assets/site/modules/GTM_
 /assets/tracking$domain=hornbach.se
+/atc.min.js$domain=tvkanalengodare.se
 /atomic-blocks$script,domain=dinlivsstil.nu|foretagsverige.se|forskningsverige.se|grillbibeln.se|hallbarhetsverige.se|kampenmotcancer.se|motorbibeln.se|tillvaxtsverige.se
 /atoms/images/*banner$domain=etc.se
 /AudienceTarget$script,domain=morningstar.se
@@ -2103,6 +2104,7 @@ tripadvisor.se##[class$="banner_ad"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
 turistmal.se###col_right
 tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
+tvkanalengodare.se##.privacy-information--visible
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box
 tvprogram.se##.backdrop, .fcb
 uppsalanyheter.se###banner-top-block
