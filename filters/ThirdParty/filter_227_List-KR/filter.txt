@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.825.9
+! OriginalVersion: 2022.826.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1005,6 +1005,7 @@ jobkorea.co.kr##div[id^="Banner"]
 ! ##section[id*="_ads_"]
 eegosa.com##section[id*="_ads_"]
 !
+m.search.naver.com##.shop_default_list > li._ad
 svrforum.com###xt_sticker_wrap
 m.daum.net##.mtop_adfit
 clien.net##div[class*="_outline"]
@@ -2048,7 +2049,10 @@ kr1.4kjav.co##.adde_modal-overlay
 !#endif
 kr1.4kjav.co#%#//scriptlet("abort-on-property-read", "adsBlocked")
 ! namu.wiki
-@@/^https:\/\/[A-z0-9\.-]{0,}(namu\.wiki|arca\.live|namu\.news|newliweb\.com)\//$subdocument,domain=namu.wiki|~board.namu.wiki
+@@||newliweb.com/$subdocument,domain=namu.wiki|~board.namu.wiki
+@@||arca.live/$subdocument,domain=namu.wiki|~board.namu.wiki
+@@||namu.news/$subdocument,domain=namu.wiki|~board.namu.wiki
+@@||namu.wiki/$subdocument,domain=namu.wiki|~board.namu.wiki
 !
 focuskr.tistory.com#%#//scriptlet("abort-current-inline-script", "document.getElementById", "ad_blocks")
 jtbc.co.kr#@#.adBanner
@@ -2121,7 +2125,10 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 kr1.4kjav.co##.adde_modal_detector
 kr1.4kjav.co##.adde_modal-overlay
 ! namu.wiki
-@@/^https:\/\/[A-z0-9\.-]{0,}(namu\.wiki|arca\.live|namu\.news|newliweb\.com)\//$subdocument,domain=namu.wiki|~board.namu.wiki
+@@||newliweb.com/$subdocument,domain=namu.wiki|~board.namu.wiki
+@@||arca.live/$subdocument,domain=namu.wiki|~board.namu.wiki
+@@||namu.news/$subdocument,domain=namu.wiki|~board.namu.wiki
+@@||namu.wiki/$subdocument,domain=namu.wiki|~board.namu.wiki
 !
 meeco.kr#@#.adsbygoogle
 ||fundingchoicesmessages.google.com^$domain=mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr

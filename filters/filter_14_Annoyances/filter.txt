@@ -15296,8 +15296,10 @@ gry.pl#%#Object.defineProperty(Object.prototype, 'hasAdmiralList', { get: functi
 !+ NOT_OPTIMIZED
 ||succeedscene.com/ads_*/ads.load.js$script,redirect=noopjs
 digitalmusicnews.com##body > div#cb-outer-container ~ div:not([class]):not([id])
-!+ PLATFORM(ios, ext_android_cb, ext_safari)
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+onmsft.com##body > iframe ~ div:not([class]):not([id]) > style + div[class]
 playstationlifestyle.net##body > footer ~ div:not([class]):not([id]):not([style])
+!#endif
 !
 !#safari_cb_affinity(general)
 digitaltrends.com#@#.pub_300x250
@@ -24084,7 +24086,7 @@ zlavomat.sk#@##credential_picker_container
 ! Disabling of push-notifications
 ! Currently unsupported - 'denied'
 ! #%#//scriptlet("set-constant", "Notification.permission", "denied")
-reddit.com,life.ru#%#//scriptlet("set-constant", "Notification.requestPermission", "noopFunc")
+rg.ru,reddit.com,life.ru#%#//scriptlet("set-constant", "Notification.requestPermission", "noopFunc")
 wallstreet-online.de,dni.ru,polit.info#%#if (window.PushManager) { window.PushManager.prototype.subscribe = function () { return { then: function (func) { } }; }; }
 macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFunc")
 ! NOTE: Specific end ⬆️
