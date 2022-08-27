@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.826.6
+! OriginalVersion: 2022.827.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -9,6 +9,7 @@
 !
 ! Version must be UTC format.
 !
+||ntwoad.co.kr^
 ||tnkad.net^
 ||advertising.com^
 ||contextweb.com^
@@ -258,6 +259,7 @@
 ||adscdn.orbi.kr^
 ||ads.orbi.kr^
 ||ads.mtgroup.kr^
+##iframe[src*="//ra.ntwoad.co.kr/"]
 ##iframe[src*="//stt.pltapad.com/"]
 ##iframe[src*="//mediaindex.co.kr/DABanner.php"]
 ##ins[class^="MediaIndex_AD_"]
@@ -2012,8 +2014,7 @@ m.inven.co.kr#%#//scriptlet("set-constant", "MOBILE.Ad", "null")
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
-lover92.net#%#//scriptlet("adjust-setTimeout", "count", "*", "0.001")
-lover92.net#%#//scriptlet("abort-current-inline-script", "popMagic.init")
+lover92.net,lover93.net,lover94.net,lover95.net,lover96.net,lover97.net,lover98.net,lover99.net,lover100.net,lover101.net#%#//scriptlet("adjust-setTimeout", "count", "*", "0.001")
 !
 !
 ! #%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/adscale_slot_id/')
@@ -2094,6 +2095,7 @@ play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistr
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+||daumcdn.net/tistory/$domain=lover92.net|lover93.net|lover94.net|lover95.net|lover96.net|lover97.net|lover98.net|lover99.net|lover100.net|lover101.net
 $redirect-rule=nooptext,domain=lover92.net|lover93.net|lover94.net|lover95.net|lover96.net|lover97.net|lover98.net|lover99.net|lover100.net|lover101.net
 !#endif
 !#if (!adguard_app_ios && !adguard_ext_safari)
