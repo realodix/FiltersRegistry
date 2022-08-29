@@ -2158,6 +2158,10 @@ manager-magazin.de,whats-on-netflix.com#$#html.sp-message-open body { overflow-y
 ! !SECTION: Cookies - Popular rules
 !
 !
+playcentral.de#$#html[style="overflow: hidden;"] { overflow: auto !important;}
+playcentral.de#$#body[style="overflow: hidden;"] { overflow: auto !important;}
+playcentral.de#$#body[style="overflow: hidden;"] > div[id][data-bg^="background-color: rgba"] { display: none !important; }
+playcentral.de#$#body[style="overflow: hidden;"] * { filter: none !important; }
 miloan.pl##.cookies-pan
 netcredit.pl##.cookies-modal
 lefeld.de#$#div[data-feature*="PrivacyCategory"] { display: none !important; }
@@ -18168,6 +18172,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+economist.com##.ey1yhxa8
 suumo.jp###js-bannerPanel
 zivot.pluska.sk##.video-player__frame.floating > div[class="video-player-container"][style="height: 225px;"]
 cyber.ithome.com.tw##.btn-download.agenda-print
@@ -28353,7 +28358,7 @@ livescience.com##.article-body > #inContentEmail
 theatlantic.com##.article-body > .injector-promo-wrapper--article-top > .injector-promo > aside
 infowars.com##.article-footer-details > a[href="/newsletter-sign-up/"]
 soar-world.com,gothamist.com,mybroadband.co.za,today.com##.article-newsletter
-galesburg.com,mobilesyrup.com,news-journalonline.com##.article-newsletter-signup
+nybooks.com,galesburg.com,mobilesyrup.com,news-journalonline.com##.article-newsletter-signup
 noz.de##.article-page-newsletter-teaser
 mic.com##.article-page__mobile-newsletter
 marieclaire.ru##.article-subscribe
@@ -29193,7 +29198,6 @@ auto.ria.com##.entry-promo-app
 auto.ria.com##.mopile-app-banner
 flightradar24.com##.applink-container
 sankakucomplex.com###news-ticker
-check24.de#%#//scriptlet('set-cookie', 'c24FlugSplashApp', '1')
 etsy.com###web2app-shophome
 spbdnevnik.ru#%#//scriptlet('set-local-storage-item', 'getAppAddsClosed', '1')
 spbdnevnik.ru###getAppAdds
@@ -29921,8 +29925,6 @@ tinhte.vn#?#.main div.app-install-wrapper:upward(2)
 gids.tv##.promo-apps
 account.mail.ru##.mail-app-promo
 yoomoney.ru##.money-app-promo2
-m.check24.de#$#.c24m-asb { display: none !important; }
-m.check24.de#$#.c24m-asb-visible { position: absolute !important; }
 malaysiastock.biz###sideMenu_install_app
 malaysiastock.biz###div_mobileApp_Promotion
 navitime.com###white-space
@@ -30824,6 +30826,19 @@ zdf.de#$#.smartbanner { display: none !important; }
 zdf.de#$#.smartbanner-show header.b-header { top: 0 !important; }
 zdf.de#$#.smartbanner-show { margin-top: 0 !important; }
 zillow.com#$##app-upsell > .fixed-banner { display: none!important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/128317
+check24.de##.c24m-ls-ap
+check24.de##.c24AppSplash
+m.check24.de###c24m-sab
+m.check24.de#$#.tko-app-splash-banner { display: none !important; }
+m.check24.de#$#body.tko-splash-banner-visible { overflow: auto !important; }
+check24.de#%#//scriptlet('set-cookie', 'c24FlugSplashApp', '1')
+check24.de#%#//scriptlet('set-cookie', 'appsplash', '1')
+check24.de#%#//scriptlet('set-cookie', 'dslsplash', '1')
+!+ NOT_OPTIMIZED
+m.check24.de#$#.c24m-asb { display: none !important; }
+!+ NOT_OPTIMIZED
+m.check24.de#$#.c24m-asb-visible { position: absolute !important; }
 !
 ! Misc rules, removed during optimization. If some rules are in groups, no need to move them here
 !
@@ -35479,6 +35494,8 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+skyeng.ru##web-promotional-rotation-happy-b-day-22
+magazine.skyeng.ru##div[id^="ske_banner_header_promo-"]
 bestdroidplayer.com##.ulp-overlay
 bestdroidplayer.com##.ulp-window-container
 docs.cntd.ru#?#.sheet div[class]:has(> div.demo-modal)
