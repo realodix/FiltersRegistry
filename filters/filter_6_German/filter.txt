@@ -1707,6 +1707,10 @@ teleboy.ch#@#.adWrapper
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! donaukurier.de - left-overs in article and main page
+donaukurier.de#?#div:has(> div[id^="traffective-ad"])
+donaukurier.de#?#div[id^="ezplatform-page-block"]:has(> div[class] > iframe[name="marketing"])
+donaukurier.de#?#div[id^="ezplatform-page-block"]:has(> section > small > l:contains(Anzeige))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128385
 haus.de#?#div[class]:has(> .OUTBRAIN)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127933
@@ -2992,6 +2996,7 @@ vergleich.focus.de,chip.de,gutefrage.net,reisefrage.net,motorradfrage.net,autofr
 ! ##.adsbygoogle
 winfuture.de,netzwelt.de,quoka.de,farmeramania.de,bravofly.de,computerbild.de,digitalfernsehen.de,hl-live.de,chinamobilemag.de,focus.de,pcwelt.de##.adsbygoogle
 !
+donaukurier.de##.bb-fixheight
 haus.de##.chakra-skeleton
 jungefreiheit.de##.elementor-element-76f3556
 np-coburg.de,frankenpost.de##div[data-b-title="HCSB - HTML Prospekte"]
