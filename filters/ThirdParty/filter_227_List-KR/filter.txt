@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter.
-! OriginalVersion: 2022.829.1
+! OriginalVersion: 2022.830.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -343,6 +343,8 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||newsworker.co.kr/adManager/
+||newsworker.co.kr/bannerpop/uploads/
 ||image.hogangnono.com/image/nowatermark/original/ad/
 ||d29dbfyawlamz6.cloudfront.net/media/ad/
 ||d29dbfyawlamz6.cloudfront.net/media/ask/fullscreen_ad/
@@ -1019,6 +1021,7 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+newsworker.co.kr##.user-content > .user-aside
 m.pann.nate.com##iframe[src^="/da/"]
 earlyadopter.co.kr##div[itemprop="articleBody"] > div[class][style]
 m.search.daum.net##body.nate .section_cont [disp-attr] > div[style*="height:"]
@@ -1472,7 +1475,6 @@ ekn.kr,yeongnam.com##img[id^="ad_"]
 asiae.co.kr##.article_view > .fl_fr
 asiae.co.kr###txt_area.article > .art_btm
 ajunews.com##div[class^="asd_"]
-yna.co.kr##img[src^="//r.yna.co.kr/ad/"]
 yna.co.kr##aside[id^="boxAds"]
 yna.co.kr##.article-ad-box
 yna.co.kr###asideDeepDive
@@ -1867,6 +1869,7 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+m.yna.co.kr#?##container aside[class^="aside-"]:has(ul[id^="ad"]) + aside
 m.search.daum.net#?#body.nate .section_cont [disp-attr]:has(> div:matches-css(display: none))
 www.instiz.net#?#div[style].responsive_main div[style~="background-color:"]:not([class]):has(div[id^="ad"][style] > ins.adsbygoogle)
 www.instiz.net#?#.board_img_foot div[style] > .responsive_main:has(div[id^="ad"][style] > ins.adsbygoogle)
@@ -1959,6 +1962,7 @@ toonkor134.com,toonkor135.com,toonkor136.com,toonkor137.com,toonkor138.com,toonk
 news.op.gg#$?#header + div[class] div[class^="css-"] > div[class^="css-"] > div[class^="css-"]:has( ~ .youtube-iframe) { margin-top: 8px !important; }
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+m.yna.co.kr#?##container aside[class^="aside-"]:has(ul[id^="ad"], iframe:matches-css(display: none))
 hogangnono.com#?#.offer-container > .suggestion-item:has(a[href="#"] > span:contains(광고))
 tgd.kr#?#div[style*="padding:"]:has(div[style] div[style]:contains(AD))
 ~www.hogaeng.co.kr,hogaeng.co.kr#?##container > .latest_box:has(span.lt_title:contains(스폰서광고))
