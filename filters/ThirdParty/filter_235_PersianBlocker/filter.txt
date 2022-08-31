@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 4 days
-! Last modified: 2022-08-30
+! Last modified: 2022-08-31
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -1523,6 +1523,7 @@ saat24.news###box167
 @@||1000site.ir/asset/images/images/adpage/$image,~third-party
 @@||1000site.ir/home/ads/asset/favicon.ico$image,~third-party
 ! >> T <<
+^utm_source=Torob^$removeparam=/^utm_/
 ! ||api.torob.com^$removeparam=~prk
 ||api.torob.com^$removeparam=source
 ||api.torob.com^$removeparam=uid
@@ -1543,7 +1544,11 @@ saat24.news###box167
 ||api.torob.com^$removeparam=_ft__ab_test
 ! ||api.torob.com/*/base-product/details-log-click^
 ! ^ Causes infinite loading
-torob.com##.seller-element.shop-card:has-text(آگهی)
+torob.com##.seller-element.shop-card:has(.click_vijhe)
+!#if env_mobile
+torob.com##.sellers_section > div > div:has(.click_vijhe)
+torob.com##[class^="jsx-"] > [class^="jsx-"] > [class^="jsx-"] > [class^="jsx-"]:has-text(نصب شود)
+!#endif
 ! https://github.com/uBlockOrigin/uAssets/issues/12411
 takmili.com#%#//scriptlet('ubo-acis.js', 'document.oncontextmenu')
 takmili.com#%#//scriptlet('ubo-set.js', 'disable_copy', 'noopFunc')
