@@ -3095,6 +3095,7 @@ agrinews.co.jp###ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118543
 outlook.live.com#?#div[data-focuszone-id] + div > button > div > img[class][src$="/leftNavUpsellIcons/premium-diamond-01.svg"]:upward(2)
 outlook.live.com#?#.customScrollBar > div > div[class^="_"] > div > div.full:not([aria-label]):not([data-convid]):not([role="option"]):upward(2)
+outlook.live.com#?##app .customScrollBar + div[class] > div:not([id]):not([class]) > div[class] > div[class]:has(> div[class] > div[class] > img[src*="adbar"])
 outlook.live.com##.customScrollBar > div div.full:not([aria-label]):not([data-convid]):not([role="option"]):not([tabindex])
 outlook.live.com##div[id^="docking_InitVisiblePart_"] div[id^="virtualEditScroller"] + div[class] button[aria-label]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/102342
@@ -4380,6 +4381,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+scientificamerican.com##.spw
 neeva.com##div[class^="app-layout__column"] > div[style="--group-height:238px;"]
 prom.ua#%#//scriptlet('set-cookie', 'hide_mobile_international_delivery_popup', 'true')
 coub.com#$#.force-to-login-popup { display: none !important; }
@@ -4957,7 +4959,9 @@ maski-proekt.media,proekt.media##.alerts.reversed
 thetimes.co.uk###paywall-portal-page-footer
 dontpayfull.com##.sponsored
 it-here.ru##.telegram-banner
-theatlantic.com##body > div.c-non-metered-nudge
+theatlantic.com###nonMeteredNudge
+theatlantic.com###sponsoredNonMeteredNudge
+theatlantic.com##.c-non-metered-nudge
 cc-fan.tv,cn-fan.tv,fox-fan.tv,nf-fan.tv###Shop
 imgur.com##.EmeraldBanner
 skechers.ru##.stick_block_layer
@@ -5357,6 +5361,10 @@ eiga.com##.header-pure-banner
 !##############################
 ! SECTION: Tweaks - CSS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/128430
+reviewtech.me#$#.DownloadMainContent #countdown { display: none !important; }
+reviewtech.me#$#.DownloadMainContent #countdown + .text_sco { display: none !important; }
+reviewtech.me#$#.DownloadMainContent #downloadbtn { display: block !important; }
 ! https://www.neo-blood.co.jp/2022-8-19mail/ anti-copy etc.
 neo-blood.co.jp#$#html { -webkit-touch-callout: default !important; -webkit-user-select: auto !important;-moz-user-select: auto !important; -ms-user-select: auto !important; user-select: auto !important; -webkit-tap-highlight-color: black !important; }
 neo-blood.co.jp#$#.unselectable { -webkit-touch-callout: default !important; -webkit-user-select: auto !important;-moz-user-select: auto !important; -ms-user-select: auto !important; user-select: auto !important; -webkit-tap-highlight-color: black !important; }
@@ -5769,6 +5777,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/128430
+reviewtech.me#%#(function(){if(location.href.includes("/aHR0c"))try{let a=location.href.substring(location.href.indexOf("aHR0c"));a=atob(a),location.assign(decodeURIComponent(a))}catch(a){}})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128081
 freeudemycourse.com#%#//scriptlet("adjust-setInterval", "countdownwrapper", "", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128080

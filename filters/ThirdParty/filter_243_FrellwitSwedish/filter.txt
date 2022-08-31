@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-08-29 08:45:19 CEST
+! Last modified: 2022-08-31 07:40:13 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -231,6 +231,7 @@ gynning.net,sannalundell.se##.sponsored-notification:upward([id^="post-"])
 happypancake.se#%#//scriptlet('ubo-aopr.js', 'Object.prototype.adUnits')
 hejaolika.se#%#//scriptlet('ubo-acs.js', 'advads_passive_placements')
 hemmafixbloggen.se##.sponsor-summary:upward(.post-item)
+hemmanytt.se,karriarlakare.se#$#.cli-barmodal-open { overflow:auto!important }
 hemnet.se##.recent-news__category:has-text(/sponsrad/i):upward(.recent-news__item)
 hemnet.se##.start-page-hero__caption-category:has-text(/sponsrad av/i):upward(.start-page-hero__caption)
 hemnet.se##[class*="sponsor"]:upward(.article-news__link, .listing-articles__article-link, .featured-news__link, .result-article__link)
@@ -260,7 +261,6 @@ kamrat.com#%#//scriptlet('ubo-set.js', 'showAds', 'false')
 kamrat.com#%#//scriptlet('ubo-set.js', 'trap', 'noopFunc')
 karinrahm.se#$#.thb-page-transition-on { opacity:1!important }
 karriarlakare.se##.annons-label:upward(a)
-karriarlakare.se#$#.cli-barmodal-open { overflow:auto!important }
 kiacarclub.se##.sidebar-block:has-text(/annons|sponsor/i)
 kimura.se###storknapp:has-text(/^till kampanj/i):upward(article)
 kimura.se##img[src$="/sponsrad.png"]:upward(article)
@@ -486,7 +486,6 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 !#if env_chromium
 proffs.se#$#*::-webkit-scrollbar-thumb { background: #5e5e5e !important; border: 64px none #ffffff !important; border-radius: 0px !important; }
 proffs.se#$#*::-webkit-scrollbar { display: unset !important; }
-/detroitchicago/cmbv2.js$domain=temadagar.se
 !#endif
 !#if !env_chromium
 @@||fast.fonts.net/*/1.css$domain=pbswisstools.com
@@ -525,7 +524,6 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 ###cookie-consent-banner
 ###cookie-info
 ###cookie-law-container
-###cookie-law-info-bar
 ###cookie-line
 ###cookie-message
 ###cookie-notice
@@ -1003,6 +1001,7 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 /cs1pc.js$domain=kiaindex.se
 /cts.min.js$domain=recept.se
 /cx-emediate-userprofile-se
+/detroitchicago$domain=temadagar.se
 /detroitchicago/cmbdv2.js$domain=wernamaten.se
 /detroitchicago/denver.js$domain=wernamaten.se
 /dh-adscale$domain=dh.se
@@ -1153,7 +1152,7 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 /OneSignalSDK.js$domain=samnytt.se
 /OneSignalSDKWorker$script
 /packs/consent$domain=hemnet.se
-/pagead$domain=horoskoptid.se|vilaser.se
+/pagead$domain=hemmanytt.se|horoskoptid.se|vilaser.se
 /pages/native$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|dagenssamhalle.se|dagligvarunytt.se|fastighetsnytt.se|market.se|resume.se
 /pages/tag$domain=aktuellhallbarhet.se|byggindustrin.se|dagensmedia.se|dagensmedicin.se|dagenssamhalle.se|dagligvarunytt.se|fastighetsnytt.se|market.se|resume.se
 /pb-babla$domain=sv.bab.la
@@ -1846,6 +1845,8 @@ helahisingen.se###custom_html-15, .code-block img
 helgon.se##[id*="banner"], a[href^="https://ad."], a[href^="https://ad2."]
 hemhyra.se##.pageCookies
 hemmafixbloggen.se,surfa.se,teknikfreak.se###loader-wrapper
+hemmanytt.se###sa_slider_shortcode
+hemmanytt.se,karriarlakare.se###cookie-law-info-bar
 hemnet.se###ad_unit_placeholder
 hemtrevligt.se,mestmotor.se##.row--native
 hippson.se##.sponsorpuff, .presentedby, .presentedby ~ *
