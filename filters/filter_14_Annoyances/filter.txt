@@ -17758,7 +17758,7 @@ outlook.live.com###MainModule div[data-max-width="2400"] + div[class]
 outlook.live.com##body div[aria-label][data-max-width] ~ div[class^="_3_"]:last-child
 ! https://github.com/AdguardTeam/AdguardFilters/issues/70864
 outlook.live.com#?##app div[class] > div[role="region"] ~ div[class]:not([data-max-width]) > div[class] > div[class]:has(> div[class] > img[aria-label][src*="adbar"])
-outlook.live.com#?##app div[class] > div[role="region"] ~ div[class]:not([data-max-width]):not([role]):has(div[class] > img[aria-label][src*="adbar"])
+! outlook.live.com#?##app div[class] > div[role="region"] ~ div[class]:not([data-max-width]):not([role]):has(div[class] > img[aria-label][src*="adbar"])
 ! maybe olsolete
 !outlook.live.com##div[class="_n_h"][style*="width: 165px;"]
 !outlook.live.com#$##primaryContainer > div[style*="right: 165px;"] { width: 100% !important; }
@@ -29098,6 +29098,10 @@ tvrain.ru##.menu3__foreign-agent-wrapper
 !
 ! SECTION: Mobile apps - Regular rules
 !
+books.com.tw#$##app_banner { display: none !important; }
+books.com.tw#$#.page-content > #header { top: 0 !important; }
+books.com.tw#$#.page-content.with-app-banner #content { padding-top: 70px !important; }
+books.com.tw#%#//scriptlet('remove-class', 'with-app-banner', '.page-content.with-app-banner')
 navitime.co.jp###app-invite-frame-renew
 tripadvisor.com##.ZHIlj
 neeva.com##div[class^="app-layout__column"] > div[style="--group-height:160px;"]
@@ -34285,6 +34289,7 @@ agrinews.co.jp###ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118543
 outlook.live.com#?#div[data-focuszone-id] + div > button > div > img[class][src$="/leftNavUpsellIcons/premium-diamond-01.svg"]:upward(2)
 outlook.live.com#?#.customScrollBar > div > div[class^="_"] > div > div.full:not([aria-label]):not([data-convid]):not([role="option"]):upward(2)
+outlook.live.com#?##app .customScrollBar + div[class] > div:not([id]):not([class]) > div[class] > div[class]:has(> div[class] > div[class] > img[src*="adbar"])
 outlook.live.com##.customScrollBar > div div.full:not([aria-label]):not([data-convid]):not([role="option"]):not([tabindex])
 outlook.live.com##div[id^="docking_InitVisiblePart_"] div[id^="virtualEditScroller"] + div[class] button[aria-label]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/102342
@@ -39139,6 +39144,7 @@ huyosoku.com##.blogrolls
 ! make it domain specific, block if the widget is really annoying
 !||zopim.com^$third-party,domain=
 !
+||formilla.com^$third-party
 ||app.livechatoo.com^$third-party
 ||components.justanswer.com^$third-party
 ||girnarsoft.com^$third-party
