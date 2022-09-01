@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 22.8.3
+! OriginalVersion: 22.9.8
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 31 Aug 2022 19:34 UTC
+! Last modified: 01 Sep 2022 12:43 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -1752,6 +1752,7 @@ _GIF1200x120-
 ##.iklnpusat
 ##.ikltop
 ##.in_up_ad-area
+##.inarticle-ads
 ##.infeed-ads
 ##.infolinks-ad
 ##.iniiklan
@@ -1782,6 +1783,7 @@ _GIF1200x120-
 ##.ktz-bannersingletop
 ##.labeliklan
 ##.layout__ads
+##.leaderboard-ads-wrapper
 ##.leaderboard__ads
 ##.link_banner_iklan
 ##.magazine-block-medium-ad
@@ -1892,6 +1894,7 @@ _GIF1200x120-
 ##.widget-ads4
 ##.widget_advertisement-image
 ##.wrap-fixed-ads
+##.wrapper-ads
 ##[class$="ad_728x90"]
 ##[class*="-ikln" i]
 ##[class*="ads-artikel"]
@@ -3488,6 +3491,8 @@ gadgetplus.my.id#@#.Adsense
 transkerja.com#@#.adsbygoogle
 berga-tech.com,rival-face.com#@#.adspost1
 ##ins.adsbygoogle
+@@||monitorteknologi.com^$generichide
+monitorteknologi.com##.penci-google-adsense-2
 /images/ads.$image,redirect-rule=1x1-transparent.gif
 @@/\.(gif|jpe?g|png|webp)#(\/?.+)?(\/(ad)s?\/|\/ad-)/
 @@/dh-anti-adblocker/assets/js/ads-prebid.js
@@ -3636,6 +3641,7 @@ borneonews.co.id###lipsus-popup
 dailysocial.id###modal-popup
 serbacara.com###mtc-popup
 uzone.id###myModal
+indonesiatoday.co.id###popup-ads-holder
 wandercom.id###popuplayout
 tirto.id##.backgroundOverlay
 penerbitbukudeepublish.com##.elementor-popup-modal
@@ -3701,7 +3707,7 @@ dailysia.com#$?#[id^=ivs-] { remove: true; }
 ||player.ivideosmart.com/ivsplayer/$script,domain=bolasport.com|brilio.net|grid.id|gridoto.com|herstory.co.id|id.theasianparent.com|indosport.com|momsmoney.id|motorplus-online.com|parapuan.co|populis.id|sonora.id|tempo.co
 alex71.com##.content .aligncenter[alt="download" i][src*=".gif"]
 abbaspc.net##.entry-content > center > button:has-text(/download/i)
-gigapurbalingga.cc,mugedcrack.com##.entry-content center > a[href^="javascript:"]
+gigapurbalingga.cc,mugedcrack.com,yasir-252.com##.entry-content center > a[href^="javascript:"]
 gigapurbalingga.cc##.entry-content center button.user
 mazterize.com,mazterize.info,mazterize.net##.post-content center > a[href="javascript:void(0);"]
 softwaremaniapc.blogspot.com##.post-content img[width="243"][height="53"]
@@ -3776,8 +3782,9 @@ gamefinity.id#%#//scriptlet('ubo-acis.js', 'wpccpDisablePrintScreen')
 rgamesstore.com#%#//scriptlet('ubo-aopr.js', 'dealWithPrintScrKey')
 ngelag.com#%#//scriptlet('ubo-set.js', 'window.onpopstate', 'noopFunc')
 ipeenk.com#%#//scriptlet('ubo-aopr.js', 'app_advert')
+kuyhaa-me.com#%#//scriptlet('ubo-aopr.js', 'apphost')
 bahyudinnor.com,candilkuya.com,kuyhaa-me.com,pakpandir.com,saifullah.id,tuoka50.com#%#//scriptlet('ubo-aopr.js', 'protected_links')
-||kuyhaa-me.com/jamu.$script
+||kuyhaa-me.com/jamuok.$script
 -safelink/$third-party,script
 /ABSafelink.$third-party,script
 /auto_ngewe_$third-party,script
@@ -4158,7 +4165,7 @@ belinfo.my.id,kangapip.com,linkerload.com,metroupdate.biz,pf-electronicstt.com,s
 bevru.club,bolssc.com,cuts-url.com,eio.io,eririo.club,exe.app,exee.io,exey.io#%#//scriptlet('ubo-acis.js', 'disableItToContinue')
 toolss.net#%#//scriptlet('ubo-aeld.js', 'load', 'daadb_get_data')
 tmearn.*#%#//scriptlet('ubo-aopr.js', 'AaDetector')
-adikinfo.my.id,mangindo.xyz,nurhamka.com,rikucan.com,teknotimes.id#%#//scriptlet('ubo-aopr.js', 'adBlockDetected')
+adikinfo.my.id,mangindo.xyz,nurhamka.com,rikucan.com#%#//scriptlet('ubo-aopr.js', 'adBlockDetected')
 ta2deem7arbya.com#%#//scriptlet('ubo-aopr.js', 'adsBlocked')
 adsafelink.com,aii.sh,bevru.club,bolssc.com,cuts-url.com,dz4link.com,eio.io,eririo.club,exe.app,exee.io,exey.io,fotodovana.com,jameeltips.us,linkpoi.me,megaurl.in,metroupdate.biz,paired.my.id,rancah.com,sekilastekno.com,shrinke.me,shrinkme.in,skiped.me,stfly.io,stfly.me,tei.ai,tmearn.*,viral-topics.com#%#//scriptlet('ubo-aopr.js', 'app_vars.force_disable_adblock')
 linkpoi.me#%#//scriptlet('ubo-aopr.js', 'disableItToContinue')
