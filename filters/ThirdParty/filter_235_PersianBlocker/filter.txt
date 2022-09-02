@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 4 days
-! Last modified: 2022-08-31
+! Last modified: 2022-09-02
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -315,6 +315,9 @@
 !-------------------------^ Non-Persian Ads/Trackers/Annoyances Filters used in Persian websites ^-----------------------!
 !-------------------------v Site-Specific Filters v-----------------------!
 ! >> A <<
+! https://github.com/MasterKia/PersianBlocker/issues/46
+asemooni.com##.right-sidebar img[title="محل تبلیغات شما"]
+asemooni.com##.right-sidebar img[title="رپورتاژ"]
 applicationha.com#%#//scriptlet('ubo-aopr.js', 'faPa')
 ||applicationha.com/wp-admin/admin-ajax.php?postviews_id=
 applicationha.com##.baner
@@ -1225,6 +1228,10 @@ namnak.com##.Dr.D2.Cu.o
 ||namakstan.net/wp-content/cache/busting/1/gtm-
 ! >> O <<
 opizo.me#%#//scriptlet('ubo-aeld.js', 'blur')
+! https://github.com/uBlockOrigin/uAssets/commit/9eb324a7dff561f00b270f076a5ed31ad841ab17#commitcomment-82863816
+!#if ext_ublock
+opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/) > p
+!#endif
 omidnamehnews.ir##.adspanel
 ! >> P <<
 ! https://github.com/MasterKia/PersianBlocker/issues/45
