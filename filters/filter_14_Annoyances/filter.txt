@@ -12119,8 +12119,10 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ! When request is blocked then there is an error "Unexpected token / in JSON at position 0"
 ! It's loaded by cdn.cookielaw.org/scripttemplates/otSDKStub.js, so it should be only unblocked on websites for which this script is unblocked
 !+ PLATFORM(windows, mac, android)
-||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect=noopjson
+||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/128694
+@@||geolocation.onetrust.com/cookieconsentpub/v1/geo/location$domain=cnet.com
 ! frankenpost.de - cookie choices not saved
 @@||frankenpost.de/www/libs/_responsive/*/js/_final/apps/cookiebar.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128258
@@ -29153,6 +29155,7 @@ tvrain.ru##.menu3__foreign-agent-wrapper
 !
 ! SECTION: Mobile apps - Regular rules
 !
+gnavi.co.jp###js-app
 tabelog.com##.matome-webtoapp
 tinyview.com##.open-app-container
 books.com.tw#$##app_banner { display: none !important; }
@@ -31230,7 +31233,7 @@ j-sen.jp##.js-app-banner
 j-sen.jp##.content-top + div.u-mb-7 > div.card > p
 kasikornbank.com###ex-app
 ozmall.co.jp##.oz__headApp
-ozmall.co.jp###pagetop > div.clearfix[style^="display:table;"]
+ozmall.co.jp##div.clearfix[style^="display:table;background:"]
 wiwo.de#$#body.c-app-install--hidden { padding-top: 0px !important; }
 edh.tw###vip-banner
 lazada.co.th###smartbanner-slot
