@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.904.4
+! OriginalVersion: 2022.904.6
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1026,6 +1026,8 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+zum.com##div[class$="_banner"] + .shoplink_wrap
+cuonet.com##div[style^="max-width:"].bx-wrapper > div[aria-live="polite"][style].bx-viewport
 m.news.zum.com##section[id$="_shopping_box"]
 m.invest.zum.com##.article_container > div  > div[style*="border:"] ~ div[style]
 invest.zum.com##.main.article_layout .gdn_wrap
@@ -1419,7 +1421,6 @@ zum.com##section.container > .cont_wrap > .left_area > #newsMenu > .recommend_wr
 zum.com##div[class*="_adbox"]
 zum.com##section.container > .cont_wrap > .left_area > #shoppingMenu
 zum.com##section.container > .cont_wrap > .right_area > div:not([class])
-start.zum.com##.main > .extension-banner
 m.ohmynews.com##main#article > .arc_list
 m.ohmynews.com##div[id^="mobitree"]
 m.ohmynews.com##iframe[src*="//ojsfile.ohmynews.com/AD_FILE/"]
@@ -1453,7 +1454,7 @@ news1.kr##div[data-acidx][data-kind].sideBlock
 m.nocutnews.co.kr##div[class^="ct"] > .section > .view_box > #divViewBox > .viewbox > div[style]
 m.nocutnews.co.kr###pnlContainer > div[class^="ct"] > .con_b > div[style]
 m.nocutnews.co.kr###pnlContainer > div[class^="ct"] > .section > div[style]:not(class)
-m.edaily.co.kr,news.sbs.co.kr,nocutnews.co.kr##div[id^="dablewidget_"]
+start.zum.com,m.edaily.co.kr,news.sbs.co.kr,nocutnews.co.kr##div[id^="dablewidget_"]
 m.nongmin.com##.banner_zone
 nongmin.com##div[class$="-banner-wrap"]
 newstof.com##div[id^="popup_"]
@@ -1794,6 +1795,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+start.zum.com#$#div[id^="dablewidget_"] + section[class*="-item_"] { width: calc(58% + 5px) !important; }
 pushoong.com#$#html { overflow: auto !important; }
 pushoong.com#$##fullscreen-overlay { display: none !important; }
 serieamania.com#$##index > div[id^="index_box"][class]:not(.index_row_full) { margin-left: calc(50% - 145.5px) !important; }
