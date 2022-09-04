@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 22.9.11
+! OriginalVersion: 22.9.17
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 01 Sep 2022 19:29 UTC
+! Last modified: 04 Sep 2022 10:42 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -3151,6 +3151,7 @@ solopos.com##.swipe-up-ad
 tmcblog.com##.td-container a[target="_blank"] div[style*="position: fixed;"]
 timesindonesia.co.id##.text-center a[target="_blank"] > img
 tempo.co##.top-banner
+orami.co.id##.top-banner-parallax
 juragancipir.com##.topad
 artikel.rumah123.com##.topleaderboard-banner
 indonesiadaily.co.id##.tpm-ads-unit
@@ -3315,7 +3316,6 @@ detik.com###adv-caption-lead + #leaderboard:has([id^="div-gpt-ad"])
 bola.net###content-news .w100p:has([id^="div-gpt-ad"])
 tempo.co###inarticle_2:has-text(/adv/i)
 balipost.com##._align_center:has([id^="div-gpt-ad"])
-orami.co.id##.article-post section:has(> div > p:matches-css(text-align: center):has-text(/adv/i))
 id.theasianparent.com#$#.bottom-sticky.only-mobile.layer-bsa-bn { min-height: 0 !important; }
 suarajatimpost.com##.card:has-text(/adv/i)
 okezone.com##.center-paralax:has([id^="div-gpt-ad"])
@@ -3361,6 +3361,7 @@ haibunda.com##div:has(> .static_banner1)
 pricebook.co.id##div:has(> [id*="div-gpt-ad-"])
 cnnindonesia.com##div:has(> [id^="adv-"])
 marketeers.com##div:has(> iframe[src^="https://ads.marketeers.com"])
+orami.co.id##div:has(> p:matches-css(text-align: center):has-text(/adv/i))
 kumparan.com##div:matches-css(text-align: center):has(> .adunitContainer)
 bola.net,kapanlagi.com,sehatq.com##div:matches-css(text-align: center):has(> [id^="div-gpt-ad"])
 merdeka.com##div:matches-css(text-align: center):has([id*="div-gpt-ad-"])
@@ -3473,6 +3474,7 @@ brotutor.net,cikimm.com,isrul.com#%#//scriptlet('ubo-aopr.js', 'mql')
 kontrastimes.com#%#//scriptlet('ubo-aopr.js', 'quadsOptions')
 saungfirmware.id#%#//scriptlet('ubo-aopr.js', 'short_url_app_vars.force_disable_adblock')
 labkom.co.id#%#//scriptlet('ubo-aopr.js', 'tdBlock')
+howdy.id#%#//scriptlet('ubo-no-fetch-if.js', 'pagead2.googlesyndication.com')
 heyapakabar.com,jagoanssh.com,komikmoe.web.id,linkconfig.com,nafaskuda.com,obengplus.com,submitclimb.com#%#//scriptlet('ubo-nobab.js')
 idlegionoob.com,surgatekno.com#%#//scriptlet('ubo-nofab.js')
 rifqimulyawan.com#%#//scriptlet('ubo-nostif.js', 'adblockEnabled')
@@ -3622,7 +3624,6 @@ m.kaskus.co.id##[id^="postdeleted"]
 /pum-site-scripts.js$script,domain=lintaslampung.com
 /sweetalert2.$script,domain=pusatiklan.my.id
 ?key=*&submetric=$third-party,popup
-putingfilm.com#%#//scriptlet('ubo-acis.js', 'parseInt', 'break;case $.')
 gamebrott.com#%#//scriptlet('ubo-aopr.js', 'advads_options')
 cilegonnews.com#%#//scriptlet('ubo-aopr.js', 'eplm_cooki_name')
 idfl.info,manfaatke.com#%#//scriptlet('ubo-aopr.js', 'open')
@@ -4048,8 +4049,8 @@ lengket.com,sangkut.com#%#//scriptlet('ubo-aopr.js', 'SmartPopunder')
 159.65.11.63,indoxx1film.me#%#//scriptlet('ubo-aopr.js', 'showPopUpBanner')
 bioskopkere.club,kawanfilm.info,layarkaca.online#%#//scriptlet('ubo-aopr.js', 'ujiPopups')
 95.111.231.122#%#//scriptlet('ubo-aopr.js', 'window.pum_popups')
-103.194.171.18,111.90.150.31,139.99.120.222,139.99.61.225,144.126.136.208,154.53.35.209,154.53.44.56,161.97.149.35,161.97.86.165,173.212.216.207,176.119.30.88,176.57.150.203,185.217.93.56,185.241.151.22,193.164.131.42,194.147.58.136,194.163.129.165,194.163.139.52,194.163.150.84,194.242.56.199,199.231.164.17,38.242.129.194,38.242.237.91,51.79.159.65,62.182.82.226,75.119.139.75,75.119.152.230,75.119.155.191,amoviemedia.com,anichin.my.id,clampschoolholic.web.id,cloudfilm.co,drakorindoo.net,layarfilm21.website,nanidrama.com,negumo.com,oploverz.web.id,sobatgo.xyz,subindo.one,subindo.site#%#//scriptlet('ubo-window.open-defuser.js')
-167.99.64.64#%#//scriptlet('ubo-acis.js', 'parseInt', 'break;case $.')
+103.194.171.18,111.90.150.31,139.99.120.222,139.99.61.225,144.126.136.208,149.102.143.158,154.53.35.209,154.53.44.56,161.97.149.35,161.97.86.165,173.212.216.207,176.119.30.88,176.57.150.203,185.217.93.56,185.241.151.22,193.164.131.42,194.147.58.136,194.163.129.165,194.163.139.52,194.163.150.84,194.242.56.199,199.231.164.17,38.242.129.194,38.242.237.91,51.79.159.65,62.182.82.226,75.119.139.75,75.119.152.230,75.119.155.191,amoviemedia.com,anichin.my.id,clampschoolholic.web.id,cloudfilm.co,drakorindoo.net,layarfilm21.website,nanidrama.com,negumo.com,oploverz.web.id,putingfilm.com,sobatgo.xyz,subindo.one,subindo.site#%#//scriptlet('ubo-window.open-defuser.js')
+167.99.64.64,putingfilm.com#%#//scriptlet('ubo-acis.js', 'parseInt', 'break;case $.')
 $popup,domain=awnime.net
 /wp-content/plugins/angwp/*$domain=dramabarat.com|indoxximovie.org
 /wp-content/plugins/popup-by-supsystic/*$domain=213.190.4.103
@@ -4093,14 +4094,14 @@ niihen.com#$?#.entry-content div:matches-css(text-align: center) > a { display: 
 62.182.85.168,63.250.41.34,idlix.link,mikanime.com,wibudesu.co#%#//scriptlet('ubo-acis.js', 'disableSelection', 'reEnable')
 144.91.105.32,63.250.41.34,otakudesu.watch#%#//scriptlet('ubo-acis.js', 'document.oncontextmenu')
 akashinime.com#%#//scriptlet('ubo-acis.js', 'nocontextmenu')
-194.163.142.218#%#//scriptlet('ubo-aeld.js', '/^(?:contextmenu|selectstart)$/')
+194.163.142.218,kawanfilm21.in#%#//scriptlet('ubo-aeld.js', '/^(?:contextmenu|selectstart)$/')
 144.91.105.32#%#//scriptlet('ubo-aeld.js', '/touchstart|touchend/', 'wccp_pro_is_passive')
 51.79.146.226#%#//scriptlet('ubo-aeld.js', 'contextmenu')
 kusonime.com#%#//scriptlet('ubo-aeld.js', 'keydown')
 185.217.93.56,188.119.113.246,gatsunime.in,idlix.link,kusonime.com#%#//scriptlet('ubo-aopr.js', 'document.oncontextmenu')
 nekopoi.web.id#%#//scriptlet('ubo-aopr.js', 'document.oncopy')
 144.126.136.208#%#//scriptlet('ubo-aopr.js', 'document.onkeydown')
-serguruku.com#%#//scriptlet('ubo-aopr.js', 'document.onselectstart')
+kawanfilm21.in,serguruku.com#%#//scriptlet('ubo-aopr.js', 'document.onselectstart')
 mikanime.com#%#//scriptlet('ubo-aopr.js', 'nocontext')
 188.119.113.246#%#//scriptlet('ubo-aopw.js', 'document.onselectstart')
 wibudesu.co#%#//scriptlet('ubo-aopw.js', 'nocontext')
@@ -4175,7 +4176,7 @@ ta2deem7arbya.com#%#//scriptlet('ubo-aopr.js', 'adsBlocked')
 adsafelink.com,aii.sh,bevru.club,bolssc.com,cuts-url.com,dz4link.com,eio.io,eririo.club,exe.app,exee.io,exey.io,fotodovana.com,jameeltips.us,linkpoi.me,megaurl.in,metroupdate.biz,paired.my.id,rancah.com,sekilastekno.com,shrinke.me,shrinkme.in,skiped.me,stfly.io,stfly.me,tei.ai,tmearn.*,viral-topics.com#%#//scriptlet('ubo-aopr.js', 'app_vars.force_disable_adblock')
 linkpoi.me#%#//scriptlet('ubo-aopr.js', 'disableItToContinue')
 ljutkeunvpn.blogspot.com,safelkmeong.blogspot.com,usesafelink.blogspot.com#%#//scriptlet('ubo-aopr.js', 'mql')
-menjelajahi.com,rancah.com,saungfirmware.id#%#//scriptlet('ubo-aopr.js', 'short_url_app_vars.force_disable_adblock')
+menjelajahi.com,pintunow.com,rancah.com,saungfirmware.id#%#//scriptlet('ubo-aopr.js', 'short_url_app_vars.force_disable_adblock')
 sekilastekno.com#%#//scriptlet('ubo-no-fetch-if.js', 'ads')
 tutorial.siberuang.com#%#//scriptlet('ubo-no-fetch-if.js', 'adsbygoogle.js')
 agansultan.co,informatikamu.id,linkpoi.me,sopasti.com#%#//scriptlet('ubo-nobab.js')
@@ -4192,7 +4193,7 @@ stfly.me,tei.ai#%#//scriptlet('ubo-aopr.js', 'open')
 tmearn.*#%#//scriptlet('ubo-aopw.js', '_pop')
 belinfo.my.id#%#//scriptlet('ubo-ra.js', 'onclick', '[onclick*="window.open"]')
 bevru.club,bolssc.com,carapedi.id,cararegistrasi.com,ceesty.com,cuts-url.com,eio.io,eririo.club,exe.app,exee.io,exey.io,fc-lc.com,fc.lc,luangusaha.com,miuiku.com,oceantech.xyz,onlinecorp.me,p4link.com,paired.my.id,ponselharian.com,sekilastekno.com,semawur.com,shrinke.me,teknosimple.com,tmearn.*#%#//scriptlet('ubo-window.open-defuser.js')
-cararegistrasi.com,modebaca.com,saungfirmware.id,teknorizen.blogspot.com,teknosimple.com#%#//scriptlet('ubo-nano-sib.js')
+cararegistrasi.com,modebaca.com,pintunow.com,saungfirmware.id,teknorizen.blogspot.com,teknosimple.com#%#//scriptlet('ubo-nano-sib.js')
 urbharat.xyz#%#//scriptlet('ubo-nano-sib.js', 'timePassed', '1300')
 adikinfo.my.id,inafut.com#%#//scriptlet('ubo-nano-stb.js')
 ceesty.com#%#//scriptlet('ubo-set.js', 'app.options.timerPageVisibilityChecking', 'false')

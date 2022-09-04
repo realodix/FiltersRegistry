@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.904.6
+! OriginalVersion: 2022.904.10
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -341,6 +341,9 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||static.coupangcdn.com/image/$domain=shopping.zum.com
+||shopping-phinf.pstatic.net^$domain=shopping.zum.com
+||m.zum.com/static/img/invest_banner_
 ||shop.zumst.com/upload/shoppingbox/
 ||zumst.com/scripts/adDefence.js
 ||srv-asiatime.kr.object.ncloudstorage.com/*/resources/banner/
@@ -1026,6 +1029,11 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+[$path=/\?clubid=27842958$/]cafe.naver.com##table[role="presentation"] #editorMainContent div[style^="text-align"]:nth-child(n+6)
+[$path=/&clubid=27842958(&|$)/]cafe.naver.com##img[src][alt="매니저 등록 배너"]
+shopping.zum.com##section[data-pos^="ad_"][class*="_power_"]
+m.zum.com##.layout-panel > .no-margin-top
+m.zum.com##div[type^="Advertise"].shopping-box
 zum.com##div[class$="_banner"] + .shoplink_wrap
 cuonet.com##div[style^="max-width:"].bx-wrapper > div[aria-live="polite"][style].bx-viewport
 m.news.zum.com##section[id$="_shopping_box"]
@@ -1698,7 +1706,7 @@ www.naver.com##iframe[id^="da_iframe_"]
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
-!#if (!adguard_ext_android_cb)
+!#if !adguard_ext_android_cb
 lover92.net,lover93.net,lover94.net,lover95.net,lover96.net,lover97.net,lover98.net,lover99.net,lover100.net,lover101.net##.xe_content span ~ div[style]
 !#endif
 todawa79.top,todawa80.top,todawa81.top,todawa82.top,todawa83.top,todawa84.top,todawa85.top,todawa86.top,todawa87.top,todawa88.top,todawa89.top##.sub-contener-wraper > div:not(.sub-cont)
@@ -1885,6 +1893,7 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+shopping.zum.com#?#.result_item_list li:has(> .shopping_item.type_coupang)
 kayak.co.kr#?#.Ui-Hotels-Results-List-Components-RheaLiteWrapper-container div:not([class]):has(div[class$="-sponsored"])
 m.yna.co.kr#?##container aside[class^="aside-"]:has(ul[id^="ad"]) + aside
 m.search.daum.net#?#body.nate .section_cont [disp-attr]:has(> div:matches-css(display: none))
