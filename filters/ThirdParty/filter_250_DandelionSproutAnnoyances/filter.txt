@@ -9775,7 +9775,7 @@ get.adobe.com###offersInformationPane
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 25August2022v1
+! OriginalVersion: 29August2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -11889,7 +11889,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||sites.google.com/mytv/maintenance^$all
 ! https://github.com/AdguardTeam/AdguardFilters/issues/111970
 /(^|\.|://)[a-z0-9-]{2,}trk\.xyz(/|$)/$document,popup
-! https://bazaar.abuse.ch/sample/d7308dab0110ae3bc79fd15024f5ccfcbd6e676b7c42b27a0112506e8357a6dc/ --> https://app.any.run/tasks/bc53e7a9-5fd7-4682-894d-11e48e9ea89a#
+! https://bazaar.abuse.ch/sample/d7308dab0110ae3bc79fd15024f5ccfcbd6e676b7c42b27a0112506e8357a6dc/ → https://app.any.run/tasks/bc53e7a9-5fd7-4682-894d-11e48e9ea89a#
 ||pccrackworld.com^$all
 ||calsign.xyz^$all
 ||jwq98u.xyz^$all
@@ -12664,6 +12664,8 @@ zombooru.com##a[href="http://www.hard55.com"]
 51.91.66.125$network
 51.178.76.105$network
 147.135.253.55$network
+! https://github.com/uBlockOrigin/uAssets/issues/14569 → https://www.virustotal.com/gui/url/b819586938326577d759d8024abe3e0e6de1c853d6b67824daf6f613fba0f63b/detection (https://app.any.run/tasks/5914a712-1a73-4432-b89a-ca0627a24ade)
+||bnbdeal.net^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -19480,7 +19482,7 @@ deezer.com#?#.page-alerts:has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 23August2022v1
+! OriginalVersion: 05September2022v2
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#english
@@ -19725,6 +19727,10 @@ twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?#a[h
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class*=" "]:first-of-type:has(a[href="/i/flow/signup"])
 ! https://twitter.com/hideo_kojima_en/status/319595772981166080
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion###layers > div[class] > div[class] > div[class] > div[class]:has(> div[class] > div[class] > div[class] > div[class] > div[class] > a[href="/login"])
+!#if !env_mobile
+! Fullpage uncloseable overlay on some pages
+twitter.com#?#div[role=group]:has(div[data-testid*=apple_sign_in]:only-of-type)
+!#endif
 ! The New Republic 📠🔨
 ! https://github.com/easylist/easylist/issues/5331#issuecomment-627813147
 ||validate.onecount.net/onecount/api/public^
@@ -20540,7 +20546,7 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 /christmas-snow.js
 ##foxfield-xmas:not(html, body)
 ! Title: 🌭 Falukorv List
-! OriginalVersion: 18August2022v1-Beta
+! OriginalVersion: 05September2022v1-Beta
 ! Expires: 10 days
 ! Description: Originally created because some PR-Chinese filterlist makers decided to block Falun Gong websites in their anti-ad lists for reasons that had absolutely nothing to do with ads, tracking or malware, and despite the sites already being megablocked within their country; this list has since then also expanded to cover other lists' entries that makes one think "Wait, hold up", due to how misplaced they are.
 ! The list is not designed to be used together with anti-'social network' lists.
@@ -20615,6 +20621,8 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 !#endif
 ! Caused by «Anti-paywall filters» (Makes Google shows up as an account option when on the account creation page)
 @@||accounts.google.com/gsi^$domain=www.deviantart.com
+! Caused by «EasyList» and «AdGuard Base Filter + EasyList» (Makes List-KR sync correctly in multi-adblocker setups as of 5th of September 2022)
+@@/adservice.txt?_=
 ! Domains that cause Error -105 on my LG 43UH603V TV if they're blocked (Not in any known filterlists)
 @@||connected-devices.viaplay.tv^
 @@||tv.deezer.com^
