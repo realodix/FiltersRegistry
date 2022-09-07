@@ -12371,8 +12371,6 @@ era.be#@#.eu-cookie-compliance-banner:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121598
 vyond.com#@#.cookie-overlay:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121633
-@@||cdn.privacy-mgmt.com/wrapperMessagingWithoutDetection.js$domain=mein-schoener-garten.de
-@@||cdn.privacy-mgmt.com/wrapper/tcfv2/$domain=mein-schoener-garten.de
 @@||cdn.privacy-mgmt.com^$domain=mein-schoener-garten.de
 ! https://github.com/easylist/easylist/commit/e07bb8cf630dfaf6225e45f27e97ebd0673f86de
 lolaliza.com#@#.cookieBar:not(body):not(html)
@@ -24862,6 +24860,7 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 !
 ! SECTION: Subscriptions - Regular rules
 !
+blizko.by##cite
 aamuposti.fi##.diks-box--commercial
 bbbl.dev##.subscription-section
 bbbl.dev##.telegram-widget
@@ -33741,7 +33740,8 @@ yandex.by,yandex.com,yandex.com.tr,yandex.fr,yandex.kz,yandex.ru,~afisha.yandex.
 !
 ! Yandex.Weather
 ! Widget popup and banners
-yandex.*##body > div.SideBlock[style="display: block; z-index: 1000;"]
+yandex.*#$#body { overflow: auto !important; position: unset !important; }
+yandex.*#$#body > div.SideBlock[style="display: block; z-index: 1000;"] { display: none !important; }
 yandex.*##div[class^="MobileWidgetPromo_"]
 ! Mobile apps
 yandex.by,yandex.kz,yandex.ru,~afisha.yandex.by,~afisha.yandex.kz,~afisha.yandex.ru,~avia.yandex.by,~avia.yandex.kz,~travel.yandex.ru,~bilet.yandex.com.tr,~flights.yandex.com,~disk.yandex.by,~disk.yandex.com,~disk.yandex.com.tr,~disk.yandex.fr,~disk.yandex.kz,~disk.yandex.ru,~mail.yandex.by,~mail.yandex.kz,~mail.yandex.ru,~mail.yandex.com,~mail.yandex.com.tr,~music.yandex.ru,~music.yandex.by,~music.yandex.kz,~rabota.yandex.by,~rabota.yandex.kz,~rabota.yandex.ru,~radio.yandex.by,~radio.yandex.kz,~radio.yandex.ru,~realty.yandex.by,~realty.yandex.kz,~realty.yandex.ru,~tv.yandex.by,~tv.yandex.kz,~tv.yandex.ru,~yadi.sk,~zen.yandex.by,~zen.yandex.com,~zen.yandex.kz,~zen.yandex.ru#?#.footer__links > div.links-section:has(> div.links-section__title:contains(Мобильные приложения))
