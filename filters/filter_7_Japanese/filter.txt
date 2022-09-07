@@ -453,10 +453,8 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
-! anti-adb
-manga1001.vip#%#//scriptlet('prevent-setTimeout', 'Check')
-!+ PLATFORM(ios, ext_android_cb, ext_safari)
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=manga1001.vip
+! https://github.com/AdguardTeam/AdguardFilters/issues/129121
+@@||cdn.adschill.com/*/unit/*.js$domain=manga1001.vip
 ! anti-adb on viewer
 dropbooks.net##div[style="position: fixed; top: 0px; left: 0px; width: 100vw; height: 100vh; background: black none repeat scroll 0% 0%; opacity: 0.9; z-index: 900;"]
 ! no fix for iOS14 unless allowing ad
@@ -4021,9 +4019,7 @@ hicbc.com##.post-content-ad
 koku-byakunews.com,comicspoil007.com##.content > center
 gamelove.jp##.ad_toppage_top
 rankingoo.net###bottom_overlay_area
-rankingoo.net##.ADD300_250
-rankingoo.net##.ADD728_90
-rankingoo.net##.ADD_table
+rankingoo.net##div[class^="ADD"]
 gyo.tc,megalodon.jp##form[action="https://www.google.co.jp/search"] + div.row
 auc1.net##.px-md-3 > div.d-md-block.d-none.col-md-3
 auc1.net##.table.auctions td.align-middle[colspan="2"]

@@ -22,9 +22,11 @@
 ! ##[href^="https://gameup.ir/"]
 ! /najva.js
 ! /jwplayer/vast.js
+! ##.zxc
 !-------------------------^ Experimental Generic Filters ^-----------------------!
 !-------------------------v Persian Ads/Trackers/Annoyances Filters v-----------------------!
 ! >> A <<
+||adexo.ir^$all
 ||adskav.com^$all
 ||adtube.ir^$all
 ||advn.ir^$all
@@ -71,12 +73,13 @@
 ! >> C <<
 ||chavosh.org^$all
 ||clickaval.com^$all
-||congoro.com^$all
 ||clickyab.com^$all
 ||chabok.io^$all
+||congoro.com^$all
+||congoro.ir^$all
 ! >> D <<
 ||davedbux.ir^$all
-||denutility.com/*/tabligh/
+||denutility.com^$all
 ! ^ Used by eghtesadnews.com
 ||deemanetwork.com^$all
 ||deema.agency^$all
@@ -130,6 +133,10 @@
 ||merita.ir^$all
 ||mitrarank.ir^$all
 ! >> N <<
+||newswidget.net^$all
+||vidomusic.org^$all
+||pantatec.ae^$all
+! Used by mosalasonline.com
 ||najva.com^$all
 ||netbina.com^$all
 ! >> O <<
@@ -161,10 +168,15 @@
 ||parsiblog.com/ga.js
 ! >> Q <<
 ! >> R <<
+||rasaaa.com^$third-party
+^utm_source=rokhdad^$removeparam=/^utm_/
+||rokhdad.news^$third-party
+||rssbank.ir^$all
 ||rizy.ir/js/ads.js
 ||rozblog.com/include/rozblog_ads_js
 /include/rozblog_ads_js
 ! >> S <<
+||shahrekhabar.com^$third-party
 ||statsfa.com^$all
 ||slideskin.ir/ads/pop.php^$all
 ||sendword.ir^$all
@@ -493,6 +505,9 @@ barsadic.com##div.text-center.col-md-3 > .paddingAll10.panel-success.panel
 ||backtory.com/Bucket/deepchart/DeepChartAnalytics.js
 borna.news##[href^="/advertisements/"]
 borna.news##.side_adv
+borna.news#$#.cols_cnt { max-width: 95% !important; }
+borna.news#$#.first_col, .n_first_col { width: 70% !important; }
+borna.news#$#.second_col, .n_second_col { width: 30% !important; }
 ||beautyhome.ir/wp-content/plugins/meks-easy-ads
 ||beautyhome.ir/wp-content/plugins/ads
 ||beautyhome.ir/wp-content/plugins/sticky-ad
@@ -730,6 +745,7 @@ entekhab.ir##.social-tele
 entekhab.ir##.col-lg-9.col-md-8.col-sm-18.col-xs-36.col-3-2 > .col-xs-36.attention > header > .col-xs-36.blue-header
 entekhab.ir##.col-lg-9.col-md-8.col-sm-18.col-xs-36.col-3-2 > .col-xs-36.attention > section > .col-xs-36.attention-contents
 ! https://github.com/AdguardTeam/AdguardFilters/issues/104314
+||eghtesadnews.com^$removeparam=rssRedirect
 eghtesadnews.com##[href^="/advertisements/"]
 eghtesadnews.com##.zxc
 eghtesadnews.com##.advs-wrapper
@@ -1142,6 +1158,10 @@ lahzeakhar.com#%#//scriptlet('ubo-set.js', 'customnotify', 'noopFunc')
 ||lahzeakhar.com/ShowAds
 ! ||lahzeakhar.com/sw.js
 ! >> M <<
+mosalasonline.com##.zxc
+mosalasonline.com##.news-col-2 .related-news
+mosalasonline.com#$#.news-col-1 { width: 70% !important; }
+mosalasonline.com#$#.news-col-2 { width: 30% !important; }
 ||mipersia.com/wp-content/cache/caos-analytics
 ! https://github.com/MasterKia/PersianBlocker/issues/27
 mobo.news##.ads-full-banner-img
@@ -1411,6 +1431,10 @@ rastannews.ir##.all_ads
 ||rajanews.com/sites/default/files/superadmin/*.gif
 rajanews.com###block-block-22.ads
 ! >> S <<
+||shomavaeghtesad.com/rss-rasa.php^
+shomavaeghtesad.com##.zxc
+shomavaeghtesad.com#$#.column_1 { width: 70% !important; }
+shomavaeghtesad.com#$#.column_2 { width: 30% !important; }
 ||sheypoor.com/js/analytics-
 shereno.com##.b_box
 shereno.com##.widget:has(.widget_title:has-text(پیوند))
@@ -1426,15 +1450,14 @@ searchline.ir#$#* { -webkit-touch-callout: default !important; -webkit-user-sele
 ||snappfood.ir/*/track^$all
 sornamusic.ir##.textwidget
 sornamusic.ir##aside:nth-of-type(5)
-||shomanews.com/rss-files.php
-||shomanews.com/statics
-||shomanews.com/servev2/*.gif
-||shomanews.com/player/vastlink.js
-shomanews.com##[href^="/advertisements/"]
-shomanews.com##.banner_mnb
-shomanews.com##.type-resource-image.type-resource
-shomanews.com##.noprint.generalBoxStyle
-shomanews.com##.generalBoxStyle.mt16
+||shomanews.com/box.php^$third-party
+||shomanews.com/player/vastlink.js^
+||shomanews.com/player/vast.js^
+||shomanews.com/rss-rasa.php^
+shomanews.com##.mnb
+shomanews.com##.mauto_div
+shomanews.com##.generalBoxStyle:has-text(تبلیغات متنی)
+shomanews.com#$#.row_one_content { width: 100% !important; }
 ||stnews.ir/ads/
 smusic.ir##.heading-ads
 smusic.ir##.sidebar-right > div.box:nth-of-type(1)
