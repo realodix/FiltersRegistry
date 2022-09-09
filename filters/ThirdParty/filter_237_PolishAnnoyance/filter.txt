@@ -1,12 +1,12 @@
 !
-! Checksum: cKd26+y6/LfgID1lFZniTQ
+! Checksum: lMT8ltoL7NBTsp67YMh2bQ
 ! Title: Polskie Filtry Elementów Irytujących
 ! Polish Annoyance Filters
 ! Codename: Annoyance - Main
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
-! Last modified: Thu, 08 Sep 2022, 21:30 UTC+02
-! OriginalVersion: 2022.9.8.0
+! Last modified: Fri, 09 Sep 2022, 18:15 UTC+02
+! OriginalVersion: 2022.9.9.0
 ! Expires: 2 days
 ! Najnowsza wersja zawsze na: https://github.com/PolishFiltersTeam/PolishAnnoyanceFilters
 ! Zgłoszenia:
@@ -15,7 +15,7 @@
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: czw, 08 wrz 2022, 21:30 UTC+02
+! Aktualizacja: pią, 09 wrz 2022, 18:15 UTC+02
 !
 !
 ! Newslettery (nie popupy)
@@ -6830,8 +6830,8 @@ polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com###pafdetec
 !@ Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies i EasyList/AdGuard Base!
 !@ Collaborators: MajkiIT, F4z, xxcriticxx, blocker999, hawkeye116477, krystian3w
 !@ Homepage: https://www.certyficate.it/
-!@ Version: 2022.9.6.2
-!@ Last modified: Tue, 06 Sep 2022, 21:31 UTC+02
+!@ Version: 2022.9.9.0
+!@ Last modified: Fri, 09 Sep 2022, 18:15 UTC+02
 !@ Expires: 2 days
 !@ Support:
 !@   Email => errorsfilters@certyficate.it
@@ -6842,7 +6842,7 @@ polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com###pafdetec
 !@ Copyright © 2022 Certyficate IT
 !@ Copyright © 2022 Filters Heroes
 !@ Najnowsza wersja zawsze na: https://www.certyficate.it/adblock/
-!@ v.2022.9.6.2 aktualizacja: wto, 06 wrz 2022, 21:31 UTC+02
+!@ v.2022.9.9.0 aktualizacja: pią, 09 wrz 2022, 18:15 UTC+02
 !@
 !@
 !@ Specyficzne reguły ukrywające
@@ -10827,6 +10827,8 @@ fxpro.pl#@#.popup-cookies:not(body):not(html)
 goldenline.pl#@#.cookie-modal:not(body):not(html):not(.in):not(.mfp-hide)
 goodram.com#@##cookie-container
 gtv.com.pl#@##panel_cookie_dol
+heyah.pl#@#body:not(.didomi-popup-open) #didomi-host
+heyah.pl#@##didomi-notice
 infogliwice.pl,zlubaczowa.pl#@##cmp-iframe
 klarta.pl#@#.cookiebar-close:not(body):not(html)
 klarta.pl#@#.cookie-message:not(body):not(html):not(.modal-body)
@@ -12266,6 +12268,8 @@ gryonline.wp.pl,tv.pudelek.pl#%#//scriptlet('ubo-set.js', 'wp_no_consent_screen'
 handluj.com,tarnobrzeg.info###rodo-message, .modal-backdrop
 hendi.pl##.modal__outer--rodo, .modal--open
 henwar.pl#$#.wmpci-popup-open, .wmpci-popup-open body { overflow-y: auto !important; }
+heyah.pl#$#body.didomi-notification-open { position: static !important; overflow: visible; }
+heyah.pl###didomi-host, #didomiBlockNavigation
 hm.com##.modaloverlay:has(#gdpr-modal)
 hm.com#$#.modal-open[class] body { position: static !important; padding-right: 0 !important; margin-right: 0 !important; }
 holdentalesklep.eu,skitenis.pl,tureckisklep.pl#$#.fancybox-lock, .fancybox-lock body { overflow: auto !important; }
@@ -12631,7 +12635,7 @@ www.google.com,www.google.pl#$#html.gb_ea > body.gb_ea { height: auto !important
 www.google.com,www.google.pl#$#html.gb_ea { overflow-y: visible !important; }
 www.google.com,www.google.pl###lb > div[id^="_"]:has(#cnskc)
 www.google.com,www.google.pl###promos > div[style^="background"]
-www.google.com,www.google.pl#%#//scriptlet('ubo-acis.js', 'document.cookie', '/YES\+/')
+www.google.com,www.google.pl#%#//scriptlet('ubo-acis.js', 'document.cookie', 'YES+')
 www.google.com,www.google.pl#%#//scriptlet('ubo-acis.js', 'navigator.userAgent', 'consentCookiePayload')
 www.google.com,www.google.pl#$#.srp #searchform[style^="top: 50px"] { top: 20px !important; }
 www.pekao.com.pl#$#body.is-reveal-open { overflow: auto !important; width: unset !important; }
