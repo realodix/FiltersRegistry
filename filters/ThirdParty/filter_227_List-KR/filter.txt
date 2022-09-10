@@ -2,7 +2,7 @@
 [AdGuard]
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.910.2
+! OriginalVersion: 2022.910.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -502,7 +502,6 @@
 ||mt.co.kr/news/articleBanner/
 ||mt.co.kr/news/wingBanner/
 ||pdpop.com/images/images_re/banner/
-/^https:\/\/dvdprime\.com\/g2\/data\/cheditor[0-9]\/[0-9]{4}\/[0-9]{14}_[a-z]{8}\./
 ||boannews.com/images/event
 ||boannews.com/media/include/*_banner.asp
 ||image.newsis.com/h_www/common/*_banner_
@@ -1047,6 +1046,8 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+dvdprime.com##div[style~="height:"][style~="border-top:"].relative
+dvdprime.com##[class*="_ad_"]
 ypbooks.co.kr##td[id^="divBn_"]
 ypbooks.co.kr##div[id$="Banner"]
 ypbooks.co.kr##div[style]#cenArea > .today
@@ -1924,6 +1925,7 @@ sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 ! Ad-Shield
 loawa.com#?##equip-info-modal:has(> .modal-dialog > .modal-content > .modal-body > button.close + button.float-right)
 !
+dvdprime.com#?##sidebar_container .relative:has([class*="_ad_"]) ~ div[class^="spacer"]
 m.11st.co.kr#?#article div[id^="carrier_"][style][class]:has(button[class*="-ad"])
 www.enuri.com#?#.trendtabs__list > li[data-adv_yn="Y"].trendtab-item:remove()
 shopping.zum.com#?#.result_item_list li:has(> .shopping_item.type_coupang)
