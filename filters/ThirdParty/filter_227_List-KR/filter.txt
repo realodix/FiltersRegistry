@@ -2,7 +2,7 @@
 [AdGuard]
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.909.3
+! OriginalVersion: 2022.910.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -346,6 +346,9 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||img.ypbooks.co.kr/ypbooks_mobile/event/
+||img.ypbooks.co.kr/upload/banner/
+||img.ypbooks.co.kr/upload/HTML/popup/
 ||prod.danawa.com/list/ajax/getAdBrandHall.ajax.php
 ||m.enuri.com/m/api/main/m_trendJson_
 ||m.enuri.com/*/ajax/getSponsor
@@ -1044,6 +1047,9 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+ypbooks.co.kr##td[id^="divBn_"]
+ypbooks.co.kr##div[id$="Banner"]
+ypbooks.co.kr##div[style]#cenArea > .today
 lawtalknews.co.kr##.tdn-inventory
 www.tmon.co.kr##ul#_dealListContainer.list > li.item.type_admon[data-maincategoryno]
 wiki.hash.kr##.wkbn_bk.tp
@@ -1487,7 +1493,7 @@ m.nocutnews.co.kr###pnlContainer > div[class^="ct"] > .section > div[style]:not(
 start.zum.com,m.edaily.co.kr,news.sbs.co.kr,nocutnews.co.kr##div[id^="dablewidget_"]
 m.nongmin.com##.banner_zone
 nongmin.com##div[class$="-banner-wrap"]
-newstof.com##div[id^="popup_"]
+ypbooks.co.kr,newstof.com##div[id^="popup_"]
 etoland.co.kr##div[class$="_banner_div"]
 zdnet.co.kr##iframe[src^="/template_ad/"]
 yna.co.kr##[class^="aside-bnr"]
@@ -1650,7 +1656,7 @@ now.rememberapp.co.kr##.now_content_ads__wrapper
 m.ilbe.com##.banner-wrap
 clien.net###coupangAd
 ppomppu.co.kr##tr > td div.bridge
-m.enuri.com,asiatime.co.kr,www.ebs.co.kr,search.kyobobook.co.kr,news.nate.com,boribori.co.kr##div[class*="_banner"]
+ypbooks.co.kr,m.enuri.com,asiatime.co.kr,www.ebs.co.kr,search.kyobobook.co.kr,news.nate.com,boribori.co.kr##div[class*="_banner"]
 boribori.co.kr##.bFloatingBanner
 ondisk.co.kr##div[id^="wingBanner-"]
 enuri.com##ul#evt_banner
@@ -1827,6 +1833,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+ypbooks.co.kr#$#form[name="loginForm"][action*="login.yp"] > table { margin-left: calc(25% - 27px) !important; }
 start.zum.com#$#div[id^="dablewidget_"] + section[class*="-item_"] { width: calc(58% + 5px) !important; }
 pushoong.com#$#html { overflow: auto !important; }
 pushoong.com#$##fullscreen-overlay { display: none !important; }
@@ -2014,6 +2021,9 @@ toonkor134.com,toonkor135.com,toonkor136.com,toonkor137.com,toonkor138.com,toonk
 news.op.gg#$?#header + div[class] div[class^="css-"] > div[class^="css-"] > div[class^="css-"]:has( ~ .youtube-iframe) { margin-top: 8px !important; }
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+ypbooks.co.kr#?#.section-intro > .m-latest-renew:has(h3:contains(오늘의 책))
+ypbooks.co.kr#?#.section-intro > .m-latest-renew:has(h3:contains(MD 추천도서))
+ypbooks.co.kr#?#div[style]#cenArea > h2[style]:contains(오늘의 책)
 www.enuri.com#?#.trendpickup__container > div[id^="trendPick"].trendtab-cont:contains(AD):remove()
 chuing.net#?#.newmenubar ~ div[style] td[width]:has(ins.adsbygoogle, div[id^="mobonDivBanner"])
 alltimelegend.net#?#section > div[class*=" "]:has(ins.adsbygoogle, a[href][target="_blank"][referrerpolicy="unsafe-url"])
