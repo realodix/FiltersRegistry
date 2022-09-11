@@ -2,7 +2,7 @@
 [AdGuard]
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.911.1
+! OriginalVersion: 2022.911.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -166,6 +166,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||addb.interpark.com^
 ||ad1.sportschosun.com^
 ||adimg.newdaily.co.kr^
 ||adcastmarket.com^
@@ -998,7 +999,7 @@ paxnet.co.kr,ajl.co.kr,yhinews.com,funshop.co.kr,m.sedaily.com,bloter.net,mosen.
 ! ##div[class$="_banner"]
 m.mt.co.kr,etoland.co.kr,order.kyobobook.co.kr,newstomato.com,newsen.com,toomics.com,m.ytn.co.kr,djtimes.co.kr,mdjournal.kr,zum.com,windowsforum.kr,dcnewsj.joins.com,berryjam.co.kr##div[class$="_banner"]
 ! ##div[class^="ad"]
-it.chosun.com,m.fmkorea.com,maple.gg,ytn.co.kr,www.ebs.co.kr,newsis.com,search.danawa.com,m.newsen.com,peterpanz.com,jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m.moneys.mt.co.kr,basketkorea.com,m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com##div[class^="ad"]
+interpark.com,it.chosun.com,m.fmkorea.com,maple.gg,ytn.co.kr,www.ebs.co.kr,newsis.com,search.danawa.com,m.newsen.com,peterpanz.com,jwmx.tistory.com,thespike.co.kr,hobbyen.co.kr,socialvalue.kr,entertainpost.com,m.moneys.mt.co.kr,basketkorea.com,m.ohmynews.com,zdnet.co.kr,biz.heraldcorp.com,slrclub.com##div[class^="ad"]
 ! ##div[class^="banner_"]
 newspic.kr,www.ebs.co.kr,search.11st.co.kr,prod.danawa.com,auth.danawa.com,socialvalue.kr,news.jtbc.co.kr,etoland.co.kr,ajunews.com,mk.co.kr##div[class^="banner_"]
 ! ##div[class$="Banner"]
@@ -1046,6 +1047,10 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+interpark.com##.welcomeWrapper .interparkInner .eventWrapper
+interpark.com##.welcomeWrapper .showRoom
+interpark.com##div[class$="Banners"]
+interpark.com##span[class$="AD"]
 dvdprime.com##div[style~="height:"][style~="border-top:"].relative
 dvdprime.com##[class*="_ad_"]
 ypbooks.co.kr##td[id^="divBn_"]
@@ -1835,6 +1840,13 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (!adguard_ext_android_cb)
+interpark.com#$##loginAllWrap .loginFormWrap { width: 100% !important; }
+interpark.com#$#.welcomeWrapper .interparkInner .hotCornerWrapper { width: 100% !important; }
+interpark.com#$#.welcomeWrapper .hotCornerContent .hotCornerBanner { margin-left: 150px !important; }
+interpark.com#$#.welcomeWrapper .rankWrapper .rankingInner { left: -230% !important; width: 330% !important; }
+interpark.com#$#.welcomeWrapper .rankingInner .rankingContent { background-color: white !important; }
+interpark.com#$#.welcomeWrapper .rankingInner .rankList { margin-left: 35% !important; }
+interpark.com#$#.welcomeWrapper  .rankingInner .rankList ol li a { max-width: 270px !important; }
 ypbooks.co.kr#$#form[name="loginForm"][action*="login.yp"] > table { margin-left: calc(25% - 27px) !important; }
 start.zum.com#$#div[id^="dablewidget_"] + section[class*="-item_"] { width: calc(58% + 5px) !important; }
 pushoong.com#$#html { overflow: auto !important; }
@@ -2196,6 +2208,7 @@ play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistr
 $redirect-rule=nooptext,domain=lover92.net|lover93.net|lover94.net|lover95.net|lover96.net|lover97.net|lover98.net|lover99.net|lover100.net|lover101.net
 !#endif
 !#if (!adguard_app_ios && !adguard_ext_safari)
+||openimage.interpark.com/dia/images/$redirect=2x2-transparent.png
 ||bigkinds.or.kr/resources/files/banner/$redirect=2x2-transparent.png
 ||bigkinds.or.kr/assets/*/img/content/*banner$redirect=2x2-transparent.png
 ||ds.11st.co.kr/NetInsight/text/11st/11st_product/product@$redirect=noopframe
