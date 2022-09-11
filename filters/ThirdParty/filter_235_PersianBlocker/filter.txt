@@ -1,8 +1,8 @@
 !
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
-! Expires: 4 days
-! Last modified: 2022-09-09
+! Expires: 2 days
+! Last modified: 2022-09-11
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -1557,20 +1557,25 @@ softgozar.com##.AdvertiseD2Ban
 softgozar.com##.DTOPBan
 ! https://github.com/MasterKia/PersianBlocker/issues/40
 ! soft98.ir: Addressed in uBlock Origin Quick-Fixes list
+instagram.com#%#//scriptlet('ubo-window-close-if.js', '/[Ss][Mm][Oo][Ss][Tt][Aa][Ff][Aa][Mm][Oo][Oo][Ss][Aa][Vv][Ii]/')
 !#if adguard
 soft98.ir,~forum.soft98.ir#%#//scriptlet('ubo-aeld.js', 'mousedown')
+soft98.ir#%#//scriptlet('ubo-window-close-if.js', '/link-')
+sysban.ir#%#//scriptlet('ubo-window-close-if.js', '/telephone-service')
+smostafa.ir#%#//scriptlet('ubo-window-close-if.js', '/^/')
 ||file.soft98.ir^$image,redirect=click2load.html,domain=~forum.soft98.ir
 ||cdn.hostdl.com^$image,redirect=click2load.html,domain=soft98.ir|~forum.soft98.ir
 ^utm_source=soft98^$removeparam=/^utm_/
 .ir^$popup,domain=soft98.ir,third-party
-||linkdoni.soft98.ir^$all
+! ||linkdoni.soft98.ir^$all
 ||iranick0d.ir^$all
 ||iranicard.ir^$all,domain=soft98.ir
 ||asiatech.ir^$all,domain=soft98.ir
 ||hostdl.com^$all,domain=soft98.ir
-||cdn.hostdl.com/goto/soft98^$all
+! ||cdn.hostdl.com/goto/soft98^$all
 ||smostafa.ir^$all,domain=soft98.ir
 ||sysban.ir^$all,domain=soft98.ir
+soft98.ir#$?#*:has-text(@):has(a[href*="soft98.ir/user"]):not(body,html) { remove: true; }
 @@||soft98.ir^$generichide
 !#endif
 ! TOOD: Keep an eye on it
