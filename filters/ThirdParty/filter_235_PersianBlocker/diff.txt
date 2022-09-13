@@ -248,20 +248,16 @@ sarzamindownload.com##+js(set, BetterJsPop, noopFunc)
 @@||sarzamindownload.com/images/Ads_Place.jpg$image,1p
 ! Rule "instagram.com##+js(window-close-if, /[Ss][Mm][Oo][Ss][Tt][Aa][Ff][Aa][Mm][Oo][Oo][Ss][Aa][Vv][Ii]/)" converted to: "instagram.com#%#//scriptlet('ubo-window-close-if.js', '/[Ss][Mm][Oo][Ss][Tt][Aa][Ff][Aa][Mm][Oo][Oo][Ss][Aa][Vv][Ii]/')"
 instagram.com##+js(window-close-if, /[Ss][Mm][Oo][Ss][Tt][Aa][Ff][Aa][Mm][Oo][Oo][Ss][Aa][Vv][Ii]/)
-! Rule "soft98.ir,~forum.soft98.ir##+js(aeld, mousedown)" converted to: "soft98.ir,~forum.soft98.ir#%#//scriptlet('ubo-aeld.js', 'mousedown')"
-soft98.ir,~forum.soft98.ir##+js(aeld, mousedown)
-! Rule "soft98.ir##+js(window-close-if, /link-)" converted to: "soft98.ir#%#//scriptlet('ubo-window-close-if.js', '/link-')"
-soft98.ir##+js(window-close-if, /link-)
-! Rule "sysban.ir##+js(window-close-if, /telephone-service)" converted to: "sysban.ir#%#//scriptlet('ubo-window-close-if.js', '/telephone-service')"
-sysban.ir##+js(window-close-if, /telephone-service)
-! Rule "smostafa.ir##+js(window-close-if, /^/)" converted to: "smostafa.ir#%#//scriptlet('ubo-window-close-if.js', '/^/')"
-smostafa.ir##+js(window-close-if, /^/)
-! Rule ".ir^$popup,domain=soft98.ir,3p" converted to: ".ir^$popup,domain=soft98.ir,third-party"
-.ir^$popup,domain=soft98.ir,3p
-! Rule "soft98.ir##*:has-text(@):has(a[href*="soft98.ir/user"]):not(body,html):remove()" converted to: "soft98.ir#$?#*:has-text(@):has(a[href*="soft98.ir/user"]):not(body,html) { remove: true; }"
-soft98.ir##*:has-text(@):has(a[href*="soft98.ir/user"]):not(body,html):remove()
-! Rule "@@||soft98.ir^$ghide" converted to: "@@||soft98.ir^$generichide"
-@@||soft98.ir^$ghide
+! Rule "soft98.ir,~forum.soft98.ir##aside hr:remove()" converted to: "soft98.ir,~forum.soft98.ir#$?#aside hr { remove: true; }"
+soft98.ir,~forum.soft98.ir##aside hr:remove()
+! Rule "soft98.ir,~forum.soft98.ir##aside div:has(a[href*="cdn.hostdl.com"]):remove()" converted to: "soft98.ir,~forum.soft98.ir#$?#aside div:has(a[href*="cdn.hostdl.com"]) { remove: true; }"
+soft98.ir,~forum.soft98.ir##aside div:has(a[href*="cdn.hostdl.com"]):remove()
+! Rule "soft98.ir,~forum.soft98.ir##div[style*="display:none"]:has(a[href*=".soft98.ir/"]):style(display: block !important;)" converted to: "soft98.ir,~forum.soft98.ir#$?#div[style*="display:none"]:has(a[href*=".soft98.ir/"]) { display: block !important; }"
+soft98.ir,~forum.soft98.ir##div[style*="display:none"]:has(a[href*=".soft98.ir/"]):style(display: block !important;)
+! Rule "soft98.ir,~forum.soft98.ir##div[id$="-android"], div[id$="-os"], div[id$="-comment"]:style(display: block !important; opacity: 1 !important;)" converted to: "soft98.ir,~forum.soft98.ir#$#div[id$="-android"], div[id$="-os"], div[id$="-comment"] { display: block !important; opacity: 1 !important; }"
+soft98.ir,~forum.soft98.ir##div[id$="-android"], div[id$="-os"], div[id$="-comment"]:style(display: block !important; opacity: 1 !important;)
+! Rule "soft98.ir,~forum.soft98.ir##aside > section ul[id]:style(height: auto !important;)" converted to: "soft98.ir,~forum.soft98.ir#$#aside > section ul[id] { height: auto !important; }"
+soft98.ir,~forum.soft98.ir##aside > section ul[id]:style(height: auto !important;)
 ! Rule "subf2m.ir##+js(set, needpop, 0)" converted to: "subf2m.ir#%#//scriptlet('ubo-set.js', 'needpop', '0')"
 subf2m.ir##+js(set, needpop, 0)
 ! Rule "skinak.ir##+js(nostif, show_modal)" converted to: "skinak.ir#%#//scriptlet('ubo-nostif.js', 'show_modal')"
@@ -504,3 +500,5 @@ asriran.com##+js(alert-buster)
 opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/):others()
 Error: "Unknown modifier: strict3p" in the rule: "*$image,strict3p,domain=rozup.ir"
 *$image,strict3p,domain=rozup.ir
+! Invalid selector:
+soft98.ir,~forum.soft98.ir##:xpath(/html/body/div/div/div[3])
