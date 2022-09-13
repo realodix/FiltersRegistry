@@ -16,6 +16,8 @@ razlozhi.*##div[class][style*="width:"][style*="height"][style*="/themes/default
 /^https?://mail\.yandex\.[^\s]{125,}/$empty,script,~third-party
 ! Rule "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$empty,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz" converted to: "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$redirect=nooptext,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz"
 /^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$empty,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
+! Rule "dzen.*##+js(set-constant, Object.prototype.shouldShowServiceChangesPopup, undefined)" converted to: "dzen.*#%#//scriptlet('ubo-set-constant.js', 'Object.prototype.shouldShowServiceChangesPopup', 'undefined')"
+dzen.*##+js(set-constant, Object.prototype.shouldShowServiceChangesPopup, undefined)
 ! Rule "mail.yandex.*##html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href="https://ya.ru"]:style(top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important)" converted to: "mail.yandex.*#$#html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href="https://ya.ru"] { top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important }"
 mail.yandex.*##html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href="https://ya.ru"]:style(top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important)
 ! Rule "yandex.*##.mini-suggest__item:has(> a[href^="http://"]):remove()" converted to: "yandex.*#$?#.mini-suggest__item:has(> a[href^="http://"]) { remove: true; }"
@@ -58,6 +60,8 @@ razlozhi.*#$#div[class][style*="width:"][style*="height"][style*="/themes/defaul
 razlozhi.*#$#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[style*="px;"] { width: 100% !important }
 ! razlozhi.*#$#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] { width: 100% !important } is excluded by "#$#" in exclusions-low.txt
 razlozhi.*#$#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] { width: 100% !important }
+! dzen.*#%#//scriptlet('ubo-set-constant.js', 'Object.prototype.shouldShowServiceChangesPopup', 'undefined') is excluded by "#%#//scriptlet" in exclusions-low.txt
+dzen.*#%#//scriptlet('ubo-set-constant.js', 'Object.prototype.shouldShowServiceChangesPopup', 'undefined')
 ! mail.yandex.*#$#html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href="https://ya.ru"] { top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important } is excluded by "#$#" in exclusions-low.txt
 mail.yandex.*#$#html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href="https://ya.ru"] { top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important }
 ! yandex.*#$#.PSHeaderLogo360 > a[href^="https://360.yandex."] { pointer-events: none !important } is excluded by "#$#" in exclusions-low.txt
