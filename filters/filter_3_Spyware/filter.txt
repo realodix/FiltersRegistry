@@ -24777,6 +24777,7 @@ link.gmapp*.net$image
 !------------------------------
 !---- Domain pecific rules ----
 !------------------------------
+! NOTE: Cookies specific
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128820
 ||stripchat.com^$cookie=stripchat_com_affiliateId
@@ -24960,6 +24961,7 @@ $cookie=ev_sid,domain=ideal.es|elcorreo.com
 !------------------------------
 !---- Generic rules -----------
 !------------------------------
+! NOTE: Cookies generic rules
 !
 ! Tracking
 $cookie=omni_visit_id
@@ -25491,7 +25493,10 @@ $cookie=bf_visit
 !------------------------------
 !---- Fixing filtering errors -
 !------------------------------
+! NOTE: Cookies allowlist
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/129422
+@@||tatacliq.com^$cookie=/^AMCVS?_.*AdobeOrg/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128154
 @@||auth.vodafone.hu^$cookie=dtCookie
 ! https://github.com/easylist/easylist/pull/11359
@@ -26357,6 +26362,8 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/129422
+@@||tataunistore.tt.omtrdc.net/rest/v1/mbox?client=tataunistore$xmlhttprequest,domain=tatacliq.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129430
 @@||cdn.livechatinc.com/tracking.js$domain=upc.pl
 @@||googletagmanager.com/gtm.js$domain=upc.pl
