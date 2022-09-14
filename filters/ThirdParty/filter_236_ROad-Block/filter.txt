@@ -592,9 +592,8 @@ ph-online.ro##.banneritem
 capital.ro###adobranding
 capital.ro###ado970p2
 capital.ro###ado300p1
-||media.timponline.ro/2016/03/2016-03-plan-b-angajare.gif$image
-||media.timponline.ro/2019/10/2019-10-carliont-anunt-300x250.jpg$image
-||media.timponline.ro/2015/04/virgil_rus_298x198.jpg$image
+||timponline.ro/*300x250$image
+||timponline.ro/*728x90.jpg$image
 newsromania.net##.background-image-clickable
 ||replicaonline.ro/banner/$image
 sfatulmedicului.ro###reclame
@@ -796,6 +795,7 @@ focuspress.ro##aside.widget_media_image.widget.td_block_template_1
 ||sfatulparintilor.ro/*banner$image
 sfatulparintilor.ro##.textwidget:has([target="_blank"]:not([method]))
 sfatulparintilor.ro#?#.widget_text:-abp-has([id^="div-gpt-ad"])
+sfatulparintilor.ro##.lvd-blog-ad
 ||serveresamp.com/banner$image
 serveresamp.com#?#center:-abp-has(a)
 bucurestitv.net#?#.side-widget:-abp-has([class="adsbygoogle"])
@@ -953,6 +953,8 @@ alba24.ro###mvp-content-bot
 ziarulunirea.ro###mvp-leader-wrap
 ||vremeanoua.ro/wp-content/uploads/*/*/banner*.jpg$image
 ||vremeanoua.ro/*gif$image
+vremeanoua.ro#?#.tdc-element-style.td-pb-row.wpb_row:-abp-has([target="_blank"]):-abp-has([class^="td-lazy-img"])
+vremeanoua.ro#?#.td-a-rec-id-custom-spot:-abp-has([alt="spot_img"])
 vremeanoua.ro##.td_block_template_1.td-single-image-
 infobistrita.ro##.banner_image
 agro-tv.ro##.gofollow > .lazyloaded.entered
@@ -1009,6 +1011,7 @@ dezvaluiri.ro#?#[id^="media_image"]:not(*:-abp-has([href*="dezvaluiri.ro"]))
 clujust.ro##[id^="ad"]
 forum-auto.info#?#.ipsWidget_inner:-abp-has([href="https://e-husa.ro/"])
 ||horticultorul.ro/rcl/*.html$subdocument
+napocanews.ro#?#.widget:-abp-has([target="_blank"])
 napocanews.ro##[href="http://www.coralimpex.ro/"]
 napocanews.ro##[href="http://www.rosal.ro/"]
 napocanews.ro##[href="http://www.trcj.ro"]
@@ -1034,6 +1037,20 @@ graiulsalajului.ro#?#.elementor-element:-abp-contains(ad)
 ||voceavalcii.ro/*ad.jpg$image
 ||gazetadambovitei.ro/*.gif$image
 gazetadambovitei.ro##.custom-html-widget
+mobilissimo.ro##.banner
+mobilissimo.ro##.profitshare
+mobilissimo.ro##.aboveDisqusBanners
+||viata-libera.ro/images/banners/$image
+||monitoruldevrancea.ro/*banner$image
+||monitoruldevrancea.ro/*reclama
+monitoruldevrancea.ro#?#.widget_rss:-abp-has([href*=".bursa.ro/"])
+monitoruldevrancea.ro##[class*="td-a-rec-id-custom_ad"]
+monitoruldevrancea.ro##[href="https://www.bursa.ro/"]
+bursa.ro#?#.clearfix [href][target="_blank"][rel]:-abp-has([alt][title][style])
+bursa.ro##.zoom.banner
+gorjonline.ro#?#.container-wrapper > [href="https://www.gorjonline.ro/anunturi/"]:-abp-has([src])
+newmoney.ro#?#.sow-image-container:-abp-has([target="_blank"][rel])
+||newmoney.ro/*Banner$image
 ! Title: Romanian specific uBO filters
 ! Expires: 3 days
 ! Issue tracker: https://github.com/tcptomato/ROad-Block/issues
@@ -1054,3 +1071,5 @@ sport.ro#$?#*:matches-css-before(content:/ADVERTISING/) { remove: true; }
 posturi.live#%#//scriptlet('ubo-nowoif.js')
 ! https://github.com/tcptomato/ROad-Block/pull/222
 cool-etv.net#%#//scriptlet('ubo-acis.js', 'onload', 'noBackPlease')
+! https://www.reddit.com/r/uBlockOrigin/comments/n3bjwx/ublock_detected_on_website/
+vwforum.ro#%#//scriptlet('ubo-nostif.js', 'adsbygoogle')

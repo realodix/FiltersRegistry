@@ -2,7 +2,7 @@
 [AdGuard]
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.913.2
+! OriginalVersion: 2022.914.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -10,6 +10,7 @@
 !
 ! Version must be UTC format.
 !
+!#if adguard
 ||admonseller.com^
 ||applovin.com^
 ||andbeyond.media^
@@ -166,6 +167,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||amp.diningcode.com^
 ||dmxleo.dailymotion.com^
 ||addb.interpark.com^
 ||ad1.sportschosun.com^
@@ -1024,7 +1026,7 @@ paxnet.co.kr,bigkinds.or.kr,item.gmarket.co.kr,toomics.com,nongmin.com,ilbe.com#
 ! ##div[class^="banner"]
 bgchang.co.kr,edit.incruit.com,signinssl.gmarket.co.kr,m.hungryapp.co.kr,m.edaily.co.kr,m.news1.kr##div[class^="banner"]
 ! ##div[class$="-ad"]
-m.invest.zum.com,insight.co.kr,cgv.co.kr,m.inven.co.kr,tipsandtrickskorea.com,gamemeca.com,yeongnam.com##div[class$="-ad"]
+m.diningcode.com,m.invest.zum.com,insight.co.kr,cgv.co.kr,m.inven.co.kr,tipsandtrickskorea.com,gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
 moneys.mt.co.kr,fmkorea.com,newstomato.com,gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
@@ -1060,6 +1062,8 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+m.diningcode.com##div[class$="-ad"] ~ .section.naver
+diningcode.com##.MapMain > #map ~ div[class]:not([id]):not([style])
 koya-culture.com##div[itemprop="articleBody"] ~ div[style]
 eroun.net##body > div[style]:not([class]):not([id])
 eroun.net###layer-popups
@@ -1832,7 +1836,8 @@ x86.co.kr#@#.download_ad
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
 zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me,zoazoa14.me,zoazoa15.me,zoazoa16.me,zoazoa17.me,zoazoa18.me,zoazoa19.me#@#.top_ads
-!#if (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_chromium || adguard_ext_edge)
+!#endif
+!#if (adguard && (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_chromium || adguard_ext_edge))
 ! Protect from DPI
 @@||clms.dankook.ac.kr^$stealth
 @@||lghellovision.net^$stealth
@@ -1850,7 +1855,8 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 ! https://github.com/AdguardTeam/AdguardFilters/issues/98466 [Stealth Mode - Referrer]
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
-!#if (!adguard_ext_android_cb)
+!#if (adguard && !adguard_ext_android_cb)
+diningcode.com#$#.MapMain > #map { width: 100% !important; }
 interpark.com#$##loginAllWrap .loginFormWrap { width: 100% !important; }
 interpark.com#$#.welcomeWrapper .interparkInner .hotCornerWrapper { width: 100% !important; }
 interpark.com#$#.welcomeWrapper .hotCornerContent .hotCornerBanner { margin-left: 150px !important; }
@@ -2221,7 +2227,7 @@ play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistr
 ||daumcdn.net/tistory/$domain=lover92.net|lover93.net|lover94.net|lover95.net|lover96.net|lover97.net|lover98.net|lover99.net|lover100.net|lover101.net
 $redirect-rule=nooptext,domain=lover92.net|lover93.net|lover94.net|lover95.net|lover96.net|lover97.net|lover98.net|lover99.net|lover100.net|lover101.net
 !#endif
-!#if (!adguard_app_ios && !adguard_ext_safari)
+!#if (adguard && !adguard_app_ios && !adguard_ext_safari)
 ||openimage.interpark.com/dia/images/$redirect=2x2-transparent.png
 ||bigkinds.or.kr/resources/files/banner/$redirect=2x2-transparent.png
 ||bigkinds.or.kr/assets/*/img/content/*banner$redirect=2x2-transparent.png
@@ -2231,7 +2237,7 @@ $redirect-rule=nooptext,domain=lover92.net|lover93.net|lover94.net|lover95.net|l
 ||googletagservices.com/tag/js/gpt.js$script,redirect=googletagservices-gpt
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt
 !#endif
-!#if (adguard_ext_android_cb)
+!#if (adguard && adguard_ext_android_cb)
 @@ad&adv_keywords=$domain=3dpchip.com
 @@-page-peel/$domain=3dpchip.com
 @@/adchain.$domain=3dpchip.com
@@ -2289,13 +2295,13 @@ ff14angler.com#@#ins.adsbygoogle
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=cpsp.kr
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=1412.rest
 !#endif
-!#if (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android)
+!#if (adguard && (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android))
 !
 !#endif
-!#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_firefox || adguard_ext_chromium || adguard_ext_edge )
+!#if (adguard && (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_firefox || adguard_ext_chromium || adguard_ext_edge ))
 ||newspic.kr^$removeparam=cp
 !#endif
-!#if (adguard_app_android)
+!#if (adguard && adguard_app_android)
 @@||api-ao-list.adison.co^$app=com.nhn.android.webtoon
 @@||api-ao-list.adison.co^$app=com.nhn.android.nbooks
 ||firebaseinstallations.googleapis.com^$app=instasaver.instagram.video.downloader.photo
@@ -2320,7 +2326,7 @@ ff14angler.com#@#ins.adsbygoogle
 @@||m.dcinside.com/movie/$stealth,app=com.dcinside.app
 @@||m.dcinside.com/movie/$stealth,app=com.dcinside.app.android
 !#endif
-!#if (adguard_app_ios)
+!#if (adguard && adguard_app_ios)
 !
 !
 !
@@ -2328,7 +2334,7 @@ ff14angler.com#@#ins.adsbygoogle
 ! If a website, mobile version, can be reproduced on a desktop/laptop browser with AdGuard for Windows/AdGuard Browser Extension,
 ! please move into specific.txt.
 !#endif
-!#if (adguard_app_windows)
+!#if (adguard && adguard_app_windows)
 !
 !
 ||videoads.kakao.com/adserver/api/v*/vmap$redirect=noopvmap-1.0,app=PotPlayer.exe
@@ -2354,7 +2360,7 @@ ff14angler.com#@#ins.adsbygoogle
 ||admin.clipdown.co.kr/app/webview/ad_content.php
 ||admin.helpstart.co.kr/banner/banner.php
 !#endif
-!#if (adguard_app_mac)
+!#if (adguard && adguard_app_mac)
 !
 !
 !
