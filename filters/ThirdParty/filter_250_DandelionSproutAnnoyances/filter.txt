@@ -6,7 +6,7 @@
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
 ! What this broad compilation does not block: Newsletters, cookie banners, social media links to company pages
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
-! OriginalVersion: 03September2022v1
+! OriginalVersion: 14September2022v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -414,6 +414,8 @@ playpilot.com##.android-prompt
 ###getTheAppFooter
 kurashiru.com##.footer-image-wrapper
 ##.PcToAppBanner
+tokopedia.com##div[id*=header] div[class^=css-]> a[href="/mobile-apps/"]
+tokopedia.com#?#div[id*=header] i:has(+ a[href="/mobile-apps/"])
 ! (https://github.com/AdguardTeam/AdguardFilters/issues/116903)
 !!!twitter.com###layers > div:nth-of-type(2):last-of-type
 ! Pinterest
@@ -451,7 +453,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 13September2022v1
+! OriginalVersion: 14September2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -494,7 +496,7 @@ www.google.*##.g:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"]
 www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 www.google.*##.g:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"]))
 www.google.*##.g:has(a[href*=".loan/"])
-www.google.*##.g:has(a[href*=".agency/"])
+www.google.*##.g:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 www.google.*##.g:has(a[href*=".gdn/"])
 www.google.*##.g:has(a[href*=".bid/"])
 www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"]))
@@ -513,7 +515,7 @@ www.google.*##a[oncontextmenu][href*=".gq/"]:not([href*="deimos.gq"], [href*="in
 www.google.*##a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*=voitures], [href*=assembleenationale-rca], [href*=cps-rca], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".loan/"]:upward(2)
-www.google.*##a[oncontextmenu][href*=".agency/"]:upward(2)
+www.google.*##a[oncontextmenu][href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".gdn/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".bid/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"]):upward(2)
@@ -528,7 +530,7 @@ duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="voitures.cf"], [data-domain*="assembleenationale-rca.cf"], [data-domain*="cps-rca.cf"], [data-domain*="acap.cf"], [data-domain*="miraculousladybug.cf"], [data-domain*="scrat.cf"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="zikrap.pw"], [data-domain*="buttercup.pw"], [data-domain*="rezka.pw"], [data-domain*="darkcrystal.pw"], [data-domain*="xor.pw"], [data-domain*="fullhdfilmizlesene.pw"], [data-domain*="b00k.pw"], [data-domain*="gopass.pw"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".loan"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]:not([data-domain*="battlefield.agency"], [data-domain*="shortcut.agency"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"], [data-domain$="shucks.top"], [data-domain$="1stream.top"], [data-domain*="ambr.top"], [data-domain*="techblog.top"])
@@ -540,7 +542,7 @@ bing.com##.b_algo:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"
 bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 bing.com##.b_algo:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"]))
 bing.com##.b_algo:has(a[href*=".loan/"])
-bing.com##.b_algo:has(a[href*=".agency/"])
+bing.com##.b_algo:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 bing.com##.b_algo:has(a[href*=".gdn/"])
 bing.com##.b_algo:has(a[href*=".bid/"])
 bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"]))
@@ -9790,7 +9792,7 @@ get.adobe.com###offersInformationPane
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 06September2022v1
+! OriginalVersion: 14September2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -9813,7 +9815,7 @@ get.adobe.com###offersInformationPane
 ||top^$document,domain=~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~techblog.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^$document
-||agency^$document,domain=~battlefield.agency
+||agency^$document,domain=~battlefield.agency|~shortcut.agency
 ||gdn^$document
 ||bid^$document
 ||ooo^$document
@@ -9833,7 +9835,7 @@ www.google.*##.g:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"]
 www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 www.google.*##.g:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"]))
 www.google.*##.g:has(a[href*=".loan/"])
-www.google.*##.g:has(a[href*=".agency/"])
+www.google.*##.g:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 www.google.*##.g:has(a[href*=".gdn/"])
 www.google.*##.g:has(a[href*=".bid/"])
 www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"]))
@@ -9852,7 +9854,7 @@ www.google.*#?#*:has(> * > a[oncontextmenu][href*=".gq/"]:not([href*="deimos.gq"
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*=voitures], [href*=assembleenationale-rca], [href*=cps-rca], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".loan/"])
-www.google.*#?#*:has(> * > a[oncontextmenu][href*=".agency/"])
+www.google.*#?#*:has(> * > a[oncontextmenu][href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".gdn/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".bid/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"]))
@@ -9867,7 +9869,7 @@ duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="voitures.cf"], [data-domain*="assembleenationale-rca.cf"], [data-domain*="cps-rca.cf"], [data-domain*="acap.cf"], [data-domain*="miraculousladybug.cf"], [data-domain*="scrat.cf"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="zikrap.pw"], [data-domain*="buttercup.pw"], [data-domain*="rezka.pw"], [data-domain*="darkcrystal.pw"], [data-domain*="xor.pw"], [data-domain*="fullhdfilmizlesene.pw"], [data-domain*="b00k.pw"], [data-domain*="gopass.pw"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".loan"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]:not([data-domain*="battlefield.agency"], [data-domain*="shortcut.agency"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"], [data-domain$="shucks.top"], [data-domain$="1stream.top"], [data-domain*="ambr.top"], [data-domain*="techblog.top"])
@@ -9879,7 +9881,7 @@ bing.com##.b_algo:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"
 bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 bing.com##.b_algo:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"]))
 bing.com##.b_algo:has(a[href*=".loan/"])
-bing.com##.b_algo:has(a[href*=".agency/"])
+bing.com##.b_algo:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 bing.com##.b_algo:has(a[href*=".gdn/"])
 bing.com##.b_algo:has(a[href*=".bid/"])
 bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"]))
@@ -11992,9 +11994,11 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||telemetry-urs-microsoft.com^$all
 ||top-captcharesolver.$all
 ||winrar-desktop.com^$all
+!#if !ext_ublock
 46.161.27.*$network
 78.128.112.*$network
 179.60.146.*$network
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121544
 ||trafredirtds.com^$all
 .com/landers/iphone*_spin$document
@@ -12380,6 +12384,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||z-prize.icu^$all
 ||zfcurqe.art^$all
 ||zuginmw.art^$all
+!#if !ext_ublock
 /^178\.253\.[0-7]\.[0-9]{1,3}$/$network
 178.253.14.*$network
 178.253.15.*$network
@@ -12388,6 +12393,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 178.253.46.*$network
 178.253.47.*$network
 178.253.54.*$network
+!#endif
 85.17.31.152$network
 95.211.26.202$network
 ! https://kommunikasjon.ntb.no/pressemelding/power-advarer-mot-sms-svindel?publisherId=17847615&releaseId=17937583
@@ -12405,8 +12411,10 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||wznp.link^$all
 158.247.212.220$network
 165.227.168.212$network
+!#if !ext_ublock
 ! https://www.reddit.com/r/engrish/comments/w6u4uy/received_this_text_message_yesterday_i_am_very/
 162.241.115.*$network
+!#endif
 ! https://dinside.dagbladet.no/mobil/ikke-la-deg-friste/76730599
 ||k-yw.com^$all
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125285
@@ -12681,6 +12689,11 @@ zombooru.com##a[href="http://www.hard55.com"]
 147.135.253.55$network
 ! https://github.com/uBlockOrigin/uAssets/issues/14569 → https://www.virustotal.com/gui/url/b819586938326577d759d8024abe3e0e6de1c853d6b67824daf6f613fba0f63b/detection (https://app.any.run/tasks/5914a712-1a73-4432-b89a-ca0627a24ade)
 ||bnbdeal.net^$all
+! https://github.com/AdguardTeam/AdguardFilters/issues/129414
+!+ NOT_OPTIMIZED
+/^http://imgblaze.net/[a-z0-9]{6}$/$document,popup
+!+ NOT_OPTIMIZED
+/^http://imgblaze.net/[a-z0-9]{6}$/$third-party,subdocument
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -17497,8 +17510,10 @@ toorgle.net##.join
 192.243.59.12$network
 192.243.59.13$network
 192.243.59.20$network
+!#if !ext_ublock
 /^(https?://)?192\.243\.59\.[0-9]{1,3}($|/)/$document
 192.243.59.*$network
+!#endif
 ! rule34hentai.net when uBlock Filters and AdGuard Base are turned off
 ||eivbjsegbino.com^$all
 ||mczahprdql.com^$all
@@ -17839,11 +17854,12 @@ toorgle.net##.join
 ||wanmei-hy.ru^$all
 ||wanmeizi.ru^$all
 ||widesdays.com^$all
-194.226.139.*$network
 194.226.139.121$network
 194.226.139.7$network
 95.181.157.36$network
 95.181.172.204$network
+!#if !ext_ublock
+194.226.139.*$network
 ! AS209813 (https://github.com/AdguardTeam/AdguardFilters/issues/114618#issuecomment-1100702530; currently specific to tools that support CIDR blocking)
 5.8.67.*$network
 5.101.45.*$network
@@ -17857,6 +17873,7 @@ toorgle.net##.join
 46.161.31.*$network
 91.243.41.*$network
 91.243.42.*$network
+!#endif
 !#if false
 5.8.44.0/22
 5.101.46.0/23
@@ -21019,7 +21036,7 @@ hdfilmcehennemi.film##.poster-imdb
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 13September2022v1
+! OriginalVersion: 14September2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -23924,6 +23941,9 @@ $removeparam=sub,domain=allboner.com|twinkvideos.com
 ||tumblr.com^$removeparam=is_related_post
 ! https://www.xbox.com/nb-no/games/store/lost-words-beyond-the-page/9n14mfn0dv4k?rtc=1
 ||xbox.com^$removeparam=rtc
+! https://www.tokopedia.com/lunashop78/buku-stiker-warna-my-little-pony-be-kind-together-coloring-book?extParam=ivf%3Dfalse%26src%3Dsearch&refined=true
+||tokopedia.com^$removeparam=extParam
+||tokopedia.com^$removeparam=refined
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
