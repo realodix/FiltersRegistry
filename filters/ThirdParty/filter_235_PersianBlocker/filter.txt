@@ -1562,14 +1562,16 @@ softgozar.com##.DTOPBan
 ! soft98.ir: Addressed in uBlock Origin Quick-Fixes list
 instagram.com#%#//scriptlet('ubo-window-close-if.js', '/[Ss][Mm][Oo][Ss][Tt][Aa][Ff][Aa][Mm][Oo][Oo][Ss][Aa][Vv][Ii]/')
 !#if adguard
+*$script,domain=linkdoni.soft98.ir
 soft98.ir,~forum.soft98.ir#%#//scriptlet('ubo-aeld.js', 'mousedown')
 soft98.ir,~forum.soft98.ir#%#//scriptlet('ubo-window-close-if.js', '/link-')
 sysban.ir#%#//scriptlet('ubo-window-close-if.js', '/telephone-service')
 smostafa.ir#%#//scriptlet('ubo-window-close-if.js', '/^/')
-||file.soft98.ir^$image,redirect=click2load.html,domain=soft98.ir|~forum.soft98.ir
-||cdn.hostdl.com^$image,redirect=click2load.html,domain=soft98.ir|~forum.soft98.ir
+||file.soft98.ir^$image,redirect=1x1-transparent.gif,domain=soft98.ir|~forum.soft98.ir
+||cdn.hostdl.com^$image,redirect=1x1-transparent.gif,domain=soft98.ir|~forum.soft98.ir
+soft98.ir,~forum.soft98.ir#$#img[src*="file.soft98.ir"] { height: 90px !important; width: 728px !important; }
 ^utm_source=soft98^$removeparam=/^utm_/
-.ir^$popup,domain=soft98.ir,third-party
+.ir^$popup,domain=soft98.ir|~forum.soft98.ir,third-party
 ||iranick0d.ir^$all
 ||iranicard.ir^$all,domain=soft98.ir
 ||asiatech.ir^$all,domain=soft98.ir
@@ -1578,6 +1580,9 @@ smostafa.ir#%#//scriptlet('ubo-window-close-if.js', '/^/')
 ||sysban.ir^$all,domain=soft98.ir
 soft98.ir,~forum.soft98.ir#$?#*:has-text(@):has(a[href*="soft98.ir/user"]):not(body,html) { remove: true; }
 soft98.ir,~forum.soft98.ir#$?#*:has-text(@):has(a[href*="s98.ir/"]):not(body,html) { remove: true; }
+linkdoni.soft98.ir#$?#html { remove: true; }
+!#if (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android)
+!#endif
 @@||soft98.ir^$generichide
 !#endif
 ! TOOD: Keep an eye on it
