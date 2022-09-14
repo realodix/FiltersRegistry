@@ -15497,6 +15497,7 @@ reddit.com#@#.ADBAR
 !#safari_cb_affinity
 !
 ! Add same rules to the Admiral section of Tracking Protection filter
+||shakysurprise.com^$third-party
 ||cosmosjackson.com^$third-party
 ||afraidlanguage.com^$third-party
 ||meatydime.com^$third-party
@@ -15617,6 +15618,7 @@ reddit.com#@#.ADBAR
 !
 ! SECTION: Anti-adblock - Regular rules
 ! Do not forget about '!#safari_cb_affinity' section for exclusions
+18comic.org#%#//scriptlet("set-constant", "nerverblock_callback", "noopFunc")
 multiup.eu,multiup.org#?#.content-body > .text-center:has(> a[href*="list_adblock.txt&"])
 ||cdn.iphoneincanada.ca/wp-content/themes/iphone/js/JDAB.js
 craftpip.github.io#%#//scriptlet('set-local-storage-item', 'adsok', 'true')
@@ -17249,7 +17251,6 @@ zkillboard.com#@#.adsbygoogle
 @@||fireman.club/wp-content/themes/fireclub/ads/banner.gif$domain=fireman.club
 @@||fjhsjkfhwqeirusdfjkh.azureedge.net/ads/ads.js
 @@||fjhsjkfhwqeirusdfjkh.azureedge.net/adv/ads.js
-@@||flightsim.to/doubleserve.js
 @@||flyertalk.com/ad.min.js
 @@||forum.lesarnaques.com/advertisement.js
 @@||forum.pokemobbot.com^$generichide
@@ -24969,6 +24970,7 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 !
 ! SECTION: Subscriptions - Regular rules
 !
+kommersant.uk#?#main > section + div.container:has(> article.subscription__form)
 huffingtonpost.kr###letter-form
 bookmaker-ratings.ru##div[class^="sc-"] > section[class^="sc-"] + div:not([class]):not([id])
 bloomberg.com###expandableBanner
@@ -34140,6 +34142,8 @@ warezcrack.net#$#.onp-sl-content > [data-lock-id^="onpLock"] { display: block!im
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/129681
+kommersant.uk##.content-default__sidebar > aside > div.advertising
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128731
 mcafee.com##.stay-updated
 mcafee.com##.sidebar-socialicons
