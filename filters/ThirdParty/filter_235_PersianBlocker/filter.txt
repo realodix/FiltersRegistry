@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-09-14
+! Last modified: 2022-09-15
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -73,12 +73,15 @@
 ||blogfa.com/a/
 ! >> C <<
 ||chavosh.org^$all
+||ck.chavosh.org^$all
 ||clickaval.com^$all
 ||clickyab.com^$all
 ||chabok.io^$all
 ||congoro.com^$all
 ||congoro.ir^$all
 ! >> D <<
+||24d.ir^$all
+||l.24d.ir^$all
 ||davedbux.ir^$all
 ||denutility.com^$all
 ! ^ Used by eghtesadnews.com
@@ -117,7 +120,7 @@
 ||kilipo.com/themes/default/player/plugins/vast/ads
 ||kilipo.com/themes/default/player/plugins/ads
 ||kajads.com^$all
-||ads.karzar.net
+||ads.karzar.net^$all
 ||kaprila.com^$all
 ||k2cod.com/ip/show-ip
 ||k2cod.com/statistics/
@@ -183,6 +186,7 @@
 ||slideskin.ir/ads/pop.php^$all
 ||sendword.ir^$all
 ! Used by i-video.ir
+||logo.samandehi.ir^$removeheader=set-cookie
 !#if adguard
 ||logo.samandehi.ir^$third-party,cookie
 !#endif
@@ -738,7 +742,10 @@ eghtesadgardan.ir#$#.container { width: 95% !important; }
 eghtesadepooya.ir##.all_ads
 eghtesadepooya.ir#$#.container { width: 95% !important; }
 ! https://github.com/MasterKia/PersianBlocker/issues/57
+! https://github.com/MasterKia/PersianBlocker/pull/74
 econews.ir##.advertise-place
+econews.ir##.province-advertise
+econews.ir##main > div:has([href*="/advertising/"])
 econews.ir#$#.container { width: 95% !important; }
 ! https://github.com/MasterKia/PersianBlocker/issues/55
 ||eghtesaad24.ir/files/adv^
@@ -1084,6 +1091,8 @@ jeyran.net##.content_item:has(a[href*="/category/ads/"])
 jeyran.net##.sidebar-area .image
 jeyran.net#$#.main-content > .row > .content, .main-conten { max-width: 99% !important; flex: 0 0 99% !important; }
 ||jabeh.com/assets/videojs-contrib-ads
+||jabeh.com/assets/videojs.ima.min.js
+||jabeh.com/assets/videojs.ima.min.css
 ||jabeh.com/analytics^
 jalebamooz.com##.stream-item-top-wrapper
 jalebamooz.com###block-3
@@ -1284,6 +1293,17 @@ myhastidl.cam#%#//scriptlet('ubo-set.js', 'needpop', '0')
 myhastidl.cam##center:nth-of-type(2)
 myhastidl.cam##.col-xs-12.col-md-6.main-sidebar > center
 ! >> N <<
+! https://github.com/MasterKia/PersianBlocker/issues/72
+||niniban.com/files/adv^
+niniban.com##.row-adv-2tayi
+niniban.com##.panel-ads-h
+niniban.com##.New-adv
+niniban.com##.height-adv
+niniban.com##.padding_news_right_adv, .padd-news-advertise
+niniban.com##.box:has(a[href*="/ads/redirect"])
+niniban.com##.fixed_box_adv
+niniban.com##.footer_adv
+niniban.com#$?#.col-xs-36.col-md-24:not(:has(.gutter_xs)) { width: 83% !important; }
 ||netbarg.com/matomo.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83080
 ||namasha.com/visit?id=
@@ -1485,9 +1505,16 @@ rastannews.ir##.all_ads
 ||rajanews.com/sites/default/files/superadmin/*.gif
 rajanews.com###block-block-22.ads
 ! >> S <<
+! https://github.com/MasterKia/PersianBlocker/issues/73
+sharghdaily.com##.header_adv
+sharghdaily.com##.zxc
+sharghdaily.com##.zxc_home
 ! https://github.com/MasterKia/PersianBlocker/issues/62
+||setare.com/files/*.gif
 ||setare.com/wp-content/tags/yn_bnr
 setare.com##.pb0.stickyscroll_widget
+setare.com##.homebar a[href="https://setare.com/%d8%aa%d8%a8%d9%84%db%8c%d8%ba%d8%a7%d8%aa/"] > img
+setare.com##.cyt-ad-content
 ||shomavaeghtesad.com/rss-rasa.php^
 shomavaeghtesad.com##.zxc
 shomavaeghtesad.com#$#.column_1 { width: 70% !important; }
