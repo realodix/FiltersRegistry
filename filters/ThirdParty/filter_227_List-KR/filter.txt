@@ -2,7 +2,7 @@
 [AdGuard]
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.915.0
+! OriginalVersion: 2022.915.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -350,6 +350,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||community.rememberapp.co.kr/_next/image?url=*%2Fuploads%2Fbanner%2F
 ||cdn.news.bbsi.co.kr/bannerpop/uploads/
 ||cdn.news.bbsi.co.kr/adManager/
 ||cdn.huffingtonpost.kr/adManager/
@@ -887,7 +888,6 @@
 ||file.osen.co.kr/*/css/ad.css
 ||img.mbn.co.kr/ad/
 ||techworld.speedgabia.com/epnc.co.kr/ad/
-||s3-ap-northeast-1.amazonaws.com/*.rememberapp.co.kr/production/uploads/banner/
 /:\/\/m\.ilbe\.com\/images\/([a-z]|[0-9]|_){8,11}\.gif/
 ||clien.net/service/api/coupang/ad?
 /cdn\.boribori\.co\.kr(\/|\/rimg\/(0|110x250)\/)cdn\/contents\/disp_corner_conts\//
@@ -1954,6 +1954,7 @@ orbi.kr#$#.global-top { top: 0px!important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+community.rememberapp.co.kr#?#div[class*=" "]:has(> a[class*=" "][href][target="_blank"] img[src*="/_next/image?url="][src*="%2Fuploads%2Fbanner%2F"])
 fntimes.com#?#.con_rt > div[class^="lcrt"] ~ div[class^="mcrt"]:has(img[src*="/common/ad_"].ad)
 ceoscoredaily.com#?#.wcms_bestnews ~ div[class]:has(~ div[class] ~ .side_major_company)
 kayak.co.kr#?#.keel-grid .col-list-body .resultsList div:not([class]):not([id]):has(div[class*="-promo-"] span[class$="-sponsored-text"])
@@ -2038,7 +2039,6 @@ meeco.kr#?#.list_d.ldd > ul > li:has(> div > ins.adsbygoogle)
 m.newspic.kr#?#.aside_wrap > div.box:has(> div > iframe[src^="https://ad.adinc.kr/"])
 mosen.mt.co.kr#?#section.textList > article.row:has(> ul.aritcle-info > li.title > a[href*="//adv.imadrep.co.kr/"])
 berryjam.co.kr#?#table[width="1200"]:has(> tbody > tr > td > div[class*="slider-banner-"])
-community.rememberapp.co.kr#?#div > a.sc-7g611p-0.cAmftz:has(> div > div > div > img[alt="배너 광고 이미지"])
 !
 ! Each domain of website in this section is forbidden by Internet censorship of S. Korea.
 ! Some listed domains have been changed by their administrators regularly.
