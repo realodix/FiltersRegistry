@@ -260,12 +260,6 @@ soft98.ir,~forum.soft98.ir##+js(window-close-if, /link-)
 sysban.ir##+js(window-close-if, /telephone-service)
 ! Rule "smostafa.ir##+js(window-close-if, /^/)" converted to: "smostafa.ir#%#//scriptlet('ubo-window-close-if.js', '/^/')"
 smostafa.ir##+js(window-close-if, /^/)
-! Rule "||file.soft98.ir^$image,redirect=1x1.gif,domain=soft98.ir|~forum.soft98.ir" converted to: "||file.soft98.ir^$image,redirect=1x1-transparent.gif,domain=soft98.ir|~forum.soft98.ir"
-||file.soft98.ir^$image,redirect=1x1.gif,domain=soft98.ir|~forum.soft98.ir
-! Rule "||cdn.hostdl.com^$image,redirect=1x1.gif,domain=soft98.ir|~forum.soft98.ir" converted to: "||cdn.hostdl.com^$image,redirect=1x1-transparent.gif,domain=soft98.ir|~forum.soft98.ir"
-||cdn.hostdl.com^$image,redirect=1x1.gif,domain=soft98.ir|~forum.soft98.ir
-! Rule "soft98.ir,~forum.soft98.ir##img[src*="file.soft98.ir"]:style(height: 90px !important; width: 728px !important;)" converted to: "soft98.ir,~forum.soft98.ir#$#img[src*="file.soft98.ir"] { height: 90px !important; width: 728px !important; }"
-soft98.ir,~forum.soft98.ir##img[src*="file.soft98.ir"]:style(height: 90px !important; width: 728px !important;)
 ! Rule ".ir^$popup,domain=soft98.ir|~forum.soft98.ir,3p" converted to: ".ir^$popup,domain=soft98.ir|~forum.soft98.ir,third-party"
 .ir^$popup,domain=soft98.ir|~forum.soft98.ir,3p
 ! Rule "cdn.hostdl.com##^responseheader(location)" converted to: "||cdn.hostdl.com^$removeheader=location"
@@ -274,6 +268,8 @@ cdn.hostdl.com##^responseheader(location)
 soft98.ir,~forum.soft98.ir##*:has-text(@):has(a[href*="soft98.ir/user"]):not(body,html):remove()
 ! Rule "soft98.ir,~forum.soft98.ir##*:has-text(@):has(a[href*="s98.ir/"]):not(body,html):remove()" converted to: "soft98.ir,~forum.soft98.ir#$?#*:has-text(@):has(a[href*="s98.ir/"]):not(body,html) { remove: true; }"
 soft98.ir,~forum.soft98.ir##*:has-text(@):has(a[href*="s98.ir/"]):not(body,html):remove()
+! Rule "iranicard.ir##:matches-path(/utm_content=spotify/) html:remove()" converted to: "[$path=/utm_content=spotify/]iranicard.ir#$?# html { remove: true; }"
+iranicard.ir##:matches-path(/utm_content=spotify/) html:remove()
 ! Rule "linkdoni.soft98.ir##html:remove()" converted to: "linkdoni.soft98.ir#$?#html { remove: true; }"
 linkdoni.soft98.ir##html:remove()
 ! Unable to convert rule to AdGuard syntax: linkdoni.soft98.ir##^body, title
