@@ -1614,10 +1614,10 @@ soft98.ir,~forum.soft98.ir#%#//scriptlet('ubo-aeld.js', 'mousedown')
 soft98.ir,~forum.soft98.ir#%#//scriptlet('ubo-window-close-if.js', '/link-')
 sysban.ir#%#//scriptlet('ubo-window-close-if.js', '/telephone-service')
 smostafa.ir#%#//scriptlet('ubo-window-close-if.js', '/^/')
-.gif^$image,redirect=click2load.html,domain=soft98.ir|~forum.soft98.ir
+! .gif^$image,redirect=click2load.html,domain=soft98.ir|~forum.soft98.ir
 ^utm_source=soft98^$removeparam=utm_source
-^utm_source=soft98^$removeparam=utm_medium
 ^utm_source=soft98^$removeparam=utm_campaign
+^utm_source=soft98^$removeparam=utm_content
 ^utm_source=soft98^$all
 .ir^$popup,domain=soft98.ir|~forum.soft98.ir,third-party
 ||iranick0d.ir^$all
@@ -1627,9 +1627,10 @@ smostafa.ir#%#//scriptlet('ubo-window-close-if.js', '/^/')
 ||cdn.hostdl.com^$removeheader=location
 ||smostafa.ir^$all,domain=soft98.ir
 ||sysban.ir^$all,domain=soft98.ir
-soft98.ir,~forum.soft98.ir#$?#*:has-text(@):has(a[href*="soft98.ir/user"]):not(body,html) { remove: true; }
-soft98.ir,~forum.soft98.ir#$?#*:has-text(@):has(a[href*="s98.ir/"]):not(body,html) { remove: true; }
-[$path=/utm_content=spotify/]iranicard.ir#$?# html { remove: true; }
+||iranicard.ir/خرید-اکانت-اسپاتیفای-spotify-2/?utm_medium=banner^$csp=script-src
+||asiatech.ir/tabestan1401/?utm_medium=referral^$csp=script-src
+[$path=/utm_medium=banner/]iranicard.ir#$?# html { remove: true; }
+[$path=/utm_medium=referral/]asiatech.ir#$?# html { remove: true; }
 linkdoni.soft98.ir#$?#html { remove: true; }
 !#if (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android)
 !#endif
