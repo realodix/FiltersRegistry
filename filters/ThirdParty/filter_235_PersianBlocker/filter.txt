@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-09-16
+! Last modified: 2022-09-17
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -555,6 +555,8 @@ charbzaban.com##figcaption
 chetor.com###custom_html-51
 chetor.com##.linkbox:upward(4)
 chetor.com#@#.ads-block
+@@||chetor.com/wp-content/uploads/2016/04/instagram-banner.chetor-media2.gif$image,~third-party
+@@||chetor.com/wp-content/uploads/2021/07/book-banner.1250.240.2.gif$image,~third-party
 ||sentry.cafebazaar.org^$all
 ! coffeeapps.ir##+js(nowoif)
 coffeeapps.ir#%#//scriptlet('ubo-aopr.js', 'nocontext')
@@ -1132,11 +1134,14 @@ khabareazad.com##.sticky_notify
 ! https://github.com/MasterKia/PersianBlocker/issues/33
 ||konkur.in/image/ads/
 @@||dl.konkur.in/image/ads/gold.png$image,~third-party
+konkur.in###HeaderImg
 konkur.in##[id^="tabligh"]
 konkur.in#$#.sidebar-taliq { visibility: hidden; !important; }
 konkur.in##.text-center:has-text(پست تبلیغاتی):upward(3)
 konkur.in##.tabliqat-text
+konkur.in##.m-top10:has-text(تبلیغات)
 ! !#if env_mobile
+konkur.in##.vvv
 konkur.in###mobileBottomAd
 ! !#endif
 ! https://github.com/MasterKia/PersianBlocker/issues/32
@@ -1316,12 +1321,13 @@ myhastidl.cam##.col-xs-12.col-md-6.main-sidebar > center
 niniban.com##.row-adv-2tayi
 niniban.com##.panel-ads-h
 niniban.com##.New-adv
-niniban.com##.height-adv
 niniban.com##.padding_news_right_adv, .padd-news-advertise
 niniban.com##.box:has(a[href*="/ads/redirect"])
 niniban.com##.fixed_box_adv
 niniban.com##.footer_adv
+!#if !env_mobile
 niniban.com#$?#.col-xs-36.col-md-24:not(:has(.gutter_xs)) { width: 83% !important; }
+!#endif
 ||netbarg.com/matomo.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83080
 ||namasha.com/visit?id=
@@ -1618,15 +1624,15 @@ smostafa.ir#%#//scriptlet('ubo-window-close-if.js', '/^/')
 ^utm_source=soft98^$removeparam=utm_source
 ^utm_source=soft98^$removeparam=utm_campaign
 ^utm_source=soft98^$removeparam=utm_content
-^utm_source=soft98^$all
+^utm_source=soft98^$document,popup
 .ir^$popup,domain=soft98.ir|~forum.soft98.ir,third-party
-||iranick0d.ir^$all
-||iranicard.ir^$all,domain=soft98.ir
-||asiatech.ir^$all,domain=soft98.ir
-||hostdl.com^$all,domain=soft98.ir
+||iranick0d.ir^$document,popup
+||iranicard.ir^$document,popup,domain=soft98.ir
+||asiatech.ir^$document,popup,domain=soft98.ir
+||hostdl.com^$document,popup,domain=soft98.ir
 ||cdn.hostdl.com^$removeheader=location
-||smostafa.ir^$all,domain=soft98.ir
-||sysban.ir^$all,domain=soft98.ir
+||smostafa.ir^$document,popup,domain=soft98.ir
+||sysban.ir^$document,popup,domain=soft98.ir
 ||iranicard.ir/خرید-اکانت-اسپاتیفای-spotify-2/?utm_medium=banner^$csp=script-src
 ||asiatech.ir/tabestan1401/?utm_medium=referral^$csp=script-src
 [$path=/utm_medium=banner/]iranicard.ir#$?# html { remove: true; }
