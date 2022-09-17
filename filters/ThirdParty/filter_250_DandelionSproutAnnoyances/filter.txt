@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 17September2022v1-Beta-Compilation
+! OriginalVersion: 17September2022v2-Beta-Compilation
 ! Expires: 2 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
@@ -9792,7 +9792,7 @@ get.adobe.com###offersInformationPane
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 14September2022v1
+! OriginalVersion: 15September2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -10128,8 +10128,7 @@ coolrom.com.au,coolrom.com##.download_link
 ||vodahelp.sytes.net^$document
 ||witkey.com^$document
 ! ——— Browser extension store entries for notoriously poor or malicious adblocker forks ———
-! Note: Currently the entries only work properly on AdGuard for Windows/Mac, due to what seems to be limitations placed on browser extensions.
-! I offer a 10€ bounty to anyone who know how to make the entries work within their intended browsers with regular browser extensions (e.g. Chrome Web Store in Chrome with (uBO|AdGuard Browser Extension|ABP); Mozilla Add-ons in Firefox)
+! Note: Currently the Chrome Web Store entries only work properly for Chrome users on AdGuard for Windows/Mac, due to limitations placed on browser extensions; see https://github.com/gorhill/uBlock/wiki/Privileged-Pages
 ! Chrome Web Store
 chrome.google.com#?#.webstore-test-wall-tile:has-text(www.ublock.org)
 chrome.google.com#?#.webstore-test-wall-tile:has-text(uBlock Plus Adblocker)
@@ -10160,6 +10159,7 @@ chrome.google.com#?#.webstore-test-wall-tile:has-text(otih-oith.us.to)
 chrome.google.com#?#.webstore-test-wall-tile:has-text(/Adblock adblock/i)
 chrome.google.com#?#.webstore-test-wall-tile:has-text(/Adblock Origin/i)
 ! Mozilla Add-ons
+! These entries can be used in Firefox with regular browser extensions (uBO|AdGuard Browser Extension|ABP) by opening about:config, removing the "addons.mozilla.com" part from "extensions.webextensions.restrictedDomains", and then creating a new string called "privacy.resistFingerprinting.block_mozAddonManager" (That exact capitalisation must be used) set to (Boolean) true.
 addons.mozilla.org#?#li.SearchResult:has-text(uBlock, LLC)
 addons.mozilla.org#?#li.SearchResult:has-text(Adblocker for Firefox)
 addons.mozilla.org#?#li.SearchResult:has-text(AdsBlocker)
@@ -24658,7 +24658,7 @@ positivr.fr#$#.viously-sticked { position: absolute !important; top: 0 !importan
 positivr.fr##.viously-sticked #unstick-button
 ! https://github.com/easylist/easylist/issues/13275
 [$path=/^((?!\/watch).)*$/]www.youtube.com#$?# ytd-miniplayer { remove: true; }
-[$path=/^((?!\/watch).)*$/]www.youtube.com#$?# #movie_player video { remove: true; }
+!!!www.youtube.com##:not(:matches-path(/watch)) #movie_player video:remove() (Seems to cause YT embeds on Discord to show only a black background.)
 !#if !env_mobile
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124667 (Probably can't be in Falukorv List because that list adds whitelistings, not remove them.)
 @@://googleadservices.com^|$badfilter
