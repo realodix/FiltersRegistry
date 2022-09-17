@@ -36,8 +36,8 @@
 /^https:\/\/[0-9a-z]{3,}\.[-a-z]{10,}\.top\/[a-z]{8}\/\?(?:cid=[0-9a-z]+&)?u=[0-9a-z]+&/$doc,domain=top
 ! Rule "/^https:\/\/[a-z]{2,3}\d\.biz\/go\/[0-9a-z]{15,18}$/$doc,domain=biz" converted to: "/^https:\/\/[a-z]{2,3}\d\.biz\/go\/[0-9a-z]{15,18}$/$document,domain=biz"
 /^https:\/\/[a-z]{2,3}\d\.biz\/go\/[0-9a-z]{15,18}$/$doc,domain=biz
-! Rule "/^https?:\/\/((?!www)[a-z]{3,}\.)?[-0-9a-z]{6,}\.(?:buzz|com|de|fun|guru|life|online|pw|site|space|top|us|xyz)\/(?:[a-z]{6,8}\/)?\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$doc,match-case,domain=buzz|com|de|fun|guru|life|online|pw|site|space|top|us|xyz" converted to: "/^https?:\/\/((?!www)[a-z]{3,}\.)?[-0-9a-z]{6,}\.(?:buzz|com|de|fun|guru|life|online|pw|site|space|top|us|xyz)\/(?:[a-z]{6,8}\/)?\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$document,match-case,domain=buzz|com|de|fun|guru|life|online|pw|site|space|top|us|xyz"
-/^https?:\/\/((?!www)[a-z]{3,}\.)?[-0-9a-z]{6,}\.(?:buzz|com|de|fun|guru|life|online|pw|site|space|top|us|xyz)\/(?:[a-z]{6,8}\/)?\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$doc,match-case,domain=buzz|com|de|fun|guru|life|online|pw|site|space|top|us|xyz
+! Rule "/^https?:\/\/((?!www)[a-z]{3,}|\d{2})?\.?[-0-9a-z]{6,}\.[a-z]{2,6}\/(?:[a-z]{6,8}\/)?\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$doc,frame,match-case,domain=buzz|com|de|fun|guru|info|life|live|online|pw|site|space|top|us|xyz" converted to: "/^https?:\/\/((?!www)[a-z]{3,}|\d{2})?\.?[-0-9a-z]{6,}\.[a-z]{2,6}\/(?:[a-z]{6,8}\/)?\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$document,subdocument,match-case,domain=buzz|com|de|fun|guru|info|life|live|online|pw|site|space|top|us|xyz"
+/^https?:\/\/((?!www)[a-z]{3,}|\d{2})?\.?[-0-9a-z]{6,}\.[a-z]{2,6}\/(?:[a-z]{6,8}\/)?\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$doc,frame,match-case,domain=buzz|com|de|fun|guru|info|life|live|online|pw|site|space|top|us|xyz
 ! Rule "/^https?:\/\/([\w]{1,4}\.)?[a-z]{9,}([0-9]{1,2})?\.site\/\?utm_campaign=[_0-9a-zA-Z]+&[to]=[0-9a-z]+/$doc,domain=site" converted to: "/^https?:\/\/([\w]{1,4}\.)?[a-z]{9,}([0-9]{1,2})?\.site\/\?utm_campaign=[_0-9a-zA-Z]+&[to]=[0-9a-z]+/$document,domain=site"
 /^https?:\/\/([\w]{1,4}\.)?[a-z]{9,}([0-9]{1,2})?\.site\/\?utm_campaign=[_0-9a-zA-Z]+&[to]=[0-9a-z]+/$doc,domain=site
 ! Rule "||bmscooperation.com^$doc" converted to: "||bmscooperation.com^$document"
@@ -148,8 +148,8 @@
 ||wp.*.top^$doc,domain=top
 ! Rule "||x9.eu^$doc,domain=~www.x9.eu" converted to: "||x9.eu^$document,domain=~www.x9.eu"
 ||x9.eu^$doc,domain=~www.x9.eu
-! Rule "||zalukaj*.$doc,domain=~zalukaj.vip" converted to: "||zalukaj*.$document,domain=~zalukaj.vip"
-||zalukaj*.$doc,domain=~zalukaj.vip
+! Rule "||zalukaj*.$doc,domain=~zalukaj.ru" converted to: "||zalukaj*.$document,domain=~zalukaj.ru"
+||zalukaj*.$doc,domain=~zalukaj.ru
 ! Rule "||znany-lekarz.pl^$doc" converted to: "||znany-lekarz.pl^$document"
 ||znany-lekarz.pl^$doc
 ! Rule "||zmienkolory*.blogspot.com^$1p,all" converted to: "||zmienkolory*.blogspot.com^$~third-party,all"
