@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-09-17
+! Last modified: 2022-09-18
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! Licence: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -1638,23 +1638,27 @@ soft98.ir,~forum.soft98.ir#%#//scriptlet('ubo-aeld.js', 'mousedown')
 soft98.ir,~forum.soft98.ir#%#//scriptlet('ubo-window-close-if.js', '/link-')
 sysban.ir#%#//scriptlet('ubo-window-close-if.js', '/telephone-service')
 smostafa.ir#%#//scriptlet('ubo-window-close-if.js', '/^/')
-! .gif^$image,redirect=click2load.html,domain=soft98.ir|~forum.soft98.ir
-^utm_source=soft98^$removeparam=utm_source
-^utm_source=soft98^$removeparam=utm_campaign
-^utm_source=soft98^$removeparam=utm_content
 ^utm_source=soft98^$document,popup
+^utm_source=s98^$document,popup
+^utm_source=c29mdDk4^$document,popup
 .ir^$popup,domain=soft98.ir|~forum.soft98.ir,third-party
 ||iranick0d.ir^$document,popup
 ||iranicard.ir^$document,popup,domain=soft98.ir
+||iranicard.ir^$removeparam=/utm_source|utm_campaign|utm_content/
 ||asiatech.ir^$document,popup,domain=soft98.ir
+||asiatech.ir^$removeparam=/utm_source|utm_campaign|utm_content/
 ||hostdl.com^$document,popup,domain=soft98.ir
 ||cdn.hostdl.com^$removeheader=location
+||ok-ex.io^$document,popup,domain=soft98.ir
+||ok-ex.io^$removeparam=/utm_source|utm_campaign|utm_content/
 ||smostafa.ir^$document,popup,domain=soft98.ir
 ||sysban.ir^$document,popup,domain=soft98.ir
 ||iranicard.ir/خرید-اکانت-اسپاتیفای-spotify-2/?utm_medium=banner^$csp=script-src
 ||asiatech.ir/tabestan1401/?utm_medium=referral^$csp=script-src
+||ok-ex.io/?utm_medium=banner^$csp=script-src
 [$path=/utm_medium=banner/]iranicard.ir#$?# html { remove: true; }
 [$path=/utm_medium=referral/]asiatech.ir#$?# html { remove: true; }
+[$path=/utm_medium=banner/]ok-ex.io#$?# html { remove: true; }
 linkdoni.soft98.ir#$?#html { remove: true; }
 !#if (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android)
 !#endif
