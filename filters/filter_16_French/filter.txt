@@ -124,6 +124,10 @@ capital.fr#@#.plainAd
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/130023
+techno-science.net#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
+!+ PLATFORM(ios, ext_android_cb)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techno-science.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129701
 ||cdn.jokerly.com/scripts/LPabChoice.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127591
@@ -677,6 +681,9 @@ tf1info.fr#%#AG_defineProperty('__NEXT_DATA__.runtimeConfig.adBlock.serverReques
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/130023
+techno-science.net#?#.colonneDroite > .module:has(> #amazonLink)
+techno-science.net#?#.colonneDroite > .module:has(> div > .adsbygoogle)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127381
 dhnet.be#?#main > section.ap-Chain:has(> div.ap-Chain-body iframe[src^="//immobox.logic-immo.be/"])
 dhnet.be#?#main > div.ap-Box:has(> div.ap-Box-content > div.is-boxContentGroup  div#digitekaSmartPlayer)
@@ -926,6 +933,8 @@ voirseries.io$$script[src="KGZ1bmN0aW9uKCQsZG9jdW1lbnQp"]
 /^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com)).*$/$third-party,script,domain=scan-fr.cc
 !
 !
+techno-science.net##.pub
+techno-science.net###amazonLink
 ||v.fwmrm.net/ad/$important,domain=bfmtv.com
 paroles2chansons.lemonde.fr##div[style="min-height:280px;"]
 paroles2chansons.lemonde.fr##div[style="width:336px;height:600px;"]
