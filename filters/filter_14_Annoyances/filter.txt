@@ -15712,7 +15712,6 @@ newscon.net###adblock-warning
 0calc.com,0rechner.de#$#.modal-open { overflow: visible !important; }
 0day.kiev.ua##td[valign="top"][width="99%"] > table[style="margin-bottom: 20px"][width="99%"]
 101.ru##.showMessageAdBlock
-10play.com.au#%#//scriptlet("abort-on-property-read", "adsStatus")
 123gomovies.info##.container .home-alert
 123movies4u.co###main > .container > .top-content + div[style="text-align: center; margin: 20px 0; padding: 15px; font-size: 16px; font-weight: 600; background: #0F87FE; color: #fff;"]
 123moviesgo.nl,grazia.nl##.alert.alert-warning
@@ -24388,6 +24387,8 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+e1.ru##section:has(> p:contains(/уведомления в браузере|Ежедневная подписка/))
+e1.ru###onesignal-slidedown-container
 ||app.avada.io/scripttag/push/avada-push.min.js
 kurzy.cz###notifpopup
 ||kurzy.cz/push/push.js
@@ -24896,6 +24897,8 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 !
 ! SECTION: Push notifications - Allowlist
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/130066
+@@||onesignal.com^$domain=e1.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129633
 !+ NOT_PLATFORM(windows, mac, android)
 ||cdn.onesignal.com/sdks/OneSignalSDK.js$script,redirect=noopjs,domain=sammobile.com
