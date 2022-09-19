@@ -453,7 +453,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 15September2022v1
+! OriginalVersion: 19September2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -9540,6 +9540,8 @@ toorgle.net##.join
 ||147.135.16.27^$document
 ! https://www.google.no/search?q=mlp+g5&newwindow=1&tbm=isch&oq=mlp+g5&sclient=img
 ||ingeniovirtual.com^$document
+! Spambot posts on Tumblr (19/09/2022)
+tumblr.com#?#.post,div[style^="width: "] > div[tabindex]:has(a[href^="https://href.li/?https://bit.ly/"])
 ! Other
 ||foxsportnetwork.com^$all
 ||pksauniversity.com^$all
@@ -19519,7 +19521,7 @@ fileinfo.com#?#.top:has(a[href*="/windows_file_viewer"])
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! This is an extension file, not an independent list.
-! Extension file's version: 29August2022v3-Extension
+! Extension file's version: 19September2022v1-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -19611,7 +19613,7 @@ segmentfault.com#$?#.modal-open [style]:is([data-padding-right], [data-margin-ri
 !! Uncloseable prompt saying "We know you were really enjoying yourself, but we're going to need a little more info." (31/05/2022)
 !!!tumblr.com##style:has-text(/^body /):remove()
 tumblr.com#$?#style:has-text(/^body /):has(use[href*=logo-tumblr]) { remove: true; }
-tumblr.com###glass-container
+tumblr.com#?##glass-container:has(use[href*=logo-tumblr])
 !! Floaty on bottom
 ||tumblr.com^$removeparam=/^source=login_/
 tumblr.com##div[style^="background:#7c5cff;"]:upward(1)
