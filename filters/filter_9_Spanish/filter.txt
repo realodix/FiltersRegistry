@@ -112,7 +112,6 @@
 ||byfoongusor.com^
 ||v2b.nucleo.online^
 ||loboclick.com^$third-party
-||zendplace.pro^$third-party
 ||bserver.gp-guia.net^
 ||widgets.informars.com^
 ||richaudience.com^$third-party
@@ -277,6 +276,9 @@
 ! Good: @@/adblocker/detect.js$domain=example.org
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/129242
+||lavoz.com.ar/pf/resources/js/adsUtils.js
+||lavoz.com.ar/pf/resources/js/a-block.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128774
 ||documaniatv.com/templates/echo/js/veras.js
 ! AdRegain
@@ -622,9 +624,10 @@ wuolah.com#%#//scriptlet("set-constant", "canRunAds", "true")
 @@||playtemporal.xyz/js/*/fuckadblock.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65649
 applesfera.com,bebesymas.com,compradiccion.com,diariodelviajero.com,directoalpaladar.com,elblogsalmon.com,espinof.com,genbeta.com,motorpasion.com,motorpasionmoto.com,pymesyautonomos.com,trendencias.com,trendenciashombre.com,vidaextra.com,vitonica.com,xataka.com,xatakaciencia.com,xatakafoto.com,xatakahome.com,xatakamovil.com,xatakandroid.com,xatakawindows.com#%#//scriptlet("set-constant", "WSL2.config.enableAdblockEcommerce", "0")
+! https://github.com/AdguardTeam/AdguardFilters/issues/129540
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65579
-docero.com.br#$?#iframe#doublebillboard-1 { remove: true; }
-docero.com.br#%#//scriptlet("set-constant", "ads_unblocked", "true")
+doceru.com,docero.com.br#$?#iframe#doublebillboard-1 { remove: true; }
+doceru.com,docero.com.br#%#//scriptlet("set-constant", "ads_unblocked", "true")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/64208
 outerspace.com.br#%#//scriptlet("abort-on-property-read", "ppAdblocks")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/63889
@@ -1670,6 +1673,7 @@ peru21.pe#@#.adstop
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24801
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
+taurusfansub.com#?#.body-wrap > .c-top-sidebar:not(:has(.widget-manga-popular-slider))
 gauchazh.clicrbs.com.br#?#.gzh-content > section:has(> div.l-row > div.ads-area)
 climaaovivo.com.br#?#.MuiGrid-root > div[class^="style__Container"]:has(> span:contains(Publicidade))
 climaaovivo.com.br#?#.MuiGrid-root > div[style] >div[class^="style__Container-sc-"]:has(> span.vertical:contains(Publicidade))
@@ -2478,6 +2482,21 @@ sbt.com.br,link.estadao.com.br,atomixhq.*,jc.ne10.uol.com.br,internetpasoapaso.c
 ! ##.ad
 atribuna.com.br,jovemnerd.com.br,laopiniondemurcia.es,larazon.es,dicio.com.br,band.uol.com.br,xataka.com,onyxplay.com,genbeta.com,vagalume.com.br,xatakandroid.com,abril.com.br##.ad
 !
+guiadosquadrinhos.com###box_banner
+contigo.uol.com.br##.uol_placeholder
+spinoff.com.br###Position_Top
+spinoff.com.br##div[id^="Position_Content"]
+brasilescola.uol.com.br##div[id^="area-flutuante-artigo-"]
+serviporno.com##.abbcn-footer
+serviporno.com##.ntv-disclaimer
+serviporno.com###overlay-video
+serviporno.com###video-right > .video-relacionado
+meutimao.com.br##.pbmt
+meutimao.com.br##.bloco_horizotal_duplo
+meutimao.com.br##.bloco_horizotal_triplo
+||cdn.jwplayer.com/videos/$media,domain=ubeat.tv
+desdelinux.net###text-23
+desdelinux.net##.widget_abn_admanager_sidestealer
 preparaenem.com##div[class^="publicidade"]
 ||cdn.com.do/wp-content/themes/cdn/assets/js/javascript-custom.js
 cdn.com.do###top-banner-wrap
@@ -2754,7 +2773,7 @@ otempo.com.br##div.cf.slot-item.count-2.slot-count-20
 otempo.com.br##div[id^="ATF_"]
 ||elsiglodetorreon.com.mx/desplegados/banners/
 reforma.com##div[id^="zonapublicidad"]
-tycsports.com,tvpop.com.br,midiamax.uol.com.br##div[id^="banner-"]
+contigo.uol.com.br,tycsports.com,tvpop.com.br,midiamax.uol.com.br##div[id^="banner-"]
 atresplayer.com##.adpause
 minha.exame.com##div[class^="AdContainer"]
 arquitecturaydiseno.es##.header-megabanner > *
@@ -2782,7 +2801,7 @@ pobre.tv##a[href^="https://btt-pt.toldmeroc.com/"]
 ||pobre.tv/images/bettilt-*.png
 ||landings.toldmeroc.com^$domain=pobre.tv
 ||pobre.tv/videos/BT.mp4$media,redirect=noopmp3-0.1s
-miauscan.com,knightnoscanlation.com,pelisplaygratis.info###fixedban
+taurusfansub.com,miauscan.com,knightnoscanlation.com,pelisplaygratis.info###fixedban
 pelisplaygratis.info##.mvic-btn > a.btn-successful
 observatoriodatv.uol.com.br##.obx-ad
 observatoriodatv.uol.com.br##.BannerUOLPlay__Container
@@ -4334,7 +4353,7 @@ lared.cl##.aviso728x90
 laprensa.com.ni##.baner_centro
 laprensa.com.ni##.baner_superior
 terra.es##.bann
-tycsports.com,elespectador.com,bnews.com.br,migalhas.com.br,losandes.com.ar,lavoz.com.ar,mundo.sputniknews.com,omelete.com.br,lapoliticaonline.com.ar,mundotecnologias.com,valenciaplaza.com,veneapp.com,dalealbo.cl,globo.com,defesanet.com.br,mibrujula.com,lyon.kim,26noticias.com.ar,auniao.com,clickpb.com.br,emagister.com,lanacion.com.ar,parana-online.com.br,r7.com,toxico-pc.com,uol.com.br##.banner
+metropolitanafm.com.br,tycsports.com,elespectador.com,bnews.com.br,migalhas.com.br,losandes.com.ar,lavoz.com.ar,mundo.sputniknews.com,omelete.com.br,lapoliticaonline.com.ar,mundotecnologias.com,valenciaplaza.com,veneapp.com,dalealbo.cl,globo.com,defesanet.com.br,mibrujula.com,lyon.kim,26noticias.com.ar,auniao.com,clickpb.com.br,emagister.com,lanacion.com.ar,parana-online.com.br,r7.com,toxico-pc.com,uol.com.br##.banner
 iol.pt##.banner-area
 series-br.com##.banner-home
 ionline.pt##.banner-obj
@@ -4514,7 +4533,7 @@ iol.pt##.pub_full
 iol.pt##.pub_half
 yucatan.com.mx##.pubcuad
 abril.com.br##.publSquare
-lawebdelprogramador.com,soydemac.com,as.com,cadenaser.com,cincodias.com,destinia.com,elpais.com,lavozlibre.com,marca.com##.publi
+desdelinux.net,lawebdelprogramador.com,soydemac.com,as.com,cadenaser.com,cincodias.com,destinia.com,elpais.com,lavozlibre.com,marca.com##.publi
 infochannel.com.mx##.publi-int-cuadro
 marca.com##.publi-resultados
 jornalagora.com.br##.publi178_2

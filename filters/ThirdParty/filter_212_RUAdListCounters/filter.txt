@@ -1,8 +1,8 @@
 !
-! Checksum: y5DS4uWXMQl3P8ynpodgjg
-! OriginalVersion: 202209061631
+! Checksum: 3ZX54Zww+Khy/mOrsiiQLA
+! OriginalVersion: 202209190851
 ! Title: RU AdList: Counters
-! Last modified: 06 Sep 2022 16:31 UTC
+! Last modified: 19 Sep 2022 08:51 UTC
 ! Expires: 1 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -193,6 +193,7 @@ _pagespeed_beacon?
 ##a[href^="http://hitcounter.ru/top/stat.php"]
 ##a[href^="https://prime.rambler.ru/promo/"]
 ##a[title="TopTracker.Ru - Рейтинг трекеров."]
+##img[data-src="https://catalog.orbita.co.il/orbita.gif"]
 ##img[src*="//counter.yadro.ru/"]
 ##img[src*="://c.bigmir.net/"]
 ##img[src*="://r.i.ua/"]
@@ -435,6 +436,7 @@ _pagespeed_beacon?
 ||fxmail.ru/rating/$third-party
 ||g.ivi.ru/track|$xmlhttprequest
 ||gaug.es^$third-party
+||gc.onliner.by/assets/conversion.*.js
 ||gcmsite.ru/?pg=stat&
 ||gdeslon.ru^$third-party
 ||gemius.pl^$third-party
@@ -553,6 +555,7 @@ _pagespeed_beacon?
 ||livejournal.com^*/pagestats/
 ||livetracker.rfe.pangea-cms.com^$third-party
 ||loadercdn.net^$third-party
+||log.dzen.ru^
 ||log.krs-ix.ru^
 ||log.optimizely.com^
 ||log2.ru^$third-party
@@ -1092,13 +1095,26 @@ zannn.top#@?#this-is-a-malicious-site
 @@://yandex.*/news|$generichide
 disk.yandex.*,mail.yandex.*##.Base-Onboarding
 docs.yandex.*##a[href^="https://360.yandex."][href$="/?from=documents-header-360"]
+dzen.*##._is-header-after-player > div:not([id]):not([class])
+dzen.*##.climate-calendar-container__adv-wide
+dzen.*##.content__adv
+dzen.*##.feed__item > article[class^="card-wrapper"][class*="  "] > div[class*="_theme_"]:not([style])
+dzen.*##.panel-loadable-view__feed > div[class*="-video-"] ~ div:not([class*="-video-"]):not(:last-child)
+dzen.*##div[class*=" adv_pos_index-"]
+dzen.*##div[class*="-sidebar__ad"]
+dzen.*##div[class^="dzen-header-desktop__header-"] + div:not([class^="dzen-"]) > div[id]:not([class])
+dzen.*##div[class^="loading-boundary-stacked-layout__content-"] > div[class$="-3n"]:first-child > div:first-child > div[id]:not([class]):first-child
+dzen.*##div[class^="loading-boundary-stacked-layout__content-"] > div[class$="-3n"]:first-child > div:not([class]) > div[id]:not([class]):first-child
+dzen.*##div[id*="page"] > div > div + div[class*="__"] > [class*="__row"] > div[class*="__col"]:last-child
+dzen.*##section ~ .news-top-rubric-heading > h1:only-child:if-not(> a)
+dzen.*#?#div[class*="__col"]:-abp-has(> div[class*="-feed__"][class*="_type_"] > div[class*="loader"])
+dzen.*,yandex.*##.mg-grid__col div[class*="_type_native"]
 newssearch.yandex.*##.news-advert__column
 tv.yandex.*##.recommended-ott
 yandex.*###bk-container
 yandex.*##.b-statcounter + div[class] > div[id][class]
 yandex.*##.card-rtb-one-column-stub
 yandex.*##.dist-popup
-yandex.*##.mg-grid__col > div[class*="_type_native"]
 yandex.*##.mini-suggest__item > a[href^="http://"]
 yandex.*#$?#.mini-suggest__item:has(> a[href^="http://"]) { remove: true; }
 yandex.*##.PSHeaderLogo360-360
@@ -1110,7 +1126,6 @@ yandex.*##body[class*="b-page"] .widgets[role="main"] :not(div) :not(div) :not(d
 yandex.*##div[class*="-header"] ~ div[id*="page"] > div > div[class*="__"] + div[class] > [class*="__row"] > div[class*="__col"]:last-child
 yandex.*##div[class*="-header"] ~ div[id*="page"] div[class*="_banger"]
 yandex.*##div[class*="-header"] ~ div[id*="page"] div[class*="_banner_"]
-yandex.*##div[class*="-header"] ~ div[id*="page"] div[class*="sport-app__advert"]
 yandex.*##div[class*="-navigation-menu__"] + div[class] > [class*="__row"] > div[class*="__col"]:last-child
 yandex.*##div[class*="turbo-advert_type_"]
 yandex.*##div[class^="content "][data-bem] > .content__bottom ~ div[class*="card "]
@@ -1121,7 +1136,6 @@ yandex.*#?#.feed__row[id^="zen-row-"] .feed__item-wrap:-abp-has(> .feed__item [c
 yandex.*#?#.serp-list > .serp-item:-abp-has(> .bno .serp-adv__counter)
 yandex.*#?#.serp-list > .serp-item:-abp-has(> div > div > [data-event-required])
 yandex.*#?#div[class*="-header"] ~ div[id*="page"] div[class*="__col"]:-abp-has(> div[class*="-feed__"][class*="_type_"] > .root123)
-yandex.*#?#div[class*="-header"] ~ div[id*="page"] div[class*="__col"]:-abp-has(> div[class*="-feed__"][class*="_type_"] > div[class*="loader"])
 ||market.yandex.ru/widget/$redirect=nooptext,domain=zen.yandex.by|zen.yandex.kz|zen.yandex.ru|zen.yandex.uz
 ||strm.yandex.ru/get/$script,domain=yandex.ru|yastatic.net
 ||strm.yandex.ru/get/*?sid=*&vsid=
@@ -1145,22 +1159,22 @@ zen.yandex.*##div[class*="yandex-direct"]
 ~afisha.yandex.*,yandex.*##[data-bem*="type"][data-bem*="banner"]:not(body):not(form):not(.content)
 !
 ! Альтернативное решение для старых браузеров
-@@||an.yandex.ru/jserr/1|$domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
+@@||an.yandex.ru/jserr/1|$domain=dzen.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||an.yandex.ru/mapuid/tnscounter/?from=yan_oo-rtb-direct|$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
-@@||an.yandex.ru/mapuid/yandex/$image,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
+@@||an.yandex.ru/mapuid/yandex/$image,domain=dzen.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||an.yandex.ru/meta/*target-ref=*afisha.yandex.$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||an.yandex.ru/meta/*target-ref=*pogoda$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
-@@||an.yandex.ru/partner-code-bundles/*.js|$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
+@@||an.yandex.ru/partner-code-bundles/*.js|$xmlhttprequest,domain=dzen.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||an.yandex.ru/resource/spacer.gif|$image,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
-@@||an.yandex.ru/system/context.js|$domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
-@@||static-mon.yandex.net/static/main.js?pid=$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
+@@||an.yandex.ru/system/context.js|$domain=dzen.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
+@@||static-mon.yandex.net/static/main.js?pid=$xmlhttprequest,domain=dzen.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||yandex.ru/ads/page/*target-ref=*afisha.yandex.$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||yandex.ru/ads/page/*target-ref=*pogoda$xmlhttprequest,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
-@@||yandex.ru/ads/system/context.js|$domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
-@@||yandex.ru/ads/system/header-bidding.js|$domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
+@@||yandex.ru/ads/system/context.js|$domain=dzen.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
+@@||yandex.ru/ads/system/header-bidding.js|$domain=dzen.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
 @@||yastatic.net/daas/atom.js|$domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
-@@||yastatic.net/pcode/adfox/header-bidding.js|$domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
-@@||yastatic.net/pcode/adfox/loader.js|$domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
+@@||yastatic.net/pcode/adfox/header-bidding.js|$domain=dzen.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
+@@||yastatic.net/pcode/adfox/loader.js|$domain=dzen.ru|yandex.by|yandex.kz|yandex.ru|yandex.uz
 !
 ! 4pda.to (ранее 4pda.ru)
 ! верхняя плашка
@@ -1223,7 +1237,7 @@ $document,removeparam=usqid,domain=go.mail.ru|r.mail.ru
 $document,removeparam=usstr,domain=go.mail.ru|r.mail.ru
 $document,removeparam=ustq,domain=go.mail.ru|r.mail.ru
 $document,removeparam=utm_p,domain=pulse.mail.ru
-$document,removeparam=via,domain=yandex.*
+$document,removeparam=via,domain=dzen.*|yandex.*
 $removeparam=?utm_source
 $removeparam=_ga
 $removeparam=_gl
@@ -1287,7 +1301,7 @@ $removeparam=ysclid
 /?from_block=$document,removeparam=from_block,domain=www.kinopoisk.ru
 /?gm&$document,removeparam=gm,domain=116.ru|14.ru|161.ru|164.ru|178.ru|26.ru|29.ru|35.ru|43.ru|45.ru|48.ru|51.ru|53.ru|56.ru|59.ru|60.ru|62.ru|63.ru|68.ru|71.ru|72.ru|74.ru|76.ru|86.ru|89.ru|93.ru|chita.ru|e1.ru|ircity.ru|mgorsk.ru|msk1.ru|ngs.ru|ngs22.ru|ngs24.ru|ngs42.ru|ngs55.ru|ngs70.ru|nn.ru|proizhevsk.ru|provoronezh.ru|sochi1.ru|sterlitamak1.ru|tolyatty.ru|ufa1.ru|v1.ru
 /?readmore$document,xmlhttprequest,removeparam=|,domain=rambler.ru
-/story/*?lang=$document,removeparam=|,domain=yandex.*
+/story/*?lang=$document,removeparam=|,domain=dzen.*|yandex.*
 ://aliexpress.*.htm?spm=$document,removeparam=|,domain=aliexpress.*
 =ukraine_news&utm_$document,removeparam=|utm_
 ?*r_audience=$document,removeparam=|,domain=ria.com
@@ -1298,7 +1312,7 @@ $removeparam=ysclid
 ?e=lfm$document,removeparam=|,domain=sports.ru
 ?from=$document,removeparam=|from,domain=3dnews.ru|7days.ru|~auth.mail.ru|auto.ru|autonews.ru|habr.com|igromania.ru|kommersant.ru|mail.ru|ntv.ru|quote.ru|rbc.ru|ridus.ru|sportrbc.ru|sports.ru
 ?from=shapka$document,xmlhttprequest,removeparam=|,domain=auto.ru
-?from=tabbar$document,removeparam=|from,domain=yandex.*
+?from=tabbar$document,removeparam=|from,domain=ya.ru|yandex.*
 ?from=yanews$document,removeparam=|
 ?media&ila_camaign=$document,removeparam=media
 ?nid=*show-uid=$document,removeparam=|,domain=market.yandex.*
@@ -1316,7 +1330,7 @@ aff_fcid=$document,removeparam=|,domain=aliexpress.*|~campaign.aliexpress.com
 algo_pvid=$document,removeparam=|,domain=aliexpress.*
 block_click=$removeparam=block_click,domain=rambler.ru
 fbclid=$document,removeparam=fbclid
-from=*_portal&lang=$document,removeparam=|,domain=yandex.*
+from=*_portal&lang=$document,removeparam=|,domain=dzen.*|yandex.*
 mt_click$document,removeparam=|,domain=mail.ru|ok.ru
 mt_sub$document,removeparam=|,domain=mail.ru|ok.ru
 smotri_id=$document,removeparam=|smotri_id,domain=mail.ru

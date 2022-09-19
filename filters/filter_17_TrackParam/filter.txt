@@ -13,6 +13,8 @@
 ! Good: $removeparam=utm_id
 ! Bad:  $removeparam=utm_id,domain=example.org (for instance, should be in specific.txt)
 !
+! Mindbox email tracking
+$removeparam=mindbox-message-key
 ! klaviyo.com email tracking
 $removeparam=_kx
 ! https://github.com/AdguardTeam/AdguardFilters/issues/123544
@@ -213,6 +215,12 @@ $removeparam=fb_source
 ! Bad: ||example.org^$xmlhttprequest,redirect=noopvast-3.0 (for instance, should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/129807
+||bunte.de^$removeparam=umt_source
+! https://github.com/AdguardTeam/AdguardFilters/issues/129679
+||store.udiscovermusic.com^$removeparam=/utm_/
+! https://github.com/uBlockOrigin/uAssets/issues/14653
+||hktvmall.com/yuicombo?$script,removeparam=/^\/_ui\/desktop\/common\/js\/uiAnalytics\//
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128820
 ||go.xlivrdr.com^$removeparam
 ||stripchat.com^$removeparam=affiliateId
@@ -822,6 +830,7 @@ $removeparam=a_aid,domain=expressvpn.com|vpnarea.com
 ! ||amazon.*$removeparam=s - breaks URLs which includes it to sort
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110571 - disable rule if issue happens again: broke adding article to basket when viewing all offers
 !
+||amazon.*$removeparam=AssociateTag
 ||amazon.*$removeparam=ascsubtag
 ||amazon.*$removeparam=c
 ||amazon.*$removeparam=camp
@@ -1054,10 +1063,6 @@ $removeparam=dclid
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
-! TEMPORARY
-! https://github.com/AdguardTeam/tsurlfilter/issues/24
-!+ PLATFORM(ext_chromium, ext_ff, ext_opera)
-@@||userscript.zone^$removeparam=utm_campaign
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124425
 ! Fixing a redirect loop

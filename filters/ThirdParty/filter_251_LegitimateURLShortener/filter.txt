@@ -1,6 +1,6 @@
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 5September2022v1
+! OriginalVersion: 14September2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -400,9 +400,9 @@ $removeparam=mkt_tok
 $removeparam=ampcid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1015504
 $removeparam=affname
-$removeparam=MID,domain=~media-cdn.costco.*
+$removeparam=MID,domain=~media-cdn.costco.*|~community.arubanetworks.com
 ! https://www.greatrun.org/train-and-prepare/training-plans/?eid=AJ935930567982484926441023zzzzz64bccfd443fc61ff2c06e3cf8c7b889a2061064e5d5db55e171241354f241bed00
-$removeparam=eid,document,denyallow=embed.tapkal.fi,domain=~activationspot.com|~anidb.net|~howlongtobeat.com|~piwigo.org|~vmware.com|~eventbrite.*|~egift.blackhawknetwork.com|~redeem.giftcards.com|~scopus.com
+$removeparam=eid,document,denyallow=embed.tapkal.fi,domain=~activationspot.com|~anidb.net|~howlongtobeat.com|~piwigo.org|~vmware.com|~eventbrite.*|~egift.blackhawknetwork.com|~redeem.giftcards.com|~scopus.com|~jugem.jp
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1031533
 $removeparam=nr_email_referer
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1046231
@@ -2899,6 +2899,15 @@ $removeparam=pb,domain=fullxh.com|hamsterix.*|megaxh.com|unlockxh4.com|xhamster.
 $removeparam=sub,domain=allboner.com|twinkvideos.com
 ! https://sims.fandom.com/wiki/Fairy?so=search
 ||fandom.com^$removeparam=so
+! https://www.lindex.com/fi?affiliate_source=adtraction
+||lindex.com^$removeparam=affiliate_source
+! https://long-hands-in-the-cornfield.tumblr.com/post/694818880757055489/last-night-i-had-a-dream-that-i-told-a-joke-that?is_related_post=1
+||tumblr.com^$removeparam=is_related_post
+! https://www.xbox.com/nb-no/games/store/lost-words-beyond-the-page/9n14mfn0dv4k?rtc=1
+||xbox.com^$removeparam=rtc
+! https://www.tokopedia.com/lunashop78/buku-stiker-warna-my-little-pony-be-kind-together-coloring-book?extParam=ivf%3Dfalse%26src%3Dsearch&refined=true
+||tokopedia.com^$removeparam=extParam
+||tokopedia.com^$removeparam=refined
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———

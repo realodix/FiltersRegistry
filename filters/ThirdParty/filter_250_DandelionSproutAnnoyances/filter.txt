@@ -1,12 +1,12 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 18July2022v2-Beta-Compilation
-! Expires: 3 days
+! OriginalVersion: 17September2022v2-Beta-Compilation
+! Expires: 2 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
 ! What this broad compilation does not block: Newsletters, cookie banners, social media links to company pages
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
-! OriginalVersion: 03September2022v1
+! OriginalVersion: 14September2022v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -414,6 +414,8 @@ playpilot.com##.android-prompt
 ###getTheAppFooter
 kurashiru.com##.footer-image-wrapper
 ##.PcToAppBanner
+tokopedia.com##div[id*=header] div[class^=css-]> a[href="/mobile-apps/"]
+tokopedia.com#?#div[id*=header] i:has(+ a[href="/mobile-apps/"])
 ! (https://github.com/AdguardTeam/AdguardFilters/issues/116903)
 !!!twitter.com###layers > div:nth-of-type(2):last-of-type
 ! Pinterest
@@ -451,7 +453,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 06September2022v1
+! OriginalVersion: 19September2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -474,7 +476,7 @@ linkedin.com#$?#body { overflow: auto !important; }
 ||top^$document,domain=~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~techblog.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^$document
-||agency^$document,domain=~battlefield.agency
+||agency^$document,domain=~battlefield.agency|~shortcut.agency
 ||gdn^$document
 ||bid^$document
 ||ooo^$document
@@ -494,7 +496,7 @@ www.google.*##.g:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"]
 www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 www.google.*##.g:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"]))
 www.google.*##.g:has(a[href*=".loan/"])
-www.google.*##.g:has(a[href*=".agency/"])
+www.google.*##.g:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 www.google.*##.g:has(a[href*=".gdn/"])
 www.google.*##.g:has(a[href*=".bid/"])
 www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"]))
@@ -513,7 +515,7 @@ www.google.*##a[oncontextmenu][href*=".gq/"]:not([href*="deimos.gq"], [href*="in
 www.google.*##a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*=voitures], [href*=assembleenationale-rca], [href*=cps-rca], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".loan/"]:upward(2)
-www.google.*##a[oncontextmenu][href*=".agency/"]:upward(2)
+www.google.*##a[oncontextmenu][href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]):upward(2)
 www.google.*##a[oncontextmenu][href*=".gdn/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".bid/"]:upward(2)
 www.google.*##a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"]):upward(2)
@@ -528,7 +530,7 @@ duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="voitures.cf"], [data-domain*="assembleenationale-rca.cf"], [data-domain*="cps-rca.cf"], [data-domain*="acap.cf"], [data-domain*="miraculousladybug.cf"], [data-domain*="scrat.cf"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="zikrap.pw"], [data-domain*="buttercup.pw"], [data-domain*="rezka.pw"], [data-domain*="darkcrystal.pw"], [data-domain*="xor.pw"], [data-domain*="fullhdfilmizlesene.pw"], [data-domain*="b00k.pw"], [data-domain*="gopass.pw"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".loan"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]:not([data-domain*="battlefield.agency"], [data-domain*="shortcut.agency"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"], [data-domain$="shucks.top"], [data-domain$="1stream.top"], [data-domain*="ambr.top"], [data-domain*="techblog.top"])
@@ -540,7 +542,7 @@ bing.com##.b_algo:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"
 bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 bing.com##.b_algo:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"]))
 bing.com##.b_algo:has(a[href*=".loan/"])
-bing.com##.b_algo:has(a[href*=".agency/"])
+bing.com##.b_algo:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 bing.com##.b_algo:has(a[href*=".gdn/"])
 bing.com##.b_algo:has(a[href*=".bid/"])
 bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"]))
@@ -791,8 +793,7 @@ coolrom.com.au,coolrom.com##.download_link
 ||vodahelp.sytes.net^$document
 ||witkey.com^$document
 ! ——— Browser extension store entries for notoriously poor or malicious adblocker forks ———
-! Note: Currently the entries only work properly on AdGuard for Windows/Mac, due to what seems to be limitations placed on browser extensions.
-! I offer a 10€ bounty to anyone who know how to make the entries work within their intended browsers with regular browser extensions (e.g. Chrome Web Store in Chrome with (uBO|AdGuard Browser Extension|ABP); Mozilla Add-ons in Firefox)
+! Note: Currently the Chrome Web Store entries only work properly for Chrome users on AdGuard for Windows/Mac, due to limitations placed on browser extensions; see https://github.com/gorhill/uBlock/wiki/Privileged-Pages
 ! Chrome Web Store
 chrome.google.com#?#.webstore-test-wall-tile:has-text(www.ublock.org)
 chrome.google.com#?#.webstore-test-wall-tile:has-text(uBlock Plus Adblocker)
@@ -823,6 +824,7 @@ chrome.google.com#?#.webstore-test-wall-tile:has-text(otih-oith.us.to)
 chrome.google.com#?#.webstore-test-wall-tile:has-text(/Adblock adblock/i)
 chrome.google.com#?#.webstore-test-wall-tile:has-text(/Adblock Origin/i)
 ! Mozilla Add-ons
+! These entries can be used in Firefox with regular browser extensions (uBO|AdGuard Browser Extension|ABP) by opening about:config, removing the "addons.mozilla.com" part from "extensions.webextensions.restrictedDomains", and then creating a new string called "privacy.resistFingerprinting.block_mozAddonManager" (That exact capitalisation must be used) set to (Boolean) true.
 addons.mozilla.org#?#li.SearchResult:has-text(uBlock, LLC)
 addons.mozilla.org#?#li.SearchResult:has-text(Adblocker for Firefox)
 addons.mozilla.org#?#li.SearchResult:has-text(AdsBlocker)
@@ -2678,9 +2680,11 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||telemetry-urs-microsoft.com^$all
 ||top-captcharesolver.$all
 ||winrar-desktop.com^$all
+!#if !ext_ublock
 46.161.27.*$network
 78.128.112.*$network
 179.60.146.*$network
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121544
 ||trafredirtds.com^$all
 .com/landers/iphone*_spin$document
@@ -3066,6 +3070,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||z-prize.icu^$all
 ||zfcurqe.art^$all
 ||zuginmw.art^$all
+!#if !ext_ublock
 /^178\.253\.[0-7]\.[0-9]{1,3}$/$network
 178.253.14.*$network
 178.253.15.*$network
@@ -3074,6 +3079,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 178.253.46.*$network
 178.253.47.*$network
 178.253.54.*$network
+!#endif
 ||85.17.31.152^$all
 ||95.211.26.202^$all
 ! https://kommunikasjon.ntb.no/pressemelding/power-advarer-mot-sms-svindel?publisherId=17847615&releaseId=17937583
@@ -3091,8 +3097,10 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||wznp.link^$all
 ||158.247.212.220^$document
 ||165.227.168.212^$document
+!#if !ext_ublock
 ! https://www.reddit.com/r/engrish/comments/w6u4uy/received_this_text_message_yesterday_i_am_very/
 162.241.115.*$network
+!#endif
 ! https://dinside.dagbladet.no/mobil/ikke-la-deg-friste/76730599
 ||k-yw.com^$all
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125285
@@ -3367,6 +3375,11 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||147.135.253.55^$document
 ! https://github.com/uBlockOrigin/uAssets/issues/14569 → https://www.virustotal.com/gui/url/b819586938326577d759d8024abe3e0e6de1c853d6b67824daf6f613fba0f63b/detection (https://app.any.run/tasks/5914a712-1a73-4432-b89a-ca0627a24ade)
 ||bnbdeal.net^$all
+! https://github.com/AdguardTeam/AdguardFilters/issues/129414
+!+ NOT_OPTIMIZED
+/^http://imgblaze.net/[a-z0-9]{6}$/$document,popup
+!+ NOT_OPTIMIZED
+/^http://imgblaze.net/[a-z0-9]{6}$/$third-party,subdocument
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -8194,8 +8207,10 @@ toorgle.net##.join
 ||192.243.59.12^$document
 ||192.243.59.13^$document
 ||192.243.59.20^$document
+!#if !ext_ublock
 /^(https?://)?192\.243\.59\.[0-9]{1,3}($|/)/$document
 192.243.59.*$network
+!#endif
 ! rule34hentai.net when uBlock Filters and AdGuard Base are turned off
 ||eivbjsegbino.com^$all
 ||mczahprdql.com^$all
@@ -8537,11 +8552,12 @@ toorgle.net##.join
 ||wanmei-hy.ru^$all
 ||wanmeizi.ru^$all
 ||widesdays.com^$all
-194.226.139.*$network
 ||194.226.139.121^$all
 ||194.226.139.7^$all
 ||95.181.157.36^$all
 ||95.181.172.204^$all
+!#if !ext_ublock
+194.226.139.*$network
 ! AS209813 (https://github.com/AdguardTeam/AdguardFilters/issues/114618#issuecomment-1100702530; currently specific to tools that support CIDR blocking)
 5.8.67.*$network
 5.101.45.*$network
@@ -8555,6 +8571,7 @@ toorgle.net##.join
 46.161.31.*$network
 91.243.41.*$network
 91.243.42.*$network
+!#endif
 !#if false
 5.8.44.0/22
 5.101.46.0/23
@@ -9523,6 +9540,8 @@ toorgle.net##.join
 ||147.135.16.27^$document
 ! https://www.google.no/search?q=mlp+g5&newwindow=1&tbm=isch&oq=mlp+g5&sclient=img
 ||ingeniovirtual.com^$document
+! Spambot posts on Tumblr (19/09/2022)
+tumblr.com#?#.post,div[style^="width: "] > div[tabindex]:has(a[href^="https://href.li/?https://bit.ly/"])
 ! Other
 ||foxsportnetwork.com^$all
 ||pksauniversity.com^$all
@@ -9775,7 +9794,7 @@ get.adobe.com###offersInformationPane
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 06September2022v1
+! OriginalVersion: 15September2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -9798,7 +9817,7 @@ get.adobe.com###offersInformationPane
 ||top^$document,domain=~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~techblog.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^$document
-||agency^$document,domain=~battlefield.agency
+||agency^$document,domain=~battlefield.agency|~shortcut.agency
 ||gdn^$document
 ||bid^$document
 ||ooo^$document
@@ -9818,7 +9837,7 @@ www.google.*##.g:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"]
 www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 www.google.*##.g:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"]))
 www.google.*##.g:has(a[href*=".loan/"])
-www.google.*##.g:has(a[href*=".agency/"])
+www.google.*##.g:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 www.google.*##.g:has(a[href*=".gdn/"])
 www.google.*##.g:has(a[href*=".bid/"])
 www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"]))
@@ -9837,7 +9856,7 @@ www.google.*#?#*:has(> * > a[oncontextmenu][href*=".gq/"]:not([href*="deimos.gq"
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*=voitures], [href*=assembleenationale-rca], [href*=cps-rca], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".loan/"])
-www.google.*#?#*:has(> * > a[oncontextmenu][href*=".agency/"])
+www.google.*#?#*:has(> * > a[oncontextmenu][href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".gdn/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".bid/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"]))
@@ -9852,7 +9871,7 @@ duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="voitures.cf"], [data-domain*="assembleenationale-rca.cf"], [data-domain*="cps-rca.cf"], [data-domain*="acap.cf"], [data-domain*="miraculousladybug.cf"], [data-domain*="scrat.cf"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="zikrap.pw"], [data-domain*="buttercup.pw"], [data-domain*="rezka.pw"], [data-domain*="darkcrystal.pw"], [data-domain*="xor.pw"], [data-domain*="fullhdfilmizlesene.pw"], [data-domain*="b00k.pw"], [data-domain*="gopass.pw"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".loan"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]:not([data-domain*="battlefield.agency"], [data-domain*="shortcut.agency"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"], [data-domain$="shucks.top"], [data-domain$="1stream.top"], [data-domain*="ambr.top"], [data-domain*="techblog.top"])
@@ -9864,7 +9883,7 @@ bing.com##.b_algo:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"
 bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
 bing.com##.b_algo:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"]))
 bing.com##.b_algo:has(a[href*=".loan/"])
-bing.com##.b_algo:has(a[href*=".agency/"])
+bing.com##.b_algo:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 bing.com##.b_algo:has(a[href*=".gdn/"])
 bing.com##.b_algo:has(a[href*=".bid/"])
 bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"]))
@@ -10111,8 +10130,7 @@ coolrom.com.au,coolrom.com##.download_link
 ||vodahelp.sytes.net^$document
 ||witkey.com^$document
 ! ——— Browser extension store entries for notoriously poor or malicious adblocker forks ———
-! Note: Currently the entries only work properly on AdGuard for Windows/Mac, due to what seems to be limitations placed on browser extensions.
-! I offer a 10€ bounty to anyone who know how to make the entries work within their intended browsers with regular browser extensions (e.g. Chrome Web Store in Chrome with (uBO|AdGuard Browser Extension|ABP); Mozilla Add-ons in Firefox)
+! Note: Currently the Chrome Web Store entries only work properly for Chrome users on AdGuard for Windows/Mac, due to limitations placed on browser extensions; see https://github.com/gorhill/uBlock/wiki/Privileged-Pages
 ! Chrome Web Store
 chrome.google.com#?#.webstore-test-wall-tile:has-text(www.ublock.org)
 chrome.google.com#?#.webstore-test-wall-tile:has-text(uBlock Plus Adblocker)
@@ -10143,6 +10161,7 @@ chrome.google.com#?#.webstore-test-wall-tile:has-text(otih-oith.us.to)
 chrome.google.com#?#.webstore-test-wall-tile:has-text(/Adblock adblock/i)
 chrome.google.com#?#.webstore-test-wall-tile:has-text(/Adblock Origin/i)
 ! Mozilla Add-ons
+! These entries can be used in Firefox with regular browser extensions (uBO|AdGuard Browser Extension|ABP) by opening about:config, removing the "addons.mozilla.com" part from "extensions.webextensions.restrictedDomains", and then creating a new string called "privacy.resistFingerprinting.block_mozAddonManager" (That exact capitalisation must be used) set to (Boolean) true.
 addons.mozilla.org#?#li.SearchResult:has-text(uBlock, LLC)
 addons.mozilla.org#?#li.SearchResult:has-text(Adblocker for Firefox)
 addons.mozilla.org#?#li.SearchResult:has-text(AdsBlocker)
@@ -11977,9 +11996,11 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||telemetry-urs-microsoft.com^$all
 ||top-captcharesolver.$all
 ||winrar-desktop.com^$all
+!#if !ext_ublock
 46.161.27.*$network
 78.128.112.*$network
 179.60.146.*$network
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/121544
 ||trafredirtds.com^$all
 .com/landers/iphone*_spin$document
@@ -12365,6 +12386,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||z-prize.icu^$all
 ||zfcurqe.art^$all
 ||zuginmw.art^$all
+!#if !ext_ublock
 /^178\.253\.[0-7]\.[0-9]{1,3}$/$network
 178.253.14.*$network
 178.253.15.*$network
@@ -12373,6 +12395,7 @@ zombooru.com##a[href="http://www.hard55.com"]
 178.253.46.*$network
 178.253.47.*$network
 178.253.54.*$network
+!#endif
 85.17.31.152$network
 95.211.26.202$network
 ! https://kommunikasjon.ntb.no/pressemelding/power-advarer-mot-sms-svindel?publisherId=17847615&releaseId=17937583
@@ -12390,8 +12413,10 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||wznp.link^$all
 158.247.212.220$network
 165.227.168.212$network
+!#if !ext_ublock
 ! https://www.reddit.com/r/engrish/comments/w6u4uy/received_this_text_message_yesterday_i_am_very/
 162.241.115.*$network
+!#endif
 ! https://dinside.dagbladet.no/mobil/ikke-la-deg-friste/76730599
 ||k-yw.com^$all
 ! https://github.com/AdguardTeam/AdguardFilters/issues/125285
@@ -12666,6 +12691,11 @@ zombooru.com##a[href="http://www.hard55.com"]
 147.135.253.55$network
 ! https://github.com/uBlockOrigin/uAssets/issues/14569 → https://www.virustotal.com/gui/url/b819586938326577d759d8024abe3e0e6de1c853d6b67824daf6f613fba0f63b/detection (https://app.any.run/tasks/5914a712-1a73-4432-b89a-ca0627a24ade)
 ||bnbdeal.net^$all
+! https://github.com/AdguardTeam/AdguardFilters/issues/129414
+!+ NOT_OPTIMIZED
+/^http://imgblaze.net/[a-z0-9]{6}$/$document,popup
+!+ NOT_OPTIMIZED
+/^http://imgblaze.net/[a-z0-9]{6}$/$third-party,subdocument
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -17482,8 +17512,10 @@ toorgle.net##.join
 192.243.59.12$network
 192.243.59.13$network
 192.243.59.20$network
+!#if !ext_ublock
 /^(https?://)?192\.243\.59\.[0-9]{1,3}($|/)/$document
 192.243.59.*$network
+!#endif
 ! rule34hentai.net when uBlock Filters and AdGuard Base are turned off
 ||eivbjsegbino.com^$all
 ||mczahprdql.com^$all
@@ -17824,11 +17856,12 @@ toorgle.net##.join
 ||wanmei-hy.ru^$all
 ||wanmeizi.ru^$all
 ||widesdays.com^$all
-194.226.139.*$network
 194.226.139.121$network
 194.226.139.7$network
 95.181.157.36$network
 95.181.172.204$network
+!#if !ext_ublock
+194.226.139.*$network
 ! AS209813 (https://github.com/AdguardTeam/AdguardFilters/issues/114618#issuecomment-1100702530; currently specific to tools that support CIDR blocking)
 5.8.67.*$network
 5.101.45.*$network
@@ -17842,6 +17875,7 @@ toorgle.net##.join
 46.161.31.*$network
 91.243.41.*$network
 91.243.42.*$network
+!#endif
 !#if false
 5.8.44.0/22
 5.101.46.0/23
@@ -19482,12 +19516,12 @@ deezer.com#?#.page-alerts:has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 05September2022v2
+! OriginalVersion: 07September2022v2
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! This is an extension file, not an independent list.
-! Extension file's version: 29August2022v3-Extension
+! Extension file's version: 19September2022v1-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -19579,7 +19613,7 @@ segmentfault.com#$?#.modal-open [style]:is([data-padding-right], [data-margin-ri
 !! Uncloseable prompt saying "We know you were really enjoying yourself, but we're going to need a little more info." (31/05/2022)
 !!!tumblr.com##style:has-text(/^body /):remove()
 tumblr.com#$?#style:has-text(/^body /):has(use[href*=logo-tumblr]) { remove: true; }
-tumblr.com###glass-container
+tumblr.com#?##glass-container:has(use[href*=logo-tumblr])
 !! Floaty on bottom
 ||tumblr.com^$removeparam=/^source=login_/
 tumblr.com##div[style^="background:#7c5cff;"]:upward(1)
@@ -19766,11 +19800,11 @@ tumblr.com##div[class][style^="background: rgb(124, 92, 255); "]:only-of-type
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124718
 ##.tmblr-iframe--follow-teaser
 ! deviantART ↪️📛
-! https://www.deviantart.com/radasus/art/Patreon-Rubber-Judy-863232827 (NSFW; thankfully not NSFL, which is what most other DA art is)
+! https://www.deviantart.com/demotex/art/Latex-Polly-903934930 (NSFW; thankfully not NSFL, which is what most other DA art is)
 deviantart.com##div[style] > div[class^=_] + div:not([class^=_]):nth-of-type(2):last-of-type
 deviantart.com#$?#div[style*="wixmp.com/"] { filter: none !important }
 deviantart.com##div[style*="wixmp.com/"]::before
-deviantart.com##div[style^="width:"] > div[class]:nth-of-type(2):last-of-type
+deviantart.com##div[style^="width:"][class]:not([class*=" "]) > div[class]:nth-of-type(2):last-of-type
 ! Small login banner on bottom on some search pages
 deviantart.com##header[data-hook=top_nav]:first-of-type + div + div[class^="_"][class*=" "]:last-of-type
 ! Reddit
@@ -19954,7 +19988,7 @@ investing.com###PromoteSignUpPopUp
 ! Removes a small login prompt in the bottom left
 context.reverso.net###register-popup-bottom
 ! Title: 🌫 Media Player Gradient Remover
-! OriginalVersion: 10August2022v1-Alpha
+! OriginalVersion: 13September2022v2-Alpha
 ! Expires: 6 days
 ! Description: So you're trying to enjoy a new episode of Butterbean's Café, but you keep bumping into the mouse, which causes the control bar to warp the colours on a third of a screen which ruins the scenic view, and you wait impatiently for the colours to return to normal, which ruins your fun and immersion? If so, this is the perfect list for you.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -19962,6 +19996,9 @@ viaplay.*##.backdrop-bottom
 telenor.no##section.banner-hero > .gradient
 hbomax.com#$?#.vjs-control-bar { background: none !important }
 hbomax.com#$?#.video-js ~ div { background-image: none !important }
+disneyplus.com##.controls__header::before
+disneyplus.com##.controls__footer::before
+rakuten.tv#$?#div[data-testid^=video_controls_] { background: none !important }
 ! netflix.com
 ##.title-episode-gradient:not(html, body)
 netflix.com#$#div[class^=watch-video--][class*="-container "] { background-image: none !important }
@@ -19985,12 +20022,11 @@ www.youtube.com##div[class*="-gradient-bottom "]
 www.youtube.com##div[class$=-gradient-bottom]
 ! ——— Help wanted for: ———
 ! Hulu
-! Disney+
 ! BBC iPlayer
 ! Prime Video
 ! And just about any other streaming or rental service out there in the world as well, especially USA- or nation-specific ones.
 ! Title: 💐 Anti-'Awful comments' list
-! OriginalVersion: 13July2022v1-Beta
+! OriginalVersion: 08September2022v1-Beta
 ! Expires: 7 days
 ! Description: This is a somewhat alternate approach to the usual anti-comment-section lists, as this list only removes those comment sections that are filled with exceptionally bad comments.
 ! Note: Out of sheer massive spite against how some newssites deliberately run userpolls on the most contentious articles and only those articles, this list also targets such userpolls now.
@@ -20009,6 +20045,7 @@ realclearpolitics.com##div[data-spmark=social-content]
 nottinghampost.com###comments-wrapper
 thejournal.ie,city-countyobserver.com###comments
 indiatimes.com##div[class$="cmtwrapper "]
+ghacks.net###comments
 ! ——— Anti-'Other kinds of spam comments' ———
 soundcloud.com#?#.commentItem:has-text(You will be kissed on)
 en.greatfire.org###comments
@@ -21001,7 +21038,7 @@ hdfilmcehennemi.film##.poster-imdb
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 5September2022v1
+! OriginalVersion: 14September2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -21401,9 +21438,9 @@ $removeparam=mkt_tok
 $removeparam=ampcid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1015504
 $removeparam=affname
-$removeparam=MID,domain=~media-cdn.costco.*
+$removeparam=MID,domain=~media-cdn.costco.*|~community.arubanetworks.com
 ! https://www.greatrun.org/train-and-prepare/training-plans/?eid=AJ935930567982484926441023zzzzz64bccfd443fc61ff2c06e3cf8c7b889a2061064e5d5db55e171241354f241bed00
-$removeparam=eid,document,denyallow=embed.tapkal.fi,domain=~activationspot.com|~anidb.net|~howlongtobeat.com|~piwigo.org|~vmware.com|~eventbrite.*|~egift.blackhawknetwork.com|~redeem.giftcards.com|~scopus.com
+$removeparam=eid,document,denyallow=embed.tapkal.fi,domain=~activationspot.com|~anidb.net|~howlongtobeat.com|~piwigo.org|~vmware.com|~eventbrite.*|~egift.blackhawknetwork.com|~redeem.giftcards.com|~scopus.com|~jugem.jp
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1031533
 $removeparam=nr_email_referer
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1046231
@@ -23900,6 +23937,15 @@ $removeparam=pb,domain=fullxh.com|hamsterix.*|megaxh.com|unlockxh4.com|xhamster.
 $removeparam=sub,domain=allboner.com|twinkvideos.com
 ! https://sims.fandom.com/wiki/Fairy?so=search
 ||fandom.com^$removeparam=so
+! https://www.lindex.com/fi?affiliate_source=adtraction
+||lindex.com^$removeparam=affiliate_source
+! https://long-hands-in-the-cornfield.tumblr.com/post/694818880757055489/last-night-i-had-a-dream-that-i-told-a-joke-that?is_related_post=1
+||tumblr.com^$removeparam=is_related_post
+! https://www.xbox.com/nb-no/games/store/lost-words-beyond-the-page/9n14mfn0dv4k?rtc=1
+||xbox.com^$removeparam=rtc
+! https://www.tokopedia.com/lunashop78/buku-stiker-warna-my-little-pony-be-kind-together-coloring-book?extParam=ivf%3Dfalse%26src%3Dsearch&refined=true
+||tokopedia.com^$removeparam=extParam
+||tokopedia.com^$removeparam=refined
 !#if !env_mobile
 ! ——— Mobile ——— !
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
@@ -23950,20 +23996,20 @@ buffalonews.com#%#//scriptlet('ubo-set.js', 'lee_trkLinkSrc', 'noopFunc')
 !#if !env_mobile
 !#if !adguard_app_mac
 ! Title: 🈺 Japanese Text Softener
-! OriginalVersion: 31May2022v3-Beta
+! OriginalVersion: 18September2022v1-Beta
 ! Expires: 6 days
 ! Description: The font situation on many Japanese websites is kind-of absolutely atrocious on Windows (Other OSs are much less affected). They use super-stiff janky fonts resemblant of Windows 95 or Amiga. And even worse, many of the sites also default to the stiff Japanese fonts' atrocious Latin letter types. Here's how to use the sites in a way that is compatible with the 3rd decade of the 21st century.
 ! 🇯🇵: Windows における多くの日本語サイトのフォント状況はまったくもってゾッとします（他のOSでは遥かにマシです）。Windows 95 か Amiga を思わせるギッザギザのクズフォントが使用されており、さらに悪いことにそういったサイトの多くは、欧文書体に至ってもこのゾッとするギザギザ日本語フォントをデフォルトとして採用しているのです。令和の時代に相応しくサイトを利用する方法は次のとおりです。
 ! Note: I understand it as such that Japanese tech users can get annoyed about some Unicode font blunders that led to some kanji looking incorrect in many fonts. If any of the below fonts are affected by this, inform me about it on GitHub.
 ! Note 2: Many more sites can be fixed by installing "Optional features → Show features → Extra Japanese fonts" in Windows 10/11 to get the Meiryu font (but whose kana are ugly); or by uninstalling "MS PGothic" from your system entirely. But even then, Latin letters can look slightly strange.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com#$#body { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com#$#div { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com#$#li { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com#$#a { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com#$#strong { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com#$#dd { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
-tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com#$#span { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com,eagate.573.jp#$#body { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com,eagate.573.jp#$#div { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com,eagate.573.jp#$#li { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com,eagate.573.jp#$#a { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com,eagate.573.jp#$#strong { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com,eagate.573.jp#$#dd { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
+tinami.com,doorblog.jp,logroid.blogspot.com,yahoo.co.jp,nikkan.co.jp,kamigame.jp,yomiuri.co.jp,www.nikkei.com,hosyusokuhou.jp,fgomatomeplus.com,geekjob.jp,vippers.jp,rakuten.co.jp,bloomberg.co.jp,iphone-mania.jp,taking-a-stand.jp,jmty.jp,1000mg.jp,mixi.jp,sankei.com,nicoco.net,originalnews.nico,weblio.jp,cdjapan.co.jp,hentai-image.com,huffingtonpost.jp,2nn.jp,www.jorudan.co.jp,weathernews.jp,dmkt-sp.jp,suumo.jp,ascii.jp,news.infoseek.co.jp,tenki.jp,wowkorea.jp,kakaku.com,vector.co.jp,ocn.ne.jp,athome.co.jp,suruga-ya.jp,faq.radiko.jp,famitsu.com,hentai-img.com,nttxstore.jp,mineo.jp,eposcard.co.jp,pex.jp,kabutan.jp,livedoor.com,dmm.co.jp,kitimama-matome.net,amy.tokyo,qa.nicovideo.jp,account.nicovideo.jp,ch.nicovideo.jp,seiga.nicovideo.jp,cookpad.com,platinedispositif.net,jp.ign.com,impress.co.jp,automaton-media.com,gamewith.jp,blog.esuteru.com,doope.jp,entamepost.jp,gamepedia.jp,nicenature.top,mora.jp,omni7.jp,gigazine.net,japan-animemusic.com,jp.nexon.com,getchu.com,dmm.com,eagate.573.jp#$#span { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
 store.playstation.com#$#html[lang=ja] body { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
 store.playstation.com#$#html[lang=ja] div { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
 store.playstation.com#$#html[lang=ja] li { font-family: "Segoe UI", "Calibri", "Verdana", "Ubuntu", "Noto Sans CJK", "Hiragino Maru Gothic Pro W4", "ヒラギノ丸ゴ W4", "Hiragino Maru Gothic Pro W3", "ヒラギノ丸ゴ W3", "Meiryo", "メイリオ", "Ume Gothic", "Ume UI Gothic" !important }
@@ -24612,6 +24658,9 @@ positivr.fr##.viously-sticked
 !#endif
 positivr.fr#$#.viously-sticked { position: absolute !important; top: 0 !important; left: 0 !important; bottom: 0 !important; right: 0 !important; width: 100% !important;  height: 100% !important; z-index: 1 !important; display: block !important }
 positivr.fr##.viously-sticked #unstick-button
+! https://github.com/easylist/easylist/issues/13275
+[$path=/^((?!\/watch).)*$/]www.youtube.com#$?# ytd-miniplayer { remove: true; }
+!!!www.youtube.com##:not(:matches-path(/watch)) #movie_player video:remove() (Seems to cause YT embeds on Discord to show only a black background.)
 !#if !env_mobile
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124667 (Probably can't be in Falukorv List because that list adds whitelistings, not remove them.)
 @@://googleadservices.com^|$badfilter

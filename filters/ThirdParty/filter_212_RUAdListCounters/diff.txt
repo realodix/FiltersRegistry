@@ -16,8 +16,10 @@ razlozhi.*##div[class][style*="width:"][style*="height"][style*="/themes/default
 /^https?://mail\.yandex\.[^\s]{125,}/$empty,script,~third-party
 ! Rule "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$empty,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz" converted to: "/^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$redirect=nooptext,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz"
 /^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$empty,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
-! Rule "mail.yandex.*##html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href^="https://yandex."]:style(top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important)" converted to: "mail.yandex.*#$#html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href^="https://yandex."] { top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important }"
-mail.yandex.*##html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href^="https://yandex."]:style(top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important)
+! Rule "dzen.*##+js(set-constant, Object.prototype.shouldShowServiceChangesPopup, undefined)" converted to: "dzen.*#%#//scriptlet('ubo-set-constant.js', 'Object.prototype.shouldShowServiceChangesPopup', 'undefined')"
+dzen.*##+js(set-constant, Object.prototype.shouldShowServiceChangesPopup, undefined)
+! Rule "mail.yandex.*##html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href="https://ya.ru"]:style(top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important)" converted to: "mail.yandex.*#$#html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href="https://ya.ru"] { top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important }"
+mail.yandex.*##html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href="https://ya.ru"]:style(top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important)
 ! Rule "yandex.*##.mini-suggest__item:has(> a[href^="http://"]):remove()" converted to: "yandex.*#$?#.mini-suggest__item:has(> a[href^="http://"]) { remove: true; }"
 yandex.*##.mini-suggest__item:has(> a[href^="http://"]):remove()
 ! Rule "yandex.*##.PSHeaderLogo360 > a[href^="https://360.yandex."]:style(pointer-events: none !important)" converted to: "yandex.*#$#.PSHeaderLogo360 > a[href^="https://360.yandex."] { pointer-events: none !important }"
@@ -28,10 +30,10 @@ yandex.*##.PSHeaderLogo360 > a[href^="https://360.yandex."]:style(pointer-events
 ||yastatic.net/*/front-maps-static/*/chunks/promo/$empty
 ! Rule "||yastatic.net/yandex-video-player-iframe-api-bundles-stable/*?adsdk-try=$empty" converted to: "||yastatic.net/yandex-video-player-iframe-api-bundles-stable/*?adsdk-try=$redirect=nooptext"
 ||yastatic.net/yandex-video-player-iframe-api-bundles-stable/*?adsdk-try=$empty
+! Rule "dzen.*,~yandex.net,yandex.*##body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div:style(display: block !important)" converted to: "dzen.*,~yandex.net,yandex.*#$#body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div { display: block !important }"
+dzen.*,~yandex.net,yandex.*##body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div:style(display: block !important)
 ! Rule "~yandex.net,yandex.*##body.b-page > div[style="position:absolute;left:-10px;top:0;width:1px;height:1px;overflow:hidden;"] div:style(display: block ! important)" converted to: "~yandex.net,yandex.*#$#body.b-page > div[style="position:absolute;left:-10px;top:0;width:1px;height:1px;overflow:hidden;"] div { display: block ! important }"
 ~yandex.net,yandex.*##body.b-page > div[style="position:absolute;left:-10px;top:0;width:1px;height:1px;overflow:hidden;"] div:style(display: block ! important)
-! Rule "~yandex.net,yandex.*##body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div:style(display: block !important)" converted to: "~yandex.net,yandex.*#$#body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div { display: block !important }"
-~yandex.net,yandex.*##body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div:style(display: block !important)
 ! Rule "4pda.*##+js(abort-current-inline-script, document.querySelectorAll, outerHeight)" converted to: "4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight')"
 4pda.*##+js(abort-current-inline-script, document.querySelectorAll, outerHeight)
 ! Rule "4pda.*##+js(no-setTimeout-if, removeAttr, setTimeout)" converted to: "4pda.*#%#//scriptlet('ubo-no-setTimeout-if.js', 'removeAttr', 'setTimeout')"
@@ -58,18 +60,20 @@ razlozhi.*#$#div[class][style*="width:"][style*="height"][style*="/themes/defaul
 razlozhi.*#$#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] > div[style*="px;"] { width: 100% !important }
 ! razlozhi.*#$#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] { width: 100% !important } is excluded by "#$#" in exclusions-low.txt
 razlozhi.*#$#div[class][style*="width:"][style*="height"][style*="/themes/default/bg.png"] { width: 100% !important }
-! mail.yandex.*#$#html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href^="https://yandex."] { top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important } is excluded by "#$#" in exclusions-low.txt
-mail.yandex.*#$#html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href^="https://yandex."] { top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important }
+! dzen.*#%#//scriptlet('ubo-set-constant.js', 'Object.prototype.shouldShowServiceChangesPopup', 'undefined') is excluded by "#%#//scriptlet" in exclusions-low.txt
+dzen.*#%#//scriptlet('ubo-set-constant.js', 'Object.prototype.shouldShowServiceChangesPopup', 'undefined')
+! mail.yandex.*#$#html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href="https://ya.ru"] { top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important } is excluded by "#$#" in exclusions-low.txt
+mail.yandex.*#$#html.with-widgets .mail-App-Footer-Group_reverse > .mail-App-Footer-Item > [href="https://ya.ru"] { top: 12px !important; left: 19px !important; height: 36px !important; position: fixed !important; z-index: 130 !important; opacity: 0 !important }
 ! yandex.*#$#.PSHeaderLogo360 > a[href^="https://360.yandex."] { pointer-events: none !important } is excluded by "#$#" in exclusions-low.txt
 yandex.*#$#.PSHeaderLogo360 > a[href^="https://360.yandex."] { pointer-events: none !important }
 ! !yandex.ru##+js(no-setTimeout-if, b-spec-adv) is excluded by "##+js" in exclusions-low.txt
 !yandex.ru##+js(no-setTimeout-if, b-spec-adv)
 ! !yandex.ru##+js(no-setTimeout-if, antiadb, home) is excluded by "##+js" in exclusions-low.txt
 !yandex.ru##+js(no-setTimeout-if, antiadb, home)
+! dzen.*,~yandex.net,yandex.*#$#body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div { display: block !important } is excluded by "#$#" in exclusions-low.txt
+dzen.*,~yandex.net,yandex.*#$#body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div { display: block !important }
 ! ~yandex.net,yandex.*#$#body.b-page > div[style="position:absolute;left:-10px;top:0;width:1px;height:1px;overflow:hidden;"] div { display: block ! important } is excluded by "#$#" in exclusions-low.txt
 ~yandex.net,yandex.*#$#body.b-page > div[style="position:absolute;left:-10px;top:0;width:1px;height:1px;overflow:hidden;"] div { display: block ! important }
-! ~yandex.net,yandex.*#$#body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div { display: block !important } is excluded by "#$#" in exclusions-low.txt
-~yandex.net,yandex.*#$#body:not(#id) > div[style*="100px"][style*="75px"][style*="overflow:"] div { display: block !important }
 ! 4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight') is excluded by "#%#//scriptlet" in exclusions-low.txt
 4pda.*#%#//scriptlet('ubo-abort-current-inline-script.js', 'document.querySelectorAll', 'outerHeight')
 ! 4pda.*#%#//scriptlet('ubo-no-setTimeout-if.js', 'removeAttr', 'setTimeout') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -107,7 +111,7 @@ ivi.ru#?#+js(set-constant, Object.prototype.canShowMoreAds, noopFunc)
 ! Invalid selector:
 ivi.ru#?#+js(set-constant, Object.prototype.hasAdv, noopFunc)
 ! Invalid selector:
-frontend.vh.yandex.ru,widgets.kinopoisk.ru,yastatic.net#?#+js(set-constant, Object.prototype.hasPreroll, null)
+dzen.*,frontend.vh.yandex.ru,widgets.kinopoisk.ru,yastatic.net#?#+js(set-constant, Object.prototype.hasPreroll, null)
 ! Invalid selector:
 horoscopes.rambler.*#?#+js(set-constant, Object.prototype.needShowAlicePopup, null)
 ! Invalid selector:
@@ -129,6 +133,8 @@ rp5.*#?#+js(setTimeout-defuser, xvb)
 ! Invalid selector:
 ~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#^script:has-text('getPrefixes')
 ! Invalid selector:
+dzen.*,~yandex.net,yandex.*#?#+js(json-prune, direct rtb seatbid)
+! Invalid selector:
 frontend.vh.yandex.*#?#+js(set-constant, Object.prototype.getAutoplay, noopFunc)
 ! Invalid selector:
 frontend.vh.yandex.*#?#+js(set-constant, Object.prototype.initialAutoplay, false)
@@ -148,8 +154,6 @@ music.yandex.*#?#+js(set-constant, Object.prototype.showBranding, noopFunc)
 ~yandex.net,yandex.*#?#+js(abort-on-property-read, yaads.renderBlock)
 ! Invalid selector:
 ~yandex.net,yandex.*#?#+js(abort-on-property-read, yaads.renderWidget)
-! Invalid selector:
-~yandex.net,yandex.*#?#+js(json-prune, direct rtb seatbid)
 ! Invalid selector:
 ~yandex.net,yandex.*#?#+js(remove-attr, data-counter, .serp-list a)
 ! Invalid selector:
