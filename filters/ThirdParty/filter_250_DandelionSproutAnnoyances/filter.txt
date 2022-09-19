@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 17September2022v2-Beta-Compilation
+! OriginalVersion: 19September2022v1-Beta-Compilation
 ! Expires: 2 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
@@ -21038,7 +21038,7 @@ hdfilmcehennemi.film##.poster-imdb
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 14September2022v1
+! OriginalVersion: 19September2022v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -21391,7 +21391,7 @@ $removeparam=extcmp
 ! https://www.staypro.no/?at_gd=2B9E397233E3B6D5EF466E3BC0AC42F1885D8A50
 $removeparam=at_gd
 ! https://www.gamerevolution.com/guides/685650-windows-11-tpm-2-0-pc-cant-run-install?amp, https://www.independent.co.uk/sport/scotland-france-antoine-dupont-grand-slam-finn-russell-b2024042.html?amp, pcmag.com, theathletic.com (No one on fast networks really likes AMP, least of all uBlock Origin + 'Firefox for Android' users; 25/06/2021)
-$removeparam=/^amp$/
+$removeparam=/^amp$/,domain=~eurasiantimes.com
 ! https://www.tokopedia.com/legoclassic/my-little-pony-a-new-generation-crystal-princess-petals-figure-set?src=topads&xClientId=amp-IWyM3dL4bS8QlacnZO4hyg&cid=amp-IWyM3dL4bS8QlacnZO4hyg&amp=true
 $removeparam=/^amp=true$/
 ! https://www.newsweek.com/housing-market-falls-sales-new-homes-down-1727968?amp=1
@@ -22653,6 +22653,8 @@ $removeparam=aff_click_id
 ||zhidao.baidu.com^$removeparam=qbl
 ! https://wenku.baidu.com/search?word=Test&cc=SearchFloatBtn (02/02/2022)
 ||wenku.baidu.com/search?$removeparam=cc
+! https://baike.baidu.com/item/%E4%B8%AD%E5%9B%BD/1122445?lemmaFrom=lemma_starMap (19/09/2022)
+||baike.baidu.com^$removeparam=lemmaFrom
 !!!! ——— Bilibili ———
 ! https://github.com/uBlockOrigin/uAssets/pull/10010
 ||bilibili.com^$removeparam=/^current/
@@ -24659,8 +24661,9 @@ positivr.fr##.viously-sticked
 positivr.fr#$#.viously-sticked { position: absolute !important; top: 0 !important; left: 0 !important; bottom: 0 !important; right: 0 !important; width: 100% !important;  height: 100% !important; z-index: 1 !important; display: block !important }
 positivr.fr##.viously-sticked #unstick-button
 ! https://github.com/easylist/easylist/issues/13275
-[$path=/^((?!\/watch).)*$/]www.youtube.com#$?# ytd-miniplayer { remove: true; }
-!!!www.youtube.com##:not(:matches-path(/watch)) #movie_player video:remove() (Seems to cause YT embeds on Discord to show only a black background.)
+[$path=/^((?!\/watch).)*$/]www.youtube.com#$?#:not(:matches-path(/embed)) #movie_player video { remove: true; }
+[$path=/^((?!\/watch).)*$/]www.youtube.com#$?#:not(:matches-path(/embed)) ytd-miniplayer { remove: true; }
+www.youtube.com##.ytp-miniplayer-button
 !#if !env_mobile
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124667 (Probably can't be in Falukorv List because that list adds whitelistings, not remove them.)
 @@://googleadservices.com^|$badfilter
