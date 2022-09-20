@@ -2674,6 +2674,8 @@ warezcrack.net#$#.onp-sl-content > [data-lock-id^="onpLock"] { display: block!im
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/130181
+xatakamovil.com##.menu-follow
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129996
 bugun.uz##.tg_link
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129681
@@ -5866,6 +5868,9 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/130181
+xatakamovil.com#%#//scriptlet('remove-attr', 'style', '.js-dailymotion')
+xatakamovil.com#$#.close-corner { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130108
 br0wsers.com#%#//scriptlet("adjust-setInterval", "success", "", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129840
@@ -7530,7 +7535,7 @@ recantodasletras.com.br#%#//scriptlet("prevent-addEventListener", "/^(?:contextm
 priemnaya.duma.gov.ru#%#AG_onLoad(function() {setTimeout(() => $('#treat_body_text').unbind(), 300);});
 yodu.org,linovelib.com#%#//scriptlet('remove-attr', 'onselectstart', 'body')
 xn--b1aew.xn--p1ai#%#//scriptlet("abort-on-property-write", "document.onselectstart")
-nusantararom.org#%#//scriptlet("prevent-addEventListener", "/keydown|contextmenu/")
+readcomiconline.li,nusantararom.org#%#//scriptlet("prevent-addEventListener", "/keydown|contextmenu/")
 ladyblog.me#%#//scriptlet('abort-current-inline-script', 'jQuery', 'onselectstart')
 acritica.com#%#//scriptlet("abort-current-inline-script", "document.onkeypress")
 m.webtoons.com#%#AG_onLoad(function() {var g = new MutationObserver(function() {var c = document.querySelectorAll('img._checkVisible');for (var i = 0; i < c.length; i++) {c[i].oncontextmenu = c[i].onselectstart = c[i].ondragstart = null;}});g.observe(document, {childList: !0,subtree: !0});setTimeout(function() {g.disconnect()}, 1E4)});
