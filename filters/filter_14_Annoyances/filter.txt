@@ -23974,6 +23974,7 @@ zlavomat.sk#@##credential_picker_container
 .name/?pus=$script,third-party
 .site/?pus=$script,third-party
 !
+||pushadvert.bid^
 ||notifpush.com^
 ||greysummergo.biz^
 ||zovihutum.com^
@@ -25042,6 +25043,7 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 !
 ! SECTION: Subscriptions - Regular rules
 !
+xatakamovil.com#?#.sticky-sidebar-container > div.related-alts-container:has(> div.aside-box > form.js-subscription)
 btu.org.ua##.dle_b_telegram
 yarnews.net##.js-email-subscribe
 yarnews.net##.tg
@@ -25051,7 +25053,7 @@ forbes.ru#?#article[id^="article"] > footer > div[class] > div[class] > div[clas
 canon.com#$#.email-subscribe { display: none!important; }
 canon.com#$#.modal-backdrop { display: none!important; }
 canon.com#$#.fog-of-war-overlay { display: none!important; }
-canon.com#$#body { overflow: auto!important; }
+canon.com#$#html > body:not(#style_important) { overflow: auto!important; }
 te4h.ru###text-5
 inkazan.ru#?#.matter-after > div:has(> div[class^="Subscribe_subscribe"])
 affpaying.com#?##sidebar .bg-blue-lightest:has(> div.flex > button.subscribe)
@@ -34257,6 +34259,8 @@ warezcrack.net#$#.onp-sl-content > [data-lock-id^="onpLock"] { display: block!im
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/130181
+xatakamovil.com##.menu-follow
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129996
 bugun.uz##.tg_link
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129681
@@ -37449,6 +37453,9 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/130181
+xatakamovil.com#%#//scriptlet('remove-attr', 'style', '.js-dailymotion')
+xatakamovil.com#$#.close-corner { display: none !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130108
 br0wsers.com#%#//scriptlet("adjust-setInterval", "success", "", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129840
