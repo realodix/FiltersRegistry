@@ -2027,6 +2027,7 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 ! For the sites with '$generichide' exclusions
 !   SECTION: Cookies - Specific rules ($generichide)
 !
+pc.warface.com##.cmpbox
 inps.it###cookie_directive_container
 timepartner.com###cookiesettings
 scaleway.com##.sc-djvmMF.cjOQjk
@@ -11746,7 +11747,7 @@ mactrade.de,fafit24.de,moebel-fundgrube.de,insel-brauerei.de,karls-shop.de,bernd
 samsonite.es#%#AG_onLoad(function() {var b=new MutationObserver(function() {var c=document.querySelector('.cookie-consent-overlay__actions > a.btn--primary'); c&&(b.disconnect(),c.click()) });b.observe(document, {childList: !0,subtree: !0});setTimeout(function() {b.disconnect()}, 1E4)});
 virustotal.com#%#//scriptlet('set-cookie', 'tosChangedAccepted', '1')
 codementor.io#%#//scriptlet('set-cookie', 'cm-general_cookie-consent', 'true')
-cmp.wowtv.de,sourcepoint.tvnow.de,cmp2.freiepresse.de,cmp-sp.neuepresse.de,cdn.privacy-mgmt.com,cmp.techbook.de#%#AG_onLoad(function() {var b=new MutationObserver(function() {var c=document.querySelector('button[title="Alle akzeptieren"]'); c&&(b.disconnect(),c.click()) });b.observe(document, {childList: !0,subtree: !0});setTimeout(function() {b.disconnect()}, 1E4)});
+cmp-sp.lvz.de,cmp.wowtv.de,sourcepoint.tvnow.de,cmp2.freiepresse.de,cmp-sp.neuepresse.de,cdn.privacy-mgmt.com,cmp.techbook.de#%#AG_onLoad(function() {var b=new MutationObserver(function() {var c=document.querySelector('button[title="Alle akzeptieren"]'); c&&(b.disconnect(),c.click()) });b.observe(document, {childList: !0,subtree: !0});setTimeout(function() {b.disconnect()}, 1E4)});
 getir.com#%#document.cookie="cookiePermissions=%7B%22technical%22%3Afalse%2C%22analytical%22%3Afalse%2C%22marketing%22%3Afalse%7D; path=/;";
 chojnow.pl#%#//scriptlet("abort-current-inline-script", "document.cookie", "rodoConfirm")
 porcelana.com.pl#%#//scriptlet("abort-current-inline-script", "onload", "plików cookies")
@@ -12230,6 +12231,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !+ PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/uBlockOrigin/uAssets/issues/14957
+@@||d.delivery.consentmanager.net/delivery/cmp.php$domain=pc.warface.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130227
 zensus2022.de#@##cookiebanner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130221
@@ -18415,6 +18418,8 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+technopat.net##ul[data-type="bottom_fixer"]
+evrimagaci.org###user-call-info-card
 mein-mmo.de###dailymotion-pip-large-viewport
 search.brave.com###discussions .callout
 desktopnexus.com##[id^="pb-ad-iframe"]
@@ -18445,7 +18450,6 @@ theepochtimes.com#$#body { overflow: auto !important; }
 theepochtimes.com##.soft_stikcy
 tripadvisor.com###lithium-root > div[style="top: 110px;"]
 zwischengas.com##.fixed-bottom
-/wp-content/plugins/easy-social-share-buttons$domain=dr-farfar.com
 pixlr.com#?#.modal:has(> div.news-dialog)
 pixlr.com#$#.blur { filter: none !important; }
 pixlr.com##a[href="/pricing/"][style^="display:flex;padding:0px 30px;gap:30px;justify-content:center;align-items: center;height:80px;width:100%;z-index:99;position:absolute"]
@@ -24004,7 +24008,7 @@ zlavomat.sk#@##credential_picker_container
 ||pt.appirits.com^
 ||cleverpush.com^$third-party,domain=~app.bsdex.de
 ||sdk.push7.jp^$third-party,domain=~secret2.cygames.co.jp
-||widget.intercom.io^$third-party,domain=~app.rezi.io|~intercom.com|~backerclub.co|~quidco.com|~green.energy
+||widget.intercom.io^$third-party,domain=~app.rezi.io|~intercom.com|~backerclub.co|~quidco.com|~green.energy|~artisthub.io
 ||a.trstplse.com^$third-party
 ||abcnewspro.com^
 ||accengage.net^$third-party
@@ -34296,6 +34300,8 @@ warezcrack.net#$#.onp-sl-content > [data-lock-id^="onpLock"] { display: block!im
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/129476
+dr-farfar.com##.widget_boombox_social
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130181
 xatakamovil.com##.menu-follow
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129996
@@ -37491,6 +37497,9 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/130155
+digworm.io#%#//scriptlet("adjust-setInterval", "timer--", "*", "0.02")
+zertalious.xyz#%#//scriptlet("adjust-setTimeout", "status.innerHTML", "*", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130034
 sub2unlock.com,linkgenie.me#%#//scriptlet("remove-attr", "href", "a[href].unlock-step-link.check")
 sub2unlock.com,linkgenie.me#%#AG_onLoad(function(){const a=document.querySelector("a.getlink");if(a)try{const a=document.querySelectorAll("script");let b;[...a].some(a=>{if(a.innerText.includes("a[id=\"link\"]"))return b=a.innerText.match(/\('a\[id="link"\]'\)\.attr\('href', '([\s\S]*?)'\)/)[1],!0}),b&&b.startsWith("http")&&location.assign(b)}catch(a){}});
