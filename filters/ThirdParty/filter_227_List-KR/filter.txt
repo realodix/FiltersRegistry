@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.921.0
+! OriginalVersion: 2022.921.5
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -166,6 +166,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||ads.uwayapply.com^
 ||daimg.encar.com^
 ||amp.diningcode.com^
 ||dmxleo.dailymotion.com^
@@ -350,6 +351,8 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||pervsi.com/info/skin_board/m/img/coupang.jpeg
+||uwayapply.com/img/common/frame_bn_btn
 ||image.laftel.net/guango/
 ||hairshop.kakao.com/proxy/app/*/search/around/hair-shops/ad|
 ||shopapi.interpark.com/display/*/popupBanner.json
@@ -1067,6 +1070,14 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+pervsi.com###bottom_sit_handmade
+uwayapply.com###frameBox
+uwayapply.com###login_box ~ .roll
+uwayapply.com###login_box ~ #rightBox
+uwayapply.com##.primiumList
+uwayapply.com##ul[class$="_banner"]
+uwayapply.com###contentsBox #mainCon #top_area
+uwayapply.com##div[id$="_bn"]
 mbong.kr##div[role="main"]#content div[data-pswp-uid].rhymix_content:not([class^="document_"]):not([class^="comment_"])
 m.diningcode.com##div[class$="-ad"] ~ .section.naver
 diningcode.com##.MapMain > #map ~ div[class]:not([id]):not([style])
@@ -1085,7 +1096,7 @@ interpark.com##span[class$="AD"]
 dvdprime.com##div[style~="height:"][style~="border-top:"].relative
 dvdprime.com##[class*="_ad_"]
 ypbooks.co.kr##td[id^="divBn_"]
-ypbooks.co.kr##div[id$="Banner"]
+uwayapply.com,ypbooks.co.kr##div[id$="Banner"]
 ypbooks.co.kr##div[style]#cenArea > .today
 lawtalknews.co.kr##.tdn-inventory
 www.tmon.co.kr##ul#_dealListContainer.list > li.item.type_admon[data-maincategoryno]
@@ -1862,6 +1873,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+uwayapply.com#$##contentsBox #login_box { width: 350px !important; float: right !important; border-bottom: solid 2px #da3b40 !important; border-left: solid 2px #da3b40 !important; }
 encar.com#$#.feature_index .box_user { width: 100% !important; }
 shoppinghow.kakao.com#$#.wide_layout .wrap_srch_res .wrap_tab { width: 100% !important; }
 shoppinghow.kakao.com#$#.wide_layout .wrap_srch_res .wrap_sort { width: auto !important; }
@@ -1965,6 +1977,7 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+pervsi.com#?#tbody > tr[bgcolor] ~ tr:has(ins.adsbygoogle)
 m.shop.interpark.com#?#[class] ~ [class*="Wrap"] [class*="BannerWrap"]:has(li img[src*="//openimage.interpark.com/dia/"])
 chuing.net#?#div[style] table[width] td[width]:has(> ins.adsbygoogle)
 community.rememberapp.co.kr#?#div[class*=" "]:has(> a[class*=" "][href][target="_blank"] img[src*="/_next/image?url="][src*="%2Fuploads%2Fbanner%2F"])
@@ -2357,6 +2370,7 @@ ff14angler.com#@#ins.adsbygoogle
 !
 !
 ||videoads.kakao.com/adserver/api/v*/vmap$redirect=noopvmap-1.0,app=PotPlayer.exe
+||smysoft.com:8090/advert/
 ||ahnlab.com/v3lite/ad_popup.jsp
 ||dtapp-player.op.gg/adsense.
 ||admin.clipdown.co.kr/app/advert.php

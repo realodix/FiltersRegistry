@@ -1263,8 +1263,8 @@ nextinpact.com##img[src^="assets/images/autopromo-adblock-"]
 nmac.to##div[class$="alert fade in alert-error "]
 nmac.to##div[style="text-align: center; width: 100%;"] > div.alert
 nmac.to#$#div[class$="alert fade in alert-error "] { position: absolute!important; left: -3000px!important; }
-nnmclub.ro,nnm-club.t0r.xyz,nnm-club-me.appspot.com,nnm-club.lib,nnm-club.me,nnmclub.to##body > div.request
-nnmclub.ro,nnm-club.t0r.xyz,nnm-club-me.appspot.com,nnm-club.lib,nnm-club.me,nnmclub.to##body > div[class="request"]
+nnmclub.ro,nnm-club.t0r.xyz,nnmclub.to##body > div.request
+nnmclub.ro,nnm-club.t0r.xyz,nnmclub.to##body > div[class="request"]
 noadsradio.ru##.no-adb
 nodecraft.com###intercom-warning
 nosalty.hu##.a2blck-layer
@@ -2827,6 +2827,13 @@ web.de,gmx.net,gmx.at,gmx.ch,gmx.com#$##abd-container { display: block !importan
 !
 !
 ! SECTION: Anti-adblock - Grouped rules for specific sites
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/130229
+weather.com#%#//scriptlet("abort-on-property-read", "setNptTechAdblockerCookie")
+!#safari_cb_affinity(general)
+@@||securepubads.g.doubleclick.net/pagead/ppub_config$domain=weather.com
+@@||weather.com/daybreak-today/assets/peel1.ext.df9c55.js$domain=weather.com
+!#safari_cb_affinity
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74570
 goodfon.ru#$#.ad-text.adBanner.adbanner.adBlock.adContent.adSense.Adsense.AdSense.pub_300x250m.pub_728x90.text-ad.text-ad-links.text-ads.text_ad.text_ads.TextAd.textAd.textad.textad { display: block !important; }
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
@@ -10074,6 +10081,10 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 !
 ! SECTION: Subscriptions - Regular rules
 !
+thestar.co.uk##div[class^="NewsletterSignup__"]
+ted.com##aside[class^="css-"] > div[class^="pt-6"] > div > div.hidden
+fintolk.pro##.articles-telegram
+oann.com##.ctct-flyout-form
 bqprime.com##.pn-boilerplate--newsletter
 oggusto.com##.subscription-form-lg
 auto-swiat.pl##.googleNewsBanner
