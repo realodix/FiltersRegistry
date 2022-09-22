@@ -704,6 +704,7 @@ ziaruldeiasi.ro##[href*="adclick"]
 asculta-live.com##.ad
 cetateanul.net##[href*="/?utm_source=cetateanul"]
 myradioonline.ro##.pls-dis-blck
+||3myad.com^
 qreferat.com##[style^="overflow:auto;"]
 jurnalul.ro#?#.DAGInScrollInner:-abp-has(.bannerBox)
 jurnalul.ro##.bannerGrey
@@ -806,7 +807,6 @@ sroscas.ro##.textwidget
 dez.ro#@##ad-carousel
 dez.ro##.alert-warning.alert
 substantial.ro##[id^="subst-"][style]
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=kanald.ro
 mediculmeu.com##[style]:has(.adsbygoogle)
 bugetul.ro##[class^="reclama"]
 bugetul.ro##[class^="banner"]
@@ -832,6 +832,7 @@ spynews.ro##.ads
 moduri.ro#?#.widget-container:-abp-has([id="t5_zone_standard-ga"])
 moduri.ro#?#.widget-container:-abp-has(.adsbygoogle)
 turdanews.net##.elementor-widget-smartmag-codes
+turdanews.net##[href="https://viamso.ro/"]
 turdanews.net##.smartmag-widget-codes
 ||ziarulevenimentul.ro/data/_editor/$image
 ziarulevenimentul.ro##[href*="/adclick.php"]
@@ -856,8 +857,9 @@ wall-street.ro##.minh-lg-600.sidebarBox
 @@||mocasoft.ro^$generichide
 ! https://github.com/NanoMeow/QuickReports/issues/610
 @@||giz.ro^$generichide
-! anti adb videos on stirilekanald.ro
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=stirilekanald.ro|video.onnetwork.tv
+! video player anti-adb + DIV stuff
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=kanald.ro|stirilekanald.ro|video.onnetwork.tv
+stirilekanald.ro#?#.col-sm-4:-abp-has([class="ad"])
 ! https://github.com/uBlockOrigin/uAssets/issues/8551
 pbinfo.ro##div.center.well-sm.well
 ! https://github.com/uBlockOrigin/uAssets/issues/11501
@@ -1086,6 +1088,13 @@ turbomag.ro##.homepage-banner
 zvj.ro##[class*="banner"]
 zvj.ro#?#.boxstire2head:-abp-contains(Publicitate)
 ||confortmedia.ro^$image,domain=zvj.ro
+vloggeri.com##[href^="https://event.2performant.com/"]
+||damboviteanul.com^*.gif$image
+damboviteanul.com#?#.widget_custom_html:-abp-has([href][target="_blank"]):not(*:-abp-has([href*="damboviteanul.com"])):not(*:-abp-has([id="widget_container_curs"]))
+actualitati.info#?#.widget:-abp-has(.adsbygoogle)
+||imobiliare.ro^$domain=moise.ro
+moise.ro##[href*="imobiliare.ro"]
+gadget.ro#?#[id^="block"]:-abp-has([src*="pub"])
 ! Title: Romanian specific uBO filters
 ! Expires: 3 days
 ! Issue tracker: https://github.com/tcptomato/ROad-Block/issues
@@ -1099,7 +1108,7 @@ competentedigitale.ro#%#//scriptlet('ubo-acis.js', 'Math.floor', 'offsetHeight')
 ! https://github.com/uBlockOrigin/uAssets/issues/8753
 *$script,redirect-rule=noopjs,domain=protvplus.ro
 stirileprotv.ro#$?#*:matches-css-before(content:/ADVERTISING/) { remove: true; }
-sport.ro#$?#*:matches-css-before(content:/ADVERTISING/) { remove: true; }
+acasatv.ro,sport.ro#$?#*:matches-css-before(content:/ADVERTISING/) { remove: true; }
 ! popup
 posturi.live#%#//scriptlet('ubo-nowoif.js')
 ! https://github.com/tcptomato/ROad-Block/pull/222
@@ -1108,3 +1117,6 @@ cool-etv.net#%#//scriptlet('ubo-acis.js', 'onload', 'noBackPlease')
 vwforum.ro#%#//scriptlet('ubo-nostif.js', 'adsbygoogle')
 ! https://www.reddit.com/r/uBlockOrigin/comments/x9qoen/
 bloground.ro#%#//scriptlet('ubo-nostif.js', 'show')
+! https://github.com/uBlockOrigin/uAssets/pull/10062
+*$script,redirect-rule=noopjs,domain=myradioonline.ro
+myradioonline.ro#%#//scriptlet('ubo-rc.js', '_bannerTop1')
