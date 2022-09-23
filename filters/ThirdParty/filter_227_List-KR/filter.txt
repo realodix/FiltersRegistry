@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.922.2
+! OriginalVersion: 2022.923.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -351,6 +351,8 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||1412.rest/addons/layerpopup/source/jquery.fancybox.
+||cdn.ppomppu.co.kr/zboard/data/_thumb/pmarket/
 ||tv.nate.com/adv/
 ||pervsi.com/info/skin_board/m/img/coupang.jpeg
 ||uwayapply.com/img/common/frame_bn_btn
@@ -1071,6 +1073,9 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+tiendeo.co.kr##[class$="-advert"]
+tiendeo.co.kr##section[class*=" "]#header-standard-container
+1412.rest##.fancybox-wrap
 infosori.com##center > div[style] ~ center ~ div[style^="margin-top:"]
 pervsi.com###bottom_sit_handmade
 uwayapply.com###frameBox
@@ -1979,6 +1984,8 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+~m.ppomppu.co.kr,ppomppu.co.kr#?##header_box:has(.bbs_title a[href$="?id=ppomppu"]) ~ table#revolution_main_table tr[class^="list"]:has(table a[href*="?id=pmarket&"])
+~m.ppomppu.co.kr,ppomppu.co.kr#?##header_box:has(.bbs_title a[href$="?id=ppomppu"]) ~ table#revolution_main_table tr[class]:matches-css(display: none) + tr:not([class])
 infosori.com#?#table[id][width] tr[bgcolor] ~ tr:not([bgcolor]):has(td > ins.adsbygoogle)
 pervsi.com#?#tbody > tr[bgcolor] ~ tr:has(ins.adsbygoogle)
 m.shop.interpark.com#?#[class] ~ [class*="Wrap"] [class*="BannerWrap"]:has(li img[src*="//openimage.interpark.com/dia/"])
