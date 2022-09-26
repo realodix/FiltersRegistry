@@ -4907,8 +4907,8 @@ bimedis.com,vestel.com.tr##.js-cookie-modal
 bloomberglaw.com##div[class^="CookieNotice_cookiesBar"]
 pluto.tv###cps-shaman-notifier
 emiteo.pl##.cookies__div--div-overlay
-tempo.com,daswetter.com#$##gpdr { display: none !important; }
-tempo.com,daswetter.com#$#body { position: absolute !important; }
+yourweather.co.uk,tempo.com,daswetter.com#$##gpdr { display: none !important; }
+yourweather.co.uk,tempo.com,daswetter.com#$#body { position: absolute !important; }
 ebike-connect.com#$#div.body-modal-open--noheader { overflow: visible!important; position: static!important; }
 ebike-connect.com#$#cookies { display: none!important; }
 ||bosch-ebike.com/static/*/bosch-privacy-settings-
@@ -11189,6 +11189,7 @@ privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 consent.ladbible.com,consent.gamingbible.co.uk,consent.unilad.co.uk#%#AG_onLoad(function(){if(window.location.href.includes("consentUUID")){var g=new MutationObserver(function(){var b=document.querySelector('button[title*="Accept" i]');b&&(g.disconnect(),b.click())});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1E4)}});
 !
+sky.it#%#AG_onLoad(function(){if(window.location.href.includes("consentUUID")){var g=new MutationObserver(function(){var b=document.querySelector('button[title^="ACCETTA TUTTI I COOKIES"]');setTimeout(function(){ b&&b.click(); }, 100);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1E4)}});
 help.kobo.com#%#//scriptlet('set-local-storage-item', 'c_rakobo_cc', '1')
 cmp-sp.neuepresse.de,cmp.wowtv.de,cmp-sp.lvz.de#%#AG_onLoad(function(){if(window.location.href.match(/consentUUID|privacy/)){var b=new MutationObserver(function(){var a=document.querySelector('button[title*="Alle"][title*="ablehnen"]');a&&(b.disconnect(),a.click())});b.observe(document,{childList:!0,subtree:!0}),setTimeout(function(){b.disconnect()},1E4)}});
 jonas-in-auroville.de#%#//scriptlet('set-local-storage-item', 'cookies-selected', 'true')
@@ -12273,6 +12274,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !+ PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/130563
+@@||cdn.privacy-mgmt.com/wrapperMessagingWithoutDetection.js$domain=tv8.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130517
 @@||cdn.privacy-mgmt.com/wrapperMessagingWithoutDetection.js$domain=tg24.sky.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130516
@@ -18482,6 +18485,10 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+masterclass.com#$#div[data-react-class="HeroQuiz"] { display: none!important; }
+masterclass.com#$#body { overflow: visible!important; }
+masterclass.com#$#.fresnel-container > div[class*="Sticky_bottom"][class*="Sticky_sticky"] { display: none!important; }
+masterclass.com#%#//scriptlet('set-local-storage-item', 'video_muted', 'true')
 tg24.sky.it##.j-player[style^="position: fixed; height:"]
 kriptoparahaber.com###kanews-modal-popup
 nbcmiami.com##.video-flyout--fixed > figure
@@ -24079,6 +24086,7 @@ zlavomat.sk#@##credential_picker_container
 .name/?pus=$script,third-party
 .site/?pus=$script,third-party
 !
+||mewigurom.com^
 ||pushadvert.bid^
 ||notifpush.com^
 ||greysummergo.biz^
@@ -25148,6 +25156,11 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 !
 ! SECTION: Subscriptions - Regular rules
 !
+ef.edu#$?#body > div.ReactModalPortal:has(div[class^="BlogNewsletterSignUpForm_newsletter"]) { display: none!important; }
+ef.edu#$#body { overflow: auto!important; height: auto!important; }
+ef.edu##div[class^="BlogArticlePostBannerNewsletter"]
+ef.edu##div[class*="NewsletterSignup_newsletterFooter"]
+masterclass.com###email-capture
 interestingengineering.com##div[class^="Newsletter_overlay"]
 urbandictionary.com##.flex-1 > div[data-x-data="subscribeData()"]
 inzynieria.com##.small-box-newsletter
@@ -29585,6 +29598,7 @@ bakadesuyo.com#@##mc_embed_signup
 !
 ! SECTION: Mobile apps - Regular rules
 !
+tiktok.com##.tiktok-1vrbodl-DivPromotionContainer
 moovitapp.com##.qr-code-wrapper
 lazada.com.ph###smb-container
 mixch.tv##.app-bnr
@@ -31649,6 +31663,7 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~xltrax.ee,~hitta.se,~mail.ru,~v7player.wostreaming.net,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+tiktok.com##.tiktok-1pblmhq-DivBottomBanner
 livemint.com###appDownloadPopup
 woman.chintai##.app-smart-bnr
 photos.google.com##.XTW6Hc > button[jsaction^="click:"]
@@ -36202,6 +36217,11 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+ef.edu##div[class^="BlogArticlePostBannerType_banner"]
+ef.edu##div[class^="BlogArticlePostBannerCta_banner"]
+masterclass.com##main > div[class*="Sticky_top"]
+masterclass.com##section[data-testid="featured-course-trailer"]
+masterclass.com#?#main > div > section:has(> div > h2:contains(Learn From the Best))
 lazada.com.ph#$#.card-platform-campaign-banner { display: none!important; }
 lazada.com.ph#$##J_LzdSiteNav { margin-top: 0!important; }
 universalis.fr###bandeau-footer
