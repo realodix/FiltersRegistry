@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-09-24 11:45:34 CEST
+! Last modified: 2022-09-26 09:29:48 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -244,7 +244,6 @@ hemnet.se#$#body { overflow:unset!important }
 hemnet.se##span:has-text(Sponsrad):upward(.article-list-post a)
 hippson.se##.toolboxheader:has-text(/aktuella samarbeten/i) ~ a.more
 hockeymagasinet.com#%#//scriptlet('ubo-rc.js', 'modal-open')
-hogsby-nytt.se,monsteras-nytt.se,oskarshamns-nytt.se##h3:has-text(/Annons/i):upward(.widget)
 horisontmagasin.se##small:has-text(/annons/i)
 hrnytt.se##.sponsored-article:upward(article)
 husbilsplats.se,spelhubben.se#%#//scriptlet('ubo-acs.js', 'document.oncontextmenu')
@@ -260,6 +259,7 @@ influens.se##strong:has-text(Annons:):upward(.code-block)
 inredningsarkitektur.se##.article:has-text(/sponsrad artikel/i)
 interiorbyvanessa.se##.post:has-text(I annonssamarbete med)
 it-finans.se,it-halsa.se,it-kanalen.se,it-pedagogen.se,it-retail.se##.widget-title:has-text(/annons/i):upward(aside)
+jaktjournalen.se##.sponsored:upward(.fisherd_article)
 javligtgott.se##div[id^="ad-panorama"]:upward(.elementor-section)
 justwannahavefun.se##.sub-title:has-text(/sponsr/i):upward(.teaser)
 kamerabild.se##h2.pane-title:has-text(/annons/i):upward(1)
@@ -360,6 +360,7 @@ omni.se,omniekonomi.se#%#//scriptlet('ubo-aeld.js', 'omniPulseLoaded')
 omni.se,omniekonomi.se#$#.header-banner--regular, .app-banner { --banner-offset: 0 !important; }
 omni.se,omniekonomi.se##a[href*="article-ad-"]:upward(.resource--link)
 oru.se,tui.se#$#.no-scroll { overflow: initial !important; }
+oskarshamns-nytt.se##h3:has-text(/Annons/i):upward(.widget)
 outsidesweden.se##div[style^="font-size: 0.7"]:has-text(Annons:):upward(1)
 padeldirekt.se##.h-background--sponsored:upward(.article-row)
 padeldirekt.se##a[href*="/sponsrat"]:upward(.c-featured-article)
@@ -555,8 +556,8 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -2346,6 +2347,7 @@ ysektionen.se##.yweb-news-paper-banner
 ||consentframework.com^$domain=luleahockeyforum.com
 ||converdiant.com^$third-party
 ||convertbox.com^$third-party
+||convertful.com^$third-party
 ||convertkit.com^$third-party
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
