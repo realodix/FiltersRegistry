@@ -93,6 +93,8 @@ edeka.de#%#(()=>{window.tC={event:{track(){}}}})();
 edeka.de#%#//scriptlet('prevent-element-src-loading', 'script','tc_DigitalesMarketing')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127461
 bulletin.sntba.com#%#//scriptlet("set-constant", "returnCitySN", "emptyObj")
+! https://github.com/AdguardTeam/AdguardFilters/issues/130813
+intel.com,intel.cn,intel.co.uk,intel.la,intel.co.il,intel.com.br,intel.com.tr,intel.es,intel.pl,intel.it,intel.ie,intel.de,intel.fr,intel.vn,intel.com.tw,intel.co.kr#%#(()=>{window.CQ_Analytics={SegmentMgr:{loadSegments(){}},ClientContextUtils:{init(){}}}})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126745
 ta.alamo.com#%#(()=>{window.CQ_Analytics={SegmentMgr:{loadSegments(){}},ClientContextUtils:{init(){}}}})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/122614
@@ -25744,8 +25746,10 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/130813
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130551
-@@||intel.cn/etc.clientlibs/cq/personalization/clientlib/personalization/kernel.min.js$domain=intel.cn
+!+ NOT_PLATFORM(windows, mac, android, ext_chromium)
+@@||intel.*/etc.clientlibs/cq/personalization/clientlib/personalization/kernel.min.js$domain=intel.*
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130685
 @@||uid.mavencoalition.io/v3$domain=reelrundown.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/103244
