@@ -24541,6 +24541,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+engadget.com##.notification-upsell-push
 ||eleconomista.com.mx/system/modules/com.tfsla.diario.eleconomista/resources/scripts/PushFirebase.js
 timesofindia.indiatimes.com###izootoCustomPopup
 e1.ru##section:has(> p:contains(/уведомления в браузере|Ежедневная подписка/))
@@ -25183,6 +25184,15 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 !
 ! SECTION: Subscriptions - Regular rules
 !
+bloomberglinea.com.br###piano-newsletter-container
+bloomberglinea.com.br##.piano-newsletter-mobil
+bloomberglinea.com.br##a[href^="https://news.google.com/"][href*="/publications/"]
+bloomberglinea.com.br##.new-blocks-wrap > div > a[href="/newsletter/"]
+bloomberglinea.com.br#$#.tp-modal:has(> div.tp-iframe-wrapper > iframe[id^="offer_"]) { display: none!important; }
+bloomberglinea.com.br#$#.tp-backdrop { display: none!important; }
+bloomberglinea.com.br#$#body { overflow: auto!important; position: static!important; }
+bloomberglinea.com.br#%#//scriptlet('remove-class', 'tp-modal-open', 'body')
+bloomberglinea.com.br#%#//scriptlet('remove-class', 'frozen-mobile-body', 'body')
 heyreliable.com##.popup-newletter
 heyreliable.com##.popup-newletter ~ div.fancybox-overlay
 meduza.io##.GeneralMaterial-body > div.GeneralMaterial-article > blockquote[class^="SimpleBlock-module_blockquote"]
@@ -36252,6 +36262,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+coolors.co##a[href="https://coolors.co/advertise"]
 ef.edu##div[class^="BlogArticlePostBannerType_banner"]
 ef.edu##div[class^="BlogArticlePostBannerCta_banner"]
 masterclass.com##main > div[class*="Sticky_top"]

@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.927.1
+! OriginalVersion: 2022.927.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1083,6 +1083,7 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+ddaily.co.kr##.space_layout ~ div[class^="section_"] > div:not([style*="solid"]) + div[style]:not([class])
 m.search.naver.com##select-contents li._pwr_content
 enuri.com##div[class*="-ad-"]
 loawa.com##a[target="_blank"][data-href][data-banner-statics]
@@ -1896,6 +1897,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+news.daum.net#$#.main-content > .content-article { width: 100% !important; }
 uwayapply.com#$##contentsBox #login_box { width: 350px !important; float: right !important; border-bottom: solid 2px #da3b40 !important; border-left: solid 2px #da3b40 !important; }
 encar.com#$#.feature_index .box_user { width: 100% !important; }
 shoppinghow.kakao.com#$#.wide_layout .wrap_srch_res .wrap_tab { width: 100% !important; }
@@ -2000,6 +2002,7 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+m.search.daum.net#?#.section_cont div[disp-attr]:has(.adLinkColl)
 m.ppomppu.co.kr#?#.main-menu-group ~ .ct:has(> h3[style] > a[href^="bbs_list.php?id=ppomppu"]) li:has(> a[href*="pmarket"])
 ~m.ppomppu.co.kr,ppomppu.co.kr#?#.top-nav:has(.menu01.active) ~ .container .bbs_title p a[href*="market"]
 ~m.ppomppu.co.kr,ppomppu.co.kr#?#.top-nav:has(.menu01.active) ~ .container .bbs_title p a[href*="ppomppu2"]
