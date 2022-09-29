@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.929.5
+! OriginalVersion: 2022.929.6
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1700,7 +1700,7 @@ search.daum.net##.adLinkColl
 pcmap.place.naver.com###_pcmap_list_scroll_container > ul > li[data-laim-exp-id="undefined*e"]
 map.kakao.com##ul[id="info.search.place.list"] > li.AdItem
 dcnewsj.joins.com##div[class^="ab_ad"]
-clien.net,dprime.kr,pushoong.com,epnc.co.kr,all-mice.co.kr,dvdprime.com,hwbattle.com,mbn.co.kr##div[id$="_banner"]
+dprime.kr,pushoong.com,epnc.co.kr,all-mice.co.kr,dvdprime.com,hwbattle.com,mbn.co.kr##div[id$="_banner"]
 prod.danawa.com##div[class$="_ad_prodlist"]
 epnc.co.kr##div[id^="floating_banner_"]
 epnc.co.kr##div[onmousedown*="'event_label': 'AD'"]
@@ -2001,6 +2001,7 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+~m.clien.net,clien.net#?#div[class*="_"]:has(> ad-shield-inventory)
 ~m.search.daum.net,search.daum.net#?#div[class] > div[disp-attr] ~ div[disp-attr]:has(a[href*="//brandsearch.ad.daum.net/"][onclick^="smartLog"]) + .line
 search.daum.net#?#div[class] > div[disp-attr] ~ div[disp-attr]:has(a[href*="//brandsearch.ad.daum.net/"][onclick^="smartLog"])
 m.ruliweb.com#?#div[id^="list_read_"] ul[class*="_list"] > li:has(a[href][target="_blank"])
@@ -2118,7 +2119,7 @@ toonkor134.com,toonkor135.com,toonkor136.com,toonkor137.com,toonkor138.com,toonk
 news.op.gg#$?#header + div[class] div[class^="css-"] > div[class^="css-"] > div[class^="css-"]:has( ~ .youtube-iframe) { margin-top: 8px !important; }
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
-clien.net#?#* ~ div:matches-attr("class"="/[a-z]{1,}_[a-z]{1,}_[a-z]{1,}/"):has(script:contains(googletag.cmd.push), ad-shield-ads)
+clien.net#?#div[class]:matches-attr("class"="/[a-z]{1,}_[a-z]{1,}_[a-z]{1,}/"):has(ad-shield-ads):not(:has([class*=" "]))
 m.ppomppu.co.kr#?#.main-menu-group ~ .ct:has(h3:contains(뽐뿌)) .ppList li:has(> a[href*="market"], > a[href*="ppomppu2"], > a[href*="ppomppu7"])
 ~m.ppomppu.co.kr,ppomppu.co.kr#?#.top-nav a[href*="?id=ppomppu"] ~ .sub-menu li:has(> a[href*="market"], > a[href*="ppomppu2"], > a[href*="ppomppu7"])
 tgd.kr#?##article-list > .notice:has(.list-header:contains(AD))
