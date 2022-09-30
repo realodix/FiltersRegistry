@@ -2030,6 +2030,7 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 ! For the sites with '$generichide' exclusions
 !   SECTION: Cookies - Specific rules ($generichide)
 !
+skynet.ru##footer + div.fixed.bg-white
 surprize.lidl.ro##.container-cookie
 magentatv.pl##div[class^="styles__StyledMagentaBar-"]
 inps.it###cookie_directive_container
@@ -15797,6 +15798,8 @@ reddit.com#@#.ADBAR
 !
 ! SECTION: Anti-adblock - Regular rules
 ! Do not forget about '!#safari_cb_affinity' section for exclusions
+stereogum.com#$##sg-ad-block-notice { display: none !important; }
+stereogum.com#$#body.noscroll { overflow: auto !important; position: static !important; }
 bilibili.com##.adblock-tips
 rentanadviser.com##.reklamcontainer
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,domain=te4h.ru
@@ -15885,7 +15888,8 @@ alexfilm.cc##.no-adb
 alexfilm.cc##div[style="width: 240px; height: 400px;"]
 alexfilm.cc#%#Object.defineProperty(window, 'ads', { get: function() { return; } });
 alexfilm.cc,fenglish.ru##div[style="width: 728px; height: 90px;"]
-allmusic.com##.blocking-ads-modal
+allmusic.com#$#body.noscroll { overflow: auto !important; }
+allmusic.com#$#.blocking-ads-modal { display: none !important; }
 allmusic.com#%#//scriptlet("abort-current-inline-script", "$", "AdBlock")
 americanpress.com##.alert-dismissable
 androidacy.com#%#//scriptlet('prevent-addEventListener', 'load', 'function(e)')
@@ -25222,6 +25226,9 @@ turkuazgazetesi.net,yenialanya.com,mansetaydin.com,seskocaeli.com,kocaelibarisga
 !
 ! SECTION: Subscriptions - Regular rules
 !
+reviewed.com##.persistent-email-cta
+reviewed.com##.email-signup__container
+insider.com##.inline-newsletter-form
 goal.com#%#//scriptlet('prevent-setTimeout', 'function(){return i(!0)}', '3000')
 theverge.com##.duet--cta--newsletter
 jpl.nasa.gov#?#div[itemprop="articleBody"] > div.BaseGrid + div.BaseGrid:has(> div.relative > div.bg-gray-light > a[href="/newsletter-signup"])
