@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1001.0
+! OriginalVersion: 2022.1001.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -353,6 +353,11 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||cdn.pinpointnews.co.kr/adManager/
+||foodbank.co.kr/bannerpop/uploads/
+||cdn.ggilbo.com/adManager/
+||geo.dailymotion.com/libs/player/$domain=ggilbo.com
+||api.dailymotion.com/video/$domain=ggilbo.com
 ||medigatenews.com/file/banner/
 ||ssl.pstatic.net/adimg3.search/adpost/js/
 ||t1.kakaocdn.net/brand_sa_public/creative/
@@ -1031,7 +1036,7 @@ encar.com,fntimes.com,zdnet.co.kr,mbn.co.kr,goodgag.net,v.daum.net,www.instiz.ne
 ! ##div[class^="ad_"]
 ~m.search.naver.com,search.naver.com,dprime.kr,encar.com,m.todayhumor.co.kr,hogaeng.co.kr,zdnet.co.kr,news.zum.com,m.search.daum.net,sports.donga.com,teamblind.com,unsin.co.kr,m.mk.co.kr,m.cafe.naver.com,dvdprime.com,nocutnews.co.kr,news.sbs.co.kr,kyobobook.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.co.kr,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 ! ##div[class^="ad-"]
-huffingtonpost.kr,eroun.net,cnet.co.kr,hogangnono.com,ppomppu.co.kr,interfootball.co.kr,police112.co.kr,dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
+pinpointnews.co.kr,huffingtonpost.kr,eroun.net,cnet.co.kr,hogangnono.com,ppomppu.co.kr,interfootball.co.kr,police112.co.kr,dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 ! ##.banner
 paxnet.co.kr,ajl.co.kr,yhinews.com,funshop.co.kr,m.sedaily.com,bloter.net,mosen.mt.co.kr,hinfomax.kr,hinfomax.co.kr,pressian.com,kukinews.com##.banner
 ! ##div[class$="_banner"]
@@ -1085,6 +1090,8 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+pinpointnews.co.kr###article-view div[style].float-center .clearfix > div[class^="box-margin"]
+pinpointnews.co.kr###article-view div[style].float-center .clearfix > center[style]
 news.nate.com##.thisTimeNews > div[class^="bn"]
 ~m.search.naver.com,search.naver.com##.brand_search
 search.naver.com##li[data-cr-area][data-cr-gdid^="nad-"]._svp_item
@@ -1898,6 +1905,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+pinpointnews.co.kr#$#.box-skin .mobile-popular { border-top: none !important; }
 news.nate.com#$#.thisTimeNews > ul { border-right: none !important; width: 100% !important; }
 v.daum.net#$#.inner-main [data-cloud*="_ad_"] + .box_news_recomm { margin-top: 0px !important; }
 news.daum.net#$#.main-content > .content-article { width: 100% !important; }
@@ -2005,6 +2013,7 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+pinpointnews.co.kr#?##article-view div[style].float-center div[class^="m-view-"]:not(:has(> article))
 ~m.clien.net,clien.net#?#div[class*="_"]:has(> ad-shield-inventory)
 ~m.search.daum.net,search.daum.net#?#div[class] > div[disp-attr] ~ div[disp-attr]:has(a[href*="//brandsearch.ad.daum.net/"][onclick^="smartLog"]) + .line
 search.daum.net#?#div[class] > div[disp-attr] ~ div[disp-attr]:has(a[href*="//brandsearch.ad.daum.net/"][onclick^="smartLog"])
