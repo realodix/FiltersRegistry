@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.930.0
+! OriginalVersion: 2022.1001.0
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1085,6 +1085,7 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+news.nate.com##.thisTimeNews > div[class^="bn"]
 ~m.search.naver.com,search.naver.com##.brand_search
 search.naver.com##li[data-cr-area][data-cr-gdid^="nad-"]._svp_item
 ~m.search.naver.com,search.naver.com##div[class*="_fashion"].more_prod
@@ -1897,6 +1898,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+news.nate.com#$#.thisTimeNews > ul { border-right: none !important; width: 100% !important; }
 v.daum.net#$#.inner-main [data-cloud*="_ad_"] + .box_news_recomm { margin-top: 0px !important; }
 news.daum.net#$#.main-content > .content-article { width: 100% !important; }
 uwayapply.com#$##contentsBox #login_box { width: 350px !important; float: right !important; border-bottom: solid 2px #da3b40 !important; border-left: solid 2px #da3b40 !important; }
