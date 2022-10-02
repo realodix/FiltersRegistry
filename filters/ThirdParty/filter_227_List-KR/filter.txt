@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1002.1
+! OriginalVersion: 2022.1002.5
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -353,6 +353,11 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||thistime.ca/wp-content/uploads/thistime/banners/
+/^https:\/\/thistime\.ca\/wp-content\/uploads\/[0-9]{4}\/[0-9]{2}\/(.{0,}-ad-|.{0,}-banner-|.{0,}[0-9]{3}x[0-9]{3}_|[0-9]{3}x[0-9]{3}-)/
+||chosunlatimes.com/thema/Miso-Basic*/assets/img/developer_
+||chosunlatimes.com/data/file/banner/
+||onechurch.nz/banners/
 /^https:\/\/upload\.acmicpc\.net\/[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}\/$/
 ||grepp-programmers.*.amazonaws.com/production/file_resource/$domain=hashcode.co.kr,image
 ||cdn.pinpointnews.co.kr/adManager/
@@ -1092,6 +1097,7 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+orbi.kr##.oxad
 hashcode.co.kr##[class][itemtype*="//schema.org/"] > .right
 okky.kr##main div[class*="space-"].hidden.flex-none
 pinpointnews.co.kr###article-view div[style].float-center .clearfix > div[class^="box-margin"]
@@ -1361,7 +1367,7 @@ junggi.co.kr##img[src^="/image/banner/"]
 op.gg##header ~ div[class^="css-"] > div.search-contaienr ~ div[class^="css-"]
 ~search.danawa.com,~m.danawa.com,~prod.danawa.com,~dpg.danawa.com,danawa.com,www.danawa.com##.main__grid.main__grid--line .main__grid__right
 dpg.danawa.com##div[id*="_ad_"] ~ div[style^="min-height"]
-dpg.danawa.com##div[id*="-ad-"]
+thistime.ca,dpg.danawa.com##div[id*="-ad-"]
 news.zum.com,news.naver.com,dpg.danawa.com##div[id*="_ad_"]
 m.humoruniv.com##body > div[style^="margin:"]:not([class]):not([id]) > div[style^="width:"]:not([class]):not([id])
 thelec.kr##div[onclick^="wcs.event("]
@@ -1867,6 +1873,7 @@ manatoki148.net,manatoki149.net,manatoki150.net,manatoki151.net,manatoki152.net,
 103.204.13.68##.product-banner
 103.204.13.68##div[class^="mobile-m ad720_"]
 hellven.net##a[href$="&utm_medium=hellven1&referer=internal_hellven_banner_hellven1"]
+@@||chosunlatimes.com/data/file/banner/thumb-*_308x103.$image
 displayad.naver.com#@#.ad_item
 te31.com#@##gallery-advert
 @@||ad2.shoplinker.co.kr^

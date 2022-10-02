@@ -5,8 +5,8 @@
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
 ! Expires: 2 days
-! Last modified: Sun, 02 Oct 2022, 17:15 UTC+02:00
-! OriginalVersion: 2022.10.2.1
+! Last modified: Sun, 02 Oct 2022, 21:30 UTC+02:00
+! OriginalVersion: 2022.10.2.2
 ! Najnowsza wersja zawsze na: https://github.com/FiltersHeroes/PolishAnnoyanceFilters
 ! Zgłoszenia:
 !   Formularz (nie wymaga rejestracji) => https://polishannoyancefilters.netlify.app/issues
@@ -15,7 +15,7 @@
 ! Homepage: https://polishannoyancefilters.netlify.app
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: nie, 02 paź 2022, 17:15 UTC+02:00
+! Aktualizacja: nie, 02 paź 2022, 21:30 UTC+02:00
 !
 !
 ! Newslettery (nie popupy)
@@ -2560,9 +2560,6 @@ hotel-tulipan.pl###popUp
 hotel.bialowieza.pl,malinowydwor.pl###backgroundPopup, #popupContact
 house.pl###free_shipping
 hurtopony.pl###popupModal
-ideaart.com.pl#$#.remodal-is-locked,body { overflow: auto!important; }
-ideaart.com.pl##.remodal-is-opened.remodal-overlay
-ideaart.com.pl##.remodal-is-opened.remodal-wrapper
 iglaco.com,kim24.pl,regalka.pl,shop.albione.eu,sklep.feba.pl,sklep.zielonafabryka.pl,sprzet-poz.pl,superheroes.com.pl,tunelefoliowe.eu,voip24sklep.pl##.fx-wrapper-modal
 iglazura24.pl##div[id^="popup-scademy"]
 ine.com.pl,lilou.pl###sgcolorbox, #sgcboxOverlay
@@ -2945,8 +2942,6 @@ retailnet.pl,rp.pl##tqwidget
 rivieraparkmarvipol.pl##.fastcall_popup
 rms.pl##.sj-popup-container
 robojet.pl###modal_home_page, .modal-backdrop
-rolmix.net.pl#$#.body.noscroll,body { overflow: auto!important; }
-rolmix.net.pl##.popup-html
 rosenthal.pl###cac_popup_tlo, #cac_popup_obr
 royalcanin.pl###popOverlay
 royalcollection.pl##.newsletter-popup-fancy
@@ -11064,10 +11059,11 @@ abrakadabra.sklep.pl,ilily.pl,sekrecik.pl###myWorning, .modal-backdrop
 action.com#%#//scriptlet('ubo-rc.js', 'is-locked', 'html', 'stay')
 action.com##.is-locked .scroll-bar
 action.com#$#.is-locked body { position: static !important; overflow-y: scroll !important; }
-action.com#$#.ReactModal__Body--open { overflow: auto!important; }
 action.com##.ReactModalPortal
 action.com,aluprof.eu,cateromarket.pl,ekai.pl,jezykiobce.pl##.newsletter-popup
+action.com,czytamyetykiety.pl,hejto.pl,newtech.com.pl,pl.tommy.com#$#.overflow-hidden { overflow: auto !important; }
 action.com,euro.com.pl,mulan.pl,oleole.pl,pasmanteria.eu,shipgratis.eu,urwisydwa.sklep.pl,wetro.pl#$#body[style*="padding"] { padding-right: 0 !important; }
+action.com,hejto.pl,pl.tommy.com#$#.ReactModal__Body--open { overflow: auto !important; }
 addnature.pl,bikester.pl##.cyc-dialog:has(.nlPopup)
 addnature.pl,bikester.pl#$#.no-overflow { overflow: auto !important; }
 agatabielen.com##.remodal-overlay
@@ -11175,7 +11171,6 @@ confronter.pl###cfModal, .modal-backdrop
 confronter.pl#$#html { overflow-y: auto !important; }
 cyberdefence24.pl,defence24.com,defence24.pl,energetyka24.com,kidsworld.pl,ncez.pl,politykazdrowotna.com,space24.pl###newsletter-modal
 czytamyetykiety.pl###ebook-popup.ebook-popup
-czytamyetykiety.pl,newtech.com.pl#$#.overflow-hidden { overflow: auto !important; }
 deccoria.pl#$#.dc-layout--modal-active { overflow-y: auto !important; touch-action: unset !important; padding-right: 0 !important; }
 deccoria.pl#$#.dc-layout--modal-active { overflow-y: auto !important; touch-action: unset !important; }
 deccoria.pl##.dc-modal-is-opened.dc-modal-wrapper, .dc-modal-is-opened.dc-modal-overlay
@@ -11237,10 +11232,14 @@ haart.pl###sgpb-popup-dialog-main-div-wrapper, .sgpb-popup-overlay
 haart.pl#$#.sgpb-overflow-hidden, .sgpb-overflow-hidden-body { overflow: auto !important; }
 habys.pl##.fancybox-overlay:has(.sm-newsletter-popup)
 hardreset.info###modal-facebook, .modal-backdrop
+hejto.pl##.ReactModal__Overlay:has(div.ReactModalPortal p.font-bold:has-text(/^cześć!$/i))
 husse.pl###fancybox-container-1
 husse.pl#$#.compensate-for-scrollbar { margin-right: 0 !important; }
 husse.pl,royalpark.pl#$#body.fancybox-active { overflow: auto !important; }
 ibuk.pl###modal-pop, .modal-backdrop
+ideaart.com.pl#$#.remodal-is-locked, body { overflow: auto !important; }
+ideaart.com.pl##.remodal-is-opened.remodal-overlay
+ideaart.com.pl##.remodal-is-opened.remodal-wrapper
 ideau.pl##.pum[data-popmake*="nowy-produkt"], .overlay
 idream.pl###modal-getresponse, .modal-backdrop
 ifirma.pl###reklama-overlay
@@ -11258,9 +11257,9 @@ jzo.com.pl#$#.cp-overflow-hidden { overflow: visible !important; }
 jzo.com.pl,um.jaslo.pl##.cp-modal-popup-container
 kartafitsport.pl,kuriernet.pl##.modal.bootbox, .modal-backdrop
 kiep.pl#$#[style*="opacity: 0.3;"] { opacity: 1 !important; }
-kierunekwodkan.pl#$#.html  { overflow: auto!important; }
 kierunekwodkan.pl##.mfp-ready.mfp-auto-cursor.mfp-close-btn-in.mfp-wrap
 kierunekwodkan.pl##.mfp-ready.mfp-bg
+kierunekwodkan.pl,profbud.info,stradivarius.com#$#html[style] { overflow: auto !important; }
 kioskpolis.pl###exit-intent
 kioskpolis.pl#$#.exit-intent { overflow: visible !important; }
 kire.pl#$#.gafancybox-lock > body, html.gafancybox-lock { overflow: visible !important; }
@@ -11392,7 +11391,6 @@ pl.dreamstime.com#$#html.documentLocked header { padding-right: 0 !important; }
 pl.dreamstime.com#$#html.documentLocked { margin-right: 0 !important; }
 pl.johnnybet.com##.modals.dimmer.ui:has(.common-offer)
 pl.johnnybet.com#$#body.dimmable, body.dimmed { overflow: auto !important; }
-pl.tommy.com#$#.ReactModal__Body--open { overflow: auto !important; }
 pl.tommy.com##.ReactModalPortal:has(.newsletter--modal)
 play.pl##.mobile-map-list .contact-us-modal, .mobile-map-list > .page-wrapper::before
 play.pl#$#.modal-open[class] > .mobile-map-list { overflow: auto !important; }
@@ -11418,7 +11416,6 @@ prawokonsumenckie.pl##.popup[role]
 prawokonsumenckie.pl#$#body { overflow: auto !important; height: initial !important; }
 profbud.info###yl-popup-wrapper-popupNewPrices
 profbud.info##.yl-popup-transparent:has(~ #yl-popup-wrapper-popupNewPrices)
-profbud.info,stradivarius.com#$#html[style] { overflow: auto !important; }
 prusice.pl,przemysl.pl###infoPageLayerModal, .modal-backdrop
 prywatnoscwsieci.pl##.CampaignType--popup.Campaign
 prywatnoscwsieci.pl#$#.om-position-popup { overflow: auto !important; }
@@ -11439,6 +11436,8 @@ rocks-jeans.com#$#.dialoged { position: static !important; overflow: auto !impor
 roland-gazeta.pl#$#.eb-page_no_scroll, .eb-page_no_scroll body { overflow: auto !important; }
 roland-gazeta.pl##div[data-type="popup"][data-options*="Popup Exit"]
 rolbud.eu,wielkopolskaes.pl#$#.body-overlayed { overflow: auto !important; }
+rolmix.net.pl#$#.noscroll.noscroll, body { overflow: auto !important; }
+rolmix.net.pl##.popup-html
 rossmann.pl##body.modal-open[class] > div[tabindex][style^="position:"] > div > .modal:has(> .modal-news)
 rossmann.pl##body.modal-open[class] > div[tabindex][style^="position:"] > div > .modal:has(> .modal-news) + .modal-backdrop
 rowery-elektryczne.pl###popup, #popup-overlay
@@ -11649,7 +11648,7 @@ www.auchan.pl##.v-dialog__content:has(> div.v-dialog > div:not([id]):not([class]
 www.auchan.pl##.v-overlay:has(~ .v-dialog__content > div.v-dialog > div:not([id]):not([class]) > button ~ a > picture:only-child)
 !#endif
 !#if cap_user_stylesheet
-!www.vivrehome.pl##.js-popup-subscribe:not([style]):watch-attr(style):has(.js-title-default.is-hidden:watch-attr(class))
+!
 !#endif
 !#if env_legacy
 lento.pl##footer ~ script:contains(showNotify())
