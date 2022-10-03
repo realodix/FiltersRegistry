@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 01October2022v2-Beta-Compilation
+! OriginalVersion: 03October2022v1-Beta-Compilation
 ! Expires: 2 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
@@ -20999,7 +20999,7 @@ pixiv.net#?#div[class*=" "]:not(:has(*)):has(+ aside + aside)
 !!! *##p:has(br):not(:has-text(/\S/)):not(:has(span)):not(:has(img)) (Caused newlines to fail to work in Slack)
 !+ NOT_OPTIMIZED
 ! Title: 💺 Anti-'IMDB ratings on other sites' List
-! OriginalVersion: 28September2022v1-Beta
+! OriginalVersion: 03October2022v1-Beta
 ! Description: Are you tired of being told by others what you should watch, specifically IMDb voters who are very well known for downvote bombing, fandom/hatedom bias, and for up-/downvoting things based on their reputations alone? Here's a way to let you feel more peaceful with your truly own opinions.
 ! Note that this list does currently not aim to remove the sites' own rating mechanics.
 ! Note that this list aims to support advanced adblockers, to avoid the inconvenience of having to list 15 Amazon domains for each Amazon-related entry.
@@ -21062,6 +21062,8 @@ pixiv.net#?#div[class*=" "]:not(:has(*)):has(+ aside + aside)
 ~imdb.com##.imdb-score:not(html, body)
 ! fullhdfilmizlesene.pw (07/04/2022)
 ~imdb.com##.imdb-ic:not(html, body)
+! https://twe.no/#/assetCard/srs%3A8511cbaf-9ef0-4ffe-9722-57c107f57844
+~imdb.com##span[data-id=asset-card-imdb]:not(html, body)
 ! International (All adblockers)
 bing.com#?#.b_algo:has(cite:has-text(imdb.com)) .b_sritem
 newonnetflix.info#?#p:has(a[target=_imdb])
@@ -24791,3 +24793,5 @@ youtube.com##ytd-miniplayer[has-playlist-data][closed] ~ * .ytp-miniplayer-butto
 ! https://github.com/AdguardTeam/AdguardFilters/issues/124667 (Probably can't be in Falukorv List because that list adds whitelistings, not remove them.)
 @@://googleadservices.com^|$badfilter
 !#endif
+! I don't trust those pings very much
+$third-party,denyallow=microsoft.com,domain=store.rg-adguard.net
