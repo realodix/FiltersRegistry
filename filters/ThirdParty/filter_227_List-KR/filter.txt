@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1005.2
+! OriginalVersion: 2022.1005.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -355,6 +355,9 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||mjmedi.com/bannerpop/popup.html$document
+||mjmedi.com/bannerpop/uploads/
+||mjmedi.com/adManager/
 ||cdn.emetro.co.kr/data1/resources/banner/
 ||cdn.emetro.co.kr/data1/resources/popup/
 ||cdn.ekoreanews.co.kr/bannerpop/uploads/
@@ -1143,7 +1146,7 @@ m.diningcode.com##div[class$="-ad"] ~ .section.naver
 diningcode.com##.MapMain > #map ~ div[class]:not([id]):not([style])
 koya-culture.com##div[itemprop="articleBody"] ~ div[style]
 eroun.net##body > div[style]:not([class]):not([id])
-eroun.net###layer-popups
+mjmedi.com,eroun.net###layer-popups
 hogaeng.co.kr###aside > div[class$="_bn"]
 hogaeng.co.kr##div[id^="container_"] .slide_box
 mlbpark.donga.com##.contents > .left_cont > div[style]
@@ -2189,6 +2192,7 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+mjmedi.com#%#//scriptlet("abort-current-inline-script", "bannerpop.popup")
 laftel.net#%#//scriptlet("prevent-xhr", "\/api\/avods\/v[0-9]{1,}\/advertisement\/")
 uwayapply.com#%#//scriptlet("set-constant", "admode", "0")
 tvchosun.com#%#//scriptlet("set-constant", "player.advertisement_finished", "true")
