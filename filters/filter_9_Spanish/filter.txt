@@ -277,6 +277,10 @@
 ! Good: @@/adblocker/detect.js$domain=example.org
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/131519
+minhaconexao.com.br#%#//scriptlet('prevent-xhr', 'securepubads.g.doubleclick.net/pagead/ppub_config')
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||securepubads.g.doubleclick.net/pagead/ppub_config$xmlhttprequest,domain=minhaconexao.com.br
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131238
 escplus.es##.background-aviso-adblock
 escplus.es#%#//scriptlet("prevent-setTimeout", ".adsbygoogle")
@@ -1668,6 +1672,7 @@ peru21.pe#@#.adstop
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24801
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
+minhaconexao.com.br#?#section > div > div> div[class] > div[class][id] > div[id^="div-gpt-"]:upward(2)
 inforchannel.com.br#?#.col-md-4 > .height-item:has(> .img-fluid > iframe[src^="https://banners.inforchannel.com.br/"])
 inforchannel.com.br#?#.sidebar-secondary > .height-item:has(> .img-fluid > iframe[src^="https://banners.inforchannel.com.br/"])
 inforchannel.com.br#?##main-content_home > div > .height-size-sidebar:has(> .img-fluid > iframe[src^="https://banners.inforchannel.com.br/"])
@@ -2488,6 +2493,8 @@ tribunapr.uol.com.br,diariodonordeste.verdesmares.com.br,sbt.com.br,link.estadao
 ! ##.banner
 eleconomista.com.mx,metropolitanafm.com.br,tycsports.com,elespectador.com,bnews.com.br,migalhas.com.br,losandes.com.ar,lavoz.com.ar,mundo.sputniknews.com,omelete.com.br,lapoliticaonline.com.ar,mundotecnologias.com,valenciaplaza.com,veneapp.com,dalealbo.cl,globo.com,defesanet.com.br,mibrujula.com,lyon.kim,26noticias.com.ar,auniao.com,clickpb.com.br,emagister.com,lanacion.com.ar,parana-online.com.br,r7.com,toxico-pc.com,uol.com.br##.banner
 !
+minhaconexao.com.br##section a[target="_blank"] > img
+minhaconexao.com.br##section iframe[src^="https://melhorplano.net/"]
 webmotors.com.br##.BannerDfp
 webmotors.com.br##.Prebid-media-short
 tribunapr.uol.com.br##body > #__next > footer ~ .fixed.bottom-0
