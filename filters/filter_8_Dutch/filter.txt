@@ -1171,6 +1171,8 @@ vakantieplaats.nl#@#.topAds
 !
 !
 ||content2.nrc.nl^
+||aa.hwigroup.com^
+||ab.hwigroup.com^
 ||aa.tweakers.nl^
 ||ab.tweakers.nl^
 
@@ -1212,7 +1214,7 @@ goplay.be#%#//scriptlet('prevent-fetch', 'pubads.g.doubleclick.net/gampad/ads')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/69783
 vier.be#@#.googleAd
 ! https://github.com/AdguardTeam/AdguardFilters/issues/64292
-hardware.info$$script[tag-content="Flags."][min-length="20000"][max-length="300000"]
+hardware.info$$script[tag-content="Flags."][min-length="10000"][max-length="300000"]
 hardware.info#%#//scriptlet("abort-on-property-read", "Object.prototype.autoRecov")
 hardware.info#%#//scriptlet("prevent-addEventListener", "", "Flags.autoRecov")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/62479
@@ -1327,6 +1329,8 @@ klusidee.nl#?#tr.table-row[-ext-has=".td-ad"]
 !--------------------------------------!
 ! SECTION: Dutch - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/131530
+hardware.info#%#//scriptlet("set-constant", "BannerManager", "undefined")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/120455
 tweakers.net#%#//scriptlet("set-constant", "BannerManager", "undefined")
 ! NOTE: JS end ⬆️
@@ -1386,6 +1390,7 @@ omroepwest.nl#$#.adcontainer-Rectangle { position: absolute!important; left: -40
 ! Good: example.org###rek; ||example.com/ads/
 ! Bad: example.org#$##rek { display: none !important; } (for instance, should be in general_extensions.txt)
 !
+hardware.info##div[class^="bnr-"]
 security.nl##.banner_leaderboard
 iculture.nl##.ad-top-desktop
 iculture.nl##.feed-ad-wrapper
