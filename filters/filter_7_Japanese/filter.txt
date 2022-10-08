@@ -454,6 +454,13 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/131648
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,domain=helpsupport.blog.fc2.com,important
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=helpsupport.blog.fc2.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/131650
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,domain=tabtter.jp,important
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=tabtter.jp
+tabtter.jp#@##googlead
 ! https://github.com/uBlockOrigin/uAssets/issues/15126
 kledgeb.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.getElementById", "_0x")
 @@||kledgeb.github.io/UbuntuKledgeb/JavaScript/GoogleAnalytics.js$domain=kledgeb.blogspot.com
@@ -540,8 +547,6 @@ musenboya.com#%#//scriptlet('prevent-setTimeout', '/location\.href|document\./')
 @@||ssp-bidapi.i-mobile.co.jp/api/v1/spot.ashx?$domain=musenboya.com
 @@||spnativeapi-tls.i-mobile.co.jp/api/ad_spot.ashx?$domain=musenboya.com
 !#endif
-! https://github.com/AdguardTeam/AdguardFilters/issues/95723
-tabtter.jp#@##googlead
 ! health.joyplot.com anti-adb
 ||health.joyplot.com/HealthWordsWiki/skin/foradblock.
 ! https://github.com/AdguardTeam/AdguardFilters/issues/90462
@@ -885,6 +890,7 @@ otonasalone.jp,sumaiweb.jp#?#._popIn_infinite_page > a._popIn_recommend_article_
 !
 !
 !
+blog55.fc2.com##div[class$="_outline"] > div > div.plugin-freearea > ins.adsbygoogle:upward(3)
 plaza.rakuten.co.jp#?##content-sticky > table:has(div.rcardImg)
 plaza.rakuten.co.jp#?##content-sticky > table:has(td[style="padding-right: 16px;"] > div.side_lo > div#RGPT_Rak_Blog_User_SideBanner)
 asahi.com##.Section > div.Ad:upward(1)
@@ -2023,6 +2029,7 @@ kuruma-news.jp,magmix.jp,trafficnews.jp$$div[data-history="photo_extra"]
 /wp-content/plugins/amazonjs/*
 !
 ! Malware/Phishing
+://connecct-login.*.com/login.php?token=|$document
 /^http:\/\/[0-9a-z]{1,4}\.[a-z]{5}\.com\/chrome\.apk$/$document
 ://mizunho*.cyou/client/index.php|$document
 .cn/Personal/member/Login/index.php?oneTimeAccessID=$document
