@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1008.2
+! OriginalVersion: 2022.1008.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -343,8 +343,9 @@
 ##ins.kakao_ad_area
 ##iframe[src*="//www.mediacategory.com/servlet/"]
 ##div[id^="targetpushAd_"]
-[$path=/(&|\\.|\\?)clubid=27842958($|&)/]cafe.naver.com##table[role="presentation"] #editorMainContent div[style^="text-align"]:nth-child(n+6)
-[$path=/&clubid=27842958(&|$)/]cafe.naver.com##img[src][alt="매니저 등록 배너"]
+[$path=/ca-fe\\/web\\/cafes\\/steamindiegame\\//]m.cafe.naver.com##.banner_add.bottom
+[$path=/(&|\\.|\\?)clubid=27842958($|&)/]~m.cafe.naver.com,cafe.naver.com##table[role="presentation"] #editorMainContent div[style^="text-align"]:nth-child(n+6)
+[$path=/&clubid=27842958(&|$)/]~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]
 /bannerpop/uploads/
 /media/banner/*
 /data/banner/*
@@ -355,6 +356,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||images.nstatic.org/banner/
 ||cafe.naver.com/PlugFloatingAdvert.nhn
 ||goodmorningcc.com/adManager/
 ||goodmorningcc.com/bannerpop/uploads/
@@ -922,7 +924,6 @@
 ||img.postshare.co.kr/images/banner/
 ||danawa.com/NBP/powerLink.js.php
 ||image.ruliweb.com/view/view.js?zoneid=
-||noonoo-images.studiouniversal.net/banner/
 ||vogue.co.kr/wp-content/plugins/wppas/
 ||sslimg.appstory.co.kr/@files/snc/eventbanner/
 ||shop-redapi.daum.net/red-apigate/daumtop/
