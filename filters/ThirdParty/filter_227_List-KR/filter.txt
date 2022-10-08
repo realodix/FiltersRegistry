@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1007.2
+! OriginalVersion: 2022.1008.0
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -2188,6 +2188,10 @@ m.bunjang.co.kr#?#.app > div > div > div[class]:has(> div[class] > div[class] > 
 m.bunjang.co.kr#?#div:has(> div > div > div:contains(연관상품) > div:has(> div:contains(AD)) > img[alt="AD 가이드"])
 m.ppomppu.co.kr#?#.community-board-notice-box > #bbs_inform:has(> ul > li span:contains(AD))
 !
+[$path=/ca-fe\\/anycallusershow(\\?|$)/]m.cafe.naver.com#?#.location_bar:has(.active:contains(전체공지)) ~ .location_fix li.board_box:has(a[href].txt_area span.nick:contains(삼성스마트폰카페운영))
+[$path=/(&|\\.|\\?)clubid=13764661($|&)/]~m.cafe.naver.com,cafe.naver.com#?##upperArticleList ._noticeArticle:has(a[href][class][onclick]):has(.td_name a[onclick][href][class]:contains(삼성스마트폰카페운영))
+[$path=/(&|\\.|\\?)clubid=13764661($|&)/]~m.cafe.naver.com,cafe.naver.com#?##editorMainContent div[title][style^="color"]:not(:has(a[target="_blank"])) ~ *:has(a[target="_blank"])
+!
 ! Each domain of website in this section is forbidden by Internet censorship of S. Korea.
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
@@ -2296,6 +2300,7 @@ kr1.4kjav.co#%#//scriptlet("abort-on-property-read", "adsBlocked")
 @@||namu.news/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 @@||namu.wiki/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 !
+@@||op.gg^$generichide
 1412.rest#%#//scriptlet("abort-current-inline-script", "hideAll")
 1412.rest#$#[class^="document_"].xe_content { height: auto !important; overflow: auto !important; }
 ||adimg.nate.com/img/*?n=$redirect=2x2-transparent.png,domain=tv.nate.com
@@ -2380,6 +2385,7 @@ kr1.4kjav.co##.adde_modal-overlay
 @@||namu.news/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 @@||namu.wiki/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 !
+@@||op.gg^$generichide
 @@||withukor.com^$generichide
 meeco.kr#@#.adsbygoogle
 ||fundingchoicesmessages.google.com^$domain=mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr
