@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1009.1
+! OriginalVersion: 2022.1009.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -343,6 +343,7 @@
 ##ins.kakao_ad_area
 ##iframe[src*="//www.mediacategory.com/servlet/"]
 ##div[id^="targetpushAd_"]
+[$path=/(&|\\.|\\?)clubid=28173877($|&)/]~m.cafe.naver.com,cafe.naver.com###cafe-data > #cafe-intro
 [$path=/(&|\\.|\\?)clubid=29560217($|&)/]~m.cafe.naver.com,cafe.naver.com###editorMainContent a[href*="//cafe.naver.com/eyejoker7?iframe"][target="_blank"] ~ *
 [$path=/ca-fe\\/web\\/cafes\\/steamindiegame\\//]m.cafe.naver.com##.banner_add.bottom
 [$path=/(&|\\.|\\?)clubid=27842958($|&)/]~m.cafe.naver.com,cafe.naver.com##table[role="presentation"] #editorMainContent div[style^="text-align"]:nth-child(n+6)
@@ -2190,10 +2191,13 @@ m.bunjang.co.kr#?#.app > div > div > div[class]:has(> div[class] > div[class] > 
 m.bunjang.co.kr#?#div:has(> div > div > div:contains(연관상품) > div:has(> div:contains(AD)) > img[alt="AD 가이드"])
 m.ppomppu.co.kr#?#.community-board-notice-box > #bbs_inform:has(> ul > li span:contains(AD))
 !
+[$path=/fx8300($|\\/|\\?)/]~m.cafe.naver.com,cafe.naver.com#?##cafe-menu .cafe-menu-tit:contains(우리카페 협력업체) + ul
+[$path=/fx8300($|\\/|\\?)/]~m.cafe.naver.com,cafe.naver.com#?##cafe-menu .cafe-menu-tit:contains(우리카페 협력업체)
+[$path=/(&|\\.|\\?)clubid=28173877($|&)/]~m.cafe.naver.com,cafe.naver.com#?#.article-board tr.type_main:not(:has(.td_name .m-tcol-c:contains(/(카페지기|매니저)/)))
 [$path=/ca-fe\\/joonggonara/]m.cafe.naver.com#?#.location_bar:has(.active:contains(전체공지)) ~ .location_fix li.board_box:not(:has(a[href].txt_area span.nick:contains(/중고나라스태프|중나중나지기/)))
 [$path=/(&|\\.|\\?)clubid=10050146($|&)/]~m.cafe.naver.com,cafe.naver.com#?##content-area #upperArticleList tr.board-notice:not(:has(td.p-nick > a:contains(중고나라스태프))):not(:has(td.p-nick > a:contains(중나중나지기)))
-[$path=/joonggonara($|\\/)/]~m.cafe.naver.com,cafe.naver.com#?##cafe-menu .cafe-menu-tit:contains(AD) + ul
-[$path=/joonggonara($|\\/)/]~m.cafe.naver.com,cafe.naver.com#?##cafe-menu .cafe-menu-tit:contains(AD)
+[$path=/joonggonara($|\\/|\\?)/]~m.cafe.naver.com,cafe.naver.com#?##cafe-menu .cafe-menu-tit:contains(AD) + ul
+[$path=/joonggonara($|\\/|\\?)/]~m.cafe.naver.com,cafe.naver.com#?##cafe-menu .cafe-menu-tit:contains(AD)
 [$path=/(&|\\.|\\?)clubid=10050146($|&)/]~m.cafe.naver.com,cafe.naver.com#?##editorMainContent *:has(~ div[title][style]:has(a[target="_blank"][href*=".police.go.kr/"]))
 [$path=/ca-fe\\/anycallusershow(\\?|$)/]m.cafe.naver.com#?#.location_bar:has(.active:contains(전체공지)) ~ .location_fix li.board_box:has(a[href].txt_area span.nick:contains(삼성스마트폰카페운영))
 [$path=/(&|\\.|\\?)clubid=13764661($|&)/]~m.cafe.naver.com,cafe.naver.com#?##upperArticleList ._noticeArticle:has(a[href][class][onclick]):has(.td_name a[onclick][href][class]:contains(삼성스마트폰카페운영))
