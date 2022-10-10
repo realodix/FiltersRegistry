@@ -579,6 +579,8 @@ nordot.app#%#//scriptlet('abort-current-inline-script', 'document.createElement'
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85641
 modalina.jp#%#//scriptlet('abort-on-property-read', 'AdBlockLimitation')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116093
+@@||realtime-chart.info^$generichide
+@@||sekai-kabuka.com^$generichide
 realtime-chart.info,sekai-kabuka.com#%#//scriptlet("set-constant", "alert", "noopFunc")
 ! realtime-chart.info anti-adb
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=realtime-chart.info|sekai-kabuka.com
@@ -1819,7 +1821,7 @@ mapion.co.jp#$##result_nav { bottom: 0 !important; }
 ! https://github.com/uBlockOrigin/uAssets/issues/12993
 teny.co.jp#$#.s-ad { height: 1px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116093
-sekai-kabuka.com#$#div[id][style$="width:728px;"] { height: 0 !important; visibility: hidden !important; }
+sekai-kabuka.com#$#div[id][class][style^="position:relative;background:#000;"] { height: 1px !important; }
 sekai-kabuka.com#$#table[id] td[align] > div[id] { height: 1px!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/115709
 ign.com#$#.zad.billboard { min-height: 1px !important; }
@@ -4782,7 +4784,6 @@ tokyoartbeat.com###homebnrs
 aniplexplus.com##.hotentry
 ||xn--jx2a33n.com/nnn.js
 ||x.sekai-kabuka.com/http/$image
-sekai-kabuka.com##a[id]:not([href^="javascript:void"])
 sekai-kabuka.com###link_url_td > div[class]:last-of-type
 ||realtime-chart.info/-$subdocument
 ||amazon-adsystem.com/widgets/$important,domain=realtime-chart.info|mashlife.doorblog.jp|lamsect.blog112.fc2.com|blog.domesoccer.jp|neo-blood.co.jp|katuru2ch.blog12.fc2.com
