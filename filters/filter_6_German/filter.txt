@@ -80,6 +80,7 @@
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
 !
+||plx.eispop.com^
 ||oddsserve.com^$third-party
 ||widget.marktjagd.de^
 ||cwi.re^$third-party
@@ -2577,6 +2578,8 @@ amateurbusters.com#?#.sb_area > .sb_area_headline:contains(Urlaub)
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/131890
+eispop.com#%#//scriptlet('set-constant', 'Object.prototype.AdOverlay', 'noopFunc')
 ! https://github.com/uBlockOrigin/uAssets/issues/6541#issuecomment-1140420880
 vip.de#%#//scriptlet('prevent-xhr', 'svonm')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/117511
@@ -3013,6 +3016,12 @@ vergleich.focus.de,chip.de,gutefrage.net,reisefrage.net,motorradfrage.net,autofr
 ! ##.adsbygoogle
 winfuture.de,netzwelt.de,quoka.de,farmeramania.de,bravofly.de,computerbild.de,digitalfernsehen.de,hl-live.de,chinamobilemag.de,focus.de,pcwelt.de##.adsbygoogle
 !
+infranken.de##.mj-pf-widget
+eispop.com##.footer_partner_container_wrapper
+eispop.com##.vjs-toolbar[style]
+selbst.de##body .adAnything:not(#style_important)
+pornohirsch.net##.video > div[id][style^="background-image:"] + aside[id]
+pornohirsch.net###wrapper_content > div.cf + aside[id]
 portugal360.de###block-adsenseleaderboard
 firstname.de##.mod_footer_werbung
 firstname.de##iframe[src^="https://api.heise.de/svc/pvg-widget/"]
