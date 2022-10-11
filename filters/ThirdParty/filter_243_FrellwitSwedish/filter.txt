@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-10-10 08:08:50 CEST
+! Last modified: 2022-10-11 10:51:09 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -302,7 +302,6 @@ loppi.se##a[href="https://loppi.se/promotion"]:upward(.page__section)
 lwcdn.com#%#//scriptlet('ubo-aeld.js', '/^(?:adBlocker|contextmenu)$/')
 macken.xyz##.et_pb_text_inner:has-text(/annons/i):upward(.et_pb_section)
 macken.xyz##a[target="_blank"]:not([href^="https://www.macken.xyz"]):upward(.et_pb_section)
-macradion.com,teknikveckan.se##.pill:has-text(/spons/i):upward(.grid-item, .pinned, .articleFlow-item)
 maklarvarlden.se##.sponsored-inlist:upward(article)
 maklarvarlden.se##.td-post-category:has-text(/spons/i):upward(2)
 maklarvarlden.se##.td-pulldown-size:has-text(/spons/i):upward(3)
@@ -353,7 +352,6 @@ nyfiknainvesterare.se##article.post:has-text(/annons från/i)
 nyheteridag.se##article:has-text(/sponsrat innehåll/i)
 nyheteridag.se##h2:has-text(/samarbetslänkar/i):upward(.article-inner)
 nyteknik.se#%#//scriptlet('ubo-no-xhr-if.js', '/premium/ method:HEAD')
-nytt.com#$#html { overflow:initial!important }
 obsid.se##a[href*="casino"]:upward(aside.widget_text)
 omni.se,omniekonomi.se#%#//scriptlet('ubo-aeld.js', 'omniPulseLoaded')
 omni.se,omniekonomi.se#$#.header-banner--regular, .app-banner { --banner-offset: 0 !important; }
@@ -422,6 +420,7 @@ tasteline.com#$#.popup { overflow: auto !important; }
 teknifik.se##.sponsor:upward(.post)
 tekniknytt.se##.label:has-text(/samarbete|annons|reklam|presenteras av/i):upward(a)
 tekniksmart.se##center:has-text(/annons/i):upward(1)
+teknikveckan.se##.pill:has-text(/spons/i):upward(.grid-item, .pinned, .articleFlow-item)
 temperatur.nu##.holidAds:upward(1)
 tennisportalen.se##h4:has-text(/spons/i):upward(.td-pb-row [class*="td-pb-span"])
 thatsup.se#%#//scriptlet('ubo-set.js', 'canShowAds', 'true')
@@ -556,8 +555,8 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -696,6 +695,7 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 ##article.type-partnerartikel
 ##aside.thb-cookie-bar
 ##aside.washer.loaded.displayed
+##body[data-site-namespace="tailsweep"] #premiumAdWrapper
 ##cookie-law-banner
 ##div#ad_global_below_navbar
 ##div#ads-panorama
@@ -759,6 +759,7 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 ##div.feed_ad
 ##div.fs-holid-live-widescreen
 ##div.gdpr-warning.gdpr-warning-slide-up
+##div.helsida-ad
 ##div.holidAds
 ##div.ilcc-cookie-consent-notice
 ##div.js-top-banner-container
@@ -770,6 +771,7 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 ##div.novashare-buttons
 ##div.o-indenter--ad
 ##div.outsideAdsWrapper
+##div.panorama-ad
 ##div.panorama-ad-standard
 ##div.panoramaAd
 ##div.phpbb-ads-center
@@ -1029,6 +1031,7 @@ affarsstaden.se,boktugg.se,kurera.se,lundagard.se,macken.xyz,morotsliv.com,outsi
 /cookiswarning.$script,domain=visitskargarden.se
 /cpg_ads.$script
 /cs1pc.js$domain=kiaindex.se
+/ctr-prd.cbs-measurements.
 /cts.min.js$domain=recept.se
 /cx-emediate-userprofile-se
 /detroitchicago$domain=temadagar.se
@@ -1654,7 +1657,7 @@ bergsmannen.se##.ann-puff, .headerLinks
 besoksliv.se##a[href*="sponsrat-innehall"]
 bestchampagne.se##aside.section-sm
 betongforeningen.se,espressomedia.se,foodetc.se,livetsgoda.se,realtid.se##a[target$="blank"] img
-bettingstugan.se,bioenergitidningen.se,bovision.se,dagensopinion.se,di.se,dn.se,driva-eget.se,ehandel.se,expressen.se,familjeliv.se,fordonsproffs.eu,golflivet.se,ifokus.se,ifragasatt.se,jaktojagare.se,kamerabild.se,macradion.com,mobil.se,padelfeber.se,skaraborgsbygden.se,skillingaryd.nu,sportbloggare.com,sv.picmix.com,swedroid.se,tandlakartidningen.se,teknikveckan.se,tidningenridsport.se,tripadvisor.se,vardfokus.se,xn--vrnamo-bua.nu##.ad
+bettingstugan.se,bioenergitidningen.se,bovision.se,dagensopinion.se,di.se,dn.se,driva-eget.se,ehandel.se,expressen.se,familjeliv.se,fordonsproffs.eu,golflivet.se,ifokus.se,ifragasatt.se,jaktojagare.se,kamerabild.se,mobil.se,padelfeber.se,skaraborgsbygden.se,skillingaryd.nu,sportbloggare.com,sv.picmix.com,swedroid.se,tandlakartidningen.se,teknikveckan.se,tidningenridsport.se,tripadvisor.se,vardfokus.se,xn--vrnamo-bua.nu##.ad
 bettips.se##.bettips-am
 bettips.se,borskollen.se##.top-banner
 bicycling.se,runnersworld.se##.post-card-sponsored, .modal-plus, .modal-backdrop, .footer-newsletter
@@ -2013,6 +2016,7 @@ mmanytt.se##.front-banner, .front-banner-cover, #text-2, [class*="sponsrat-inlag
 mobil.se,nordichardware.se##.pspy_info
 mobilanyheter.net##a[href*="rocketpot.io"], a[href*="casino"], a[href*="betting"]
 modernalivet.se##.modal-wrap, .slide-in-box
+modette.se##.true_native_block
 morotsliv.com##.et_bloom .et_bloom_flyin_center, a[href*="/?utm_medium=affiliate"], a.bigblue[target]
 motivation.se##.sponsored-item, [class*="banner"], .outsider
 motorforum.nu##.pea_cook_wrapper
@@ -2038,7 +2042,6 @@ nyadagbladet.se##.third-col, article[class*="sponsrad"]
 nyheter24.se##.lazyload_bar.show, .lazyload_outer.show, .sponsrat, .is_native, .sticky-scroll
 nyheteridag.se##.widget.facebook, .content > div:not([class]) img, a[href*="www.casino"]
 nyhetersto.se##header > div.g
-nytt.com##.mfp-wrap, .mfp-bg
 obsid.se##a[href*="casino"]
 omni.se,omniekonomi.se##.article--sponsored, .resource--sponsored, .component--sticky-sponsor-banner, .pre-banner, .banner--toppanorama, .banner--mobiletoppanorama, .banner--midpanorama
 omnihalsa.com,skanesport.se,sportpanelen.se##.stream-item
