@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1012.11
+! OriginalVersion: 2022.1013.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -363,6 +363,10 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||lawnb.com/lbimg/Banner/
+||mediapen.com/banner
+/^https:\/\/tbc\.imgdl\.xcache\.kinxcdn\.com\/cdn[0-9]{3}\/[0-9]{8}\/[0-9%A-z_]{1,}\([0-9]{3,4}x[0-9]{3,4}\)/
+/^https:\/\/static\.wixstatic\.com\/media\/[0-9a-z]{6}_[a-z0-9]{32}~(?!.{1,}doc).{1,}/$domain=ponh.info
 ||lawtalk.co.kr/api/beta?categories=
 ||lawtalk.co.kr/api/adcategories/
 ||kpanews.co.kr/common_files/upload_files/banner/
@@ -887,7 +891,6 @@
 ||cdn.todaykorea.co.kr/bannerpop/uploads/
 ||fnnews.com/resources/js/fnnewsAd.js
 ||hoppingcall.me/ad_shoppingCallme.php
-||mediapen.com/banners/
 ||cdn.mediatoday.co.kr/adManager/css/adManager.css
 ||cdn.mediatoday.co.kr/bannerpop/uploads/
 ||res.heraldm.com/HeraldResource/doubleuad/
@@ -1140,6 +1143,8 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+lawnb.com##aside[class^="banner_"]
+m.thesingle.co.kr##div[class*="Advertisement_"]
 lawtalk.co.kr##[ng-if^="premiumLawyers"]
 lawtalk.co.kr##div[class^="premium-lawyer"]
 kookje.co.kr##.box_skitter
@@ -2198,6 +2203,7 @@ torrentwiz48.com,torrentwiz49.com,torrentwiz50.com,torrentwiz51.com,torrentwiz52
 torrentwiz48.com,torrentwiz49.com,torrentwiz50.com,torrentwiz51.com,torrentwiz52.com,torrentwiz53.com,torrentwiz54.com,torrentwiz55.com,torrentwiz56.com,torrentwiz57.com,torrentwiz58.com,torrentwiz59.com,torrentwiz60.com,torrentwiz61.com,torrentwiz62.com#?#.hidden-xs:has(a[href][target="_blank"] > img[src])
 yagong42.com,yagong43.com,yagong44.com,yagong45.com,yagong46.com,yagong47.com,yagong48.com,yagong49.com,yagong50.com,yagong51.com,yagong52.com,yagong53.com,yagong54.com,yagong55.com,yagong56.com,yagong57.com,yagong58.com,yagong59.com,yagong60.com,yagong61.com,yagong62.com,yagong63.com,yagong64.com#?#div[class*="border"]:has(> a[href][target*="_blank"])
 toonkor134.com,toonkor135.com,toonkor136.com,toonkor137.com,toonkor138.com,toonkor139.com,toonkor140.com,toonkor141.com,toonkor142.com,toonkor143.com,toonkor144.com,toonkor145.com#?#.navbar-nav > li[class]:has(> a[href$="/토토보증업체"][alt="토토보증업체"])
+ponh.info#$?#div[data-mesh-id][data-testid] > div[id^="comp-"]:has(form[id][class]) { margin-top: -600px !important; }
 algumon.com#$?#.nav-mobile:matches-css(display: none) ~ .base > .main { width: calc(100% - 290px) !important; }
 news.op.gg#$?#header + div[class] div[class^="css-"] > div[class^="css-"] > div[class^="css-"]:has( ~ .youtube-iframe) { margin-top: 8px !important; }
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }

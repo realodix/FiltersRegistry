@@ -279,6 +279,12 @@
 ! Good: @@/adblocker/detect.js$domain=example.org
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/132054
+guianoticiario.net#$##player { display: block !important; }
+guianoticiario.net#$#.ads.ad.adsbox.ad-placement.carbon-ads { display: block !important; }
+guianoticiario.net#%#//scriptlet("prevent-setTimeout", "hasAdblock")
+!+ PLATFORM(ios, ext_android_cb)
+@@||guianoticiario.net^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131773
 resenhasglobais.com#%#//scriptlet("prevent-setTimeout", "]]=== 0")
 resenhasglobais.com#$#.ads.ad.adsbox.ad-placement.carbon-ads { display: block !important; }
