@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1012.9
+! OriginalVersion: 2022.1012.11
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -363,6 +363,8 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||lawtalk.co.kr/api/beta?categories=
+||lawtalk.co.kr/api/adcategories/
 ||kpanews.co.kr/common_files/upload_files/banner/
 ||medipana.com/upload/banner/
 ||pds.dailypharm.com/ADManager_
@@ -1138,6 +1140,8 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+lawtalk.co.kr##[ng-if^="premiumLawyers"]
+lawtalk.co.kr##div[class^="premium-lawyer"]
 kookje.co.kr##.box_skitter
 kookje.co.kr##div[id$="_bnr"]
 realty.chosun.com##.bnr_area a[target]:not([href*="//realty.chosun.com/"])
@@ -1968,6 +1972,8 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+lawtalk.co.kr#$#div[class^="premium-lawyer"] ~ a.goto-all-lawyers { margin-top: 40px !important; }
+lawtalk.co.kr#$#div[ng-if] > .lawyers-section.has-border-bottom { height: 250px !important; }
 medipana.com#$#header .artc_ad { height: 130px !important; }
 ~m.dailypharm.com,dailypharm.com#$#header { height: 100px !important; }
 drapt.com#$#li.area_guide { width: 96% !important; }
