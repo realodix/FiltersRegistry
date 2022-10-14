@@ -453,7 +453,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 06October2022v1
+! OriginalVersion: 14October2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -613,6 +613,7 @@ play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:has([href*
 ||qasirgame.com^$all
 ||willyousurvive.com^$all
 ||underthegarden.com^$all
+||fileplanet.com^$document,popup
 ! ——— IQ test sites that make you waste heaps of time by taking the test, and then try to charge you to see the results. ———
 ||funeducation.com^$document
 ||iq-research.info^$document
@@ -3366,6 +3367,8 @@ zombooru.com##a[href="http://www.hard55.com"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131156
 ||146.19.169.98^$document
 ||146.19.169.99^$document
+! https://github.com/AdguardTeam/AdguardFilters/issues/132079
+/pushredirect/?$document
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -9486,6 +9489,8 @@ toorgle.net##.join
 tumblr.com#?#div[data-id][tabindex="-1"]:has(a[href^="https://href.li/?https://bit.ly/"])
 ! https://scambiofigu.forumcommunity.net/?t=57482915
 ||scambiofigu.net^$all
+! Only links to another site's (APKPure) APKs, yet tries to promote its own browser extension on the alleged download pages, which comes across as suspicious
+apkfab.com##.tip-extension
 ! Other
 ||foxsportnetwork.com^$all
 ||pksauniversity.com^$all
