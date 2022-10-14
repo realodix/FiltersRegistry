@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1013.5
+! OriginalVersion: 2022.1013.7
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -363,6 +363,7 @@
 ||img.sbs.co.kr/news/ad/delay_redirect.html$document
 ||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
 !
+||image.kyobobook.co.kr/newimages/adcenter/
 /http(s|):\/\/(www\.|)defensetimes\.kr\/imgs\/[A-z_]{1,}[0-9]{2,3}x[0-9]{2,3}\./
 ||lawnb.com/lbimg/Banner/
 ||mediapen.com/banner
@@ -1144,6 +1145,9 @@ eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
 !
+kyobobook.co.kr##div[class^="search_banner_"]
+kyobobook.co.kr##body > div[class*="_banner_"]
+kyobobook.co.kr##main div[id*="_banner"][id^="welcome_"][class$="_area"]
 steptohealth.co.kr##div[class*="-grey-"][style]
 steptohealth.co.kr##div[class*="-ads"]
 lawnb.com##aside[class^="banner_"]
@@ -1980,6 +1984,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+kyobobook.co.kr#$#div[id^="bodyDialog"].open { display: none !important; }
 lawtalk.co.kr#$#div[class^="premium-lawyer"] ~ a.goto-all-lawyers { margin-top: 40px !important; }
 lawtalk.co.kr#$#div[ng-if] > .lawyers-section.has-border-bottom { height: 250px !important; }
 medipana.com#$#header .artc_ad { height: 130px !important; }
@@ -2089,6 +2094,8 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+kyobobook.co.kr#$?#.banner_control_inner li[data-target="#75"].banner_group_item { remove: true; }
+kyobobook.co.kr#?#.welcome_banner_inner li.swiper-slide:has(img[src*="image.kyobobook.co.kr/newimages/adcenter/"]):remove()
 defensetimes.kr#?#table[id^="index_"] tr:has(ins.adsbygoogle)
 m.compuzone.co.kr#?#div[class^="contents"] > div[class^="main_area"]:has(img[src*="ADRollingBanner_"])
 pinpointnews.co.kr#?##article-view div[style].float-center div[class^="m-view-"]:not(:has(> article))
@@ -2269,6 +2276,9 @@ blacktoon174.com,blacktoon178.com,blacktoon179.com,blacktoon180.com,blacktoon181
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+kyobobook.co.kr#%#//scriptlet("remove-class", "dialog_open", "html")
+kyobobook.co.kr#%#//scriptlet("remove-attr", "placeholder", "input#searchMainKeyword")
+kyobobook.co.kr#%#//scriptlet("remove-attr", "placeholder", "input#searchKeyword")
 mjmedi.com#%#//scriptlet("abort-current-inline-script", "bannerpop.popup")
 laftel.net#%#//scriptlet("prevent-xhr", "\/api\/avods\/v[0-9]{1,}\/advertisement\/")
 uwayapply.com#%#//scriptlet("set-constant", "admode", "0")
