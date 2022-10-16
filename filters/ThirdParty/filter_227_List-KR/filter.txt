@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1014.1
+! OriginalVersion: 2022.1016.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -359,10 +359,8 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
-! TODO: https://github.com/AdguardTeam/AdguardBrowserExtension/issues/2095
-||img.sbs.co.kr/news/ad/delay_redirect.html$document
-||img.sbs.co.kr/news/ad/delay_redirect.html$subdocument
-!
+||img.sbs.co.kr/news/ad/
+||programs.sbs.co.kr/show/advertise_ch/
 ||image.kyobobook.co.kr/newimages/adcenter/
 /http(s|):\/\/(www\.|)defensetimes\.kr\/imgs\/[A-z_]{1,}[0-9]{2,3}x[0-9]{2,3}\./
 ||lawnb.com/lbimg/Banner/
@@ -1832,7 +1830,7 @@ newspim.com##.topbanner
 dcinside.com###ad-layer
 namu.wiki##iframe[src*="//arca.live/static/ad/"]
 mmzone.co.kr###main_premium_spon_block
-mbn.co.kr,cgv.co.kr,mmzone.co.kr##div[id$="_ad"]
+mnews.sbs.co.kr,mbn.co.kr,cgv.co.kr,mmzone.co.kr##div[id$="_ad"]
 2cpu.co.kr##a[href*="./bbs/banner_link.php?"]
 ruliweb.com##div[id^="adsense_"]
 m.humoruniv.com##div[id^="ddn_ad_"]
@@ -1967,6 +1965,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 !#endif
 !#if (adguard && (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_chromium || adguard_ext_edge))
 ! Protect from DPI
+@@||korail.com^$stealth
 @@||seoulland.co.kr^$stealth
 @@||clms.dankook.ac.kr^$stealth
 @@||lghellovision.net^$stealth
@@ -1985,6 +1984,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+v.daum.net#$#.inner-main [data-cloud*="_ad_"] + div { margin-top: 0px !important; }
 kyobobook.co.kr#$#div[id^="bodyDialog"].open { display: none !important; }
 lawtalk.co.kr#$#div[class^="premium-lawyer"] ~ a.goto-all-lawyers { margin-top: 40px !important; }
 lawtalk.co.kr#$#div[ng-if] > .lawyers-section.has-border-bottom { height: 250px !important; }
@@ -1998,7 +1998,6 @@ hashcode.co.kr#$#[class][itemtype*="//schema.org/"] > .center { width: 100% !imp
 hashcode.co.kr#$#[class][itemtype*="//schema.org/"] .markdown { max-width: 100% !important; flex-basis: 100% !important; }
 pinpointnews.co.kr#$#.box-skin .mobile-popular { border-top: none !important; }
 news.nate.com#$#.thisTimeNews > ul { border-right: none !important; width: 100% !important; }
-v.daum.net#$#.inner-main [data-cloud*="_ad_"] + .box_news_recomm { margin-top: 0px !important; }
 news.daum.net#$#.main-content > .content-article { width: 100% !important; }
 uwayapply.com#$##contentsBox #login_box { width: 350px !important; float: right !important; border-bottom: solid 2px #da3b40 !important; border-left: solid 2px #da3b40 !important; }
 encar.com#$#.feature_index .box_user { width: 100% !important; }
@@ -2095,6 +2094,7 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+programmers.co.kr#?#div[class*="Banner"] div[data-swiper-slide-index].swiper-slide:has(a[href^="/banners/"]):remove()
 kyobobook.co.kr#$?#.banner_control_inner li[data-target="#75"].banner_group_item { remove: true; }
 kyobobook.co.kr#?#.welcome_banner_inner li.swiper-slide:has(img[src*="image.kyobobook.co.kr/newimages/adcenter/"]):remove()
 defensetimes.kr#?#table[id^="index_"] tr:has(ins.adsbygoogle)
@@ -2376,6 +2376,7 @@ kr1.4kjav.co#%#//scriptlet("abort-on-property-read", "adsBlocked")
 @@||namu.news/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 @@||namu.wiki/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 !
+@@||ad.smartmediarep.com/NetInsight/video/smr$domain=programs.sbs.co.kr
 @@||op.gg^$generichide
 1412.rest#%#//scriptlet("abort-current-inline-script", "hideAll")
 1412.rest#$#[class^="document_"].xe_content { height: auto !important; overflow: auto !important; }
@@ -2419,7 +2420,8 @@ play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistr
 $redirect-rule=nooptext,domain=lover92.net|lover93.net|lover94.net|lover95.net|lover96.net|lover97.net|lover98.net|lover99.net|lover100.net|lover101.net
 !#endif
 !#if (adguard && !adguard_app_ios && !adguard_ext_safari)
-||smrmembers-smr.smartmediarep.com^$redirect=noopmp4-1s,domain=tv.nate.com
+||advod.sbs.co.kr/sbsad/$media,redirect=noopmp4-1s
+||smrmembers-smr.smartmediarep.com/smc/smrmembers/$redirect=noopmp4-1s
 ||news.mobfeed.co.kr/front/personal/coupang$redirect=nooptext
 ||openimage.interpark.com/dia/images/$redirect=2x2-transparent.png
 ||bigkinds.or.kr/resources/files/banner/$redirect=2x2-transparent.png

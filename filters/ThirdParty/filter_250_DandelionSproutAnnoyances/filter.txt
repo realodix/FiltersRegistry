@@ -453,7 +453,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 14October2022v1
+! OriginalVersion: 15October2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -9501,6 +9501,13 @@ apkfab.com##.tip-extension
 ||vlcmediadownload.com^$all
 ||quiremuken.xyz^$all
 cdburnerxp.se##[href*="/downloadsetup.exe"]
+||sexy-egirls-leaked.com^$document
+||file2share.co^$all
+||erothots.co^$all
+||only2leaked.co^$document
+||only4leaked.co^$document
+||thotsbay-leaked.com^$document
+||cbox.ws^$domain=chicks.cam
 ! ——— Horrendously bad copypasted Android rooting "guides" (often with fake titles) that bricked two of my phones ———
 ! Most of the guides haven't even accounted for how modern phones have replaced the recovery environment with an extra boot environment, leading to very critical Fastboot commands not working and/or bricking the phone.
 ||unofficialtwrp.com^$document
@@ -21163,7 +21170,7 @@ vumoo.to#?#div.col-lg-12:has-text(IMDb)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 13October2022v2
+! OriginalVersion: 15October2022v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -22251,6 +22258,8 @@ $removeparam=oft_sk
 $removeparam=adobe_mc
 ! https://segmentify.github.io/segmentify-dev-doc/integration_web/
 $removeparam=/^_sgm_/i
+! https://gitlab.com/ClearURLs/rules/-/issues/254
+$removeparam=omnisendContactID
 ! Below in this paragraph are entries that we borrowed from AdGuard URL Tracking Protection, which is maintained by the AdGuard team at https://github.com/AdguardTeam/AdguardFilters, and which is licenced under GPL-3.0.
 $removeparam=_zucks_suid
 $removeparam=adfrom
@@ -22307,32 +22316,32 @@ $removeparam=adid,domain=nikkei.co.jp
 !! ——— Rules for heavily covered sites ———
 !!! ——— Amazon ———
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
-||amazon.$removeparam=th
-||amazon.$removeparam=linkCode
+||amazon.*^$removeparam=th
+||amazon.*^$removeparam=linkCode
 ! https://www.amazon.co.uk/Bos-Magical-New-Friend-Scholastic/dp/1338323326/ref=pd_sbs_14_1/262-3877129-1714269?_encoding=UTF8&pd_rd_i=1338323326&pd_rd_r=da2a232b-99a2-4202-ade0-6b52bb20749b&pd_rd_w=cXLbd&pd_rd_wg=46K05&pf_rd_p=2773aa8e-42c5-4dbe-bda8-5cdf226aa078&pf_rd_r=1HVF5BQG27VGX33FG5J6&psc=1&refRID=1HVF5BQG27VGX33FG5J6
 $removeparam=refRID
 @@||amazon.*/gp/slredirect/picassoRedirect.html^$removeparam
 ! https://www.amazon.com/Disney-Fairies-Lessons-Chapter-ebook-ebook/dp/B007R6UWG2/ref=sr_1_16?dchild=1&keywords=disney+fairies&qid=1606488113&sr=8-16 (27/11/2020)
 $removeparam=dchild
 $~xmlhttprequest,removeparam=qid,domain=~ebay.*|~forum.cantorsys.com|~hkex.com.hk|~tastedive.com|~zhidao.baidu.com|~forums.somethingawful.com
-||amazon.$removeparam=sr
+||amazon.*^$removeparam=sr
 ! https://www.amazon.co.uk/dp/B08K443FBQ/ref=asc_df_B08K443FBQ1606003200000/?creative=22374&creativeASIN=B08K443FBQ (28/11/2020)
-||amazon.$removeparam=creative
+||amazon.*^$removeparam=creative
 $removeparam=creativeASIN
 ! https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-max-instance-lifetime.html?sc_icampaign=Adoption_Campaign_pac-optimize-2020-console-1-asg-max&sc_ichannel=ha&sc_icontent=awssm-5270&sc_ioutcome=Enterprise_Digital_Marketing&sc_iplace=console-ec2autoscaling_infobar&trk=ha_a121p21423yfe1DAD~ha_awssm-5270&trkCampaign=pac-edm-2019-optimize-autoscaling-instance-asg (28/02/2021)
-||amazon.$removeparam=/^sc_i/
+||amazon.*^$removeparam=/^sc_i/
 $removeparam=trkCampaign
 $removeparam=trk,domain=splashthat.com|aws.amazon.com|aws|xkcd.com
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-700946
-||amazon.$removeparam=/^__mk_*_/
-||amazon.$removeparam=ascsubtag
-||amazon.$removeparam=crid
-||amazon.$removeparam=/^cv_ct_/
+||amazon.*^$removeparam=/^__mk_*_/
+||amazon.*^$removeparam=ascsubtag
+||amazon.*^$removeparam=crid
+||amazon.*^$removeparam=/^cv_ct_/
 !!! ||amazon.$removeparam=ie - https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2611566
-||amazon.$removeparam=rnid
+||amazon.*^$removeparam=rnid
 ! ||amazon.$removeparam=s
-||amazon.$removeparam=sprefix
-||amazon.$removeparam=ac_md
+||amazon.*^$removeparam=sprefix
+||amazon.*^$removeparam=ac_md
 ! https://www.amazon.com/dp/B08NPNYMW4/?coliid=I15X2UZZA97XNK
 $removeparam=coliid
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-810773
@@ -22342,33 +22351,33 @@ $removeparam=geniuslink
 ! https://www.amazon.com/Razer-Core-Thunderbolt-External-Enclosure/dp/B07CQG2K5K/?tag=makeusw-20&linkCode=ogi&th=1&psc=1 (15/11/2020)
 !!!$~xmlhttprequest,removeparam=psc (Breaks cloth size selection)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-944078
-||amazon.$removeparam=twitchToken
-||amazon.$removeparam=sigts
-||amazon.$removeparam=sig
-||amazon.$removeparam=ref-refURL
-||amazon.$removeparam=imprToken
+||amazon.*^$removeparam=twitchToken
+||amazon.*^$removeparam=sigts
+||amazon.*^$removeparam=sig
+||amazon.*^$removeparam=ref-refURL
+||amazon.*^$removeparam=imprToken
 ! https://www.amazon.es/stores/page/592C024E-4E49-421A-8F46-E0D751082704?store_ref=SB_A05201253TLBE81101JJ5&lp_asins=B07L8XGM53%2CB07L8Y3YFP%2CB07L8N2T51&lp_slot=desktop-arbies&lp_page_asin=B0777WPMPH
-||amazon.$removeparam=store_ref
-||amazon.$removeparam=lp_asins
-||amazon.$removeparam=lp_slot
-||amazon.$removeparam=lp_page_asin
+||amazon.*^$removeparam=store_ref
+||amazon.*^$removeparam=lp_asins
+||amazon.*^$removeparam=lp_slot
+||amazon.*^$removeparam=lp_page_asin
 ! https://www.amazon.com/dp/B07HHB4V52/ref=sxin_10?asc_contentid=amzn1.osa.0c5b64f1-890d-494e-907a-f004c81dc340.A1RKKUPIHCS9HS.en_US&asc_contenttype=article&keywords=monitor
-||amazon.$removeparam=asc_contentid
-||amazon.$removeparam=asc_contenttype
+||amazon.*^$removeparam=asc_contentid
+||amazon.*^$removeparam=asc_contenttype
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-978858
-||amazon.$removeparam=visitId
-||amazon.$removeparam=field-lbr_brands_browse-bin
+||amazon.*^$removeparam=visitId
+||amazon.*^$removeparam=field-lbr_brands_browse-bin
 ! https://www.amazon.com/dp/B08RNHCZ3K?maas=maas_adg_api_8014460300101_static_12_26&ref_=aa_maas&aa_campaignid=3361_LTT_OfficeTour_US-B08RNHCZ3K-inf&aa_adgroupid=youtube_&aa_creativeid=US-ZMAJjR9On (07/08/2021)
-||amazon.$removeparam=maas
-||amazon.$removeparam=/^aa_/
+||amazon.*^$removeparam=maas
+||amazon.*^$removeparam=/^aa_/
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1206280
-||amazon.$removeparam=asc_item
-||amazon.$removeparam=m
-||amazon.$removeparam=refinements
+||amazon.*^$removeparam=asc_item
+||amazon.*^$removeparam=m
+||amazon.*^$removeparam=refinements
 ! https://www.amazon.com/Razer-Kraken-Ultimate-Gaming-Headset/dp/B07ZK6R8JF/ref=pd_sbs_5/137-2432372-2577703?keywords=headphone&qsid=259-8119744-7604032&sres=B00NBR7962%2CB07YT122DS%2CB07WD58H6R%2CB00NBR70A2%2CB07Q1YXVWH%2CB07MTXLFXV%2CB06XT8L1YF%2CB09FSB6DHJ%2CB0876ZJ78K%2CB085NW5M9S%2CB07SCKVB54%2CB07GGYPWPZ%2CB07HGG85HL%2CB091GHJ7FN%2CB082K726CK%2CB073XDK6ZW%2CB08CVDPQ9P%2CB07QZVSJZS%2CB07QYV5Z1G%2CB09BVFWPMZ&srpt=HEADPHONES
-||amazon.$removeparam=qsid
-||amazon.$removeparam=sres
-||amazon.$removeparam=srpt
+||amazon.*^$removeparam=qsid
+||amazon.*^$removeparam=sres
+||amazon.*^$removeparam=srpt
 ! https://gaming.amazon.com/intro?ingress=twch&twitchReferral=fd620d6bcd9613dd208636ad8b18c3b3
 ||amazon.$removeparam=ingress
 ! https://www.amazon.de/Logitech-Mechanische-Gaming-Tastatur-GL-Tasten-Switch-Unterst%C3%BCtzung/dp/B07VZLMQN7/ref=asc_df_B07VZLMQN7/?hvadid=380194285389&hvpos&hvnetw=g&hvrand=829567778685238150&hvpone&hvptwo&hvqmt&hvdev=c&hvdvcmdl&hvlocint&hvlocphy=9043042&hvtargid=pla-815390482707&adgrpid=79218802204
@@ -22393,20 +22402,22 @@ $removeparam=cstrackid
 ! https://github.com/ClearURLs/Addon/issues/116
 ||amazon.$removeparam=SubscriptionId
 ! https://www.amazon.co.uk/Food-Grade-Silicone-Non-Stick-Birthday-Chocolate/dp/B079KF8F1Y/ref=sr_1_6?hydadcr=18732_1816696&keywords=train+cake+mould
-||amazon.$removeparam=hydadcr
+||amazon.*^$removeparam=hydadcr
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1854203
 ||amazon.*^$removeparam=orig
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1949267
-$removeparam=%2AVersion%2A,domain=amazon.com
-$removeparam=%2Aentries%2A,domain=amazon.com
-$removeparam=pldnSite,domain=amazon.com
-$removeparam=newts,domain=amazon.com
-$removeparam=returnFromLogin,domain=amazon.com
+$removeparam=%2AVersion%2A,domain=amazon.*
+$removeparam=%2Aentries%2A,domain=amazon.*
+$removeparam=pldnSite,domain=amazon.*
+$removeparam=newts,domain=amazon.*
+$removeparam=returnFromLogin,domain=amazon.*
 ! Other
 @@/b/ref=$removeparam=ie
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-2751033
 ||amazon.*^$removeparam=tag
 ||amazon.*^$removeparam=channel
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-3886967
+||amazon.*^$removeparam=psc
 !!! ——— Bing ———
 ! https://www.bing.com/search?q=hello&form=QBLH&sp=-1&pq=hello&sc=8-5&qs=n&sk=&cvid=49B83A335B1C4884B71B2FAD4A8027A9 (02/03/2021)
 ! Please do not add for the entire domain name or the image will not load, see https://github.com/DandelionSprout/adfilt/pull/608
@@ -22462,7 +22473,7 @@ $removeparam=_from
 $removeparam=sacat
 ! ||ebay.$removeparam=rt (Believed to break search filter buttons; #174)
 ! https://www.ebay.com/sch/i.html?_from=R40&_nkw=Ugreen&_blrs=spell_auto_correct (27/11/2020)
-$removeparam=_blrs
+!!!$removeparam=_blrs (Interferes with the ability to confirm that you really wanted to search for the term you searched for.)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-700500 (06/05/2021)
 $removeparam=amdata,domain=ebay.*
 $removeparam=hash,domain=ebay.*
@@ -23837,9 +23848,10 @@ $removeparam=rcode,domain=kucoin.com
 ||deezer.com^$removeparam=deferredFl
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1979025
 $removeparam=Bibblio_source,domain=macrumors.com
-! https://www.goodeeworld.com/products/pluviophile-rain-candle?pr_prod_strat=copurchase&pr_rec_pid=4780770132108&pr_ref_pid=5263231090828&pr_seq=uniform
+! https://fluffnest.com/products/may-the-bee-pre-order?pr_prod_strat=collection_fallback&pr_rec_id=b614090d7&pr_rec_pid=7101857890455&pr_ref_pid=7812473159938&pr_seq=uniform
 $removeparam=/^pr_/,domain=goodeeworld.com|lacemade.com|lifamasks.shop|willi.fi
 $removeparam=pr_prod_strat
+$removeparam=pr_rec_id
 $removeparam=pr_rec_pid
 $removeparam=pr_ref_pid
 $removeparam=pr_seq
