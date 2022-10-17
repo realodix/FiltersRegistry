@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1016.7
+! OriginalVersion: 2022.1016.11
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -168,6 +168,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||adgirl.yes24.com^
 ||adserver.joseilbo.com^
 ||finead.o00.kr^
 ||md.r114.co.kr^
@@ -361,6 +362,8 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||medicaltimes.com/Banner/
+||newstap.co.kr/bannerManager/
 ||cdn.newspenguin.com/bannerpop/uploads/
 ||cdn.newspenguin.com/adManager/
 ||img.sbs.co.kr/news/ad/
@@ -1120,7 +1123,7 @@ moyoplan.com##div[class^="Banner"]
 ! ##table[class^="ad_"]
 m.humoruniv.com##table[class^="ad_"]
 ! ##div[class*="_ad"]
-kpanews.co.kr,mlbpark.donga.com,sports.donga.com,busan.com,fnnews.com,m.munhwa.com,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
+medicaltimes.com,yes24.com,kpanews.co.kr,mlbpark.donga.com,sports.donga.com,busan.com,fnnews.com,m.munhwa.com,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 ! ##div[id*="Banner"]
 www.enuri.com,e-himart.co.kr,kin.naver.com##div[id*="Banner"]
 ! ##div[class*="_AD"]
@@ -1145,7 +1148,19 @@ jobkorea.co.kr##div[id^="Banner"]
 eegosa.com##section[id*="_ads_"]
 ! ##div[id*="_AD"]
 sports.donga.com##div[id*="_AD"]
+! ##div[id$="_Ad"]
+yes24.com##div[id$="_Ad"]
 !
+yes24.com##.mContRT .mbnRT
+yes24.com##div[id^="goods"][id$="SponLnkArea"]
+yes24.com##div[id^="y"][id$="BnWrap"]
+yes24.com##.sGoodsSec div[id$="Banner"]
+yes24.com##.loginSocialLi a.adOn
+yes24.com###ySkyWrap
+yes24.com###mbnRoll_001 > .mbnRollUnit:nth-child(n+5)
+yes24.com##.yHeaderMid > .hotIssueDl
+yes24.com##.yPartnerPop
+yes24.com###yWelMid > .yWelPubBook
 ~m.joseilbo.com,joseilbo.com##div[class*="_bn_"]
 m.nownews.seoul.co.kr###Article > div[style]:not([class])
 itworld.co.kr##.section-content > .border-bottom ~ h5[class^="font-color-primary-"]
@@ -1337,7 +1352,7 @@ namu.wiki##iframe[src*="//arca.live/external/callad"]
 noteforum.co.kr##table[width][cellspacing][cellpadding][border] tr:not([height]) > td[width]:not([id]) ~ td[id]
 esuwon.net###r_aside center > div[class="bn"]
 smartfn.co.kr##.mt30 .con_rt > style + div[style]:not([class])
-dailypharm.com,m.g-enews.com,smartfn.co.kr##div[class*="Ad"]
+yes24.com,dailypharm.com,m.g-enews.com,smartfn.co.kr##div[class*="Ad"]
 tgd.kr,miraetv.net##div[id*="-banner-"]
 miraetv.net##.gdl-left-sidebar
 ddengle.com###content > .article > div[class][style]
@@ -1475,7 +1490,7 @@ tistory.com##.adsense
 www.naver.com##div[id^="NM_"][id$="_BANNER"]
 m.coocha.co.kr##.container > section#id_section_deal_list ~ section[id][class]
 coocha.co.kr##.group-deal .list > .group-power-link
-gamemeca.com##div[id$="AD"]
+medicaltimes.com,gamemeca.com##div[id$="AD"]
 gamemeca.com##iframe[src^="https://ads.gamemeca.com/"]
 mobile.newsis.com##div[class$="adPos"][class^="listStyle"][style]
 news.sbs.co.kr###sn_banner_side_top
@@ -1990,6 +2005,25 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+yes24.com#$##mbnRoll_book.mbnRollWrap .pagen_6 { left: 629px !important; }
+yes24.com#$##mbnRoll_book.mbnRollWrap .pagen_5 { left: 506px !important; }
+yes24.com#$##mbnRoll_book.mbnRollWrap .pagen_4 { left: 383px !important; }
+yes24.com#$##mbnRoll_book.mbnRollWrap .pagen_3 { left: 260px !important; }
+yes24.com#$##mbnRoll_book.mbnRollWrap .pagen_2 { left: 137px !important; }
+yes24.com#$##mbnRoll_book.mbnRollWrap .yPagen { width: 123px !important; }
+yes24.com#$##mbnRoll_book.mbnRollWrap a[class^="mbnC_"] { margin-left: calc(50% - 289.5px) !important; }
+yes24.com#$##mbnRoll_book.mbnRollWrap { width: 768px !important; }
+yes24.com#$##nomiG_buy.nomiGoodsRow { margin-top: 100px !important; }
+yes24.com#$##loginFormWrap > .loginCont { width: 100% !important; }
+yes24.com#$##mbnRoll_001 > div:nth-child(1) > .yPagen { width: 185px !important; }
+yes24.com#$##mbnRoll_001 > div:nth-child(2) > .yPagen { width: 185px !important; left: 185px !important; }
+yes24.com#$##mbnRoll_001 > div:nth-child(3) > .yPagen { width: 185px !important; left: 370px !important; }
+yes24.com#$##mbnRoll_001 > div:nth-child(4) > .yPagen { width: 185px !important; left: 555px !important; }
+yes24.com#$##mbnRoll_yNow > div:nth-child(1) > .yPagen { width: 290px !important; }
+yes24.com#$##mbnRoll_yNow > div:nth-child(2) > .yPagen { width: 290px !important; left: 290px !important; }
+yes24.com#$##mbnRoll_yNow > div:nth-child(3) > .yPagen { width: 290px !important; left: 580px !important; }
+yes24.com#$##yWelMid > .yWelNowBook { width: 100% !important; }
+yes24.com#$##yWelMid > .yWelNowBook ul { margin-left: 10% !important; }
 v.daum.net#$#.inner-main [data-cloud*="_ad_"] + div { margin-top: 0px !important; }
 kyobobook.co.kr#$#div[id^="bodyDialog"].open { display: none !important; }
 lawtalk.co.kr#$#div[class^="premium-lawyer"] ~ a.goto-all-lawyers { margin-top: 40px !important; }
