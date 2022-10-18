@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1017.3
+! OriginalVersion: 2022.1017.5
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -348,9 +348,9 @@
 ##ins.kakao_ad_area
 ##iframe[src*="//www.mediacategory.com/servlet/"]
 ##div[id^="targetpushAd_"]
+[$path=/(&|\\.|\\?)clubid=14605461($|&)/]~m.cafe.naver.com,cafe.naver.com###editorMainContent a[href*=".youtube.com/channel/"]
 [$path=/ca-fe\\/web\\/cafes\\/(anycallusershow|13764661)(\\/|\\?)/]m.cafe.naver.com##.banner_add.bottom
 [$path=/(&|\\.|\\?)clubid=13764661(&|$)/]~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]
-[$path=/(&|\\.|\\?)clubid=14605461($|&)/]~m.cafe.naver.com,cafe.naver.com###editorMainContent div[style^="margin-bottom:"] a[href*=".youtube.com/channel/"][target="_blank"]
 [$path=/(&|\\.|\\?)clubid=14605461(&|$)/]~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]
 [$path=/(&|\\.|\\?)clubid=28173877($|&)/]~m.cafe.naver.com,cafe.naver.com###cafe-data > #cafe-intro
 [$path=/(&|\\.|\\?)clubid=29560217($|&)/]~m.cafe.naver.com,cafe.naver.com###editorMainContent a[href*="//cafe.naver.com/eyejoker7?iframe"][target="_blank"] ~ *
@@ -1157,6 +1157,8 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+m.yes24.com###welcomeTodayPop
+m.yes24.com##div[class^="ad"][id^="ad"]
 yes24.com##.mContRT .mbnRT
 yes24.com##div[id^="goods"][id$="SponLnkArea"]
 yes24.com##div[id^="y"][id$="BnWrap"]
@@ -2300,7 +2302,7 @@ m.bunjang.co.kr#?#.app > div > div > div[class]:has(> div[class] > div[class] > 
 m.bunjang.co.kr#?#div:has(> div > div > div:contains(연관상품) > div:has(> div:contains(AD)) > img[alt="AD 가이드"])
 m.ppomppu.co.kr#?#.community-board-notice-box > #bbs_inform:has(> ul > li span:contains(AD))
 !
-[$path=/(&|\\.|\\?)clubid=14605461($|&)/]~m.cafe.naver.com,cafe.naver.com#?##editorMainContent div[style^="margin-bottom:"]:has(~ div[style]:has(> a[href*=".youtube.com/channel/"]))
+[$path=/(&|\\.|\\?)clubid=14605461($|&)/]~m.cafe.naver.com,cafe.naver.com#?##editorMainContent div[style^="margin:"]:has(~ div[style]:has(> a[href*=".youtube.com/channel/"]))
 [$path=/fx8300($|\\/|\\?)/]~m.cafe.naver.com,cafe.naver.com#?##cafe-menu .cafe-menu-tit:contains(우리카페 협력업체) + ul
 [$path=/fx8300($|\\/|\\?)/]~m.cafe.naver.com,cafe.naver.com#?##cafe-menu .cafe-menu-tit:contains(우리카페 협력업체)
 [$path=/(&|\\.|\\?)clubid=28173877($|&)/]~m.cafe.naver.com,cafe.naver.com#?#.article-board tr.type_main:not(:has(.td_name .m-tcol-c:contains(/(카페지기|매니저)/)))
