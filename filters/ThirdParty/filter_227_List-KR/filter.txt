@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1019.2
+! OriginalVersion: 2022.1019.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -363,6 +363,12 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||image.aladin.co.kr/img/bn/book/*_search
+||image.aladin.co.kr/img/bn/book/*_best
+/^https:\/\/image\.aladin\.co\.kr\/img\/banner\/flash\/welcome\/nav\/(?!181010)[0-9]+_tab/
+||image.aladin.co.kr/img/adbn/
+||image.aladin.co.kr/img/bn/wflash/*_ad
+||image.dizzo.com/dizzo2/banner/
 ||ppss.kr/wp-content/uploads/2022/10/pacey
 ||external-api.impression-neo.naver.com/api/v*/ads/search-jsonp
 /https:\/\/[a-z0-9]+\.wp\.com\/wowtale\.net\/wp-content\/uploads\/[0-9]{4}\/[0-9]{2}\/wowtale\.net-.+[0-9]{2,}(x|-)[0-9]{2,}\./
@@ -1099,7 +1105,7 @@
 ! ##div[id^="ad_"]
 r114.com,dprime.kr,zdnet.co.kr,fpn119.co.kr,serieamania.com,dvdprime.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,m.10000recipe.com,pandora.tv,mobile.newsis.com,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
-nesin.com,encar.com,fntimes.com,zdnet.co.kr,mbn.co.kr,goodgag.net,v.daum.net,www.instiz.net,ppomppu.co.kr,m.nocutnews.co.kr,news.naver.com,news.daum.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
+aladin.co.kr,nesin.com,encar.com,fntimes.com,zdnet.co.kr,mbn.co.kr,goodgag.net,v.daum.net,www.instiz.net,ppomppu.co.kr,m.nocutnews.co.kr,news.naver.com,news.daum.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 ! ##div[class^="ad_"]
 nesin.com,~m.search.naver.com,search.naver.com,dprime.kr,encar.com,m.todayhumor.co.kr,hogaeng.co.kr,zdnet.co.kr,news.zum.com,m.search.daum.net,sports.donga.com,teamblind.com,unsin.co.kr,m.mk.co.kr,m.cafe.naver.com,dvdprime.com,nocutnews.co.kr,news.sbs.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.co.kr,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 ! ##div[class^="ad-"]
@@ -1139,7 +1145,7 @@ www.enuri.com,e-himart.co.kr,kin.naver.com##div[id*="Banner"]
 ! ##section[class$="-ads"]
 soccerline.kr##section[class$="-ads"]
 ! ##div[class*="Banner"]
-edit.incruit.com##div[class*="Banner"]
+digitalchosun.dizzo.com,edit.incruit.com##div[class*="Banner"]
 ! ##section[class*="-ad"]
 m.inven.co.kr##section[class*="-ad"]
 ! ##div[id*="-ad"]
@@ -1159,6 +1165,9 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+aladin.co.kr###welcome_center > div:not([class]):not([style]):not([id])
+aladin.co.kr###welcome_Right > .evntall
+digitalchosun.dizzo.com##div[class*="banner"]
 ~m.clien.net,clien.net##.aside div[id*="_"][class*="_"]
 m.yes24.com###welcomeTodayPop
 m.yes24.com##div[class^="ad"][id^="ad"]
@@ -2015,6 +2024,9 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+aladin.co.kr#$##popupBody #nonmember_all .button_login2 { width: 100% !important; }
+aladin.co.kr#$##popupBody #nonmember_all .left1 { width: 100% !important; }
+aladin.co.kr#$##welcomeMainBanner_welcome_tab { left: calc(50% - 186px) !important; }
 kharn.kr#$#div[class*="inner"].column > div { width: 100% !important; }
 yes24.com#$##mbnRoll_book.mbnRollWrap .pagen_6 { left: 629px !important; }
 yes24.com#$##mbnRoll_book.mbnRollWrap .pagen_5 { left: 506px !important; }
@@ -2145,6 +2157,9 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+aladin.co.kr#?##welcomeMainBanner_welcomeMain div[id*="_containerWrap_"]:has(img[src$="Banner/ad.jpg"]):remove()
+aladin.co.kr#?##welcomeMainBanner_welcome_tab li[id]:has(img[src*="/img/banner/flash/welcome/nav/"]:not([src*="/nav/181010_"]))
+aladin.co.kr#?##welcomeMainBanner_welcome_tab li[id]:has(img[src*="/img/banner/flash/welcome/nav/"]:not([src*="/nav/181010_"])) + li[style]
 m.clien.net#?#div[class*="_"] div[class*="_"]:has(> div[class$="_mid"] > div[class^="ad_"])
 m.clien.net#?#div[class*="_"] div[class*="_"]:has(> div[class*="_"] > div[id*="-"][class^="ad_"])
 ~m.clien.net,clien.net#?#div[class*="content"][id*="content"] div[class*="_"]:has(> div[class^="ad_"])
