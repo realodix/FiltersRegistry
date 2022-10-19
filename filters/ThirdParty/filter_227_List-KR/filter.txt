@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1018.7
+! OriginalVersion: 2022.1019.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -10,6 +10,7 @@
 ! Version must be UTC format.
 !
 !#if adguard
+||contentcave.co.kr^
 ||adpopcorn.com^
 ||koreanzad.xyz^
 ||admonseller.com^
@@ -355,7 +356,6 @@
 [$path=/(&|\\.|\\?)clubid=28173877($|&)/]~m.cafe.naver.com,cafe.naver.com###cafe-data > #cafe-intro
 [$path=/(&|\\.|\\?)clubid=29560217($|&)/]~m.cafe.naver.com,cafe.naver.com###editorMainContent a[href*="//cafe.naver.com/eyejoker7?iframe"][target="_blank"] ~ *
 [$path=/ca-fe\\/web\\/cafes\\/(steamindiegame|27842958)(\\/|\\?)/]m.cafe.naver.com##.banner_add.bottom
-[$path=/(&|\\.|\\?)clubid=27842958($|&)/]~m.cafe.naver.com,cafe.naver.com##table[role="presentation"] #editorMainContent div[style^="text-align"]:nth-child(n+6)
 [$path=/(&|\\.|\\?)clubid=27842958($|&)/]~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]
 /bannerpop/uploads/
 /media/banner/*
@@ -2306,6 +2306,7 @@ m.bunjang.co.kr#?#.app > div > div > div[class]:has(> div[class] > div[class] > 
 m.bunjang.co.kr#?#div:has(> div > div > div:contains(연관상품) > div:has(> div:contains(AD)) > img[alt="AD 가이드"])
 m.ppomppu.co.kr#?#.community-board-notice-box > #bbs_inform:has(> ul > li span:contains(AD))
 !
+[$path=/(&|\\.|\\?)clubid=27842958($|&)/]~m.cafe.naver.com,cafe.naver.com#?#table[role="presentation"] #editorMainContent div[style^="text-align"] div:has(a[href*=".twitch.tv/"] + a[href*=".twitch.tv/"]) ~ div
 [$path=/(&|\\.|\\?)clubid=14605461($|&)/]~m.cafe.naver.com,cafe.naver.com#?##editorMainContent div[style^="margin:"]:has(~ div[style]:has(> a[href*=".youtube.com/channel/"]))
 [$path=/fx8300($|\\/|\\?)/]~m.cafe.naver.com,cafe.naver.com#?##cafe-menu .cafe-menu-tit:contains(우리카페 협력업체) + ul
 [$path=/fx8300($|\\/|\\?)/]~m.cafe.naver.com,cafe.naver.com#?##cafe-menu .cafe-menu-tit:contains(우리카페 협력업체)
@@ -2432,7 +2433,7 @@ kr1.4kjav.co#%#//scriptlet("abort-on-property-read", "adsBlocked")
 @@||namu.wiki/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 !
 @@||clien.net^$generichide
-@@||ad.smartmediarep.com/NetInsight/video/smr$domain=programs.sbs.co.kr|allclip.sbs.co.kr
+@@||ad.smartmediarep.com/NetInsight/video/smr$domain=programs.sbs.co.kr|allclip.sbs.co.kr|mplay.mk.co.kr
 @@||op.gg^$generichide
 1412.rest#%#//scriptlet("abort-current-inline-script", "hideAll")
 1412.rest#$#[class^="document_"].xe_content { height: auto !important; overflow: auto !important; }
