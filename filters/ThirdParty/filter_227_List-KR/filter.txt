@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1023.0
+! OriginalVersion: 2022.1023.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -366,6 +366,8 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||cdn.oasisfeed.com/js/ad/
+||news.oasisfeed.com/banner/
 ||ppss.kr/wp-content/uploads/2022/10/spacey
 ||cams.com/images/cams/lib/camslivebanner-
 ||image.aladin.co.kr/img/bn/book/*_search
@@ -1171,6 +1173,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+news.oasisfeed.com##[id$="Banner"]
 plankim.com###primary-content > .magic-item-w
 poketory.com##article > .revenue_unit_wrap
 poketory.com##article > .inner ~ b
@@ -2033,6 +2036,8 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+news.oasisfeed.com#$#.hideBtn { display: none !important; }
+news.oasisfeed.com#$##newsBody { height: auto !important; }
 ydailynewsis.blogspot.com#$#a[href*="//link.coupang.com/"][type] { display: none !important; }
 ydailynewsis.blogspot.com#$##hidden1 { display: block !important; }
 aladin.co.kr#$##popupBody #nonmember_all .button_login2 { width: 100% !important; }
