@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1024.1
+! OriginalVersion: 2022.1024.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -170,6 +170,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||infolinks.com^
 ||banners.cams.com^
 ||aduniv.nesin.com^
 ||adgirl.yes24.com^
@@ -366,6 +367,9 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+/https:\/\/(www\.|)koreatimes\.net\/images\/attach\/[A-Z0-9]+-[0-9]+\//
+||koreatimes.net/images/AdImage/
+/^https:\/\/(www\.|)koreatimes\.net\/images\/attach\/[a-z]+[0-9]+\//
 ||cdn.oasisfeed.com/js/ad/
 ||news.oasisfeed.com/banner/
 ||ppss.kr/wp-content/uploads/2022/10/spacey
@@ -1173,6 +1177,11 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+koreatimes.net##.ads + div:not([class])
+koreatimes.net##.pop-layer
+koreatimes.net##div[class] > div[class^="post-style"] ~ .rn_block + hr
+koreatimes.net##div[class] > div[class^="post-style"] ~ .rn_block
+www.koreatimes.net##aside > .obituaries-wrapper.recent_news_inner
 news.oasisfeed.com##[id$="Banner"]
 plankim.com###primary-content > .magic-item-w
 poketory.com##article > .revenue_unit_wrap
@@ -1211,7 +1220,7 @@ kookje.co.kr##div[id$="_bnr"]
 realty.chosun.com##.bnr_area a[target]:not([href*="//realty.chosun.com/"])
 r114.com###divMemulRight > div:not([id]):not([class])
 m.r114.com##.google_bn
-r114.com##div[class*="_banner_"]
+koreatimes.net,r114.com##div[class*="_banner_"]
 jjalbot.com##ul.masonry-2-col > li[class] ~ li:not([class])
 newspim.com##.inwrap .right > div:not([class])
 thisisgame.com##.ad
@@ -1235,7 +1244,7 @@ search.naver.com##li[data-cr-area][data-cr-gdid^="nad-"]._svp_item
 m.search.naver.com##section[class*="ad_"]
 search.naver.com##li[data-nvmid]._ad
 ddaily.co.kr##.space_layout ~ div[class^="section_"] > div:not([style*="solid"]) + div[style]:not([class])
-nzkoreapost.com,enuri.com##div[class*="-ad-"]
+koreatimes.net,nzkoreapost.com,enuri.com##div[class*="-ad-"]
 loawa.com##a[target="_blank"][data-href][data-banner-statics]
 m.ppomppu.co.kr##.main-menu-group ~ .ct #board-cate ul[style] li[onclick^="location.href="][onclick*="/bbs_list.php?id=ppomppu2"]
 m.ppomppu.co.kr##.main-menu-group ~ .ct #board-cate ul[style] li[onclick^="location.href="][onclick*="/bbs_list.php?id=ppomppu7"]
@@ -1648,7 +1657,7 @@ autopostkorea.com##div[class^="floating_ad_"]
 newreop.com##.app-layout-content > #app-board > .app-board-section > .app-board-container > div[style]:not([class])
 newreop.com##main.app-main > .app-layout-container > .app-layout-content > #app-board > div > div[style]:not([class])
 cuonet.com##div[style~="background-image:"][style*=".cuonet.com/data/apms/background/"].item
-op.gg##div[id$="-ad"]
+koreatimes.net,op.gg##div[id$="-ad"]
 minelist.kr##.content.ad
 koreapas.com##img[src^="athe/"]
 koreapas.com##img[src*="koreapas.com/bbs/data/"]
@@ -1895,7 +1904,7 @@ coolenjoy.net##.simple_banner_wrap
 coolenjoy.net##img[src^="https://photo.coolenjoy.co.kr/banner/"]
 quasarzone.com##*:not(footer) > div[class^="main-"][class$="-banner"]
 quasarzone.com##.top-banner
-phdkim.net,nongmin.com,hankookilbo.com##div[class^="banner-"]
+koreatimes.net,phdkim.net,nongmin.com,hankookilbo.com##div[class^="banner-"]
 etoland.co.kr##ul.board_list > li.subject.ad_subject
 etoland.co.kr##td#mw_basic > div[style="height:90px; text-align:center; margin-top:10px; margin-bottom:10px;"]
 etoland.co.kr##center > a img[src*="//www.etoland.co.kr/data/daumeditor10/"]:not(.shrinkToFit)
@@ -2173,6 +2182,8 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+koreatimes.net#?#.obituaries-wrapper:has(img[src^="/images/AdImage/"])
+koreatimes.net#?#*:has(> a[target="_blank"] img[src^="/images/KTImage/"])
 aladin.co.kr#?##welcomeMainBanner_welcomeMain div[id*="_containerWrap_"]:has(img[src$="Banner/ad.jpg"]):remove()
 aladin.co.kr#?##welcomeMainBanner_welcome_tab li[id]:has(img[src*="/img/banner/flash/welcome/nav/"]:not([src*="/nav/181010_"]))
 aladin.co.kr#?##welcomeMainBanner_welcome_tab li[id]:has(img[src*="/img/banner/flash/welcome/nav/"]:not([src*="/nav/181010_"])) + li[style]
@@ -2300,11 +2311,14 @@ torrentwiz48.com,torrentwiz49.com,torrentwiz50.com,torrentwiz51.com,torrentwiz52
 torrentwiz48.com,torrentwiz49.com,torrentwiz50.com,torrentwiz51.com,torrentwiz52.com,torrentwiz53.com,torrentwiz54.com,torrentwiz55.com,torrentwiz56.com,torrentwiz57.com,torrentwiz58.com,torrentwiz59.com,torrentwiz60.com,torrentwiz61.com,torrentwiz62.com#?#.hidden-xs:has(a[href][target="_blank"] > img[src])
 yagong42.com,yagong43.com,yagong44.com,yagong45.com,yagong46.com,yagong47.com,yagong48.com,yagong49.com,yagong50.com,yagong51.com,yagong52.com,yagong53.com,yagong54.com,yagong55.com,yagong56.com,yagong57.com,yagong58.com,yagong59.com,yagong60.com,yagong61.com,yagong62.com,yagong63.com,yagong64.com#?#div[class*="border"]:has(> a[href][target*="_blank"])
 toonkor134.com,toonkor135.com,toonkor136.com,toonkor137.com,toonkor138.com,toonkor139.com,toonkor140.com,toonkor141.com,toonkor142.com,toonkor143.com,toonkor144.com,toonkor145.com#?#.navbar-nav > li[class]:has(> a[href$="/토토보증업체"][alt="토토보증업체"])
+koreatimes.net#$?#.container:has(~ div[style]#toTop) article.content { margin-top: 100px !important; }
+koreatimes.net#$?#.headding-news:has(~ div:not([style])#toTop) .col-md-8 { margin-left: calc(50% - 384px) !important; }
 ponh.info#$?#div[data-mesh-id][data-testid] > div[id^="comp-"]:has(form[id][class]) { margin-top: -600px !important; }
 algumon.com#$?#.nav-mobile:matches-css(display: none) ~ .base > .main { width: calc(100% - 290px) !important; }
 news.op.gg#$?#header + div[class] div[class^="css-"] > div[class^="css-"] > div[class^="css-"]:has( ~ .youtube-iframe) { margin-top: 8px !important; }
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+koreatimes.net#?#.container .recent_news_inner:has(> h3:contains(AD))
 namu.wiki#?#div[class*="senkawa"] div[class] > div[id]:not([class]):contains(/^(|[​\n\t ]+)$/)
 m.ppomppu.co.kr#?#.main-menu-group ~ .ct:has(h3:contains(뽐뿌)) .ppList li:has(> a[href*="market"], > a[href*="ppomppu2"], > a[href*="ppomppu7"])
 ~m.ppomppu.co.kr,ppomppu.co.kr#?#.top-nav a[href*="?id=ppomppu"] ~ .sub-menu li:has(> a[href*="market"], > a[href*="ppomppu2"], > a[href*="ppomppu7"])
