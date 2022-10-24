@@ -675,8 +675,6 @@ osxinfo.net#%#//scriptlet("abort-current-inline-script", "$", "!document.getElem
 ! https://github.com/AdguardTeam/AdguardFilters/issues/49271
 turkdenizcileri.com,bilgalem.blogspot.com,okulsoru.com#%#//scriptlet("set-constant", "koddostu_com_adblock_yok", "null")
 turkdenizcileri.com,bilgalem.blogspot.com,okulsoru.com$$script[tag-content="adblock"][max-length="300"]
-! https://github.com/AdguardTeam/AdguardFilters/issues/49089
-adtarget.com.tr#@##ad-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/48825
 tekniknot.com#%#//scriptlet("set-constant", "google_jobrunner", "noopFunc")
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
@@ -965,6 +963,8 @@ dizipal300.com,dizipal301.com,dizipal302.com,dizipal303.com,dizipal304.com,dizip
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
 !
+fotomac.com.tr#?#.display-none:has(> div.advers-box)
+fotomac.com.tr#?#.view-sm-20:has(> div.advers-box)
 manga-tr.com#?#.col-sm-4 > .well3:has(> .panel > .panel-heading2 > center:contains(Reklam Alanı))
 manga.tempestfansub.com#?##sidebar > div.section:has(> div.releases > h3:contains(Reklam))
 yaani.com.tr#?#.row  > div[class^="col"] > div:has(> div.ys-card > div.row > div.sponsor-listings-header)
@@ -2305,6 +2305,8 @@ fullfilmcidayi1.com,dizimax.plus,diziday.com,fullfilmcidayim.com,dizispeed.net##
 /service/advertchannels?$xmlhttprequest,redirect=nooptext,domain=mardinhaber.com.tr|gidahatti.com|bolugundem.com
 dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdaskocaeli.com.tr,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.us
 !
+fotomac.com.tr##.ub-notification-ad
+||molystream.net/obilet.png
 ||manga-tr.com/instatakip.gif
 filmizlesene.pro##.rsidebar
 ||filmizlesene.pro/images/vylike.gif
@@ -4501,7 +4503,7 @@ yenienerji.com##.header-img > a[href][target="_blank"].block > img
 coin-turk.com##a[rel="noopener noreferrer nofollow"] > img
 tvaktuel.com##.rek300
 coinotag.com##div[style*="width: 970px;height: 250px;"]
-coinotag.com##div[style^="width: 728px; height: 90px;"]
+fotomac.com.tr,coinotag.com##div[style^="width: 728px; height: 90px;"]
 dizilla.*###preRollBd
 ||dizimov.*/taksi.js
 konhaber.com##.sagSabitKose
@@ -6067,7 +6069,7 @@ emlakdream.com##div[style="width:980px; margin:0 auto; overflow:hidden;"] a > im
 ensonhaber.com##div[style^="background-image: url('http://i.ensonhaber.com/resimler/img/socialbg4.png')"]
 dogruses.com##div[style^="background:url(images/banner_"]
 t24.com.tr##div[style^="height:600px; width:300px;"]
-istiklal.com.tr##div[style^="width: 300px; height: 250px;"]
+fotomac.com.tr,istiklal.com.tr##div[style^="width: 300px; height: 250px;"]
 webtekno.com##div[style^="width:1048px;height: 90px;"]
 gundembursa.com##div[style^="width:300px; height:250px;"]
 yenisoz.com.tr##div[style^="width:300px;height:250px;"]
