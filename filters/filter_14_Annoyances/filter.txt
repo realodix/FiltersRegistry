@@ -15960,6 +15960,7 @@ reddit.com#@#.ADBAR
 ! SECTION: Anti-adblock - Regular rules
 ! Do not forget about '!#safari_cb_affinity' section for exclusions
 !
+nexusmods.com#%#//scriptlet("set-constant", "blockingAds", "false")
 lamusica.com#$#div[id$="___BV_modal_outer_"] { display: none !important; }
 lamusica.com#$#.modal-open { overflow: auto !important; }
 siracusanews.it#$#.jconfirm { display: none !important; }
@@ -17241,6 +17242,7 @@ uwaterloo.ca##div[aria-label="Ad Blocker Detected"]
 ! SECTION: Anti-adblock - Common '!#safari_cb_affinity(general)' directive
 !#safari_cb_affinity(general)
 !
+@@||nexusmods.com/Contents/Scripts/banger.js
 @@||asadcdn.com/adlib/pages/sport1.js$domain=sport1.de
 akunssh.net#@#.adBanner
 op.gg#@#.AdSense
@@ -31608,7 +31610,9 @@ wattpad.com###bottom-banner-container
 wattpad.com###announcements-container
 sputnik.ru##.b-cover__box > div.b-panel.js-panel[style="height: 60px;"]
 m.huffpost.com###aol-banner
-icc-cricket.com,marca.com##.js-mobile-banner
+marca.com#$#.js-mobile-banner { display: none !important; }
+marca.com#$#.js-mobile-banner:not(:empty) + .super-menu-header { top: 0 !important; }
+icc-cricket.com##.js-mobile-banner
 kaktam.ru##.wrapper--banner
 olx.ua###appsBottomBar
 ||turnkeymobileapps.com/*/smart-app-banner.
