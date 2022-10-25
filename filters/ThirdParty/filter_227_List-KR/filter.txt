@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1024.3
+! OriginalVersion: 2022.1025.6
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -367,6 +367,13 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||bemil.chosun.com/bemil/resources/js/ad/
+||cdn.topclass.chosun.com/bannerpop/uploads/
+||m.health.chosun.com/images/banner/
+||m.health.chosun.com/img/*_banner_
+/^https:\/\/health\.chosun\.com\/images\/[0-9]+x[0-9]+/
+||health.chosun.com/js/*_banner.js
+||health.chosun.com/images/*_banner_
 /https:\/\/(www\.|)koreatimes\.net\/images\/attach\/[A-Z0-9]+-[0-9]+\//
 ||koreatimes.net/images/AdImage/
 /^https:\/\/(www\.|)koreatimes\.net\/images\/attach\/[a-z]+[0-9]+\//
@@ -1034,7 +1041,7 @@
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
-/^https:\/\/toonkor[0-9]+\.com\/images\/[a-z-]*[0-9]{3,}(x|X)[0-9]{3,}/
+/^https:\/\/toonkor[0-9]+\.com\/images\/[a-z-]*[0-9]{3,}(x|X)[0-9]{2,}/
 /^https:\/\/toonkor[0-9]+\.com\/bann\//
 /^https:\/\/torrentlee[0-9]{1,}\.com\/[A-z_0-9]{1,}\.gif$/
 /^https:\/\/torrentview[0-9]{1,}\.com\/img\/0\/0_[0-9A-z]{8}_[a-z0-9]{40}\./
@@ -1117,11 +1124,11 @@
 ! ##div[id^="ad_"]
 r114.com,dprime.kr,zdnet.co.kr,fpn119.co.kr,serieamania.com,dvdprime.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,m.10000recipe.com,pandora.tv,mobile.newsis.com,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
-aladin.co.kr,nesin.com,encar.com,fntimes.com,zdnet.co.kr,mbn.co.kr,goodgag.net,v.daum.net,www.instiz.net,ppomppu.co.kr,m.nocutnews.co.kr,news.naver.com,news.daum.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
+bemil.chosun.com,aladin.co.kr,nesin.com,encar.com,fntimes.com,zdnet.co.kr,mbn.co.kr,goodgag.net,v.daum.net,www.instiz.net,ppomppu.co.kr,m.nocutnews.co.kr,news.naver.com,news.daum.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 ! ##div[class^="ad_"]
 nesin.com,~m.search.naver.com,search.naver.com,dprime.kr,encar.com,m.todayhumor.co.kr,hogaeng.co.kr,zdnet.co.kr,news.zum.com,m.search.daum.net,sports.donga.com,teamblind.com,unsin.co.kr,m.mk.co.kr,m.cafe.naver.com,dvdprime.com,nocutnews.co.kr,news.sbs.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,m.humoruniv.com,xportsnews.com,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.co.kr,ohmynews.com,hankyung.com,news1.kr,web.humoruniv.com,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,avjamak.net,kmib.co.kr,mlbpark.donga.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 ! ##div[class^="ad-"]
-nzkoreapost.com,pinpointnews.co.kr,huffingtonpost.kr,eroun.net,cnet.co.kr,hogangnono.com,ppomppu.co.kr,interfootball.co.kr,police112.co.kr,dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
+weekly.chosun.com,nzkoreapost.com,pinpointnews.co.kr,huffingtonpost.kr,eroun.net,cnet.co.kr,hogangnono.com,ppomppu.co.kr,interfootball.co.kr,police112.co.kr,dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 ! ##.banner
 paxnet.co.kr,ajl.co.kr,yhinews.com,funshop.co.kr,m.sedaily.com,bloter.net,mosen.mt.co.kr,hinfomax.kr,hinfomax.co.kr,pressian.com,kukinews.com##.banner
 ! ##div[class$="_banner"]
@@ -1177,6 +1184,16 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+bemil.chosun.com##div[class^="AD"]
+bemil.chosun.com##div[class$="AD"]
+aladin.co.kr##.banner_wrap .swiper-wrapper
+aladin.co.kr##body > div[id][class][onclick*="Layer"]
+aladin.co.kr###welcom_wrap > .font_remote
+aladin.co.kr###welcom_wrap .new_toprolling_bn
+m.health.chosun.com##.M_contents > .thumb ~ div[style^="width:"]
+m.health.chosun.com##a[class$="_ad"]
+m.health.chosun.com##.sub_article > div[style]
+health.chosun.com##.aside_doctor .tour_box
 koreatimes.net##.ads + div:not([class])
 koreatimes.net##.pop-layer
 koreatimes.net##div[class] > div[class^="post-style"] ~ .rn_block + hr
@@ -1277,7 +1294,7 @@ interpark.com##.welcomeWrapper .showRoom
 interpark.com##div[class$="Banners"]
 interpark.com##span[class$="AD"]
 dprime.kr.dvdprime.com##div[style~="height:"][style~="border-top:"].relative
-dprime.kr,dvdprime.com##[class*="_ad_"]
+health.chosun.com,dprime.kr,dvdprime.com##[class*="_ad_"]
 ypbooks.co.kr##td[id^="divBn_"]
 uwayapply.com,ypbooks.co.kr##div[id$="Banner"]
 ypbooks.co.kr##div[style]#cenArea > .today
@@ -1775,9 +1792,6 @@ seoul.co.kr##iframe[src^="/ad/"]
 realty.chosun.com##iframe[src*="//realty.chosun.com/RealtyCommon/Promotion"][src$=".html"]
 monthly.chosun.com##img[src^="/images/banner/"]
 monthly.chosun.com##iframe[src="/common/inc/main_right_banner.asp"]
-weekly.chosun.com##iframe[src^="/common/inc_adver"]
-weekly.chosun.com##img[src^="/images/banner/"][onclick^="window.open('/common/inc/adver.asp'"]
-weekly.chosun.com##iframe[src^="/common/inc/right_banner_roll"][src*=".asp"]
 anewsa.com,sports.chosun.com##div[id^="mobonDivBanner_"]
 chosun.com##div[class~="arcad-wrapper"]
 chosun.com##div[class^="layout__article-header"] > div[class^="flex-chain-wrapper"]
