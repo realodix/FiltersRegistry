@@ -2033,6 +2033,8 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 ! For the sites with '$generichide' exclusions
 !   SECTION: Cookies - Specific rules ($generichide)
 !
+gasolinapromociones.bridgestone.es#$##cookies { display: none!important; }
+gasolinapromociones.bridgestone.es#$#.para_blur { filter: none!important; }
 elektrotechnikautomatyk.pl##div[class^="GDPRCookieInfo_"]
 varianty.lviv.ua###accept
 moment.co#?##root > div[class]:has(> div[class] > button:contains(Accept Cookies))
@@ -12425,6 +12427,9 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 !+ PLATFORM(windows, mac, android)
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/133249
+gasolinapromociones.bridgestone.es#@##acceptCookies
+gasolinapromociones.bridgestone.es#@#.cookie-banner:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/133059
 @@||deutsche-weihnachtsmaerkte.de/booster/booster_css.php
 ! steuertipps.de - unable to play youtube video (non domain request are unlocked after unblocking uc.js)
@@ -32080,6 +32085,10 @@ rtrp.jp##.btnApp
 !+ NOT_OPTIMIZED
 clubdam.com##.bnr-app
 !+ NOT_OPTIMIZED
+ameblo.jp#$?#.skinBody2.skinTextColor > div[class^="_"][role="navigation"] { top: 0!important; }
+!+ NOT_OPTIMIZED
+ameblo.jp#?#aside[class^="_"] > a[class^="_"][href$="app-download-upper"]:upward(1)
+!+ NOT_OPTIMIZED
 s.tabelog.com#$#.js-modal-overlay-clickarea { display: none !important; }
 !+ NOT_OPTIMIZED
 s.tabelog.com#$#html.is-overlay-visible { overflow-y: auto !important; }
@@ -36725,6 +36734,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+kagoya.jp###kh-cta-5
 whosampled.com##.crates-banner
 tapple.me##div[class] > a[id^="section"] > video[src^="blob:https://tapple.me"]
 tapple.me###section-3
