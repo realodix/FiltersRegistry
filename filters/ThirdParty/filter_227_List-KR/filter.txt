@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1026.0
+! OriginalVersion: 2022.1027.5
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -576,7 +576,6 @@
 ||image.paxnet.co.kr/rpan/common/js/mobile_ad.js
 ||paxnet.co.kr/common/*BannerAjax|
 ||sisajournal.com/bannerpop/uploads/
-||maxsocdn.net/images/$domain=kr1.4kjav.co
 ||jejusori.net/adManager/
 ||jejusori.net/bannerpop/uploads/
 /^https:\/\/etoland\.co\.kr\/data\/daumeditor10\/[0-9]{6}\/[0-9]{17}\.png$/
@@ -1046,6 +1045,9 @@
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+/^https:\/\/torrentmode[0-9]+\.com\/data\/zn_bimg\//
+||video.twimg.com/ext_tw_video/*/pu/vid/$domain=topgirl.co
+||az-cdn.com/banners/
 /^https:\/\/toonkor[0-9]+\.com\/images\/[a-z-]*[0-9]{3,}(x|X)[0-9]{2,}/
 /^https:\/\/toonkor[0-9]+\.com\/bann\//
 /^https:\/\/torrentlee[0-9]{1,}\.com\/[A-z_0-9]{1,}\.gif$/
@@ -1104,8 +1106,6 @@
 ||anilife.live/assets/banner/
 /^(http|https):\/\/manaboza[0-9]{2,3}\.com\/static\/picture\/[0-9]{4}_[0-9]{10}\.[0-9]{4}\./
 /^(http|https):\/\/manaboza[0-9]{2,3}\.com\/static\/image\/header\//
-||torrentmode.com/bbs/zn_bimg/bannerhit.php$document
-||torrentmode.com/data/zn_bimg/
 ||cloudaaaa.com^$domain=toonsarang94.com|toonsarang95.com|toonsarang96.com|toonsarang97.com|toonsarang98.com|toonsarang99.com|toonsarang100.com|toonsarang101.com|toonsarang102.com|toonsarang103.com
 /^https:\/\/toonsarang[0-9]{2,4}\.com\/bbs\/bannerhit\.php/$document
 /^https:\/\/agit[0-9]{3,4}\.com\/upload\/[0-9]{4}\/[0-9]{4}\/[0-9]{21}/
@@ -1189,6 +1189,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+m.newspic.kr##div[data-widget="recommend"].box
 m.10000recipe.com##.container > div[style]:not([class])
 bemil.chosun.com##div[class^="AD"]
 bemil.chosun.com##div[class$="AD"]
@@ -1405,7 +1406,6 @@ eomisae.co.kr##.eq.section div[class^="col-md-"] > center
 star.mt.co.kr###wrap > div[style^="overflow:"][style$="background:#ddd;"]
 op.gg##.vm-placement
 m.nocutnews.co.kr##.section div[class$="con_b"][style]
-kr1.4kjav.co##a[href][target="_blank"] > img[src*="maxsocdn.net/images/"]
 bigkinds.or.kr##.news-cont ~ .news-special
 etoland.co.kr##a[href] > img[src*="./data/daumeditor10/"]
 news.jtbc.co.kr##div[id^="right_banner"]
@@ -2046,6 +2046,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 !#endif
 !#if (adguard && (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_chromium || adguard_ext_edge))
 ! Protect from DPI
+@@||comsclub.com^$stealth
 @@||korail.com^$stealth
 @@||seoulland.co.kr^$stealth
 @@||clms.dankook.ac.kr^$stealth
@@ -2315,7 +2316,6 @@ postshare.co.kr#?#div[id][class][style]:has(> .impactify-player-container)
 11st.co.kr#?#.c_product_banner.c_product_banner_product:has(> p > a[href^="https://ds.11st.co.kr"])
 11st.co.kr#?##recommend_top:has(> .side > div > div.c_adtext)
 meeco.kr#?#.list_d.ldd > ul > li:has(> div > ins.adsbygoogle)
-m.newspic.kr#?#.aside_wrap > div.box:has(> div > iframe[src^="https://ad.adinc.kr/"])
 mosen.mt.co.kr#?#section.textList > article.row:has(> ul.aritcle-info > li.title > a[href*="//adv.imadrep.co.kr/"])
 berryjam.co.kr#?#table[width="1200"]:has(> tbody > tr > td > div[class*="slider-banner-"])
 !
@@ -2436,7 +2436,6 @@ humoruniv.com#%#//scriptlet("set-constant", "ch4_submit", "noopFunc")
 humoruniv.com#%#//scriptlet("set-constant", "naver_adpost_ch1", "noopFunc")
 humoruniv.com#%#//scriptlet("set-constant", "naver_adpost_ch2_backfill", "noopFunc")
 humoruniv.com#%#//scriptlet("set-constant", "show_adpost", "noopFunc")
-newspic.kr#%#//scriptlet("abort-on-property-write", "document.cookie", "init")
 koreapas.com#%#//scriptlet("set-constant", "random_imglink", "noopFunc")
 pandora.tv#%#//scriptlet("set-constant", "isnoad_vod", "true")
 pandora.tv#%#//scriptlet("set-constant", "isnoad_banner", "true")
@@ -2485,12 +2484,6 @@ meeco.kr#$#[style*="opacity"] { opacity: 1 !important; }
 !#endif
 meeco.kr#$#.xe_content { opacity: 1 !important; }
 meeco.kr#%#//scriptlet("abort-current-inline-script", "$", ".adsbygoogle")
-! adde_modal_detector
-!#if (adguard_app_ios)
-kr1.4kjav.co##.adde_modal_detector
-kr1.4kjav.co##.adde_modal-overlay
-!#endif
-kr1.4kjav.co#%#//scriptlet("abort-on-property-read", "adsBlocked")
 ! namu.wiki
 @@||newliweb.com/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 @@||arca.live/$subdocument,script,domain=namu.wiki|~board.namu.wiki
@@ -2576,9 +2569,6 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@##adBlockPixelTag
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||tv.kakao.com/embed/player/image/ads.png$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 @@||videoads.kakao.com/adserver/api/v2/vmap$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
-! adde_modal_detector
-kr1.4kjav.co##.adde_modal_detector
-kr1.4kjav.co##.adde_modal-overlay
 ! namu.wiki
 @@||newliweb.com/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 @@||arca.live/$subdocument,script,domain=namu.wiki|~board.namu.wiki
