@@ -6,7 +6,7 @@
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
 ! What this broad compilation does not block: Newsletters, cookie banners, social media links to company pages
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
-! OriginalVersion: 26October2022v1
+! OriginalVersion: 26October2022v2
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -402,7 +402,7 @@ geekdashboard.com##.section--download
 ||weather.gc.ca/banner/images/App_*.gif$image
 ##.gta-header-banner:not(html, body)
 ##.gta-banner-link:not(html, body)
-reddit.com##.XPromoPill
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##.XPromoPill
 speedtest.net##.mobile-pretest
 instagram.com##main > div[class$="     "]:first-of-type + section:last-of-type
 nova.rs##.banner-footer
@@ -416,7 +416,7 @@ kurashiru.com##.footer-image-wrapper
 ##.PcToAppBanner
 tokopedia.com##div[id*=header] div[class^=css-]> a[href="/mobile-apps/"]
 tokopedia.com#?#div[id*=header] i:has(+ a[href="/mobile-apps/"])
-reddit.com#?#div[class]:last-of-type:not([class*=" "]) > div[class]:only-of-type:not([class*=" "]):has(img[src*=redditstatic][src*="/img/nsfw-blocking-"])
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#?#div[class]:last-of-type:not([class*=" "]) > div[class]:only-of-type:not([class*=" "]):has(img[src*=redditstatic][src*="/img/nsfw-blocking-"])
 ! (https://github.com/AdguardTeam/AdguardFilters/issues/116903)
 !!!twitter.com###layers > div:nth-of-type(2):last-of-type
 ! Pinterest
@@ -19100,7 +19100,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ! Placeholder line for alternate list versions
 !#endif
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! OriginalVersion: 18October2022v1-Alpha
+! OriginalVersion: 26October2022v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -19516,8 +19516,8 @@ condoblues.com###milotree_box_wrap
 ~pinterest.*##a[href*=pinterest][href*="/pin/create/b"]
 ~pinterest.*##a[href="#pinit"]
 ~pinterest.*##button[data-href*="pinterest.com/pin/create/button/"]
-~reddit.com##a[href*="/reddit.com/submit?url="][href*="&title="]
-~reddit.com##a[href*="reddit.com/submit?"]
+~reddit.com,~reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##a[href*="/reddit.com/submit?url="][href*="&title="]
+~reddit.com,~reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##a[href*="reddit.com/submit?"]
 ~skype.com##a[href*="web.skype.com/share?url="]
 ~stumbleupon.com##a[href*="stumbleupon.com/badge?"]
 ~stumbleupon.com##a[href*="stumbleupon.com/submit?url="]
@@ -19657,7 +19657,7 @@ deezer.com#?#.page-alerts:has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 16October2022v1
+! OriginalVersion: 27October2022v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -19953,12 +19953,12 @@ deviantart.com##header[data-hook=top_nav]:first-of-type + div + div[class^="_"][
 ! Reddit
 !#if env_mobile
 ! That weird mode where only the top 7 posts from the previous week are shown
-reddit.com##.m-slide-up.PreviewDrawer
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##.m-slide-up.PreviewDrawer
 !#endif
 !#if !env_mobile
 ! A login prompt in the lower right when scrolling down on a select few subreddits
 ! r/comedydamnation (2021-11-27)
-www.reddit.com,new.reddit.com##div[class^=subredditvars-] > div[data-testid=bottom-cell-wrapper]
+www.reddit.com,new.reddit.com,www.reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion,new.reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion##div[class^=subredditvars-] > div[data-testid=bottom-cell-wrapper]
 !#endif
 ! The Dots
 ! https://github.com/DandelionSprout/adfilt/issues/63#issuecomment-944921911
@@ -21195,7 +21195,7 @@ vumoo.to#?#div.col-lg-12:has-text(IMDb)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 27October2022v1
+! OriginalVersion: 27October2022v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -22310,7 +22310,7 @@ $removeparam=cid,domain=abcnews.go.com|adguard.com|adshares.net|ae.com|anntaylor
 ! https://deal.no/apple-thunderbolt-to-gigabit-ethernet/cat-p/c/p4935744&ref=prisjakt (15/11/2020)
 ! https://www.amazon.com/s?k=disney+fairies&ref=nb_sb_noss_2 (27/11/2020)
 ! (https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488495)
-$removeparam=ref,domain=abebooks.com|accounts.binance.com|adobe.com|akuankka.fi|albiononline.com|altcustoms.com|amazon.*|app.blockfi.com|arvopaperi.fi|audible.*|baidu.com|bestbuy.com|bing.com|bitlox.com|bitwarden.com|blogit.fi|bookdepository.com|brave.com|buzzfeed.com|buzzfeednews.com|bybit.com|catch.com.au|comixology.*|coop.no|deal.no|dell.com|digidip.net|domains.ch|droix.net|eset.com|etsy.com|expo.io|facebook.com|fig.io|geeksforgeeks.org|github.com|github.io|goodreads.com|hintaopas.fi|hintaseuranta.fi|hs.fi|idenati.com|ikea.com|iltapulu.fi|imdb.com|is.fi|jasonsavard.com|kauppalehti.fi|kesaduuni.org|kickstarter.com|ku.fi|mastermind.ac|mediuutiset.fi|megapornfreehd.com|merrell.com|mikrobitti.fi|motouutiset.fi|oikotie.fi|omataloyhtio.fi|protonvpn.com|proton.me|puutarha.net|rakentaja.fi|reddit.com|remppatori.fi|sahkovertailu.fi|sanoma.fi|scandinavianphoto.fi|schibsted.fi|semrush.com|shein.com|shodan.io|shopping.google.*|sketch.com|spiegel.de|sportskeeda.com|storyhouseegmont.fi|suomi24.fi|talouselama.fi|target.com|tekniikkatalous.fi|telsu.fi|thedailybeast.com|tivi.fi|tokenmetrics.com|twitch.tv|udemy.com|uusisuomi.fi|vultr.com|webhallen.no|woot.com|wormhole.app|yle.fi|zappos.com
+$removeparam=ref,domain=abebooks.com|accounts.binance.com|adobe.com|akuankka.fi|albiononline.com|altcustoms.com|amazon.*|app.blockfi.com|arvopaperi.fi|audible.*|baidu.com|bestbuy.com|bing.com|bitlox.com|bitwarden.com|blogit.fi|bookdepository.com|brave.com|buzzfeed.com|buzzfeednews.com|bybit.com|catch.com.au|comixology.*|coop.no|deal.no|dell.com|digidip.net|domains.ch|droix.net|eset.com|etsy.com|expo.io|facebook.com|fig.io|geeksforgeeks.org|github.com|github.io|goodreads.com|hintaopas.fi|hintaseuranta.fi|hs.fi|idenati.com|ikea.com|iltapulu.fi|imdb.com|is.fi|jasonsavard.com|kauppalehti.fi|kesaduuni.org|kickstarter.com|ku.fi|mastermind.ac|mediuutiset.fi|megapornfreehd.com|merrell.com|mikrobitti.fi|motouutiset.fi|oikotie.fi|omataloyhtio.fi|protonvpn.com|proton.me|puutarha.net|rakentaja.fi|reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion|remppatori.fi|sahkovertailu.fi|sanoma.fi|scandinavianphoto.fi|schibsted.fi|semrush.com|shein.com|shodan.io|shopping.google.*|sketch.com|spiegel.de|sportskeeda.com|storyhouseegmont.fi|suomi24.fi|talouselama.fi|target.com|tekniikkatalous.fi|telsu.fi|thedailybeast.com|tivi.fi|tokenmetrics.com|twitch.tv|udemy.com|uusisuomi.fi|vultr.com|webhallen.no|woot.com|wormhole.app|yle.fi|zappos.com
 ! https://www.comixology.com/Scooby-Doo-1997-2010/comics-series/353?irgwc=1&tid=IR-affiliate-10451&clickid=VsxVfPSSvxyOWNfwUx0Mo38MUkiXwRwR0xWjW40 (01/03/2021)
 ! (e.g. mirrored.to, tunnistautuminen.suomi.fi)
 $removeparam=tid,domain=clickbank.net|comixology.*|gap.com|gapcanada.ca|mintmobile.com|nhl.com|zulily.com
@@ -23190,7 +23190,7 @@ $removeparam=tracker,domain=dustdeal.nl|batteryupgrade.*
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1015504
 ||walmart.com^$removeparam=veh
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1018250
-||reddit.com^$removeparam=ved
+$removeparam=ved,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-1018655
 ||hinta.fi^$removeparam=v
 @@||hinta.fi/lib/$removeparam=v
@@ -23640,7 +23640,7 @@ $removeparam=visit_id,domain=bilibili.com|google.*
 ! https://github.com/AdguardTeam/AdguardFilters/issues/99645
 ||trendyol.com^$removeparam=/^tyutm_/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94662#issuecomment-946949031
-||reddit.com^$removeparam=correlation_id
+$removeparam=correlation_id,domain=reddit.com|reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion
 ! https://www.hotspotshield.com/free-vpn/?hotid=102aba12b5e1c48445f9112c0e4ea8&hoaid=1024&hoan=Future+Publishing&hooid=79&hoas&hoaci
 $removeparam=hotid,domain=hotspotshield.com|gethotspotshield.com
 $removeparam=hoaid,domain=hotspotshield.com|gethotspotshield.com
@@ -24315,7 +24315,7 @@ ourcodeworld.com##.mouse-cursor
 ! No iMacs have had less than 1600px wide monitors since 2006, MacBook Pro since 2012, or MacBook Air since 2017. Thus I'm taking a gamble by embedding this for Mac users:
 !+ NOT_OPTIMIZED
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! OriginalVersion: 02August2022v1-Beta
+! OriginalVersion: 26October2022v1-Beta
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
@@ -24716,7 +24716,7 @@ fontmeme.com#$##wrap { width: 97vw !important }
 dafontfree.net#$#.wrappage { width: 98vw !important }
 ! Category: Reddit
 ! When opening a post in New Reddit in a new tab
-reddit.com#$#div[aria-hidden] > div[tabindex] > div:nth-of-type(1) { max-width: 1000px !important }
+reddit.com,reddittorjg6rue252oqsxryoxengawnmo46qy4kyii5wtqnwfj4ooad.onion#$#div[aria-hidden] > div[tabindex] > div:nth-of-type(1) { max-width: 1000px !important }
 ! Category: Fark
 fark.com#$##container { width: 95vw !important }
 fark.com#$##newsContainer { width: 96% !important }

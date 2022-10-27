@@ -1452,6 +1452,9 @@ fightingirl.com#?#article > section:has(img[src^="http://koukoku."])
 moeimg.net#?##main-2 > .post:has(> .pc_ad:only-child)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88333
 weathernews.jp#?##sub > section.block > div[style^="width:100%; margin:0 auto"]:upward(1)
+ejje.weblio.jp#?##side > .sideblock:not(:has(>*))
+ejje.weblio.jp#?##side > .sideblock:has(> .ads-loader)
+ejje.weblio.jp#?##side > .sideblock:has(> div[id^="div-gpt-"])
 ejje.weblio.jp#?##ejjeBottomRightFixedAds > div.sideBlock > div[id^="div-gpt-"][style^="height:80px; width:320px;"]:upward(1)
 ejje.weblio.jp#?#.mainBlock > #ejje2ndDicRecommendAdId:upward(1)
 ejje.weblio.jp#?#.mainBlock > .flex-rectangle-ads-frame:upward(1)
@@ -1708,8 +1711,9 @@ repeat-drama.info#?#.side_inner > .box:contains(スポンサーリンク)
 !-------------------
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/133312
-7mmtv.sx#%#AG_onLoad(function() { setTimeout(function() { var el = document.querySelector('#mvspan_2_s_k_i_p_bottom'); if(el) el.click(); }, 300); });
-7mmtv.sx#%#AG_onLoad(function() { setTimeout(function() { var el = document.querySelector('#mvspan_3_s_k_i_p_bottom'); if(el) el.click(); }, 300); });
+7mmtv.sx#%#AG_onLoad(function(){var a=new MutationObserver(function(){document.querySelectorAll('div[id^="mvspan_"][id*="_s_k_i_p_b"]').forEach(function(b){b.click()})});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)});
+mm9845.com#%#//scriptlet('prevent-window-open')
+filemoon.sx#%#//scriptlet('prevent-window-open')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/133218
 ch-review.net#%#AG_onLoad(function() { document.body.innerHTML = document.body.innerHTML.replace(/スポンサーリンク/g, ""); });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132631
@@ -2163,6 +2167,7 @@ tokyo-sports.co.jp,soccerdigestweb.com,wiki.yjsnpi.nu,athleterecipe.com,javkimoc
 !
 !
 !
+mm9845.com##div[style^="position:fixed;"][style*="cursor:pointer"]
 valorantchannel.net##.amazon.Default
 kochike.jp##.sdr-banner
 ||solty.biz/banner_amr.png$third-party
