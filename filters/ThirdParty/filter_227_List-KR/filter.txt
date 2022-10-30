@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1029.1
+! OriginalVersion: 2022.1030.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -373,6 +373,8 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||link.coupang.com^$object,domain=tistory.com
+||sundaynewsusa.com/wp-content/uploads/*_ad
 ||cdn.greenpostkorea.co.kr/adManager/
 ||cdn.greenpostkorea.co.kr/bannerpop/uploads/
 ||gametoc.co.kr/adManager/
@@ -2079,6 +2081,7 @@ zoazoa7.me,zoazoa8.me,zoazoa9.me,zoazoa10.me,zoazoa11.me,zoazoa12.me,zoazoa13.me
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+sundaynewsusa.com#$#.td-is-sticky > .wpb_wrapper { top: 0px !important; }
 genshin.gamedot.org#$##mapsContent > .maps-content { top: 125px !important; }
 news.oasisfeed.com#$#.hideBtn { display: none !important; }
 news.oasisfeed.com#$##newsBody { height: auto !important; }
@@ -2223,6 +2226,7 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+sundaynewsusa.com#?#div[style] > .td_block_wrap:has(a[target="blank"])
 clien.net#?#.aside > div[class*="_"]:has(div[data-spy][data-offset-top][id])
 koreatimes.net#?#.obituaries-wrapper:has(img[src^="/images/AdImage/"])
 koreatimes.net#?#*:has(> a[target="_blank"] img[src^="/images/KTImage/"])
@@ -2612,6 +2616,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||namu.news/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 @@||namu.wiki/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 !
+@@||poketory.com^$genericblock
 @@||sogirl.so/wp-content/plugins/dh-anti-adblocker/public/js/ads-prebid.js
 plankim.com##body > div:not([class]):not([id])
 @@||clien.net^$generichide
