@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1030.2
+! OriginalVersion: 2022.1030.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -2496,6 +2496,7 @@ jootc.com,ehpub.co.kr#%#//scriptlet("abort-current-inline-script", "ai_run_scrip
 @@||videoads.kakao.com/adserver/api/v*/vmap|$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 @@/embed/player/image/ads.png$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 !#endif
+/^https:\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]+\/vmap/$redirect=nooptext,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 tv.kakao.com,play-tv.kakao.com,kakaotv.daum.net#%#//scriptlet("prevent-xhr", "/^https.\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]{1,2}\/vmap$/")
 /embed/player/image/ads.png$redirect=2x2-transparent.png,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 tv.kakao.com,play-tv.kakao.com,kakaotv.daum.net#%#//scriptlet("prevent-fetch", "/^https.\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]{1,2}\/vmap$/")
