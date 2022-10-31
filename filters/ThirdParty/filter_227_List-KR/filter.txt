@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1031.3
+! OriginalVersion: 2022.1031.8
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -373,6 +373,10 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||m.segye.com/static/*_segyeMobile/resources/js/commonAD.js
+||segye.com/static/*_segye/resources/js/common_AD_
+||img.segye.com/static/*_segye/resources/js/banner.js
+||image.kmib.co.kr/css/www/ad.css
 ||m.etoday.co.kr/common/js/ad/
 ||link.coupang.com^$object,domain=tistory.com
 ||sundaynewsusa.com/wp-content/uploads/*_ad
@@ -972,7 +976,6 @@
 ||avjamak.net/thema/ryan_rainbow/widget/iw-adsense/
 ||avjamak.net/data/by_banner/
 ||pandalive.co.kr/code:pandatv/partner/banner/
-||kmib.co.kr/images/main/bnr
 ||hani.co.kr/section-homepage/svc3/js/navtivead.js
 ||seoul.co.kr/ad/
 ||realty.chosun.com/RealtyCommon/Promotion*.html
@@ -1197,6 +1200,10 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+m.kmib.co.kr##.article_wrap ~ div[class^="nwbx"]
+m.etoday.co.kr##.containerWrap > section[style^="padding"]:not([class])
+m.etoday.co.kr##body > div[style]:not([class]):not([id])
+m.etoday.co.kr##.contents_body > div[style]
 etoday.co.kr##ul[class^="bn_"]
 prod.danawa.com###naverPowerShoppingArea
 cosinkorea.com##.con_primary hr.skin_margin
@@ -1801,7 +1808,6 @@ money.hankyung.com,stock.hankyung.com##aside[id^="ad_"]
 segye.com##div[id^="wps_layout"][data-desc="텍스트광고"][data-box-file^="/news/box/ad"]
 avjamak.net##.widget-box.widget-img
 kmib.co.kr##.mn_ad
-kmib.co.kr##iframe[src^="https://ads.kmib.co.kr/"]
 hankookilbo.com##.side-ad-box
 nownews.seoul.co.kr##.naside > div[style*="width:"][style*="height:"]
 nownews.seoul.co.kr##.naside > div[style].Rad
@@ -1924,7 +1930,7 @@ newspim.com##.topbanner
 dcinside.com###ad-layer
 namu.wiki##iframe[src*="//arca.live/static/ad/"]
 mmzone.co.kr###main_premium_spon_block
-mnews.sbs.co.kr,mbn.co.kr,cgv.co.kr,mmzone.co.kr##div[id$="_ad"]
+m.etoday.co.kr,mnews.sbs.co.kr,mbn.co.kr,cgv.co.kr,mmzone.co.kr##div[id$="_ad"]
 2cpu.co.kr##a[href*="./bbs/banner_link.php?"]
 ruliweb.com##div[id^="adsense_"]
 m.humoruniv.com##div[id^="ddn_ad_"]
@@ -2227,6 +2233,7 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+m.etoday.co.kr#?#.maj_list_wrap > .majnews_list:has(iframe[src*="//ads.mncmedia.co.kr/"])
 sundaynewsusa.com#?#div[style] > .td_block_wrap:has(a[target="blank"])
 clien.net#?#.aside > div[class*="_"]:has(div[data-spy][data-offset-top][id])
 koreatimes.net#?#.obituaries-wrapper:has(img[src^="/images/AdImage/"])
