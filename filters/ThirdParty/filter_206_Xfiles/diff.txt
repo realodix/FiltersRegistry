@@ -44,8 +44,8 @@ crusoe.uol.com.br/diario/$inline-script
 crusoe.uol.com.br/edicoes/$inline-script
 ! lavoz.com.ar$inline-script is excluded by "$inline-script" in exclusions.txt
 lavoz.com.ar$inline-script
-! theglobeandmail.com/*/article-$inline-script is excluded by "$inline-script" in exclusions.txt
-theglobeandmail.com/*/article-$inline-script
+! rugbypass.com/plus/$inline-script is excluded by "$inline-script" in exclusions.txt
+rugbypass.com/plus/$inline-script
 ! Rule "dailymail.co.uk##body:style(overflow: visible !important)" converted to: "dailymail.co.uk#$#body { overflow: visible !important }"
 dailymail.co.uk##body:style(overflow: visible !important)
 ! Rule "rediff.com##+js(ra, onclick, [onclick^="track"])" converted to: "rediff.com#%#//scriptlet('ubo-ra.js', 'onclick', '[onclick^="track"]')"
@@ -78,6 +78,18 @@ bergamonews.it##^script:has-text(request_ads)
 youtube.com,youtube-nocookie.com##+js(json-prune.js, [].playerResponse.adPlacements [].playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds)
 ! Rule "youtube.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)" converted to: "youtube.com#%#//scriptlet('ubo-set.js', 'ytInitialPlayerResponse.adPlacements', 'undefined')"
 youtube.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
+! Rule "/?rb=*&zoneid=$xmlhttprequest,3p" converted to: "/?rb=*&zoneid=$xmlhttprequest,third-party"
+/?rb=*&zoneid=$xmlhttprequest,3p
+! Rule "||gloaphoo.net^$xhr,domain=send.cm" converted to: "||gloaphoo.net^$xmlhttprequest,domain=send.cm"
+||gloaphoo.net^$xhr,domain=send.cm
+! Rule "||hostip.info^$3p" converted to: "||hostip.info^$third-party"
+||hostip.info^$3p
+! Rule "||increaserev.com^$3p" converted to: "||increaserev.com^$third-party"
+||increaserev.com^$3p
+! Rule "send.cm##+js(abort-current-script, JSON, break;case)" converted to: "send.cm#%#//scriptlet('ubo-abort-current-script.js', 'JSON', 'break;case')"
+send.cm##+js(abort-current-script, JSON, break;case)
+! Rule "send.cm##+js(addEventListener-defuser, , break;case $.)" converted to: "send.cm#%#//scriptlet('ubo-addEventListener-defuser.js', '', 'break;case $.')"
+send.cm##+js(addEventListener-defuser, , break;case $.)
 ! Rule "teamskeet.com##+js(set, $.tstracker, noopFunc)" converted to: "teamskeet.com#%#//scriptlet('ubo-set.js', '$.tstracker', 'noopFunc')"
 teamskeet.com##+js(set, $.tstracker, noopFunc)
 ! Rule "||api.pico.tools/client/query/*$xhr,third-party" converted to: "||api.pico.tools/client/query/*$xmlhttprequest,third-party"
@@ -122,6 +134,14 @@ charliehebdo.fr##+js(ra, style, div.ch-paywalled-content)
 chronicle.com,philanthropy.com##+js(ra, data-content-body|hidden, div.contentBody])
 ! Rule "cicero.de##+js(rc, teasered-content, .teasered-content)" converted to: "cicero.de#%#//scriptlet('ubo-rc.js', 'teasered-content', '.teasered-content')"
 cicero.de##+js(rc, teasered-content, .teasered-content)
+! Rule "citywire.com##+js(rc, article-locked, .article-locked)" converted to: "citywire.com#%#//scriptlet('ubo-rc.js', 'article-locked', '.article-locked')"
+citywire.com##+js(rc, article-locked, .article-locked)
+! Rule "citywire.com##+js(rc, m-article--locked, .m-article--locked)" converted to: "citywire.com#%#//scriptlet('ubo-rc.js', 'm-article--locked', '.m-article--locked')"
+citywire.com##+js(rc, m-article--locked, .m-article--locked)
+! Rule "citywire.com##+js(rc, m-media-container--locked, .m-media-container--locked)" converted to: "citywire.com#%#//scriptlet('ubo-rc.js', 'm-media-container--locked', '.m-media-container--locked')"
+citywire.com##+js(rc, m-media-container--locked, .m-media-container--locked)
+! Rule "citywire.com##+js(rc, m-article__body--locked, .m-article__body--locked)" converted to: "citywire.com#%#//scriptlet('ubo-rc.js', 'm-article__body--locked', '.m-article__body--locked')"
+citywire.com##+js(rc, m-article__body--locked, .m-article__body--locked)
 ! Rule "corrieredellosport.it##+js(cookie-remover, /paywall_articles/)" converted to: "corrieredellosport.it#%#//scriptlet('ubo-cookie-remover.js', '/paywall_articles/')"
 corrieredellosport.it##+js(cookie-remover, /paywall_articles/)
 ! Rule "csmonitor.com##+js(aopr, localStorage)" converted to: "csmonitor.com#%#//scriptlet('ubo-aopr.js', 'localStorage')"
@@ -176,8 +196,8 @@ krautreporter.de##+js(rc, json-ld-paywall-marker, .json-ld-paywall-marker, stay)
 ksta.de##+js(ra, class, span.hide-paid-content)
 ! Rule "kurier.at##+js(rc, plusContent, .plusContent, stay)" converted to: "kurier.at#%#//scriptlet('ubo-rc.js', 'plusContent', '.plusContent', 'stay')"
 kurier.at##+js(rc, plusContent, .plusContent, stay)
-! Rule "lanacion.com.ar##+js(cookie-remover, metering_arc_counter)" converted to: "lanacion.com.ar#%#//scriptlet('ubo-cookie-remover.js', 'metering_arc_counter')"
-lanacion.com.ar##+js(cookie-remover, metering_arc_counter)
+! Rule "lanacion.com.ar##+js(cookie-remover, /^metering_arc/)" converted to: "lanacion.com.ar#%#//scriptlet('ubo-cookie-remover.js', '/^metering_arc/')"
+lanacion.com.ar##+js(cookie-remover, /^metering_arc/)
 ! Rule "lanacion.com.ar##+js(aopr, localStorage)" converted to: "lanacion.com.ar#%#//scriptlet('ubo-aopr.js', 'localStorage')"
 lanacion.com.ar##+js(aopr, localStorage)
 ! Rule "digital.lasegunda.com##+js(rc, lessreadmore, article.lessreadmore, stay)" converted to: "digital.lasegunda.com#%#//scriptlet('ubo-rc.js', 'lessreadmore', 'article.lessreadmore', 'stay')"
@@ -206,14 +226,8 @@ loebclassics.com##+js(cookie-remover, /^/)
 loeildelaphotographie.com##+js(ra, class, .paywall)
 ! Rule "loeildelaphotographie.com##+js(ra, style, img[style*="blur"])" converted to: "loeildelaphotographie.com#%#//scriptlet('ubo-ra.js', 'style', 'img[style*="blur"]')"
 loeildelaphotographie.com##+js(ra, style, img[style*="blur"])
-! Rule "medianama.com##.zox-post-body:style(height:auto !important;)" converted to: "medianama.com#$#.zox-post-body { height:auto !important; }"
-medianama.com##.zox-post-body:style(height:auto !important;)
 ! Rule "mv-voice.com##+js(cookie-remover, /^/)" converted to: "mv-voice.com#%#//scriptlet('ubo-cookie-remover.js', '/^/')"
 mv-voice.com##+js(cookie-remover, /^/)
-! Rule "nation.africa##+js(rc, datawall-content, .datawall-content)" converted to: "nation.africa#%#//scriptlet('ubo-rc.js', 'datawall-content', '.datawall-content')"
-nation.africa##+js(rc, datawall-content, .datawall-content)
-! Rule "nation.africa##+js(ra, style, [data="datawall-content"])" converted to: "nation.africa#%#//scriptlet('ubo-ra.js', 'style', '[data="datawall-content"]')"
-nation.africa##+js(ra, style, [data="datawall-content"])
 ! Rule "nknews.org##+js(cookie-remover, issuem_lp)" converted to: "nknews.org#%#//scriptlet('ubo-cookie-remover.js', 'issuem_lp')"
 nknews.org##+js(cookie-remover, issuem_lp)
 ! Rule "nrc.nl##+js(cookie-remover, counter)" converted to: "nrc.nl#%#//scriptlet('ubo-cookie-remover.js', 'counter')"
@@ -250,6 +264,8 @@ science.org##+js(rc, alert-read-limit__overlay, body.alert-read-limit__overlay, 
 scientificamerican.com##+js(cookie-remover, /^/)
 ! Rule "scmp.com##+js(ra, amp-access-hide, div.article-body[amp-access][amp-access-hide])" converted to: "scmp.com#%#//scriptlet('ubo-ra.js', 'amp-access-hide', 'div.article-body[amp-access][amp-access-hide]')"
 scmp.com##+js(ra, amp-access-hide, div.article-body[amp-access][amp-access-hide])
+! Rule "scotsman.com##+js(rc, no-entitlement, div.premium.no-entitlement)" converted to: "scotsman.com#%#//scriptlet('ubo-rc.js', 'no-entitlement', 'div.premium.no-entitlement')"
+scotsman.com##+js(rc, no-entitlement, div.premium.no-entitlement)
 ! Rule "slideshare.net##+js(rc, limit-overlay, .limit-overlay)" converted to: "slideshare.net#%#//scriptlet('ubo-rc.js', 'limit-overlay', '.limit-overlay')"
 slideshare.net##+js(rc, limit-overlay, .limit-overlay)
 ! Rule "slideshare.net##+js(aopr, localStorage)" converted to: "slideshare.net#%#//scriptlet('ubo-aopr.js', 'localStorage')"
@@ -262,6 +278,12 @@ spglobal.com##+js(ra, class, html, stay)
 staradvertiser.com##+js(ra, style, div#hsa-paywall-content[style])
 ! Rule "suomensotilas.fi##+js(rc, epfl-pw-obscured, div.epfl-pw-obscured)" converted to: "suomensotilas.fi#%#//scriptlet('ubo-rc.js', 'epfl-pw-obscured', 'div.epfl-pw-obscured')"
 suomensotilas.fi##+js(rc, epfl-pw-obscured, div.epfl-pw-obscured)
+! Rule "tes.com##+js(cookie-remover, /tg_paywall/)" converted to: "tes.com#%#//scriptlet('ubo-cookie-remover.js', '/tg_paywall/')"
+tes.com##+js(cookie-remover, /tg_paywall/)
+! Rule "tes.com##+js(ra, class, div.tg-paywall-body-overlay)" converted to: "tes.com#%#//scriptlet('ubo-ra.js', 'class', 'div.tg-paywall-body-overlay')"
+tes.com##+js(ra, class, div.tg-paywall-body-overlay)
+! Rule "theathletic.com##body[class]:style(overflow:visible !important; position:relative !important)" converted to: "theathletic.com#$#body[class] { overflow:visible !important; position:relative !important }"
+theathletic.com##body[class]:style(overflow:visible !important; position:relative !important)
 ! Rule "theatlantic.com##+js(cookie-remover, articleViews)" converted to: "theatlantic.com#%#//scriptlet('ubo-cookie-remover.js', 'articleViews')"
 theatlantic.com##+js(cookie-remover, articleViews)
 ! Rule "thediplomat.com##+js(cookie-remover, dpl-pw)" converted to: "thediplomat.com#%#//scriptlet('ubo-cookie-remover.js', 'dpl-pw')"
@@ -358,8 +380,6 @@ lepetitjournal.net##+js(rc, excerpt, div.excerpt)
 meritnation.com##+js(rc, maxHeight75px, div.exp_content.maxHeight75px)
 ! Rule "nu.nl##+js(rc, authorized-content, div.authorized-content)" converted to: "nu.nl#%#//scriptlet('ubo-rc.js', 'authorized-content', 'div.authorized-content')"
 nu.nl##+js(rc, authorized-content, div.authorized-content)
-! Rule "scotsman.com##+js(rc, iETVtP, div.premium)" converted to: "scotsman.com#%#//scriptlet('ubo-rc.js', 'iETVtP', 'div.premium')"
-scotsman.com##+js(rc, iETVtP, div.premium)
 ! Rule "scribd.com##+js(ra, class, .blurred_page)" converted to: "scribd.com#%#//scriptlet('ubo-ra.js', 'class', '.blurred_page')"
 scribd.com##+js(ra, class, .blurred_page)
 ! Rule "stylist.co.uk##+js(ra, class|style, div.paywall)" converted to: "stylist.co.uk#%#//scriptlet('ubo-ra.js', 'class|style', 'div.paywall')"
@@ -460,6 +480,10 @@ liberation.fr,officedepot.fr,oui.sncf#%#//scriptlet('ubo-acis.js', 'document.cre
 youtube.com,youtube-nocookie.com#%#//scriptlet('ubo-json-prune.js', '[].playerResponse.adPlacements [].playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds')
 ! youtube.com#%#//scriptlet('ubo-set.js', 'ytInitialPlayerResponse.adPlacements', 'undefined') is excluded by "#%#//scriptlet" in exclusions-low.txt
 youtube.com#%#//scriptlet('ubo-set.js', 'ytInitialPlayerResponse.adPlacements', 'undefined')
+! send.cm#%#//scriptlet('ubo-abort-current-script.js', 'JSON', 'break;case') is excluded by "#%#//scriptlet" in exclusions-low.txt
+send.cm#%#//scriptlet('ubo-abort-current-script.js', 'JSON', 'break;case')
+! send.cm#%#//scriptlet('ubo-addEventListener-defuser.js', '', 'break;case $.') is excluded by "#%#//scriptlet" in exclusions-low.txt
+send.cm#%#//scriptlet('ubo-addEventListener-defuser.js', '', 'break;case $.')
 ! teamskeet.com#%#//scriptlet('ubo-set.js', '$.tstracker', 'noopFunc') is excluded by "#%#//scriptlet" in exclusions-low.txt
 teamskeet.com#%#//scriptlet('ubo-set.js', '$.tstracker', 'noopFunc')
 ! gadget.pico.tools#%#//scriptlet('ubo-json-prune.js', 'locked') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -498,6 +522,14 @@ challenges.fr#%#//scriptlet('ubo-rc.js', 'user-paying-content', '.user-paying-co
 charliehebdo.fr#%#//scriptlet('ubo-ra.js', 'style', 'div.ch-paywalled-content')
 ! cicero.de#%#//scriptlet('ubo-rc.js', 'teasered-content', '.teasered-content') is excluded by "#%#//scriptlet" in exclusions-low.txt
 cicero.de#%#//scriptlet('ubo-rc.js', 'teasered-content', '.teasered-content')
+! citywire.com#%#//scriptlet('ubo-rc.js', 'article-locked', '.article-locked') is excluded by "#%#//scriptlet" in exclusions-low.txt
+citywire.com#%#//scriptlet('ubo-rc.js', 'article-locked', '.article-locked')
+! citywire.com#%#//scriptlet('ubo-rc.js', 'm-article--locked', '.m-article--locked') is excluded by "#%#//scriptlet" in exclusions-low.txt
+citywire.com#%#//scriptlet('ubo-rc.js', 'm-article--locked', '.m-article--locked')
+! citywire.com#%#//scriptlet('ubo-rc.js', 'm-media-container--locked', '.m-media-container--locked') is excluded by "#%#//scriptlet" in exclusions-low.txt
+citywire.com#%#//scriptlet('ubo-rc.js', 'm-media-container--locked', '.m-media-container--locked')
+! citywire.com#%#//scriptlet('ubo-rc.js', 'm-article__body--locked', '.m-article__body--locked') is excluded by "#%#//scriptlet" in exclusions-low.txt
+citywire.com#%#//scriptlet('ubo-rc.js', 'm-article__body--locked', '.m-article__body--locked')
 ! corrieredellosport.it#%#//scriptlet('ubo-cookie-remover.js', '/paywall_articles/') is excluded by "#%#//scriptlet" in exclusions-low.txt
 corrieredellosport.it#%#//scriptlet('ubo-cookie-remover.js', '/paywall_articles/')
 ! csmonitor.com#%#//scriptlet('ubo-aopr.js', 'localStorage') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -552,8 +584,8 @@ krautreporter.de#%#//scriptlet('ubo-rc.js', 'json-ld-paywall-marker', '.json-ld-
 ksta.de#%#//scriptlet('ubo-ra.js', 'class', 'span.hide-paid-content')
 ! kurier.at#%#//scriptlet('ubo-rc.js', 'plusContent', '.plusContent', 'stay') is excluded by "#%#//scriptlet" in exclusions-low.txt
 kurier.at#%#//scriptlet('ubo-rc.js', 'plusContent', '.plusContent', 'stay')
-! lanacion.com.ar#%#//scriptlet('ubo-cookie-remover.js', 'metering_arc_counter') is excluded by "#%#//scriptlet" in exclusions-low.txt
-lanacion.com.ar#%#//scriptlet('ubo-cookie-remover.js', 'metering_arc_counter')
+! lanacion.com.ar#%#//scriptlet('ubo-cookie-remover.js', '/^metering_arc/') is excluded by "#%#//scriptlet" in exclusions-low.txt
+lanacion.com.ar#%#//scriptlet('ubo-cookie-remover.js', '/^metering_arc/')
 ! lanacion.com.ar#%#//scriptlet('ubo-aopr.js', 'localStorage') is excluded by "#%#//scriptlet" in exclusions-low.txt
 lanacion.com.ar#%#//scriptlet('ubo-aopr.js', 'localStorage')
 ! digital.lasegunda.com#%#//scriptlet('ubo-rc.js', 'lessreadmore', 'article.lessreadmore', 'stay') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -582,14 +614,8 @@ loebclassics.com#%#//scriptlet('ubo-cookie-remover.js', '/^/')
 loeildelaphotographie.com#%#//scriptlet('ubo-ra.js', 'class', '.paywall')
 ! loeildelaphotographie.com#%#//scriptlet('ubo-ra.js', 'style', 'img[style*="blur"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 loeildelaphotographie.com#%#//scriptlet('ubo-ra.js', 'style', 'img[style*="blur"]')
-! medianama.com#$#.zox-post-body { height:auto !important; } is excluded by "#$#" in exclusions-low.txt
-medianama.com#$#.zox-post-body { height:auto !important; }
 ! mv-voice.com#%#//scriptlet('ubo-cookie-remover.js', '/^/') is excluded by "#%#//scriptlet" in exclusions-low.txt
 mv-voice.com#%#//scriptlet('ubo-cookie-remover.js', '/^/')
-! nation.africa#%#//scriptlet('ubo-rc.js', 'datawall-content', '.datawall-content') is excluded by "#%#//scriptlet" in exclusions-low.txt
-nation.africa#%#//scriptlet('ubo-rc.js', 'datawall-content', '.datawall-content')
-! nation.africa#%#//scriptlet('ubo-ra.js', 'style', '[data="datawall-content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
-nation.africa#%#//scriptlet('ubo-ra.js', 'style', '[data="datawall-content"]')
 ! nknews.org#%#//scriptlet('ubo-cookie-remover.js', 'issuem_lp') is excluded by "#%#//scriptlet" in exclusions-low.txt
 nknews.org#%#//scriptlet('ubo-cookie-remover.js', 'issuem_lp')
 ! nrc.nl#%#//scriptlet('ubo-cookie-remover.js', 'counter') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -626,6 +652,8 @@ science.org#%#//scriptlet('ubo-rc.js', 'alert-read-limit__overlay', 'body.alert-
 scientificamerican.com#%#//scriptlet('ubo-cookie-remover.js', '/^/')
 ! scmp.com#%#//scriptlet('ubo-ra.js', 'amp-access-hide', 'div.article-body[amp-access][amp-access-hide]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 scmp.com#%#//scriptlet('ubo-ra.js', 'amp-access-hide', 'div.article-body[amp-access][amp-access-hide]')
+! scotsman.com#%#//scriptlet('ubo-rc.js', 'no-entitlement', 'div.premium.no-entitlement') is excluded by "#%#//scriptlet" in exclusions-low.txt
+scotsman.com#%#//scriptlet('ubo-rc.js', 'no-entitlement', 'div.premium.no-entitlement')
 ! slideshare.net#%#//scriptlet('ubo-rc.js', 'limit-overlay', '.limit-overlay') is excluded by "#%#//scriptlet" in exclusions-low.txt
 slideshare.net#%#//scriptlet('ubo-rc.js', 'limit-overlay', '.limit-overlay')
 ! slideshare.net#%#//scriptlet('ubo-aopr.js', 'localStorage') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -638,6 +666,12 @@ spglobal.com#%#//scriptlet('ubo-ra.js', 'class', 'html', 'stay')
 staradvertiser.com#%#//scriptlet('ubo-ra.js', 'style', 'div#hsa-paywall-content[style]')
 ! suomensotilas.fi#%#//scriptlet('ubo-rc.js', 'epfl-pw-obscured', 'div.epfl-pw-obscured') is excluded by "#%#//scriptlet" in exclusions-low.txt
 suomensotilas.fi#%#//scriptlet('ubo-rc.js', 'epfl-pw-obscured', 'div.epfl-pw-obscured')
+! tes.com#%#//scriptlet('ubo-cookie-remover.js', '/tg_paywall/') is excluded by "#%#//scriptlet" in exclusions-low.txt
+tes.com#%#//scriptlet('ubo-cookie-remover.js', '/tg_paywall/')
+! tes.com#%#//scriptlet('ubo-ra.js', 'class', 'div.tg-paywall-body-overlay') is excluded by "#%#//scriptlet" in exclusions-low.txt
+tes.com#%#//scriptlet('ubo-ra.js', 'class', 'div.tg-paywall-body-overlay')
+! theathletic.com#$#body[class] { overflow:visible !important; position:relative !important } is excluded by "#$#" in exclusions-low.txt
+theathletic.com#$#body[class] { overflow:visible !important; position:relative !important }
 ! theatlantic.com#%#//scriptlet('ubo-cookie-remover.js', 'articleViews') is excluded by "#%#//scriptlet" in exclusions-low.txt
 theatlantic.com#%#//scriptlet('ubo-cookie-remover.js', 'articleViews')
 ! thediplomat.com#%#//scriptlet('ubo-cookie-remover.js', 'dpl-pw') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -732,8 +766,6 @@ lepetitjournal.net#%#//scriptlet('ubo-rc.js', 'excerpt', 'div.excerpt')
 meritnation.com#%#//scriptlet('ubo-rc.js', 'maxHeight75px', 'div.exp_content.maxHeight75px')
 ! nu.nl#%#//scriptlet('ubo-rc.js', 'authorized-content', 'div.authorized-content') is excluded by "#%#//scriptlet" in exclusions-low.txt
 nu.nl#%#//scriptlet('ubo-rc.js', 'authorized-content', 'div.authorized-content')
-! scotsman.com#%#//scriptlet('ubo-rc.js', 'iETVtP', 'div.premium') is excluded by "#%#//scriptlet" in exclusions-low.txt
-scotsman.com#%#//scriptlet('ubo-rc.js', 'iETVtP', 'div.premium')
 ! scribd.com#%#//scriptlet('ubo-ra.js', 'class', '.blurred_page') is excluded by "#%#//scriptlet" in exclusions-low.txt
 scribd.com#%#//scriptlet('ubo-ra.js', 'class', '.blurred_page')
 ! stylist.co.uk#%#//scriptlet('ubo-ra.js', 'class|style', 'div.paywall') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -806,6 +838,8 @@ tasma.ru#%#//scriptlet('ubo-aopw.js', 'decodeURIComponent')
 tomadivx.tv#%#//scriptlet('ubo-aopr.js', 'WebAssembly')
 ! tubettajat.net#%#//scriptlet('ubo-aopr.js', 'miner') is excluded by "#%#//scriptlet" in exclusions-low.txt
 tubettajat.net#%#//scriptlet('ubo-aopr.js', 'miner')
+Error: "$redirect modifier is invalid" in the rule: "||googletagmanager.com/gtag/js$script,redirect-rule=googletagmanager_gtm.js:5"
+||googletagmanager.com/gtag/js$script,redirect-rule=googletagmanager_gtm.js:5
 ! Invalid selector:
 twitter.com##:xpath(//span[(text()='Sponsorizzato')]/../../../../..)
 Error: "Unknown modifier: plit/C_0_strillo6x4_263_GroupPublitalia_fotobanner.gif" in the rule: "tgcom.mediaset.it/bin/418.$plit/C_0_strillo6x4_263_GroupPublitalia_fotobanner.gif"
