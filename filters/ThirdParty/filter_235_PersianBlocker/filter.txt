@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-10-28
+! Last modified: 2022-11-02
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -28,6 +28,9 @@
 ##.zxc-stik
 ##.zxc-mobile
 ##.zxc-padding-custom
+##.zxc-header-zxc
+##.home-zxc
+##.side_txt_zxc_inner
 !-------------------------^ Experimental Generic Filters ^-----------------------!
 !-------------------------v Persian Ads/Trackers/Annoyances Filters v-----------------------!
 ! >> A <<
@@ -142,6 +145,9 @@
 ||merita.ir^$all
 ||mitrarank.ir^$all
 ! >> N <<
+||nastooh.ir^$third-party
+||analytics.nastooh.ir^$all
+! Example: sahebkhabar.ir
 ||newswidget.net^$all
 ||vidomusic.org^$all
 ||pantatec.ae^$all
@@ -991,13 +997,11 @@ gamefa.com##.fix-ads
 gamefa.com##.single-advertise:nth-of-type(3)
 gamefa.com###fix-advertise
 ! TODO: Remove ".fix-ads"
-||ghatreh.com/ads/
-||ghatreh.com/skins/default/js/analytics.js
-||ghatreh.com/skins/default/images/ads
-||ghatreh.com/skins/default/js/najva
-||ghatreh.com/skins/default/najva
-||otaghkhabar24.com/assets/files/ads/
-ghatreh.com##div.right_side:nth-of-type(9)
+||ghatreh.com/ads^
+||ghatreh.com/skins/default/js/najva.js^
+||ghatreh.com/skins/default/najva.css^
+ghatreh.com##.tads
+ghatreh.com##table > tbody > tr > td > .dagh > strong:has-text(اخبار تبلیغاتی)
 ||graphiran.com/wp-content/uploads/*/ads
 graphiran.com##div#leftcol-up:nth-of-type(1)
 graphiran.com##div#leftcol-body:nth-of-type(2)
@@ -1608,12 +1612,13 @@ rozblog.com###middle-ads
 rozup.ir##.txtad
 rozup.ir##.center.body_c > div:nth-of-type(2)
 rozup.ir##.center.body_c > div > div
-||rokna.net/zxc/*.htm$subdocument
-rokna.net##[href^="/advertisements/"]
+rokna.net##.zxc
+rokna.net##.zxc-header-zxc
+rokna.net##.home-zxc
 rokna.net##.zxc-padding-custom
-rokna.net##.padding-bottom-8
 rokna.net##.side_txt_zxc_inner
 rokna.net##.sanjagh
+rokna.net##.padding-bottom-8
 ||rouzegar.com/wp-content/plugins/better-adsmanager/
 ||irancarpet.net^$image,domain=rouzegar.com
 rouzegar.com##.widget_better-ads
