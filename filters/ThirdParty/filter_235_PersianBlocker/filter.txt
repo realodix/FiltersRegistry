@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-11-02
+! Last modified: 2022-11-03
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -113,6 +113,9 @@
 ! ^ TODO: Check for breakages (used by tamasha.com), investigate into more tracking
 ! >> G <<
 ! >> H <<
+||hamravesh.com^$third-party
+||sentry.hamravesh.com^$all
+! Example: behtarino.com
 ||cdn.hostdl.com/img/*.gif$image,third-party,domain=~soft98.ir
 ! ^ Example: p30day.ir
 !  cdn.hostdl.com/assets/downloadha.gif, cdn.hostdl.com/img/mihandownload.gif, cdn.hostdl.com/img/p30day.gif
@@ -137,6 +140,8 @@
 ||linksaz.net^$third-party
 ||linkyar.com^$third-party
 ! >> M <<
+||ir.mihanstore.net^$all
+! Example: uploadgoogle.ir
 ||metrix.ir^$all
 ||trc.metrix.ir^$all
 ! ^ Used by digikala.com
@@ -483,6 +488,10 @@ apktops.ir##.asiatech
 apktops.ir#$?#.apktops-slider-section ul > li:not(:has(a[href="https://t.me/+UgVXT9YqXOs0MQTy"])) { remove: true; }
 apktops.ir##.spcontent
 ! >> B <<
+||metrix.behtarino.com^$all
+||static.bourse24.ir/images/ads^
+bourse24.ir##[href*="bourse24.ir/ads/click/"]
+bourse24.ir##.ads-margin-bot
 biainobokhor.ir#$#.step:nth-of-type(4)::after { content: 'هشدار از طرف لیست PersianBlocker: با ثبت کردن این اطلاعات، این سایت می‌تواند آدرس خانه و همه اطلاعات شما که در حساب‌کاربری اسنپ‌فود ثبت شده است را مشاهده کند و یا حتی اقدام به تغییر اطلاعات و ثبت سفارش کند. از این سایت با ریسک خودتان استفاده کنید و بعد از اتمام بررسی، دکمه "خروج" در سایت اسنپ‌فود را زده تا Token شما لغو شده و دسترسی این سایت به حساب‌کاربری شما قطع شود.' !important; color: #E6000D !important; margin-top: 20px !important; }
 ! https://github.com/MasterKia/PersianBlocker/issues/4#issuecomment-1198560570
 ||bama.ir^$removeparam=/^utm_/
@@ -583,17 +592,20 @@ chetor.com#@#.ads-block
 @@||chetor.com/wp-content/uploads/2021/07/book-banner.1250.240.2.gif$image,~third-party
 ||sentry.cafebazaar.org^$all
 ! coffeeapps.ir##+js(nowoif)
+||coffeeapps.ir/cof-p.php^
+||coffeeapps.ir/wp-content/plugins/wp-content-copy-protector^
+!#if env_firefox
+coffeeapps.ir$$script[tag-content="wpcp"][max-length="262144"]
+!#endif
+!#if env_chromium
 coffeeapps.ir#%#//scriptlet('ubo-aopr.js', 'nocontext')
 coffeeapps.ir#%#//scriptlet('ubo-acis.js', 'disableSelection', 'reEnable')
-||coffeeapps.ir/cof-p.php
+!#endif
 coffeeapps.ir#$#* { -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
-coffeeapps.ir##.ads-sidebar
 coffeeapps.ir##.ads-sticky
-coffeeapps.ir##.no-list-marker.block-content
-coffeeapps.ir##h5:has-text(لینک)
+coffeeapps.ir##.ads-sidebar
+coffeeapps.ir###sidebar > .block > h5:has-text(لینک های متنی):upward(.block)
 coffeeapps.ir###ADbox-1
-coffeeapps.ir##.soh-tab-d
-coffeeapps.ir##.ymaco
 ||cooldl.net/raul/Zula
 cooldl.net##.pm
 cooldl.net##.box-title
@@ -1054,6 +1066,10 @@ hidoctor.ir##.doctor-ads-item
 ||hamshahrionline.ir/rest/visit
 hamshahrionline.ir#@##ads-container
 ! >> I <<
+iranstar.com#%#//scriptlet('ubo-ra.js', 'onselectstart|oncopy|oncontextmenu', 'body')
+iranstar.com#%#//scriptlet('ubo-acis.js', 'jQuery', 'Drupal')
+iranstar.com##.ads-div-block
+iranstar.com###floating-region-zone
 ! https://github.com/MasterKia/PersianBlocker/issues/56
 ||iraneconomist.com/files/adv^
 ! https://github.com/MasterKia/PersianBlocker/issues/50
@@ -2039,6 +2055,7 @@ taknaz.ir##.ads120000
 tamin.ir#@#.ads2
 @@||tamin.ir/content/ads/
 ! >> U <<
+uploadgoogle.ir#%#//scriptlet('ubo-nowoif.js')
 uptrack.ir##[href*="b2n.ir"]
 uptrack.ir##.aside_box:has(.aside_box_title:has-text(لینک های ویژه))
 uplod.ir##.free_ad_con
