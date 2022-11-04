@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-11-03
+! Last modified: 2022-11-04
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -67,9 +67,9 @@
 ||1abzaar.ir/abzar/tools/no-selects.js
 ||1abzar.ir/abzar/tools/post-view/
 ||1abzar.ir/abzar/tools/stat/
-||abzarfa.com/services/minicounter
-||abzarfa.com/services/onlineusres
-||abzarfa.com/tools/ip
+||abzarfa.com/services/minicounter^$script
+||abzarfa.com/services/onlineusres^$script
+||abzarfa.com/tools/ip^$script
 ! >> B <<
 ||behinava.com^$all
 ||radar.bayan.ir^$all
@@ -421,9 +421,9 @@ amazing.ir##.widget_custom_html.widget.widget_text
 ||alef.ir/files/advertise/
 ||alef.ir/news/visit
 ||blog.akhbarrasmi.com/wp-content/plugins/*/analytics/
-alamto.com##li#bunyad-latest-posts-widget-2.latest-posts.widget:nth-of-type(4)
 alamto.com##.yn-bnr
 alamto.com###pos-article-display-66259
+alamto.com##.sidebar.col-4 > ul > li > h4:has-text(رپورتاژ آگهی):upward(li)
 ! androidgozar.com##+js(aopr, website)
 androidgozar.com#%#//scriptlet('ubo-aopr.js', 'ShowPopUp')
 ||androidgozar.com/agahi/
@@ -445,14 +445,13 @@ aparat.com##.ad-banner
 aparat.com##.dsp-ad
 aparat.com##.video-list-wrapper.list-responsive:has(.ad)
 ! TODO: Check for more possible filters
-||aftabir.com/uploads/banners/
-aftabir.com###footer_js_d1
-aftabir.com##.banner
+||aftabir.com/uploads/banners^
+! ||aftabir.com/uploads/reportages^
 aftabir.com##.banner-container
-aftabir.com##.sidebar-fixed > .block
-aftabir.com##.col-sm-12 > .block > header
-aftabir.com##.boxRepo-12
-aftabir.com##section.block:nth-of-type(4)
+aftabir.com###footer_js_d1
+aftabir.com##.col-md-4 > .mb-10 > .block > header > h2:has-text(رپرتاژ):upward(.block)
+aftabir.com##.sidebar-fixed > .block > header > h2:has-text(وبگردی):upward(.block)
+aftabir.com##.col-md-8 > .mb-10 > .block > header > h2:has-text(وبگردی):upward(.block)
 ||aftabyazdonline.ir/templates/aftabeyazd/images/ads
 aftabyazdonline.ir##.co-ads
 ||ads.akairan.com
@@ -461,10 +460,6 @@ aftabyazdonline.ir##.co-ads
 abipic.com##.pt-3.text-center.py-2.bg-all-box
 abipic.com##.text-center.py-3.bg-all-box
 abipic.com##.ads-text-sid
-abzarfa.com##.top-ads
-abzarfa.com##div.right-sidebar:nth-of-type(1)
-abzarfa.com##div.right-sidebar:nth-of-type(4) > .right-sidebar-cont
-abzarfa.com##div.right-sidebar:nth-of-type(4) > .right-title
 ||1abzar.com/files/ads
 1abzar.com##.ads-post
 ||aftabnews.ir/files/adv/
@@ -568,14 +563,14 @@ beytoote.com##.c-ads-banner
 @@||beytoote.com/ads/images_$image,~third-party
 @@||beytoote.com/ads/js/$script,~third-party
 @@||ads.beytoote.com/live_chat$~third-party
-||boyernews.com/wp-content/plugins/FAdvertisement/
-boyernews.com##.topAds
-boyernews.com##.ads-left
-boyernews.com##.tarh-forosh.panel-heading:nth-of-type(23)
-boyernews.com##center
-boyernews.com##.table-striped.table
+||boyernews.com/wp-content/plugins/FAdvertisement^
+boyernews.com##.leftads
+boyernews.com##.col-md-3 > .panel > .tarh-forosh
+boyernews.com##.col-md-3 > .panel > center
+@@||boyernews.com/wp-content/plugins/FAdvertisement/images/BE7C40CE-BAEA-954A-B842-C98F3423EB1D.jpg$image,~third-party
+@@||boyernews.com/wp-content/plugins/FAdvertisement/images/E77FB7B0-C797-40C2-D105-545084EE2E57.jpg$image,~third-party
 ! >> C <<
-||chaapaar.ir/ads^$all
+||chaapaar.ir/ads^
 ! https://github.com/MasterKia/PersianBlocker/issues/69
 ||charbzaban.com/wp-content/uploads/*.gif
 charbzaban.com##.widget:has(.widgettitle:has-text(/پیشنهاد|مفید/))
@@ -1047,7 +1042,7 @@ harmonydl.us###ads
 harmonydl.us##.cside1 > .hside2:has-text(تبلیغات):upward(.cside1)
 harmonydl.us##.tabliq
 ! https://github.com/MasterKia/PersianBlocker/issues/18
-||honarehzendegi.com/cdn-cgi/challenge-platform^$all
+||honarehzendegi.com/cdn-cgi/challenge-platform^
 honarehzendegi.com#@#.logo-ad
 ||gourls.ir^$popup
 hamisheonline.com#%#//scriptlet('ubo-acis.js', 'document.onclick', 'Hamisheonlinepaps')
@@ -1232,7 +1227,7 @@ konkur.info##.elementor-element-d41b3d1
 konkur.info##.adsside
 ! https://github.com/uBlockOrigin/uAssets/issues/13658#issuecomment-1153092391
 khanoumi.com#%#//scriptlet('ubo-rc.js', 'ads-track', '', 'stay')
-||ads.khanoumi.com/api/services/app/adstrackingpanel^$all
+||ads.khanoumi.com/api/services/app/adstrackingpanel^
 ||khanoumi.com^$removeparam=/itm/
 ||khanoumi.com^$removeparam=/^utm_/
 mag.khanoumi.com##.widget-ad-image
@@ -1479,6 +1474,7 @@ opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/) > p
 !#endif
 omidnamehnews.ir##.adspanel
 ! >> P <<
+||parsaspace.com/Content/new/js/analytics.js^
 ! https://github.com/MasterKia/PersianBlocker/issues/45
 ||pezeshket.com/wp-content/uploads/*.gif
 pezeshket.com###stream-item-widget-3
@@ -1696,7 +1692,7 @@ shahraranews.ir##.ads
 sedayiran.com##.adv_top
 searchline.ir#%#//scriptlet('ubo-acis.js', 'document.oncontextmenu')
 searchline.ir#$#* { -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
-||snappfood.ir/*/track^$all
+||snappfood.ir/*/track^
 sornamusic.ir##.textwidget
 sornamusic.ir##aside:nth-of-type(5)
 ! https://github.com/MasterKia/PersianBlocker/commit/b1113d568e008e898fe79226bc0c6e2dc82eaadd
@@ -1983,7 +1979,7 @@ tourismonline.co##.widget_custom_html.widget.container-wrapper.widget_text
 ! https://github.com/MasterKia/PersianBlocker/issues/17
 ! ||toranji.ir/wp-content/uploads/*/*/Toranji-Ad
 ||toranji.ir/wp-content/uploads/*/*.gif
-||toranji.ir/najva-messaging-sw.js^$all
+||toranji.ir/najva-messaging-sw.js^
 toranji.ir##.content-container:has(.ad-reportage)
 toranji.ir###fpc-banner-top
 toranji.ir#@#.square-ad
