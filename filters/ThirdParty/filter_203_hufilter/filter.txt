@@ -1,8 +1,8 @@
 !
-! Checksum: SXoaFqLVPSGCBGcf0O7RXw
-! OriginalVersion: 202211041057
+! Checksum: xcP/xEx5gGeg6D6lsrSa6w
+! OriginalVersion: 202211061257
 ! Title: Hufilter for AdGuard
-! Last modified: 04 Nov 2022 10:57 UTC
+! Last modified: 06 Nov 2022 12:57 UTC
 ! Expires: 1 days (update frequency)
 ! Homepage: https://github.com/hufilter/hufilter/wiki
 ! Licence: CC-BY, see https://creativecommons.org/licenses/by/4.0/
@@ -1070,6 +1070,9 @@ player.hu##[class*="adbreak"]
 player.hu##[class*="placeholder"]
 player.hu##[class="ph ph-responsive-wrap"]
 player.hu##[data-analytics-value]
+player.hu##.ad-container
+player.hu##.ads-container
+player.hu##.ads_show_ad_title
 player.hu###pushpushgo-container
 politaktika.hu###popup
 polusonline.com###HTML5
@@ -1889,11 +1892,11 @@ infostart.hu#?##sitemodal:-abp-has(.fb-button)
 ||*.chatbot.elmuemasz.hu
 ||chatrobot.mia.gov.hu^
 ||chimpstatic.com^
-||cmp.quantcast.com^$script,domain=hrportal.hu|index.hu|telex.hu|totalcar.hu|totalbike.hu|szeretlekmagyarorszag.hu|port.hu
+||cmp.quantcast.com^$script,domain=hrportal.hu|index.hu|telex.hu|totalcar.hu|totalbike.hu|szeretlekmagyarorszag.hu|port.hu|player.hu
 ||hestore.hu/pic/cookie.png$image
 ||itthonrolhaza.hu/wp-content/plugins/wp-popups-lite/src/assets/js/wppopups.js^$script
 ||prelblog.com/cdn/js/comebacker/comebacker.js^$script
-||quantcast.mgr.consensu.org^$script,domain=hrportal.hu|index.hu|telex.hu|totalcar.hu|totalbike.hu|szeretlekmagyarorszag.hu|port.hu
+||quantcast.mgr.consensu.org^$script,domain=hrportal.hu|index.hu|telex.hu|totalcar.hu|totalbike.hu|szeretlekmagyarorszag.hu|port.hu|player.hu
 ||szepsegbroker.hu/items/jquery.floating_popup*.js^$script
 ||widget.ex1tp.com/js/ep/v2/widget.js^$script,domain=kiskegyed.hu
 !---------------------------------------------------------------------------!
@@ -1980,9 +1983,7 @@ magyarhang.org,hang.hu$$script[tag-content="ai_run_"]
 napiszar.com$$script[data-cfasync="false"]
 ncore.pro$$script[tag-content="adpv"]
 openspeedtest.com$$script[tag-content="testadblock"]
-port.hu$$script[tag-content="addEListener(DCL"]
-port.hu$$script[tag-content="ads.js"]
-port.hu$$script[tag-content="quantcast"]
+port.hu$$script[tag-content="popUpBannerBox Ad300 hirdetes_box"]
 portfolio.hu$$script[tag-content="fbmodal-title"]
 szeretlekmagyarorszag.hu$$script[tag-content="window.atob"]
 ! Section: Scriptlets
@@ -2018,8 +2019,8 @@ mandiner.hu#%#//scriptlet('remove-class', 'modal-open', 'body', 'stay')
 ! https://github.com/hufilter/hufilter/issues/8
 napiszar.com#%#//scriptlet('abort-current-inline-script', 'document.createElement', 'setTimeout')
 pcworld.hu#%#//scriptlet('remove-class', 'have-ad', 'body')
-! https://github.com/AdguardTeam/AdguardFilters/issues/126377
-port.hu#%#//scriptlet('abort-on-property-read', 'window.ado.blocked')
+! https://github.com/hufilter/hufilter/issues/15
+port.hu#%#//scriptlet('prevent-addEventListener', 'DOMContentLoaded', 'window.ado.blocked')
 sorozatwiki.hu#%#//scriptlet('remove-attr', 'style', 'body')
 traffihunter.hu#%#//scriptlet('remove-class', 'darken', 'body')
 vezess.hu#%#//scriptlet('prevent-addEventListener', 'mouseleave', 'showFbPopup')
@@ -2048,7 +2049,6 @@ keol.hu#$#section[id="content_left"][class="content_content"] { width: auto !imp
 magyarhirlap.hu#$#header .container { padding: 10px 10px 0 10px !important; }
 origo.hu#$#.first-section { margin-top: 0 !important; }
 origo.hu#$#.oh-holder.open { z-index: 9999!important; }
-port.hu#$#body { overflow: auto !important; }
 startlap.hu#$#div.container.banner-container.wide { min-height: 0!important; height: auto!important; }
 ! Section: Related ABP rules
 ! Description: These regular ABP rules dont't work properly without Adguard-specific rules!

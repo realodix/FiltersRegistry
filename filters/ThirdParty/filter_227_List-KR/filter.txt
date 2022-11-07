@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1104.12
+! OriginalVersion: 2022.1107.10
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -374,6 +374,12 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||idsn.co.kr/support/_updata/banner
+||fntoday.co.kr/adManager/
+||fntoday.co.kr/bannerpop/uploads/
+||cdn.econovill.com/adManager/
+||cdn.econovill.com/bannerpop/uploads/
+/^https:\/\/haninvegas\.com\/wp-content\/uploads\/[0-9]+\/[0-9]+\/[%A-Z0-9-]+-[0-9]+x[0-9]+/
 ||upinews.kr/data/upi/banner/
 ||cdn.shinailbo.co.kr/adManager/
 ||cdn.shinailbo.co.kr/bannerpop/uploads/
@@ -1073,6 +1079,8 @@
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+||xn--8-o68e16s35etqj.com/data/apms/background/
+/^https:\/\/xn--8-o68e16s35etqj\.com\/data\/editor\/[0-9]+\/[a-z0-9]+_[a-z0-9]+_[a-z0-9]+\./
 ||i.uuoobe.com/images/$domain=torrentreel1.site|torrentreel2.site|torrentreel3.site|torrentreel4.site|torrentreel5.site|torrentreel6.site|torrentreel7.site|torrentreel8.site|torrentreel9.site|torrentreel10.site|torrentreel11.site|torrentreel12.site|torrentreel13.site|torrentreel14.site|torrentreel15.site|torrentreel16.site
 ||pixhost.to^$domain=torrentwiz50.com|torrentwiz51.com|torrentwiz52.com|torrentwiz53.com|torrentwiz54.com|torrentwiz55.com|torrentwiz56.com|torrentwiz57.com|torrentwiz58.com|torrentwiz59.com|torrentwiz60.com|torrentwiz61.com|torrentwiz62.com|torrentwiz63.com|torrentwiz64.com|torrentwiz65.com|torrentwiz66.com
 /^https:\/\/torrentmode[0-9]+\.com\/data\/zn_bimg\//
@@ -1173,7 +1181,7 @@ bigkinds.or.kr,hungryapp.co.kr,rhythmer.net##div[class$="Banner"]
 ! ##div[class$="banner"]
 sports.chosun.com,dcinside.com##div[class$="banner"]
 ! ##div[class$="-banner"]
-paxnet.co.kr,bigkinds.or.kr,item.gmarket.co.kr,toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
+cineaste.co.kr,jpaxnet.co.kr,bigkinds.or.kr,item.gmarket.co.kr,toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
 ! ##div[class^="banner"]
 bgchang.co.kr,edit.incruit.com,signinssl.gmarket.co.kr,m.hungryapp.co.kr,m.edaily.co.kr,m.news1.kr##div[class^="banner"]
 ! ##div[class$="-ad"]
@@ -1215,6 +1223,12 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+m.idsn.co.kr###viewConts div[style][id^="articleBody"] + p ~ center
+idsn.co.kr###viewConts div[style][id^="articleBody"]
+fntoday.co.kr##aside.user-aside div[data-direction]#side-scroll-in > .float-center
+fafan.kr###container > div#rightContents > div[style*="height:"]
+haninvegas.com##div[itemprop="mainContentOfPage"].theme-content + aside
+cineaste.co.kr##.container > div[style][id]
 isplus.com##div[id$="Ad"]
 idaegu.com###wrap_index ~ div[style]
 m.mydaily.co.kr###viewarea ~ br ~ div[style*="height:"]
@@ -1856,8 +1870,6 @@ thisisgame.com###divMsnAD
 thisisgame.com##iframe[src^="//ad"][src*=".thisisgame.com/ad"]
 dschool.co.kr##a[href^="/ws/include/banner_link.asp?"][target="_blank"]
 ddanzi.com##.add_display
-redflame.co.kr###sidebar > div[style="padding:15px 18px; width:300px; height:250px; margin-bottom:8px;"].sidebar_contents_box
-redflame.co.kr##section#content > div[style="height:90px; width:728px; padding:0px; margin:0 0 8px 0;"].main_contents_box
 m.naver.com##.ISSUE-BANNER-AD
 1412.rest###plusad_widget_wrap
 slrclub.com##ins[class^="adsbyadop_"]
@@ -1998,6 +2010,7 @@ www.naver.com##iframe[id^="da_iframe_"]
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+xn--8-o68e16s35etqj.com###hd_pop
 torrentwiz50.com,torrentwiz51.com,torrentwiz52.com,torrentwiz53.com,torrentwiz54.com,torrentwiz55.com,torrentwiz56.com,torrentwiz57.com,torrentwiz58.com,torrentwiz59.com,torrentwiz60.com,torrentwiz61.com,torrentwiz62.com,torrentwiz63.com,torrentwiz64.com,torrentwiz65.com,torrentwiz66.com##.panel-default ~ .widget-box .row
 torrentwiz50.com,torrentwiz51.com,torrentwiz52.com,torrentwiz53.com,torrentwiz54.com,torrentwiz55.com,torrentwiz56.com,torrentwiz57.com,torrentwiz58.com,torrentwiz59.com,torrentwiz60.com,torrentwiz61.com,torrentwiz62.com,torrentwiz63.com,torrentwiz64.com,torrentwiz65.com,torrentwiz66.com##.at-side > .hidden-xs ~ .row ~ .hidden-sm
 qooqootv.fun##div[class^="banner_"]
@@ -2084,6 +2097,7 @@ x86.co.kr#@#.download_ad
 !#endif
 !#if (adguard && (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_chromium || adguard_ext_edge))
 ! Protect from DPI
+@@||cov19ent.kdca.go.kr^$stealth
 @@||comsclub.com^$stealth
 @@||korail.com^$stealth
 @@||seoulland.co.kr^$stealth
@@ -2104,6 +2118,8 @@ x86.co.kr#@#.download_ad
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+haninvegas.com#$#body[data-elementor-device-mode="desktop"] div[itemprop="mainContentOfPage"] { width: 100% !important; }
+news.jtbc.co.kr#$#.news_doc #footer { position: static !important; }
 etoland.co.kr#$#div[class^="gather-"][class$="_middle"] { padding-bottom: 35px !important; }
 sundaynewsusa.com#$#.td-is-sticky > .wpb_wrapper { top: 0px !important; }
 genshin.gamedot.org#$##mapsContent > .maps-content { top: 125px !important; }
@@ -2247,6 +2263,10 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+fntoday.co.kr#?#div[style]#side-scroll-in article + .box-margins ~ div[class]:has(~ article.box-skin ~ article ~ article)
+fntoday.co.kr#?#aside.user-aside > article.box-skin + .box-margins:not(.box-solid-x) ~ div[class]:has(~ article)
+redflame.co.kr#?##wrapper div[class$="contents_box"]:has(ins.adsbygoogle)
+cineaste.co.kr#?#.widget-main-box ~ .widget-main-box:has(script[src*="//static.criteo.net/"])
 bbs.ruliweb.com#?#.row.relative .main_aside:has(div.aside_background + div[id^="ad_main"])
 m.etoday.co.kr#?#.maj_list_wrap > .majnews_list:has(iframe[src*="//ads.mncmedia.co.kr/"])
 sundaynewsusa.com#?#div[style] > .td_block_wrap:has(a[target="blank"])
@@ -2506,7 +2526,7 @@ klauncher.kr,poketory.com,withukor.com,tistory.com,love.asdn.kr,avjamak.net,unti
 ! #%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
 iphonedev.co.kr,tistory.com,3dpchip.com#%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
 ! BlockAdBlock
-blog.dalso.org,svrforum.com,shana.pe.kr,fafan.kr,tistory.com#%#//scriptlet("prevent-bab")
+fafan.kr,blog.dalso.org,svrforum.com,shana.pe.kr,tistory.com#%#//scriptlet("prevent-bab")
 ! FuckAdBlock
 te31.com,tistory.com#%#//scriptlet("prevent-fab-3.2.0")
 te31.com,tistory.com#%#//scriptlet("abort-on-property-read", "adBlockDetected")
@@ -2640,6 +2660,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||namu.news/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 @@||namu.wiki/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 !
+@@||fafan.kr^$genericblock
 @@||poketory.com^$genericblock
 @@||sogirl.so/wp-content/plugins/dh-anti-adblocker/public/js/ads-prebid.js
 plankim.com##body > div:not([class]):not([id])
