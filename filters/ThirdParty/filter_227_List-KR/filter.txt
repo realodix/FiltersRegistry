@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1108.7
+! OriginalVersion: 2022.1108.12
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -375,6 +375,10 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||veritas-a.com/adManager/
+||veritas-a.com/bannerpop/uploads/
+||cdn.newspost.kr/adManager/
+||cdn.newspost.kr/bannerpop/uploads/
 /^https:\/\/nimage\.g-enews\.com\/phpwas\/restmb_allidxmake\.php\?idx=999&simg=[a-f0-9]+_0\./
 ||humoruniv.com/board/boardexp/z.html?enc=
 ||humoruniv.com/js/adpost.kakao.ad.js
@@ -1224,6 +1228,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+quasarzone.com##div[id*="_"][class*="-"][class^="bidrich-"]
 asked.kr##div[id$="ad"][class$="ad"]
 asked.kr##div[id^="ads"][style]
 asked.kr###cards > div[class*="_"]:not([id]).card
@@ -1982,7 +1987,6 @@ mlbpark.donga.com###advertise_naver
 coolenjoy.net##.simple_banner_wrap
 coolenjoy.net##img[src^="https://photo.coolenjoy.co.kr/banner/"]
 quasarzone.com##*:not(footer) > div[class^="main-"][class$="-banner"]
-quasarzone.com##.top-banner
 koreatimes.net,phdkim.net,nongmin.com,hankookilbo.com##div[class^="banner-"]
 etoland.co.kr##ul.board_list > li.subject.ad_subject
 m.ppomppu.co.kr##ul.board-sponsor
@@ -2254,7 +2258,6 @@ ruliweb.com#$##board_top > div > .top_best.best_list { width: 100% !important; }
 berryjam.co.kr#$#.goods_list_tit { padding-top: 0px !important; }
 community.rememberapp.co.kr#$#div.sc-64vosk-0.jIkGEl { margin-bottom: 10px !important; }
 ruliweb.com#$#.user_view { width: 100%!important; }
-quasarzone.com#$#div#con-body { padding-top: 60px!important; }
 ppomppu.co.kr#$#.top-keyword { width: 100%!important; }
 orbi.kr#$#.global-top { top: 0px!important; }
 !#if adguard_ext_safari
@@ -2737,6 +2740,9 @@ ff14angler.com#@#ins.adsbygoogle
 !
 !
 ||videoads.kakao.com/adserver/api/v*/vmap$redirect=noopvmap-1.0,app=PotPlayer.exe
+184.25.232.20:443$network,app=ALYac.aye
+||data.news.zumst.com/alyac/popular/news.json
+121.189.38.123^$network,app=ALYac.aye
 ||pirogom.com/mopdf/image_ads/
 ||pirogom.com/newmop/popup/
 ||pirogom.com/newmop/ads/
@@ -2753,7 +2759,6 @@ ff14angler.com#@#ins.adsbygoogle
 ||ko-kr.alupdateadd.altools.com/icon/wemakeprice_
 ||ko-kr.alupdateadd.altools.com/icon/halfclub_
 ||ko-kr.alupdateadd.altools.com/icon/coupang_
-121.189.38.123^$network
 ||pcofficewebview.polarisoffice.com/*/ads/
 ||gobest.kr/goclean/goclean-ad-new.htm$document
 ||gobest.kr/adfile/
