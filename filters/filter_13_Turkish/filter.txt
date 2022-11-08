@@ -461,6 +461,10 @@ zamaninvarken.com,kredi.biz.tr,kriptoradar.com,morlevha.com,bakimlikadin.net,kor
 iyibeslenme.net,teknop.net,kirtkirtla.com,buneymis.net,ozgunbilgi.com#%#//scriptlet("set-constant", "adblock.check", "noopFunc")
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/134259
+bikifi.com#%#//scriptlet('prevent-fetch', 'www3.doubleclick.net')
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||www3.doubleclick.net/|$xmlhttprequest,domain=bikifi.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/133010
 nirvanamanga.com,mangawt.com##div[class^="popup"][class$="wrap"][id]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132714
@@ -972,6 +976,8 @@ dizipal300.com,dizipal301.com,dizipal302.com,dizipal303.com,dizipal304.com,dizip
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
 !
+bikifi.com#?#.grid .mb-2[class*="min-h-"]:has(> .bikifi_fluid)
+bikifi.com#?#.grid > .my-3[class*="min-h-"]:has(>.mb-2[class*="min-h-"] > .bikifi_fluid)
 eksisozluk.com#?#.ui-autocomplete > li:has(> div[style="color:rgb(0, 255, 255)"])
 fotomac.com.tr#?#.display-none:has(> div.advers-box)
 fotomac.com.tr#?#.view-sm-20:has(> div.advers-box)
@@ -2336,6 +2342,7 @@ fullfilmcidayi1.com,dizimax.plus,diziday.com,fullfilmcidayim.com,dizispeed.net##
 /service/advertchannels?$xmlhttprequest,redirect=nooptext,domain=mardinhaber.com.tr|gidahatti.com|bolugundem.com
 dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdaskocaeli.com.tr,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.us
 !
+bikifi.com##div[class="my-2 print:hidden bg-slate-50 pb-3 block"]
 voleybolmagazin.com##.stream-item
 paratic.com##.all-page-ad-frame
 ||yabancidizi.fun/assets/js/a.js
