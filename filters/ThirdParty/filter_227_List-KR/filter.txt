@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1109.2
+! OriginalVersion: 2022.1109.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -375,6 +375,7 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+/^https:\/\/[a-z0-9-]+\.orbi\.kr\/[0-9]+\/[a-z0-9]+\./
 ||eleccar.co.kr/images/main/type3/dummy_banner
 /^http(s|):\/\/(www\.|)eleccar\.co\.kr\/Files\/[0-9]+\/Template\/[0-9]+\/[0-9]+_[0-9]+\./
 ||kpenews.com/images/main/banner/
@@ -1179,7 +1180,7 @@ m.gamemeca.com,bemil.chosun.com,aladin.co.kr,nesin.com,encar.com,fntimes.com,zdn
 ! ##div[class^="ad_"]
 humoruniv.com,etoday.co.kr,kukinews.com,nesin.com,search.naver.com,dprime.kr,encar.com,m.todayhumor.co.kr,hogaeng.co.kr,zdnet.co.kr,news.zum.com,m.search.daum.net,teamblind.com,unsin.co.kr,m.mk.co.kr,m.cafe.naver.com,dvdprime.com,nocutnews.co.kr,news.sbs.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.co.kr,ohmynews.com,hankyung.com,news1.kr,m.etnews.com,itempage3.auction.co.kr,asiae.co.kr,khan.co.kr,avjamak.net,kmib.co.kr,donga.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 ! ##div[class^="ad-"]
-weekly.chosun.com,nzkoreapost.com,pinpointnews.co.kr,huffingtonpost.kr,eroun.net,cnet.co.kr,hogangnono.com,ppomppu.co.kr,interfootball.co.kr,police112.co.kr,dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
+orbi.kr,weekly.chosun.com,nzkoreapost.com,pinpointnews.co.kr,huffingtonpost.kr,eroun.net,cnet.co.kr,hogangnono.com,ppomppu.co.kr,interfootball.co.kr,police112.co.kr,dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 ! ##.banner
 paxnet.co.kr,ajl.co.kr,yhinews.com,funshop.co.kr,m.sedaily.com,bloter.net,mosen.mt.co.kr,hinfomax.kr,hinfomax.co.kr,pressian.com,kukinews.com##.banner
 ! ##div[class$="_banner"]
@@ -1430,7 +1431,7 @@ www.instiz.net##.content table#mainboard.mainboard tr:not([id^="list"])
 www.instiz.net##div[style].content ~ div[class$="ad"][style*="min-height:"]
 www.instiz.net##div[class$="ad"][id$="ad"]
 mbong.kr##center a[href*="//mbong.kr/banner"]
-news.g-enews.com,m.g-enews.com##a[href^="/extcont/adclick.php"]
+cmobile.g-enews.com,news.g-enews.com,m.g-enews.com##a[href^="/extcont/adclick.php"]
 serieamania.com###index > div[class^="box_shadow_"][style]
 sports.donga.com##.today_sportnews
 svrforum.com###xt_sticker_wrap
@@ -1476,8 +1477,8 @@ m.mt.co.kr##[class^="ad"]
 ichannela.com##.main_visual .main_ban
 ichannela.com##div[class^="banner"]:not([id^="img"])
 ichannela.com###gaOverRay
-m.g-enews.com##.mwrap > div[style]:not([class])
-asiatime.co.kr,m.g-enews.com##div[class*="AD"]
+cmobile.g-enews.com,m.g-enews.com##.mwrap > div[style]:not([class])
+cmobile.g-enews.com,asiatime.co.kr,m.g-enews.com##div[class*="AD"]
 hyundaenews.com##a[href^="/ad_link.php?"]
 quasarplay.com##[class^="img_wrapper"]
 wiki.hash.kr##div[class^="bann_"]
@@ -1502,7 +1503,7 @@ namu.wiki##iframe[src*="//arca.live/external/callad"]
 noteforum.co.kr##table[width][cellspacing][cellpadding][border] tr:not([height]) > td[width]:not([id]) ~ td[id]
 esuwon.net###r_aside center > div[class="bn"]
 smartfn.co.kr##.mt30 .con_rt > style + div[style]:not([class])
-yes24.com,dailypharm.com,m.g-enews.com,smartfn.co.kr##div[class*="Ad"]
+cmobile.g-enews.com,yes24.com,dailypharm.com,m.g-enews.com,smartfn.co.kr##div[class*="Ad"]
 tgd.kr,miraetv.net##div[id*="-banner-"]
 miraetv.net##.gdl-left-sidebar
 ddengle.com###content > .article > div[class][style]
@@ -2136,6 +2137,9 @@ x86.co.kr#@#.download_ad
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+orbi.kr#$#.layout-main .panel.no-margin { padding-top: 50px !important; }
+orbi.kr#$#.layout-main .main-menu { top: 0px !important; }
+orbi.kr#$#div[class*="-banner-"] { display: none !important; }
 web.humoruniv.com#$##wrap_cnts td[valign="top"] #wrap_ctgr_new { width: 100% !important; }
 web.humoruniv.com#$##wrap_cnts td[valign="top"] #wrap_ctgr_new > div[id] { width: 100% !important; }
 haninvegas.com#$#body[data-elementor-device-mode="desktop"] div[itemprop="mainContentOfPage"] { width: 100% !important; }
