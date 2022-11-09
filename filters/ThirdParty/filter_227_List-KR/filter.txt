@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1108.12
+! OriginalVersion: 2022.1109.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -375,6 +375,11 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||eleccar.co.kr/images/main/type3/dummy_banner
+/^http(s|):\/\/(www\.|)eleccar\.co\.kr\/Files\/[0-9]+\/Template\/[0-9]+\/[0-9]+_[0-9]+\./
+||kpenews.com/images/main/banner/
+/^http(s|):\/\/kpenews\.com\/images\/main\/[a-z]+_[0-9]+\./
+/^http(s|):\/\/kpenews\.com\/Files\/[0-9]\/Template\/[0-9]+\/[0-9]+_[0-9]+\./
 ||veritas-a.com/adManager/
 ||veritas-a.com/bannerpop/uploads/
 ||cdn.newspost.kr/adManager/
@@ -1192,7 +1197,7 @@ cineaste.co.kr,jpaxnet.co.kr,bigkinds.or.kr,item.gmarket.co.kr,toomics.com,nongm
 ! ##div[class^="banner"]
 bgchang.co.kr,edit.incruit.com,signinssl.gmarket.co.kr,m.hungryapp.co.kr,m.edaily.co.kr,m.news1.kr##div[class^="banner"]
 ! ##div[class$="-ad"]
-m.diningcode.com,m.invest.zum.com,insight.co.kr,cgv.co.kr,m.inven.co.kr,tipsandtrickskorea.com,gamemeca.com,yeongnam.com##div[class$="-ad"]
+kpenews.com,m.diningcode.com,m.invest.zum.com,insight.co.kr,cgv.co.kr,m.inven.co.kr,tipsandtrickskorea.com,gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
 nzkoreapost.com,moneys.mt.co.kr,fmkorea.com,newstomato.com,gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
@@ -1228,6 +1233,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+chaegeon.com##[id][class] > div[style].panel-default
 quasarzone.com##div[id*="_"][class*="-"][class^="bidrich-"]
 asked.kr##div[id$="ad"][class$="ad"]
 asked.kr##div[id^="ads"][style]
