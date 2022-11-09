@@ -2034,6 +2034,7 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 ! For the sites with '$generichide' exclusions
 !   SECTION: Cookies - Specific rules ($generichide)
 !
+startmail.com#?#.banner:has(a[href="/en/privacy/"])
 booth.pm##.agreement-banner
 tupperware.com.br##.vtex-cookies
 razer.com##tos-razer-cookies
@@ -15568,8 +15569,7 @@ auto.ru#%#//scriptlet('json-prune', 'ads')
 minigames.mail.ru#%#//scriptlet("abort-current-inline-script", "$", "advBlock")
 mmminigames.mail.ru#%#//scriptlet("abort-current-inline-script", "$", "showAd")
 !
-otvet.mail.ru##.wrapper_columns > div.column_right
-otvet.mail.ru#%#//scriptlet("set-constant", "Object.prototype.direct", "undefined")
+otvet.mail.ru#%#//scriptlet('json-prune', 'baits css direct *.slot')
 !
 my.mail.ru#%#//scriptlet('set-constant', 'Object.prototype.isAdblockEnable', 'noopFunc')
 !
