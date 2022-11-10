@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-11-09
+! Last modified: 2022-11-10
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
@@ -13,7 +13,6 @@
 ! /files/adv/*
 ! /statics/*$xhr
 ! .ir/ads/
-! /admin-ajax.php?postviews_id= => some sites use it to show "بازدید: "
 ! /admin-ajax.php?action=adwised
 ! wp-content/plugins/google-analytics
 ! wp-content/plugins/better-ads
@@ -21,6 +20,8 @@
 ! ##[href^="https://gameup.ir/"]
 ! /najva.js
 ! /jwplayer/vast.js
+! applicationha.com, androidgozar.com, downloadkral.com, gold-team.org, iranecar.com, icoff.ee, koolakmag.ir, mybia4music.com, my-film.pw, pedal.ir, vgdl.ir, sakhamusic.ir
+/wp-admin/admin-ajax.php?postviews_id=$xmlhttprequest
 ! https://github.com/MasterKia/PersianBlocker/issues/68#issuecomment-1241797575
 ##.zxc
 ##.zxc-m
@@ -365,7 +366,6 @@ arzcenter.com##[href*="nobitex.ir"]
 asemooni.com##.right-sidebar img[title="محل تبلیغات شما"]
 asemooni.com##.right-sidebar img[title="رپورتاژ"]
 applicationha.com#%#//scriptlet('ubo-aopr.js', 'faPa')
-||applicationha.com/wp-admin/admin-ajax.php?postviews_id=
 applicationha.com##.baner
 anaj.ir##[href^="https://gameup.ir/"]
 ! ||abadis.ir/ajaxcmd/stat/
@@ -427,7 +427,6 @@ alamto.com##.sidebar.col-4 > ul > li > h4:has-text(رپورتاژ آگهی):upwa
 ! androidgozar.com##+js(aopr, website)
 androidgozar.com#%#//scriptlet('ubo-aopr.js', 'ShowPopUp')
 ||androidgozar.com/agahi/
-||androidgozar.com/wp-admin/admin-ajax.php?postviews_id
 androidgozar.com##.post-sticky
 androidgozar.com##.cas-pubg
 ! androidgozar.com##div[class^="col-"]:has(div>div>a[class="ag-agah"])
@@ -449,9 +448,10 @@ aparat.com##.video-list-wrapper.list-responsive:has(.ad)
 ! ||aftabir.com/uploads/reportages^
 aftabir.com##.banner-container
 aftabir.com###footer_js_d1
-aftabir.com##.col-md-4 > .mb-10 > .block > header > h2:has-text(رپرتاژ):upward(.block)
-aftabir.com##.sidebar-fixed > .block > header > h2:has-text(وبگردی):upward(.block)
-aftabir.com##.col-md-8 > .mb-10 > .block > header > h2:has-text(وبگردی):upward(.block)
+aftabir.com##.col-sm-3 > .block > .img:not(:has(a[href*="aftabir.com"]))
+aftabir.com##.carousel-inner > .item > .row > .col-md-4 > article:has(a[href*="aftabir.com/reportages"]):upward(.col-md-4)
+aftabir.com#$?#.carousel-inner > .item > .row > .col-md-8:has(article > a[href*="aftabir.com/news/view/"]) { width: 100% !important; }
+aftabir.com##.block > header > h2:has-text(/وبگردی|نیازمندی|رپرتاژ/):upward(.block)
 ||aftabyazdonline.ir/templates/aftabeyazd/images/ads
 aftabyazdonline.ir##.co-ads
 ||ads.akairan.com
@@ -673,7 +673,6 @@ dlfox.com##.blog_list
 ||didestan.com/video/vastlink.js
 ||dustaan.com/files/*/smio-push-notification
 ||dustaan.com/files/*/tracking
-||downloadkral.com/wp-admin/admin-ajax.php?postviews_id=
 ||downloadkral.com/wp-content/cache/min/0/wp-content/plugins/wp-postviews
 dlroozaneh.ir##.index-adstop
 dlroozaneh.ir##aside.linkbox:nth-of-type(3)
@@ -968,7 +967,6 @@ fa-tools.ir##div.post:nth-of-type(2)
 ||ghatar.com/wp-content/uploads/*.gif
 ||getandroid.ir/Files/js/landinga.js
 gold-team.org#%#//scriptlet('ubo-nano-sib.js')
-||gold-team.org/wp-admin/admin-ajax.php?postviews_id=
 gold-team.org##.size-full.attachment-full
 gold-team.org##.aligncenter.wp-image-9273.size-full
 gamesetup.ir#%#//scriptlet('ubo-acis.js', 'vc_url')
@@ -1075,7 +1073,6 @@ ifilo.net#@#.adver
 itarfand.com#%#//scriptlet('ubo-acis.js', 'jQuery', 'contextmenu')
 itarfand.com##.sin-part
 ||iranecar.com^$removeparam=/^utm_/
-||iranecar.com/wp-admin/admin-ajax.php?postviews_id=
 iranecar.com#@#.stream-item-widget
 iranecar.com#@#.widget-ad-image
 ||profile.iwmf.ir^$removeparam=/^utm_/
@@ -1115,7 +1112,6 @@ imgurl.ir##.banner468
 icivil.ir##.header-ad
 imemar.icivil.ir###header_ad
 imemar.icivil.ir##.sb_ad
-||icoff.ee/fa/wp-admin/admin-ajax.php?postviews_id
 icoff.ee###sidebar-alt
 ||iraniandog.com/iss
 ||iranjib.ir/js/analytics
@@ -1274,7 +1270,6 @@ khabaronline.ir#$#.col-md-3 { max-width: 40% !important; flex: 0 0 40% !importan
 ! !#if env_mobile
 khabaronline.ir###ads-container:has-text(خواندنی ها)
 ! !#endif
-||koolakmag.ir/wp-admin/admin-ajax.php?postviews_id=
 koolakmag.ir##.widget_custom_html.widget.container-wrapper.widget_text
 ||khabarpu.com/js/getscript.js^
 ||khabarpu.com/js/all_sc_without_yektanet.js^
@@ -1364,14 +1359,12 @@ montiego.ir##.txt-ads-sl
 msbmusic.ir#%#//scriptlet('ubo-set.js', 'needpop', '0')
 mybia4music.com#%#//scriptlet('ubo-aopr.js', 'pa_vc_url')
 ||mybia4music.com/wp-content/plugins/wp-postviews/
-||mybia4music.com/wp-admin/admin-ajax.php?postviews_id=
 mybia4music.com##.adstext
 mybia4music.com##.ads-banner
 mybia4music.com###left > div.box:nth-of-type(1)
 ||marzfun.com/wp-content/plugins/google-analytics
 marzfun.com##aside:has(aside>div>div>span:has-text(تبلیغ))
 ||my-film.pw/wp-content/uploads/*/ad
-||my-film.pw/wp-admin/admin-ajax.php?postviews_id=
 my-film.pw##.maincontent > center
 my-film.pw##tbody
 my-film.pw###titr-box
@@ -1550,7 +1543,6 @@ persianv.com#@#.ads-text
 pgnews.ir##div > div > a.toolt > .onsc
 ! TODO: Modify pgnews.ir/templates/ainews/jquery-1.11.0.min.js to block ads
 ! https://github.com/MasterKia/PersianBlocker/issues/13
-||pedal.ir/wp-admin/admin-ajax.php?postviews_id
 ||pedal.ir/wp-content/uploads/*.gif
 pedal.ir##.stream-item-top
 pedal.ir##.widget_custom_html:has(img[src*=".gif"])
@@ -2108,7 +2100,6 @@ vakil.net#$#* { -webkit-touch-callout: default !important; -webkit-user-select: 
 virgool.io##.js-userLogin-popup
 ! https://github.com/MasterKia/PersianBlocker/pull/10
 ! https://github.com/MasterKia/PersianBlocker/pull/15
-||vgdl.ir/wp-admin/admin-ajax.php?postviews_id=
 ||vgdl.ir/wp-content/uploads/*/*.gif
 ||vgdl.ir/wp-content/uploads/*/*-ad-*$image
 vgdl.ir##.stream-item-top-wrapper
