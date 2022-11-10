@@ -1795,6 +1795,8 @@ r10.net#%#document.cookie = 'r10LeftHide=1';
 !------- CSS fixes --------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/134519
+turkce-brosurler.com#$#body.no-scroll { overflow: auto !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/133918
 coin-turk.com#$#body .fixed_header { top: 0 !important; }
 coin-turk.com#$#body .page_container { margin-top: 80px !important; }
@@ -2344,6 +2346,8 @@ fullfilmcidayi1.com,dizimax.plus,diziday.com,fullfilmcidayim.com,dizispeed.net##
 /service/advertchannels?$xmlhttprequest,redirect=nooptext,domain=mardinhaber.com.tr|gidahatti.com|bolugundem.com
 dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdaskocaeli.com.tr,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.us
 !
+samsunsehirgazetesi.com##div[class^="ne-banner-"]
+||samsunsehirgazetesi.com/_image.php?s=./_uploads/ads/
 onlinesoccermanager.com##.ad-container
 bikifi.com##div[class="my-2 print:hidden bg-slate-50 pb-3 block"]
 voleybolmagazin.com##.stream-item
@@ -3621,7 +3625,7 @@ bolununsesi.com##div[style="position:relative;margin-bottom:20px;"]
 spooor.com##.adv_no2
 spooor.com##.adv-ust
 spooor.com###adv2
-spooor.com##div[id^="banner_"]
+samsunsehirgazetesi.com,spooor.com,muzikonair.com##div[id^="banner_"]
 dirilispostasi.com##div[class^="masthead-ad"]
 olay.com.tr,memohaber.com##.haber-detay-reklam
 memohaber.com##.tepe-banner
@@ -3743,7 +3747,6 @@ enerjigazetesi.ist##div[style*="width:991px;"][style*="height:135px;"]
 enerjigazetesi.ist##div[style*="width:678px;"][style*="height:90px;"]
 eksisozluk.com###yeni-reklam
 eksisozluk.com##.under-top-ad
-muzikonair.com##div[id^="banner_"]
 yemek-ye.net##.spu-box[data-test-mode]
 ||cdnatv.com/play/js/play.js
 ||player.videoizle.link/player/rek/
@@ -6350,6 +6353,9 @@ driverdestek.com##.adsbygoogle
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/134519
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=turkce-brosurler.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128742
 @@||hdfilmifullizle.com/_video_onu_yeni.php$domain=hdfilmifullizle.com
 ! https://github.com/uBlockOrigin/uAssets/issues/14464#issuecomment-1233246447
