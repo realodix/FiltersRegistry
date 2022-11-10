@@ -396,6 +396,12 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/134555
+@@||dl.520cc.cc/ddll/ad.php$~third-party
+dl.520cc.cc#@##inplayer
+dl.520cc.cc#$##infile { visibility: visible !important; }
+dl.520cc.cc#$##inplayer { position: absolute !important; left: -3000px !important; }
+dl.520cc.cc#%#//scriptlet('set-constant', 'ADS_BLOCKED', 'false')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/133146
 mpyit.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 !+ PLATFORM(ios, ext_android_cb, ext_safari)
@@ -1324,6 +1330,9 @@ $script,xmlhttprequest,third-party,domain=00ksw.com|01zww.com|0biquge.com|114zw.
 !
 !
 !
+mini.eastday.com##li[class^="recommend_news recommend_ad_hot_"]
+mini.eastday.com###dsp_btxf
+mini.eastday.com##.ordernumad
 jianshu.com##section[class][aria-label="ad360-ad"]
 ||mobile01.com/groupbuying.php
 mydrivers.com##div[class^="jdong11"]
@@ -4450,6 +4459,7 @@ ubmcmm.baidustatic.com
 ||828239sam.com^
 ||kvtlll.top^
 ||myproteincn.com^
+||z66ggsh.top^
 .8ox.cn
 ##[class][onclick*=".ununxsxs.top"]
 ##a[href$=".120ydrayy.com"]
