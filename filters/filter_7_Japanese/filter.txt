@@ -451,7 +451,7 @@ snrec.jp#$#body.tp-modal-open { overflow: visible!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132814
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132525
 ! Similar site in Base filter: soranews24.com
-rocketnews24.com,youpouch.com#$#.ad300x250 { min-height: 1px !important; height: 1px !important; overflow: hidden !important; }
+rocketnews24.com,youpouch.com##iframe[id^="google_ads_iframe"]
 @@||tpc.googlesyndication.com/simgad/$xmlhttprequest,domain=rocketnews24.com|youpouch.com
 ||tpc.googlesyndication.com^$image,redirect-rule=1x1-transparent.gif,domain=rocketnews24.com|youpouch.com
 @@||g.doubleclick.net/gampad/ads?$xmlhttprequest,domain=rocketnews24.com|youpouch.com
@@ -596,7 +596,7 @@ sekai-kabuka.com#$#div[data-ih] { font-size: 0 !important; }
 sekai-kabuka.com#%#//scriptlet('remove-attr', 'onclick', 'div[data-js][style*="background"]', 'stay')
 realtime-chart.info#$#a[href^="https://px.a8.net/svt/ejp?"] { pointer-events: none !important; }
 realtime-chart.info#$#div[data-ih*="広告"] { background: none !important; font-size: 0 !important; cursor: default !important; }
-realtime-chart.info#$#b[class^="amazon"] > b[style^="font-size:"] { font-size: 0 !important; }
+realtime-chart.info#$?#div[class^="amazon"] > b[class^="amazon"]:has(> b[style^="font-size:"]) { font-size: 0 !important; }
 realtime-chart.info#$#div[style="top:1422px"] > [style*="font-size"]:is(a, b, span) { font-size: 0 !important; }
 realtime-chart.info#$#img[src*="/clip_"] + b { background: none !important; font-size: 0 !important; }
 realtime-chart.info,sekai-kabuka.com#$#div[data-js] { background: none !important; cursor: default !important; }
