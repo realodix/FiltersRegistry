@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1110.0
+! OriginalVersion: 2022.1110.6
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -172,6 +172,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||dadispapi.auction.co.kr^
 ||infolinks.com^
 ||banners.cams.com^
 ||aduniv.nesin.com^
@@ -373,6 +374,10 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||cdn.globale.co.kr/adManager/
+||cdn.globale.co.kr/bannerpop/uploads/
+||script.auction.co.kr/style/css/ad/
+||script.auction.co.kr/ad/
 /^https:\/\/[a-z0-9-]+\.orbi\.kr\/[0-9]+\/[a-z0-9]+\./
 ||eleccar.co.kr/images/main/type3/dummy_banner
 /^http(s|):\/\/(www\.|)eleccar\.co\.kr\/Files\/[0-9]+\/Template\/[0-9]+\/[0-9]+_[0-9]+\./
@@ -1169,7 +1174,7 @@
 ! ##div[id^="ad_"]
 mydaily.co.kr,r114.com,dprime.kr,zdnet.co.kr,fpn119.co.kr,serieamania.com,dvdprime.com,news.nate.com,m.nate.com,www.nate.com,m.edaily.co.kr,hani.co.kr,m.sedaily.com,m.thisisgame.com,planet-times.com,m.10000recipe.com,pandora.tv,mobile.newsis.com,fnnews.com,land.hankyung.com,mania.kr,mosen.mt.co.kr,ruliweb.com##div[id^="ad_"]
 ! ##div[class$="_ad"]
-m.gamemeca.com,bemil.chosun.com,aladin.co.kr,nesin.com,encar.com,fntimes.com,zdnet.co.kr,mbn.co.kr,goodgag.net,v.daum.net,www.instiz.net,ppomppu.co.kr,m.nocutnews.co.kr,news.naver.com,news.daum.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
+auction.co.kr,m.gamemeca.com,bemil.chosun.com,aladin.co.kr,nesin.com,encar.com,fntimes.com,zdnet.co.kr,mbn.co.kr,goodgag.net,v.daum.net,www.instiz.net,ppomppu.co.kr,m.nocutnews.co.kr,news.naver.com,news.daum.net,asiae.co.kr,ohmynews.com,seoul.co.kr,dmitory.com,itcm.co.kr,clien.net##div[class$="_ad"]
 ! ##div[class^="ad_"]
 humoruniv.com,etoday.co.kr,kukinews.com,nesin.com,search.naver.com,dprime.kr,encar.com,m.todayhumor.co.kr,hogaeng.co.kr,zdnet.co.kr,news.zum.com,m.search.daum.net,teamblind.com,unsin.co.kr,m.mk.co.kr,m.cafe.naver.com,dvdprime.com,nocutnews.co.kr,news.sbs.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.co.kr,ohmynews.com,hankyung.com,news1.kr,m.etnews.com,asiae.co.kr,khan.co.kr,avjamak.net,kmib.co.kr,donga.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 ! ##div[class^="ad-"]
@@ -1227,6 +1232,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+auction.co.kr##.today-smart-shopping
 chaegeon.com##[id][class] > div[style].panel-default
 quasarzone.com##div[id*="_"][class*="-"][class^="bidrich-"]
 asked.kr##div[id$="ad"][class$="ad"]
@@ -2125,6 +2131,9 @@ x86.co.kr#@#.download_ad
 @@||ac*.namu.la^$domain=arca.live,media,image,stealth
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+auction.co.kr#$#.mod-top > .main-promo { margin-left: calc(50% - 205px) !important; }
+auction.co.kr#$##body > .hp_allkill { margin-top: 375px !important; }
+auction.co.kr#$#.modrow-top > div[class$="_banner"][id$="Banner"] { display: none !important; }
 orbi.kr#$#.layout-main .panel.no-margin { padding-top: 50px !important; }
 orbi.kr#$#.layout-main .main-menu { top: 0px !important; }
 orbi.kr#$#div[class*="-banner-"] { display: none !important; }
@@ -2270,6 +2279,8 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+browse.auction.co.kr#?#div[module-design-id] ~ div > .component.type--general:has(~ div:has(.text--smiledelivery_slogan))
+browse.auction.co.kr#?#div[module-design-id] ~ div[module-design-id]:has(> .component--sponsor_link .link--ask_sponsor)
 web.humoruniv.com#?##wrap_cnts td[align="center"]:has(img[src$="_ad.gif"])
 fntoday.co.kr#?#div[style]#side-scroll-in article + .box-margins ~ div[class]:has(~ article.box-skin ~ article ~ article)
 fntoday.co.kr#?#aside.user-aside > article.box-skin + .box-margins:not(.box-solid-x) ~ div[class]:has(~ article)
@@ -2404,6 +2415,7 @@ torrentwiz50.com,torrentwiz51.com,torrentwiz52.com,torrentwiz53.com,torrentwiz54
 torrentjuju13.com,torrentjuju14.com,torrentjuju15.com,torrentjuju16.com,torrentjuju17.com,torrentjuju18.com,torrentjuju19.com,torrentjuju20.com,torrentjuju21.com,torrentjuju22.com,torrentjuju23.com,torrentjuju24.com,torrentjuju25.com,torrentjuju26.com,torrentjuju12.com#?##at_main .w1-box:has(.img > a[href][target="_blank"] > img[src])
 yagong47.com,yagong48.com,yagong49.com,yagong50.com,yagong51.com,yagong52.com,yagong53.com,yagong54.com,yagong55.com,yagong56.com,yagong57.com,yagong58.com,yagong59.com,yagong60.com,yagong61.com,yagong62.com,yagong63.com,yagong64.com,yagong65.com,yagong66.com,yagong67.com,yagong68.com,yagong69.com#?#div[class*="border"]:has(> a[href][target*="_blank"])
 toonkor156.com,toonkor157.com,toonkor158.com,toonkor159.com,toonkor160.com,toonkor161.com,toonkor162.com,toonkor163.com,toonkor164.com,toonkor167.com,toonkor168.com,toonkor169.com#?#.navbar-nav > li[class]:has(> a[href$="/토토보증업체"][alt="토토보증업체"])
+browse.auction.co.kr#$?#div[module-design-id] ~ div > .component:has(div:has(.text--smiledelivery_slogan)) .section--component_title { margin-top: 0px !important; }
 koreatimes.net#$?#.container:has(~ div[style]#toTop) article.content { margin-top: 100px !important; }
 koreatimes.net#$?#.headding-news:has(~ div:not([style])#toTop) .col-md-8 { margin-left: calc(50% - 384px) !important; }
 ponh.info#$?#div[data-mesh-id][data-testid] > div[id^="comp-"]:has(form[id][class]) { margin-top: -600px !important; }
