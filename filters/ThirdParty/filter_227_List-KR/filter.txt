@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1111.7
+! OriginalVersion: 2022.1111.11
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -219,7 +219,6 @@
 ||api.valista.io^
 ||api.linkmine.co.kr^
 ||api.greenp.kr^
-||adgate.gmarket.co.kr^
 ||ad-img.ebaykorea.com^
 ||api.ezadsystem.com^
 ||ad.planbplus.co.kr^
@@ -375,6 +374,7 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+||gmarket.co.kr/Nbp/NbpInfo
 ||thesegye.com/support/_updata/banner
 ||cdn.globale.co.kr/adManager/
 ||cdn.globale.co.kr/bannerpop/uploads/
@@ -800,7 +800,6 @@
 ||hungryapp.co.kr/banner/banner_*.php
 ||appdata.hungryapp.co.kr/banner/
 ||appdata.hungryapp.co.kr/event/mobi/
-/^(http|https):\/\/image\.gmarket\.co\.kr\/service_image\/[0-9]{4}\/[0-9]{2}\/[0-9]{2}\/[0-9]{20}/
 ||image.ygosu.com/images/ico_ad_black.png
 /^https:\/\/ssp\.igaw\.io\/bak\/[0-9]{3}x[0-9]{2}\./
 ||dailysecu.com/adManager/css/adManager.css
@@ -870,7 +869,6 @@
 ||res.afreecatv.com/script/da/ad_check.js
 ||ojsfile.ohmynews.com/BBS_ADM_FILE/
 ||hankyung.com/resource/js/w/view.ads.js
-||adgate.gmarket.co.kr^$document
 ||issue.dcinside.com/wp-content/plugins/advanced-ads
 ||upto.tk/ads.html
 ||m.ytn.co.kr/ad/
@@ -1194,11 +1192,11 @@ bigkinds.or.kr,hungryapp.co.kr,rhythmer.net##div[class$="Banner"]
 ! ##div[class$="banner"]
 sports.chosun.com,dcinside.com##div[class$="banner"]
 ! ##div[class$="-banner"]
-cineaste.co.kr,jpaxnet.co.kr,bigkinds.or.kr,item.gmarket.co.kr,toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
+cineaste.co.kr,jpaxnet.co.kr,bigkinds.or.kr,toomics.com,nongmin.com,ilbe.com##div[class$="-banner"]
 ! ##div[class^="banner"]
-bgchang.co.kr,edit.incruit.com,signinssl.gmarket.co.kr,m.hungryapp.co.kr,m.edaily.co.kr,m.news1.kr##div[class^="banner"]
+bgchang.co.kr,edit.incruit.com,m.hungryapp.co.kr,m.edaily.co.kr,m.news1.kr##div[class^="banner"]
 ! ##div[class$="-ad"]
-kpenews.com,m.diningcode.com,m.invest.zum.com,insight.co.kr,cgv.co.kr,m.inven.co.kr,tipsandtrickskorea.com,gamemeca.com,yeongnam.com##div[class$="-ad"]
+gmarket.co.kr,kpenews.com,m.diningcode.com,m.invest.zum.com,insight.co.kr,cgv.co.kr,m.inven.co.kr,tipsandtrickskorea.com,gamemeca.com,yeongnam.com##div[class$="-ad"]
 ! ##div[id^="ad"]
 nzkoreapost.com,moneys.mt.co.kr,fmkorea.com,newstomato.com,gamemeca.com,m.ohmynews.com,m.khan.co.kr,m.dcinside.com##div[id^="ad"]
 ! ##div[id^="AD"]
@@ -1234,7 +1232,11 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
-mitem.auction.co.kr##.vip-togetheritems
+category.gmarket.co.kr##.cate-search-result > #powerPlus
+category.gmarket.co.kr##.cate-search-result > #plusItem
+www.gmarket.co.kr##.section__main-power
+www.gmarket.co.kr##.section__main-inner > .box__promotion .box__item > *
+item.gmarket.co.kr,mitem.auction.co.kr##div[class$="-togetheritems"]
 m.auction.co.kr##div[class^="box__layer-"][style]
 browse.auction.co.kr##.component--chance_shopping
 auction.co.kr##.today-smart-shopping
@@ -1633,8 +1635,6 @@ m.hungryapp.co.kr###popUP_ZONE
 m.hungryapp.co.kr##a[href^="javascript:"][onclick^="banner_open("]
 newsen.com##table table > tbody table[width][cellspacing][cellpadding].black > tbody td[height="90"]
 m.newsen.com##.googlead
-mitem.gmarket.co.kr##div[class^="box__item-detailinfo"] .plcc_banner
-mitem.gmarket.co.kr##article#detailView div[class$="_banner"]
 mylgid.com##.mainTopBanner
 tistory.com##.adsense
 www.naver.com##div[id^="NM_"][id$="_BANNER"]
@@ -1713,9 +1713,6 @@ auth.danawa.com###loginBottomBanner
 prod.danawa.com###ebayPowerClickBottomArea
 kimpga.com##div.max-w-screen-lg > .relative > div > div[class=""]:nth-child(1)
 m.danawa.com##.goods-list__ad
-www.gmarket.co.kr###skip-navigation-container > .section__main-ad
-www.gmarket.co.kr###skip-navigation-container > .section__main-power
-gmarket.co.kr##.box__head-ad
 inews24.com,joynews24.com##container[style~="width:100%;"][style~="position:relative;"]
 youthassembly.kr##.w_article > div[style]:not([id]):not([class]):not([align])
 youthassembly.kr##div[itemprop="articleBody"].main_text > div[style]:not([id]):not([class]):not([align])
@@ -1735,7 +1732,6 @@ ppomppu.co.kr,star.mt.co.kr,mimint.co.kr,bada.io,arca.live##div.ad
 ohmynews.com###div10Sticky
 ohmynews.com##div[class^="AD-"]
 ohmynews.com##div[class^="new_ad"]
-mitem.gmarket.co.kr###goodsDetailTab > div[id^="vipPowerClick"][id$="Layer"]
 principlesofknowledge.kr###content > .sub_content > .board_view >  div[align="center"]:not([class]):not([id]):not([style])
 piku.co.kr##.top-navigation .wrapper > .row.equal > div[class="col-xs-12 col-sm-6 col-lg-4"][style^="padding:"]
 m.ytn.co.kr##ul > li[class^="ad_"][id^="snsAd_area"]
@@ -2094,7 +2090,6 @@ mnews.jtbc.co.kr#@#.ad_bottom
 @@/^(http|https):\/\/image\.kyobobook\.co\.kr\/ink\/images\/prom\/[0-9]{4}\/general\/[0-9]{6}_dailyCheck\//
 @@||advimg.ad-mapps.com/sdk/js/ver/*/ad_movie_script.js$domain=ichannela.com
 x86.co.kr#@#.download_ad
-@@/^https:\/\/ad-img\.ebaykorea\.com\/ADS\/Contents_\/[0-9_]{19}\/[a-z0-9]{16}\.[A-Za-z]{3,4}$/$domain=gmarket.co.kr|~signinssl.gmarket.co.kr
 @@||ssl.pstatic.net/adimg*.search/adpost/js/ad.js$domain=naver.com
 @@/^https:\/\/www\.ehanex\.com\/images\/main\/[a-z]{2}_ad\.gif$/
 @@||adimg3.search.naver.net/adpost/adpost_show_ads_min.js$domain=search.danawa.com
@@ -2105,10 +2100,7 @@ x86.co.kr#@#.download_ad
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
-!#if adguard_ext_safari
-@@/^https:\/\/ad-img\.ebaykorea\.com\/ADS\/Contents_\/[0-9_]{19}\/[a-z0-9]{16}\.[A-Za-z]{3,4}$/$domain=gmarket.co.kr
-/^https:\/\/ad-img\.ebaykorea\.com\/ADS\/Contents_\/[0-9_]{19}\/[a-z0-9]{16}\.[A-Za-z]{3,4}$/$domain=signinssl.gmarket.co.kr,important
-!#endif
+!
 !#endif
 !#if (adguard && (adguard_ext_firefox || adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_chromium || adguard_ext_edge))
 ! Protect from DPI
@@ -2248,7 +2240,6 @@ edufindkorea.com#$##body_wrap > #body_main > div[style]:nth-child(1), #body_wrap
 bbs.ruliweb.com#$##board_read .board_main_top .member_reward_wrapper { margin-top: 20px !important; float: right !important; margin-right: 20px !important; }
 www.nate.com#$#.area_ranking { top: 400px !important; }
 www.nate.com#$##header { margin-bottom: 0px !important; }
-signinssl.gmarket.co.kr#$#.login-cont .login { margin-left: 25% !important; }
 mylgid.com#$#.hasBanner header { top: 0px !important; }
 game.naver.com#$#div[class^="loungehome_event_popup_container"] { display: none !important; }
 game.naver.com#$#body { overflow: auto !important; }
@@ -2284,6 +2275,8 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+category.gmarket.co.kr#?#.cate-search-result > .title:has(+ #powerPlus)
+category.gmarket.co.kr#?#.cate-search-result > .title:has(+ #plusItem)
 browse.auction.co.kr#?##region--content_floating ~ #region--content_body div[module-design-id]:has(.button--power_click)
 browse.auction.co.kr#?#div[module-design-id] ~ div > .type--smiledelivery:has(+ .type--general .section--advertisement) ~ .component.type--general:not(:has(~ .type--general .text--smiledelivery_slogan))
 browse.auction.co.kr#?#div[module-design-id] ~ div > .component.type--general:has(~ div:has(.text--smiledelivery_slogan))
@@ -2387,9 +2380,6 @@ coocha.co.kr#?#.group-deal .list > div:has(span.ad:matches-css(background-image:
 m.shopping.naver.com#?#content li[role="presentation"]:has(a[href*="://trendpick.shopping.naver.com/"])
 10000recipe.com#?#body .view_sp_banner .swipe-slide:has(img[src^="https://recipe1.ezmember.co.kr/cache/shop/"])
 namu.wiki#?#div[class] > div[id]:not([class]):has(> iframe[id^="google_ads_"])
-browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap > .box__component:has(button[id^="buttonItemCardAdsLayer"][class="button__ads-layer"])
-browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap:has(> .box__component-bottom-da-banner)
-browse.gmarket.co.kr#?##section__inner-content-body-container > div[module-design-id].box__module-wrap:has(> .box__component-sponsor-link)
 m.moneys.mt.co.kr#?#.one_line_article > ul.list > li.item:has(> iframe[src*="//adgrp1.ad4989.co.kr/"])
 kr-weathernews.com#?#body > article#content > article.block:has(ul#life_slider)
 search.tmon.co.kr#?#section.search_deallist > .deallist_wrap > ul > li[class]:has(> a[href*="//display.admonseller.com/"].anchor)
@@ -2454,7 +2444,6 @@ eggrank.com#?##right-sidebar > .inside-right-sidebar > div[class]:not(:contains(
 game.dcinside.com,gall.dcinside.com#?#table.gall_list tr:not([data-type][data-no]):has(td:contains(AD))
 2cpu.co.kr#?#tr.is_notice:has(span:contains((광고)))
 arca.live#?#.topbar-area:has(> .badge:contains(뉴스))
-browse.gmarket.co.kr#?#div[module-design-id].box__module-wrap:has(button[id^="buttonItemCardAdsLayer"][class="button__ads-layer"]):has(.box__itemcard-header > h3:contains(먼저 둘러보세요))
 newreop.com#?#.app-board-section > ul.app-board-template-list > li.notice:has(> a[href] > span > font[color]:contains(AD))
 ajunews.com#?#.aside_item.banner:has(> h4[style~="font-size:13px;color:#999999;margin:0"]:contains(AD))
 koreaminecraft.net#?#table.table-divider > tbody > tr.notice:has(> td.title > a > strong[style]:contains([프리미엄]))
