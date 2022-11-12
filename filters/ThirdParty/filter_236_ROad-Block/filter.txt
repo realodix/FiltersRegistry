@@ -642,6 +642,8 @@ cancan.ro##.height-sm-360.height-xs-200.mg-bottom-20
 cancan.ro##.height-250.mg-bottom-20
 cancan.ro##.height-250
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=cancan.ro
+cancan.ro#?#.height-300:-abp-has([id^="div-gpt-ad"])
+cancan.ro#?#.article:-abp-has([href*="go4it"])
 ||filmecrestineonline.ro/wp-content/uploads/2021/01/nail-khusnutdinov-als-171-000-aro-244-modelling-0-1.jpg$image
 ||filmecrestineonline.ro/wp-content/uploads/2021/01/nail-khusnutdinov-als-171-000-aro-244-modelling-0-1.jpg$image
 ||filmecrestineonline.ro/wp-content/uploads/2017/09/resizedimage-300x150.png$image
@@ -1153,6 +1155,12 @@ stiridepitesti.ro##.td-spot-id-content_bottom
 stiridepitesti.ro##.td-spot-id-content_top
 ||pitesti24.ro/*BANNER$image
 ziarobiectiv.ro##.rzonvm-image
+ctnews.ro##.gofollow
+ctnews.ro#?#.mh-widget:-abp-contains(/PROMO|PARTENER/i)
+||wp.com/*Banner$image,domain=ctnews.ro
+litoraltv.ro#?#.widget_media_image:-abp-has([href]:not(*:-abp-contains([href*="litoraltv.ro"]):not(*:-abp-has([href*="facebook.com"]))))
+litoraltv.ro#?#.widget:-abp-has(.adsbygoogle)
+||litoraltv.ro/*banner$image
 ! Title: Romanian specific uBO filters
 ! Expires: 3 days
 ! Issue tracker: https://github.com/tcptomato/ROad-Block/issues
@@ -1178,3 +1186,6 @@ bloground.ro#%#//scriptlet('ubo-nostif.js', 'show')
 ! https://github.com/uBlockOrigin/uAssets/pull/10062
 *$script,redirect-rule=noopjs,domain=myradioonline.ro
 myradioonline.ro#%#//scriptlet('ubo-rc.js', '_bannerTop1')
+! https://github.com/tcptomato/ROad-Block/issues/323
+litoraltv.ro##.pum-active
+litoraltv.ro#$#html { overflow: auto !important; }
