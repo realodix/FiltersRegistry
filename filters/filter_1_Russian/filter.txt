@@ -8211,6 +8211,8 @@ sweet-tv.net,cdnneedtv.ru#%#//scriptlet('prevent-window-open')
 online.anidub.com,online.anidub.club#%#//scriptlet("abort-on-property-write", "bg")
 ! https://github.com/uBlockOrigin/uAssets/issues/13230
 https-xvideos.com#%#//scriptlet('prevent-window-open')
+! https://github.com/AdguardTeam/AdguardFilters/issues/131019
+www.kinopoisk.ru#%#//scriptlet('set-constant', 'window.adfoxService', 'emptyObj')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/114112
 kinopoisk.ru#%#//scriptlet('prevent-eval-if', 'bannerId')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116089
@@ -9257,8 +9259,6 @@ multmania.club,cartoonka.art#$#body { background: #210f29 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/35578
 fxstreet.ru.com#$#body { overflow: visible!important; }
 fxstreet.ru.com#$#.fxs_prestitial-window-block { display: none!important; }
-! betterworldbooks.com - удаление отступа сверху -- misaligned banner
-! betterworldbooks.com#$#body { margin-top: 0!important; }
 ! amic.ru - удаление отступа сверху
 amic.ru#$#.wrapper.branded2 { padding-top: 0!important; }
 ! bombardir.ru - удаление отступа сверху
@@ -9270,7 +9270,6 @@ anilibria.iss.one,anilibria.cf,anilib.top,anilibria.tv#$#body > div.header { bac
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34828
 segodnya.ua#$#div[id^="div-gpt-ad"] { visibility: hidden!important; }
 segodnya.ua#$##articleBottomInformer { visibility: hidden!important; max-height: 5px!important; }
-segodnya.ua#$#iframe[id^="google_ads_iframe"] { visibility: hidden!important; max-height: 5px!important; }
 ! film.ru - fixing nav string
 film.ru#$#.b-nav-string { margin-top: 50px!important; }
 ! fasttorrent.su - удаление отступа сверху
@@ -10040,8 +10039,7 @@ animemovie.ru#$#.dem {height: 250px!important;}
 animemovie.ru#$#.dem>header{background: none!important;}
 !
 ! kinopoisk.ru
-www.kinopoisk.ru#$#div[class*="kinopoisk-media-container_pending"] { min-height: auto !important; }
-www.kinopoisk.ru#$#div[class^="styles_pending"] { min-height: auto !important; }
+www.kinopoisk.ru##div[class*="styles_height250__"]
 ! go.mail.ru
 go.mail.ru#$#.response___wrapper > #js-topBar > div > div[class*="p"][class*="t"] > style + div { position: absolute!important; left: -3000px!important; }
 go.mail.ru#$#.response___wrapper > #js-bottomBar > div > div[class*="b"][class*="t"] > style + div { position: absolute!important; left: -3000px!important; }
@@ -23116,7 +23114,6 @@ autostrada-a4.com.pl#@#div.topbaner
 wiesbadenaktuell.de#@##bannerlayer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74348
 price.ua#@#div[id^="div-gpt-ad"]
-price.ua#@#iframe[id^="google_ads_iframe"]
 price.ua#@#iframe[name^="google_ads_iframe"]
 @@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=price.ua
 @@||securepubads.g.doubleclick.net/gpt/pubads_impl_*.js$domain=price.ua
