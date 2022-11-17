@@ -81,7 +81,9 @@
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/134778
 ! segment.com analytics
-#%#//scriptlet('set-local-storage-item', 'ajs_anonymous_id', 'null')
+! https://segment.com/docs/connections/sources/catalog/libraries/website/javascript/identity/
+! TODO: replace by key removing scriptlet when it will be implemented
+reuters.com#%#//scriptlet('set-local-storage-item', 'ajs_anonymous_id', 'null')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/134220
 6play.fr#%#//scriptlet('set-local-storage-item', 'gdprTracking', 'false')
 6play.fr#%#//scriptlet('set-local-storage-item', 'gdprPersonalization', 'false')
@@ -5141,6 +5143,10 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 ||zbwp6ghm.com^$third-party
 !
 ! TikTok
+||rtc-logger-va.tiktokv.com^
+||rtlog.tiktokv.com^
+||mon-*.tiktokv.com^
+||mon.tiktokv.com^
 ||xlog.tiktokv.com^
 ||xlog-va.tiktokv.com^
 ||log*-*.tiktokv.com^
