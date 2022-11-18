@@ -5,8 +5,8 @@
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
 ! Expires: 2 days
-! Last modified: Thu, 17 Nov 2022, 21:31 UTC+01:00
-! OriginalVersion: 2022.11.17.5
+! Last modified: Fri, 18 Nov 2022, 01:31 UTC+01:00
+! OriginalVersion: 2022.11.18.0
 ! Najnowsza wersja zawsze na: https://github.com/FiltersHeroes/PolishAnnoyanceFilters
 ! Zgłoszenia:
 !   Formularz (nie wymaga rejestracji) => https://polishannoyancefilters.netlify.app/issues
@@ -15,7 +15,7 @@
 ! Homepage: https://polishannoyancefilters.netlify.app
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: czw, 17 lis 2022, 21:31 UTC+01:00
+! Aktualizacja: pią, 18 lis 2022, 01:31 UTC+01:00
 !
 !
 ! Newslettery (nie popupy)
@@ -6902,7 +6902,7 @@ polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com###pafdetec
 !@ Copyright © 2022 Certyficate IT
 !@ Copyright © 2022 Filters Heroes
 !@ Najnowsza wersja zawsze na: https://www.certyficate.it/adblock/
-!@ v.2022.11.8.0 aktualizacja: czw, 17 lis 2022, 21:31 UTC+01:00
+!@ v.2022.11.8.0 aktualizacja: pią, 18 lis 2022, 01:31 UTC+01:00
 !@
 !@
 !@ Specyficzne reguły ukrywające
@@ -11266,6 +11266,8 @@ extradom.pl###requestCallStart, #requestCallExit, .modal-backdrop
 farmer.pl###nowa_strona
 farmer.pl#$#.windowOpen { overflow: auto !important; }
 fdm.pl,galskor.com#%#//scriptlet('ubo-acis.js', '$', 'fancybox')
+filehippo.pl,softonic.pl#$?##modal-di-avast { remove: true; }
+filehippo.pl,softonic.pl#$?##modal-di-opera { remove: true; }
 fmmobile.pl###lead-modal, .modal-backdrop
 forum.gofin.pl###KW_Tlo, #KW_Okno
 fpiec.pl##.full-screen-overlay
@@ -11521,8 +11523,6 @@ sklepmartes.pl#$#html.modalbox-is-visible body { overflow: auto !important; }
 sklepzrowerami.pl##.fancybox-overlay:has(.apc_modal)
 socialpress.pl##.bottom-content-newsletter
 sofine.pl#%#//scriptlet('ubo-nosiif.js', 'popcount', '1000')
-softonic.pl,filehippo.pl#$?##modal-di-avast { remove: true; }
-softonic.pl,filehippo.pl#$?##modal-di-opera { remove: true; }
 solven.pl###dontGoModal, .modal-backdrop
 spidersweb.pl##.mfp-ready:has(.popoup-content)
 spidersweb.pl#$#html { overflow: visible !important; margin-right: 0 !important; }
@@ -11562,6 +11562,7 @@ voxfm,www.eska.pl#%#//scriptlet('ubo-aeld.js', '', 'initCityPicker')
 wakacje.pl##body > div[class*=" "]:has(> div[class*=" "] > div[height="auto"] > header > h3[class]:has-text(/^Pomóż nam usprawnić stronę$/))
 wakacje.pl#$#html.modal-active > body { overflow: visible !important; padding-right: 0 !important; }
 wakacje.pl#$#html.modal-active { overflow: visible !important; }
+wakacje.pl#@##__next > div > div > div[class]:not([id]):has(button):has-text(Administratorem)
 walizkazabawek.pl###Widget1, .modal-backdrop
 weathermap.netatmo.com#$#.blured #map, .blured .side-panel, .blured .navbar, .blured .button-control-ctn, .blured .small-banner, .side-panel.blured, .blured #mainwrapper .legend { filter: none !important; }
 weathermap.netatmo.com##first-use-slider
