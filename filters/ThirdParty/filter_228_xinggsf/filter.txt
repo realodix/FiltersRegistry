@@ -1193,7 +1193,7 @@ yihuifu.cn
 www.zhzzx.com
 
 ! Title: 乘风 视频过滤规则
-! OriginalVersion: 202211151
+! OriginalVersion: 202211191
 ! Expires: 1 day
 ! Homepage: https://bbs.kafan.cn/thread-1866845-1-1.html
 ! 屏蔽P2P
@@ -1225,8 +1225,12 @@ static.g.iqiyi.com
 show.ssports.com
 v.qq.com###player  .txp_zt_content
 qq.com##.mod_ad, .txp_ad, div.l_qq_com, .txp-watermark, .txp_ad_link, .txp_zt_video, .adWrap, .iwan-wrapper
-qq.com#%#//scriptlet('ubo-set.js', 'RTCPeerConnection', 'null')
 qq.com#@%#//scriptlet('ubo-nowebrtc.js')
+video.qq.com#@%#//scriptlet('ubo-set.js', 'RTCPeerConnection', 'null')
+video.qq.com#@%#//scriptlet('ubo-no-xhr-if.js', '/trace\.|\/collect/')
+video.qq.com#@%#//scriptlet('ubo-no-fetch-if.js', '/trace\.|beacon\./')
+video.qq.com#@%#//scriptlet('ubo-json-prune.js', 'ads adList.item')
+qq.com#%#//scriptlet('ubo-set.js', 'RTCPeerConnection', 'null')
 qq.com#%#//scriptlet('ubo-no-xhr-if.js', '/trace\.|\/collect/')
 qq.com#%#//scriptlet('ubo-no-fetch-if.js', '/trace\.|beacon\./')
 qq.com#%#//scriptlet('ubo-json-prune.js', 'ads adList.item')
@@ -1254,7 +1258,6 @@ bilibili.com##.gg-floor-module,#slide_ad,a[href^="//cm.bilibili.com"]
 ||api.bilibili.com/x/web-show/res/loc?pf=$~script
 ||hdslb.com/bfs/sycp/creative_img/$image
 cm.bilibili.com
-web-player-tracker.biliapi.net
 acfun.cn##.pause-display-container,#ad-comment,#ad-player-view
 ||aixifan.com/static/*/appGuide/
 cctv.com###bgAd_div
