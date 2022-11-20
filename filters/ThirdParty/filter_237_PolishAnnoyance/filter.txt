@@ -5,8 +5,8 @@
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
 ! Expires: 2 days
-! Last modified: Sun, 20 Nov 2022, 13:03 UTC+01:00
-! OriginalVersion: 2022.11.20.2
+! Last modified: Sun, 20 Nov 2022, 16:30 UTC+01:00
+! OriginalVersion: 2022.11.20.3
 ! Najnowsza wersja zawsze na: https://github.com/FiltersHeroes/PolishAnnoyanceFilters
 ! Zgłoszenia:
 !   Formularz (nie wymaga rejestracji) => https://polishannoyancefilters.netlify.app/issues
@@ -15,7 +15,7 @@
 ! Homepage: https://polishannoyancefilters.netlify.app
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: nie, 20 lis 2022, 13:03 UTC+01:00
+! Aktualizacja: nie, 20 lis 2022, 16:30 UTC+01:00
 !
 !
 ! Newslettery (nie popupy)
@@ -11876,15 +11876,6 @@ polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com#%#//script
 !
 ! Codename: Other Elements - Supplement
 !/^https:\/\/(www\.)?youtube(-nocookie)?\.com\/embed\/.*autoplay=1/$3p,frame,object,redirect=click2load.html:10,domain=~pinger.pl|pl|~wykop.pl
-!play.google.com###gba:style(height: 60px !important;)
-!play.google.com##div[aria-label="Święta pełne gier"][role="dialog"]
-!telepolis.pl,tlp.is##.infinite-content-container > .infinite-item ~ .infinite-item
-!telepolis.pl,tlp.is##.infinite-content-container > .infinite-item ~ .infinite-item:remove()
-!telepolis.pl,tlp.is##.infinite-content-container > .infinite-item:first-child > .infinite-more-scroll
-!telepolis.pl,tlp.is##.infinite-content-container > .infinite-item:first-child > .infinite-more-scroll:remove()
-!twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion###layers span:has-text(/^(Bądź na bieżąco|Wykorzystaj cały potencjał Twittera)$/):matches-css(font-weight: 700):upward(4)
-!www.youtube.com###contents ytd-rich-grid-row:first-child > #contents:first-child, #contents ytd-rich-grid-row:first-child ytd-rich-grid-media:style(max-width: unset !important;)
-!www.youtube.com###contents ytd-rich-grid-row:first-child:style(--ytd-rich-grid-items-per-row: 1 !important;)
 /^https:\/\/(www\.)?youtube(-nocookie)?\.com\/embed\/.*autoplay=1/$removeparam=autoplay,domain=~pinger.pl|pl
 ||e-niemcy.de/wp-content/themes/goodnews/assets/vendors/jquery-nicescroll/jquery.nicescroll.min.js
 ||mokrenosy.pl/*/avada-nicescroll.js$script
@@ -11985,6 +11976,7 @@ pepper.pl#$#main#main footer#footer.tGrid-row { display: block !important; }
 photoblog.pl#$##frontpage .frontpage-teaser-photo-container[style*="background-image: url()"] h1 { margin-top: 45px !important; }
 photoblog.pl#$##frontpage .frontpage-teaser-photo-container[style*="background-image: url()"] { height: 225px !important; }
 pl##.cTopicPostArea .cGuestTeaser:upward(.cTopicPostArea)
+pl.accounts.ikea.com#$#.grecaptcha-badge { visibility: hidden !important; }
 pl.everli.com###smartbanner
 pl.everli.com#$#.with-smartbanner .external-header { top: 0 !important; }
 pl.everli.com#$#.with-smartbanner .top-band { margin-top: 0 !important; }
