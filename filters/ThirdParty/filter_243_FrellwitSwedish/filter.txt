@@ -34,7 +34,9 @@ affarsstaden.se#%#//scriptlet('ubo-acs.js', 'jQuery', 'adblockdetect')
 affarsvarlden.se##.article-tag-header:has-text(/Annons/i):upward(article)
 aftonbladet.se###main > div > div > div:has(h2:has-text(/^annons/i))
 [$path=/^/$/]aftonbladet.se## p:has-text(Artikeln innehåller annonslänkar):upward(a)
+aftonbladet.se##[data-ad-subtype]:upward(1):matches-css(min-height:/[0-9]+/)
 aftonbladet.se##a:has-text(Kommersiell text, innehåller annonslänkar)
+aftonbladet.se##a[href^="https://kampanj."]:upward(1):not(section):not(div[class^="article-wrapper"])
 aftonbladet.se##aside > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##div:matches-css(box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 24px 0px)
 aftonbladet.se##div[class^="css-"]:has([data-ad-subtype="mega"])
@@ -70,6 +72,7 @@ alltomburgare.se##a[href$="/sponsrat/"]:upward(.newscolumn)
 alltomelbil.se##a[href*="/annons"]:upward(.zox-art-wrap)
 alltomhif.se#$?#a:has-text(/betting|utan registrering|casino/i):upward(article, .slide-item) { remove: true; }
 alltomnorrtalje.se##.elementor-heading-title:has-text(/annons/i):upward(section.elementor-section)
+alltomnorrtalje.se##.elementor-heading-title:has-text(/annons/i):upward(section.elementor-section) + section
 arbetaren.se##.text-sm:has-text(/annons/i):upward(a)
 arbetarskydd.se,lag-avtal.se#%#//scriptlet('ubo-no-xhr-if.js', '/tidningen/ method:HEAD')
 arbetet.se,fastighetsfolket.se,handelsnytt.se,ka.se,malarnasfacktidning.se,sekotidningen.se,tidningenelektrikern.se##[data-controller="ad"]:upward(.Container)
@@ -416,6 +419,7 @@ sportbladetplay.se#$#body.dimmed { overflow:unset!important }
 sporthalsa.se##h4:has-text(veckans produkt):upward(3)
 spray.se#$#body { -webkit-user-select: text !important; user-select: text !important; }
 startaochdriva.se##a[href*="/sponsrat"]:upward(.latest-post)
+streamat.se##img[src*="/Biz.png"]:upward(.elementor-widget-image) ~ .elementor-widget-html
 studocu.com###main-wrapper + div, #redux-page-container > div:has-text(/använder cookies/i)
 studocu.com#$##page-container { user-select: auto !important; }
 studocu.com#$#.new-viewer-wrapper .p2hv { pointer-events: auto !important; }
@@ -448,6 +452,7 @@ thelocal.se#$#.single-article-related.single-article-related-short::after { back
 thelocal.se#$#.single-article-related.single-article-related-short { height:unset!important; overflow:unset!important; }
 themoviefreak.se#%#//scriptlet('ubo-acs.js', 'animate')
 themoviefreak.se#%#//scriptlet('ubo-ra.js', 'oncontextmenu')
+tidningen.nu##span:has-text(/^Annons$/):upward(1) + .textwidget
 tidningenbalans.se##p:has-text(/i annonssamarbete med/i):upward(.flex.overflow-hidden)
 tidningenglobal.se##span:has-text(/annons/i):upward(.elementor-widget-wrap)
 tidningenridsport.se#%#//scriptlet('ubo-rc.js', 'cli-barmodal-open')
