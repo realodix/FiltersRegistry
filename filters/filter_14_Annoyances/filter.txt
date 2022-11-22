@@ -2247,6 +2247,8 @@ manager-magazin.de,whats-on-netflix.com#$#html.sp-message-open body { overflow-y
 !
 !
 !
+immohal.de#%#//scriptlet('remove-class', 'cookie--blur', 'body')
+dajar.pl#?#div[id="__app__"] > div[class^="css-"]:has(> div[class] button[data-test="accept-cookies-button"])
 unilink.pl###modal-cookie
 bok.polsatbox.pl##.showit
 picrew.me##.st-Terms_Wrapper
@@ -3647,7 +3649,6 @@ abc.net.au##div[data-component="CookieBanner"]
 global.miui.com###__next > div.fixed.rounded-t.transition-all
 viagogo.jp###gdprHeader
 mercadolibre.*##.cookie-consent-banner-opt-out
-kleankanteen.de##.cookie--popup
 battlefy.com###cookie-banner-modal
 compete.playstation.com###cookie-monster-header
 restate.ru##.cow
@@ -7652,7 +7653,6 @@ icl-group.de###drkf5_overlay
 melitta-momentum.com###__next > footer ~ div[class]
 btegitim.com###cookieid
 melitta-group.com##.messages[data-cycon-module="element-message"]
-immohal.de##.wrap__cookie
 ||immohal.de/*/ext/nb_cookie_banner/Resources/Public/Scripts/cookie.js
 dbk.de,radio-internetowe.com##body > #cc
 freeyou.ag#$#.cookies { display: none !important; }
@@ -11205,6 +11205,10 @@ blumixx.de,roesle.com,moses-verlag.de,radonline.de,arctic.de#$#.acris-cookie-con
 !
 ! Misc rules, removed during optimization. If some rules are in groups, no need to move them here
 !
+!+ NOT_OPTIMIZED
+immohal.de#$#.wrap__cookie { display: none !important; }
+!+ NOT_OPTIMIZED
+kleankanteen.de##.cookie--popup
 !+ PLATFORM(ios, ext_android_cb)
 magazineluiza.com.br##main > section[style^="grid-area:"][style*="footer"] + div[width="100%"]
 !+ NOT_OPTIMIZED
@@ -11216,11 +11220,11 @@ hot.at###info-overlay
 !+ NOT_OPTIMIZED
 jaguar-turkiye.com,landrover.com.tr###coiOverlay
 !+ NOT_OPTIMIZED
-rule34.paheal.net#$#.tnc { display:none !important; }
+rule34.paheal.net#$#.tnc { display: none !important; }
 !+ NOT_OPTIMIZED
-rule34.paheal.net#$#.tnc_bg { display:none !important; }
+rule34.paheal.net#$#.tnc_bg { display: none !important; }
 !+ NOT_OPTIMIZED
-rule34.paheal.net#$#body.censored * { filter:none !important; }
+rule34.paheal.net#$#body.censored * { filter: none !important; }
 !+ NOT_OPTIMIZED
 operanewsapp.com##.container
 !+ NOT_OPTIMIZED
@@ -35795,8 +35799,8 @@ warau.jp#?#div[id^="warau-"] > .reflection-img:has(> a[target="_blank"] > img)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132719
 forum.shiftdelete.net##.reklamyoutube-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131852
-msn.com#%#AG_onLoad(function(){setTimeout(function(){var b=document.querySelector("body > fluent-design-system-provider > entry-point").shadowRoot.querySelector("#entry-point-hp-wc-root-wrapper > .content-container > .stripe-wc-container > stripe-wc").shadowRoot.querySelector("fluent-design-system-provider > .stripe-feed > .feed-section").querySelectorAll("div[data-t*='stripe.shopping'],div[data-t*='stripe.buydirect']");b&&b.forEach(function(b){b.remove();})},2E3)});
-msn.com#%#AG_onLoad(function(){setTimeout(function(){var b=document.querySelector("body > fluent-design-system-provider > entry-point").shadowRoot.querySelector("#entry-point-hp-wc-root-wrapper > .content-container > .stripe-wc-container > stripe-wc").shadowRoot.querySelector("fluent-design-system-provider > .stripe-feed > .feed-section > .river-section > stripe-slider > msft-feed-layout").shadowRoot.querySelector("fluent-card > fluent-design-system-provider > msn-info-pane").querySelectorAll("msn-info-pane-tab[aria-label*='$'][aria-label*='.'][aria-label*='Starter'], msn-info-pane-panel > msft-info-pane-slide > msft-content-card[href*='/shopping/']");b&&b.forEach(function(b){b.remove();})},2E3)});
+msn.com#%#AG_onLoad(function(){setTimeout(function(){var b=document.querySelector("body > fluent-design-system-provider > entry-point")?.shadowRoot?.querySelector("#entry-point-hp-wc-root-wrapper > .content-container > .stripe-wc-container > stripe-wc")?.shadowRoot?.querySelector("fluent-design-system-provider > .stripe-feed > .feed-section").querySelectorAll("div[data-t*='stripe.shopping'],div[data-t*='stripe.buydirect']");b&&b.forEach(function(b){b.remove();})},2E3)});
+msn.com#%#AG_onLoad(function(){setTimeout(function(){var b=document.querySelector("body > fluent-design-system-provider > entry-point")?.shadowRoot?.querySelector("#entry-point-hp-wc-root-wrapper > .content-container > .stripe-wc-container > stripe-wc").shadowRoot.querySelector("fluent-design-system-provider > .stripe-feed > .feed-section > .river-section > stripe-slider > msft-feed-layout")?.shadowRoot?.querySelector("fluent-card > fluent-design-system-provider > msn-info-pane")?.querySelectorAll("msn-info-pane-tab[aria-label*='$'][aria-label*='.'][aria-label*='Starter'], msn-info-pane-panel > msft-info-pane-slide > msft-content-card[href*='/shopping/']");b&&b.forEach(function(b){b.remove();})},2E3)});
 ! https://github.com/List-KR/List-KR/issues/541
 itworld.co.kr###tq_content_div
 ! https://github.com/AdguardTeam/AdguardFilters/pull/132055
