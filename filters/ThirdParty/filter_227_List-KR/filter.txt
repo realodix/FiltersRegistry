@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Do not add this filter into your DNS filter and other adblocker like Unicorn Pro adblocker.
-! OriginalVersion: 2022.1122.3
+! OriginalVersion: 2022.1123.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -379,9 +379,10 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+/^http(s|):\/\/(m\.|)humoruniv\.com\/[a-z0-9\/]+\.[a-z0-9]+\?enc=.{10,}/$xmlhttprequest
+/^https:\/\/sports-phinf\.pstatic\.net\/[0-9]{8}_[0-9]{3}\/[A-z0-9]+_PNG\/[A-Z0-9%\._]+\./
 ||timg.humoruniv.com/thumb.php?url=https://file.ggeal.com/
 /^http(s|):\/\/timg\.humoruniv\.com\/thumb_crop_resize\.php\?url=http(s|):\/\/((?![a-z0-9\.]+\.humoruniv\.com)[a-z\.0-9]+)/
-||humoruniv.com/board/boardexp/*.html?enc=
 ||cdn.incheontoday.com/bannerpop/uploads/
 ||cdn.incheontoday.com/adManager/
 ||cdn.gjdream.com/adManager/
@@ -1278,6 +1279,8 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+m.humoruniv.com###mobile > div[style*="height:"][id^="window"]
+m.humoruniv.com##div[style^="margin:"] > div[style^="width:"]
 m.humoruniv.com##div[id^="ggeal_"][style]
 humoruniv.com###wrap_mdd ~ div[style*="height:"]
 humoruniv.com###wrap_cnts > div[style^="margin:"]
