@@ -2,12 +2,8 @@
 */market-$script
 ! ||img0.pcgames.com.cn^$object,object-subrequest is excluded by ",object-subrequest" in exclusions.txt
 ||img0.pcgames.com.cn^$object,object-subrequest
-! ||www.rjno1.com^$inline-script is excluded by "$inline-script" in exclusions.txt
-||www.rjno1.com^$inline-script
 ! ||g.163.com/$~object-subrequest is excluded by "$~object-subrequest" in exclusions.txt
 ||g.163.com/$~object-subrequest
-! ||www.tianyabooks.com/$script,inline-script is excluded by ",inline-script" in exclusions.txt
-||www.tianyabooks.com/$script,inline-script
 ! */7mad.$image,object,object-subrequest is excluded by ",object-subrequest" in exclusions.txt
 */7mad.$image,object,object-subrequest
 ! */ejia360$image,object,object-subrequest is excluded by ",object-subrequest" in exclusions.txt
@@ -86,12 +82,16 @@ pan.baidu.com##.frame-all:style(overflow-x:hidden!important)
 */adSide.$script,xhr
 ! Rule "myqqjd.com##+js(acis, String.fromCharCode, decodeURIComponent)" converted to: "myqqjd.com#%#//scriptlet('ubo-acis.js', 'String.fromCharCode', 'decodeURIComponent')"
 myqqjd.com##+js(acis, String.fromCharCode, decodeURIComponent)
+! Rule "||www.rjno1.com^$inline-script" converted to: "||www.rjno1.com^$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:"
+||www.rjno1.com^$inline-script
 ! Rule "www.zol.com.cn,www.91danji.com,92btbtt.com##body:style(background: center !important)" converted to: "www.zol.com.cn,www.91danji.com,92btbtt.com#$#body { background: center !important }"
 www.zol.com.cn,www.91danji.com,92btbtt.com##body:style(background: center !important)
 ! Rule "||ifengimg.com/*_guanggao_$script,xhr" converted to: "||ifengimg.com/*_guanggao_$script,xmlhttprequest"
 ||ifengimg.com/*_guanggao_$script,xhr
 ! Rule "qidian.com##.crumbs-nav.top-op:style(margin: auto!important)" converted to: "qidian.com#$#.crumbs-nav.top-op { margin: auto!important }"
 qidian.com##.crumbs-nav.top-op:style(margin: auto!important)
+! Rule "||www.tianyabooks.com/$script,inline-script" converted to: "||www.tianyabooks.com/$script,csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:"
+||www.tianyabooks.com/$script,inline-script
 ! Rule "||gushiwen.cn/getTicket.aspx^$xhr" converted to: "||gushiwen.cn/getTicket.aspx^$xmlhttprequest"
 ||gushiwen.cn/getTicket.aspx^$xhr
 ! Rule "cnbeta.com##+js(set, JB, noopFunc)" converted to: "cnbeta.com#%#//scriptlet('ubo-set.js', 'JB', 'noopFunc')"

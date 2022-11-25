@@ -15510,7 +15510,7 @@ vumoo.to#?#div.col-lg-12:has-text(IMDb)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 19November2022v6
+! OriginalVersion: 25November2022v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -18588,6 +18588,9 @@ buffalonews.com#%#//scriptlet('ubo-set.js', 'lee_trkLinkSrc', 'noopFunc')
 @@||bing.*/ws/redirect/$removeparam
 ! Fix the video player 'Invalid signature' - https://www.fox.com/watch/ffae8bb93256fb0d0b3a4b30f00e0ada/
 @@||link.theplatform.com/s/fox-dcg/media/$removeparam
+! Newsletter unsubscribe buttons are the one place where you generally don't want error messages from false positive parameter removals
+!! http://crm-innhold.telenor.no/unsub/?cid=(...)&uid=(...)
+@@/unsub/?$removeparam
 !#if adguard
 !#if adguard_ext_firefox
 ! https://github.com/DandelionSprout/adfilt/issues/376
@@ -19172,6 +19175,7 @@ bloombergquint.com#%#//scriptlet('ubo-acis.js', 'document.oncopy')
 bloombergquint.com#%#//scriptlet('ubo-aopr.js', 'getSelection')
 !!!||deepl.com/js/docTrans-react.chunk. (https://github.com/AdguardTeam/AdguardFilters/issues/119645)
 !#if !adguard
+||www.15min.lt/naujiena^$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:
 !#endif
 !#if adguard
 ! https://github.com/AdguardTeam/FiltersRegistry/issues/683

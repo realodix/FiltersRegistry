@@ -32,14 +32,6 @@ pub.softonic.com/pubserver/adframe.php
 @@##.qc-cmp2-main$domain=~ilbianconero.com
 ! @@###qc-cmp2-main$domain=~ilbianconero.com is excluded by "@@###qc-cmp2-main$domain=~ilbianconero.com" in exclusions.txt
 @@###qc-cmp2-main$domain=~ilbianconero.com
-! crusoe.uol.com.br/diario/$inline-script is excluded by "$inline-script" in exclusions.txt
-crusoe.uol.com.br/diario/$inline-script
-! crusoe.uol.com.br/edicoes/$inline-script is excluded by "$inline-script" in exclusions.txt
-crusoe.uol.com.br/edicoes/$inline-script
-! lavoz.com.ar$inline-script is excluded by "$inline-script" in exclusions.txt
-lavoz.com.ar$inline-script
-! rugbypass.com/plus/$inline-script is excluded by "$inline-script" in exclusions.txt
-rugbypass.com/plus/$inline-script
 ! Rule "dailymail.co.uk##body:style(overflow: visible !important)" converted to: "dailymail.co.uk#$#body { overflow: visible !important }"
 dailymail.co.uk##body:style(overflow: visible !important)
 ! Rule "rediff.com##+js(ra, onclick, [onclick^="track"])" converted to: "rediff.com#%#//scriptlet('ubo-ra.js', 'onclick', '[onclick^="track"]')"
@@ -138,6 +130,10 @@ citywire.com##+js(rc, m-media-container--locked, .m-media-container--locked)
 citywire.com##+js(rc, m-article__body--locked, .m-article__body--locked)
 ! Rule "corrieredellosport.it##+js(cookie-remover, /paywall_articles/)" converted to: "corrieredellosport.it#%#//scriptlet('ubo-cookie-remover.js', '/paywall_articles/')"
 corrieredellosport.it##+js(cookie-remover, /paywall_articles/)
+! Rule "crusoe.uol.com.br/diario/$inline-script" converted to: "crusoe.uol.com.br/diario/$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:"
+crusoe.uol.com.br/diario/$inline-script
+! Rule "crusoe.uol.com.br/edicoes/$inline-script" converted to: "crusoe.uol.com.br/edicoes/$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:"
+crusoe.uol.com.br/edicoes/$inline-script
 ! Rule "csmonitor.com##+js(aopr, localStorage)" converted to: "csmonitor.com#%#//scriptlet('ubo-aopr.js', 'localStorage')"
 csmonitor.com##+js(aopr, localStorage)
 ! Rule "dailywire.com###post-body-text > div > div:style(height: auto !important;)" converted to: "dailywire.com#$##post-body-text > div > div { height: auto !important; }"
@@ -216,6 +212,8 @@ livelaw.in##+js(rc, restricted_message, div.restricted_message)
 livemint.com##+js(rc, paywall, div.paywall)
 ! Rule "labusinessjournal.com##+js(cookie-remover, /^/)" converted to: "labusinessjournal.com#%#//scriptlet('ubo-cookie-remover.js', '/^/')"
 labusinessjournal.com##+js(cookie-remover, /^/)
+! Rule "lavoz.com.ar$inline-script" converted to: "lavoz.com.ar$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:"
+lavoz.com.ar$inline-script
 ! Rule "loebclassics.com##+js(cookie-remover, /^/)" converted to: "loebclassics.com#%#//scriptlet('ubo-cookie-remover.js', '/^/')"
 loebclassics.com##+js(cookie-remover, /^/)
 ! Rule "loeildelaphotographie.com##+js(ra, class, .paywall)" converted to: "loeildelaphotographie.com#%#//scriptlet('ubo-ra.js', 'class', '.paywall')"
@@ -250,6 +248,8 @@ puck.news##+js(ra, style, article)
 qz.com##+js(ra, class, div#email-content[class], stay)
 ! Rule "qz.com##+js(ra, scrolling, iframe[scrolling], stay)" converted to: "qz.com#%#//scriptlet('ubo-ra.js', 'scrolling', 'iframe[scrolling]', 'stay')"
 qz.com##+js(ra, scrolling, iframe[scrolling], stay)
+! Rule "rugbypass.com/plus/$inline-script" converted to: "rugbypass.com/plus/$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:"
+rugbypass.com/plus/$inline-script
 ! Rule "rugbypass.com##+js(rc, premium-fold-bottom, .premium-fold-bottom)" converted to: "rugbypass.com#%#//scriptlet('ubo-rc.js', 'premium-fold-bottom', '.premium-fold-bottom')"
 rugbypass.com##+js(rc, premium-fold-bottom, .premium-fold-bottom)
 ! Rule "rugbypass.com##+js(rc, fade, .fade)" converted to: "rugbypass.com#%#//scriptlet('ubo-rc.js', 'fade', '.fade')"
