@@ -11697,7 +11697,7 @@ friv5online.com#%#//scriptlet("abort-current-inline-script", "document.getElemen
 audi-mediacenter.com#%#//scriptlet('set-cookie', 'AUDI_ENSIGHTEN_PRIVACY_MODAL_VIEWED', '1')
 audi-mediacenter.com#%#//scriptlet('set-cookie', 'AUDI_ENSIGHTEN_PRIVACY_Functional', '1')
 audi-mediacenter.com#%#//scriptlet('set-cookie', 'AUDI_ENSIGHTEN_PRIVACY_Performance', '0')
-consent.voici.fr,consent.capital.fr,consent.programme-tv.net#%#AG_onLoad(function(){if(window.location.href.includes("consentUUID")){var g=new MutationObserver(function(){var b=document.querySelector('button[title*="Accepter" i]');b&&(g.disconnect(),b.click())});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1E4)}});
+femmeactuelle.fr,consent.voici.fr,consent.capital.fr,consent.programme-tv.net#%#AG_onLoad(function(){if(window.location.href.includes("consentUUID")){var g=new MutationObserver(function(){var b=document.querySelector('button[title*="Accepter" i]');b&&(g.disconnect(),b.click())});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1E4)}});
 gaana.com#%#//scriptlet('set-cookie', 'gdprv1', '1')
 umcutrecht.nl#%#//scriptlet('set-local-storage-item', 'consent', '1')
 apotheka.ee#%#//scriptlet('set-cookie', 'gdpr_cookie_token', '1')
@@ -24072,7 +24072,8 @@ aberdeennews.com,alamogordonews.com,amarillo.com,amestrib.com,app.com,argusleade
 ! Twitter login popup
 ! https://github.com/AdguardTeam/AdguardFilters/issues/112718#issuecomment-1069965416
 twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion,twitter.com#$?#div[data-testid="sheetDialog"] > :not(div[data-testid="IntentLoginSheet_Login_Sheet"]) div[aria-label=""] > img[class^="css-"][src$="/privacy_cover.png"]:upward(div[role="group"]) { display: none !important; }
-twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion,twitter.com#$?#div[data-testid="sheetDialog"] > :not(div[data-testid="IntentLoginSheet_Login_Sheet"]) div[role="button"]:not([data-testid]) + div[role="button"]:not([data-testid]):upward(div[role="group"]) { display: none !important; }
+! Breaks https://github.com/AdguardTeam/AdguardFilters/issues/135898
+! twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion,twitter.com#$?#div[data-testid="sheetDialog"] > :not(div[data-testid="IntentLoginSheet_Login_Sheet"]) div[role="button"]:not([data-testid]) + div[role="button"]:not([data-testid]):upward(div[role="group"]) { display: none !important; }
 twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion,twitter.com#$?#div[data-testid="sheetDialog"] > :not(div[data-testid="IntentLoginSheet_Login_Sheet"]) div[role="button"][data-testid="apple_sign_in_button"]:upward(div[role="group"]) { display: none !important; }
 twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion,twitter.com#$?#html { overflow: auto !important; padding-right: 0 !important; overscroll-behavior-y: auto !important; }
 !
@@ -37411,6 +37412,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+games.dmm.com#$##webapp-top-app main + aside > a[href^="https://rcv.ixd.dmm.com/api/surl?urid="][target] { background: none !important; pointer-events: none !important; }
 ficbook.net##.fanfic-promo
 ficbook.net#?#.home-block > h3:contains(Промо фанфиков)
 ||jdpower.com/sites/default/files/image/*/23_Auto%20Summit%20PR%20Ad_speaker%20gif.gif
