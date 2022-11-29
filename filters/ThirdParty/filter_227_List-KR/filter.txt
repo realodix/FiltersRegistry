@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2022.1129.5
+! OriginalVersion: 2022.1129.8
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -380,6 +380,7 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
+/^http(s|):\/\/(m\.|)humoruniv\.com\/\?[^\n\r\t\/\.]+=[^\n\r\t\/\.]+/$xmlhttprequest
 ||ibric.org/upload/board/files/enterprise/
 ||ibric.org/upload/board/files/new_protech_pri/
 /^https:\/\/([a-z0-9\.]+|)torrentdia[0-9]+\.com\/data\/to_list\//
@@ -387,7 +388,6 @@
 ||gene.postech.ac.kr/upload/board/files/banner/
 ||ibric.org/upload/board/files/banner
 ||cdn.footballist.co.kr/adManager/
-/^http(s|):\/\/m\.humoruniv\.com\/\?[a-z0-9]+=[0-9a-z]+/$xmlhttprequest
 ||ujnews.co.kr/support/_updata/banner
 ||popco.net/openx/www/delivery/ajs.php
 /^http(s|):\/\/(m\.|)humoruniv\.com\/[a-z0-9\/]+\.[a-z0-9]+/$xmlhttprequest
@@ -1317,6 +1317,10 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+m.humoruniv.com##div[id^="ggeal_"]
+instiz.net##table#mboard.mboard tr:not([id])
+instiz.net###menufoot > .hot_under
+instiz.net##div[id^="sidead"]
 ibric.org##table[align] table[align] td[valign] table[cellspacing] tr > td[colspan][height][bgcolor]
 m.ibric.org##.row > div[style=""].col-xs-12 ~ div[id] + div[style]
 ibric.org##[id*="Ad"]
@@ -1335,7 +1339,6 @@ mediajeju.com##aside > article ~ div[style*="height:"]
 focus.daum.net##div[data-tiara-layer="ad"]
 cbinews.co.kr##article table[align] td[height]
 m.humoruniv.com##div[style^="margin:"] > div[style^="width:"]
-m.humoruniv.com##div[id^="ggeal_"][style]
 humoruniv.com###wrap_mdd ~ div[style*="height:"]
 humoruniv.com###wrap_cnts > div[style^="margin:"]
 kyobobook.co.kr##div[id^="bodyDialog"]:not([style*="top: "]).open
@@ -1555,7 +1558,6 @@ bobaedream.co.kr##body.body-community div[class*="Car"]
 www.instiz.net,m.instiz.net###menufoot .content div[class*="ad"][style*="padding:"]
 m.instiz.net##body > div[style^="min-height:"]:not([class]):not([id])
 www.instiz.net,m.instiz.net##div[id^="div-"][style*="min-height:"]:not([class])
-www.instiz.net##.content table#mainboard.mainboard tr:not([id^="list"])
 www.instiz.net##div[style].content ~ div[class$="ad"][style*="min-height:"]
 www.instiz.net##div[class$="ad"][id$="ad"]
 mbong.kr##center a[href*="//mbong.kr/banner"]
@@ -2461,8 +2463,6 @@ kayak.co.kr#?#.Ui-Hotels-Results-List-Components-RheaLiteWrapper-container div:n
 m.yna.co.kr#?##container aside[class^="aside-"]:has(ul[id^="ad"]) + aside
 m.search.daum.net#?#body.nate .section_cont [disp-attr]:has(> div:matches-css(display: none))
 www.instiz.net#?#div[style].responsive_main div[style~="background-color:"]:not([class]):has(div[id^="ad"][style] > ins.adsbygoogle)
-www.instiz.net#?#.board_img_foot div[style] > .responsive_main:has(div[id^="ad"][style] > ins.adsbygoogle)
-www.instiz.net#?#div[style] > .responsive_main div[class*="ad"][style]:has(div[id^="ad"][style] > ins.adsbygoogle)
 www.instiz.net#?#.responsive_main .responsive_main:has(div[id^="ad"][style] > ins.adsbygoogle)
 extmovie.com#?#div[style].xe-widget-wrapper:has(a[href^="/sisaing"])
 velog.io#?#div[class]:has(> ins.adsbygoogle)
