@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-11-28 10:26:55 CET
+! Last modified: 2022-11-30 08:11:23 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -144,6 +144,7 @@ densistavilan.se##div[data-advadstrackid]:upward(.x-bar-footer)
 densistavilan.se##h3:has-text(Advertorial):upward(1)
 designbase.se##.is_sponsored:upward(.article-item, .latest-news-item)
 devote.se#%#//scriptlet('ubo-aeld.js', 'click')
+devote.se##div[data-losjs^="borka"]:upward(1)
 di.se#%#//scriptlet('ubo-acs.js', 'Di', 'initAds')
 di.se#%#//scriptlet('ubo-nosiif.js', 'runAdBlockPaywall')
 di.se#%#//scriptlet('ubo-nostif.js', '#triggerModal')
@@ -333,6 +334,8 @@ medibok.se#$?#noscript:has-text(mdp-deblocker-js-disabled) { remove: true; }
 medibok.se#$?#style:has-text(body * :not) { remove: true; }
 mestmotor.se#$##piano { opacity: 1 !important; }
 mestmotor.se#%#//scriptlet('ubo-ra.js', 'onclick', '[onclick^="ANAL"]')
+mestmotor.se##.text-center, div[style^="text-align"]:has-text(ANNONS)
+mestmotor.se##kris-kross:upward(.text-center)
 metromode.se##.advert:upward(.b-card, .b-related__item)
 metromode.se#$?#.advert:upward(.slick-item) { remove: true; }
 minimalisterna.se##p:has-text(/i samarbete med/i):upward(.post)
@@ -584,8 +587,8 @@ home2tiny.se#%#//scriptlet('ubo-aeld.js', '/mousewheel|DOMMouseScroll/')
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1617,7 +1620,7 @@ aftonbladet.se,cfanytt.se,foretagsbladet.se,gestrikemagasinet.se,halsasverige.se
 aftonbladet.se,skonhetsredaktorerna.se##.ab_responsive_ads
 aikfotboll.se,vaken.se##.banners
 aip.nu##[class*="feed-ad"]
-akaskidor.se,husohem.se,praktisktbatagande.se,sportfack.se,svenskgolf.se,tidningenhalsa.se,utemagasinet.se,vagabond.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image, .category-partner
+akaskidor.se,hemtrevligt.se,husohem.se,praktisktbatagande.se,sportfack.se,svenskgolf.se,tidningenhalsa.se,utemagasinet.se,vagabond.se##.partnerCard, .partnerContent, .entry-content figure.wp-block-image, .category-partner
 akaviaaspekt.se##.article-list-item--native, a.article-topic__list-item[href^="/annons"]
 akaviaaspekt.se,lakartidningen.se,modette.se,nyheter24.se,tidningenkulturen.se##.advertisement
 aktiespararna.se##.analysguiden-promote-articles
@@ -1739,7 +1742,7 @@ byggteknikforlaget.se###text-2.widget_text, .header-widget-area
 byggvarlden.se##a[href*="/annons/"]
 bytbil.com###privacyModal
 bytbil.com##.available-services
-cafe.se,kingmagazine.se,manolo.se##.card-partner, .partner
+cafe.se,kingmagazine.se,manolo.se,mestmotor.se##.card-partner, .partner
 caminomagasin.se###cookie-compliance
 caminomagasin.se##.block--extern-annons, .view-annonser
 camping.se###CookiesBox
@@ -2745,7 +2748,7 @@ zeromagazine.nu##div[id^="ads"]
 ||ptm.flowplayer.com^*/view$xmlhttprequest
 ||push-notifications.top^$third-party
 ||pushcrew.com^$third-party
-||pusher.com^$third-party,domain=nyheter24.se
+||pusher.com^$third-party,domain=modette.se|nyheter24.se
 ||pushnice.com^
 ||pushpushgo.com^$third-party
 ||pushwhy.com^
