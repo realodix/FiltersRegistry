@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2022.1129.8
+! OriginalVersion: 2022.1130.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -380,7 +380,9 @@
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
-/^http(s|):\/\/(m\.|)humoruniv\.com\/\?[^\n\r\t\/\.]+=[^\n\r\t\/\.]+/$xmlhttprequest
+||cdn.spotvnews.co.kr/adManager/
+||cdn.spotvnews.co.kr/bannerpop/uploads/
+/^http(s|):\/\/(m\.|)humoruniv\.com\/\?[^\n\r\t\/\.]+/$xmlhttprequest
 ||ibric.org/upload/board/files/enterprise/
 ||ibric.org/upload/board/files/new_protech_pri/
 /^https:\/\/([a-z0-9\.]+|)torrentdia[0-9]+\.com\/data\/to_list\//
@@ -1263,7 +1265,7 @@ dnews.co.kr,auction.co.kr,m.gamemeca.com,bemil.chosun.com,aladin.co.kr,nesin.com
 ! ##div[class^="ad_"]
 imnews.imbc.com,edaily.co.kr,mk.co.kr,v.daum.net,itempage3.auction.co.kr,humoruniv.com,etoday.co.kr,kukinews.com,nesin.com,search.naver.com,dprime.kr,encar.com,m.todayhumor.co.kr,hogaeng.co.kr,zdnet.co.kr,news.zum.com,m.search.daum.net,teamblind.com,unsin.co.kr,m.mk.co.kr,m.cafe.naver.com,dvdprime.com,nocutnews.co.kr,news.sbs.co.kr,mbiz.heraldcorp.com,m.star.mt.co.kr,etnews.com,sedaily.com,m.danawa.com,sportalkorea.com,news.jtbc.co.kr,ohmynews.com,hankyung.com,news1.kr,m.etnews.com,asiae.co.kr,khan.co.kr,avjamak.net,kmib.co.kr,donga.com,prod.danawa.com,news.v.daum.net,joongang.co.kr,ruliweb.com##div[class^="ad_"]
 ! ##div[class^="ad-"]
-foodnews.co.kr.hankooki.com,spochoo.com,digitaltoday.co.kr,orbi.kr,weekly.chosun.com,nzkoreapost.com,pinpointnews.co.kr,huffingtonpost.kr,eroun.net,cnet.co.kr,hogangnono.com,ppomppu.co.kr,interfootball.co.kr,police112.co.kr,dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
+spotvnews.co.kr,foodnews.co.kr.hankooki.com,spochoo.com,digitaltoday.co.kr,orbi.kr,weekly.chosun.com,nzkoreapost.com,pinpointnews.co.kr,huffingtonpost.kr,eroun.net,cnet.co.kr,hogangnono.com,ppomppu.co.kr,interfootball.co.kr,police112.co.kr,dpg.danawa.com,m.danawa.com,kimpga.com,youthassembly.kr,algumon.com,tvchak.com,dailysecu.com,hankyung.com,m.etnews.com,hani.co.kr,hankookilbo.com,newspim.com##div[class^="ad-"]
 ! ##.banner
 ebn.co.kr,paxnet.co.kr,ajl.co.kr,yhinews.com,funshop.co.kr,m.sedaily.com,bloter.net,mosen.mt.co.kr,hinfomax.kr,hinfomax.co.kr,pressian.com,kukinews.com##.banner
 ! ##div[class$="_banner"]
@@ -1317,7 +1319,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
-m.humoruniv.com##div[id^="ggeal_"]
+m.humoruniv.com##div[id][onclick*="=="]
 instiz.net##table#mboard.mboard tr:not([id])
 instiz.net###menufoot > .hot_under
 instiz.net##div[id^="sidead"]
@@ -2142,6 +2144,7 @@ www.naver.com##iframe[id^="da_iframe_"]
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+dajunbi.com##div[class^="banner_"]
 spotv63.com,spotv64.com,spotv65.com,spotv66.com,spotv67.com,spotv68.com,spotv69.com,spotv70.com,spotv71.com,spotv72.com,spotv73.com,spotv74.com,spotv75.com,spotv76.com,spotv77.com,spotv78.com,spotv79.com,spotv80.com,spotv81.com##div[id$="-banner"]
 viewtorrent1.com,viewtorrent2.com,viewtorrent3.com,viewtorrent4.com,viewtorrent5.com,viewtorrent6.com,viewtorrent7.com,viewtorrent8.com,viewtorrent9.com,viewtorrent10.com,viewtorrent11.com,viewtorrent12.com,viewtorrent13.com,viewtorrent14.com,viewtorrent15.com,viewtorrent16.com,viewtorrent17.com##article[itemprop="articleBody"] > .row
 viewtorrent1.com,viewtorrent2.com,viewtorrent3.com,viewtorrent4.com,viewtorrent5.com,viewtorrent6.com,viewtorrent7.com,viewtorrent8.com,viewtorrent9.com,viewtorrent10.com,viewtorrent11.com,viewtorrent12.com,viewtorrent13.com,viewtorrent14.com,viewtorrent15.com,viewtorrent16.com,viewtorrent17.com##.at-main .b-board-g
@@ -2706,6 +2709,8 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
 !
+web1907.tistory.com#%#//scriptlet("abort-current-inline-script", "$", "div.adsbygoogle")
+web1907.tistory.com#@#.adsbygoogle
 genshin.gamedot.org#%#//scriptlet("prevent-setTimeout", "timerAdChecker")
 genshin.gamedot.org##[style*="background-image:"][style*="module/genshinmaps/asset/image/"]:not([id]):not([class])
 ||genshin.gamedot.org/module/genshinmaps/asset/image/adblock-line
@@ -2800,6 +2805,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||namu.news/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 @@||namu.wiki/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 !
+web1907.tistory.com#@#.adsbygoogle
 @@||ssl.pstatic.net/tveta/libs/ssp-video/prod/ssp.web.sdk_$script,domain=m.sports.naver.com
 @@||fafan.kr^$genericblock
 @@||poketory.com^$genericblock
