@@ -5,8 +5,8 @@
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
 ! Expires: 2 days
-! Last modified: Tue, 29 Nov 2022, 16:30 UTC+01:00
-! OriginalVersion: 2022.11.29.0
+! Last modified: Wed, 30 Nov 2022, 20:30 UTC+01:00
+! OriginalVersion: 2022.11.30.0
 ! Najnowsza wersja zawsze na: https://github.com/FiltersHeroes/PolishAnnoyanceFilters
 ! Zgłoszenia:
 !   Formularz (nie wymaga rejestracji) => https://polishannoyancefilters.netlify.app/issues
@@ -15,7 +15,7 @@
 ! Homepage: https://polishannoyancefilters.netlify.app
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: wto, 29 lis 2022, 16:30 UTC+01:00
+! Aktualizacja: śro, 30 lis 2022, 20:30 UTC+01:00
 !
 !
 ! Newslettery (nie popupy)
@@ -6340,6 +6340,7 @@ vwpoznan.pl,vwuzytkowepoznan.pl##.popup_widget, .widget_right
 wakacje.pl###rightTabs > .rightClipboard
 wakai.pl###sod-drawer-handle
 wanika.pl###cloudBox
+wapteka.pl###app #footer-container
 wapteka.pl,www.e-medest.pl###baner_footer
 wasserman.eu##.jss372
 waze.com##.wz-downloadbar
@@ -11327,6 +11328,7 @@ kosapopatelni.pl#$#html { overflow: auto !important; }
 koty.pl,psy.pl##.ReactModal__Overlay:has(a[href*="/newsletter"])
 koty.pl,psy.pl#$#html[style], body[class*="Modal"] { position: static !important; overflow: visible !important; }
 kreatywna-europa.eu##.pum[data-popmake*="newsletter"]
+kupbilecik.pl,panbilet.pl#$#.remodal-wrapper > div:has(> a[href*="facebook.com/"]:nth-child(3)) > :nth-child(n+2):nth-child(-n+4) { height: 0 !important; width: 0 !important; font-size: 0 !important; magrin: 0 !important; padding: 0 !important; visibility: hidden !important; }
 kurspolskiego.pl###banner, .modal-backdrop
 kurspolskiego.pl#$#.modal-open[class] div#main { filter: none !important; }
 lalorraine.pl,mypersonaltrainer.pl,sw-rita.pl,wishbone.pl#$#html { overflow: auto !important; }
@@ -11866,6 +11868,7 @@ polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com#%#//script
 !
 ! Codename: Other Elements - Supplement
 !/^https:\/\/(www\.)?youtube(-nocookie)?\.com\/embed\/.*autoplay=1/$3p,frame,object,redirect=click2load.html:10,domain=~pinger.pl|pl|~wykop.pl
+*##div[style]:not([id], [class]):has(> h2 ~ span[title*="-extension://"][title*="/web_accessible_resources/epicker-ui.html"])
 /^https:\/\/(www\.)?youtube(-nocookie)?\.com\/embed\/.*autoplay=1/$removeparam=autoplay,domain=~pinger.pl|pl
 ||e-niemcy.de/wp-content/themes/goodnews/assets/vendors/jquery-nicescroll/jquery.nicescroll.min.js
 ||mokrenosy.pl/*/avada-nicescroll.js$script
@@ -12031,6 +12034,7 @@ semcamp.university#$#div > div > div.app::-webkit-scrollbar { all: initial !impo
 !#endif
 !#if !ext_ublock
 !download.net.pl#$?#.date:not(dt) { display: block !important; }
+#@#div[style]:not([id], [class]):has(> h2 ~ span[title*="-extension://"][title*="/web_accessible_resources/epicker-ui.html"])
 karachan.org$$script[wildcard="style*xD"][min-length="100"]
 komputerswiat.pl$$#ks_breaking_news
 newonce.radio$$link[rel="shortcut icon"][href^=".gif"]
