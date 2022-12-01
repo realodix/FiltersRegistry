@@ -5367,6 +5367,12 @@ nethunt.com/api/v1/track/email/$image
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||collector.xhwide8.com^
+||collector.xhamster*.*^
+||anonym.data.funkedigital.de^
+||analytics.makeitmeme.com^
+||harvester.cms.markiza.sk^
+||trc.gpcdn.pl^
 ||web-device-id.banggood.com^
 ||dotcounter.douyucdn.cn^
 ||dotserver.douyucdn.cn^
@@ -5382,7 +5388,6 @@ nethunt.com/api/v1/track/email/$image
 ||view.fujitv.co.jp^
 ||analytics.*.sky.com^
 ||analytics.htmedia.in^
-||xp.apple.com^
 ||tracking.immobilienscout24.de^
 ||kinesis.eu-west-1.amazonaws.com^
 ||pclog.3u.com^
@@ -5420,7 +5425,6 @@ nethunt.com/api/v1/track/email/$image
 ||track-srv.vietnamnet.vn^
 ||stats.zone-telechargement.
 ||stats.tirexo.blue^
-||cnt.streamz.ws^
 ||intake-analytics.wikimedia.org^
 ||tracking.univtec.com^
 ||counter.sberbank.ru^
@@ -5979,8 +5983,6 @@ nethunt.com/api/v1/track/email/$image
 ||collector.tescocompare.com^
 ||collector.trendmd.com^
 ||collector.wawlabs.com^
-||collector.xhamster.com^
-||collector.xhamster*.desi^
 ||collector.xhwide1.com^
 ||collector1.xhamster.com^
 ||comet.sputniknews.com^
@@ -6759,7 +6761,8 @@ nethunt.com/api/v1/track/email/$image
 ||pixel.wp.pl^$important
 ||pixel.yabidos.com^
 ||pixelappcollector.thesun.co.uk^
-||pixelg.adswizz.com^
+||pixel*.adswizz.com
+||pixel.randi.adswizz.com
 ||pixelhere.com^
 ||pixels.ingbank.com.tr^
 ||pixels.livingsocial.com^
@@ -7466,7 +7469,6 @@ nethunt.com/api/v1/track/email/$image
 ||triggertag.gorillanation.com^
 ||trk.10ru.pt^
 ||trk.i0.cz^
-||trk.performanceplay.co.kr^
 ||trk.storyly.io^
 ||trk.stroeermediabrands.de^
 ||trk.vidible.tv^
@@ -31008,6 +31010,8 @@ _tracking.php?b=
 /analytics.js$domain=freexcafe.com|rusvideos.tv|nakubani.ru|lun.com|songsara.net|newsmax.com|bolgehastanesi.com|ewtc.de|newsdig.tbs.co.jp|imore.com|city.kushiro.lg.jp|emeraldbridal.com.au|emarat-news.ae|imobie.jp
 ||assets.adobedtm.com^$domain=mcclatchydc.com|elnuevoherald.com|bellinghamherald.com|sacbee.com|charlotteobserver.com|newsobserver.com|miamiherald.com|ef.ru|algida.com.tr|bmw-motorrad.co.uk|cif.com.tr|clearhaircare.com|domestos.com|dove.com|elidor.com.tr|f1sport.autorevue.cz|geico.com|hellmanns.com.tr|herkessofraya.com|johnsonsbaby.com.tr|lipton.com|lnk.to|lux.com|magnumicecream.com|neutrogena.com.tr|omo.com|rexona.com|samsung.com|sap.com|schwarzkopf.com.tr|signalturkiye.com|msnbc.com|nbcnews.com|kbb.com|eurosport.ru|timgate.it|intermiles.com|oxfordmail.co.uk|spiegel.de|hp.com
 !
+||ncbi.nlm.nih.gov/*/pinger.js
+||oracle.com/asset/web/analytics/ora_ocom.js
 scarfilm.org##.footer-col-3
 ||bandcamp.com/api/tracker/
 ||bandcamp.com/stat_record?
@@ -34175,6 +34179,8 @@ link.gmapp*.net$image
 !------------------------------
 ! NOTE: Cookies specific
 !
+! stocksy.com - unique user ID
+||stocksy.com^$cookie=stocksylytics_anon_id
 ! https://github.com/AdguardTeam/AdguardFilters/issues/134089
 ||nttcoms.com^$cookie=visitorid
 ! depop.com
@@ -34371,6 +34377,10 @@ $cookie=ev_sid,domain=ideal.es|elcorreo.com
 !------------------------------
 ! NOTE: Cookies generic rules
 !
+! Grupa Pracuj S.A.
+! User ID
+$cookie=gptrackCookie
+$cookie=gptrackPVID
 ! XenForo
 ! Determines if you see ads or not
 $cookie=xf_sam_ad_views
@@ -35814,6 +35824,10 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/136271
+@@||cdn.shopify.com/*/trekkie*.js$domain=koh.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/136170
+||googletagmanager.com/gtag/js$script,redirect=googletagmanager-gtm,domain=clujust.ro
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135901
 @@||google-analytics.com/analytics.js$domain=videotron.com
 @@||googletagmanager.com/gtm.js$domain=videotron.com

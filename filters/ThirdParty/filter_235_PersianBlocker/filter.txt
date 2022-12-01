@@ -2,13 +2,12 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-11-27
+! Last modified: 2022-12-01
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
-! Issues/Suggestions: https://github.com/MasterKia/PersianBlocker/issues
-! Pull requests: https://github.com/MasterKia/PersianBlocker/pulls
-! TODO: Remove unbreak filters from Adguard Unbreak after PersianBlocker is added
-! TODO: Remove Persian filters from "Adguard Base filter" when PersianBlocker is added
+! مشکل ها/پیشنهاد ها: https://github.com/MasterKia/PersianBlocker/issues
+! مشارکت: https://github.com/MasterKia/PersianBlocker/pulls
+!  لیستی برای برگرداندن آزادی کاربران، چون هر کاربر این آزادی را دارد که چه چیزی وارد مرورگرش می‌شود و چه چیزی وارد نمی‌شود
 !-------------------------v Experimental Generic Filters v-----------------------!
 ! applicationha.com, androidgozar.com, downloadkral.com, gold-team.org, iranecar.com, icoff.ee, koolakmag.ir,
 !! mybia4music.com, my-film.pw, pedal.ir, vgdl.ir, sakhamusic.ir
@@ -16,7 +15,7 @@
 ! afkarnews.com, bartarinha.ir, donya-e-eqtesad.com, etemadonline.com, ecoiran.com, eghtesadnews.com,
 !! eghtesadonline.com, fardanews.com, gostaresh.news, ilna.ir, khabareazad.com, khabarfoori.com, mosalasonline.com,
 !!! moroornews.com, mojnews.com, rokna.net, sharghdaily.com, shomavaeghtesad.com, shayanews.com
-*##.zxc
+##.zxc
 ##.zxc-m
 ##.zxc-stik
 ##.zxc_news
@@ -86,6 +85,8 @@
 ! https://github.com/AdguardTeam/AdguardFilters/issues/99240
 ||blogfa.com/a^
 ! >> C <<
+||cayot.ir^$all
+! Example: tamasha.com/v/DDlMB
 ||chavosh.org^$all
 ||ck.chavosh.org^$all
 ||clickaval.com^$all
@@ -119,7 +120,6 @@
 ||widget.fafait.net^$third-party
 ||farakav.com^$all
 ||ads.farakav.com^$all
-! ^ TODO: Check for breakages (used by tamasha.com), investigate into more tracking
 ! >> G <<
 ! >> H <<
 ||hamravesh.com^$third-party
@@ -364,15 +364,15 @@
 ||analytics.asiatech.ir^$all
 ||192.168.10.113^$all,domain=airport.ir
 artmusics.top#%#//scriptlet('ubo-nowoif.js')
+||artmusics.top/directory/?app=$all
+artmusics.top##.app_ads_banner
 artmusics.top##.left > .box > .title:has-text(تبلیغات):upward(.box)
-adanayi.ir,adanayi.blogfa.com#$#* { -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
+adanayi.ir,adanayi.blogfa.com#$#body * { -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
 ! https://github.com/MasterKia/PersianBlocker/issues/48
-||arzcenter.com/static/plugin/gtag.js
-arzcenter.com##[href*="nobitex.ir"]
+||arzcenter.com/static/plugin/gtag.js^
+arzcenter.com##a[href*="nobitex.ir"]
 ! https://github.com/MasterKia/PersianBlocker/issues/46
-asemooni.com##.right-sidebar img[title="محل تبلیغات شما"]
-asemooni.com##.right-sidebar img[title="رپورتاژ"]
-applicationha.com#%#//scriptlet('ubo-aopr.js', 'faPa')
+asemooni.com##.right-sidebar > p > a > img[title="رپورتاژ"]
 applicationha.com##.baner
 anaj.ir##[href^="https://gameup.ir/"]
 ! ||abadis.ir/ajaxcmd/stat/
@@ -1154,13 +1154,10 @@ ilna.ir#$#.ml120 { margin-left: 5% !important; margin-bottom: 5% !important; }
 ilna.ir##.zxc-mobile
 ! !#endif
 ! https://github.com/MasterKia/PersianBlocker/issues/26
-||isna.ir/rest/visit
-||cdn.isna.ir/d/*.gif$~third-party
-isna.ir#$#.main-content .container:has(aside.sidebar .box.ads) [class^=col]:has(#item) { min-width: 75% !important; max-width: 100% !important; }
-isna.ir###box24
-isna.ir###box32
-isna.ir###box180
-isna.ir###box212
+! https://github.com/MasterKia/PersianBlocker/issues/92
+||isna.ir/rest/visit^
+isna.ir##.ads
+isna.ir#$#.col-md-7 { width: 75% !important; }
 itgheymat.com##.ads-box
 itbazar.com##.VueCarousel
 itbazar.com###banners-position-14
@@ -1870,6 +1867,12 @@ saat24.news###box167
 @@||1000site.ir/asset/images/images/adpage/$image,~third-party
 @@||1000site.ir/home/ads/asset/favicon.ico$image,~third-party
 ! >> T <<
+tamasha.com#%#//scriptlet('ubo-set.js', 'socketUrl', 'undefined')
+tamasha.com#%#//scriptlet('ubo-set.js', 'VASTEnabled', 'false')
+tamasha.com#%#//scriptlet('ubo-set.js', 'vastURL', '[]')
+tamasha.com#%#//scriptlet('ubo-cookie-remover.js', 'tracker_visitor_id')
+||tamasha.com/visid^
+! Example: tamasha.com/v/DDlMB
 ! https://github.com/MasterKia/PersianBlocker/issues/47
 ||ad.technews-iran.com^$all
 ||app.technews-iran.com^$removeparam=_gl

@@ -80,6 +80,7 @@
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
 !
+||hjheaijhafgfgbaaaei.ru^
 ||hjcbehchdddcegcfaaei.ru^
 ||pb.plat.services^
 ||ouqyid.com^
@@ -4629,11 +4630,8 @@ notdrink.ru#@#.ad-banner:not([style="height: 5px; width: 5px; position: absolute
 ! rentv player antiadblock
 @@||staticmv.mediavitrina.ru/vitrina_assets/*/banner.gif?r=*&ads=adv$domain=player.mediavitrina.ru
 ! https://forum.adguard.com/index.php?threads/%D0%A0%D0%B5%D1%88%D0%B5%D0%BD%D0%BE-all-episodes-net.16180/page-2#post-214098
-all-episodes.club#$#div[id^="adv"] { display: none !important; }
-all-episodes.club#%#//scriptlet('prevent-setTimeout', 'offsetHeight', '1500')
-@@||franecki.net/js/lib.js?$domain=all-episodes.club
-||franecki.net/js/lib.js?$script,redirect=noopjs,important,domain=all-episodes.club
-all-episodes.club#%#//scriptlet("abort-on-property-read", "perROS")
+all-episodes.one,all-episodes.club#$#div[id^="adv"] { display: none !important; }
+all-episodes.one,all-episodes.club#%#//scriptlet("abort-on-property-read", "perROS")
 ! sdamgia.ru - adb detection
 sdamgia.ru#$#.googlead.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display: block !important; }
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
@@ -8504,8 +8502,8 @@ sbsports.pro#%#//scriptlet("prevent-window-open")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/27857
 pornovizion.xyz#%#//scriptlet("abort-current-inline-script", "$", "adsPreroll")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/31743
-! https://github.com/AdguardTeam/AdguardFilters/issues/106606
-spaces.im,modsanandroid.ru#%#//scriptlet("abort-on-property-read", "MobiAds")
+! https://github.com/AdguardTeam/AdguardFilters/issues/135835
+strip2.in,spaces.im,modsanandroid.ru#%#//scriptlet('abort-on-property-read', 'MobiAds')
 ! comments.ua - branding
 comments.ua#%#//scriptlet("abort-current-inline-script", "document.getElementsByTagName", "html_brain_link")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/30527
@@ -8840,7 +8838,7 @@ torent-igruha.com#$#.header-menu-bg { margin-bottom: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/94178
 ixbt.games,ixbt.com#$#.tm-wrapper .tm { margin-bottom: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/93243
-all-episodes.club#$#.wrapper { margin: 0 auto 0 !important; }
+all-episodes.one,all-episodes.club#$#.wrapper { margin: 0 auto 0 !important; }
 ! igrovaya.org - ad leftover
 igrovaya.org#$#body > div.container { margin-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91014
@@ -8964,7 +8962,7 @@ app2top.ru#$#body { overflow: auto !important; }
 !+ NOT_OPTIMIZED
 app2top.ru#$#.content__full { margin-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65542
-zviazda.by#$#body { padding-top: 0 !important; }
+zviazda.by#$#body.branding { padding-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/65465
 trashbox.ru#$#.body_branding { background-color: #202030 !important; background-image: none !important; }
 ! gametech.ru - убран отступ
@@ -9290,7 +9288,7 @@ bombardir.ru#$#body { padding-top: 0!important; }
 ! moviebuster.tv -- remove the top margin
 moviebuster.tv#$##page { margin-top: 0!important; }
 ! anilibria.tv - удаление отступа сверху
-anilibria.iss.one,anilibria.cf,anilib.top,anilibria.tv#$#body > div.header { background: none!important; height: 0!important; }
+iss.ink,anilib.one,anilib.moe,anilibria.iss.one,anilibria.cf,anilib.top,anilibria.tv#$#body > div.header { background: none!important; height: 0!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34828
 segodnya.ua#$#div[id^="div-gpt-ad"] { visibility: hidden!important; }
 segodnya.ua#$##articleBottomInformer { visibility: hidden!important; max-height: 5px!important; }
@@ -11253,6 +11251,12 @@ vz.ru,autoparus.by,ctv.by,hightech.plus,vkpress.ru,newstula.ru,panoramapro.ru,zp
 !
 !
 !
+freeporn247.org##.spot-player
+forum.guns.ru##div[id^="gbr_"]
+metanit.com###jma
+sportmk.ru##.good__top
+sportmk.ru##div[class^="good-place"]
+avtovzglyad.ru##.promo-slider
 24health.by##.banner_reklama
 imageban.ru##div[class^="dc_catfish"]
 arbat.media##._view_ads
@@ -12572,7 +12576,6 @@ kulichki.com##div[style="width:725px;height:90px"]
 14.ru,116.ru,154.ru,161.ru,164.ru,178.ru,26.ru,29.ru,35.ru,42.ru,43.ru,45.ru,48.ru,51.ru,53.ru,56.ru,59.ru,60.ru,62.ru,63.ru,68.ru,70.ru,71.ru,72.ru,74.ru,75.ru,76.ru,86.ru,89.ru,93.ru,e1.ru,ekat.ru,irkutsk.ru,kbs.ru,mgorsk.ru,ngs.ru,ngs22.ru,ngs24.ru,ngs38.ru,ngs42.ru,ngs54.ru,ngs55.ru,ngs70.ru,nn.ru,omsk1.ru,proizhevsk.ru,provoronezh.ru,sochi1.ru,sterlitamak1.ru,tolyatty.ru,ufa1.ru,v1.ru##body div[data-cms-placeid]
 63.ru,e1.ru,ngs.ru,chita.ru,14.ru,116.ru,154.ru,161.ru,164.ru,178.ru,26.ru,29.ru,35.ru,42.ru,43.ru,45.ru,48.ru,51.ru,53.ru,56.ru,59.ru,60.ru,62.ru,63.ru,68.ru,70.ru,71.ru,72.ru,74.ru,75.ru,76.ru,86.ru,89.ru,93.ru,e1.ru,ekat.ru,irkutsk.ru,kbs.ru,mgorsk.ru,ngs.ru,ngs22.ru,ngs24.ru,ngs38.ru,ngs42.ru,ngs54.ru,ngs55.ru,ngs70.ru,nn.ru,omsk1.ru,proizhevsk.ru,provoronezh.ru,sochi1.ru,sterlitamak1.ru,tolyatty.ru,ufa1.ru,v1.ru##body div[data-cms-place]
 ||all-episodes.club/images/backdgnd/
-||all-episodes.club/images/abc/
 ||all-episodes.club/allopenjs/downretl.js
 agroreview.com##a[href^="https://agroreview.com/linkout/"]
 afisha.ru##div[data-ad="true"]
@@ -14937,7 +14940,7 @@ charivne.info##section > div[class] > div[class] > div[style="margin-bottom:20px
 charivne.info##aside > div[style="margin-bottom:20px;"] > a[target="_blank"] > img
 charivne.info##.main-content > div[class] > div[style="margin-bottom:20px;"] > img
 kickz4u.ru##.footer-link-ban
-anilibria.iss.one,anilibria.cf,anilib.top,anilibria.tv,komkur.info###adv_block
+iss.ink,anilib.one,anilib.moe,anilibria.iss.one,anilibria.cf,anilib.top,anilibria.tv,komkur.info###adv_block
 ||media-polesye.by/banners/
 media-polesye.by##div#block-block-15
 maximonline.ru##div.creative-wrapper
@@ -18494,7 +18497,7 @@ magcity74.ru##body > div.container.withb
 inmoment.ru##body > div.floor
 uralskweek.kz##body > div.kms[onclick]
 present-dv.ru##body > div.layout-container > div.layout-pub
-anilibria.iss.one,anilibria.cf,anilib.top,anilibria.tv##body > div.link > a
+iss.ink,anilib.one,anilib.moe,anilibria.iss.one,anilibria.cf,anilib.top,anilibria.tv##body > div.link > a
 migalki.pw##body > div[align="center"] > .page > div[style="padding:0px 25px 0px 25px"] > div[align="center"] > details > div[align="center"] > p > a > img
 migalki.pw##body > div[align="center"] > .page > div[style="padding:0px 25px 0px 25px"] > div[align="center"] > p > a > img
 online-life.cc##body > div[class$="bleft"]
@@ -22963,11 +22966,6 @@ spark.ru##.jobs--layout
 ||share-serials.net/video.php$replace=/showadv110\(\);/createPlayer\(\);/,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/3515
 ||videoframe.blue^$replace=/\{timer:\d\d\, hardTimer\:\d\d\,/\{timer:0\, hardTimer\:0\,/i,important
-! https://forum.adguard.com/index.php?threads/16577/
-||moviki.ru/embed/$replace=/adv_pre_duration:(.|)'\d\d'\,/adv_pre_duration: '1'\,/i
-||moviki.ru/embed/$replace=/adv_pre_duration:(.|)'\d\d'\,/adv_pre_duration: '1'\,/i,important
-||moviki.ru/videos/$replace=/adv_pre_duration:(.|)'\d\d'\,/adv_pre_duration: '1'\,/i
-||moviki.ru/videos/$replace=/adv_pre_duration:(.|)'\d\d'\,/adv_pre_duration: '1'\,/i,important
 ! ivi.ru ads
 ||api.ivi.ru/light/?$replace=/"files":[\s\S]*"mraid_file_url"/"files": []\, "mraid_file_url"/
 ||api.ivi.ru/light/?$replace=/"files":[\s\S]*"mraid_file_url"/"files": []\, "mraid_file_url"/,important
@@ -24148,7 +24146,7 @@ animespirit.*#@#img[width="88"][height="31"]
 ! http://forum.adguard.com/showthread.php?3067-http-anilibria-tv
 @@||animecenter.ru/banner/button.gif
 @@||animestars.ru/banner/88x31.gif
-anilibria.iss.one,al.sdev.xyz,anilibria.cf,anilib.top,anilibria.tv#@#img[width="88"][height="31"]
+iss.ink,anilib.one,anilib.moe,anilibria.iss.one,al.sdev.xyz,anilibria.cf,anilib.top,anilibria.tv#@#img[width="88"][height="31"]
 ! http://forum.adguard.com/showthread.php?3030
 @@||myradio24.com/informer.php
 ! http://forum.adguard.com/showthread.php?3134
