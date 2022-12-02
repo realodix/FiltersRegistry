@@ -136,6 +136,8 @@
 ! >> J <<
 ||jetbux.ir^$all
 ! >> K <<
+||api.karpishe.com^$all
+! Example: asrkhabar.com
 ||kilipo.com/themes/default/player/plugins/vast/ads
 ||kilipo.com/themes/default/player/plugins/ads
 ||kajads.com^$all
@@ -363,6 +365,7 @@
 !-------------------------^ Non-Persian Ads/Trackers/Annoyances Filters used in Persian websites ^-----------------------!
 !-------------------------v Site-Specific Filters v-----------------------!
 ! >> A <<
+||asrkhabar.com/files/adv^
 ||analytics.asiatech.ir^$all
 ||192.168.10.113^$all,domain=airport.ir
 artmusics.top#%#//scriptlet('ubo-nowoif.js')
@@ -381,19 +384,26 @@ anaj.ir##.tab_news > a[href*="gameup.ir"]
 ||abadis.ir/libs/async/ads.min.js^
 abadis.ir##x
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96707
-||asriran.com/files/adv/$important
-||asriran.com/fa/generate/userid
-||cdn.asriran.com/media/vendors/videojs/css/videojs.ads.css
-||cdn.asriran.com/media/jwplayer//vast.js
-||excoino.com^$domain=asriran.com
-asriran.com##.adv_sticky
-asriran.com##.webgardi_main
+asriran.com#%#//scriptlet('ubo-no-xhr-if.js', '/fa/generate/userid')
+! ||asriran.com/fa/generate/userid^
+||asriran.com/files/fa/adv^
+||asriran.com/media/jwplayer//vast.js^
+||asriran.com/media/vendors/videojs/js/videojs-preroll.js^
+||asriran.com/media/vendors/videojs/css/videojs-preroll.css^
+||asriran.com/media/vendors/videojs/js/videojs.ads.min.js^
+||asriran.com/media/vendors/videojs/css/videojs.ads.css^
+asriran.com##.advRemove
+asriran.com##.webgardi_main > #txtadv5 > a[href*="asriran.com/fa/ads/redirect/"]
 asriran.com##.click1000_allcontent
-||androidzoom.ir/wp-content/uploads/*/*.gif
-androidzoom.ir##.widget-container
-androidzoom.ir##.theiaStickySidebar
-androidzoom.ir##.download-link-ads-below
-androidzoom.ir##.kaprila
+asriran.com##.col-sm-12 span:has-text(وبگردی):upward(.col-sm-12)
+asriran.com#$#.common-main { width: 90% !important; }
+asriran.com#$#.col1 { width: 75% !important; }
+asriran.com#$#.col2 { width: 25% !important; }
+androidzoom.ir##.e3lan
+androidzoom.ir###sidebar .widget div[id^="kaprila_linktable"]:upward(.widget)
+androidzoom.ir###sidebar .widget a[href*="faradars.org"] > img[alt*="فرادرس"]:upward(.widget)
+androidzoom.ir##.kpl_linktable
+androidzoom.ir#$#.content { width: 100% !important; }
 ||akharinnews.com/images/banners
 akharinnews.com###headerads
 akharinnews.com###left2
@@ -1246,6 +1256,8 @@ khabarfarsi.com###ads_f
 khabarfarsi.com###banners_120_top_1
 khabarfarsi.com###block-block-120
 ||karpishe.com/api/collect/job-click^
+||karpishe.com/api/actionlog^
+||karpishe.com/api/shared/log^
 ! https://github.com/MasterKia/PersianBlocker/issues/4
 ||kojaro.com/kojaro/ui/js/banner.js
 kojaro.com##.banner-wrapper
