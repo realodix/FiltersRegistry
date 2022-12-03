@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2022.1202.8
+! OriginalVersion: 2022.1203.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -363,6 +363,9 @@
 funbe185.com,funbe186.com,funbe187.com,funbe188.com,funbe189.com,funbe190.com,funbe191.com,funbe192.com,funbe193.com,funbe194.com,funbe195.com,funbe196.com,funbe197.com,funbe198.com,funbe199.com,funbe200.com,funbe201.com,funbe202.com,funbe203.com##img[src^="/images/"]
 !#endif
 !
+[$path=/ca-fe\\/web\\/cafes\\/(ghdi58|14062859)(\\/|\\?)/]m.cafe.naver.com##.banner_add.bottom
+[$path=/(&|\\.|\\?)clubid=14062859(&|$)/]~m.cafe.naver.com,cafe.naver.com###editorMainContent > div:nth-child(1)
+[$path=/(&|\\.|\\?)clubid=14062859(&|$)/]~m.cafe.naver.com,cafe.naver.com##.ArticleFormBanner
 [$path=/(&|\\.|\\?)clubid=27738104(&|$)/]~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]
 [$path=/(&|\\.|\\?)clubid=27738104(&|$)/]~m.cafe.naver.com,cafe.naver.com###main-area #cafe-intro
 [$path=/(&|\\.|\\?)clubid=27738104(&|$)/]~m.cafe.naver.com,cafe.naver.com###upperArticleList ._noticeArticle
@@ -1322,6 +1325,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+enjoytaiwan.co.kr##.widget-side div[style*="min-height:"]
 m.humoruniv.com##div[id*="_"][style*=" "] ~ div[id][class]:not([id*="_"])
 osmanias.com##.taboola
 m.humoruniv.com##div[id][style] ~ div[id*="_twice_"] ~ #ul
@@ -2589,6 +2593,7 @@ m.bunjang.co.kr#?#.app > div > div > div[class]:has(> div[class] > div[class] > 
 m.bunjang.co.kr#?#div:has(> div > div > div:contains(연관상품) > div:has(> div:contains(AD)) > img[alt="AD 가이드"])
 m.ppomppu.co.kr#?#.community-board-notice-box > #bbs_inform:has(> ul > li span:contains(AD))
 !
+[$path=/(&|\\.|\\?)clubid=14062859(&|$)/]~m.cafe.naver.com,cafe.naver.com#?##editorMainContent > *:has(a > img)
 [$path=/(&|\\.|\\?)clubid=14605461($|&)/]~m.cafe.naver.com,cafe.naver.com#?##editorMainContent tr ~ tr:not([class]):has(+ .ad)
 [$path=/(&|\\.|\\?)clubid=27842958($|&)/]~m.cafe.naver.com,cafe.naver.com#?#table[role="presentation"] #editorMainContent div[style^="text-align"] div:has(a[href*=".twitch.tv/"] + a[href*=".twitch.tv/"]) ~ div
 [$path=/fx8300($|\\/|\\?)/]~m.cafe.naver.com,cafe.naver.com#?##cafe-menu .cafe-menu-tit:contains(우리카페 협력업체) + ul
@@ -2665,7 +2670,7 @@ lover900.net,lover901.net,lover902.net,lover903.net,lover904.net,lover905.net,lo
 !#if adguard_ext_safari
 !#endif
 ! #%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/adscale_slot_id/')
-klauncher.kr,poketory.com,withukor.com,tistory.com,love.asdn.kr,avjamak.net,untitle.org,seo-marketing.co.kr#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/adscale_slot_id/')
+remiz.co.kr,enjoytaiwan.co.kr,klauncher.kr,poketory.com,withukor.com,tistory.com,love.asdn.kr,avjamak.net,untitle.org,seo-marketing.co.kr#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/adscale_slot_id/')
 ! #%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
 iphonedev.co.kr,tistory.com,3dpchip.com#%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
 ! BlockAdBlock
@@ -2815,6 +2820,8 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||namu.news/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 @@||namu.wiki/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 !
+@@||remiz.co.kr/theme/remiz_n/img/logo.png#ad&adv_keywords=
+@@||enjoytaiwan.co.kr/thema/Basic/assets/img/logo.png#ad&adv_keywords=
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=detegice.github.io
 @@||t1.daumcdn.net/kas/static/ba.min.js$domain=detegice.github.io
 ilsangt.tistory.com#@#.adsense-area
