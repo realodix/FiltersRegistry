@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2022.1204.7
+! OriginalVersion: 2022.1205.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -21,7 +21,6 @@
 ||andbeyond.media^
 ||adlooxtracking.com^
 ||aniview.com^
-||ntwoad.co.kr^
 ||tnkad.net^
 ||advertising.com^
 ||contextweb.com^
@@ -84,7 +83,6 @@
 ||adx-exchange.toast.com^
 ||adhooah.com^$third-party
 ||adsrv-up.mcrony.com^
-||adbiz3.co.kr^
 ||keywordsconnect.com^$third-party
 ||ads.priel.co.kr^
 ||mrep.kr^$third-party
@@ -96,7 +94,6 @@
 ||simg.imadrep.co.kr^
 ||adv.dailyissue.co.kr^
 ||ad.idnad.co.kr^
-||adbiz2.co.kr^
 ||deepdive.zum.com^
 ||minishop.linkprice.com^
 ||ad.linkprice.com^
@@ -120,8 +117,6 @@
 ||mtag.mman.kr^
 ||ssp.meba.kr^
 ||ad.adnmore.co.kr^
-||nsclick.neoebiz.co.kr^
-||nscreen.neoebiz.co.kr^
 ||netinsight.co.kr^
 ||realclick.co.kr^
 ||googleadservices.com^
@@ -288,7 +283,6 @@
 ||ads.orbi.kr^
 ||ads.mtgroup.kr^
 ##ins.viewus-ad
-##iframe[src*="//ra.ntwoad.co.kr/"]
 ##iframe[src*="//stt.pltapad.com/"]
 ##iframe[src*="//mediaindex.co.kr/DABanner.php"]
 ##ins[class^="MediaIndex_AD_"]
@@ -319,7 +313,6 @@
 ##[id^="div-gpt-ad"]
 ##iframe[src*="//adsrv-up.mcrony.com/"]
 ##a[href*="//click.soonwe.com/"]
-##iframe[src*="//adbiz3.co.kr/"]
 ##iframe[src*="//coupa.ng/"]
 ##img[src^="/bannerpop/"]
 ##iframe[src*="//ads.priel.co.kr/"]
@@ -329,7 +322,6 @@
 ##iframe[src*="//ad.aceplanet.co.kr/"]
 ##iframe[src*="//ad.ajitad.co.kr/"]
 ##iframe[src*="//vod.shoppingcall.me/ad_shoppingCallme.php"]
-##iframe[src*="//adbiz2.co.kr/"]
 ##iframe[src*="//deepdive.zum.com/widget/"]
 ##iframe[src*="//minishop.linkprice.com/"]
 ##iframe[src*="//ad.linkprice.com/"]
@@ -1327,6 +1319,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+fomos.kr##.board_view .related_content > ul > a
 tailstar.net###wrap_right > #right
 m.yakup.com##.news_view_con ~ div[style]
 yakup.com##a[style*="background-image"][style*="/data/banner/"]
@@ -2250,6 +2243,7 @@ x86.co.kr#@#.download_ad
 !
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+fomos.kr#$#.board_view .related_area { height: 300px !important; }
 focus.daum.net#$#div[data-tiara-layer]:not([id]) { margin-top: 0px !important; position: relative !important; }
 autopostkorea.com#$#.td-pb-span8 { width: 100% !important; }
 autopostkorea.com#$#body .td-header-wrap { margin-top: 0px !important; }
@@ -2675,7 +2669,7 @@ lover900.net,lover901.net,lover902.net,lover903.net,lover904.net,lover905.net,lo
 !#if adguard_ext_safari
 !#endif
 ! #%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/adscale_slot_id/')
-bikesell.co.kr,remiz.co.kr,enjoytaiwan.co.kr,klauncher.kr,poketory.com,withukor.com,tistory.com,love.asdn.kr,avjamak.net,untitle.org,seo-marketing.co.kr#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/adscale_slot_id/')
+asdn.kr,healthfeed.co.kr,bikesell.co.kr,remiz.co.kr,enjoytaiwan.co.kr,klauncher.kr,poketory.com,withukor.com,tistory.com,love.asdn.kr,avjamak.net,untitle.org,seo-marketing.co.kr#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/adscale_slot_id/')
 ! #%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
 iphonedev.co.kr,tistory.com,3dpchip.com#%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
 ! BlockAdBlock
@@ -2826,6 +2820,8 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 @@||namu.news/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 @@||namu.wiki/$subdocument,script,domain=namu.wiki|~board.namu.wiki
 !
+@@||daumcdn.net/tistory/2903718/attach/*#ad&adv_keywords=
+@@||daumcdn.net/tistory/3522240/skin/images/ic_menu_white_48dp_2x.png#ad&adv_keywords=
 @@||bikesell.co.kr^$generichide
 @@||bikesell.co.kr/site/images/main_top1.gif#ad&adv_keywords=
 @@||remiz.co.kr/theme/remiz_n/img/logo.png#ad&adv_keywords=
