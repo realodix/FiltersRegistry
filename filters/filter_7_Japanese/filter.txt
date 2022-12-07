@@ -646,8 +646,6 @@ knshow.com#$#.ads { display: block!important;height: 1px!important; }
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=knshow.com
 knshow.com#@#.adsbygoogle
 !#endif
-! https://github.com/hirorpt/filters/commit/db915f36a78fa4b4b08c07ed0bc1ede44bdd477f
-@@||video.tv-tokyo.co.jp/common/js/pc/ads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/81515
 helpsupport.blog.fc2.com#%#//scriptlet('prevent-setTimeout', '.hide')
 helpsupport.blog.fc2.com#$#ins.adsbygoogle { width: 1px!important;height: 1px!important; }
@@ -751,6 +749,10 @@ gadgetdamage.blog.fc2.com#@#.adsbygoogle
 !#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/22654
 video.tv-tokyo.co.jp#@##adspace
+video.tv-tokyo.co.jp#@#.adspace
+video.tv-tokyo.co.jp#@#.ad-placement
+video.tv-tokyo.co.jp#@#.ad-placeholder
+@@||video.tv-tokyo.co.jp/common/js/pc/ads.js
 @@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=video.tv-tokyo.co.jp
 @@||pubads.g.doubleclick.net/gampad/ads?*/video.tv-tokyo.co.jp$domain=video.tv-tokyo.co.jp
 !+ PLATFORM(windows, mac, android)
@@ -1825,6 +1827,10 @@ avgle.com#%#//scriptlet('abort-current-inline-script', '__htapop')
 !-------CSS---------
 !-------------------
 !
+! fix player
+video.tv-tokyo.co.jp#$##tx7player[style*="opacity: 0."] { opacity: 1 !important; }
+! fix layout of sidebar
+gizmodo.jp#$#main > div.l-generalContent-secondary { position: sticky !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135390
 colordic.org#$#footer { height: auto !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/134147
@@ -2089,6 +2095,7 @@ kuruma-news.jp,magmix.jp,trafficnews.jp$$div[data-history="photo_extra"]
 /wp-content/plugins/amazonjs/*
 !
 ! Malware/Phishing
+.php/?tokne=$document
 ://www.aecen-co-jp.*.top^$document
 -visa-co-jp-*.club/customer/%EF%BC%88%E6%A0%AA%EF%BC%89VISA%E3%82%AB%E3%83%BC%E3%83%89%EF%BD%9CVisa%20Secure.php|$document
 ://boy.co.jp.*.com/client/index.html|$document
@@ -2175,6 +2182,8 @@ hentai-covers.site,109cinemas.net,4545.to,bunshun.jp,eikaiwa.dmm.com,gizmodo.jp,
 !
 !
 !
+twihub.me###overlay_area
+twihub.me##div.c-max-width-height-350
 2-carat.net##.inven_spot
 news4wide.net###ads_2
 akb48taimuzu.livedoor.biz##.t_b[style^="font-size: medium; font-weight: 400; background-color:"]
@@ -2333,8 +2342,8 @@ mecicolle.gnavi.co.jp##.article-dfp
 city.isesaki.lg.jp##.koukoku-area
 valorantnews.jp###amgatti_sk-5
 host2.jp##.ad-sub
-roomie.jp##.bfapickup
-roomie.jp##.araklet
+lifehacker.jp,roomie.jp##.bfapickup
+lifehacker.jp,roomie.jp##.araklet
 games.app-liv.jp##.jack-content
 myoji-yurai.net##.sidebar_left_banner
 business-mail.jp##.ad_billboard_inner
@@ -2450,7 +2459,6 @@ postmap.org##.nearby > li:last-child:not([class])
 kledgeb.blogspot.com###HTML6
 kledgeb.blogspot.com##.cls_PostBottomInArticleAdsence_divContents
 kledgeb.blogspot.com##.cls_PostFooterAdsence_divContents
-twihub.me##.container > div.mb-2
 ||kmansin09.com/thema/Basic/assets/img/banner.jpg
 kmansin09.com##div[style*="min-height:280px"]
 fantage.co.jp##.Bnr
@@ -3461,7 +3469,8 @@ baby-calendar.jp##div[id^="JP_BABY_resp"]
 baby-calendar.jp###sp
 financial-field.com##.compact_coop
 financial-field.com##a[href*="https://ads-field.com/ad/p/r?"]
-businessinsider.jp##.f-content-secondary > div[style="margin-top:1em"]
+businessinsider.jp###bi-recommendedBottom-cxense
+businessinsider.jp##.f-content-secondary > div[style^="margin-top:1em"]
 yomiuri.co.jp##.p-ad-news-txt
 studyhacker.net###popup_area
 studyhacker.net##.p-side-banner-lists
