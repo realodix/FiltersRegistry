@@ -455,7 +455,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 02December2022v1
+! OriginalVersion: 07December2022v3
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -597,6 +597,7 @@ bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdto
 ! Fraudulent browser extensions
 ||ublock.org^$document
 ||138.68.252.54^$document
+||block-ads-now.com^$document,popup
 ! Presumed to be fraudulent antivirus extensions on app/extension sites where it's perfectly probable that everyday people could install them.
 play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:has([href*=antivirus][href*=free])
 play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:has([href*=antivirus][href*=clean])
@@ -1848,7 +1849,7 @@ www.microsoft.com##.card[data-bi-cn*="super bob" i]
 www.microsoft.com##.card[data-bi-cn*=" craft " i]
 www.microsoft.com##.card[data-bi-cn*= crafts i]
 www.microsoft.com##.card[data-bi-cn^="sonik " i]
-www.microsoft.com##.card[data-bi-cn*= run faster i]
+www.microsoft.com##.card[data-bi-cn*=" run faster" i]
 www.microsoft.com##.card[data-bi-cn*=super i][data-bi-cn*=craft i]
 www.microsoft.com##.card[data-bi-cn*="a mong" i]
 www.microsoft.com##.card[data-bi-cn*="among them" i]
@@ -1865,7 +1866,7 @@ www.microsoft.com##.card[data-bi-cn*=pixelmon i]
 www.microsoft.com##.card[data-bi-cn*="us among" i]
 www.microsoft.com##.card[data-bi-cn$="ario world" i]
 www.microsoft.com##.card[data-bi-cn*="need for rac" i]
-www.microsoft.com##.card[data-bi-cn*= sim 20 i]
+www.microsoft.com##.card[data-bi-cn*=" sim 20" i]
 www.microsoft.com##.card[data-bi-cn*="car racing" i]
 www.microsoft.com##.card[data-bi-cn*="birth game" i]
 www.microsoft.com##.card[data-bi-cn*="bus sim" i]
@@ -2149,7 +2150,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 28November2022v3
+! OriginalVersion: 07December2022v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -2292,6 +2293,7 @@ bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdto
 ||useragentswitch.com^$all
 ||dev-nano.com^$all
 ||adblocker-app.info^$all
+||block-ads-now.com^$document,popup
 ! Presumed to be fraudulent antivirus extensions on app/extension sites where it's perfectly probable that everyday people could install them.
 play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:has([href*=antivirus][href*=free])
 play.google.com#?#div[class$=" "] > div[class*=" "][jscontroller] > *:has([href*=antivirus][href*=clean])
@@ -7166,6 +7168,8 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||zagtertda.com^$all
 ||zoawufoy.net^$all
 139.45.197.239$network
+! https://github.com/AdguardTeam/AdguardFilters/issues/136390
+||glthub.$document,popup
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
@@ -15796,7 +15800,7 @@ vumoo.to#?#div.col-lg-12:has-text(IMDb)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 03December2022v1
+! OriginalVersion: 07December2022v3
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -17703,7 +17707,7 @@ $removeparam=name,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x
 $removeparam=m_sc,domain=bloomingdales.com
 ! https://us.boohoo.com/?$3p=a_cj_affiliate&~click_id=8c77e9c00c1e11ec82da00790a180510&~secondary_publisher=Offers.com%20-%20Vertive%2C%20LLC&$canonical_url=https%3A%2F%2Fus.boohoo.com%2F&~keyword=8807380&cj_linkd=12344165&cj_webid=8807380&cj_affid=1397064&cj_affname=Offers.com%20-%20Vertive%2C%20LLC&_branch_match_id=962049055156509358
 ! https://www.forever21.com/?$3p=a_cj_affiliate&~click_id=b8c806cf0cad11ec806d4d010a18050d&~secondary_publisher=Offers.com%20-%20Vertive%2C%20LLC&$canonical_url=http%3A%2F%2Fwww.forever21.com&cj_pub_sid=06gtKjdPmfBs463ojiL8awp&_branch_match_id=962306946010631351
-$removeparam=/^\$/,domain=boohoo.com|forever21.com
+$removeparam=/^[$],domain=boohoo.com|forever21.com
 $removeparam=/^\~/,domain=boohoo.com|forever21.com
 ! https://www.columbia.com/?uid=10728209&nid=8807380
 $removeparam=nid,domain=columbia.com|sorel.com
@@ -18537,7 +18541,7 @@ $removeparam=refresh,domain=cnn.com
 ! https://www.argos.co.uk/events/home-offers?$ja=tsid%3A11674%7Cprd%3A6361382
 ! https://www.argos.co.uk/product/7553213?clickPR=plp:1:165
 $removeparam=rec,domain=argos.co.uk
-$removeparam=/[$]ja/,domain=argos.co.uk
+$removeparam=/\$ja/,domain=argos.co.uk
 $removeparam=clickPR,domain=argos.co.uk
 ! https://blog.getadblock.com/getting-started-with-the-adblock-extension-2219b3c7878c?gi=285fe5d9ab7d
 ||blog.getadblock.com^$removeparam=gi
