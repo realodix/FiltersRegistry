@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2022.1206.1
+! OriginalVersion: 2022.1207.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1163,7 +1163,6 @@ funbe185.com,funbe186.com,funbe187.com,funbe188.com,funbe189.com,funbe190.com,fu
 ||nstatic.dcinside.com/ad/
 ||s3-class.orbi.kr/event/
 ||livere.me/ad?
-||mediacategory.com/servlet/
 ||t1.daumcdn.net/adfit/
 ||loader2.fmkorea.com/_myphp/adpost/content_new.php
 ||loader.fmkorea.com/_loader/
@@ -2672,7 +2671,7 @@ lover900.net,lover901.net,lover902.net,lover903.net,lover904.net,lover905.net,lo
 ! #%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/adscale_slot_id/')
 asdn.kr,healthfeed.co.kr,bikesell.co.kr,remiz.co.kr,enjoytaiwan.co.kr,klauncher.kr,poketory.com,withukor.com,tistory.com,love.asdn.kr,avjamak.net,untitle.org,seo-marketing.co.kr#%#//scriptlet('abort-current-inline-script', 'document.addEventListener', '/adscale_slot_id/')
 ! #%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
-iphonedev.co.kr,tistory.com,3dpchip.com#%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
+iphonedev.co.kr,tistory.com#%#//scriptlet("prevent-setTimeout", "/\.displayMessage\(/")
 ! BlockAdBlock
 fafan.kr,blog.dalso.org,svrforum.com,tistory.com#%#//scriptlet("prevent-bab")
 ! FuckAdBlock
@@ -2723,6 +2722,12 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
 !
+!#if (adguard_app_ios || adguard_ext_safari)
+@@||ad.smartmediarep.com/NetInsight/video/$domain=mbn.co.kr
+||ad.smartmediarep.com/NetInsight/video/$redirect=nooptext,domain=mbn.co.kr,important
+@@||smrmembers-smr.smartmediarep.com/smc/smrmembers/$domain=mbn.co.kr
+!#endif
+||ad.smartmediarep.com/NetInsight/video/$redirect=nooptext,domain=mbn.co.kr
 detegice.github.io#%#//scriptlet("abort-on-property-read", "$.prototype.fadeIn")
 ilsangt.tistory.com##.adblock-on
 ilsangt.tistory.com#%#//scriptlet("abort-current-inline-script", "$", ".adsense-area")
@@ -2765,8 +2770,6 @@ uda1004.tistory.com,exey.io,ff14angler.com#@#ins.adsbygoogle
 ||1412.rest/addons/*/adblockDetector.js
 singingdalong.blogspot.com,sajuplus.net##.adsense-alt
 tistory.com,sajuplus.net#%#//scriptlet("set-constant", "checkAds", "noopFunc")
-! mbn.co.kr ( https://github.com/AdguardTeam/AdguardFilters/issues/104586 )
-||ad.smartmediarep.com/NetInsight/video/$redirect=nooptext,domain=mbn.co.kr
 ! foreign website
 play.aidungeon.io,tamrieltradecentre.com,downloads.descendant.me,html5.gamedistribution.com,paraphraser.io,sekai-kabuka.com,teemo.gg,xtremestream.co#@#ins.adsbygoogle
 !
@@ -2792,17 +2795,6 @@ $redirect-rule=nooptext,domain=lover900.net|lover901.net|lover902.net|lover903.n
 ||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt
 !#endif
 !#if (adguard && adguard_ext_android_cb)
-@@ad&adv_keywords=$domain=3dpchip.com
-@@-page-peel/$domain=3dpchip.com
-@@/adchain.$domain=3dpchip.com
-@@/adfootright.$domain=3dpchip.com
-@@/adsxml/ad$domain=3dpchip.com
-@@/adyard300.$domain=3dpchip.com
-@@/impopup/ad$domain=3dpchip.com
-@@/loadadsparam.$domain=3dpchip.com
-@@/meme_ad.$domain=3dpchip.com
-@@_adshare.$domain=3dpchip.com
-@@||3dpchip.com^$generichide
 @@||1412.rest^$generichide
 !
 !
@@ -2831,6 +2823,8 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+@@||ad.smartmediarep.com/NetInsight/video/$domain=mbn.co.kr
+@@||smrmembers-smr.smartmediarep.com/smc/smrmembers/$domain=mbn.co.kr
 @@||daumcdn.net/tistory/2903718/attach/*#ad&adv_keywords=
 @@||daumcdn.net/tistory/3522240/skin/images/ic_menu_white_48dp_2x.png#ad&adv_keywords=
 @@||bikesell.co.kr^$generichide
@@ -2896,7 +2890,6 @@ ff14angler.com#@#ins.adsbygoogle
 ||ad-display.s.zigzag.kr^
 ||d35kivqzqn1ftb.cloudfront.net^
 ||d131nj8pwjizfu.cloudfront.net^
-||www.mediacategory.com^$app=com.ahnlab.v3mobilesecurity.soda
 ||adpies.com^
 ||ssp-ad.momento.dev^
 ||sdk-bid.exelbid.com^
