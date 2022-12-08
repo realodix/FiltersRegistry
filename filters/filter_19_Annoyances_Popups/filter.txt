@@ -715,6 +715,7 @@ reddit.com#@#.ADBAR
 ! SECTION: Anti-adblock - Regular rules
 ! Do not forget about '!#safari_cb_affinity' section for exclusions
 !
+adventuretime.ru#?##oframeplayerJS pjsdiv:has(> pjsdiv[style^="position: absolute;"]:contains(блокировщик))
 playai.nu##.ab-alert
 javopen.co###text-14
 azmath.info,ipalibrary.me#$#.swal2-container { display: none !important; }
@@ -10220,6 +10221,9 @@ zr.ru#%#document.cookie = "zrPushSubsPopUp=1";
 ||xiaomi.eu/community/forumrunner/detect.js
 ||zakon.kz/static_zakon/push-notifications/main.js
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/136876
+binge.buzz#%#//scriptlet('set-constant', 'smartech', 'noopFunc')
+!
 autoevolution.com#$##notif_asker_div { display: none !important; }
 autoevolution.com#$#html { overflow: auto !important; }
 autoevolution.com#$#body  { overflow: auto !important; }
@@ -10247,6 +10251,9 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 !
 ! SECTION: Push notifications - Allowlist
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/136876
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||cdnt.netcoresmartech.com/smartechclient.js$domain=binge.buzz
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131114
 pipedream.com#@##credential_picker_container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130066

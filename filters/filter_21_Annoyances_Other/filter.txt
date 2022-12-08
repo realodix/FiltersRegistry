@@ -3046,6 +3046,7 @@ msn.com###eubanner
 !+ PLATFORM(android, ios)
 yandex.*##.search-select-promo__wrapper
 !
+[$path=/catalog]market.yandex.*##div[data-apiary-widget-name="@marketfront/ModelGalleryContainingBannerIncut"]
 [$path=/^\/$/]yandex.*##.search-bubbles
 yandex.*#?#.desk-notif-card__card:has(> div.desk-notif-card__title:contains(/Попробовать|Подключить Плюс/))
 yandex.*##.news-app > div.news-navigation-menu__wrapper ~ div[class][data-log-id]
@@ -6132,6 +6133,9 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/136502
+financerites.in,financerites.com#%#//scriptlet("adjust-setTimeout", "getlink", "*", "0.02")
+financerites.in,financerites.com#%#//scriptlet("adjust-setInterval", "timeSec--", "*", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136885
 polsatnews.pl,polsatsport.pl#%#//scriptlet('remove-class', 'is--persistent', '.videoPlayer')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136199
