@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2022.1208.0
+! OriginalVersion: 2022.1208.5
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -110,7 +110,7 @@
 ||ad.smartmediarep.com^
 ||mobon.net^
 ||ad*.wisenut.co.kr^
-||acrosspf.com^$third-party
+||acrosspf.com^
 ||ad.esmplus.com^
 ||adcheck.about.co.kr^
 ||ads.mncmedia.co.kr^
@@ -377,7 +377,7 @@ funbe185.com,funbe186.com,funbe187.com,funbe188.com,funbe189.com,funbe190.com,fu
 /data/banner.json?
 /ad-manager.min.js
 /RealMedia/ads/
-||evape.kr/data/editor/
+/^https:\/\/evape\.kr\/data\/editor\/[0-9]+\/[a-z0-9]+_[a-z0-9]+_[a-z0-9]+\./
 /^https:\/\/evape\.kr\/data\/file[0-9]+\/client\//
 ||xetown.com/|$xmlhttprequest
 ||daumcdn.net/tistory/2120872/skin/images/adsense_
@@ -1297,7 +1297,7 @@ moyoplan.com##div[class^="Banner"]
 ! ##div[class*="_ad"]
 medicaltimes.com,yes24.com,kpanews.co.kr,donga.com,busan.com,fnnews.com,m.munhwa.com,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 ! ##div[id*="Banner"]
-www.enuri.com,e-himart.co.kr,kin.naver.com##div[id*="Banner"]
+evape.kr,www.enuri.com,e-himart.co.kr,kin.naver.com##div[id*="Banner"]
 ! ##div[class*="_AD"]
 0db.co.kr##div[class*="_AD"]
 ! ##section[class$="-ads"]
@@ -1311,7 +1311,7 @@ dpg.danawa.com,m.hani.co.kr##div[id*="-ad"]
 ! ##div[id*="Ad"]
 m.seoul.co.kr##div[id*="Ad"]
 ! ##div[class*="ad_"]
-paxnet.co.kr##div[class*="ad_"]
+donga.com,paxnet.co.kr##div[class*="ad_"]
 ! ##div[class*="ad-"]
 lol.ps##div[class*="ad-"]
 ! ##div[id^="Banner"]
@@ -2247,6 +2247,7 @@ x86.co.kr#@#.download_ad
 !
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+evape.kr#$##hotPlace.myBox { margin-left: calc(50% - 65px) !important; }
 fomos.kr#$#.board_view .related_area { height: 300px !important; }
 focus.daum.net#$#div[data-tiara-layer]:not([id]) { margin-top: 0px !important; position: relative !important; }
 autopostkorea.com#$#.td-pb-span8 { width: 100% !important; }
@@ -2726,6 +2727,8 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
 !
+||ssulwar.com/dev/modules/board/skins/*/js/adblockblock.js$redirect=noopjs
+ssulwar.com#%#//scriptlet("abort-current-inline-script", "document.getElementById", "adblock")
 !#if (adguard_app_ios || adguard_ext_safari)
 @@||ad.smartmediarep.com/NetInsight/video/$domain=mbn.co.kr
 ||ad.smartmediarep.com/NetInsight/video/$redirect=nooptext,domain=mbn.co.kr,important
@@ -2827,6 +2830,7 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+@@||ssulwar.com/dev/modules/board/skins/*/js/adblockblock.js
 @@||ad.smartmediarep.com/NetInsight/video/$domain=mbn.co.kr
 @@||smrmembers-smr.smartmediarep.com/smc/smrmembers/$domain=mbn.co.kr
 @@||daumcdn.net/tistory/2903718/attach/*#ad&adv_keywords=

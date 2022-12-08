@@ -2,10 +2,10 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-12-07
+! Last modified: 2022-12-08
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
-! مشکل ها/پیشنهاد ها: https://github.com/MasterKia/PersianBlocker/issues
+! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
 ! مشارکت: https://github.com/MasterKia/PersianBlocker/pulls
 !  لیستی برای برگرداندن آزادی کاربران، چون هر کاربر این آزادی را دارد که چه چیزی وارد مرورگرش می‌شود و چه چیزی وارد نمی‌شود
 !-------------------------v Experimental Generic Filters v-----------------------!
@@ -128,9 +128,11 @@
 ||hamravesh.com^$third-party
 ||sentry.hamravesh.com^$all
 ! Example: behtarino.com
+!  cdn.hostdl.com/assets/downloadha.gif, cdn.hostdl.com/img/mihandownload.gif,
+!! cdn.hostdl.com/img/p30day.gif, cdn.hostdl.com/banners/asandownload.gif
 ||cdn.hostdl.com/img/*.gif$image,third-party,domain=~soft98.ir
-! ^ Example: p30day.ir
-!  cdn.hostdl.com/assets/downloadha.gif, cdn.hostdl.com/img/mihandownload.gif, cdn.hostdl.com/img/p30day.gif
+||cdn.hostdl.com/banners/*.gif$image,third-party,domain=~soft98.ir
+||cdn.hostdl.com/assets/*.gif$image,third-party,domain=~soft98.ir
 ||hantana.org^$all
 ! >> I <<
 ||intrack.ir^$all
@@ -407,32 +409,35 @@ androidzoom.ir###sidebar .widget div[id^="kaprila_linktable"]:upward(.widget)
 androidzoom.ir###sidebar .widget a[href*="faradars.org"] > img[alt*="فرادرس"]:upward(.widget)
 androidzoom.ir##.kpl_linktable
 androidzoom.ir#$#.content { width: 100% !important; }
-||akharinnews.com/images^
 akharinnews.com###left2
 akharinnews.com###ads
 akharinnews.com##.yn-bnr:upward(.custom)
-||asandl.com/Panel/$image
-asandl.com##.text-asan
+||img.cdn.asandl.com/Panel/*.gif
 asandl.com##.game.post
-asandl.com##.asan125
-asandl.com##.asan250
-asandl.com##.asan468
-@@||image.asandl.com/Panel/templates/Sprit.png
-@@||img.cdn.asandl.com/Panel/templates/Sprit.png
-@@||asandl.com/ads/img/$image,~third-party
-||arga-mag.com/wp-content/plugins/meks-easy-ads
-arga-mag.com##.top-ad
+asandl.com##.content-box
+asandl.com##.box:not(.counter, .post)
+asandl.com##.widget-asan:has(a[rel="nofollow"][target="_blank"])
+asandl.com##.text-asan
+@@||img.cdn.asandl.com/Panel/AsanDl-3.gif$image,~third-party
+@@||asandl.com/ads/img/AsanDl-$image,~third-party
+||arga-mag.com/file/img/*.gif
+||arga-mag.com/wp-content/plugins/meks-easy-ads-widget^
 arga-mag.com##.header-ad
+arga-mag.com##.top-ad
+arga-mag.com##.mks_ads_widget
+arga-mag.com##.menu_left-side-ads:upward(.boxsh)
+arga-mag.com##.menu_right-side-ads:upward(.boxsh)
+arga-mag.com###yektanet-pos-2:upward(.boxsh)
+arga-mag.com##.webgardi
 arga-mag.com##.bottom-ad
-arga-mag.com##.menu_right-side-ads
-arga-mag.com##.menu_left-side-ads
-arga-mag.com##.medic-box.inner.boxsh
-||androidina.net/images/asiatech
-||androidina.net/images/baner
-||androidina.net/analytics.js
+arga-mag.com#$#.main { width: 74.3% !important; }
+arga-mag.com#$#.col-sm-push-2 { right: unset !important; }
+||androidina.net/analytics.js^
+||androidina.net/images/asiatech_
+androidina.net##.ads
+androidina.net###ads-sticky
+androidina.net##.col-md-12 > .title:has-text(لینک دوستان)
 androidina.net###ads-text
-androidina.net###agahiBottom
-androidina.net##.banner_wrapp
 ||amazing.ir/wp-content/plugins/google-analytics
 amazing.ir##.widget_custom_html.widget.widget_text
 ||alef.ir/files/advertise/
@@ -2121,7 +2126,6 @@ uploadboy.com#$?#form[name="F1"] > input[id="usr_browser"] { remove: true; }
 uploadboy.com#$?#form[name="F1"] > input[name="referer"] { remove: true; }
 ||uploadboy.com/analytics.js^
 ||uploadboy.com/banner^
-uploadboy.com##.time_circles
 uploadboy.com##.litebox
 uploadboy.com##a[href="http://www.asiatech.ir/"]
 uploadboy.com##[id^="mediaad"]:upward(.text-center)
