@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2022-12-08 08:34:16 CET
+! Last modified: 2022-12-08 15:59:48 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -186,7 +186,6 @@ expressen.se##strong:has-text(/^annons:/i):upward(p)
 familjeliv.se##article:has-text(/annons:/i)
 fastighetssverige.se##.badge-partner-text:upward(.featured-article)
 feber.se,tjock.se#%#//scriptlet('ubo-set.js', 'dovideostuffAD', 'noopFunc')
-feber.se,tjock.se#%#//scriptlet('ubo-set.js', 'userStatus', 'undefined')
 feber.se,tjock.se##f-internallinks-new:has-text(Annons)
 fen.se,ingenjorsjobb.se#%#//scriptlet('ubo-rc.js', 'advert-take-over-active')
 festivalinfo.se##a[href*="casino"]:upward(.node-news)
@@ -520,6 +519,7 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||long.interestmoments.com/go/away$all
 ||look.utndln.com^$all
 ||lwadm.com^$important,domain=sydostran.se
+||maxetise.net^$redirect-rule=noopjs,script,domain=feber.se|tjock.se
 ||mediacreeper.com/image$image,redirect=32x32-transparent.png
 ||mediacreeper.se/image$image,redirect=32x32-transparent.png
 ||online.swedbank.se.swedd.$document
