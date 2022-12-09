@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2022.1209.0
+! OriginalVersion: 2022.1209.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -10,6 +10,7 @@
 ! Version must be UTC format.
 !
 !#if adguard
+||adm.smartmediarep.com^
 ||deapi.afreecatv.com^
 ||adxadserv.com^
 ||admax.me^
@@ -1323,6 +1324,8 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+mongri.net##.entry-content > div[id^="top"]
+mongri.net###sidebartop
 ruliweb.com##div[class^="nbp_container"]
 fomos.kr##.board_view .related_content > ul > a
 tailstar.net###wrap_right > #right
@@ -2624,6 +2627,7 @@ blacktoon199.com,blacktoon200.com,blacktoon201.com,blacktoon202.com,blacktoon203
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+sbs.co.kr#%#//scriptlet("set-constant", "player.renderAdSequence", "undefined")
 m.humoruniv.com#%#//scriptlet("prevent-setTimeout", "/height.+replace.+px[^]+min-height/")
 domin.co.kr#%#//scriptlet("set-constant", "bannerpop.popup", "noopFunc")
 www.naver.com#%#//scriptlet("set-cookie", "NM_TOP_PROMOTION", "1")
@@ -2681,7 +2685,7 @@ iphonedev.co.kr,tistory.com#%#//scriptlet("prevent-setTimeout", "/\.displayMessa
 fafan.kr,blog.dalso.org,svrforum.com,tistory.com#%#//scriptlet("prevent-bab")
 ! FuckAdBlock
 te31.com,tistory.com#%#//scriptlet("prevent-fab-3.2.0")
-te31.com,tistory.com#%#//scriptlet("abort-on-property-read", "adBlockDetected")
+1004lucifer.blogspot.com,te31.com,tistory.com#%#//scriptlet("abort-on-property-read", "adBlockDetected")
 ||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$redirect=prevent-fab-3.2.0
 ! ai_front anti-adblock
 plankim.com#%#//scriptlet("abort-current-inline-script", "ai_adb.init")
@@ -2830,6 +2834,8 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+@@||ad.smartmediarep.com/NetInsight/video/smr1/smr1/$domain=allvod.sbs.co.kr
+@@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/*/fuckadblock.min.js$domain=1004lucifer.blogspot.com
 @@||ssulwar.com/dev/modules/board/skins/*/js/adblockblock.js
 @@||ad.smartmediarep.com/NetInsight/video/$domain=mbn.co.kr
 @@||smrmembers-smr.smartmediarep.com/smc/smrmembers/$domain=mbn.co.kr
