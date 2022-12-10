@@ -437,8 +437,9 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
-! uma.pure-db.com anti-adb
-@@||uma.pure-db.com/ads.txt$xmlhttprequest,~third-party
+! https://github.com/AdguardTeam/AdguardFilters/issues/137055
+uma.pure-db.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=uma.pure-db.com
 ! tters.jp anti-adb
 tters.jp#@#.ad-section
 ! musmus.main.jp anti-adb
@@ -453,8 +454,8 @@ snrec.jp#$#body.tp-modal-open { overflow: visible!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132814
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132525
 ! Similar site in Base filter: soranews24.com
-rocketnews24.com,youpouch.com#%#//scriptlet("prevent-setTimeout", "getPropertyValue")
-rocketnews24.com,youpouch.com##.ad
+rocketnews24.com,youpouch.com#%#//scriptlet("prevent-setTimeout", "[native code]", "500")
+rocketnews24.com,youpouch.com#$#.ad { display: none !important; }
 @@||tpc.googlesyndication.com/simgad/$xmlhttprequest,domain=rocketnews24.com|youpouch.com
 ||tpc.googlesyndication.com^$image,redirect-rule=1x1-transparent.gif,domain=rocketnews24.com|youpouch.com
 @@||g.doubleclick.net/gampad/ads?$xmlhttprequest,domain=rocketnews24.com|youpouch.com
@@ -3569,7 +3570,7 @@ ssnp.co.jp,weekly-jitsuwa.jp##.bbear-ad
 weekly-jitsuwa.jp##.widget_bbearad
 weekly-jitsuwa.jp##.widget_bbearad-recommend
 weekly-jitsuwa.jp##.widget_bbearad-single-bottom
-twimaru.com,yakusokunosora.com##.aicp
+webcommu.net,twimaru.com,yakusokunosora.com##.aicp
 free-erobooks.*###right-side > div.side-box > div.side-title:first-child
 free-erobooks.*##.open
 purple-novel.com###side > aside.widget
