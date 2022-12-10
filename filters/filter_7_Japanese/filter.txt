@@ -454,7 +454,7 @@ snrec.jp#$#body.tp-modal-open { overflow: visible!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132814
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132525
 ! Similar site in Base filter: soranews24.com
-rocketnews24.com,youpouch.com#%#//scriptlet("prevent-setTimeout", "[native code]", "500")
+rocketnews24.com,youpouch.com#%#//scriptlet("prevent-setTimeout", "[native code]")
 rocketnews24.com,youpouch.com#$#.ad { display: none !important; }
 @@||tpc.googlesyndication.com/simgad/$xmlhttprequest,domain=rocketnews24.com|youpouch.com
 ||tpc.googlesyndication.com^$image,redirect-rule=1x1-transparent.gif,domain=rocketnews24.com|youpouch.com
@@ -929,6 +929,10 @@ otonasalone.jp,sumaiweb.jp#?#._popIn_infinite_page > a._popIn_recommend_article_
 !
 !
 !
+blog.fc2.com#?#div[class$="_outline"] > div > div.plugin-freearea > a[href^="https://www.amazon.co.jp/dp/"][target="_blank"]:not([name]):upward(3)
+blog.fc2.com#?#div[class$="_outline"] > div > div.plugin-freearea > ins.adsbygoogle:upward(3)
+jobcatalog.yahoo.co.jp#?#div[class*="__"] > div[id$="ad1"]:upward(1)
+asobu.blog#?#.ark-block-columns:contains(スポンサードリンク)
 gfoodd.com#?#.code-block > div.sponserdrink:has(+ .ninja-recommend-block)
 gfoodd.com#?#.post > div.singleh4:contains(/いつもありがとうございますＲＳＳ|食べ物ＲＳＳ/)
 bintan.ula.cc##.res1000 li:has(> div[style="height:8px;"]:empty)
@@ -2109,6 +2113,7 @@ kuruma-news.jp,magmix.jp,trafficnews.jp$$div[data-history="photo_extra"]
 /wp-content/plugins/amazonjs/*
 !
 ! Malware/Phishing
+.top/Personal/member/Login/index.php?oneTimeAccessID=$document
 ://paypay-bank.*.doa.php|$document
 .php/?tokne=$document
 ://www.aecen-co-jp.*.top^$document
@@ -2132,9 +2137,6 @@ kuruma-news.jp,magmix.jp,trafficnews.jp$$div[data-history="photo_extra"]
 ://mizu*.cyou/client/index.php|$document
 /\.(?:cn|icu|pro)\/Personal\/member\/Login\/index\.php\?oneTimeAccessID=/$document
 ://paldy.*/?o=$document
-://www2.amazon.co.jp.*.lol/ap/signin|$document
-://www.amazon.co.jp.*.hair/ap/signin|$document
--smbc.com/client/index.php|$document
 /_ap/signin?scid=s_kwa_2021fas_*&icm_acid=$document
 /\.(?:bar|icu|id|rest|shop|top|xyz)\/[0-9A-Za-z]{2,10}\/page1\.php$/$document
 ://www2.myjcb.com.jp.*.cn/pc/issmyjcb_login.php|$document
@@ -2193,6 +2195,7 @@ hentai-covers.site,109cinemas.net,4545.to,bunshun.jp,eikaiwa.dmm.com,gizmodo.jp,
 !
 !
 !
+jobcatalog.yahoo.co.jp###qa-mr-ad1
 kasegeru.blog.jp##.article-body-inner > a[href^="https://www.amazon.co.jp/gp/"]
 jumpmatome2ch.biz##div[class^="ad-box"]
 uwakich.com##div[style^="height:350px;"][style*="width:735px;"]
