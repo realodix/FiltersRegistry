@@ -5,8 +5,8 @@
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
 ! Expires: 2 days
-! Last modified: Mon, 12 Dec 2022, 17:31 UTC+01:00
-! OriginalVersion: 2022.12.12.2
+! Last modified: Mon, 12 Dec 2022, 21:31 UTC+01:00
+! OriginalVersion: 2022.12.12.5
 ! Najnowsza wersja zawsze na: https://github.com/FiltersHeroes/PolishAnnoyanceFilters
 ! Zgłoszenia:
 !   Formularz (nie wymaga rejestracji) => https://polishannoyancefilters.netlify.app/issues
@@ -15,7 +15,7 @@
 ! Homepage: https://polishannoyancefilters.netlify.app
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: pon, 12 gru 2022, 17:31 UTC+01:00
+! Aktualizacja: pon, 12 gru 2022, 21:31 UTC+01:00
 !
 !
 ! Newslettery (nie popupy)
@@ -6317,7 +6317,6 @@ tvokazje.pl##.call-popup-newslater
 twitch.tv#?##twilight-sticky-footer-root:-abp-contains(Zarejestruj się)
 twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#?##layers > div[class*=" "]:first-of-type:-abp-has(a[href="/i/flow/signup"])
 tymbark.com,winiary.pl###kwit_brandwidget_btn
-tysol.pl###app
 tysol.pl###poll
 tysol.pl##.fiszka
 um.jaslo.pl###wp_access_helper_container
@@ -11878,7 +11877,7 @@ polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com#%#//script
 !
 ! Codename: Other Elements - Supplement
 !/^https:\/\/(www\.)?youtube(-nocookie)?\.com\/embed\/.*autoplay=1/$3p,frame,object,redirect=click2load.html:10,domain=~pinger.pl|pl|~wykop.pl
-*##div[style]:not([id], [class]):has(> h2 ~ span[title*="-extension://"][title*="/web_accessible_resources/epicker-ui.html"])
+*##body > div[style^="font-family:"]:not([id], [class]):has(> h2 ~ span[title*="-extension://"][title*="/web_accessible_resources/epicker-ui.html"])
 /^https:\/\/(www\.)?youtube(-nocookie)?\.com\/embed\/.*autoplay=1/$removeparam=autoplay,domain=~pinger.pl|pl
 ||e-niemcy.de/wp-content/themes/goodnews/assets/vendors/jquery-nicescroll/jquery.nicescroll.min.js
 ||mokrenosy.pl/*/avada-nicescroll.js$script
@@ -12054,7 +12053,7 @@ twitter.com###layers span:has-text(/^Korzystanie z Twittera za pomocą aplikacji
 !#endif
 !
 !
-! Reguły specjalne
+! Filtry specjalne
 !#if !ext_ublock
 polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com###pafadguard
 !#endif
