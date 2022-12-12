@@ -1,5 +1,11 @@
 // Changes in the platforms configuration:
 //
+// Temporary excluding cosmetic rules with modifiers from iOS and Safari:
+// https://kb.adguard.com/en/general/how-to-create-your-own-ad-filters#non-basic-rules-modifiers
+// The regular expression that does it is: "^\\[.+?\\].*#(\\$|\\@|\\?|\\@){0,2}#"
+// TODO: should be removed after iOS and Safari versions are updated with
+// SafariConverterLib v2.0.28 or higher.
+//
 // Replacing :has with :-abp-has in all filters.
 // TODO: remove this when ExtCSS v2.0 is released to all AG products.
 
@@ -98,7 +104,8 @@ module.exports = {
                 ",empty",
                 "\\$webrtc",
                 "\\$csp=",
-                "\\$network"
+                "\\$network",
+                "^\\[.+?\\].*#(\\$|\\@|\\?|\\@){0,2}#"
             ],
             "replacements": [
                 {
@@ -196,7 +203,8 @@ module.exports = {
                 ",redirect-rule=",
                 "\\$empty",
                 ",empty",
-                "\\$webrtc"
+                "\\$webrtc",
+                "^\\[.+?\\].*#(\\$|\\@|\\?|\\@){0,2}#"
             ],
             "replacements": [
                 {
@@ -314,7 +322,8 @@ module.exports = {
                 "\\$redirect=",
                 ",redirect=",
                 "\\$redirect-rule=",
-                ",redirect-rule="
+                ",redirect-rule=",
+                "^\\[.+?\\].*#(\\$|\\@|\\?|\\@){0,2}#"
             ],
             "ignoreRuleHints": false
         },
