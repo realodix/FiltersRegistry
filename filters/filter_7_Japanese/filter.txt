@@ -437,6 +437,9 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/137316
+o-dan.net#%#//scriptlet('remove-class', 'visited', '#oRslt li a.visited', 'stay')
+o-dan.net#%#//scriptlet('prevent-setTimeout', 'oAdChk')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/137055
 uma.pure-db.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=uma.pure-db.com
@@ -456,8 +459,8 @@ snrec.jp#$#body.tp-modal-open { overflow: visible!important; }
 ! Similar site in Base filter: soranews24.com
 rocketnews24.com,youpouch.com#%#//scriptlet('remove-attr', 'style|height', 'amp-img')
 rocketnews24.com,youpouch.com#$?#style[amp-custom]  { remove: true; }
-rocketnews24.com,youpouch.com##a.advertiser-link
-rocketnews24.com,youpouch.com##a.call-to-action-link
+rocketnews24.com,youpouch.com#$#a.advertiser-link { font-size: 0 !important; }
+rocketnews24.com,youpouch.com#$#a.call-to-action-link { font-size: 0 !important; }
 rocketnews24.com,youpouch.com#$#a.body-link { font-size: 0 !important; }
 rocketnews24.com,youpouch.com#$#a.title-link { font-size: 0 !important; }
 rocketnews24.com,youpouch.com#$#a[data-asoch-targets] { font-size: 0 !important; }
