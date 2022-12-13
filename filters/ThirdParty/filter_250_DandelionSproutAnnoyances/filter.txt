@@ -1,9 +1,9 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 22November2022v1-Beta-Compilation
+! OriginalVersion: 13December2022v1-Beta-Compilation
 ! Expires: 2 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
-! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
+! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, prayer time clocks on newssites, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds
 ! What this broad compilation does not block: Newsletters, cookie banners, social media links to company pages
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! OriginalVersion: 27October2022v1
@@ -15486,6 +15486,188 @@ daz3d.ru#%#//scriptlet('ubo-set-constant.js', 'snow', 'undefined')
 !#if !ext_ublock
 ! Trying to preemptively prevent the most severe miswritten entries (uBlock Origin already has internal measures to fix this)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/135385
+!#endif
+! Title: ⏰ Anti-'Prayer times' List
+! Translated title: 🇮🇷: لیست ضد اوقات شرعی
+! Translated title: 🇹🇷: Anti-'Namaz vakitleri' Listesi
+! OriginalVersion: 13December2022v1
+! Expires: 7 days
+! Description: 🇬🇧: So you're sitting there reading a newssite, and then you find big banners that try to tell you the exact points in time you're supposed to pray? If you want to feel less stressed and less like a slave of the clock, then this list is for you.
+! 🇮🇷: توضیحات: خب شما نشستید دارید یک سایت خبری رو میخونید، و ناگهان چشمتون به بنر های بزرگی میفته که در تلاشن اوقات شرعی رو بهتون نشون بدن و ساعت و لحظه دقیقِ اذان رو بهتون بگن. اگه میخوایید اضطراب کمتری داشته باشید و بَرده‌ی ساعت نباشید، پس این لیست برای شماست.»
+! 🇹🇷: Yani orada oturmuş bir haber sitesi okuyorsunuz ve sonra size dua etmeniz gereken zamanı söylemeye çalışan büyük pankartlar mı görüyorsunuz? Daha az stresli ve daha az saatin kölesi gibi hissetmek istiyorsanız, bu liste tam size göre.
+! 🇬🇧: If you know of any other general websites that tend to display prayer times, give me a heads-up about it. I am also willing to add entries for non-Islamic prayer times, such as for e.g. Evangelical Christian movements.
+! 🇹🇷: Namaz vakitlerini gösterme eğiliminde olan başka genel web siteleri biliyorsanız, beni bu konuda bilgilendirin. Ayrıca, İslami olmayan ibadet vakitleri için de kurallar ekleyebilirim. Ör: Evanjelik Hıristiyan ibadetler.
+! Description translations to Arabic, Malay, and French are wanted: https://crwd.in/dandelion-sprout-nordic-filter
+! 🇬🇧 Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
+! 🇹🇷 Anasayfa: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-t%C3%BCrk%C3%A7e
+! 🇬🇧: ——— Generic ———
+! 🇮🇷: ——— عمومی ———
+! 🇹🇷: ——— Genel ———
+! albayan.ae
+##.imsakiyaholder:not(html, body)
+! lematin.ma
+##div[class*=monde i] ~ * .priere-bloc
+! ntv.com.tr
+##.imsakiye:not(html, body)
+! haberturk.com
+##.widget-ramadan:not(html, body)
+###ramazan-sayac
+! https://www.posta.com.tr/insan/astroloji
+##.imsakiye-lite:not(html, body)
+! haberler.com
+###imsak_serit
+! addustour.com
+||timesprayer.com/widgets.php^$third-party
+! yeniasya.com.tr
+##div[class*=news i] ~ .salaat-times
+! bursahabermerkezi.com
+##.sidebar > .namazvakitleri
+! https://www.burdurweb.com/web/
+##meta[content*=haber i] ~ * a[href$="/namaz-vakitleri"]
+! https://www.herihaber.com.tr/belediye-15-tlye-mal-ettigi-icme-suyunu-254-tlye-satiyor/ (06/12/2022)
+##div[id*=haber i] ~ * #namazVakitleri
+! gunisigigazetesi.net
+##div[id*=news i] ~ * #prayer-times
+! bingolgazetesi.com.tr, bingolkenthaber.com, burdurilkadim.com
+##div[class*=haber i] ~ * .namaz
+! cagdasburdur.com, tarsusekspres.com.tr
+||vakitci.com^$subdocument,third-party
+! mersinistikbal.net
+##div[id*=haber i] ~ * .namaz-saatleri
+! esgundem26.com
+##.panel-namaz.panel-bg-mosque:not(html, body)
+! asigazetesi.com
+##.header2-vakit:not(html, body)
+! analizmerkezi.com
+##div[class*=haber] ~ * .namazvakityeni
+! batmancagdas.com
+##.hs-panel-namaz:not(html, body)
+! nigdehaber.com.tr
+###module_namaz_vakit
+! gazeteguncel.com, gaziantep27.net
+##.banner-side ~ .prayer-side
+! nigdehaber.com.tr (06/12/2022)
+||gazisoft.com/services.php?*service=namaz^$third-party
+||bogazicigundem.com/theme*/namaz_bg.$third-party
+! https://www.sabah.com.tr/ (06/12/2022)
+##[class*=News i] ~ [data-praytimes-counter]
+! https://www.milligazete.com.tr/ (06/12/2022)
+###lblPrayerLink
+! jugantor.com (07/12/2022)
+##link[href*=news] ~ * #prayer-time
+||jugantor.com/web-assets/js/PrayTimes.js^$~third-party
+! dailyinqilab.com (07/12/2022)
+##div[class*=paper] ~ .namaz_sec
+! amarsangbad.com (07/12/2022)
+##div[class*=news i] .namaj-time
+! alwatan.kuwait.tt (07/12/2022)
+##[id*=news i] .NextPrayerTime
+! Indonesian news sites
+##.waktu-solat-block:not(html, body)
+##div[class^=waktusolat_]
+~e-solat.*##[href^="https://www.e-solat."]
+! 🇬🇧: ——— Site-specific ———
+! 🇮🇷: ——— مختص هر سایت ———
+! 🇹🇷: ——— Siteye-özel ———
+yenisafak.com,yeniakit.com.tr,haber7.com##.prayer
+yjc.ir,tabnak.ir##a[href$="/fa/prayer"]
+adnocdistribution.ae##.footer-info-time
+albayan.ae##.prayername
+albayan.ae##.prayertimer
+almanar.com.lb#?#.box-wrapper:has(.prayer-times)
+alrai.com#?#.padd10px:has(> .salat-time)
+arabiaweather.com##.ramadan-section-container
+dhivehi.mv###ptimes
+dhivehi.mv##a[href="/prayer-times/"]
+dirarab.net##a[href$="/prayertimes"]
+dubai-online.com#?#.entry:has-text(Prayer Times)
+edarabia.com#?#.box:has-text(Prayer Times)
+elwatannews.com##li > [href$="/pray"]
+emaratalyoum.com##div[class^=imsakiya-]
+haberler.com#?#.haberler-item:has-text(Namaz Vakitleri)
+hamariweb.com#?#div.col-md-4:has(td[width="25%"])
+info-algerie.com##a[href*=ajouter-heure-priere]
+info-algerie.com#?#.blog-single-sidebar:has(a[href*=ajouter-heure-priere])
+menara.ma##.main-horaires
+portal.moi.gov.qa#?#li:has(> a[href*="/prayertimings/"])
+raajje.mv##.prayer-bar > div[style*="235"]
+radiogafsa.tn#?#.widget:has(ahmedii)
+shobiddak.com#?#h4:has-text(/^أوقات الصلاة$/)
+shobiddak.com#?#li:has(a[href="/prayers/cities"])
+thenational.ae#?#.dropdown:has(.prayer)
+thenews.com.pk##a[href$="/prayer-time"]
+tunisienumerique.com#?#.bande-header-container > ul > li:has(.priere)
+tunisienumerique.com#?#li:has(> a[href*="/%d8%a3%d9%88%d9%82%d8%a7%d8%aa-%d8%a7%d9%84%d8%b5%d9%84%d8%a7%d8%a9-%d9%81%d9%8a-%d8%aa%d9%88%d9%86%d8%b3/"])
+visitabudhabi.ae#?#li:has(> a[href*="/prayer.times.aspx"])
+www.aviny.com##a[href*="prayer.aviny.com"]
+yabiladi.*##a[href="/prieres/"]
+yabiladi.*#?#.frame:has(.prayer)
+yenisafak.com#?#.item:has(a[href$=-prayer-times])
+gulf-times.com###headingTwo
+alarab.qa##.timetables
+alrai.com##.salat-item
+addustour.com#?#div.al-module-2:has-text(اوقات الصلاة)
+alwatannews.net##.side_menu_prayer
+yeniakit.com.tr##.info-bar > li:not([class], [title])
+takvim.com.tr##.dualTabWidget > .tabs > li:nth-of-type(2):last-of-type
+star.com.tr##.pray
+istiklal.com.tr##.nv-main
+agridogruhaber.com##.BlokNamazRenk
+agridogruhaber.com##.namazbg
+cagdasburdur.com#?#div[id^=custom_html-]:has-text(NAMAZ VAKİTLERİ)
+dogruhaber.com.tr##.col-md-4 > .panel-success
+haberantalya.com#?#.col-md-12:has(> .BlokNamazRenk)
+kuzeyanadolugazetesi.com#?#.blok-baslik:has-text(BURÇ)
+kuzeyanadolugazetesi.com#?#.cerceve-anket:has(> #burc)
+yenisalpazari.com#?##sidebar .kanews-section:has(.table-prayer)
+malatyamegahaber.com#?#section.haberler:has(strong:has-text(NAMAZ VAKİTLERİ))
+alwatan.kuwait.tt##.time > div[style^="float:left;"]
+guncelgazete.com##.praying-content
+yozgatgazetesi.com,esgundem26.com##.namaz-vakitleri
+bursahakimiyet.com.tr##.prayertimes
+todaytime.ir##.pray_times
+bingolonline.com##.namazVakitleriBlok
+||icdn.tgrthaber.com.tr/*/cami_icon_*.png^$image
+||img.piri.net/*imsakiye.jpg^$domain=yenisafak.com
+||albayan.ae/res/img/prayertmbg.png^$~third-party
+!#if !adguard
+! 🇬🇧: ——— Entries that block text-only links/buttons ———
+trgthaber.com.tr,haberturk.com##a[href$="namaz-vakitleri"]
+todaytime.ir##.navbar-nav [href="/اوقات-شرعی-اذان"]
+! adwhit.com
+##a[href$=PrayerTimes]
+! alrai.com
+##.salat-time:not(html, body)
+! cnnturk.com
+##a[href*="/namaz-vakitleri/"]
+! tunisienumerique.com
+##a[href*="/horaires-de-priere" i]
+! dhivehi.mv
+##.icon_prayer-times:not(html, body)
+! bolgegundem.com
+##a[href*="/namaz-vakitleri.htm"]
+! bahesab.ir
+##[href$="/time/prayer/"]
+! almanar.com.lb
+##.dropdown-prayer:not(html, body)
+! 🇬🇧: ——— Could no longer be found on the example site ———
+! giresungazete.net
+!!!##.namazWidget:not(html, body)
+! almasryalyoum.com
+!!!##.prayer_time:not(html, body)
+! info-algerie.com
+!!!##a[href*=horaires-priere]
+! casablancacity.ma
+!!!##a[href$="/مواقيت-الصلاة"] (The example site is down.)
+! No known example sites
+###pray_time
+##.prayer-sec_1:not(html, body)
+##.prayerBg:not(html, body)
+##a[href*="/prayer_timings."]
+##a[title="Prayer Timings"]
+##li > [href*="/prayer-time-"]
+~google.*##a[href$="/prayer-times"]
+~albayan.ae##.prayertime:not(html, body)
 !#endif
 !+ NOT_OPTIMIZED
 ! Title: 🔴 Anti-'Unnecessary notification counters' List
