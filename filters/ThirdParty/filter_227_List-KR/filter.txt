@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2022.1212.6
+! OriginalVersion: 2022.1213.8
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -383,6 +383,7 @@ funbe185.com,funbe186.com,funbe187.com,funbe188.com,funbe189.com,funbe190.com,fu
 /ad-manager.min.js
 /RealMedia/ads/
 !
+||sellclub.co.kr/community/data/ad-pay/
 ||danawa.com/*/NBP/powerLink.js.php
 /^https:\/\/cdn[0-9]+\.boribori\.co\.kr\/rimg\/(0|110x250)\/cdn\/contents\/disp_corner_conts\//
 ||m.humoruniv.com/banner/
@@ -542,7 +543,6 @@ funbe185.com,funbe186.com,funbe187.com,funbe188.com,funbe189.com,funbe190.com,fu
 ||chosunlatimes.com/data/file/banner/
 ||onechurch.nz/banners/
 /^https:\/\/upload\.acmicpc\.net\/[a-z0-9]{8}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{4}-[a-z0-9]{12}\/$/
-||grepp-programmers.*.amazonaws.com/production/file_resource/$domain=hashcode.co.kr,image
 ||geo.dailymotion.com/libs/player/$domain=ggilbo.com
 ||api.dailymotion.com/video/$domain=ggilbo.com
 ||medigatenews.com/file/banner/
@@ -764,7 +764,6 @@ funbe185.com,funbe186.com,funbe187.com,funbe188.com,funbe189.com,funbe190.com,fu
 ||junggi.co.kr/data/__banner/
 ||junggi.co.kr/image/banner/
 ||photo.coolenjoy.co.kr/banner/
-||s.pstatic.net/imgshopping/static/sb/shoppingbox/
 ||json*.dcinside.com/json*/comment_boy_v*.php
 ||menu.mt.co.kr/js/AdsDispatcher.js
 ||dcinside.com/_js/ad_context_powLink.js
@@ -795,7 +794,6 @@ funbe185.com,funbe186.com,funbe187.com,funbe188.com,funbe189.com,funbe190.com,fu
 ||kormedi.com/wp-content/uploads/ads/
 /^https:\/\/shop[0-9]\.daumcdn\.net\/shophow\/sib\/[0-9]_[0-9]{12}_[A-z]{10,}/
 ||trendpick.shopping.naver.com^$document
-||compuzone.co.kr/img/multi_brandshop/
 /^https:\/\/image[0-9]{1,2}\.compuzone\.co\.kr\/img\/images\/main[0-9]{4}\/[A-z]{1,2}\/[A-z]{3,}Banner(|[0-9])_(|add_)[0-9]{5,6}\./
 ||daumcdn.net/tistory/927313/skin/images/book_300_poster.png
 ||img.peterpanz.com/images/banner/adimUpload/
@@ -976,8 +974,6 @@ funbe185.com,funbe186.com,funbe187.com,funbe188.com,funbe189.com,funbe190.com,fu
 ||image.thebell.co.kr/banner/
 ||koya-culture.com/data/banner/
 ||api.ruliweb.com/floating_ad|
-||img.side.mythiell.com/ocenAd*.html
-||side.mythiell.com/readUrl.php?url=http://adv.imadrep.co.kr/
 ||file.osen.co.kr/*/css/ad.css
 ||img.mbn.co.kr/ad/
 ||techworld.speedgabia.com/epnc.co.kr/ad/
@@ -1159,6 +1155,8 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+sellclub.co.kr##table[valign="top"] div[id^="left_body"] > table td[align="center"] > div[style*=" "]
+sellclub.co.kr###floating_bottom
 mongri.net##.entry-content > div[id^="top"]
 mongri.net###sidebartop
 ruliweb.com##div[class^="nbp_container"]
@@ -1633,8 +1631,7 @@ compuzone.co.kr###contents > div[id^="bnrLink"].ma_visual_area.bnrContents ~ div
 compuzone.co.kr###eventzone_img_wrap #con_area > input[type="hidden"] + #con
 compuzone.co.kr###contents #recomN.recomend_main
 compuzone.co.kr###contents > #EP_Rbnr, #contents > #EP_linebnr
-compuzone.co.kr##.contentsWrap .product_list_wrap > div[class^="ad_"], .contentsWrap .product_list_wrap > div + ul.product_list
-compuzone.co.kr##.contentsWrap > .product_list_linebnr, .contentsWrap > .brand_area, .contentsWrap > .topBanner_area
+compuzone.co.kr##.contentsWrap > .topBanner_area
 compuzone.co.kr##.pdtl_cm_detail .md_software
 compuzone.co.kr###searchArea #side_ad
 compuzone.co.kr##form > div[id$="wing_section"][class*="wing_section"]
@@ -1646,7 +1643,6 @@ compuzone.co.kr###container .cpz_inner > #brandshop
 compuzone.co.kr###container #main_five_fixbnr ul.five_fixbnr_list
 compuzone.co.kr##.cpz_inner .category_set_area div[class^="second_cate_area"] div[class^="catebnr_area"]
 compuzone.co.kr##body > #container > .cpz_inner
-compuzone.co.kr###container > #contnet > .gradation_area
 compuzone.co.kr###container > div[class][style*="/GNBBottomLineBanner_"][style^="background-image:url("]
 compuzone.co.kr##.cpz_inner .sta_rolling_banner
 compuzone.co.kr##.cpz_inner .recommend_wrap > .recommend_list
@@ -1882,13 +1878,9 @@ m.coupang.com##div[data-page-type="brandSDP"][id$="carousel-products"]
 slist.kr##.ad-template
 daily.hankooki.com,slist.kr###wingBanner
 fow.kr##.neo_top_center
-ggoorr.net###content > div.bd > div.clear > div.clear > center
 ggoorr.net###content > div.bd > div.bd_lst_wrp > center
-ggoorr.net###content > div.bd > div.clear > center
-ggoorr.net###content > div.bd > center
 ggoorr.net##.content > div.bd > div.clear > div > center
 ggoorr.net##.side > .widget_div > .content > center
-ggoorr.net##.content > div.bd > div > center
 m.comic.naver.com##[id^="flex_ad_"]
 comic.naver.com##div[id^="ppl_"][id$="_section"]
 1412.rest##div[id^="plusad_"]
@@ -1920,7 +1912,6 @@ mmzone.co.kr###scm_premium_spon_block
 ilbe.com##ul.board-body > li[id^="sponser_ad_"]
 ilbe.com##img[src^="https://acache.ilbe.com/"]
 berryjam.co.kr##div[class*="slider-banner-"]
-berryjam.co.kr##img[src^="/data/skin/front/udweb_CCC/img/banner/"][alt="2021년 시마노 웹 한글 카다로그"]
 now.rememberapp.co.kr##.now_content_ads__wrapper
 m.ilbe.com##.banner-wrap
 clien.net###coupangAd
@@ -1987,8 +1978,6 @@ orbi.kr##div.panel.class-event-wrap
 orbi.kr##a[href^="https://ads.orbi.kr/"]
 osen.mt.co.kr##div#close_mask
 www.naver.com##div.column_fix_wrap > div#shopcast
-www.naver.com###contents_productAd
-www.naver.com##iframe[id^="da_iframe_"]
 !
 ! Each domain of website in this section is forbidden by Internet censorship of S. Korea.
 ! Some listed domains have been changed by their administrators regularly.
@@ -2524,6 +2513,9 @@ iphonedev.co.kr,tistory.com#%#//scriptlet("prevent-setTimeout", "/\.displayMessa
 ! BlockAdBlock
 fafan.kr,blog.dalso.org,svrforum.com,tistory.com#%#//scriptlet("prevent-bab")
 ! FuckAdBlock
+!#if (adguard_app_windows || adguard_app_mac || adguard_ext_safari)
+x86.co.kr#$?##google_ads { remove: true; }
+!#endif
 te31.com,tistory.com#%#//scriptlet("prevent-fab-3.2.0")
 x86.co.kr,1004lucifer.blogspot.com,te31.com,tistory.com#%#//scriptlet("abort-on-property-read", "adBlockDetected")
 ||cdnjs.cloudflare.com/ajax/libs/fuckadblock/3.2.1/fuckadblock.min.js$redirect=prevent-fab-3.2.0
@@ -2545,7 +2537,7 @@ kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#ins.kakao_ad_area
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@##adBlockPixelTag
 kakaotv.daum.net,play-tv.kakao.com,tv.kakao.com#@#.banner_ad
 ! AdGlare Ad Server
-x86.co.kr,luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
+luckyquiz3.blogspot.com#%#//scriptlet("abort-current-inline-script", "document.createElement", "hasAdblock")
 ! meeco.kr
 !#if (adguard_app_ios)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=meeco.kr
