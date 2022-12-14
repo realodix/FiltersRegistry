@@ -150,8 +150,9 @@ techno-science.net#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=techno-science.net
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129701
 ||cdn.jokerly.com/scripts/LPabChoice.js
+! https://github.com/AdguardTeam/AdguardFilters/issues/137309
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127591
-@@||empire-streaming.co^$generichide
+@@||empire-streaming.*^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127381
 dhnet.be#%#//scriptlet('set-constant', 'bAdBlocker', 'false')
 @@||service.videoplaza.tv/proxy/pulse-sdk-html5/*/latest.min.js$domain=dhnet.be
@@ -877,6 +878,9 @@ tf1.fr#%#AG_defineProperty('tv.freewheel.SDK.Util.sendAdRequestWithXMLHTTPReques
 !------- CSS fixes --------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/137309
+empire-streaming.*#$##msg_ads { display: none !important; }
+empire-streaming.*#$#body { overflow: auto !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127367
 journaldesfemmes.fr#$#@media (min-width: 768px) { body .layout.layout--offcanvas:not(#style_important) { margin-top: -200px !important; } }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118970
@@ -999,7 +1003,7 @@ techno-science.net###amazonLink
 paroles2chansons.lemonde.fr##div[style="min-height:280px;"]
 paroles2chansons.lemonde.fr##div[style="width:336px;height:600px;"]
 coflix.tv##ad-host
-empire-streaming.co##.direct-lads
+empire-streaming.*##.direct-lads
 journaldesfemmes.fr###ctn_position2
 dhnet.be###selligent-ads
 ||jobat.be^$subdocument,third-party
