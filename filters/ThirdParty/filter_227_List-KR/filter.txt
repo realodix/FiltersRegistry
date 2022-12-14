@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2022.1213.10
+! OriginalVersion: 2022.1214.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -169,6 +169,7 @@
 ||bidr.io^
 ||bidswitch.net^
 ||taboola.com^
+||displayad.lotteon.com^
 ||io.smartmyd.com^
 ||zumads.vrixon.com^
 ||ad-script.viewus.co.kr^
@@ -383,6 +384,8 @@ funbe185.com,funbe186.com,funbe187.com,funbe188.com,funbe189.com,funbe190.com,fu
 /ad-manager.min.js
 /RealMedia/ads/
 !
+||pbf.lotteon.com/product/*/detail/advertisement/
+||pbf.lotteon.com/display/*/dpShop/seltDpCorn
 ||sellclub.co.kr/community/data/ad-pay/
 ||danawa.com/*/NBP/powerLink.js.php
 /^https:\/\/cdn[0-9]+\.boribori\.co\.kr\/rimg\/(0|110x250)\/cdn\/contents\/disp_corner_conts\//
@@ -1153,6 +1156,8 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+lotteon.com##.productDetailInfo ~ div[style*=" "].emptyComponent
+lotteon.com##.rankListType > li[class][data-object*="&ad="]:not([data-object*="&ad=n&"])
 sellclub.co.kr##table[valign="top"] div[id^="left_body"] > table td[align="center"] > div[style*=" "]
 sellclub.co.kr###floating_bottom
 mongri.net##.entry-content > div[id^="top"]
@@ -2076,6 +2081,7 @@ x86.co.kr#@#.download_ad
 !
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+lotteon.com#$#.productDetailWrap > .contentsWrap { padding-bottom: 0px !important; }
 evape.kr#$##hotPlace.myBox { margin-left: calc(50% - 65px) !important; }
 fomos.kr#$#.board_view .related_area { height: 300px !important; }
 focus.daum.net#$#div[data-tiara-layer]:not([id]) { margin-top: 0px !important; position: relative !important; }
@@ -2454,6 +2460,7 @@ blacktoon199.com,blacktoon200.com,blacktoon201.com,blacktoon202.com,blacktoon203
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet("abort-current-inline-script", "popMagic.init")
 !
+tgd.kr#%#//scriptlet("remove-attr", "style", "html[style^='background-image:'][style*='upload.tgd.kr']")
 sbs.co.kr#%#//scriptlet("set-constant", "player.renderAdSequence", "undefined")
 m.humoruniv.com#%#//scriptlet("prevent-setTimeout", "/height.+replace.+px[^]+min-height/")
 domin.co.kr#%#//scriptlet("set-constant", "bannerpop.popup", "noopFunc")
