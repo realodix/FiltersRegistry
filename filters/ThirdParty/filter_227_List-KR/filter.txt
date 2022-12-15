@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2022.1214.7
+! OriginalVersion: 2022.1215.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -360,6 +360,9 @@
 funbe185.com,funbe186.com,funbe187.com,funbe188.com,funbe189.com,funbe190.com,funbe191.com,funbe192.com,funbe193.com,funbe194.com,funbe195.com,funbe196.com,funbe197.com,funbe198.com,funbe199.com,funbe200.com,funbe201.com,funbe202.com,funbe203.com##img[src^="/images/"]
 !#endif
 !
+[$path=/ca-fe\\/web\\/cafes\\/(appleiphone|12789486)(\\/|\\?)/]m.cafe.naver.com##.banner_add.bottom
+[$path=/(&|\\.|\\?)clubid=12789486(&|$)/]~m.cafe.naver.com,cafe.naver.com##img[src][alt="매니저 등록 배너"]
+[$path=/(&|\\.|\\?)clubid=12789486(&|$)/]~m.cafe.naver.com,cafe.naver.com###editorMainContent table:not([width$="%"]) > tbody > tr > td[width][valign]
 [$path=/ca-fe\\/web\\/cafes\\/(ghdi58|14062859)(\\/|\\?)/]m.cafe.naver.com##.banner_add.bottom
 [$path=/(&|\\.|\\?)clubid=14062859(&|$)/]~m.cafe.naver.com,cafe.naver.com###editorMainContent > div:nth-child(1)
 [$path=/(&|\\.|\\?)clubid=14062859(&|$)/]~m.cafe.naver.com,cafe.naver.com##.ArticleFormBanner
@@ -1158,6 +1161,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+tistory.com##iframe[id^="aswift_"]
 soccerline.kr##div[data-ads-url]
 lotteon.com##.productDetailInfo ~ div[style*=" "].emptyComponent
 lotteon.com##.rankListType > li[class][data-object*="&ad="]:not([data-object*="&ad=n&"])
@@ -2387,6 +2391,7 @@ berryjam.co.kr#?#table[width="1200"]:has(> tbody > tr > td > div[class*="slider-
 ! Some listed domains have been changed by their administrators regularly.
 ! For more information, please see https://en.wikipedia.org/wiki/Internet_censorship_in_South_Korea .
 !
+newtoki166.com,newtoki167.com,newtoki168.com,newtoki169.com,newtoki170.com,newtoki171.com,newtoki172.com,newtoki173.com,newtoki174.com,newtoki175.com,newtoki176.com,newtoki177.com,newtoki178.com,newtoki179.com,newtoki180.com,newtoki181.com,newtoki182.com#?#.navbar-nav > li:has(> a[href^="/guarantee.php"])
 torrentdia60.com,torrentdia61.com,torrentdia62.com,torrentdia63.com,torrentdia64.com,torrentdia65.com,torrentdia66.com,torrentdia67.com,torrentdia68.com,torrentdia69.com,torrentdia70.com#?#.table.bg-white tr:has(img[src*="/data/to_list/"])
 viewtorrent1.com,viewtorrent2.com,viewtorrent3.com,viewtorrent4.com,viewtorrent5.com,viewtorrent6.com,viewtorrent7.com,viewtorrent8.com,viewtorrent9.com,viewtorrent10.com,viewtorrent11.com,viewtorrent12.com,viewtorrent13.com,viewtorrent14.com,viewtorrent15.com,viewtorrent16.com,viewtorrent17.com#?#.row div[class^="widget-main-box"]:has(a[target="_blank"] img)
 torrentreel1.site,torrentreel2.site,torrentreel3.site,torrentreel4.site,torrentreel5.site,torrentreel6.site,torrentreel7.site,torrentreel8.site,torrentreel9.site,torrentreel10.site,torrentreel11.site,torrentreel12.site,torrentreel13.site,torrentreel14.site,torrentreel15.site,torrentreel16.site#?#.border-box tbody tr:has(td:contains(광고) ~ td a[href])
@@ -2571,6 +2576,7 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
 !
+jimnong.tistory.com##.adblock-on
 ||ssulwar.com/dev/modules/board/skins/*/js/adblockblock.js$redirect=noopjs
 ssulwar.com#%#//scriptlet("abort-current-inline-script", "document.getElementById", "adblock")
 !#if (adguard_app_ios || adguard_ext_safari)
@@ -2583,7 +2589,7 @@ detegice.github.io#%#//scriptlet("abort-on-property-read", "$.prototype.fadeIn")
 ilsangt.tistory.com##.adblock-on
 ilsangt.tistory.com#%#//scriptlet("abort-current-inline-script", "$", ".adsense-area")
 tistory.com#%#//scriptlet("abort-current-inline-script", "$", "div.adsbygoogle")
-uda1004.tistory.com,webtv.dothome.co.kr,te31.com,koreapas.com,maniac-game.tistory.com,web1907.tistory.com#@#.adsbygoogle
+jimnong.tistory.com,uda1004.tistory.com,webtv.dothome.co.kr,te31.com,koreapas.com,maniac-game.tistory.com,web1907.tistory.com#@#.adsbygoogle
 genshin.gamedot.org#%#//scriptlet("prevent-setTimeout", "timerAdChecker")
 genshin.gamedot.org##[style*="background-image:"][style*="module/genshinmaps/asset/image/"]:not([id]):not([class])
 ||genshin.gamedot.org/module/genshinmaps/asset/image/adblock-line
@@ -2674,6 +2680,7 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+@@||jimnong.tistory.com^$generichide
 @@||cdnjs.cloudflare.com/ajax/libs/fuckadblock/*/fuckadblock.min.js$domain=x86.co.kr
 @@||x86.co.kr^$generichide
 @@||ad.smartmediarep.com/NetInsight/video/smr1/smr1/$domain=allvod.sbs.co.kr
