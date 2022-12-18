@@ -1738,6 +1738,10 @@ teleboy.ch#@#.adWrapper
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/137740
+manager-magazin.de#?#div[class*="min-h-"]:has(> div[style*="gujad"])
+! https://github.com/AdguardTeam/AdguardFilters/issues/137736
+der-postillon.com#?#.widget:has(> .widget-title > .title:contains(Reklame))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/137734
 sport1.de#?#div[data-testid="article-text"] ~ div[class]:has(> .text-center > .s1-placement-label)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/137730
@@ -3067,7 +3071,11 @@ vergleich.focus.de,chip.de,gutefrage.net,reisefrage.net,motorradfrage.net,autofr
 3c.web.de,thueringen24.de,pfaffenhofen-today.de,holidaycheck.de,berlin.de,fuw.ch,allgemeine-zeitung.de,schlaukopf.de,schwarzwaelder-bote.de,aachener-zeitung.de,hamburg.de,sat1.de,abendzeitung-muenchen.de,dfb.de,gamestar.hu,ikz-online.de,nrz.de,stimme.de,waz.de,wiesbadener-kurier.de,wiesbadener-tagblatt.de,wp.de,wr.de##.ad
 ! ##.adsbygoogle
 winfuture.de,netzwelt.de,quoka.de,farmeramania.de,bravofly.de,computerbild.de,digitalfernsehen.de,hl-live.de,chinamobilemag.de,focus.de,pcwelt.de##.adsbygoogle
+! ##.billboard
+krautundrueben.de,motorsport-total.com,traktorpool.de,fnweb.de,laborjournal.de,tarnkappe.info,deraktionaer.tv,food-tiger.de,morgenweb.de##.billboard
 !
+manager-magazin.de##section[data-app-hidden] > .w-full:empty
+krautundrueben.de##div[id^="block-billboard"]
 sport.de##div[id^="superbanner"]
 sport.de##.MoltenBundle
 t-online.de##section[data-stage-layout="custom_taboola_homepage_widget"]
@@ -5285,7 +5293,6 @@ insuedthueringen.de##div[id*="werb"]
 insuedthueringen.de###content-right > #internbox.right.group
 tchgdns.de##.theiaStickySidebar > .single-side-pub
 morgenweb.de##.nfy-article-bottom-adslot
-motorsport-total.com,traktorpool.de,fnweb.de,laborjournal.de,tarnkappe.info,deraktionaer.tv,food-tiger.de,morgenweb.de##.billboard
 morgenweb.de##.nfy-ad-inject
 heise.de##.startseite > .indexlist > .us_hbs
 teilzeithelden.de##.four-ads-blocks
