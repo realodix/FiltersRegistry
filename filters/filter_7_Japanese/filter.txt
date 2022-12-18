@@ -508,7 +508,6 @@ blog-and-destroy.com#%#//scriptlet("abort-current-inline-script", "onload", "ads
 !+ PLATFORM(windows, mac, android, ext_chromium, ext_ublock)
 musenboya.com#%#//scriptlet("abort-current-inline-script", "navigator.brave")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131648
-helpsupport.blog.fc2.com#$##sp-area-1 { height: 90px !important; position: absolute !important; left: -4000px !important; }
 helpsupport.blog.fc2.com#@#.AdContainer
 ||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=googlesyndication-adsbygoogle,domain=helpsupport.blog.fc2.com,important
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=helpsupport.blog.fc2.com
@@ -624,11 +623,12 @@ nordot.app#%#//scriptlet('abort-current-inline-script', 'document.createElement'
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85641
 modalina.jp#%#//scriptlet('abort-on-property-read', 'AdBlockLimitation')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116093
-realtime-chart.info#?#td[style="vertical-align: top"] > div[id] > div[id] > div[id] > div[style="top:1550px"] > div[style="z-index:-1"]:contains(/^広告非表示だと色々と不具合が発生します$/)
-sekai-kabuka.com#$?#table[width="762px"] > tbody > tr > td[class] > div[id][class] > div[style="width: 232px;"]:contains(不具合が) { z-index: -1 !important; }
+realtime-chart.info#%#//scriptlet('remove-attr', 'onmousedown', 'a')
+realtime-chart.info#?#td[style="vertical-align: top"] > div[id] > div[id] > div[id] > div[style="top:1437px"] > div[style="z-index:-1"]:contains(/^広告非表示だと色々と不具合が発生します$/)
+sekai-kabuka.com#$?#table[width="762px"] > tbody > tr > td[class] > div[id][class] > div[style="width: 231px;"]:contains(不具合が) { z-index: -1 !important; }
 sekai-kabuka.com#$?#td[width="160"] > div[style] > div[id][style]:has(> div[class]:contains(定期的に配置が)) { z-index: -1 !important; }
 sekai-kabuka.com#$#ins.adsbygoogle > div[style="width:728px;height:90px;position:absolute;z-index:999;line-height:1.1;display:flex;justify-content:center;align-items:center;"] { height: 1px !important; overflow: auto !important; }
-realtime-chart.info#$#div[style="top:1442px"] > [style*="font-size:"]:is(b, span, a) { font-size: 0 !important; }
+realtime-chart.info#$#div[style="top:1437px"] > [style*="font-size:"]:is(b, span, a) { font-size: 0 !important; }
 realtime-chart.info#%#//scriptlet('remove-attr', 'onclick', '.amazoom1[onclick^="clickcat"][target="_blank"]')
 sekai-kabuka.com#$#div[id][class][style^="position:relative;background:#000;"][style*="width:729px;"][style*="height: 90px;"] { height: 1px !important; }
 realtime-chart.info#$#div[data-i4h] { font-size: 0 !important; }
@@ -2218,6 +2218,8 @@ hentai-covers.site,109cinemas.net,4545.to,bunshun.jp,eikaiwa.dmm.com,gizmodo.jp,
 !
 !
 !
+minhyo.jp##.adsense-related-box
+minhyo.jp##.txt_ad
 ||eromanga-life.com/life.$subdocument
 nogizaka46matomenoma.blog.jp##.article-body > div[style="margin-bottom: 10px"][align="center"]
 nogizaka46matomenoma.blog.jp###more > div.t_b ~ a[target="_blank"]
@@ -3506,8 +3508,7 @@ lulucos-bys.jp##.p-article__recommend
 lulucos-bys.jp##.p-article__adnw
 javstore.net##a[title="Banner"]
 javstore.net##img[title="aaaaa"]
-helpsupport.blog.fc2.com###sp-area-3 ins.adsbygoogle
-helpsupport.blog.fc2.com###topentry > p[style="width:100%;height:100vh;display: flex;align-items: center;justify-content: center;"]
+helpsupport.blog.fc2.com##.wait[style="position: fixed;top:0;left:0;width:100%;height:100vh;background:#fff;z-index: 2147483645;overflow: hidden"]
 ||chat-lab.tokyo/adCode.js
 bamka.info,kaimyou.biz###st_custom_html_widget-14
 bitdays.jp##.adrelated
@@ -5220,6 +5221,7 @@ aniplexplus.com##.hotentry
 ||x.sekai-kabuka.com/nandemo1.gif
 ||x.sekai-kabuka.com/gneko$image
 ||x.sekai-kabuka.com/http/$image,script
+realtime-chart.info##.amazon22 > div.amazonwar
 realtime-chart.info##div[class][id][style="top: 340px;"] > a[id][onclick]
 realtime-chart.info,sekai-kabuka.com###neko_ad
 ||amazon-adsystem.com/widgets/$important,domain=realtime-chart.info|mashlife.doorblog.jp|lamsect.blog112.fc2.com|blog.domesoccer.jp|neo-blood.co.jp|katuru2ch.blog12.fc2.com|azurlanesokuhou.blog.jp|ima.goo.ne.jp|michaelsan.livedoor.biz|bluebluesunset.blog.fc2.com
