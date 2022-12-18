@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2022.1217.2
+! OriginalVersion: 2022.1218.0
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -388,6 +388,8 @@ funbe185.com,funbe186.com,funbe187.com,funbe188.com,funbe189.com,funbe190.com,fu
 /ad-manager.min.js
 /RealMedia/ads/
 !
+||wassada.com/banner_view.php
+||wassada.com/*_banner.php
 ||colormytree.me/ad/
 ||bobaedream.co.kr/adsmov/
 /^https:\/\/haninpost\.com\/wp-content\/uploads\/[0-9]{4}\/[0-9]{2}\/.*(webbanner-|%EA%B4%91%EA%B3%A0|.{1}banner.{1}[0-9]+x[0-9]+)/
@@ -1167,6 +1169,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+wassada.com###sub_content table[style$="%; "] td[valign]:not([style*=" "]) ~ td[style*=" "]
 haninpost.com##.td-ss-main-sidebar > .td-a-rec
 elle.co.kr##.article_wrap .bottom_articles
 casenews.co.kr###article-view > .gray-bg
@@ -2263,6 +2266,7 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+wassada.com#?##header ~ div[class^="content_st_"]:has(iframe[src$="_big_banner.php"])
 m.humoruniv.com#?#ul > [id]:has(span ~ div img[src$="_ad.gif"])
 ibric.org#?#table[bgcolor][align] table[cellspacing][align] tr:has(table table strong > a[href*="?Board=enterprise"])
 ibric.org#?#table[align] table[border] table[align]:has(td[align] img[alt="검색광고"])

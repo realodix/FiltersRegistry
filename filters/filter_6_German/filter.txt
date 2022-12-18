@@ -319,6 +319,8 @@ n-tv.de#%#//scriptlet("set-constant", "embedAddefend", "noopFunc")
 @@||img*.kachelmannwetter.com/images/
 !+ NOT_OPTIMIZED
 @@||unnuetzes.com/image/
+!+ NOT_OPTIMIZED
+@@||s.hs-data.com/gfx/competition/
 ! JS rules
 ! #%#window.uabInject = function() {};
 ! #%#window.uabpInject = function() {};
@@ -1736,6 +1738,10 @@ teleboy.ch#@#.adWrapper
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/137734
+sport1.de#?#div[data-testid="article-text"] ~ div[class]:has(> .text-center > .s1-placement-label)
+! https://github.com/AdguardTeam/AdguardFilters/issues/137730
+sport.de#?#.hs-grid--item:has(> .OUTBRAIN:first-child:not([data-ob-template]))
 ! t-online.de left-overs
 t-online.de#?#div[data-testid="Stages.Container"] > div:has(> div[id^="nativendo"])
 t-online.de#?#div[data-testid="Stages.Container"] > div:has(> div[id^="taboola-"])
@@ -3062,6 +3068,8 @@ vergleich.focus.de,chip.de,gutefrage.net,reisefrage.net,motorradfrage.net,autofr
 ! ##.adsbygoogle
 winfuture.de,netzwelt.de,quoka.de,farmeramania.de,bravofly.de,computerbild.de,digitalfernsehen.de,hl-live.de,chinamobilemag.de,focus.de,pcwelt.de##.adsbygoogle
 !
+sport.de##div[id^="superbanner"]
+sport.de##.MoltenBundle
 t-online.de##section[data-stage-layout="custom_taboola_homepage_widget"]
 kleinezeitung.at##.js-ad + .t-label-s
 t3n.de##div[class*="LegacyAd__"]
@@ -4319,7 +4327,7 @@ chip.de##.Downloads .Subchapter .Download-Buttons ~ .ButtonAuswahl + div > div[i
 gload.to##a[href^="https://gload.to/"][href*="/strip"]
 hifi-forum.de###widget_ad
 saarbruecker-zeitung.de##.park-section-portal-top > .park-portal--billboard
-tichyseinblick.de##div[id^="Ads_"]
+impulse.de,tichyseinblick.de##div[id^="Ads_"]
 kachelmannwetter.com###meteosafe
 kurier.de##div[data-b-title*="(werb"]
 kurier.de##div[data-b-title*="Bilder-Slider Digitale Beilage"]
