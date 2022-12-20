@@ -250,17 +250,166 @@ _campaign=$popup
 !
 !
 !### Invalid rules ###
-! This section is for known old invalid rules
 !
-! void.gr
+! Known invalid rules, which, after a long time, have not been fixed by the authors of the filters
+! or just incompatible with AdGuard
+! We remove them to improve the readability of the log
+!
+! Known unsupported rules:
+! - "redirect=****:99" - redirect priority is not support by tsurlfilter
+! - ":watch-attr()" - not implemented, questionable
+! - ":others()" - not implemented, questionable
+! - "$popunder" - not implemented, questionable
+!
+! Filter name: ADgk Mobile China list
+||189.gd/$popunder
+51cto.com###top_banner,#top_banner .ban2{height: 26px;}.top_bg,.top_bg .wrap{height: 76px;}
+blog.163.com##.wrapperbg{height: 151px;}
+bokon.net##.DivMainLeft{width: 990px;}
+book.qidian.com##.crumbs-nav.top-op {margin: 16px auto 20px;}
+chinanews.com##.enter_top {    width: 100%;    height: 154px;    background: #fff;}
+eeyy.com##.ad-top{margin-top: 10px;}
+epinv.com##[class="eprand"],[class="leftside epdown"],.yin,.huadong{height:1px;}
+gaoqing.la##body.custom-background{background-image:url('');}
+hiapk.com##.header{height: 100px;}
+thegreatdaily.com/cat##.col-lg-8.col-md-8{width:1190px;}
+tieba.baidu.com###plat_recom_carousel,.head_banner{height:75px;}
+wise99.com###top_menu01{height: 130px;}
+yxdown.com###topsearch{top: 100px;}
+||1122dk.com/js/$scipt
+||56.com##.xiu_mm,#appBanner
+||avgle.##[style*="width: 300px; height: 250px;"],.pblf-banner,[id^="divExoLayerWrapper"],center
+||jav##[id^="divExoLayerWrapper"],[id^="playertopads"],[class*="ui-widget"],[height="60"],.textwidget
+||tv.sohu.com##[width="640"][height="100"],.adv
+book.qidian.com##A.jumpWrap,DIV.left-game,DIV.right-game,DIV.games-op-wrap,DIV.right-op-wrap mb10,#j-top^Bo
+www.tyzrcs.com###__^HFa,DIV.box top_box
+||ott.cibntv.net/youku/*.mp4*&ctype=$m@res:block/null.mp4
+tieba.baidu.com##DIV.panel_bottom,LI.tl_shadow tl_shadow_new ^
+||greenet.cn/$popunder
+||189.gd/$popunder"
+||click.taobao.com/$third-party,popunder
+||com/ads *_350_330.$image
+oScript6205.type = 'text/javascript';
+oHead6205.appendChild( oScript6205);
+||pipipan.com##A[class='btn btn-yellow btn-block']
+||pipipan.com##DIV[class='alert alert-block ']
+||pipipan.com##IMG[style='width: 100%; margin: 5px 0;']
+s.parentNode.insertBefore(hm, s);
+r1eadS= null;
+!
+! Filter name: Liste AR
+! ,arabseed.tv,arbcinema.com,ce4arab.com,e-tejara.com,edlibre.com,el-ahly.com,elconsolto.com,khaberni.com,wattan.net##a[href*="://bit.ly/"]
+/^\,arabseed.tv/
+!
+! Filter name: EasyPrivacy
+! $ping,third-party
+/^\$ping\,third-party$/
+!
+! Filter name: Polish GDPR-Cookies Filters
+! ||web.archive.org/web/*/http*://*.pl/*$generichide,important,domain=web.archive.org
+/^\|\|web.archive.org\/web\/\*\/http\*:\/\/\*.pl\/\*\$generichide\,important\,domain=web.archive.org/
+!
+! Filter name: RU AdList: Counters
+! #?#+js()
+joyreactor.cc,pornreactor.cc,reactor.cc#?#+js(abort-on-property-read, Joyreactor.show_ads)
+game4you.top,games-pc.top,innal.top,naylo.top,rustorka.com,rustorka.net,rustorka.top,rustorkacom.lib#?#+js(abort-on-stack-trace, document.querySelectorAll, tick)
+otvet.mail.ru#?#+js(addEventListener-defuser, click, externalLink)
+go.mail.ru#?#+js(addEventListener-defuser, mousedown, [native code])
+auto.ru#?#+js(cookie-remover, /bltsr|crookie/)
+auto.ru#?#+js(json-prune, ads)
+online-fix.me#?#+js(no-setTimeout-if, / d[0-9]{1}/)
+buhgalter.com.ua#?#+js(no-setTimeout-if, /b-buy-access/)
+search.ukr.net#?#+js(remove-attr, data-cturl, .searchresults a, stay)
+mail.ukr.net#?#+js(remove-attr, data-safe-proxy-url, a, stay)
+rutr.life,rutracker.lib,rutracker.net,rutracker.nl,rutracker.org#?#+js(set-constant, BB.disableRefLinks, true)
+ivi.ru#?#+js(set-constant, Object.prototype.canShowMoreAds, noopFunc)
+ivi.ru#?#+js(set-constant, Object.prototype.hasAdv, noopFunc)
+dzen.*,frontend.vh.yandex.ru,widgets.kinopoisk.ru,yastatic.net#?#+js(set-constant, Object.prototype.hasPreroll, null)
+horoscopes.rambler.*#?#+js(set-constant, Object.prototype.needShowAlicePopup, null)
+lena-miro.ru,levik.blog,livejournal.*,olegmakarenko.ru,periskop.su,shakko.ru,shiro-kino.ru,vadimrazumov.ru#?#+js(set-constant, Object.prototype.Begun, undefined)
+lena-miro.ru,levik.blog,livejournal.*,olegmakarenko.ru,periskop.su,shakko.ru,shiro-kino.ru,vadimrazumov.ru#?#+js(set-constant, Object.prototype.antiadblock, false)
+nova.rambler.*#?#+js(abort-on-property-read, Object.prototype.AdvManager)
+razlozhi.*#?#+js(abort-on-property-read, yaContextCb)
+razlozhi.*#?#+js(no-setTimeout-if, X-Set-Adblock)
+rp5.*#?#+js(setTimeout-defuser, xvb)
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#+js(json-prune, Blocks)
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#^script:has-text('getPrefixes')
+dzen.*,~yandex.net,yandex.*#?#+js(json-prune, direct rtb seatbid)
+frontend.vh.yandex.*#?#+js(set-constant, Object.prototype.getAutoplay, noopFunc)
+frontend.vh.yandex.*#?#+js(set-constant, Object.prototype.initialAutoplay, false)
+mail.yandex.*#?#+js(remove-attr, data-link-id, a, stay)
+mail.yandex.by,mail.yandex.kz,mail.yandex.ru,mail.yandex.uz,mail.yandex.*#?#+js(set-constant, Daria.AdvPresenter._config, {})
+music.yandex.*#?#+js(set-constant, Object.prototype.showBranding, noopFunc)
+~mail.yandex.*,~vh.yandex.ru,~yandex.net,yandex.*#?#+js(no-setTimeout-if, t.apply(n, 25)
+~mail.yandex.*,~vh.yandex.ru,~yandex.net,yandex.*#?#+js(no-setTimeout-if, Ya.Rum.getSetting, 15)
+~vh.yandex.ru,~yandex.net,yandex.*#?#+js(abort-on-property-read, Ya.loaderVer)
+~yandex.net,yandex.*#?#+js(abort-on-property-read, yaads.renderBlock)
+~yandex.net,yandex.*#?#+js(abort-on-property-read, yaads.renderWidget)
+~yandex.net,yandex.*#?#+js(cookie-remover, tvoid)
+~yandex.net,yandex.*#?#+js(remove-attr, data-counter, .serp-list a)
+~yandex.net,yandex.*#?#+js(set-constant, __AAB__, false)
+~yandex.net,yandex.*#?#+js(set-constant, Object.prototype._getAdConfig, noopFunc)
+~yandex.net,yandex.*#?#+js(set-constant, Object.prototype._hasAdblock, noopFunc)
+~yandex.net,yandex.*#?#+js(set-constant, Object.prototype.getHoneypot, null)
+~yandex.net,yandex.*#?#+js(set-constant, Object.prototype.getYaads, null)
+~yandex.net,yandex.*#?#+js(set-constant, Object.prototype.initWidgetBlock, falseFunc)
+~yandex.net,yandex.*#?#+js(set-constant, Object.prototype.isOpenImageUnauthPopupEnabled, false)
+~yandex.net,yandex.*#?#+js(set-constant, Object.prototype.loaderVer, noopFunc)
+~yandex.net,yandex.*#?#+js(set-constant, Object.prototype.los, null)
+~yandex.net,yandex.*#?#+js(set-constant, Object.prototype.useAbdBundle, false)
+~yandex.net,yandex.*#?#+js(set-constant, home.export.adb, {})
+!
+! Filter name: Official Polish filters for AdBlock, uBlock Origin & AdGuard
+~biblio.com,~milionczesci.pl,~dizibox.com,~2dehands.be,~ru,~ua,~www.pudelek.pl,~btdb.eu,~ewybory.eu ##[id^="adv-"]:not(#adv-settings)
+www.dobreprogramy.pl##+js(nano-remove-elements-onready.js, #phContent_avastBadge)
+filmweb.pl##+js(nano-remove-elements-onready.js, #skyBanner)
+$popunder,domain=rabatio.com|alerabat.com|salesandshopping.pl|kodyrabatowe.olx.pl|kod.rabatowy.pl
+polygamia.pl##+js(nano-remove-elements-onready.js, .screening)
+napiprojekt.pl##+js(insert-iframe, 1, honeypot, https://www.napiprojekt.pl/napisy-42731-Ostatni-U-Boot-(1993), width: 1px !important; height: 1px !important; position: absolute !important; left: -3000px !important)
+ppe.pl##+js(ac, active, #m_hot_1)
+ppe.pl##+js(ac, box_active, #hot_1)
+money.pl##div[class]:if(>div[class]:first-child:has-text(REKLAMA):if-not(>*))
+!
+! Filter name: Polish GDPR-Cookies Filters
+nike.com##body[data-overlay="cookieModalSimple"]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .pre-cookie-modal-body)
+!
+! Filter name: Polish Social Filters
+oszczedzarka.co.uk.textwidget > p > img[src="/img/ico/skype.png"]
+!
+! Filter name: road-block light
+science.hotnews.ro###\$\{tile\.name\}_\$\{tile\.id\}"
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,important,redirect=google-ima.js,domain=a1.ro|antena3.ro|antenastars.ro|as.ro|jurnalul.ro|observator.tv|observatornews.ro|spynews.ro|zutv.ro
+!
+! Filter name: Polish Annoyances Filters
+nike.com##body[data-overlay*="Modal" i]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .unite-container):has-text(/newsletter/i)
+meczyki.pl##+js(gnf)
+!
+! Filter name: Polish Anti Adblock Filters
+magazyn.wp.pl#@#+js(overlay-buster)
+!
+! Filter name: void.gr
 ||www.dwrean.net##a[href="http://www.kratisinow.gr"]
 ||www.dwrean.net##iframe[src="http://kratisinow.digitup.eu/widget/widget-artists"]
 !
-! Xfiles
+! Filter name: Xfiles
+3bmeteo.com##.4wNET
+ansa.it##.4wNET
+milanolife.it##.4wNET
+notizie.it##.4wNET
 ||widgets.outbrain.com/outbrain.js$script,redirect=widgets.outbrain.com/outbrain.js
 @@##.qc-cmp2-container$domain=~ilbianconero.com
 @@##.qc-cmp2-main$domain=~ilbianconero.com
 @@###qc-cmp2-main$domain=~ilbianconero.com
+!
+! Filter name: Dandelion Sprout's Nordic Filters
+vgtv.no##+js(golem.de.js)
+!
+! Filter name: Persian Blocker
+opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/):others()
+xip.li##.form-inline:others()
+!
+!
 !
 ! Deprecated $collapse and $object-subrequest modifiers
 ! https://blog.adblockplus.org/development-builds/removed-support-for-the-collapse-and-object-subrequest-filter-options
