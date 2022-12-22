@@ -74,8 +74,6 @@ logo.samandehi.ir##^responseheader(set-cookie)
 ||webengage.com^$3p
 ! Rule "||webpu.sh^$3p" converted to: "||webpu.sh^$third-party"
 ||webpu.sh^$3p
-! Rule "||xjs.lol^$3p" converted to: "||xjs.lol^$third-party"
-||xjs.lol^$3p
 ! Rule "artmusics.top##+js(nowoif)" converted to: "artmusics.top#%#//scriptlet('ubo-nowoif.js')"
 artmusics.top##+js(nowoif)
 ! Rule "adanayi.ir,adanayi.blogfa.com##body *:style(-webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important;)" converted to: "adanayi.ir,adanayi.blogfa.com#$#body * { -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }"
@@ -474,8 +472,12 @@ yeknet.ir##+js(aopr, needpop)
 zoomg.ir##+js(aopr, banner)
 ! Rule "@@||cdn.zoomg.ir/banners/demo/advertise-$image,1p" converted to: "@@||cdn.zoomg.ir/banners/demo/advertise-$image,~third-party"
 @@||cdn.zoomg.ir/banners/demo/advertise-$image,1p
-! Rule "zoomit.ir##+js(no-xhr-if, ads)" converted to: "zoomit.ir#%#//scriptlet('ubo-no-xhr-if.js', 'ads')"
-zoomit.ir##+js(no-xhr-if, ads)
+! Rule "zoomit.ir##^script:has-text(bannersAsJson)" converted to: "zoomit.ir$$script[tag-content="bannersAsJson"][max-length="262144"]"
+zoomit.ir##^script:has-text(bannersAsJson)
+! Rule "zoomit.ir##+js(aopr, banner)" converted to: "zoomit.ir#%#//scriptlet('ubo-aopr.js', 'banner')"
+zoomit.ir##+js(aopr, banner)
+! Rule "zoomit.ir##+js(no-xhr-if, /ads|visit/)" converted to: "zoomit.ir#%#//scriptlet('ubo-no-xhr-if.js', '/ads|visit/')"
+zoomit.ir##+js(no-xhr-if, /ads|visit/)
 ! Rule "||excoino.com^$doc" converted to: "||excoino.com^$document"
 ||excoino.com^$doc
 ! Rule "||irancloudmining.com^$doc" converted to: "||irancloudmining.com^$document"
