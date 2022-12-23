@@ -463,6 +463,7 @@ snrec.jp#$#body.tp-modal-open { overflow: visible!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132814
 ! https://github.com/AdguardTeam/AdguardFilters/issues/132525
 ! Similar site in Base filter: soranews24.com
+rocketnews24.com,youpouch.com#%#//scriptlet('prevent-fetch', 'tpc.googlesyndication.com')
 !#if (adguard_app_windows || adguard_app_mac || adguard_app_android || adguard_ext_firefox)
 ||rocketnews24.com/_static/$script,replace=/\w+\.onload=//
 ||youpouch.com/_static/$script,replace=/\w+\.onload=//
@@ -479,7 +480,7 @@ rocketnews24.com,youpouch.com#%#//scriptlet('remove-attr', 'id', '#div-gpt-ad-re
 @@||tpc.googlesyndication.com/simgad/$xmlhttprequest,domain=rocketnews24.com|youpouch.com
 ||tpc.googlesyndication.com^$image,redirect=1x1-transparent.gif,domain=rocketnews24.com|youpouch.com,important
 @@||g.doubleclick.net/gampad/ads?$xmlhttprequest,domain=rocketnews24.com|youpouch.com
-||g.doubleclick.net/gampad/ads?$xmlhttprequest,removeparam=/^(cookie|ga_|u_)/,domain=rocketnews24.com|youpouch.com
+||g.doubleclick.net/gampad/ads?$xmlhttprequest,removeparam=/^(co|eid|eri|ga_|idt|ifi|impl|ohw|oid|ps|ptt|vis|[abdfl-nr-u])/,domain=rocketnews24.com|youpouch.com
 @@||sst.rocketnews24.com/gtm.js$script,~third-party
 @@||g.doubleclick.net/tag/js/gpt.js$domain=rocketnews24.com|youpouch.com
 @@||g.doubleclick.net/gpt/pubads_impl_$script,domain=rocketnews24.com|youpouch.com
@@ -947,6 +948,7 @@ otonasalone.jp,sumaiweb.jp#?#._popIn_infinite_page > a._popIn_recommend_article_
 !
 !
 !
+moeimg.net#?#.widget-area > div.widget-container:has(> div.pr_box)
 fukuishimbun.co.jp#?##wrapper > div[style^="text-align:center;"] > div[id^="div-gpt-ad"]:upward(1)
 qiita.com#?#.p-items_main > div > div[class]:has(> div > div[class] > div[class] > div[class^="ad-"][class$="0"])
 formula1-data.com#?#article[class^="mdlGrid_"] > a[href^="https://www.amazon.co.jp/"]:upward(1)
