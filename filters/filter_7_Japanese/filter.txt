@@ -630,7 +630,6 @@ nordot.app#%#//scriptlet('abort-current-inline-script', 'document.createElement'
 modalina.jp#%#//scriptlet('abort-on-property-read', 'AdBlockLimitation')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116093
 realtime-chart.info#%#//scriptlet('remove-attr', 'onclick', 'td[style] div[style^="top:1"] > div')
-sekai-kabuka.com#%#//scriptlet('prevent-setTimeout', '', '10000')
 realtime-chart.info#%#//scriptlet('remove-attr', 'onmousedown', 'a')
 realtime-chart.info#?#td[style="vertical-align: top"] > div[id] > div[id] > div[id] > div[style="top:1437px"] > div[style="z-index:-1"]:contains(/^広告非表示だと色々と不具合が発生します$/)
 sekai-kabuka.com#$?#table[width="762px"] > tbody > tr > td[class] > div[id][class] > div[style="width: 231px;"]:contains(不具合が) { z-index: -1 !important; }
@@ -649,7 +648,6 @@ realtime-chart.info#$#a[href^="https://px.a8.net/svt/ejp?"] { pointer-events: no
 realtime-chart.info#$?#div[class^="amazon"] > b[class^="amazon"]:has(> b[style^="font-size:"]) { font-size: 0 !important; }
 realtime-chart.info#$#img[src*="/clip_"] + b { background: none !important; font-size: 0 !important; }
 realtime-chart.info,sekai-kabuka.com#$#div[data-js] { background: none !important; cursor: default !important; }
-realtime-chart.info#%#//scriptlet('remove-attr', 'onclick', '[onclick^="location.href=\'https://px.a8.net"]')
 realtime-chart.info#%#//scriptlet('remove-attr', 'href', 'a[href^="https://a.r10.to/"]')
 @@||realtime-chart.info^$generichide
 @@||sekai-kabuka.com^$generichide
@@ -950,7 +948,8 @@ otonasalone.jp,sumaiweb.jp#?#._popIn_infinite_page > a._popIn_recommend_article_
 !
 !
 fukuishimbun.co.jp#?##wrapper > div[style^="text-align:center;"] > div[id^="div-gpt-ad"]:upward(1)
-qiita.com#?#.p-items_main div[class^="style"]:has(> div > div[class^="style"] > div[class^="style"] > div.ad-300x250)
+qiita.com#?#.p-items_main > div > div[class]:has(> div > div[class] > div[class] > div[class^="ad-"][class$="0"])
+formula1-data.com#?#article[class^="mdlGrid_"] > a[href^="https://www.amazon.co.jp/"]:upward(1)
 formula1-data.com#?#.mdlGrid__inner > article[class^="mdlGrid_"][class*="mdlGrid__col4"]:has(> a[href^="https://www.amazon.co.jp/"])
 seesaa.net#?#.module--free > center > a[href^="https://prf.hn"]:upward(2)
 seesaa.net#?#.module--free > center > script[src*="//adm.shinobi.jp"]:upward(2)
@@ -1157,7 +1156,6 @@ j-cast.com#?#div.title-sec:contains(姉妹サイト)
 qiita.com#?##home-side-ad:upward(1)
 qiita.com#?##personalized-feed-side-ad:upward(1)
 qiita.com#?#.p-items_main > div[class^="css-"]:has(div[id^="dfp-slot-"])
-qiita.com#?#.p-items_main > div > div[class^="css-"]:has(> div > div[class^="css-"] > div[class^="css-"] > div.ad-336x280)
 kumanichi.com#$?#.is-separate-block-mv-list-item-pr { remove: true; }
 trafficnews.jp#?#ul[class^="_taxel_row"] > li > div[class^="_taxel_ad_article"]:upward(1)
 kuruma-news.jp,trafficnews.jp#$?#.swiper-slide[data-history^="photo_extra"] { remove: true; }
@@ -2222,7 +2220,6 @@ hentai-covers.site,109cinemas.net,4545.to,bunshun.jp,eikaiwa.dmm.com,gizmodo.jp,
 !
 !
 !
-sp.nicovideo.jp##div[id$="BannerContainer"]
 formula1-data.com##.js--removeAdStyle
 formula1-data.com##div[class*="ad--rectangle--"]
 formula1-data.com##article[class^="mdlGrid_"] > a[href^="https://www.amazon.co.jp/"]
