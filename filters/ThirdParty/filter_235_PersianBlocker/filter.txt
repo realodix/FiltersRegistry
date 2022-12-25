@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-12-22
+! Last modified: 2022-12-25
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -302,52 +302,28 @@
 !-------------------------^ Persian Ads/Trackers/Annoyances Filters ^-----------------------!
 !-------------------------v Non-Persian Ads/Trackers/Annoyances Filters Used In Persian Websites v-----------------------!
 ! >> A <<
-||alexametrics.com^
 ||adtodate.net^$third-party
-||a-ads.com^
-! Used by mybia4music.com
 ! >> B <<
-||customfingerprints.bablosoft.com^
-! ^ Used by yun.ir on shortlinks
 ! >> C <<
-||clarity.ms^$third-party
-||cloudflareinsights.com^
-||clickweb.click^$third-party
-! TODO: Remove clickweb.click, but some websites still link to it
 ! >> D <<
-||doubleclick.net^
 ! >> E <<
-||epicgameads.com^
-! Used by gamesib.ir
 ! >> F <<
 ! >> G <<
-||getclicky.com^
-! ^ Used by iranviva.com
 ! >> H <<
-||hotjar.com^$third-party
-||histats.com^$third-party
-||heatmap.it^$third-party
 ! >> I <<
-||s.infogram.com^
-! ^ Used by hiapple.ir
 ||instant.page^$third-party
 ||icanhazip.com^$third-party
 ! TODO: Investigate ^ (Used by takhfifan.com)
-||ipify.org^$third-party
 ! >> J <<
 ! >> K <<
 ! >> L <<
 ! >> M <<
 ||track.mailerlite.com^
 ! >> N <<
-||js-agent.newrelic.com^
-! ^ Used by virgool.io
 ! >> O <<
 ||cdn.onesignal.com^
 ! ^ Used by downloadsoftware.ir, itna.ir
 ! >> P <<
-||prchecker.info^
-! ^ Used by uplooder.net
 ! >> Q <<
 ! >> R <<
 ! >> S <<
@@ -357,8 +333,6 @@
 ||simple-counter.com/hit.php^$third-party
 ||sendpulse.com^$third-party
 ! ^ Used by sourceiran.com
-||speedcurve.com^$third-party
-! ^ Used by zoomit.ir
 ||sibautomation.com^$third-party
 ! ^ Used by akhbarrasmi.com
 ! >> T <<
@@ -371,18 +345,12 @@
 ! ^ Used by aftabir.com
 ! >> V <<
 ! >> W <<
-||w3counter.com^$third-party
-||webengage.com^$third-party
-! Used by takhfifan.com
 ||webpu.sh^$third-party
 ! Used by digistyle.com
 ||web.webpushs.com^
 ! ^ Used by zima.ir
-||stats.wp.com^
-! ^ Used by icoff.ee
 ! >> X <<
 ! >> Y <<
-||mc.yandex.ru^
 ! >> Z <<
 !-------------------------^ Non-Persian Ads/Trackers/Annoyances Filters used in Persian websites ^-----------------------!
 !-------------------------v Site-Specific Filters v-----------------------!
@@ -513,7 +481,6 @@ androidsharp.com###toshare-dl-link
 ariapix.net##.textads
 androidha.com##.app_introduce
 androidha.com##.ads_place
-||accpress.com/news/wp-content/plugins/better-adsmanager/
 ||static.accpress.com/baner/
 accpress.com###text-25
 ||afkarnews.com/statics/
@@ -694,7 +661,6 @@ download1music.ir##[id^="pos-article-display-"]
 download1music.ir##section li:not(:has([href^="https://download1music.ir/"]))
 download1music.ir##.d1yekta
 ! https://github.com/MasterKia/PersianBlocker/issues/85
-||digiro.ir/wp-content/plugins/better-adsmanager^
 ||digiro.ir/wp-content/uploads/*.gif
 digiro.ir##.vc_col-sm-9 .type-post:has(a[href*="/author/ads/"])
 digiro.ir##.uizv
@@ -986,7 +952,6 @@ faceit.ir##.header-mdh
 faceit.ir##.advertisement
 ! https://github.com/MasterKia/PersianBlocker/issues/84
 farnet.io#%#//scriptlet('ubo-acis.js', 'eif')
-||farnet.io/wp-content/plugins/better-adsmanager^
 ||farnet.io/wp-content/plugins/better-post-views^
 farnet.io##.eif:not(:has(a[href*="farnet.io"]))
 farnet.io##.content-column:not(> .archive-title:has-text(رپرتاژ تبلیغاتی)) .item-inner:has(a[href*="/pr/"])
@@ -1190,7 +1155,6 @@ irannaz.com##div.CBS.CenterBlock:nth-of-type(3)
 irannaz.com##div.CBS.CenterBlock:nth-of-type(5)
 irannaz.com##div.CBS.CenterBlock:nth-of-type(6)
 ||itresan.com/wp-content/cache/busting^
-||itresan.com/wp-content/plugins/better-adsmanager^
 ||itresan.com/wp-content/uploads/*.gif
 itresan.com###NR-Ads
 itresan.com##.listing-item-blog:has(a[href*="/author/ads/"])
@@ -1381,6 +1345,8 @@ lahzeakhar.com#%#//scriptlet('ubo-set.js', 'customnotify', 'noopFunc')
 ||lahzeakhar.com/ShowAds
 ! ||lahzeakhar.com/sw.js
 ! >> M <<
+! https://github.com/MasterKia/PersianBlocker/issues/108
+minevisam.com##.srjtbaungo
 ||magland.ir/banner_images^
 ||analytic.magland.ir^$all
 ! ||malltina.com^$removeparam=/^upn_/
@@ -1572,7 +1538,6 @@ pichak.net##center > center > center > center
 pichak.net##center:nth-of-type(2) > center
 pichak.net##body > div > font
 ! https://github.com/MasterKia/PersianBlocker/issues/85
-! ||p30konkor.com/wp-content/plugins/better-adsmanager^
 ||p30konkor.com/wp-content/uploads/*.gif
 p30konkor.com###header-ad1
 p30konkor.com###p30konkor-ads-p div:has(p > a[rel]):not(:has(a[href*="p30konkor.com"]))
@@ -1669,7 +1634,6 @@ p30world.com##.sidebar-ads
 forum.p30world.com###ad_global_below_navbar
 forum.p30world.com##.ad_global_header
 forum.p30world.com#@##ad_global_above_footer
-||1pezeshk.com/wp-content/plugins/better-adsmanager
 ||1pezeshk.com/wp-content/plugins/post-views-counter
 1pezeshk.com##.adcontainer
 1pezeshk.com##.widget_better_rss_widget.widget.primary-sidebar-widget.w-t.h-ni
@@ -1720,7 +1684,6 @@ rokna.net##.news-col-1 #rssbank:upward(.container)
 rokna.net#$?#.top_fixed_mob { remove: true; }
 rokna.net##.zxc_c9
 ! !#endif
-||rouzegar.com/wp-content/plugins/better-adsmanager/
 ||irancarpet.net^$image,domain=rouzegar.com
 rouzegar.com##.widget_better-ads
 rouzegar.com##.adloc-is-banner
@@ -1946,6 +1909,8 @@ saat24.news###box167
 @@||1000site.ir/asset/images/images/adpage/$image,~third-party
 @@||1000site.ir/home/ads/asset/favicon.ico$image,~third-party
 ! >> T <<
+! https://github.com/MasterKia/PersianBlocker/issues/106
+top90.ir##.side1:has(a[title][rel="noopener noreferrer"])
 ! https://github.com/MasterKia/PersianBlocker/issues/102
 ||titrebartar.com/images/banners/*.gif
 tamasha.com#%#//scriptlet('ubo-set.js', 'socketUrl', 'undefined')
@@ -2331,6 +2296,9 @@ zoomit.ir##[class^="DisplaySkeleton__DisplayRoot"]
 zoomit.ir##[class*="BrowseArticleItem___StyledFlex"]:has(a[href*="/pr/"])
 zoomit.ir##[class*="SupporterText"]:upward([class^="col__Col"])
 zoomit.ir##footer a[href*="parspack.com?utm_source=zoomit"]:upward(.col-sm-5)
+! !#if env_mobile
+zoomit.ir##.price-sticky
+! !#endif
 zoomtech.org###top_ads
 zoomtech.org###posts_single_ads
 !-------------------------^ Site-Specific Filters ^-----------------------!
