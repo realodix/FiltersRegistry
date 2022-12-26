@@ -4537,6 +4537,10 @@ sinoptik.ua#%#//scriptlet("abort-on-property-read", "SIN.AdsLoader")
 sinoptik.ua$$script[tag-content="SIN.AdsLoader.adBlockDetector()"][max-length="16000"]
 !
 !
+! antiadblock
+yvid.ru#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
+!+ PLATFORM(ios, ext_android_cb)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=yvid.ru
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129116
 gorodrabot.by#%#//scriptlet("abort-on-property-read", "adfoxAsyncParams")
 ||an.yandex.ru/partner-code-bundles/*.js$domain=gorodrabot.by,redirect=noopjs,important
@@ -6183,6 +6187,8 @@ livejournal.com#%#//scriptlet("set-constant", "begun_new_callbacks", "undefined"
 !
 ! drive2.ru
 !
+! irecommend.ru
+!
 !#if (!adguard_ext_firefox)
 ||dzen.ru/*/*/*_$replace=/^.*"blockId\":\s*\"R-A-.*//,script,xmlhttprequest,other
 ||spletnik.ru/_$script,replace=/\/context_adb.*//
@@ -6718,6 +6724,7 @@ okko.sport#?#div[class]:has(> div[class] > div[class]:contains(/^коэффиц�
 okko.sport#?#button:has(> span:contains(/^прогнозы$/))
 okko.sport##div[class]:has(> iframe[src^="https://clients-static.okko.tv/web/banners/winline/"])
 !
+meendoru.net#?#.leftcol > div.box:has(> div.i1 > div.sidebp > center > div > a[href^="/index.php?r=AdRedirect"])
 comss.ru#?#body > div.container[style^="padding-top:"] > p > span:contains(Объявления):upward(2)
 rutracker.ru#?#.post_body tr.row1 > td.tCenter.pad_6:not(:has(> a[href^="dl.php"]))
 rutracker.ru#?##sidebar1-wrap div[align="center"]:has(> h3:contains(Реклама))
@@ -8750,6 +8757,8 @@ disk.yandex.*#%#//scriptlet('remove-class', 'has-fullscreen-banner','.public__ro
 !------- CSS -----------
 !-----------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/138247
+booblex.ws#$#body { padding-top: 0 !important; }
 ! fix top margin
 gameguru.ru#$##section1 { margin-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/137495
@@ -11261,7 +11270,7 @@ faptime.ru,kremlinmedia.ru,cyberpedia.su,megaobuchalka.ru,rsload.net,gig-games.n
 ! ##center > a[target="_blank"] > img
 studopedia.info,infopedia.su,studopedia.net,studopedia.su,studopedia.org,studopedia.ru,studopedia.com.ua,lektsii.org,mydocx.ru,gamesrepack.com,zannn.top,innal.top,torrentmoom.com,paslab.info,onlinestreams.ru,otxataba.net,wot-lom.com,world-of-gamers.net,odessa-life.od.ua,film-4-you.com,filmitorrent.org,filmitorrent.site,fryd.ru,imagenizr.net,imgbum.ru,megamedportal.ru,megatrack.top,rgmechanics.ru,ru-track.net,soc-life.com,tvtorrent.me,web.cofp.ru,60-fps.net,firebit.biz,new.vladna.club,pornotor.org##center > a[target="_blank"] > img
 ! ##div[class^="banner"]
-bezformata.com,progorodsamara.ru,agrotrend.com.ua,sputniknews.ru,i2hard.ru,autorun.by,modernrock.ru,asn24.ru,citytraffic.ru,cuys.ru,dt.ua,feo.ua,jv.ru,kuban24.tv,m2motors.com.ua,musicforums.ru,roem.ru,vitasite.ru,web-ru.net,zn.ua##div[class^="banner"]
+kp.ua,ukrrudprom.com,bezformata.com,progorodsamara.ru,agrotrend.com.ua,sputniknews.ru,i2hard.ru,autorun.by,modernrock.ru,asn24.ru,citytraffic.ru,cuys.ru,dt.ua,feo.ua,jv.ru,kuban24.tv,m2motors.com.ua,musicforums.ru,roem.ru,vitasite.ru,web-ru.net,zn.ua##div[class^="banner"]
 ! ##div[class^="banner-"]
 progorod33.ru,inpodolsk.ru,dota2.ru,meteo.ua,klops.ru,crazymailing.com,lotzon.pro,novosti-n.org,prokazan.ru,20minut.ua,alnews.com.ua,gtavicecity.ru,haqqin.az,medicina.ua,obozrevatel.com,obzor.press,polit.ru,tsn.ua,wday.ru,zhitomir.info,zvuki.ru##div[class^="banner-"]
 ! ##.banner
@@ -11280,6 +11289,9 @@ sobesednik.com,vz.ru,autoparus.by,ctv.by,hightech.plus,vkpress.ru,newstula.ru,pa
 !
 !
 !
+ukrrudprom.com##div[id^="textads"]
+||booblex.org/static/bnrs2/brand
+tattoo-mall.ru##.code-block-12
 naukatv.ru##[class*="-partner-banner"]
 fast-torrent.ru,svetacdn.in###registration-form-widget
 brestcity.com##a[href^="https://autonomia.by/"] > img
@@ -11602,7 +11614,6 @@ remanga.org##img[alt$="banner"]
 fomag.ru##.popular-art-head
 ||fomag.ru/upload/rk/feb
 /images/obmen/*$domain=pornososalka.org|volosnya.com|pornomotor.club
-kp.ua##div[class^="banner"]
 ||fuckhdtube.com/tmp/
 lpgenerator.ru##.vitamin
 gatchina3000.ru##table[width="700"][height="300"]
@@ -14001,7 +14012,7 @@ mytriface.com##div[id^="bia-"]
 culture.ru##.js-top-promo-block
 ||shneider-host.ru/promo/$third-party
 appda.ru##div[class^="adserok"]
-vse-ochen-prosto.ru,vr-boom.ru,tvoj-onlajn.ru,info-comp.ru,soft-click.ru,7zip-download.ru,teleggid.com,beautiface.net,find-key.ru##.b-r
+tattoo-mall.ru,vse-ochen-prosto.ru,vr-boom.ru,tvoj-onlajn.ru,info-comp.ru,soft-click.ru,7zip-download.ru,teleggid.com,beautiface.net,find-key.ru##.b-r
 sexkvartal.org##.native_ads
 android-tools.ru###text-30
 infogra.ru,gamedev.ru###advert
@@ -15390,7 +15401,7 @@ wi-fi.ru###curtainBanner
 med-heal.ru,gepard-kovrov.com,pet7.ru,pyatilistnik.org,slavasozidatelyam.ru,forbes.net.ua,bizua.org,vkurier.by,altyn-orda.kz,comp-profi.com,gamerant.ru,magictemple.ru,womanel.com.ua###custom_html-2
 trashexpert.ru,nastroyvse.ru,donbasstoday.ru,gepard-kovrov.com,zak-insider.com,teleggid.com,footbnews.ru###custom_html-3
 nastroyvse.ru,newssky.com.ua,techblog.sdstudio.top,iz.com.ua,lubimiygorod.od.ua###custom_html-4
-makeupkey.ru,cheb-live.ru,nachedeu.com###custom_html-5
+tattoo-mall.ru,makeupkey.ru,cheb-live.ru,nachedeu.com###custom_html-5
 vkurier.by,ogorod23.ru,elitarium.ru,poglyad.tv,pronetblog.by,sudba.info###custom_html-6
 ladyblog.me,itshneg.com,nachedeu.com###custom_html-7
 zak-insider.com,meditation-portal.com,vkurier.by,itshneg.com,reproduktor.net,cripo.com.ua###custom_html-8
@@ -22586,6 +22597,7 @@ yandex.md,yandex.by,yandex.com,yandex.com.tr,yandex.fr,yandex.kz,yandex.ru##div[
 ||yandex.ru/portal/ntp/banner$redirect=nooptext
 !
 ! Yandex.Maps
+yandex.*##.adverts-on-map-item-view__placemark
 yandex.*##._id_branding_tele2
 yandex.*##.home-panel-content-view__special-tip
 yandex.*##.search-lavka-view
@@ -22782,6 +22794,7 @@ sports.ru###branding-layout>.page-layout:empty
 ! Another way to inject clickable links
 cyber.sports.ru##.match-summary__betting-bar
 cyber.sports.ru##.match-teaser__betting-bar
+sports.ru##.comment-ads
 sports.ru##.float-block
 sports.ru##.adfox-banner
 sports.ru##div[data-control="Stat.WinlineButton"]
