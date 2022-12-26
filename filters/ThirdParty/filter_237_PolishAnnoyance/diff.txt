@@ -1,5 +1,13 @@
 ! m.facebook.com#?##viewport > div:nth-of-type(1):-abp-has(> a:-abp-contains(cookie)) is excluded by "facebook.com#?#" in exclusions.txt
 m.facebook.com#?##viewport > div:nth-of-type(1):-abp-has(> a:-abp-contains(cookie))
+! nike.com##body[data-overlay*="Modal" i]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .unite-container):has-text(/newsletter/i) is excluded by "nike.com##body[data-overlay*="Modal" i]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .unite-container):has-text(/newsletter/i)" in exclusions.txt
+nike.com##body[data-overlay*="Modal" i]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .unite-container):has-text(/newsletter/i)
+! meczyki.pl##+js(gnf) is excluded by "meczyki.pl##+js(gnf)" in exclusions.txt
+meczyki.pl##+js(gnf)
+! ||web.archive.org/web/*/http*://*.pl/*$generichide,important,domain=web.archive.org is excluded by "/^\|\|web.archive.org\/web\/\*\/http\*:\/\/\*.pl\/\*\$generichide\,important\,domain=web.archive.org/" in exclusions.txt
+||web.archive.org/web/*/http*://*.pl/*$generichide,important,domain=web.archive.org
+! nike.com##body[data-overlay="cookieModalSimple"]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .pre-cookie-modal-body) is excluded by "nike.com##body[data-overlay="cookieModalSimple"]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .pre-cookie-modal-body)" in exclusions.txt
+nike.com##body[data-overlay="cookieModalSimple"]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .pre-cookie-modal-body)
 ! Rule "fakt.pl,medonet.pl##.withFPU:before" converted to: "fakt.pl,medonet.pl##.withFPU::before"
 fakt.pl,medonet.pl##.withFPU:before
 ! Rule "medonet.pl##.withHPU:before, .withPNP:before" converted to: "medonet.pl##.withHPU::before, .withPNP::before"
@@ -1860,20 +1868,8 @@ filmboxlive.com##.mobox-wrapper:style(overflow: auto !important;)
 galopuje.pl,powiatslubicki.pl##.modal-open:style(overflow: auto !important; padding-right: 0 !important;)
 ! Rule "zlubaczowa.pl#?#html[style*="overflow"][style*="important"]:style(overflow: auto !important; height: auto !important;)" converted to: "zlubaczowa.pl#$?#html[style*="overflow"][style*="important"] { overflow: auto !important; height: auto !important; }"
 zlubaczowa.pl#?#html[style*="overflow"][style*="important"]:style(overflow: auto !important; height: auto !important;)
-! Error: Invalid selector: 'html:not([class*="scrollblock"]) .cdk-overlay-container' -- Selection by :not() pseudo-class is not possible in rule:
-psd2-pdev.bskadzidlo.pl,rentis.pl##html:not([class*="scrollblock"]) .cdk-overlay-container
-! Error: Invalid selector: 'html:not([style*="overflow"]) #cadre_alert_cookies' -- Selection by :not() pseudo-class is not possible in rule:
-pl##html:not([style*="overflow"]) #cadre_alert_cookies
-Error: "Unknown pseudo class: body[data-overlay*="Modal" i]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .unite-container):has-text(/newsletter/i)" in the rule: "nike.com##body[data-overlay*="Modal" i]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .unite-container):has-text(/newsletter/i)"
-nike.com##body[data-overlay*="Modal" i]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .unite-container):has-text(/newsletter/i)
-! Error: Invalid selector: '+js(gnf)' -- '+js(gnf)' is not a valid selector in rule:
-meczyki.pl##+js(gnf)
 Error: "$redirect modifier is invalid" in the rule: "/^https\:\/\/(www\.)?youtube(-nocookie)?\.com\/embed\//$third-party,subdocument,object,redirect=click2load.html:10,domain=pinger.pl"
 /^https\:\/\/(www\.)?youtube(-nocookie)?\.com\/embed\//$third-party,subdocument,object,redirect=click2load.html:10,domain=pinger.pl
-Error: "Modifier Generichide cannot be used in blacklist rule" in the rule: "||web.archive.org/web/*/http*://*.pl/*$generichide,important,domain=web.archive.org"
-||web.archive.org/web/*/http*://*.pl/*$generichide,important,domain=web.archive.org
-Error: "Unknown pseudo class: body[data-overlay="cookieModalSimple"]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .pre-cookie-modal-body)" in the rule: "nike.com##body[data-overlay="cookieModalSimple"]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .pre-cookie-modal-body)"
-nike.com##body[data-overlay="cookieModalSimple"]:watch-attr(data-overlay):not([data-overlay="true"]) #gen-nav-commerce-header-v2 > div.pre-modal-window:has(> .pre-modal > .pre-modal-view > .pre-cookie-modal-body)
 Error: "$redirect modifier is invalid" in the rule: "||cdn.cookielaw.org^$important,redirect=noop.js:99,script,domain=open.spotify.com"
 ||cdn.cookielaw.org^$important,redirect=noop.js:99,script,domain=open.spotify.com
 ! Error: Invalid selector: '.modals.dimmer > .gdpr.visible:upward(1):watch-attr([class])' -- Error: unable to select by '.modals.dimmer > .gdpr.visible:watch-attr([class])' — unknown pseudo-class selector ':watch-attr([class])' in rule:

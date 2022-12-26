@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2022.1226.0
+! OriginalVersion: 2022.1226.7
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -392,6 +392,10 @@ funbe185.com,funbe186.com,funbe187.com,funbe188.com,funbe189.com,funbe190.com,fu
 /ad-manager.min.js
 /RealMedia/ads/
 !
+||img.wowtv.co.kr/MainManage/
+||vop.co.kr/templates/adv/
+||vop.co.kr/templates/admanager/
+||nstatic.dcinside.com/dc/event/nft_gaejugi/
 ||images.ddengle.com/files/attach/images/11138262/
 ||gameangel.com/System/html/iframe/common_banner.php
 ||media.a-ha.io/aha-qna/assets/common/$image
@@ -1192,7 +1196,7 @@ dpg.danawa.com,m.hani.co.kr##div[id*="-ad"]
 ! ##div[id*="Ad"]
 m.seoul.co.kr##div[id*="Ad"]
 ! ##div[class*="ad_"]
-donga.com,paxnet.co.kr##div[class*="ad_"]
+vop.co.kr,donga.com,paxnet.co.kr##div[class*="ad_"]
 ! ##div[class*="ad-"]
 lol.ps##div[class*="ad-"]
 ! ##div[id^="Banner"]
@@ -1204,6 +1208,11 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+wowtv.co.kr##div[class^="adv-"]
+koreanbots.dev##.container div[style^="height:"].mx-auto
+m.compuzone.co.kr##.right_btn
+m.dcinside.com###gaejukimg
+dcinside.com##.moveimglink
 styleup.gameangel.com##.game_wrap ~ div[style*=" "]
 styleup.gameangel.com##div[id^="ads_"]
 eomisae.co.kr##main#main .eq.section > div[class$=" "][style^="background-position"] ~ div[style^="float: "]
@@ -1328,7 +1337,7 @@ cosinkorea.com##div[style] > hr.spc
 cosinkorea.com##div[style] > div[class^="arl_"] ~ hr.skin_margin
 m.newspic.kr##div[data-widget="recommend"].box
 m.10000recipe.com##.container > div[style]:not([class])
-bemil.chosun.com##div[class^="AD"]
+wowtv.co.kr,bemil.chosun.com##div[class^="AD"]
 bemil.chosun.com##div[class$="AD"]
 aladin.co.kr##.banner_wrap .swiper-wrapper
 aladin.co.kr##body > div[id][class][onclick*="Layer"]
@@ -1496,7 +1505,7 @@ m.joynews24.com##hr[style].blank
 joynews24.com,inews24.com##ad
 playcraft.tistory.com##.module.module_plugin a[href*="//coinone.co.kr/user/signup?ref="]
 playcraft.tistory.com##.module.module_plugin a[href*="//link.coupang.com/"]
-mobiinside.co.kr,phdkim.net,quasarzone.com##div[class*="-banner-"]
+wowtv.co.kr,mobiinside.co.kr,phdkim.net,quasarzone.com##div[class*="-banner-"]
 minimap.net##div[class*="-ad"]:not(.container):not([style])
 minimap.net##.feed-list-wrap .feed-item-wrap-SPONSORED
 mediatoday.co.kr##div[id^="popup_"][style]
@@ -2160,6 +2169,7 @@ x86.co.kr#@#.download_ad
 !
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+wowtv.co.kr#$#.article-ad ~ p[style][class^="title"] { margin-top: 100px !important; }
 kidkids.net#$#div[class^="main"]#middle_area .academy.fleft:not(.iyua) { margin-left: calc(11.5%) !important; }
 kidkids.net#$##id_my_menu_area ~ #main_sky_banner_area { margin-left: 685px !important; }
 m.ruliweb.com#$#.go_top.go_button { width: 100% !important; }
@@ -2328,6 +2338,7 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+m.compuzone.co.kr#?#div[class^="contents"] > div[class^="main_area"]:has(a[href*="ADRollingBanner"])
 ddengle.com#?#ol.bd_lst li[class]:has(span[class^="ad_"])
 ddengle.com#?#table.bd_lst tr.notice:has(span.ad)
 yongtj.com#?##sidebar-wrapper div[id^="HTML"]:has(ins.adsbygoogle)
@@ -2372,7 +2383,6 @@ programmers.co.kr#?#div[class*="Banner"] div[data-swiper-slide-index].swiper-sli
 kyobobook.co.kr#$?#.banner_control_inner li[data-target="#75"].banner_group_item { remove: true; }
 kyobobook.co.kr#?#.welcome_banner_inner li.swiper-slide:has(img[src*="image.kyobobook.co.kr/newimages/adcenter/"]):remove()
 defensetimes.kr#?#table[id^="index_"] tr:has(ins.adsbygoogle)
-m.compuzone.co.kr#?#div[class^="contents"] > div[class^="main_area"]:has(img[src*="ADRollingBanner_"])
 pinpointnews.co.kr#?##article-view div[style].float-center div[class^="m-view-"]:not(:has(> article))
 search.daum.net#?#div[class] > div[disp-attr] ~ div[disp-attr]:has(a[href*="//brandsearch.ad.daum.net/"][onclick^="smartLog"]) + .line
 search.daum.net#?#div[class] > div[disp-attr] ~ div[disp-attr]:has(a[href*="//brandsearch.ad.daum.net/"][onclick^="smartLog"])

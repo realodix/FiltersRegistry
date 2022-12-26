@@ -1,8 +1,8 @@
 !
-! Checksum: kN7PHCX756pGTdELW3Gomg
-! OriginalVersion: 202212260831
+! Checksum: 3vJCaprWJZW3lnAmmHdgoA
+! OriginalVersion: 202212261631
 ! Title: RU AdList: Counters
-! Last modified: 26 Dec 2022 08:31 UTC
+! Last modified: 26 Dec 2022 16:31 UTC
 ! Expires: 1 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1225,7 +1225,9 @@ yandex.*#?#.touch-feed > div > .feed-item[id^="zen-row-"]:-abp-has([class^="zen-
 ! анонс в шапке форума
 4pda.*###go_1 > :not(p):not(h4):not(.globalmesscontent)
 ! реклама в шапке форума
+4pda.*##html:not([style]) tbody > tr[valign="top"] > td[width*="20"] + td[class]
 ! реклама при скачивании на форуме
+4pda.*##html:not([style]) > body:not([itemscope]) > div[id]:not([href]) > [href="#"]:empty ~ [href^="http"]
 ! реклама в QMS и мобильной версии сайта
 4pda.*##.menu-main-mobile > [style="display:none;"]
 !
@@ -1342,7 +1344,6 @@ $removeparam=ysclid
 ?sub_confirmation=1$document,removeparam=|,domain=youtube.com
 ?topblock$document,removeparam=|,domain=3dnews.kz|3dnews.ru
 ?ymclid=$document,removeparam=|
-@@/forum\/(login|torrent)\.php\?(logout|mode)\=/$removeparam,domain=nnm-club.lib|nnm-club.me|nnmclub.ro|nnmclub.to
 aff_fcid=$document,removeparam=|,domain=aliexpress.*|~campaign.aliexpress.com
 algo_pvid=$document,removeparam=|,domain=aliexpress.*
 block_click=$removeparam=block_click,domain=rambler.ru
@@ -1390,4 +1391,10 @@ utm_$document,removeparam=ig_rid,domain=instagram.com
 ||yandex.*/search/$document,removeparam=search_source,domain=yandex.*
 ||yandex.ru/?clid=$document,removeparam=|,domain=yandex.*
 ||ykt.ru^$document,removeparam=/news_interesting|news_plus|news_popular|news_recent|promo_inner/,domain=ykt.ru
+! исключения
+@@/forum\/(login|torrent)\.php\?(logout|mode)\=/$removeparam,domain=nnm-club.lib|nnm-club.me|nnmclub.ro|nnmclub.to
+@@|https://www.sravni.ru/$subdocument,removeparam=utm_campaign
+@@|https://www.sravni.ru/$subdocument,removeparam=utm_content
+@@|https://www.sravni.ru/$subdocument,removeparam=utm_medium
+@@|https://www.sravni.ru/$subdocument,removeparam=utm_source
 !
