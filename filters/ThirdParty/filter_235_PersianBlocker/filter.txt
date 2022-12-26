@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2022-12-25
+! Last modified: 2022-12-26
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -884,6 +884,7 @@ estekhtam.com#@#.ads-bottom
 ||api.enama.ir/WebFiles/_AdsBanner/
 ! TODO: Investigate more filters
 ! >> F <<
+filmha.top##.abvertise > .container > a:not(a[href="https://t.me/filmha_top"])
 ! https://github.com/MasterKia/PersianBlocker/issues/107
 ||analytics.football360.ir^$all
 ||football360.ir/api/advertisements^
@@ -1087,6 +1088,7 @@ hamshahrionline.ir##.ads.box
 hamshahrionline.ir###ads-container > .box > header:has-text(وبگردی):upward(.box)
 hamshahrionline.ir#@##ads-container
 ! >> I <<
+iranidata.com##.m-ads:upward(.sidebar-left-item.content)
 iranstar.com#%#//scriptlet('ubo-ra.js', 'onselectstart|oncopy|oncontextmenu', 'body')
 iranstar.com#%#//scriptlet('ubo-acis.js', 'jQuery', 'Drupal')
 iranstar.com##.ads-div-block
@@ -1333,6 +1335,9 @@ k2cod.com###table10 > tbody > tr > .textBoldColor
 k2cod.com##.bgleftmenu > div > div
 k2cod.com###table10
 ! >> L <<
+listen2music.ir##.down-box-ads
+listen2music.ir##.down-box1
+listen2music.ir##.side_left > .side > .title:has-text(تبلیغات متنی):upward(.side_left)
 loudmusic.ir##.singleads
 ||lendo.ir^$removeparam=/^utm_/
 languagedownload.ir##.type-sticky.status-publish
@@ -1593,6 +1598,7 @@ p30download.ir##.basic-list-linkdump
 p30download.ir###kaprila_p30download_ir_related-top-post
 p30download.ir###kaprila_p30download_ir_related
 p30download.ir##.text-tabliq
+p30download.ir##.footer-sections2:has(h4:has-text(لینک ها)) > ul > li:not(:has(a[href*="p30download.ir"]))
 ||film.persianv.com/frontend/js/ads/
 persianv.com##.ads_box
 persianv.com#@#.ads-text
