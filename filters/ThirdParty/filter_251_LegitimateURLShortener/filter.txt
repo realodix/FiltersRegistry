@@ -1,6 +1,6 @@
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 27December2022v3
+! OriginalVersion: 27December2022v5
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -1872,7 +1872,7 @@ $removeparam=argsite,domain=metaffiliation.com
 $removeparam=ctc,domain=avantlink.com
 $removeparam=pid,domain=123inkjets.com|bergfreunde.*|play.google.com|samsclub.com|th.bing.com|flipkart.com|hepsiburada.com|appsflyer.com|tiktok.com|onelink.me|shopee.*|farfetch.com
 $removeparam=subid,domain=webmasterplan.com|admitad.com|mintmobile.com|secretlab.*
-$removeparam=tracking,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|messenger.com|affiliatefuture.com|gtomega.*
+$removeparam=tracking,domain=facebook.*|facebookwkhpilnemxj7asaniu7vnjjbiltxjqhye3mhbshg7kx5tfyd.onion|messenger.com|affiliatefuture.com|gtomega.*|malwarebytes.com
 $removeparam=ws,domain=ds1.nl
 ! https://click.linksynergy.com/deeplink?id=kXQk6%2AivFEQ&mid=44583&u1=tomshardware-us-4362736165889510400&murl=https%3A%2F%2Fwww.newegg.com%2Fintel-core-i7-11700k-core-i7-11th-gen%2Fp%2FN82E16819118233
 ! https://shop-links.co/link/?publisher_slug=future&u1=tomshardware-us-1320336574459533300&exclusive=1&url=https%3A%2F%2Fbestbuy.7tiv.net%2Fc%2F376373%2F633495%2F10014%3Fprodsku%3D6425639%26u%3Dhttp%253A%252F%252Fwww.bestbuy.com%252Fsite%252F-%252F6425639.p%253Fcmp%253DRMX&article_name=Best%20SSDs%202021%3A%20From%20Budget%20SATA%20to%20Blazing-Fast%20NVMe&article_url=https%3A%2F%2Fwww.tomshardware.com%2Freviews%2Fbest-ssds%2C3891.html%2F%2Freviews%2Fbest-ssds%2C3891.html
@@ -3067,6 +3067,17 @@ $removeparam=srsltid,document
 ||1fichier.com^$removeparam=af
 ! https://github.com/DandelionSprout/adfilt/pull/721
 ||discoveryplus.com^$removeparam=_referrer
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-4505016
+||search.brave.com/api/suggest$removeparam=source
+! McAfee "safe search"
+||search.yahoo.com^$removeparam=fr
+||search.yahoo.com^$removeparam=fr2
+! Yahoo ads, i.e. https://www.malwarebytes.com/?c=cj&s=5370367&k=14452255&tracking=cj&x-wts=cj&x-affid=5370367&ADDITIONAL_AFFID=cj-5370367
+||mcafee.com^$removeparam=adid
+||malwarebytes.com^$removeparam=x-affid
+||malwarebytes.com^$removeparam=ADDITIONAL_AFFID
+||malwarebytes.com^$removeparam=s
+||malwarebytes.com^$removeparam=x-wts
 !#if !env_mobile
 ! ——— Entries mostly dedicated to maximising image sizes (thus poorly suited for phones) ———
 ! https://sproutsluckycorner.files.wordpress.com/2019/12/ring-fit-adventure-smoothies-1.png?w=600 (Shows the actual raw image instead of a promotion page; 25/11/2020)
