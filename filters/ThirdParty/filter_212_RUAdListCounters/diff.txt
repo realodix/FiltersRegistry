@@ -40,12 +40,6 @@ razlozhi.*#?#+js(abort-on-property-read, yaContextCb)
 razlozhi.*#?#+js(no-setTimeout-if, X-Set-Adblock)
 ! rp5.*#?#+js(setTimeout-defuser, xvb) is excluded by "rp5.*#?#+js(setTimeout-defuser, xvb)" in exclusions.txt
 rp5.*#?#+js(setTimeout-defuser, xvb)
-! ~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript) is excluded by "~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)" in exclusions.txt
-~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)
-! ~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#+js(json-prune, Blocks) is excluded by "~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#+js(json-prune, Blocks)" in exclusions.txt
-~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#+js(json-prune, Blocks)
-! ~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#^script:has-text('getPrefixes') is excluded by "~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#^script:has-text('getPrefixes')" in exclusions.txt
-~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#^script:has-text('getPrefixes')
 ! dzen.*,~yandex.net,yandex.*#?#+js(json-prune, direct rtb seatbid) is excluded by "dzen.*,~yandex.net,yandex.*#?#+js(json-prune, direct rtb seatbid)" in exclusions.txt
 dzen.*,~yandex.net,yandex.*#?#+js(json-prune, direct rtb seatbid)
 ! frontend.vh.yandex.*#?#+js(set-constant, Object.prototype.getAutoplay, noopFunc) is excluded by "frontend.vh.yandex.*#?#+js(set-constant, Object.prototype.getAutoplay, noopFunc)" in exclusions.txt
@@ -178,3 +172,9 @@ dzen.*,~yandex.net,yandex.*#$#body:not(#id) > div[style*="100px"][style*="75px"]
 4pda.*#$#html[style] > body div.holder-no-hidden { margin-bottom: 10px !important }
 ! 4pda.*#$##lbOverlay { background: none !important } is excluded by "#$#" in exclusions-low.txt
 4pda.*#$##lbOverlay { background: none !important }
+! Error: Invalid selector: '+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)' -- '+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)' is not a valid selector in rule:
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,moslenta.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#+js(abort-on-stack-trace, Object.prototype.getBaseFingerprint, inlineScript)
+! Error: Invalid selector: '+js(json-prune, Blocks)' -- '+js(json-prune, Blocks)' is not a valid selector in rule:
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,moslenta.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#+js(json-prune, Blocks)
+! Error: Invalid selector: '^script:has-text('getPrefixes')' -- Error: unable to select by '^script' — '^script' is not a valid selector in rule:
+~vp.rambler.ru,~id.rambler.ru,www.afisha.*,autorambler.*,championat.com,eda.ru,gazeta.ru,lenta.ru,letidor.*,moslenta.*,motor.*,passion.*,quto.*,rambler.*,wmj.*#?#^script:has-text('getPrefixes')
