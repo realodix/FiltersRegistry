@@ -125,6 +125,16 @@
 ! Good: @@/adblocker/detect.js$domain=example.org
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
+! glomex player adblock detection
+nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-213
+nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-250x300
+nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-250
+nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-197
+nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-2-160x600
+nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-19
+nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-2
+nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-21
+!
 !--- Prevent AdFender detection ---
 !### Temporary ###
 ! Due to this bug - https://github.com/AdguardTeam/Scriptlets/issues/268 the rule #%#//scriptlet("abort-on-property-read", "Object.prototype.autoRecov") doesn't work in extension 4.1.52
@@ -2725,9 +2735,6 @@ tele5.de#%#//scriptlet("json-prune", "testhide")
 movie-blog.tv,movie-blog.sx,movie-blog.to#%#//scriptlet("abort-on-property-read", "vavpo")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42934
 ani-stream.com#%#AG_onLoad(function() { setTimeout(function() { if(typeof loadplayer == "function") { loadplayer(); }; }, 300); });
-! https://github.com/AdguardTeam/AdguardFilters/issues/40359
-! player.glomex.com#%#//scriptlet("set-constant", "Object.prototype.disableAds", "true")
-! player.glomex.com#%#//scriptlet("set-constant", "Object.prototype._createAd", "noopFunc") -- adblock detection on infranken.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36737
 pornoente.tv#%#//scriptlet("set-constant", "vpUsePreRoll", "false")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34396
@@ -3089,6 +3096,7 @@ winfuture.de,netzwelt.de,quoka.de,farmeramania.de,bravofly.de,computerbild.de,di
 ! ##.billboard
 krautundrueben.de,motorsport-total.com,traktorpool.de,fnweb.de,laborjournal.de,tarnkappe.info,deraktionaer.tv,food-tiger.de,morgenweb.de##.billboard
 !
+ksta.de##.dm-slot__skyContainer::before
 plastverarbeiter.de,neue-verpackung.de###billboard-container
 plastverarbeiter.de,neue-verpackung.de##.ce_banneradbox
 plastverarbeiter.de,neue-verpackung.de##div[class*="adrow_"]
