@@ -1537,8 +1537,6 @@ bzbasel.ch#$#.az-iso--adblockerBlocker { display: none!important; }
 @@||wer-weiss-was.de/assets/javascripts/ads/
 ! https://forum.adguard.com/index.php?threads/22163/
 @@||20min.rcmd.tda.io^$domain=20min.ch
-! https://forum.adguard.com/index.php?threads/vergleichenbitte-de.22152/
-vergleichenbitte.de#%#Object.defineProperty(window, 'AAS_aktiv', { get: function() { return false; } });
 ! https://forum.adguard.com/index.php?threads/otz-de.22035/
 @@||otz.de/zgt-portal-theme/js/ads.js^
 ! https://forum.adguard.com/index.php?threads/orf-watch-at.21967/
@@ -2732,7 +2730,7 @@ gload.to#%#//scriptlet("abort-on-property-write", "bullads")
 tele5.de#%#//scriptlet("json-prune", "testhide")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/53012
 ! https://github.com/AdguardTeam/AdguardFilters/issues/51634
-movie-blog.tv,movie-blog.sx,movie-blog.to#%#//scriptlet("abort-on-property-read", "vavpo")
+movie-blog.tv,movie-blog.sx#%#//scriptlet("abort-on-property-read", "vavpo")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42934
 ani-stream.com#%#AG_onLoad(function() { setTimeout(function() { if(typeof loadplayer == "function") { loadplayer(); }; }, 300); });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/36737
@@ -2744,8 +2742,6 @@ ddl-music.to#%#document.cookie = "ddlpop=1; path=/;";
 maniac.de#%#Object.defineProperty(window, 'td_ad_background_click_link', { get: function() { return ""; } });
 ! radio.at, radio.net, radio.de -- blocking PreRoll by faking user agent to Google bot
 radio.at,radio.net,radio.de#%#document.cookie = "google_nomod=547";
-! https://github.com/AdguardTeam/AdguardFilters/issues/24506
-movie-blog.to#%#Object.defineProperty(window, 'PopUnder', { get: function() { return; } });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24266
 ddl-warez.to#%#document.cookie = "ddlpop=1"; document.cookie = "ddlpop2=1";
 ! https://github.com/AdguardTeam/AdguardFilters/issues/33849
@@ -2786,7 +2782,7 @@ maniac.de#%#(function() { var w_open = window.open, regex = /maniadrd.php/; wind
 ! https://forum.adguard.com/index.php?threads/13927/
 formel1.de#%#AG_onLoad(function() {document.getElementsByTagName("div")[0].setAttribute("class", "aswift_0");});
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1788
-myvideo.de,prosieben.de,prosiebenmaxx.de,sat1.de,kabeleins.de,sat1gold.de,sixx.de#%#Object.defineProperty(window, 'SIMAD', { get: function() { return function() { }; } });
+myvideo.de,prosieben.de,prosiebenmaxx.de,sat1.de,kabeleins.de,sixx.de#%#Object.defineProperty(window, 'SIMAD', { get: function() { return function() { }; } });
 ! https://github.com/AdguardTeam/ExperimentalFilter/issues/1411
 sueddeutsche.de#%#window.blockAdBlock = function() {};
 ! http://forum.adguard.com/showthread.php?8096
@@ -4195,8 +4191,6 @@ fitbook.de##a[href^="https://secure.adnxs.com/"]
 ||hasepost.de/wp-content/banners/
 ||hasepost.de/fpassage/aktuell.gif
 hd-streams.org##.movie-tabs .v-tooltip > span > a[onclick^="window.location.href"].v-btn
-movie-blog.to##a[href^="http://movie-blog.org/"][href*="smo.php"]
-movie-blog.to##a[href^="http://www.movie-blog.org/"][href*="/FD?fn="]
 schieb.de##.inner_sidebar > #custom_html-3
 koch-mit.de##.kk-advertising
 koch-mit.de##body .c-advertisement__banner
@@ -4570,7 +4564,7 @@ teltarif.de##.tgtLink
 autoextrem.de###sidebar > div[style="min-height: 260px;"]:not([id]):not([class])
 autoextrem.de##.above_header
 ||zomap.de^$domain=prosieben.de
-||cdn.zomap.de^$domain=ran.de|zappn.tv|kabeleins.de|kabeleinsdoku.de|prosieben.at|prosiebenmaxx.de|sat1.de|sat1gold.de|sixx.de|the-voice-of-germany.de|wetter.com|sat1.at
+||cdn.zomap.de^$domain=ran.de|zappn.tv|kabeleins.de|kabeleinsdoku.de|prosieben.at|prosiebenmaxx.de|sat1.de|sixx.de|the-voice-of-germany.de|wetter.com|sat1.at
 hd-streams.org##.v-tabs__content > .flex > button
 ariva.de##.isSponsored
 ariva.de##[id^="ariva.de_d_"].placement
@@ -5885,7 +5879,7 @@ hamburger-wochenblatt.de##body > .adLeaderboard
 mathe-lexikon.at##body > div#lb
 apfeleimer.de##body > div.ftr
 computerbild.de##body > div[id][style^="z-index:"]
-kabeleins.de,prosieben.de,prosiebenmaxx.de,ran.de,sat1.de,sat1gold.de,sixx.de,the-voice-of-germany.de,wetter.com##body.is_video > #modal-overlay
+kabeleins.de,prosieben.de,prosiebenmaxx.de,ran.de,sat1.de,sixx.de,the-voice-of-germany.de,wetter.com##body.is_video > #modal-overlay
 hallo-eltern.de##div#wunsch1.home_block.mobile-hide[style="background-color:#ffffff; padding-bottom=20px; border: 1px solid #f5a922;"]
 spiegel.de##div.adition ~ div[class]:not([data-position]):not([itemscope]) > div > :not(div)[id][class]
 vox.de##div:not(.voxde-masonry) > .voxde-medium-rectangle
@@ -6166,7 +6160,7 @@ tagesspiegel.de###urban-teaser1
 ||hgc-cf-cache-1.svonm.com/www.t-online.de/config.json$replace=/"enabled":[\s\S]*true\,/"enabled": false\,/i
 ! https://github.com/AdguardTeam/CoreLibs/issues/1671
 ||imi-online.de^$replace=/(<html xmlns="http:.*?" lang=".*?")/\$1>/,document
-! Glomex video ads - kabeleins.de,prosieben.de,prosiebenmaxx.de,ran.de,sat1.de,sat1gold.de,sixx.de,the-voice-of-germany.de,wetter.com
+! Glomex video ads - kabeleins.de,prosieben.de,prosiebenmaxx.de,ran.de,sat1.de,sixx.de,the-voice-of-germany.de,wetter.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21525
 config.player.p7s1.io/sat1-de.js$replace=/"adScheduler":\{"cobra":\{"advertiser":"[\s\S]*?_[\s\S]*?"/"adScheduler":\{"cobra":\{"advertiser":"x"/,important
 ! https://github.com/AdguardTeam/AdguardFilters/issues/21494
@@ -6177,7 +6171,7 @@ config.player.p7s1.io/prosieben-de.js$replace=/"adScheduler":\{"cobra":\{"advert
 ! https://forum.adguard.com/index.php?threads/prosieben-de.20468/
 ! https://forum.adguard.com/index.php?threads/resolved-wetter-com.17669/
 ! https://forum.adguard.com/index.php?threads/ads-on-kabeleins-de-tv.23357/
-/\:\/\/config-vvs\.glomex\.com\/[a-z0-9]*\.js/$replace=/"adScheduler":\{"cobra":\{"advertiser":"[\s\S]*?_[\s\S]*?"/"adScheduler":\{"cobra":\{"advertiser":"x"/,domain=7tv.de|kabeleins.de|prosieben.de|prosiebenmaxx.de|ran.de|sat1.de|sat1gold.de|sixx.de|the-voice-of-germany.de
+/\:\/\/config-vvs\.glomex\.com\/[a-z0-9]*\.js/$replace=/"adScheduler":\{"cobra":\{"advertiser":"[\s\S]*?_[\s\S]*?"/"adScheduler":\{"cobra":\{"advertiser":"x"/,domain=7tv.de|kabeleins.de|prosieben.de|prosiebenmaxx.de|ran.de|sat1.de|sixx.de|the-voice-of-germany.de
 ! wetter.com has different script than websites above
 /\:\/\/config-vvs\.glomex\.com\/[a-z0-9]*\.js/$replace=/"adScheduler"\:/"adScheduler":\{"cobra":\{\}\}\,"x":/,domain=wetter.com
 !
