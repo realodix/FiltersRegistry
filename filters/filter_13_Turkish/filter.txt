@@ -1663,7 +1663,7 @@ youtubemp3.us#%#//scriptlet("prevent-window-open")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/74657
 duslerkulup.com#%#//scriptlet("abort-current-inline-script", "document.onclick", "window.open")
 ! modalads - #%#//scriptlet('set-cookie', 'modalads', 'yes')
-bursahaberdar.com,isvecgundemi.com,kgrt.net,halk54.com,eskisehirhaber.com,haberlisin.com#%#//scriptlet('set-cookie', 'modalads', 'yes')
+gazeterize.com,bursahaberdar.com,isvecgundemi.com,kgrt.net,halk54.com,eskisehirhaber.com,haberlisin.com#%#//scriptlet('set-cookie', 'modalads', 'yes')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78951
 torrentarsivi.*#%#//scriptlet("prevent-addEventListener", "", "getPopupTarget")
 torrentarsivi.*#%#//scriptlet("abort-on-property-read", "check_target")
@@ -1744,8 +1744,10 @@ dreamfancy.org#%#(function() { window.open_ = window.open; var w_open = window.o
 sinemavitrini.com#%#document.cookie = "gosterilen_popup=1; path=/";
 ! https://github.com/AdguardTeam/AdguardFilters/issues/29866
 technopat.net#%#Object.defineProperty(window, 'td_ad_background_click_link', { get: function() { return ""; } });
+! https://github.com/AdguardTeam/AdguardFilters/issues/139054
 ! https://github.com/AdguardTeam/AdguardFilters/issues/25270
-aydinses.com#%#AG_onLoad(function() { if (window.location.pathname.indexOf('/tanitim.php') > -1) { document.cookie = "cookbanner=8saniye; path=/;"; var el = document.querySelector('.giris > a[href^="http://www.aydinses.com/?hid="][href$="&interstitial=true"]'); if(el) { el.click(); } } });
+gazeterize.com#%#//scriptlet("adjust-setTimeout", "redirectToMain", "*", "0.02")
+gazeterize.com,aydinses.com#%#AG_onLoad(function() { if (window.location.pathname.indexOf('/tanitim.php') > -1) { document.cookie = "cookbanner=8saniye; path=/;"; var el = document.querySelector('.giris > a[href$="&interstitial=true"]'); if(el) { el.click(); } } });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/19528
 haber7.com#%#AG_onLoad(function() { var elements = document.querySelectorAll(".headline-slider > .slick-dots > li > a:not([href*='advertorial'])"); for(var i = 0; i < elements.length; i++) { elements[i].innerHTML = i+1; }; });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/18946
@@ -4362,8 +4364,6 @@ bursa.com##.menualtireklam
 dizimodu.com###playex > a[href][target="_blank"] > img
 dizimodu.com###dt_contenedor > a[href][target="_blank"][style]
 ||dizimodu.com/rk/
-r10.net##.r10-left-p > .r10-left-fixed > a[href][rel="nofollow"][target="_blank"] > img
-r10.net##.container > div[class^="rc"] > div[class^="rd"] > a[href][rel="nofollow"][target="_blank"] > img
 ||cdn.r10.net/my/ticimaxson.gif
 marastahaber.com##.yapisikreklam2
 ||marastahaber.com/wp-content/uploads/*/*/*Reklam.webm
@@ -4498,8 +4498,11 @@ arenabodrumhaber.com##img[width="1200"][height="200"]
 kadikoygazetesi.com,arenabodrumhaber.com##img[width="300"][height="300"]
 arenabodrumhaber.com###panels > div.sidebarWidget.safirBox
 arenabodrumhaber.com##.theiaStickySidebar > div.homeWidget.safirBox
-r10.net##.postList > .rPanel > a[href][rel="nofollow"] > img
-r10.net##.container > .rPanel > a[href][rel="nofollow"] > img
+r10.net##.r10-left-p > .r10-left-fixed > a[href][rel="nofollow"][target="_blank"] > img
+r10.net##.container > div[class^="rc"] > div[class^="rd"] > a[href][rel*="nofollow"][target="_blank"] > img
+r10.net##.postList > ul > li > .content > a[href][rel*="nofollow"] > img
+r10.net##.postList > .rPanel > a[href][rel*="nofollow"] > img
+r10.net##.container > .rPanel > a[href][rel*="nofollow"] > img
 r10.net###inlinemodform > .announcements + div[class] > span > a[href][target="_blank"] > img
 r10.net##footer > .container > .iconArea ~ div[class] > div[class] > a[href][rel="nofollow"] > img
 r10.net##footer > .container > .iconArea ~ div[class] > div[class] > a[href][target="_blank"] > img
@@ -5239,7 +5242,7 @@ turkedebiyati.org##.textbox#current[style^="float: left;"]
 memurlar.net##.ColumnWidth > .default-widget > a[href][target="_blank"] > img
 memurlar.net##.ColumnContainer > a[onclick^="gtag('event', 'Click',"][target="_blank"].ColumnItem:not([href^="/"])
 sozcukitabevi.com##.banner_wrapper > a[target="_blank"] > img[alt="Sözcü Plus"]
-aydinses.com##.splash
+gazeterize.com,aydinses.com##.splash
 intersinema.com###musthead
 pchocasi.com.tr##a[href^="https://goo.gl"][target="_blank"][rel="nofollow"]
 pchocasi.com.tr##.buyuk-reklam-alani
