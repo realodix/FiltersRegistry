@@ -404,6 +404,7 @@ journal-plaza.net#?#.rightside div.block.bnavi[-ext-has="h3.dtitle:contains(Сч
 !||i.snssdk.com/log/*
 !||i.snssdk.com/slardar/sdk.js
 !
+||sdk.conscent.in^$third-party
 ||tpstelemetry.tencent.com^
 ||posthog.com^$third-party
 ||crossees.com^
@@ -37265,6 +37266,10 @@ link.gmapp*.net$image
 !------------------------------
 ! NOTE: Cookies specific
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/139322
+||nordvpn.com^$cookie=CurrentSession
+||nordvpn.com^$cookie=FirstSession
+||nordvpn.com^$cookie=nextbid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139263
 ||ridestore.com^$cookie=/^google-analytics_v4__/
 ! makeway.pl - unique user ID
@@ -37488,6 +37493,10 @@ $cookie=ev_sid,domain=ideal.es|elcorreo.com
 !------------------------------
 ! NOTE: Cookies generic rules
 !
+! thisiswaldo.com
+$cookie=waldo_region
+$cookie=waldo_continent
+$cookie=waldo_country
 ! findify.io
 ! https://developers.findify.io/v3/docs/findify-tracking-code-in-shopify-order-notes
 ! Tracking code used to check different metrics
@@ -38962,6 +38971,8 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/139431
+@@||scorecardresearch.com/internal-c2/plugins/streamingtag_plugin_jwplayer.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139139
 !+ PLATFORM(ext_android_cb)
 @@||pro.hit.gemius.pl/gstream.js$domain=embed.rtl.hu
