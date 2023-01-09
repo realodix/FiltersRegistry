@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0109.1
+! OriginalVersion: 2023.0109.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1032,7 +1032,6 @@ funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,fu
 ||loader2.fmkorea.com/_myphp/adpost/content_new.php
 ||loader.fmkorea.com/_loader/
 ||ssl.pstatic.net/tveta/libs/
-||genshin.gamedot.org/module/genshinmaps/asset/image/ab-2211-*.png^
 !
 ! DOMAIN-REFRESHER: START
 !
@@ -2148,6 +2147,7 @@ x86.co.kr#@#.download_ad
 !
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+genshin.gamedot.org#$##mapsContainer > .maps-content { top: 125px !important; }
 m.inven.co.kr#$#.mo-new-header .header .show-ads { max-height: 54px !important; }
 blockchainhub.kr#$#.bch-main-wrapper > .right-cont { margin-right: calc(50% - 180px) !important; width: 100% !important; }
 ppss.kr#$#.content { width: 100% !important; }
@@ -2178,7 +2178,6 @@ haninvegas.com#$#body[data-elementor-device-mode="desktop"] div[itemprop="mainCo
 news.jtbc.co.kr#$#.news_doc #footer { position: static !important; }
 etoland.co.kr#$#div[class^="gather-"][class$="_middle"] { padding-bottom: 35px !important; }
 sundaynewsusa.com#$#.td-is-sticky > .wpb_wrapper { top: 0px !important; }
-genshin.gamedot.org#$##mapsContent > .maps-content { top: 125px !important; }
 news.oasisfeed.com#$#.hideBtn { display: none !important; }
 news.oasisfeed.com#$##newsBody { height: auto !important; }
 ydailynewsis.blogspot.com#$#a[href*="//link.coupang.com/"][type] { display: none !important; }
@@ -2653,6 +2652,7 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
 !
+genshin.gamedot.org#%#//scriptlet("prevent-setTimeout", "adblockChecker")
 jimnong.tistory.com##.adblock-on
 ||ssulwar.com/dev/modules/board/skins/*/js/adblockblock.js$redirect=noopjs
 ssulwar.com#%#//scriptlet('abort-current-inline-script', 'document.getElementById', 'adblock')
@@ -2667,10 +2667,6 @@ ilsangt.tistory.com##.adblock-on
 ilsangt.tistory.com#%#//scriptlet('abort-current-inline-script', '$', '.adsense-area')
 tistory.com#%#//scriptlet('abort-current-inline-script', '$', 'div.adsbygoogle')
 jimnong.tistory.com,uda1004.tistory.com,webtv.dothome.co.kr,te31.com,koreapas.com,maniac-game.tistory.com,web1907.tistory.com#@#.adsbygoogle
-genshin.gamedot.org#%#//scriptlet('prevent-setTimeout', 'timerAdChecker')
-genshin.gamedot.org##[style*="background-image:"][style*="module/genshinmaps/asset/image/"]:not([id]):not([class])
-||genshin.gamedot.org/module/genshinmaps/asset/image/adblock-line
-||genshin.gamedot.org/module/genshinmaps/asset/image/ab-line
 sogirl.so#%#//scriptlet('set-constant', 'DHAntiAdBlocker', 'true')
 !#if adguard_app_ios
 @@||sogirl.so/wp-content/plugins/dh-anti-adblocker/public/js/ads-prebid.js
@@ -2749,6 +2745,7 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+||genshin.gamedot.org/module/genshinmaps/asset/image/ab-2211-*.
 @@||klauncher.kr/theme/NB-Basic/storage/image/logo-logo.png#ad&adv_keywords=
 @@||klauncher.kr^$generichide
 @@||jimnong.tistory.com^$generichide
