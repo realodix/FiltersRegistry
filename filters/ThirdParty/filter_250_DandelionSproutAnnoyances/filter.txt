@@ -14800,7 +14800,7 @@ deezer.com#?#.page-alerts:has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 22December2022v1
+! OriginalVersion: 09January2023v2
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -15080,8 +15080,11 @@ www.youtube.com#?#ytd-popup-container > .ytd-popup-container[role=dialog]:has(a[
 tekinvestor.no###full-page-signup-cta
 ! Weibo
 !! Aims to remove uncloseable login prompts when scrolling down on posts (The fix is pretty flimsy)
-! https://m.weibo.cn/detail/4582373461591759
+!!! https://m.weibo.cn/detail/4582373461591759
 ||sinaimg.cn/m/weibo-lite/*/smsLogin^
+!! Aims to remove a QR login prompt that shows up every time when pausing/unpausing and going in and out of fullscreen on a video (Logging in appears to still work from https://weibo.com/login.php)
+!!! https://weibo.com/7292751406/Mnt2psINg
+weibo.com#?#.mini-player + .woo-box-flex:has(div[class^=LoginPop_])
 ! Tumblr
 !! Removes a floaty prompt on bottom
 tumblr.com##div[class][style^="background: rgb(124, 92, 255); "]:only-of-type
