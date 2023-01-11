@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-01-09 09:26:17 CET
+! Last modified: 2023-01-11 08:55:09 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -234,9 +234,9 @@ godare.se##h3:has-text(Annons):upward(1)
 godare.se,wellness.se##[id^="adPlacement"]:upward(1)
 goon.se##.cpt-collab-text-ct1:has-text(/samarbete|annons/i):upward(.cpt-alm-main)
 goteborg.com#$#body { overflow-y:initial!important }
-goteborgdirekt.se,mitti.se,vasterastidning.se#$?##cruncho_now_iframe { remove: true; }
-goteborgdirekt.se,mitti.se,vasterastidning.se#%#//scriptlet('ubo-set.js', 'NWS.config.enableAdblockerDetection', 'false')
-goteborgdirekt.se,mitti.se,vasterastidning.se##h3:has-text(/annons/i):upward(.image-component-unprocessed)
+goteborgdirekt.se,mitti.se#$?##cruncho_now_iframe { remove: true; }
+goteborgdirekt.se,mitti.se#%#//scriptlet('ubo-set.js', 'NWS.config.enableAdblockerDetection', 'false')
+goteborgdirekt.se,mitti.se##h3:has-text(/annons/i):upward(.image-component-unprocessed)
 grillbaronen.se##a[href*="casino"], a[href*="kasino"], a[href*="betting"]:upward(.post)
 gynning.net##.sponsored-notification:upward([id^="post-"])
 happypancake.se#%#//scriptlet('ubo-aopr.js', 'Object.prototype.adUnits')
@@ -400,6 +400,7 @@ sillyseason.se##strong:has-text(casino):upward(li.sidebar-widget)
 sjofart.ax##.sjofa-top-takeover, .sjofa-artikel-pano:upward(section)
 sjofart.ax#$#section.huvudsektion { margin-top:unset!important }
 skargarden.se##[title^="Annons"]:upward(article)
+skolporten.se##a[href*="/sponsrat-innehall"]:upward(.article-short)
 so-rummet.se##.sponsrad-over:upward(.article-list)
 so-rummet.se##h3:has-text(/annonser/i):upward(.view-nya-lankar-front)
 so-rummet.se##img[src*="sponsrad"]:upward(.link-list-item)
@@ -461,6 +462,8 @@ utm_$document,removeparam=/^utm_/,domain=aftonbladet.se|booli.se|bostad.blocket.
 utsidan.se##div.clamzone:matches-css(before, content: /Annons:/i)
 varden.se##.sponsored-label:upward(.carousel-slide)
 varmepumpsforum.com##a[target]:upward(.frontlinks tr)
+vasterastidning.se##a[href*="casino.se"]:upward(.row)
+vasterastidning.se##h2:has-text(ANNONS:):upward(article)
 veckorevyn.com##.category-annonssamarbete:upward(.g1-mosaic-item)
 verktyg.internetmedicin.se##p:has-text(Annons:):upward(1)
 viivilla.se##.article-grid__sponsored, .card__sponsored:upward(.card)
@@ -573,8 +576,8 @@ home2tiny.se#%#//scriptlet('ubo-aeld.js', '/mousewheel|DOMMouseScroll/')
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1675,7 +1678,7 @@ atl.nu,landlantbruk.se###didomi-host, a[href*="/atl-tv-annons/"], [class^="Ad_"]
 atvmag.se,snowmobile.se##.location-header_before
 atvmag.se,snowmobile.se##.more-stories
 autolife.se###Banners
-automation.se,batliv.se,borattforum.se,brollopsmagasinet.se,bussmagasinet.se,elinor.se,em-fotboll.se,fotbollsresultat.com,globalpolitics.se,husbyggaren.se,nyhetersto.se,svenskbyggtidning.se,vm-fotboll.se##a.gofollow[data-track]
+automation.se,batliv.se,borattforum.se,brollopsmagasinet.se,bussmagasinet.se,elinor.se,em-fotboll.se,fotbollsresultat.com,globalpolitics.se,husbyggaren.se,nyhetersto.se,svenskbyggtidning.se,vildmarken.se,vm-fotboll.se##a.gofollow[data-track]
 automation.se,metalcentral.net,transportnytt.se,verkstadstidningen.se##.bannergroup
 automobil.se,bettips.se,campingsverige.se,caroftheyear.se,dalarnasaffarer.se,dh.se,djungeltrumman.se,endurobloggen.se,eniro.se,entreprenadaktuellt.se,fightermag.se,frillesasbandy.se,husbilhusvagn.se,ja.se,jamtlandsaffarer.se,klassiker.nu,ljuskultur.se,maskinbladet.se,mopedgaraget.se,naringslivetvgl.se,nyheteridag.se,omni.se,realtid.se,restaurangvarlden.se,riksettan.net,skik.se,skogsaktuellt.se,spelo.se,stockholmsaffarer.se,svenskjakt.se,vibilagare.se##.banner
 autonytt.se###main > .col-links
@@ -1910,7 +1913,7 @@ godare.se##.godare-ad-element, a[href*="/brand-studio"], a[href*="/brandstudio"]
 golflivet.se##a[href*="/annonssamarbete/"], .deals_block_wrapper
 google.se##mobile-promo
 goteborg.com##.cookie-popup, .overlay
-goteborgdirekt.se,mitti.se,vasterastidning.se##.profile-native
+goteborgdirekt.se,mitti.se##.profile-native
 goteborgsgolfaren.se##.sgpb-popup-overlay, #sgpb-popup-dialog-main-div-wrapper, .et_pb_gallery
 grillbaronen.se##a[href*="/click."]
 grillbloggen.nu##.rstbox
@@ -2228,6 +2231,7 @@ varldenshistoria.se##.campaign-teaser-show
 varmepumpsforum.com##.stopjump
 vartgoteborg.se##.newsletter-popup--background-fade, .newsletter-popup, .c-cookie-banner
 varvat.se##.wpb_single_image a[target], .gp-footer-2
+vasterastidning.se##article[data-section="nativeannons"]
 vaxjolakers.se##a[href^="/mainbanner"]
 veckansmiddag.com###load
 veckorevyn.com##.annons-block
