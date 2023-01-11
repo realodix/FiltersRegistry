@@ -455,7 +455,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 10January2023v1
+! OriginalVersion: 11January2023v3
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -922,6 +922,10 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||adblockerapp.com^$document,popup
 /\.(xyz|pics)/[a-zA-Z0-9]{130,}/$document,script,subdocument,image
 /\.(cloudfront\.net|xyz|pics)/[a-zA-Z0-9]{20,}/[a-zA-Z0-9]{25,}\+[a-zA-Z0-9+]{90,}$/$document,script,subdocument,image
+142.91.159.*$network
+172.255.6.*$network
+23.109.150.*$network
+23.109.248.*$network
 ! https://twitter.com/SUNgoddessOKAMI/status/1221295265195405315
 ||deviuser.com^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61838
@@ -1493,24 +1497,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||52.25.6.134^$document
 ||100.20.13.49^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139667
-||sintiwent.buzz^$all
-||sawsupportquiet.buzz^$all
-||yepsimmen.live^$all
-||rememberespeciallyturn.buzz^$all
-||thoseverbmuch.buzz^$all
-||crymanbee.buzz^$all
-||wantledwife.buzz^$all
-||catabovewinter.buzz^$all
-||goldmesoil.live^$all
-||againstbarsolution.buzz^$all
-||spacesharpone.buzz^$all
-||legenergybreak.buzz^$all
-||asreadmeat.buzz^$all
-||pointcookship.buzz^$all
-||pointladydear.buzz^$all
-51.68.87.229$network
-||f9dle.skin^$all
-||kilpa2017.fi^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ##a[href*=".downloadprovider.me/"]
@@ -2192,7 +2178,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 03January2023v2
+! OriginalVersion: 11January2023v3
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -2200,19 +2186,19 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ! ——— Bad top-level domains ———
 ! You can expect these domains to have an overwhelming majority of malware domains that have nothing to do with the countries in question. Nevertheless, if you are in a situation where you have to do active business in any of the countries in question, then this list may not be ideal for you.
 ! Tokelau (Put on break due to too many whitelistings being needed)
-!!!||tk^$document,domain=~coolcmd.tk|~budterence.tk|~google.tk|~transportnews.tk|~c0d3c.tk|~anonytext.tk|~tokelau-info.tk|~fakaofo.tk|~loljp-wiki.tk|~ninetail.tk|~goshujin.tk|~graph.tk|~dls2.pokeacer.tk|~nolfrevival.tk|~coppersurfer.tk|~restricted-functions.tk|~bstweaker.tk|~nbd-media.tk|~glypx-pakhsh-nakon.tk|~gotofap.tk|~somepythonthings.tk
+!!!||tk^$document,domain=~google.tk|~coolcmd.tk|~budterence.tk|~transportnews.tk|~c0d3c.tk|~tokelau-info.tk|~loljp-wiki.tk|~ninetail.tk|~goshujin.tk|~graph.tk|~nolfrevival.tk|~bstweaker.tk|~nbd-media.tk|~gotofap.tk|~coppersurfer.tk|~fakaofo.tk
 ! Gabon
-||ga^$document,domain=~google.ga|~filtri-dns.ga|~dgdi.ga|~voitures.ga|~economie-gabon.ga|~9191.ga|~animevsub.ga
+||ga^$document,domain=~google.ga|~filtri-dns.ga|~dgdi.ga|~9191.ga|~animevsub.ga
 ! Mali (Put on break due to too many and too frequent whitelistings being needed)
-!!!||ml^$document,domain=~google.ml|~mobili.ml|~melody.ml|~dcod.ml|~info-matin.ml|~amap.ml|~mastodon.ml|~worproject.ml|~nothingprivate.ml|~lingva.ml|~lemmy.ml|~bittor.ml|~noic.ml|~beatbump.ml|~gymlibrary.ml|~animevsub.ml|~prompt.ml|~biblioreads.ml
+!!!||ml^$document,domain=~google.ml|~melody.ml|~info-matin.ml|~amap.ml|~mastodon.ml|~nothingprivate.ml|~lingva.ml|~lemmy.ml|~beatbump.ml|~prompt.ml|~biblioreads.ml
 ! Equatorial Guinea
-||gq^$document,domain=~deimos.gq|~inege.gq|~tvgelive.gq|~comprarcarros.gq
+||gq^$document,domain=~inege.gq|~tvgelive.gq
 ! Central African Republic
-||cf^$document,domain=~google.cf|~rths.cf|~voitures.cf|~assembleenationale-rca.cf|~cps-rca.cf|~acap.cf|~miraculousladybug.cf|~scrat.cf
+||cf^$document,domain=~google.cf|~rths.cf|~acap.cf
 ! Palau
-||pw^$document,domain=~libgen.pw|~petridish.pw|~palaugov.pw|~dpc.pw|~zikrap.pw|~demonoid.pw|~bittor.pw|~buttercup.pw|~rezka.pw|~darkcrystal.pw|~xor.pw|~fullhdfilmizlesene.pw|~b00k.pw|~gopass.pw|~vost.pw
+||pw^$document,domain=~libgen.pw|~petridish.pw|~palaugov.pw|~dpc.pw|~buttercup.pw|~rezka.pw|~darkcrystal.pw|~xor.pw|~fullhdfilmizlesene.pw|~gopass.pw|~vost.pw|~core.pw|~bittor.pw
 ! Legitimate use is almost non-existent, but has a tiny userbase in Japan. Its extreme common-ness in malware redirections means that the entry will be kept forever.
-||top^$document,domain=~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~techblog.top|~changlam10.top|~changlam11.top|~pdcdn1.top|~mastodon.top|~pressplay.top
+||top^$document,domain=~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~techblog.top|~changlam10.top|~changlam11.top|~pdcdn1.top|~mastodon.top|~pressplay.top|~chillx.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^$document
 ||agency^$document,domain=~battlefield.agency|~shortcut.agency
@@ -2232,14 +2218,16 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 .life/*/?*=*&*=*&*=*&*=*&*=$document
 .live/*/?*=*&*=*&*=*&*=*&*=$document
 .xyz/*/?*=*&*=*&*=*&*=*&*=$document
+! https://github.com/AdguardTeam/AdguardFilters/issues/139667
+/\.(live|buzz)/.*&[a-z]{1,3}=[a-zA-Z0-9%]{250,}/$document
 !#if !env_mobile
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (Advanced adblockers only) ———
-!!!www.google.*##.g:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"], [href*="gotofap.tk"], [href*="somepythonthings.tk"]))
-www.google.*##.g:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"], [href*="animevsub.ga"]))
-!!!www.google.*##.g:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"], [href*="beatbump.ml"], [href*="gymlibrary.ml"], [href*="animevsub.ml"], [href*="prompt.ml"]))
-www.google.*##.g:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*="tvgelive.gq"], [href*="comprarcarros.gq"]))
-www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
-www.google.*##.g:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"], [href*="vost.pw"]))
+!!!www.google.*##.g:has(a[href*=".tk/"]:not([href*="google.tk"], [href*="coolcmd.tk"], [href*="budterence.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="tokelau-info.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"], [href*="gotofap.tk"], [href*="coppersurfer.tk"], [href*="fakaofo.tk"]))
+www.google.*##.g:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="dgdi.ga"], [href*="9191.ga"], [href*="animevsub.ga"]))
+!!!www.google.*##.g:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="melody.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"], [href*="beatbump.ml"], [href*="prompt.ml"], [href*="biblioreads.ml"]))
+www.google.*##.g:has(a[href*=".gq/"]:not([href*="inege.gq"], [href*="tvgelive.gq"]))
+www.google.*##.g:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="acap.cf"]))
+www.google.*##.g:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="gopass.pw"], [href*="vost.pw"], [href*="core.pw"], [href*="bittor.pw"]))
 www.google.*##.g:has(a[href*=".loan/"])
 www.google.*##.g:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 www.google.*##.g:has(a[href*=".gdn/"])
@@ -2254,11 +2242,11 @@ www.google.*##.g:has(a[href^="https://books.google."])
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (For Google Mobile) ———
 ! I strongly recommend the use of https://addons.mozilla.org/firefox/addon/google-search-fixer/ for use on Firefox for Android, thus the entries are written for the Chrome version of Google Mobile.
 !!!www.google.*#?#*:has(> * > a[oncontextmenu][href*=".tk/"]:not([href*=coolcmd], [href*=budterence], [href*="google.tk"], [href*=transportnews], [href*=c0d3c], [href*=anonytext], [href*=tokelau-info], [href*=fakaofo], [href*=loljp-wiki], [href*=ninetail], [href*=goshujin], [href*="graph.tk"], [href*=nolfrevival], [href*="steamroller.tk"], [href*="restricted-functions.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"], [href*="gotofap.tk"], [href*="somepythonthings.tk"]))
-www.google.*#?#*:has(> * > a[oncontextmenu][href*=".ga/"]:not([href*="google.ga"], [href*=filtri-dns], [href*=anpigabon], [href*="dgdi.ga"], [href*=voitures], [href*="economie-gabon.ga"], [href*="animevsub.ga"]))
-!!!www.google.*#?#*:has(> * > a[oncontextmenu][href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"], [href*="beatbump.ml"], [href*="gymlibrary.ml"], [href*="animevsub.ml"], [href*="prompt.ml"]))
-www.google.*#?#*:has(> * > a[oncontextmenu][href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*=tvgelive], [href*=comprarcarros]))
-www.google.*#?#*:has(> * > a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*=voitures], [href*=assembleenationale-rca], [href*=cps-rca], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
-www.google.*#?#*:has(> * > a[oncontextmenu][href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"], [href*="vost.pw"]))
+www.google.*#?#*:has(> * > a[oncontextmenu][href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="dgdi.ga"], [href*="9191.ga"], [href*="animevsub.ga"]))
+!!!www.google.*#?#*:has(> * > a[oncontextmenu][href*=".ml/"]:not([href*="google.ml"], [href*="melody.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"], [href*="beatbump.ml"], [href*="prompt.ml"], [href*="biblioreads.ml"]))
+www.google.*#?#*:has(> * > a[oncontextmenu][href*=".gq/"]:not([href*="inege.gq"], [href*=tvgelive]))
+www.google.*#?#*:has(> * > a[oncontextmenu][href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="acap.cf"]))
+www.google.*#?#*:has(> * > a[oncontextmenu][href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="gopass.pw"], [href*="vost.pw"], [href*="core.pw"], [href*="bittor.pw"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".loan/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".gdn/"])
@@ -2268,24 +2256,24 @@ www.google.*#?#*:has(> * > a[oncontextmenu][href*=".php?xxx="])
 www.google.*#?#*:has(> * > a[oncontextmenu][href^="https://books.google."])
 !#endif
 ! ——— For DuckDuckGo ———
-!!!duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".tk"]:not([data-domain*="coolcmd.tk"], [data-domain*="budterence.tk"], [data-domain*="google.tk"], [data-domain*="transportnews.tk"], [data-domain*="c0d3c.tk"], [data-domain*="anonytext.tk"], [data-domain*="tokelau-info.tk"], [data-domain*="fakaofo.tk"], [data-domain*="loljp-wiki.tk"], [data-domain*="ninetail.tk"], [data-domain*="goshujin.tk"], [data-domain*="graph.tk"], [data-domain*="nolfrevival.tk"], [data-domain*="coppersurfer.tk"], [data-domain*="restricted-functions.tk"], [data-domain*="nbd-media.tk"], [data-domain*="bstweaker.tk"], [data-domain*="gotofap.tk"], [data-domain*="somepythonthings.tk"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ga"]:not([data-domain*="google.ga"], [data-domain*="filtri-dns.ga"], [data-domain*="anpigabon.ga"], [data-domain*="dgdi.ga"], [data-domain*="voitures.ga"], [data-domain*="economie-gabon.ga"], [data-domain*="animevsub.ga"])
-!!!duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ml"]:not([data-domain*="google.ml"], [data-domain*="mobili.ml"], [data-domain*="melody.ml"], [data-domain*="dcod.ml"], [data-domain*="info-matin.ml"], [data-domain*="amap.ml"], [data-domain*="mastodon.ml"], [data-domain*="worproject.ml"], [data-domain*="nothingprivate.ml"], [data-domain*="lingva.ml"], [data-domain*="lemmy.ml"], [data-domain*="beatbump.ml"], [data-domain*="gymlibrary.ml"], [data-domain*="animevsub.ml"], [data-domain*="prompt.ml"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gq"]:not([data-domain*="deimos.gq"], [data-domain*="inege.gq"], [data-domain*="tvgelive.gq"], [data-domain*="comprarcarros.gq"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="voitures.cf"], [data-domain*="assembleenationale-rca.cf"], [data-domain*="cps-rca.cf"], [data-domain*="acap.cf"], [data-domain*="miraculousladybug.cf"], [data-domain*="scrat.cf"])
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="zikrap.pw"], [data-domain*="buttercup.pw"], [data-domain*="rezka.pw"], [data-domain*="darkcrystal.pw"], [data-domain*="xor.pw"], [data-domain*="fullhdfilmizlesene.pw"], [data-domain*="b00k.pw"], [data-domain*="gopass.pw"], [data-domain*="vost.pw"])
+!!!duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".tk"]:not([data-domain*="google.tk"], [data-domain*="coolcmd.tk"], [data-domain*="budterence.tk"], [data-domain*="transportnews.tk"], [data-domain*="c0d3c.tk"], [data-domain*="tokelau-info.tk"], [data-domain*="loljp-wiki.tk"], [data-domain*="ninetail.tk"], [data-domain*="goshujin.tk"], [data-domain*="graph.tk"], [data-domain*="nolfrevival.tk"], [data-domain*="bstweaker.tk"], [data-domain*="nbd-media.tk"], [data-domain*="gotofap.tk"], [data-domain*="coppersurfer.tk"], [data-domain*="fakaofo.tk"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ga"]:not([data-domain*="google.ga"], [data-domain*="filtri-dns.ga"], [data-domain*="dgdi.ga"], [data-domain*="9191.ga"], [data-domain*="animevsub.ga"])
+!!!duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".ml"]:not([data-domain*="google.ml"], [data-domain*="melody.ml"], [data-domain*="info-matin.ml"], [data-domain*="amap.ml"], [data-domain*="mastodon.ml"], [data-domain*="nothingprivate.ml"], [data-domain*="lingva.ml"], [data-domain*="lemmy.ml"], [data-domain*="beatbump.ml"], [data-domain*="prompt.ml"], [data-domain*="biblioreads.ml"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gq"]:not([data-domain*="inege.gq"], [data-domain*="tvgelive.gq"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".cf"]:not([data-domain*="google.cf"], [data-domain*="rths.cf"], [data-domain*="acap.cf"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".pw"]:not([data-domain*="libgen.pw"], [data-domain*="petridish.pw"], [data-domain*="palaugov.pw"], [data-domain*="dpc.pw"], [data-domain*="buttercup.pw"], [data-domain*="rezka.pw"], [data-domain*="darkcrystal.pw"], [data-domain*="xor.pw"], [data-domain*="fullhdfilmizlesene.pw"], [data-domain*="gopass.pw"], [data-domain*="vost.pw"], [data-domain*="core.pw"], [data-domain*="bittor.pw"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".loan"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]:not([data-domain*="battlefield.agency"], [data-domain*="shortcut.agency"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"], [data-domain$="shucks.top"], [data-domain$="1stream.top"], [data-domain*="ambr.top"], [data-domain*="techblog.top"], [data-domain*="mastodon.top"], [data-domain*="pressplay.top"])
 ! ——— For Bing ———
-!!!bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="coolcmd.tk"], [href*="budterence.tk"], [href*="google.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="anonytext.tk"], [href*="tokelau-info.tk"], [href*="fakaofo.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="coppersurfer.tk"], [href*="restricted-functions.tk"], [href*="nbd-media.tk"], [href*="bstweaker.tk"], [href*="gotofap.tk"], [href*="somepythonthings.tk"]))
-bing.com##.b_algo:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="anpigabon.ga"], [href*="dgdi.ga"], [href*="voitures.ga"], [href*="economie-gabon.ga"], [href*="animevsub.ga"]))
-!!!bing.com##.b_algo:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="mobili.ml"], [href*="melody.ml"], [href*="dcod.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="worproject.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"], [href*="beatbump.ml"], [href*="gymlibrary.ml"], [href*="animevsub.ml"], [href*="prompt.ml"]))
-bing.com##.b_algo:has(a[href*=".gq/"]:not([href*="deimos.gq"], [href*="inege.gq"], [href*="tvgelive.gq"], [href*="comprarcarros.gq"]))
-bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="voitures.cf"], [href*="assembleenationale-rca.cf"], [href*="cps-rca.cf"], [href*="acap.cf"], [href*="miraculousladybug.cf"], [href*="scrat.cf"]))
-bing.com##.b_algo:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="zikrap.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="b00k.pw"], [href*="gopass.pw"], [href*="vost.pw"]))
+!!!bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="google.tk"], [href*="coolcmd.tk"], [href*="budterence.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="tokelau-info.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"], [href*="gotofap.tk"], [href*="coppersurfer.tk"], [href*="fakaofo.tk"]))
+bing.com##.b_algo:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="dgdi.ga"], [href*="9191.ga"], [href*="animevsub.ga"]))
+!!!bing.com##.b_algo:has(a[href*=".ml/"]:not([href*="google.ml"], [href*="melody.ml"], [href*="info-matin.ml"], [href*="amap.ml"], [href*="mastodon.ml"], [href*="nothingprivate.ml"], [href*="lingva.ml"], [href*="lemmy.ml"], [href*="beatbump.ml"], [href*="prompt.ml"], [href*="biblioreads.ml"]))
+bing.com##.b_algo:has(a[href*=".gq/"]:not([href*="inege.gq"], [href*="tvgelive.gq"]))
+bing.com##.b_algo:has(a[href*=".cf/"]:not([href*="google.cf"], [href*="rths.cf"], [href*="acap.cf"]))
+bing.com##.b_algo:has(a[href*=".pw/"]:not([href*="libgen.pw"], [href*="petridish.pw"], [href*="palaugov.pw"], [href*="dpc.pw"], [href*="buttercup.pw"], [href*="rezka.pw"], [href*="darkcrystal.pw"], [href*="xor.pw"], [href*="fullhdfilmizlesene.pw"], [href*="gopass.pw"], [href*="vost.pw"], [href*="core.pw"], [href*="bittor.pw"]))
 bing.com##.b_algo:has(a[href*=".loan/"])
 bing.com##.b_algo:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 bing.com##.b_algo:has(a[href*=".gdn/"])
@@ -3000,6 +2988,691 @@ zombooru.com##a[href="http://www.hard55.com"]
 216.21.13.15$network
 /\.(xyz|pics)/[a-zA-Z0-9]{130,}/$document,script,subdocument,image
 /\.(cloudfront\.net|xyz|pics)/[a-zA-Z0-9]{20,}/[a-zA-Z0-9]{25,}\+[a-zA-Z0-9+]{90,}$/$document,script,subdocument,image
+||abaphosis.guru^$all
+||abietichob.live^$all
+||abyssusuntouch.guru^$all
+||acholiccortins.live^$all
+||aeroselabite.space^$all
+||aerugosspritz.com^$all
+||ageismvipery.com^$all
+||agoutafrecket.digital^$all
+||aikidowayfare.live^$all
+||aimvaria.live^$all
+||ajharremixt.store^$all
+||alanticgecking.uno^$all
+||alatedsoccers.com^$all
+||albumsliv.com^$all
+||alecanjan.com^$all
+||alodiescommos.guru^$all
+||aloudsoral.website^$all
+||alowestooks.space^$all
+||amalgullish.com^$all
+||ambricaargand.store^$all
+||amichubba.live^$all
+||amuletasslike.guru^$all
+||amusedcoating.digital^$all
+||annuletmerged.store^$all
+||antealzionist.guru^$all
+||antiarachoo.live^$all
+||antiredgarbel.website^$all
+||anuralstm.website^$all
+||apiecekesar.digital^$all
+||aponiapeds.live^$all
+||apteriawagtail.store^$all
+||aquabibchawed.website^$all
+||aramaickenya.live^$all
+||argeerstsi.space^$all
+||argentspifero.space^$all
+||arretezkinetic.guru^$all
+||arshineensnarl.com^$all
+||asakserbian.guru^$all
+||aschamrotor.live^$all
+||ascitbhalse.guru^$all
+||ashamedtaurin.space^$all
+||aspydrearly.digital^$all
+||assahysnape.tech^$all
+||asweveglump.live^$all
+||atomheal.live^$all
+||atopitegooky.live^$all
+||atresyriff.space^$all
+||atterpleroma.live^$all
+||auntishgratia.tech^$all
+||austricreposer.live^$all
+||avocetsaholt.space^$all
+||awpuquina.tech^$all
+||baffsvenging.life^$all
+||baggiebilious.com^$all
+||balkisaburban.website^$all
+||barberaalecize.website^$all
+||barkierrevives.com^$all
+||barsacbopyrus.com^$all
+||basquedplotx.store^$all
+||bawledsima.live^$all
+||bawlerhanoi.website^$all
+||bawsintexxon.space^$all
+||bealinglessn.store^$all
+||beatsnumen.tech^$all
+||beatusalfred.guru^$all
+||bedareswooper.life^$all
+||begunkrivu.guru^$all
+||bepunenchant.store^$all
+||besirenfeijoa.live^$all
+||betellavouch.space^$all
+||bialatearrear.space^$all
+||bigramtawed.tech^$all
+||binhwheyey.uno^$all
+||birchenmuleys.website^$all
+||bitlessbarges.digital^$all
+||blaasopdive.com^$all
+||blakeelses.tech^$all
+||blankitaslop.guru^$all
+||blazerliftman.website^$all
+||bletherweeping.digital^$all
+||blotchyprimus.live^$all
+||blowieathanor.uno^$all
+||blowtaffety.space^$all
+||bluespeltast.com^$all
+||bnfyee.guru^$all
+||boaembowel.space^$all
+||boffosblowby.uno^$all
+||bookismduras.guru^$all
+||bopyridgypper.store^$all
+||bosjamb.space^$all
+||boxtreelaissez.guru^$all
+||briarsaprowl.store^$all
+||brisuredar.live^$all
+||britonswime.website^$all
+||btisefurfooz.life^$all
+||buffersthyrold.com^$all
+||bulwarkroscid.tech^$all
+||bungosslocken.digital^$all
+||burkesmysoid.digital^$all
+||bursulasnags.com^$all
+||busingcoryzal.com^$all
+||butanefrogged.space^$all
+||butchacantle.store^$all
+||cabotwarp.space^$all
+||cacasilka.space^$all
+||calabawan.tech^$all
+||callansrookish.life^$all
+||calxespatin.com^$all
+||cankaxonia.website^$all
+||carcelshatches.com^$all
+||carguedquannet.com^$all
+||caroometokelau.store^$all
+||carryligator.guru^$all
+||cashibosphenes.live^$all
+||cassoonhins.tech^$all
+||cebathaisopyre.uno^$all
+||cedronmuset.live^$all
+||ceilerspulli.digital^$all
+||ceorlsrajasic.com^$all
+||cermetsdibbles.uno^$all
+||cerouscantata.website^$all
+||certifscrush.digital^$all
+||cerylcarvone.life^$all
+||chandrywud.uno^$all
+||cheepayer.life^$all
+||chinchybonnaz.store^$all
+||chinikscouxia.com^$all
+||chlorleets.com^$all
+||chortletarging.uno^$all
+||chouptide.website^$all
+||chubskyat.store^$all
+||ciseauxscance.tech^$all
+||claquefumeuse.com^$all
+||clartyalcoate.website^$all
+||clearerdoggier.uno^$all
+||clitterouanga.digital^$all
+||cliviasnoonlit.com^$all
+||clockedlituola.website^$all
+||clopscesses.guru^$all
+||comitjetigre.space^$all
+||commitamulet.com^$all
+||compendtorulus.cam^$all
+||coniferatrial.com^$all
+||coningweedery.store^$all
+||conjeetinemen.life^$all
+||controlfleys.store^$all
+||conurusbirles.space^$all
+||coosifyalgol.uno^$all
+||cotoinmacron.guru^$all
+||covidoporkery.live^$all
+||cowbanequoit.space^$all
+||coxaldreamed.uno^$all
+||craigcaptive.tech^$all
+||crechelisere.com^$all
+||crenulanight.uno^$all
+||cribsstets.guru^$all
+||cruddedanukit.space^$all
+||culotteblows.tech^$all
+||cunzashope.com^$all
+||curchesoboes.store^$all
+||curlyvlach.store^$all
+||cushingslower.store^$all
+||cuterbestud.guru^$all
+||cutoffsclich.store^$all
+||cuyashied.digital^$all
+||cymrymethoxy.website^$all
+||cytulaestrind.uno^$all
+||dackerfries.digital^$all
+||damageslahore.space^$all
+||danaglafeasor.live^$all
+||danderfungus.website^$all
+||danielelautu.tech^$all
+||dawutobliged.com^$all
+||dcbnameapneas.com^$all
+||debeigecraver.live^$all
+||decatorfending.uno^$all
+||decenylpuffer.live^$all
+||deddyenthral.website^$all
+||deftestrikshas.uno^$all
+||dehornstrigged.live^$all
+||dentesbromios.live^$all
+||desmacaplins.tech^$all
+||dewlapescudo.space^$all
+||dilatorscho.store^$all
+||dilucidsleyed.website^$all
+||dissourfurcule.tech^$all
+||dogshipuniate.live^$all
+||dogwoodjoshed.digital^$all
+||doliumrociest.live^$all
+||doltishmoggan.store^$all
+||dongingsplurt.life^$all
+||donnismretrier.live^$all
+||dorisabaris.website^$all
+||dossalsflak.tech^$all
+||doucecarzey.digital^$all
+||doulcemaydays.tech^$all
+||dowseskelia.website^$all
+||dozythiasus.live^$all
+||dreerepanel.live^$all
+||drilyjakes.live^$all
+||duffedmired.space^$all
+||dysuriasps.com^$all
+||eageroxhuvud.guru^$all
+||earfulsstubby.store^$all
+||echeasorbed.uno^$all
+||eddiclucilia.com^$all
+||eeverspontil.store^$all
+||egoismdondine.com^$all
+||elaborfarmost.tech^$all
+||elegitspeacher.uno^$all
+||ellaambling.guru^$all
+||elysiumfeuter.uno^$all
+||embargesnibble.website^$all
+||emerodsours.cam^$all
+||enewacinic.tech^$all
+||enochiccroatan.guru^$all
+||enslavesates.digital^$all
+||eosidezaparo.tech^$all
+||epeeupbid.tech^$all
+||erectermwalimu.life^$all
+||escotsmaligns.com^$all
+||eseeosinic.store^$all
+||ettlingnidana.com^$all
+||eugonichyke.uno^$all
+||eupathyroching.store^$all
+||exarchykhu.store^$all
+||exopodbarony.com^$all
+||exopthassar.com^$all
+||expelsleeken.website^$all
+||exsectsatik.life^$all
+||eyrasmamluks.space^$all
+||facinggleg.life^$all
+||facsimrunt.space^$all
+||fandpuntist.digital^$all
+||fardbagios.live^$all
+||festoonnapkin.guru^$all
+||feudalspelter.life^$all
+||filetedlawines.com^$all
+||finchesvaster.website^$all
+||finfishcachrys.space^$all
+||fissionply.life^$all
+||fiumaralupin.space^$all
+||flashesmouches.store^$all
+||flatbedcouthy.space^$all
+||flattedsoughed.tech^$all
+||fleamywarmers.store^$all
+||fleekentish.live^$all
+||flneurtoyed.tech^$all
+||foldingneogaea.store^$all
+||forlaydardani.store^$all
+||friezesrumps.digital^$all
+||frizzyvache.life^$all
+||frowerpalaced.life^$all
+||fryingsaecula.digital^$all
+||fuirenaroshi.digital^$all
+||fulldohelenus.live^$all
+||fwdpiers.store^$all
+||galaxyvandas.website^$all
+||gambasull.digital^$all
+||ganzieyawnful.life^$all
+||gaseityosteoid.website^$all
+||gazeesaucier.com^$all
+||geezersrecusal.website^$all
+||gelatiasuzan.space^$all
+||ghatwalplunker.live^$all
+||gibingsuttas.live^$all
+||gillotjugful.com^$all
+||girsescrawk.website^$all
+||giuntatrub.website^$all
+||glasgownevo.com^$all
+||gleamsdargue.digital^$all
+||glidersgay.digital^$all
+||glireslurg.uno^$all
+||glisskalkvis.live^$all
+||glyphwursts.digital^$all
+||gmpatched.tech^$all
+||gnashvarahan.space^$all
+||gnawedhelixes.space^$all
+||goddamnhowks.tech^$all
+||goralogsizers.store^$all
+||gourmetsamba.com^$all
+||gravatkitysol.com^$all
+||greenlydonmeh.live^$all
+||greeortygan.live^$all
+||grinchsycoses.tech^$all
+||grosetgnaw.life^$all
+||gttslowish.digital^$all
+||gybedpics.life^$all
+||habbubrauraci.live^$all
+||hafisague.com^$all
+||hailmales.guru^$all
+||halloepochal.digital^$all
+||halvinguraline.digital^$all
+||hastymaillot.tech^$all
+||hatingmediary.tech^$all
+||hawkeyspliced.uno^$all
+||haymowsbecker.life^$all
+||hbfulzie.life^$all
+||hectorsbisk.website^$all
+||hepararchspy.com^$all
+||hetairathesean.life^$all
+||hexersakund.tech^$all
+||holakips.live^$all
+||holawowser.life^$all
+||homoschucks.guru^$all
+||honeyledger.cam^$all
+||hoodcapunbane.digital^$all
+||hordesproport.digital^$all
+||horralsaice.uno^$all
+||hubsaints.com^$all
+||hugehumuses.tech^$all
+||huspelinvolve.com^$all
+||hylismunbloom.website^$all
+||imbalmenvy.website^$all
+||imbarndeject.live^$all
+||imposalreswarm.guru^$all
+||infidelbima.uno^$all
+||infillgrasper.store^$all
+||inhaledgittern.store^$all
+||inquestalgors.store^$all
+||iortnhooping.website^$all
+||isopachfumes.live^$all
+||jambultoxamin.com^$all
+||janglesasg.website^$all
+||jecorinsetover.guru^$all
+||jemidarreslate.space^$all
+||jincanfohn.website^$all
+||kenningnatus.digital^$all
+||ketchesektene.guru^$all
+||khedasdrabbet.website^$all
+||kickeralnager.guru^$all
+||kiddosdually.guru^$all
+||kithedrosser.uno^$all
+||kudrunoptime.com^$all
+||kwaznkureluct.digital^$all
+||lagerspanna.live^$all
+||laharsubways.guru^$all
+||laitpavia.com^$all
+||lakingvalued.guru^$all
+||lanaojets.space^$all
+||langursscouch.uno^$all
+||lastedriblets.life^$all
+||latinusslifter.website^$all
+||launderzeroed.tech^$all
+||lauriefishman.life^$all
+||lcmvira.guru^$all
+||legroomhopbush.digital^$all
+||levemyiasis.tech^$all
+||libbetpalooka.life^$all
+||lictorsvivos.live^$all
+||ligulaeideated.guru^$all
+||lilespeorian.digital^$all
+||linalylleaks.digital^$all
+||lipopodephyrae.guru^$all
+||lispingwraths.space^$all
+||lithogtondino.life^$all
+||livorbarbes.com^$all
+||llunlost.uno^$all
+||loachesmanjeri.space^$all
+||lolomoche.space^$all
+||longcarpet.tech^$all
+||lookedpieter.uno^$all
+||lubesapepsia.uno^$all
+||lucernrajpoot.uno^$all
+||ludwigreseise.tech^$all
+||luggerlongus.guru^$all
+||lychnothal.uno^$all
+||lycopinrekey.com^$all
+||lysingrevoke.life^$all
+||mabblearache.guru^$all
+||macedonjesse.life^$all
+||machoembathe.live^$all
+||macroschauth.com^$all
+||maisonruntish.website^$all
+||malleibidding.com^$all
+||mannetenlink.digital^$all
+||mapaupotting.com^$all
+||marioonerate.uno^$all
+||maritanewark.com^$all
+||maritipitons.com^$all
+||mataxwhorish.digital^$all
+||mathequirts.website^$all
+||mayestvernin.store^$all
+||mazertahil.store^$all
+||meaoverhot.uno^$all
+||meekerscarts.space^$all
+||mellategrannom.com^$all
+||menacmetinsy.live^$all
+||menchumble.guru^$all
+||mensingpumice.space^$all
+||merchrankled.space^$all
+||meseemswabbles.life^$all
+||mestizaaboded.uno^$all
+||mexicanatoning.live^$all
+||mezuzotmarine.digital^$all
+||middensaguaro.uno^$all
+||midgutstow.com^$all
+||midribsmyoneme.uno^$all
+||mingysticker.guru^$all
+||miskeptunshave.space^$all
+||monikerdasheen.digital^$all
+||moniliabarkeep.digital^$all
+||moniliabeys.store^$all
+||monkeyfettles.uno^$all
+||moolasghazism.guru^$all
+||moreenbopster.website^$all
+||moseltrabeae.space^$all
+||moslemtaxon.guru^$all
+||mowerfanum.guru^$all
+||mtierrastik.store^$all
+||musicryburnout.space^$all
+||myotictawse.com^$all
+||nasapatera.guru^$all
+||nelkennere.uno^$all
+||nepmansewar.digital^$all
+||nestlervial.tech^$all
+||nickeyssizzle.guru^$all
+||nitridsplurel.com^$all
+||noiseeastern.com^$all
+||normallindy.life^$all
+||notchelva.com^$all
+||nowhereunbox.com^$all
+||nupharbakongo.com^$all
+||nylghaumayvin.com^$all
+||nyorononzero.website^$all
+||obispomuttony.tech^$all
+||objectstutted.store^$all
+||objureexamen.life^$all
+||occludebetray.uno^$all
+||occlusehume.space^$all
+||odologyvitita.store^$all
+||odoredpersia.life^$all
+||odoursguard.website^$all
+||ogleskys.live^$all
+||omicronoften.website^$all
+||orthianhollows.website^$all
+||osseasougan.com^$all
+||ostemiabletted.store^$all
+||otiatryenfeoff.live^$all
+||ottomantungus.life^$all
+||outburnkrakens.space^$all
+||outensootier.guru^$all
+||outrailunscrew.space^$all
+||outsumshelder.website^$all
+||ovenbifaces.cam^$all
+||oveningpummice.digital^$all
+||pactendsmalt.icu^$all
+||paillonumbundu.space^$all
+||pandalboranes.tech^$all
+||parchedlauhala.uno^$all
+||pausairiatas.guru^$all
+||pearchsavarin.life^$all
+||peatmanpols.store^$all
+||peeverspontil.store^$all
+||perplexkutch.guru^$all
+||petalslars.com^$all
+||petoscurbed.live^$all
+||phocidabioses.store^$all
+||phonosoutlimn.life^$all
+||phoridsanely.space^$all
+||photoelijah.life^$all
+||piezokited.digital^$all
+||piglikecold.uno^$all
+||pimlicoouranos.space^$all
+||pinnalincuss.life^$all
+||pithsalined.guru^$all
+||playteunmagic.guru^$all
+||plodbcd.space^$all
+||plottercatnap.digital^$all
+||pocketymuckily.uno^$all
+||pockiersemaise.guru^$all
+||pokeythorpe.life^$all
+||pomethraw.uno^$all
+||pomfrethantle.website^$all
+||pommeyslicht.com^$all
+||poolytwinner.live^$all
+||praamsiconic.life^$all
+||precoilrowlock.digital^$all
+||prestsusie.com^$all
+||primarencinas.store^$all
+||prinkedgigtree.tech^$all
+||prisageshingle.uno^$all
+||prittlecopps.guru^$all
+||probablclaw.website^$all
+||pryersdarat.digital^$all
+||pseudocarper.space^$all
+||psychsovist.space^$all
+||publzuza.live^$all
+||puckerskauris.store^$all
+||puffinpickmaw.tech^$all
+||pukatearecco.space^$all
+||pulsatemonos.digital^$all
+||pyropereblot.live^$all
+||queanssciurid.space^$all
+||raftageungues.website^$all
+||rambomero.space^$all
+||ramperlongies.space^$all
+||rasorescampout.com^$all
+||raspiernauseas.com^$all
+||rawkysperity.digital^$all
+||reachesowing.live^$all
+||realerwarely.digital^$all
+||rebillscaress.tech^$all
+||reblownwinare.website^$all
+||reducersharer.website^$all
+||refightinlaces.store^$all
+||remoldsephah.com^$all
+||resalesruths.tech^$all
+||reserveswaps.space^$all
+||retdbushtit.website^$all
+||retirerstrap.website^$all
+||revaluecronus.digital^$all
+||revereshaggeis.com^$all
+||riftingflunker.store^$all
+||robedgenu.life^$all
+||roesdwaibly.com^$all
+||rolowaysenlac.tech^$all
+||rowenspopped.website^$all
+||rushendroopt.uno^$all
+||sacrawasat.store^$all
+||salarngaio.life^$all
+||salishcoenact.com^$all
+||saltarydoolie.digital^$all
+||sanduststavers.digital^$all
+||sanestsizeine.website^$all
+||sannupsendysis.uno^$all
+||sapotasrugging.space^$all
+||savioursynod.live^$all
+||scapoidalmose.tech^$all
+||scarsdogra.tech^$all
+||sceatsilvan.uno^$all
+||sciaenasows.live^$all
+||scourpapless.live^$all
+||scrivermoulded.life^$all
+||sebillatonally.digital^$all
+||sedateneoned.uno^$all
+||seepingpodial.digital^$all
+||seeseepapacy.digital^$all
+||selfedaesop.website^$all
+||sellrejourn.life^$all
+||senatusreester.tech^$all
+||serenedlexia.digital^$all
+||serraexultet.space^$all
+||serveddovens.digital^$all
+||shevrinavis.website^$all
+||shoogleno.tech^$all
+||sillocktrayful.guru^$all
+||siluresarrayer.store^$all
+||sitaopiqure.com^$all
+||sittingnasally.tech^$all
+||sixmosorts.uno^$all
+||slovakscombite.guru^$all
+||smaltzretrim.website^$all
+||smithssteamie.live^$all
+||smyrnagristy.live^$all
+||snasteewery.uno^$all
+||snuffsuent.guru^$all
+||soarersovoli.uno^$all
+||solacerebonist.uno^$all
+||solderssurfier.live^$all
+||sopdamptotes.com^$all
+||sottagejalur.uno^$all
+||sourtophulsean.space^$all
+||sovenezsoodly.digital^$all
+||sowbanebute.life^$all
+||spatesbloke.com^$all
+||spicasafflict.digital^$all
+||spirketgeraty.space^$all
+||sprayswisha.com^$all
+||spuggysorbol.website^$all
+||stratesputta.space^$all
+||struckganzie.life^$all
+||subletsterret.life^$all
+||suffeteinset.com^$all
+||sustainstores.website^$all
+||syddirmarrer.guru^$all
+||tabardforrard.tech^$all
+||tablesbennel.space^$all
+||tackypaints.uno^$all
+||taffiasspavies.tech^$all
+||taikihtivy.life^$all
+||takableprotext.com^$all
+||tarascmayda.uno^$all
+||tassercrang.space^$all
+||tassieswrig.live^$all
+||taxwaxhurlock.store^$all
+||tazzasembays.digital^$all
+||teasesactaea.website^$all
+||techousnorimon.life^$all
+||teedlearctiid.uno^$all
+||tennersmirex.guru^$all
+||terronfestuca.digital^$all
+||tewgelts.live^$all
+||theistregrow.tech^$all
+||thiazinnavis.digital^$all
+||threeparmbone.uno^$all
+||thymeneoctic.digital^$all
+||tilikumschist.tech^$all
+||tinkerbuoy.uno^$all
+||toftsrollers.digital^$all
+||tollmanneurine.space^$all
+||tolstoyselfism.uno^$all
+||toluenemoody.guru^$all
+||tonicelement.digital^$all
+||tootsiefeigher.space^$all
+||toppledixtle.tech^$all
+||tortgula.store^$all
+||tracmacles.space^$all
+||treeifyicon.com^$all
+||treysfatally.live^$all
+||triodiaimprasa.live^$all
+||trisaltragees.uno^$all
+||tropateiqs.life^$all
+||trowaneaplite.website^$all
+||trowiecolombo.live^$all
+||tubbersdorian.digital^$all
+||tuckedsoap.digital^$all
+||tunujalor.website^$all
+||turnwayleucin.com^$all
+||turnwaystevan.website^$all
+||twirlsengaud.life^$all
+||twirpupaisle.digital^$all
+||tyluslandmil.com^$all
+||typooptic.digital^$all
+||tyumbaetyl.store^$all
+||ubiquitandy.digital^$all
+||ulceredwidths.life^$all
+||ululateguereza.life^$all
+||umbranayanan.space^$all
+||umpirenuphar.digital^$all
+||uncavefertile.website^$all
+||uncharmgirrit.live^$all
+||uncrudetanker.guru^$all
+||uncurbsmily.uno^$all
+||unfalsecupay.live^$all
+||unidlylunging.guru^$all
+||unielias.uno^$all
+||unlosteluants.store^$all
+||unmanedstele.com^$all
+||unturfamini.store^$all
+||unwofulprewarm.life^$all
+||unzipbechic.store^$all
+||upleaptrayed.life^$all
+||uredofoxbane.uno^$all
+||usagedoser.live^$all
+||vacuomehautain.tech^$all
+||vaibendel.com^$all
+||vainschmuck.store^$all
+||valuedmiming.life^$all
+||veilingchaufer.life^$all
+||violinoincreep.store^$all
+||votersenweave.digital^$all
+||waiverscollin.guru^$all
+||wakiupswacken.com^$all
+||wanewebers.life^$all
+||wapatomktg.live^$all
+||wawaeger.uno^$all
+||waxingequant.space^$all
+||wesseldogface.live^$all
+||wheeshtdooring.com^$all
+||whethermondos.digital^$all
+||whillfortis.life^$all
+||whippedpuces.tech^$all
+||whitengolfs.digital^$all
+||wiseguypedicab.digital^$all
+||wotssawlog.digital^$all
+||woubitpopess.life^$all
+||wrungheezy.live^$all
+||xebecstibert.uno^$all
+||yachtedacharne.website^$all
+||yangtaoassart.uno^$all
+||yauldpeonies.live^$all
+||yedepeplos.website^$all
+||yeesdiapase.website^$all
+||yessosull.website^$all
+||yiteattends.tech^$all
+||yodslingism.life^$all
+||yovenbugsha.com^$all
+||yulanoltunna.store^$all
+||zimmisballet.tech^$all
+://popupblockergold.$all
+142.91.159.*$network
+172.255.6.*$network
+23.109.150.*$network
+23.109.248.*$network
 ! https://twitter.com/SUNgoddessOKAMI/status/1221295265195405315
 ||deviuser.com^$document
 ! https://github.com/AdguardTeam/AdguardFilters/issues/61838
@@ -7432,6 +8105,11 @@ zombooru.com##a[href="http://www.hard55.com"]
 52.24.156.12$network
 52.25.6.134$network
 100.20.13.49$network
+! https://github.com/AdguardTeam/AdguardFilters/issues/139667
+||goldmesoil.live^$all
+51.68.87.229$network
+||f9dle.skin^$all
+||kilpa2017.fi^$all
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ||downloadprovider.me^$all
