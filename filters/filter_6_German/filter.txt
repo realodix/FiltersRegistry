@@ -1058,6 +1058,9 @@ urbia.de,essen-und-trinken.de#@#.playerAd
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/139863
+duden.de#$##numero-antiadblocker { display: none !important; }
+duden.de#$#body { overflow: auto !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136880
 stadt-bremerhaven.de#$#.fc-ab-root {display: none !important; }
 stadt-bremerhaven.de#$#body { overflow: auto !important; }
@@ -2246,7 +2249,7 @@ rennrad-news.de#?#.js-replyNewMessageContainer > .message--post[data-author="MTB
 ! winfuture-forum.de - ad category
 winfuture-forum.de#?##content > .category_block:has( > #forum_table > .maintitle > .main_forum_title:contains(Anzeige))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34000
-duden.de#$?#div  > aside:has( > header:contains(Anzeige)) + .vignette { margin: 0px!important; border-top: 0px !important; }
+duden.de#$?#div[class^="js-view-dom-id"] > div.segment  > section.vignette { margin: 0px!important; border-top: 0px !important; }
 duden.de#?#div  > aside:has( > header:contains(Anzeige))
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44447
 ! https://github.com/AdguardTeam/AdguardFilters/issues/37804
@@ -2755,7 +2758,7 @@ pornoente.tv#%#//scriptlet("set-constant", "vpUsePreRoll", "false")
 ddl-music.to#%#//scriptlet("abort-current-inline-script", "$", "ddlpop")
 ddl-music.to#%#document.cookie = "ddlpop=1; path=/;";
 ! https://github.com/AdguardTeam/AdguardFilters/issues/28804
-maniac.de#%#Object.defineProperty(window, 'td_ad_background_click_link', { get: function() { return ""; } });
+maniac.de#%#//scriptlet('set-constant', 'td_ad_background_click_link', '')
 ! radio.at, radio.net, radio.de -- blocking PreRoll by faking user agent to Google bot
 radio.at,radio.net,radio.de#%#document.cookie = "google_nomod=547";
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24266
@@ -2814,6 +2817,8 @@ menshealth.de#%#function google_ad_request_done() {};
 !------- CSS fixes --------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/pull/139865
+maniac.de#$#body { cursor: auto !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139202
 hardwareluxx.de#$#body { margin-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/136708
@@ -4502,10 +4507,6 @@ vw-page.com##div[id^="easyAdsMessageList_"]
 duden.de###block-dudende-d-970x250-1billboard
 duden.de###block-dudende-d-300x600-1sidebarobensticky
 ||duden.de/duden_gpt/asset/$script
-maniac.de##.ad.exit
-maniac.de##body > .flow-wrapper
-maniac.de##a[data-bid][href^="https://www.maniac.de/linkout/"][target="_blank"]
-||maniac.de/campaigns/$image,media
 stadtkind-stuttgart.de##.taboola-werbung
 stuttgarter-zeitung.de##.mod-weekli
 stuttgarter-zeitung.de###rectangle
