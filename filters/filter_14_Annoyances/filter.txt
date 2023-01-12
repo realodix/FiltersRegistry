@@ -2191,6 +2191,7 @@ eatsmarter.de,inside-digital.de,hs.fi,vrt.be,manager-magazin.de,whats-on-netflix
 !
 !
 !
+||cdn.privacy-mgmt.com/consent/$domain=ariva.de,important
 idream.pl###garua_cookie_consent_popup
 axen.com.tr##.hongo-cookie-policy-wrapper
 yigitalisveris.com.tr##.kvk-information-master
@@ -25651,6 +25652,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+||cdn.amomama.com/pusher-v*.min.js
 tuttosport.com##div[class^="Header_containerToast__"]
 ||lib.dengage.com/p/push/$third-party
 fotospor.com###notificationPopup
@@ -26345,6 +26347,8 @@ edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,morgenpos
 !
 ! SECTION: Subscriptions - Regular rules
 !
+amomama.fr##div[data-testid="sendpulse-slot"]
+amomama.fr#?#div[data-io-article-url] > p:has(> i > strong > a[href^="https://news.google.com/publications/"])
 progorod76.ru##div[class^="social-list-subscribe"]
 63.ru##div[itemprop="articleBody"] > div.onisd
 ksl.com##.newsSignup
@@ -40001,6 +40005,8 @@ newsweek.com##iframe[src="http://sns.europe.newsweek.com/newsletter?popup=1"]
 !##############################
 ! SECTION: Tweaks - JS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/139850
+suaurl.com#%#//scriptlet('adjust-setInterval', 'cont', '*', '0.02')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139812
 webhostingpost.com#%#//scriptlet('adjust-setInterval', ',dataType:_', '1000', "0.02")
 enit.in,howifx.com#%#//scriptlet('adjust-setInterval', 'timeSec--', '*', '0.02')
@@ -41839,7 +41845,6 @@ hdwallpapersact.com#%#AG_onLoad(function() { document.onmousedown=function(){ret
 kinogb.me#%#Object.defineProperty(window, 'noselect', { get: function() { return; } });
 kinokrad.club#%#Object.defineProperty(window, 'disableselect', { get: function() { return; } });
 kinokrad.club,topcinema.tv,turkcinema.tv#%#AG_onLoad(function() { document.oncontextmenu = document.onmouseup = document.onmousedown = function() { return true; } });
-kpssrehber.com#%#Object.defineProperty(window, 'NSclick', { get: function() { return; } });
 picrelated.com#%#AG_onLoad(function() { window.CHV.obj.config.image.right_click = true; });
 pornhdx.tv#%#AG_onLoad(function() { setTimeout(function() {$(document).unbind('contextmenu');}, 300); });
 skidrowreloaded.com#%#var _={get:function(){return function(){}}};Object.defineProperties(window,{clickIE4:_,disableSelection:_});
