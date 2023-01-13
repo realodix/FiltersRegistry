@@ -100,6 +100,7 @@ afisha.yandex.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.rende
 afisha.yandex.ru##div[style="width:100%;height:250px;display:block"]
 afisha.yandex.ru##div[style="width:100%;height:240px;display:block"]
 ! Yandex.Weather
+[$path=/pogoda]yandex.*#%#//scriptlet('prevent-eval-if', 'advPosNames')
 !#if (!ext_ublock)
 ! Yandex.Video, Dzen
 dzen.ru,yandex.*#%#//scriptlet("abort-on-property-write", "Object.prototype.adSystem")
@@ -113,7 +114,8 @@ docviewer.yandex.*#%#//scriptlet("abort-on-property-read", "Object.prototype.YaA
 !#endif
 !
 ! Yandex.Images
-yandex.*##body[data-bem*="Яндекс.Картинки"] div[data-bem*="R-I-"]:not([class*="images-touch-viewer2"])
+[$path=/images/]yandex.*#%#//scriptlet('abort-on-property-read', 'Object.prototype.renderDirect')
+[$path=/images/]yandex.*##div[data-state*="/image/new/serp/page/commercial/incut"]
 ! kinopoisk.ru - media ads in trailers
 www.kinopoisk.ru##div[class^="toaster-container"]
 www.kinopoisk.ru##div[class^="styles_adBlockWarningRoot"]
@@ -9341,6 +9343,8 @@ kurashiru.com#$#html.dly-modal-active { overflow: auto!important; }
 !
 !--- Allowlist
 ! SECTION: Popups - Allowlist
+! https://github.com/uBlockOrigin/uAssets/issues/16321
+@@||centrisfcu.org/wp-content/plugins/popup-maker/$domain=centrisfcu.org
 ! https://github.com/uBlockOrigin/uAssets/issues/15647
 @@||popup.wisepops.com/my-wisepop$domain=bluecinema.ch
 ! https://github.com/AdguardTeam/AdguardFilters/issues/126265
