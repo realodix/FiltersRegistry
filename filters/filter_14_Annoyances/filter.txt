@@ -2191,6 +2191,10 @@ eatsmarter.de,inside-digital.de,hs.fi,vrt.be,manager-magazin.de,whats-on-netflix
 !
 !
 !
+vodafone.cz##.vfcc__overlay
+||consent.t-mobile.cz^
+testograf.ru##div[class^="privacyPopup"]
+||didomi.eldo.lu/ui-gdpr-
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,domain=victorinox.com,important
 ||sbazar.cz/*/js/cmp2/scmp.js
 ||sbazar.cz/*/js/cmp2/cmp_stub.js
@@ -2424,7 +2428,7 @@ lego.com#$#html > body:not(#style_important) { overflow: auto !important; paddin
 sensorsdata.cn##div[class^="index-module--CookieAuth"]
 batteryempire.cz#$##js-modern-cookie-modal-wrapper { display: none !important; }
 batteryempire.cz#$#body.modal-open { overflow: auto !important; }
-||parismatch.com/assets/js/didomi/ui-gdpr-fr.*.js
+||parismatch.com/assets/js/didomi/ui-gdpr-
 streamlit.io##div[class*="GDPRBanner"]
 ||parfemy-elnino.cz/dist/bundle-cc-check.min.js$domain=e-glamour.pl
 lovit.ru##.modal-policy
@@ -4523,7 +4527,7 @@ allegro.pl#$#div[data-prototype-id="allegro.gdpr.consents"] { display: none !imp
 mobile.de###mde-consent-modal-container
 typographus.de###cookiePopupBG
 theorg.com##._1s1RU
-||eestatic.com/eprivacy/ui-gdpr-es.*.js$domain=elespanol.com
+||eestatic.com/eprivacy/ui-gdpr-
 phonecopy.com###cookieAgreement
 yourkit.com###terms-wrapper-id
 valeoconfectionery.com##.cookie-strip
@@ -15923,6 +15927,11 @@ yandex.*#?#.unit_rect[data-log-node]:has(> div[class*="_type_partner "])
 yandex.ru##.unit_rect[data-log-node] > div[class*="_type_partner "]
 yandex.*##.advert-js
 yandex.*#?#span.unit_rect > div.ext-embed:has(> iframe[src^="https://yastatic.net/s3/turbo-static"])
+! Yandex.Afisha
+afisha.yandex.ru#%#//scriptlet('prevent-eval-if', 'bidReqIdStr')
+afisha.yandex.ru#%#//scriptlet('abort-on-property-read', 'Object.prototype.renderRtbBlock')
+afisha.yandex.ru##div[style="width:100%;height:250px;display:block"]
+afisha.yandex.ru##div[style="width:100%;height:240px;display:block"]
 ! Yandex.Weather
 !#if (!ext_ublock)
 ! Yandex.Video, Dzen
@@ -19313,6 +19322,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+goodreads.com#?#.Overlay--floating > div.Overlay__window:has(> div.Overlay__content > div.LoginInterstitial)
 gsp.ro###v-popup
 pauta.cl##.sticky-relacionados
 rpp.pe###rpp-alerta
@@ -26375,6 +26385,8 @@ edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,morgenpos
 !
 ! SECTION: Subscriptions - Regular rules
 !
+brestcity.com##.BlockR2 td > a[href="https://t.me/brestcity"]
+brestcity.com##.BlockR2 td > a[href="https://www.instagram.com/brestcity_news/"]
 nextshark.com##.bg-newsletter
 nextshark.com#?##__next > div.bg-primary:has(> div.mx-auto > div.text-center > span:contains(Latest Newsletter))
 pauta.cl###suscripcion
@@ -33882,6 +33894,11 @@ goodreads.com,kicker.de,edeka.de#@##smartbanner.android
 ! https://github.com/AdguardTeam/AdguardFilters/issues/76987
 youtube.com#%#AG_onLoad(function() {var a = new MutationObserver(function() {if (document.querySelector('yt-upsell-dialog-renderer')) {var b = document.querySelector('.ytd-popup-container[popup-size="UPSELL_DIALOG_RENDERER_POPUP_SIZE_LARGE"] #dismiss-button:not(.dismissed), .upsell-dialog-lightbox .upsell-dialog-dismiss-button button:not(.dismissed)');setTimeout(function() {b&&b.click()}, 3E2)}});a.observe(document, {childList: !0,subtree: !0});setTimeout(function() {a.disconnect()}, 3E3)});
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/139902
+bankier.pl#?#.o-article-content > .o-graphics-multiobject:has(> .o-graphics-multiobject__wrapper > .o-graphics-multiobject__inner > .o-graphics-multiobject__inner-field > a[href^="https://www.bankier.pl/wiadomosc/Gorzej-nie-bedzie-To-sie-jeszcze-okaze-Scenariusze-dla-inwestorow-na-2023-rok-"][target="_blank"][data-vr-contentbox^="image_news_"])
+bankier.pl##.o-article-content > .o-graphics-multiobject > .o-graphics-multiobject__wrapper > .o-graphics-multiobject__inner > .o-graphics-multiobject__inner-field > a[href^="https://www.bankier.pl/wiadomosc/Gorzej-nie-bedzie-To-sie-jeszcze-okaze-Scenariusze-dla-inwestorow-na-2023-rok-"][target="_blank"][data-vr-contentbox^="image_news_"]
+bankier.pl#?#.o-article-content > .o-graphics-multiobject:has(> .o-graphics-multiobject__wrapper > .o-graphics-multiobject__inner > .o-graphics-multiobject__inner-field > a[href^="https://www.pb.pl/konferencje/gorzej-nie-bedzie-scenariusze-dla-inwestorow-na-2023-webinar-bankier-pl-"][target="_blank"])
+bankier.pl##.o-article-content > .o-graphics-multiobject > .o-graphics-multiobject__wrapper > .o-graphics-multiobject__inner > .o-graphics-multiobject__inner-field > a[href^="https://www.pb.pl/konferencje/gorzej-nie-bedzie-scenariusze-dla-inwestorow-na-2023-webinar-bankier-pl-"][target="_blank"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139903
 femmeactuelle.fr###dailymotion-pip-large-viewport
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139952
@@ -35096,7 +35113,7 @@ money.pl##a[data-st-area="gotosg"][href="https://www.wp.pl/"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54035
 wp.pl##a[data-st-area="goToSG"][href="https://www.wp.pl"]
 kuchnia.wp.pl#?#tr[data-reactid]:not([class]):not([id]) > td[class] > div[class*=" "]:has(> div[class*=" "] > iframe[src^="https://forms.freshmail.io/"])
-~pilot.wp.pl,dobreprogramy.pl,wp.pl,pudelek.pl#%#//scriptlet("prevent-addEventListener", "openFloatingPlayer", "FloatingPlayer")
+~1login.wp.pl,~pilot.wp.pl,dobreprogramy.pl,wp.pl,pudelek.pl#%#//scriptlet("prevent-addEventListener", "openFloatingPlayer", "FloatingPlayer")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/54618
 newyorker.com##:not([class^="Navigation__subscribe"]) > div[data-cm-unit="show-failsafe"]
 newyorker.com##.cm-footer__failsafe
@@ -36608,6 +36625,7 @@ yasir252.com#%#AG_onLoad(function(){setTimeout(function(){var a=document.querySe
 ! trimay.ru - social video locker
 ||trimay.ru/?
 !
+worldsoccertalk.com##.bottom-bar-articles
 itsider.com.ua###fkbuwslenv-3
 impact.ro##.strawberry-video-player.float
 5.ua###LG_container
@@ -38432,6 +38450,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+blogs.imf-formacion.com##div[class^="blogs-"][class*="-contenido"]
 bt.com##.experiencefragment
 pornhub.com##.becomePartnerWrapper
 fortnitetracker.com##.love-container
