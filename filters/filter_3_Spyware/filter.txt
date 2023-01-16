@@ -79,6 +79,8 @@
 ! Bad: example.org###rek (should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/140059
+pracuj.pl#%#//scriptlet('set-cookie-reload', 'gptrackCookie', '1')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139949
 guancha.cn#%#//scriptlet('set-constant', 'sensors', 'emptyObj')
 guancha.cn#%#//scriptlet('set-constant', 'sensors.init', 'noopFunc')
@@ -37640,6 +37642,8 @@ $cookie=bf_visit
 !------------------------------
 ! NOTE: Cookies allowlist
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/140059
+@@||pracuj.pl^$cookie=gptrackCookie
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129422
 @@||tatacliq.com^$cookie=/^AMCVS?_.*AdobeOrg/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/128154
@@ -38545,6 +38549,9 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/140059
+!+ PLATFORM(ios, ext_android_cb, ext_safari, ext_ublock)
+@@||trc.gpcdn.pl/*/tracker.js$domain=pracuj.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139994
 @@||aachener-zeitung.de/cre-1.0/tracking/call.js?serviceid=
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139949
