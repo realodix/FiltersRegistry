@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0117.3
+! OriginalVersion: 2023.0117.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -365,7 +365,9 @@
 ##iframe[src*="//www.mediacategory.com/servlet/"]
 ##div[id^="targetpushAd_"]
 !#if (adguard_ext_android_cb || adguard_app_ios)
-m.humoruniv.com##*[id][class] > div[class$="wrab"] table[width]
+m.humoruniv.com###read > div[style*="z-index:"]
+m.humoruniv.com##span[style*="font-weight:"] div ~ *[id^="li_"]
+m.humoruniv.com##*[id][class] > div[class*="wra"] table[width]
 !#endif
 !#if adguard_app_windows
 funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,funbe208.com,funbe209.com,funbe210.com,funbe211.com,funbe212.com,funbe213.com,funbe214.com,funbe215.com,funbe216.com##img[src^="/images/"]
@@ -1216,8 +1218,6 @@ yes24.com##div[id$="_Ad"]
 !
 tenasia.hankyung.com##div[data-key="page1"].swipe-layers .wrap .banner_img .banner1
 tistory.com,oracionspace.com,poketory.com##.revenue_unit_wrap
-m.humoruniv.com##div[style]:not([style*=" "])#content_info > div[id][style*="position:"]
-m.humoruniv.com##*[id*="_"] div[id*="_"][style*="box-sizing:"] > div[style^="width:"][class*=" "]
 topstarnews.net##div[class^="Ad"]
 news.mt.co.kr##.aside_bundle > div[style*="height:"]
 m.munhwa.com##section[class$="_ad"]
@@ -2558,6 +2558,7 @@ blacktoon199.com,blacktoon200.com,blacktoon201.com,blacktoon202.com,blacktoon203
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet('abort-current-inline-script', 'popMagic.init')
 !
+m.humoruniv.com#%#//scriptlet('abort-current-inline-script', '$.prototype.html', '/\/images\/[A-z0-9-_]+\.gif/')
 m.humoruniv.com#%#//scriptlet('prevent-setTimeout', '/[A-z0-9_]+\(ch[0-9]+_[A-z0-9]+\)/')
 sbs.co.kr#%#//scriptlet('set-constant', 'player.renderAdSequence', 'undefined')
 domin.co.kr#%#//scriptlet('set-constant', 'bannerpop.popup', 'noopFunc')
