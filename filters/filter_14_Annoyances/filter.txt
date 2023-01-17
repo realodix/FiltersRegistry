@@ -11739,6 +11739,7 @@ privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 consent.unilad.com,consent.ladbible.com,consent.gamingbible.co.uk,consent.unilad.co.uk#%#AG_onLoad(function(){if(window.location.href.includes("consentUUID")){var g=new MutationObserver(function(){var b=document.querySelector('button[title*="Accept" i]');b&&(g.disconnect(),b.click())});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1E4)}});
 !
+corriere.it#%#//scriptlet('trusted-click-element', '.privacy-cp-wall #privacy-cp-wall-accept')
 nightcafe.studio#%#//scriptlet('trusted-set-local-storage-item', 'acceptsNonCriticalCookies', 'denied')
 pracuj.pl#%#//scriptlet('set-cookie', 'gpc_v', '1')
 sneakerfreaker.com#%#//scriptlet('set-local-storage-item', 'cookieConsent', '1')
@@ -12795,6 +12796,8 @@ trouw.nl#%#AG_onLoad(function() { var check = document.getElementsByClassName('s
 volkskrant.nl#%#AG_onLoad(function() { setTimeout(function() {if(document.getElementsByClassName("modal-overlay")[0].isvisible = true){document.getElementsByClassName("button button--accept")[0].click();}}, 300); });
 ziekenhuis.nl#%#AG_onLoad(function() { setTimeout(function() {var check = document.getElementsByClassName('cookiewall')[0]; if (check){document.cookie = "acceptcookies=true"; location.reload();}; }, 300); });
 !
+! TODO: remove when `trusted-click-element` will be available in all AdGuard release verions
+corriere.it#%#AG_onLoad(() => { new MutationObserver((mutationList, observer) => { mutationList.forEach((mutation) => { if (Array.from(mutation.addedNodes).some((e) => { return e.className == "privacy-cp-wall"})) { document.querySelector('.privacy-cp-wall #privacy-cp-wall-accept').click() }})}).observe(document.querySelector('body'), { childList: true })})
 ! TODO: remove when `trusted-set-cookie` will be available in all AdGuard release verions
 rp-online.de#%#AG_onLoad(() => { var element = document.querySelector('article[data-consent-article] #consentAccept'); if (/\/info\/consent-remake\//.test(location.pathname) && element) { element.click() }})();
 ! TODO: replace the rule with a scriptlet `trusted-set-cookie` with reload
@@ -26423,6 +26426,7 @@ edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,morgenpos
 !
 ! SECTION: Subscriptions - Regular rules
 !
+telegram.hr##.pretplata-ticker
 cnet.com$$div[class="newsletterWrap"]
 darkreading.com###articleFooter-newsletterSignup
 revolve.com#$##ntf_dialog_all { display: none !important; }
@@ -31376,6 +31380,7 @@ tvrain.ru##.menu3__foreign-agent-wrapper
 ! ##body .smartbanner
 atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-mail.org,ortobom.com.br,dicionarioinformal.com.br,5-fifth.com,news.sky.com,chat.babel.com,getwordly.com,school-turnup.com,naked-science.ru,vod.tvp.pl,tvn24.pl,m.lamoda.ru,lkfl2.nalog.ru,kocailem.com,dartworld.shopgate.com,m.alles10euro.de,dodopizza.ru,allo.ua,tempo.co,beymen.com,tvnmeteo.tvn24.pl,outsidetv.com,golfchannel.com,sportsnet.ca,euronews.com,pkobp.pl,tesco.hu,prima.hu,immobilienscout24.de,lcwaikiki.com,m.sigrun-woehr.com,transfermarkt.de,fragfinn.de,hh.ru,eraffe24.de,infranken.de,m.computeruniverse.net,m.emp.de,meduza.global.ssl.fastly.net,meduza.io##body .smartbanner
 !
+farfetch.com##div[aria-label="App banner"]
 minimodel.jp#$#.smart_app_banner_area { display: none !important; }
 minimodel.jp#$#.smart_app_banner_area + header.nav { margin-top: 0 !important; }
 allegro.pl##div[data-analytics-groups*="allegro.bar.mobileAppBanner"][data-prototype-id="layout.container"]
@@ -41593,9 +41598,9 @@ dizipal1.cloud,dizipal2.cloud,dizipal3.cloud,dizipal4.cloud,dizipal5.cloud,dizip
 ||fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js$domain=dizipal1.cloud|dizipal2.cloud|dizipal3.cloud|dizipal4.cloud|dizipal5.cloud|dizipal6.cloud|dizipal7.cloud|dizipal8.cloud|dizipal9.cloud|dizipal10.cloud|dizipal11.cloud|dizipal12.cloud|dizipal13.cloud|dizipal14.cloud|dizipal15.cloud|dizipal16.cloud|dizipal17.cloud|dizipal18.cloud|dizipal19.cloud|dizipal20.cloud|dizipal21.cloud|dizipal22.cloud|dizipal23.cloud|dizipal24.cloud|dizipal25.cloud|dizipal26.cloud|dizipal27.cloud|dizipal28.cloud|dizipal29.cloud|dizipal30.cloud|dizipal31.cloud|dizipal32.cloud|dizipal33.cloud|dizipal34.cloud|dizipal35.cloud|dizipal36.cloud|dizipal37.cloud|dizipal38.cloud|dizipal39.cloud|dizipal40.cloud|dizipal41.cloud|dizipal42.cloud|dizipal43.cloud|dizipal44.cloud|dizipal45.cloud|dizipal46.cloud|dizipal47.cloud|dizipal48.cloud|dizipal49.cloud|dizipal50.cloud|dizipal51.cloud|dizipal52.cloud|dizipal53.cloud|dizipal54.cloud|dizipal55.cloud|dizipal56.cloud|dizipal57.cloud|dizipal58.cloud|dizipal59.cloud|dizipal60.cloud|dizipal61.cloud|dizipal62.cloud|dizipal63.cloud|dizipal64.cloud|dizipal65.cloud|dizipal66.cloud|dizipal67.cloud|dizipal68.cloud|dizipal69.cloud|dizipal70.cloud|dizipal71.cloud|dizipal72.cloud|dizipal73.cloud|dizipal74.cloud|dizipal75.cloud|dizipal76.cloud|dizipal77.cloud|dizipal78.cloud|dizipal79.cloud|dizipal80.cloud|dizipal81.cloud|dizipal82.cloud|dizipal83.cloud|dizipal84.cloud|dizipal85.cloud|dizipal86.cloud|dizipal87.cloud|dizipal88.cloud|dizipal89.cloud|dizipal90.cloud|dizipal91.cloud|dizipal92.cloud|dizipal93.cloud|dizipal94.cloud|dizipal95.cloud|dizipal96.cloud|dizipal97.cloud|dizipal98.cloud|dizipal99.cloud|dizipal100.cloud|dizipal101.cloud|dizipal102.cloud|dizipal103.cloud|dizipal104.cloud|dizipal105.cloud|dizipal106.cloud|dizipal107.cloud|dizipal108.cloud|dizipal109.cloud|dizipal110.cloud|dizipal111.cloud|dizipal112.cloud|dizipal113.cloud|dizipal114.cloud|dizipal115.cloud|dizipal116.cloud|dizipal117.cloud|dizipal118.cloud|dizipal119.cloud|dizipal120.cloud|dizipal121.cloud|dizipal122.cloud|dizipal123.cloud|dizipal124.cloud|dizipal125.cloud|dizipal126.cloud|dizipal127.cloud|dizipal128.cloud|dizipal129.cloud|dizipal130.cloud|dizipal131.cloud|dizipal132.cloud|dizipal133.cloud|dizipal134.cloud|dizipal135.cloud|dizipal136.cloud|dizipal137.cloud|dizipal138.cloud|dizipal139.cloud|dizipal140.cloud|dizipal141.cloud|dizipal142.cloud|dizipal143.cloud|dizipal144.cloud|dizipal145.cloud|dizipal146.cloud|dizipal147.cloud|dizipal148.cloud|dizipal149.cloud|dizipal150.cloud|dizipal151.cloud|dizipal152.cloud|dizipal153.cloud|dizipal154.cloud|dizipal155.cloud|dizipal156.cloud|dizipal157.cloud|dizipal158.cloud|dizipal159.cloud|dizipal160.cloud|dizipal161.cloud|dizipal162.cloud|dizipal163.cloud|dizipal164.cloud|dizipal165.cloud|dizipal166.cloud|dizipal167.cloud|dizipal168.cloud|dizipal169.cloud|dizipal170.cloud|dizipal171.cloud|dizipal172.cloud|dizipal173.cloud|dizipal174.cloud|dizipal175.cloud|dizipal176.cloud|dizipal177.cloud|dizipal178.cloud|dizipal179.cloud|dizipal180.cloud|dizipal181.cloud|dizipal182.cloud|dizipal183.cloud|dizipal184.cloud|dizipal185.cloud|dizipal186.cloud|dizipal187.cloud|dizipal188.cloud|dizipal189.cloud|dizipal190.cloud|dizipal191.cloud|dizipal192.cloud|dizipal193.cloud|dizipal194.cloud|dizipal195.cloud|dizipal196.cloud|dizipal197.cloud|dizipal198.cloud|dizipal199.cloud|dizipal200.cloud
 ! https://github.com/AdguardTeam/AdguardFilters/issues/129560
 ! dizipal*.com - frequently changed domains
-dizipal503.com,dizipal504.com,dizipal518.com,dizipal519.com,dizipal520.com,dizipal521.com,dizipal522.com,dizipal523.com,dizipal524.com,dizipal525.com,dizipal526.com,dizipal527.com,dizipal528.com,dizipal529.com,dizipal530.com,dizipal531.com,dizipal532.com,dizipal533.com,dizipal534.com,dizipal535.com,dizipal536.com,dizipal537.com,dizipal538.com,dizipal539.com,dizipal540.com,dizipal541.com,dizipal542.com,dizipal543.com,dizipal544.com,dizipal545.com,dizipal546.com,dizipal547.com,dizipal548.com,dizipal549.com,dizipal550.com##pjsdiv[style="position: absolute; left: 306.5px; top: 17px; opacity: 1; font-size: 14px; line-height: 1em;"]
-dizipal503.com,dizipal504.com,dizipal518.com,dizipal519.com,dizipal520.com,dizipal521.com,dizipal522.com,dizipal523.com,dizipal524.com,dizipal525.com,dizipal526.com,dizipal527.com,dizipal528.com,dizipal529.com,dizipal530.com,dizipal531.com,dizipal532.com,dizipal533.com,dizipal534.com,dizipal535.com,dizipal536.com,dizipal537.com,dizipal538.com,dizipal539.com,dizipal540.com,dizipal541.com,dizipal542.com,dizipal543.com,dizipal544.com,dizipal545.com,dizipal546.com,dizipal547.com,dizipal548.com,dizipal549.com,dizipal550.com#%#//scriptlet("prevent-addEventListener", "contextmenu", "preventDefault")
-||fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js$domain=dizipal503.com|dizipal504.com|dizipal518.com|dizipal519.com|dizipal520.com|dizipal521.com|dizipal522.com|dizipal523.com|dizipal524.com|dizipal525.com|dizipal526.com|dizipal527.com|dizipal528.com|dizipal529.com|dizipal530.com|dizipal531.com|dizipal532.com|dizipal533.com|dizipal534.com|dizipal535.com|dizipal536.com|dizipal537.com|dizipal538.com|dizipal539.com|dizipal540.com|dizipal541.com|dizipal542.com|dizipal543.com|dizipal544.com|dizipal545.com|dizipal546.com|dizipal547.com|dizipal548.com|dizipal549.com|dizipal550.com
+dizipal503.com,dizipal504.com,dizipal505.com,dizipal506.com,dizipal507.com,dizipal508.com,dizipal509.com,dizipal510.com,dizipal511.com,dizipal512.com,dizipal513.com,dizipal514.com,dizipal515.com,dizipal516.com,dizipal517.com,dizipal518.com,dizipal519.com,dizipal520.com,dizipal521.com,dizipal522.com,dizipal523.com,dizipal524.com,dizipal525.com,dizipal526.com,dizipal527.com,dizipal528.com,dizipal529.com,dizipal530.com,dizipal531.com,dizipal532.com,dizipal533.com,dizipal534.com,dizipal535.com,dizipal536.com,dizipal537.com,dizipal538.com,dizipal539.com,dizipal540.com,dizipal541.com,dizipal542.com,dizipal543.com,dizipal544.com,dizipal545.com,dizipal546.com,dizipal547.com,dizipal548.com,dizipal549.com,dizipal550.com##pjsdiv[style="position: absolute; left: 306.5px; top: 17px; opacity: 1; font-size: 14px; line-height: 1em;"]
+dizipal503.com,dizipal504.com,dizipal505.com,dizipal506.com,dizipal507.com,dizipal508.com,dizipal509.com,dizipal510.com,dizipal511.com,dizipal512.com,dizipal513.com,dizipal514.com,dizipal515.com,dizipal516.com,dizipal517.com,dizipal518.com,dizipal519.com,dizipal520.com,dizipal521.com,dizipal522.com,dizipal523.com,dizipal524.com,dizipal525.com,dizipal526.com,dizipal527.com,dizipal528.com,dizipal529.com,dizipal530.com,dizipal531.com,dizipal532.com,dizipal533.com,dizipal534.com,dizipal535.com,dizipal536.com,dizipal537.com,dizipal538.com,dizipal539.com,dizipal540.com,dizipal541.com,dizipal542.com,dizipal543.com,dizipal544.com,dizipal545.com,dizipal546.com,dizipal547.com,dizipal548.com,dizipal549.com,dizipal550.com#%#//scriptlet("prevent-addEventListener", "contextmenu", "preventDefault")
+||fastly.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js$domain=dizipal503.com|dizipal504.com|dizipal505.com|dizipal506.com|dizipal507.com|dizipal508.com|dizipal509.com|dizipal510.com|dizipal511.com|dizipal512.com|dizipal513.com|dizipal514.com|dizipal515.com|dizipal516.com|dizipal517.com|dizipal518.com|dizipal519.com|dizipal520.com|dizipal521.com|dizipal522.com|dizipal523.com|dizipal524.com|dizipal525.com|dizipal526.com|dizipal527.com|dizipal528.com|dizipal529.com|dizipal530.com|dizipal531.com|dizipal532.com|dizipal533.com|dizipal534.com|dizipal535.com|dizipal536.com|dizipal537.com|dizipal538.com|dizipal539.com|dizipal540.com|dizipal541.com|dizipal542.com|dizipal543.com|dizipal544.com|dizipal545.com|dizipal546.com|dizipal547.com|dizipal548.com|dizipal549.com|dizipal550.com
 !
 ! Remove timer, during which ads or self-promos were shown
 !
@@ -42083,6 +42088,9 @@ blog.livedoor.jp##div[class^="footrss"]
 blog.livedoor.jp##div[class^="shitarss_"]
 blog.livedoor.jp##div[id^="shitarss_title_"]
 !
+||doucolle-kako.livedoor.biz/kiji_link/
+||doucolle-kako.livedoor.biz/pick-$subdocument
+doucolle.net###freebox
 m4ex.com#?##the-content > center > b:has(> div.inmaincmframe)
 ||dameparts.com/pbanner/
 ||nijitoraware.com/wp-content/uploads/*/niji_header_
@@ -43140,6 +43148,8 @@ zebratechnologies.force.com##.zbrbot-container
 !
 !   SECTION: Uncategorized
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/140015
+telegram.hr##.offers-widget
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139316
 fd.ru##iframe[src^="https://about.glavbukh.ru/callback/form-api.php"]
 ||about.glavbukh.ru/callback/form-api.php
