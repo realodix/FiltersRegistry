@@ -461,7 +461,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 18January2023v1
+! OriginalVersion: 18January2023v7
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1258,7 +1258,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ! https://github.com/iam-py-test/investigations/blob/main/2021/11/28/1.md
 ||money-mod.com^$document
 ||gospelchor.info^$document
-||new.bestlifeoffer20.com^$document
 ||reykijnoac.com^$document
 ! https://github.com/iam-py-test/investigations/blob/main/2021/11/28/2.md
 ||oaesso.info^$document
@@ -1508,6 +1507,19 @@ zombooru.com##a[href="http://www.hard55.com"]
 !#if !ext_ublock
 104.160.10.*$network
 165.231.154.*$network
+!#endif
+! https://github.com/DandelionSprout/adfilt/issues/748
+*norgesalg.com^$document,popup
+*salgnorge.com^$document,popup
+!#if !ext_ublock
+165.231.10.*$network
+165.231.152.*$network
+196.196.52.*$network
+196.196.155.*$network
+196.240.121.*$network
+196.242.179.*$network
+196.245.52.*$network
+196.245.56.*$network
 !#endif
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
@@ -1858,7 +1870,6 @@ www.microsoft.com##a[data-pfns][href*=city][href*=driver]
 www.microsoft.com##a[data-pfns][href*=poppy][href*=playtime]
 www.microsoft.com##a[data-pfns][href*=-mairo-]
 www.microsoft.com##a[data-pfns][href*=-cario-]
-www.microsoft.com##a[data-pfns][href*="-granny-scary-"]
 www.microsoft.com##a[data-pfns][href*=pet-vet-]
 www.microsoft.com##a[data-pfns][href*=paw-][href*=-patrol]:not([href*=paw-patrol])
 www.microsoft.com##a[data-pfns][href*=rope-hero]
@@ -1947,7 +1958,6 @@ www.microsoft.com##.card[data-bi-cn*=city i][data-bi-cn*=driver i]
 www.microsoft.com##.card[data-bi-cn*=poppy i][data-bi-cn*=playtime i]
 www.microsoft.com##.card[data-bi-cn*=" mairo " i]
 www.microsoft.com##.card[data-bi-cn*=" cario " i]
-www.microsoft.com##.card[data-bi-cn*=" granny scary " i]
 www.microsoft.com##.card[data-bi-cn*="pet vet " i]
 www.microsoft.com##.card[data-bi-cn*="paw " i][data-bi-cn*="patrol" i]:not([data-bi-cn*="paw patrol" i])
 www.microsoft.com##.card[data-bi-cn*="rope hero" i]
@@ -2192,7 +2202,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 13January2023v1
+! OriginalVersion: 18January2023v7
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -2212,7 +2222,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ! Palau
 ||pw^$document,domain=~libgen.pw|~petridish.pw|~palaugov.pw|~dpc.pw|~buttercup.pw|~rezka.pw|~darkcrystal.pw|~xor.pw|~fullhdfilmizlesene.pw|~gopass.pw|~vost.pw|~core.pw|~bittor.pw
 ! Legitimate use is almost non-existent, but has a tiny userbase in Japan. Its extreme common-ness in malware redirections means that the entry will be kept forever.
-||top^$document,domain=~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~techblog.top|~changlam10.top|~changlam11.top|~pdcdn1.top|~mastodon.top|~pressplay.top|~chillx.top
+||top^$document,domain=~caitlin.top|~corriente.top|~gdtot.top|~nicenature.top|~reminder.top|~magocoro.top|~castlevania.top|~suiten.top|~shucks.top|~1stream.top|~ambr.top|~techblog.top|~changlam10.top|~changlam11.top|~pdcdn1.top|~mastodon.top|~pressplay.top|~chillx.top
 ! International topical domains that have consistently horrendous scores on watchlists of bad TLDs, and whose use for legit purposes is practically non-existent.
 ||loan^$document
 ||agency^$document,domain=~battlefield.agency|~shortcut.agency
@@ -2246,7 +2256,7 @@ www.google.*##.g:has(a[href*=".loan/"])
 www.google.*##.g:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 www.google.*##.g:has(a[href*=".gdn/"])
 www.google.*##.g:has(a[href*=".bid/"])
-www.google.*##.g:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"], [href*="mastodon.top"], [href*="pressplay.top"]))
+www.google.*##.g:has(a[href*=".top/"]:not([href*="caitlin.top"], [href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"], [href*="mastodon.top"], [href*="pressplay.top"]))
 ! ——— You know those ultra-fraudulent auto-generated things that clutter up Google searches? These entries should remove some of them. ———
 www.google.*##.g:has(a[href*=".php?xxx="])
 www.google.*##.g:has(cite:has-text(.it › )):has(a[href*="-"][href$=".html"]:not([href*="://www."], [href*="://m."], [href*="carrefour.it"], [href*="gospesa.it"]))
@@ -2265,7 +2275,7 @@ www.google.*#?#*:has(> * > a[oncontextmenu][href*=".loan/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".gdn/"])
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".bid/"])
-www.google.*#?#*:has(> * > a[oncontextmenu][href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"], [href*="mastodon.top"], [href*="pressplay.top"]))
+www.google.*#?#*:has(> * > a[oncontextmenu][href*=".top/"]:not([href*="caitlin.top"], [href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"], [href*="mastodon.top"], [href*="pressplay.top"]))
 www.google.*#?#*:has(> * > a[oncontextmenu][href*=".php?xxx="])
 www.google.*#?#*:has(> * > a[oncontextmenu][href^="https://books.google."])
 !#endif
@@ -2280,7 +2290,7 @@ duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaf
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".agency"]:not([data-domain*="battlefield.agency"], [data-domain*="shortcut.agency"])
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".gdn"]
 duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".bid"]
-duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"], [data-domain$="shucks.top"], [data-domain$="1stream.top"], [data-domain*="ambr.top"], [data-domain*="techblog.top"], [data-domain*="mastodon.top"], [data-domain*="pressplay.top"])
+duckduckgo.com,3g2upl4pq6kufc4m.onion,duckduckgogg42xjoc72x3sjasowoarfbgcmvfimaftt6twagswzczad.onion##[data-domain$=".top"]:not([href*="caitlin.top"], [data-domain$="corriente.top"], [data-domain$="gdtot.top"], [data-domain$="nicenature.top"], [data-domain$="reminder.top"], [data-domain$="magocoro.top"], [data-domain$="castlevania.top"], [data-domain$="suiten.top"], [data-domain$="shucks.top"], [data-domain$="1stream.top"], [data-domain*="ambr.top"], [data-domain*="techblog.top"], [data-domain*="mastodon.top"], [data-domain*="pressplay.top"])
 ! ——— For Bing ———
 !!!bing.com##.b_algo:has(a[href*=".tk/"]:not([href*="google.tk"], [href*="coolcmd.tk"], [href*="budterence.tk"], [href*="transportnews.tk"], [href*="c0d3c.tk"], [href*="tokelau-info.tk"], [href*="loljp-wiki.tk"], [href*="ninetail.tk"], [href*="goshujin.tk"], [href*="graph.tk"], [href*="nolfrevival.tk"], [href*="bstweaker.tk"], [href*="nbd-media.tk"], [href*="gotofap.tk"], [href*="coppersurfer.tk"], [href*="fakaofo.tk"]))
 bing.com##.b_algo:has(a[href*=".ga/"]:not([href*="google.ga"], [href*="filtri-dns.ga"], [href*="dgdi.ga"], [href*="9191.ga"], [href*="animevsub.ga"]))
@@ -2292,7 +2302,7 @@ bing.com##.b_algo:has(a[href*=".loan/"])
 bing.com##.b_algo:has(a[href*=".agency/"]:not([href*="battlefield.agency"], [href*="shortcut.agency"]))
 bing.com##.b_algo:has(a[href*=".gdn/"])
 bing.com##.b_algo:has(a[href*=".bid/"])
-bing.com##.b_algo:has(a[href*=".top/"]:not([href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"], [href*="mastodon.top"], [href*="pressplay.top"]))
+bing.com##.b_algo:has(a[href*=".top/"]:not([href*="caitlin.top"], [href*="corriente.top"], [href*="gdtot.top"], [href*="nicenature.top"], [href*="reminder.top"], [href*="magocoro.top"], [href*="castlevania.top"], [href*="suiten.top"], [href*="shucks.top"], [href*="1stream.top"], [href*="ambr.top"], [href*="techblog.top"], [href*="mastodon.top"], [href*="pressplay.top"]))
 ! ——— Old dead tech-related domains ———
 ! Domains that used to host lists for adblockers or "hosts" tools, but which are now either used by malware pushers, or could potentially be snapped up by them.
 ||adblock.gjtech.net^$document
@@ -4227,7 +4237,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||lucdream.com^$document
 ||beastbuying.com^$document
 ||pesoaniz.com^$document
-||plarium.com^$document
 ||omnatuor.com^$all
 ||novitrk1.com^$all
 ||cu27t-evo29lution.xyz^$all
@@ -4795,7 +4804,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||updsec.builtfromzero.com^$all
 ||money-mod.com^$document
 ||gospelchor.info^$document
-||new.bestlifeoffer20.com^$document
 ||reykijnoac.com^$document
 ||totalnicefeed.com^$all
 ! https://github.com/iam-py-test/investigations/blob/main/2021/11/28/2.md
@@ -6119,7 +6127,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||defloreation.com^$all
 ||degowo.de^$all
 ||dekstophut.com^$all
-||demo.europadonna.de^$all
 ||demo.halimcan.de^$all
 ||dentistfinder.com^$all
 ||desicorner.net^$all
@@ -6423,7 +6430,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||gomiyashiki-osouji.com^$all
 ||goodcheat.com^$all
 ||googglemail.com^$all
-||google.ssvt.se^$all
 ||googlecal.com^$all
 ||googlefish.com^$all
 ||googleidle.de^$all
@@ -6673,7 +6679,6 @@ zombooru.com##a[href="http://www.hard55.com"]
 ||llantaslandin.com^$all
 ||llivet.com^$all
 ||loandaministration.com^$all
-||login.reserveamerica.co^$all
 ||loitech.de^$all
 ||lojabau2mao.com^$all
 ||lojaodoreal.com^$all
@@ -8130,6 +8135,19 @@ zombooru.com##a[href="http://www.hard55.com"]
 !#if !ext_ublock
 104.160.10.*$network
 165.231.154.*$network
+!#endif
+! https://github.com/DandelionSprout/adfilt/issues/748
+*norgesalg.com^$document,popup
+*salgnorge.com^$document,popup
+!#if !ext_ublock
+165.231.10.*$network
+165.231.152.*$network
+196.196.52.*$network
+196.196.155.*$network
+196.240.121.*$network
+196.242.179.*$network
+196.245.52.*$network
+196.245.56.*$network
 !#endif
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
@@ -13139,12 +13157,6 @@ toorgle.net##.join
 ||steamccommurity.ru^$all
 ||steamcmmunyti.ru^$all
 ||steamcomiunity.com^$all
-||steamcomminutiy.ru^$all
-||steamcomminyti.ru^$all
-||steamcomminytiu.ru^$all
-||steamcomminytiy.ru^$all
-||steamcomminytu.com^$all
-||steamcommnity.com.ru^$all
 ||steamcommrunitly.com^$all
 ||steamcommuniety.ru^$all
 ||steamcommunillty.com^$all
@@ -13177,12 +13189,6 @@ toorgle.net##.join
 ||steammcomunit.ru^$all
 ||steamnmcomunnity.co^$all
 ||steancimnunity.ru^$all
-||steancommunety.ru^$all
-||steancommuniiity.com^$all
-||steancommunity.click^$all
-||steancommunnity.co^$all
-||steancommynitu.com^$all
-||steancommynuti.ru^$all
 ||steancomunlty.ru^$all
 ||steanconmunyti.ru^$all
 ||steanmconynnuytiy.$all
@@ -14756,7 +14762,6 @@ www.microsoft.com##a[data-pfns][href*=city][href*=driver]
 www.microsoft.com##a[data-pfns][href*=poppy][href*=playtime]
 www.microsoft.com##a[data-pfns][href*=-mairo-]
 www.microsoft.com##a[data-pfns][href*=-cario-]
-www.microsoft.com##a[data-pfns][href*="-granny-scary-"]
 www.microsoft.com##a[data-pfns][href*=pet-vet-]
 www.microsoft.com##a[data-pfns][href*=paw-][href*=-patrol]:not([href*=paw-patrol])
 www.microsoft.com##a[data-pfns][href*=rope-hero]
@@ -14780,6 +14785,7 @@ www.microsoft.com##a[data-pfns][href*=run-fall]
 www.microsoft.com##a[data-pfns][href*=endless-running]
 www.microsoft.com##a[data-pfns][href*=princess-runner]
 www.microsoft.com##a[data-pfns][href*=poppyes]
+www.microsoft.com##a[data-pfns][href*=preganat]
 www.microsoft.com##.card[data-bi-cn*=imposter i]
 www.microsoft.com##.card[data-bi-cn*=impostor i]
 www.microsoft.com##.card[data-bi-cn*="super bob" i]
@@ -14844,7 +14850,6 @@ www.microsoft.com##.card[data-bi-cn*=city i][data-bi-cn*=driver i]
 www.microsoft.com##.card[data-bi-cn*=poppy i][data-bi-cn*=playtime i]
 www.microsoft.com##.card[data-bi-cn*=" mairo " i]
 www.microsoft.com##.card[data-bi-cn*=" cario " i]
-www.microsoft.com##.card[data-bi-cn*=" granny scary " i]
 www.microsoft.com##.card[data-bi-cn*="pet vet " i]
 www.microsoft.com##.card[data-bi-cn*="paw " i][data-bi-cn*="patrol" i]:not([data-bi-cn*="paw patrol" i])
 www.microsoft.com##.card[data-bi-cn*="rope hero" i]
@@ -14868,6 +14873,7 @@ www.microsoft.com##.card[data-bi-cn*=" run fall" i]
 www.microsoft.com##.card[data-bi-cn*="endless running" i]
 www.microsoft.com##.card[data-bi-cn*="princess runner" i]
 www.microsoft.com##.card[data-bi-cn*=poppyes i]
+www.microsoft.com##.card[data-bi-cn*=preganat i]
 www.microsoft.com##a[data-pfns][data-pfns*=pedriapps]
 www.microsoft.com##a[data-pfns][data-pfns*=gameboxstudios]
 www.microsoft.com##a[data-pfns][data-pfns*=singleton]
