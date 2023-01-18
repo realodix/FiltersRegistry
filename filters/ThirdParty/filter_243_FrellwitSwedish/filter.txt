@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-01-17 14:35:58 CET
+! Last modified: 2023-01-18 08:23:46 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -450,6 +450,7 @@ tidningen.nu##span:has-text(/^Annons$/):upward(1) + .textwidget
 tidningenbalans.se##p:has-text(/i annonssamarbete med/i):upward(.flex.overflow-hidden)
 tidningenglobal.se##span:has-text(/annons/i):upward(.elementor-widget-wrap)
 tidningenridsport.se#$#.entry-content { display: initial !important; }
+tidningenskriva.se##.kategori:has-text(Annons):upward(section.widget_text)
 totallyorebro.se,totallystockholm.se#$?#[class*="tot-content-preview-container"]:has(a[href*="casino"]) { remove: true; }
 travronden.se##main > div > div > div > div > div:has(.adunitContainer)
 trendenser.se##.sponsor-info:upward(.post_feed_post)
@@ -514,6 +515,7 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||player.vimeo.com^$subdocument,redirect=click2load.html,domain=breakit.se
 ||powr.io^$important,domain=fria.nu|friatidningen.se|goteborgsfria.se|stockholmsfria.se
 ||s.arclk.net/tr?$all
+||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=tv4play.se
 ||trailer-admin-cdn.a2d.tv^$media,redirect=noopmp4-1s,domain=tv4play.se
 ||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|godare.se|svd.se|wellness.se
 ||youplay.se/*.js*ap=true$removeparam=/^ap/,script
@@ -2955,7 +2957,6 @@ zeromagazine.nu##div[id^="ads"]
 ||wishpond.net^$third-party
 ||woomio.com/assets/js/analytics
 ||workhaus.se^$third-party
-||wp.com/wp-content/js/bilmur.min.js
 ||wpcc.io^*/cookieconsent$script
 ||xfm.se/cookie/cookie_popup$script
 ||yelp.se/sit_rep
