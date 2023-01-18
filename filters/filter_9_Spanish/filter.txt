@@ -1687,6 +1687,7 @@ peru21.pe#@#.adstop
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24801
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
+elespectador.com#?#.pure-u-1:has(> div.Widget-fullHeight > div[id^="Personalizado"])
 lavoz.com.ar#?#.flex > div.col:has(> div.s-banner-container)
 caras.perfil.com##div[style^="width"]:has(> div.ads-space)
 novelasligeras.net#?#.wpb-content-wrapper > div.vc_row:has(> div.wpb_column div.wpb_wrapper > a[href="https://novelasligeras.net/index.php/nuestras-suscripciones/"])
@@ -2064,7 +2065,7 @@ topflix.*#%#//scriptlet("adjust-setInterval", "adsHandle_noclick", "", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91363
 app.prende.tv#%#//scriptlet("json-prune", "ads breaks cuepoints times", "ads")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88357
-maxitorrent.com#%#//scriptlet("prevent-window-open", "1", "?sid=")
+maxitorrent.com#%#//scriptlet("prevent-window-open", "?sid=")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85982
 eusaudavel.net#%#//scriptlet('remove-class', 'hided', 'div#player')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/83429
@@ -2155,7 +2156,7 @@ r5bke8d-execute.firedge.com#%#!function(){if(-1<window.location.href.indexOf("/i
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57811
 comandotorrents.org,lapumia.org#%#//scriptlet("prevent-addEventListener", "DOMContentLoaded", "videoTag")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/57080
-animeblix.com#%#//scriptlet("prevent-window-open", "1", "passeura")
+animeblix.com#%#//scriptlet("prevent-window-open", "passeura")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/56441
 movieknowing.com#%#//scriptlet('prevent-window-open', '/^https?:\/\/movieknowing\.com\/$/', 'trueFunc')
 movieknowing.com#%#AG_onLoad(function(){var a=document.querySelector(".link_box > #hide");if(a){var b=a.innerText;try{var c=atob(b);a.innerHTML=c;a.style.display="block"}catch(d){}}});
@@ -2192,7 +2193,7 @@ repelisplus.vip#%#//scriptlet("abort-on-property-read", "adbClick")
 descargaranimehentai.com#%#//scriptlet("abort-on-property-read", "pub")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/44237
 redirdx.in#%#document.cookie = "tronador=aproved; path=/";
-redirdx.in#%#//scriptlet("prevent-window-open", "1", "redirdx.in/go/")
+redirdx.in#%#//scriptlet("prevent-window-open", "redirdx.in/go/")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/43603#issuecomment-553749336
 hentaihd.xyz#%#AG_onLoad(function() { setTimeout(function() { var el = document.querySelector('div.fluid_initial_play'); if(el) el.click(); }, 300); });
 ! https://github.com/AdguardTeam/AdguardFilters/issues/42704
@@ -2543,6 +2544,10 @@ bebe.abril.com.br,tribunapr.uol.com.br,diariodonordeste.verdesmares.com.br,sbt.c
 ! ##.banner
 cronista.com,rionegro.com.ar,diariodecuyo.com.ar,voydeviaje.com.ar,guarda14.com,viapais.com.ar,agazeta.com.br,eleconomista.com.mx,metropolitanafm.com.br,tycsports.com,elespectador.com,bnews.com.br,migalhas.com.br,losandes.com.ar,lavoz.com.ar,mundo.sputniknews.com,omelete.com.br,lapoliticaonline.com.ar,mundotecnologias.com,valenciaplaza.com,veneapp.com,dalealbo.cl,globo.com,defesanet.com.br,mibrujula.com,lyon.kim,26noticias.com.ar,auniao.com,clickpb.com.br,emagister.com,lanacion.com.ar,parana-online.com.br,r7.com,toxico-pc.com,uol.com.br##.banner
 !
+lanacion.com.co##.widget_custom_html
+laarena.com.ar##.cont-publis-home
+laarena.com.ar##.container-spot
+laarena.com.ar##.container__publi
 cronista.com##div[class^="piecesponsor"]
 contextotucuman.com##.sidebar > div[class^="divide"]
 rionegro.com.ar##ads-component
