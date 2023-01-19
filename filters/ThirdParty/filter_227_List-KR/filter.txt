@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0119.2
+! OriginalVersion: 2023.0119.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -366,10 +366,10 @@
 ##iframe[src*="//www.mediacategory.com/servlet/"]
 ##div[id^="targetpushAd_"]
 !#if (adguard_ext_android_cb || adguard_app_ios)
-m.humoruniv.com##span[style*="font-weight:"] div ~ *[id^="bi_"]
-m.humoruniv.com###read div[id][style*="right:"] > div[onclick]
+m.humoruniv.com##span[style*="font-weight:"] div ~ *[id^="ci_"]
+m.humoruniv.com###read div[id]:not([style]) > div[onclick]
 m.humoruniv.com##span[style*="font-weight:"] div ~ *[id^="li_"]
-m.humoruniv.com##*[id][class] > div[class]:not([class*=" "]) > div[class]:not([class*=" "]) table[width]
+m.humoruniv.com##*[id][class] > div[class]:not([class*=" "]) > div[class]:not([class*=" "]) table[class]
 !#endif
 !#if adguard_app_windows
 funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,funbe208.com,funbe209.com,funbe210.com,funbe211.com,funbe212.com,funbe213.com,funbe214.com,funbe215.com,funbe216.com##img[src^="/images/"]
@@ -1972,7 +1972,7 @@ m.naver.com##div.brick-vowel > div[data-block-code="AD-SMART-CHANNEL"].MM_DA_SMA
 m.coupang.com##.plp-default__item.search-product__cmg-badge
 m.coupang.com##div[data-page-type="brandSDP"][id$="carousel-products"]
 slist.kr##.ad-template
-daily.hankooki.com,slist.kr###wingBanner
+goodmorningcc.com,daily.hankooki.com,slist.kr###wingBanner
 fow.kr##.neo_top_center
 ggoorr.net###content > div.bd > div.bd_lst_wrp > center
 ggoorr.net##.content > div.bd > div.clear > div > center
