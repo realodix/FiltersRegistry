@@ -16611,6 +16611,8 @@ reddit.com#@#.ADBAR
 ! SECTION: Anti-adblock - Regular rules
 ! Do not forget about '!#safari_cb_affinity' section for exclusions
 !
+hellomagazine.com#$#a.ad-slot.ad-mpu[href^="http://ad.doubleclick.net/"][style*="left: -10000px !important; top: -1000px !important;"] { display: block !important; }
+hellomagazine.com#$#.afs_ads.ad-placement[style="width: 1px; height: 1px; position: absolute; background: transparent;"] { display: block !important; }
 filmix.ac#?##player pjsdiv[style^="position: absolute;"] > pjsdiv[style^="position: absolute;"]:has(> pjsdiv:contains(AdBlock))
 turk5series.com##div[style*="background-color"][style*="position: fixed;"][style*="z-index: 2147483650;"]
 designalive.pl###cover
@@ -19372,6 +19374,8 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+t-online.de#?#body > #__next ~ div[role="presentation"]:has(> div > section[data-testid="InactivityLayer.ModalView"])
+t-online.de#$#body { overflow: auto !important; }
 focus.de###inactivity_layer_bg
 reddit.com##.happening-now-wrap
 iobit.com##.newyear-top-banner
@@ -25295,9 +25299,10 @@ zlavomat.sk#@##credential_picker_container
 ###smart_push_smio_overlay
 ###smart_push_smio_window
 ###visilabs_web_push_perm_box
+##amp-web-push-widget
 ##.insider-opt-in-notification
 ##.tsoft-push--in-notification
-##amp-web-push-widget
+##.cleverpush-bell
 !
 /OneSignalSDKWorker.js
 /push.js?utm_source=*&domain=$script
