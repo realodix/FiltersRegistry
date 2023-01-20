@@ -6179,6 +6179,7 @@ livejournal.com#%#//scriptlet("set-constant", "begun_new_callbacks", "undefined"
 ||irecommend.ru/*/*/$xmlhttprequest,jsonprune=\$.data.*.attributes
 !
 !#if (!adguard_ext_firefox)
+||home.imgsmail.ru/resplash/*/j/d-*.js$replace=/o\.default\.radar\("adblock"\)//
 ||yandex.ru/weather/$script,xmlhttprequest,replace=/^Ya\[\d+\].*//
 ||dzen.ru/*/*/*_$replace=/^.*"blockId\":\s*\"R-A-.*//,script,xmlhttprequest,other
 ||spletnik.ru/_$script,replace=/\/context_adb.*//
@@ -7504,9 +7505,6 @@ tracker.0day.kiev.ua#?#td[valign="top"] > table[style^="margin-bottom: 20px"][-e
 !
 !
 ! START: Mail.Ru
-! main page under the search
-mail.ru#?#div[data-testid="search-container"] + div[class*=" svelte-"]:has(> div[class*=" svelte-"])
-mail.ru#?#div[data-testid="search-container"] + div[class*=" svelte-"]:has(> svg[width="100%"][height="90"])
 !
 cloud.mail.ru#?#div[class^="Public-desktop__rightCol"]:has(> section[class^="Rightinfo__root"] > div[class^="Rightinfo_"] > h3[class^="Rightinfo_"]:contains(Реклама))
 cloud.mail.ru#$?#.w-public__content  > div.b-layout > div.b-layout__col_1_2 { margin-right: auto !important; }
@@ -22168,6 +22166,7 @@ gamer-info.com###games-db-main-listblock > a[class="gmv2-it"] + div[class]
 !
 !
 ! START: mail.ru
+mail.ru##div[slot="main-column"] > div.tgb-wrapper
 mail.ru##div[data-testid="grid-header"] > div.toolbar
 !
 !!! !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)
