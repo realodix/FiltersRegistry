@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0119.4
+! OriginalVersion: 2023.0120.0
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -366,10 +366,9 @@
 ##iframe[src*="//www.mediacategory.com/servlet/"]
 ##div[id^="targetpushAd_"]
 !#if (adguard_ext_android_cb || adguard_app_ios)
-m.humoruniv.com##span[style*="font-weight:"] div ~ *[id^="ci_"]
-m.humoruniv.com###read div[id]:not([style]) > div[onclick]
-m.humoruniv.com##span[style*="font-weight:"] div ~ *[id^="li_"]
-m.humoruniv.com##*[id][class] > div[class]:not([class*=" "]) > div[class]:not([class*=" "]) table[class]
+m.humoruniv.com##span[style*="font-weight:"] div ~ *[id] div[class*=" "][style*="text-align:"]
+m.humoruniv.com###read div[id][onclick]:not([style]) > table
+m.humoruniv.com##[id][class] > div[class]:not([class*=" "]) > div[class]:not([class*=" "]) table[id]
 !#endif
 !#if adguard_app_windows
 funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,funbe208.com,funbe209.com,funbe210.com,funbe211.com,funbe212.com,funbe213.com,funbe214.com,funbe215.com,funbe216.com##img[src^="/images/"]

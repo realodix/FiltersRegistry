@@ -461,7 +461,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 18January2023v7
+! OriginalVersion: 20January2023v2
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1521,6 +1521,15 @@ zombooru.com##a[href="http://www.hard55.com"]
 196.245.52.*$network
 196.245.56.*$network
 !#endif
+! https://www.bleepingcomputer.com/news/security/hackers-push-malware-via-google-search-ads-for-vlc-7-zip-ccleaner/
+://rufus.download.$document,popup
+://virtualbox.download.$document,popup
+://vidiq.download.$document,popup
+://gimp.download.$document,popup
+://sublimetext.download.$document,popup
+://java.download.$document
+||185.106.94.139^$document
+||45.90.109.196^$document
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ##a[href*=".downloadprovider.me/"]
@@ -20664,7 +20673,7 @@ ourcodeworld.com##.mouse-cursor
 ! No iMacs have had less than 1600px wide monitors since 2006, MacBook Pro since 2012, or MacBook Air since 2017. Thus I'm taking a gamble by embedding this for Mac users:
 !+ NOT_OPTIMIZED
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! OriginalVersion: 19January2023v1-Beta
+! OriginalVersion: 20January2023v1-Beta
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
@@ -21036,7 +21045,7 @@ net,org,com#$#html.vector-sticky-header-enabled:not(.ve-available) .mw-content-c
 wikipedia.org#$#html.ve-available .mw-content-container { max-width: unset !important }
 wikipedia.org#$#html.ve-available .mw-page-container { max-width: unset !important }
 ! https://en.wikipedia.org/wiki/Immersive_sim (19/01/2023)
-wikipedia.org#$#html[class*=vector] .mw-page-container-inner { grid-template-columns: unset !important }
+wikipedia.org#$#html[class*=vector] .mw-page-container-inner { grid-template-columns: unset !important; column-gap: 10px !important }
 ! —————————————————————————————————————————————————————————————————————
 ! Category: Bulbapedia
 bulbapedia.bulbagarden.net#$#.bg-global-menu + #globalWrapper #content { margin-left: 10px !important; margin-right: 10px !important; max-width: 95vw !important }
