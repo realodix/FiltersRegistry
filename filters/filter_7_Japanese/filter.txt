@@ -454,6 +454,9 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/140795
+audio-sound-premium.com##div[id][class^="popup"][class$="wrap"]
+audio-sound-premium.com#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140596
 logworker.net#$##unblk { display: none !important; }
 logworker.net#$#.entry-content { display: block !important; }
@@ -2327,6 +2330,8 @@ blog.livedoor.jp##div.t_h   > span[style="color: rgb(255, 0, 0);"] > b
 !
 !
 !
+okinny.heypo.net###images > div[style="text-align:center;margin-bottom:50px;"]
+okinny.heypo.net##div[style$="overflow:hidden;"] > table[width="1050"][bgcolor="#000000"]
 sportiva.shueisha.co.jp###Sportiva_pc_article_UnderTitle
 mamastar.jp##.adarea01
 logworker.net##.amaw_box
@@ -2335,6 +2340,7 @@ city.funabashi.lg.jp##.p-topAd
 refind2ch.org##.flux_ad_overlay
 takenokosokuhou.com##.module--rss_affiliate
 vague.style##.side-column > .add-container
+||python.jp/ext/$xmlhttprequest
 python.jp##.affi_title
 python.jp##.affi_items
 python.jp##.bottom-container
@@ -2398,7 +2404,7 @@ utaten.com##.lowerContents > div[style="text-align: center; height: 50px;"]
 utaten.com##.tonefuse_music_ad_area
 ||pref.toyama.jp/banner/
 blogterest.net##a[href^="https://adult-sale.com/lp/"]
-momon-ga.com##.tablink
+nyahentai.re,momon-ga.com##.tablink
 nyahentai.re,momon-ga.com##.asmr18
 mangacross.jp##.fixed_ad_box_sp
 mainichigahakken.net##div[class^="wrap-recommend"]
@@ -3298,7 +3304,9 @@ cecile.co.jp##.show-ads
 karzusp.net##.amazon-gift
 karzusp.net##.popular-book
 ||doujin-assets.dmm.co.jp^$domain=skebetter.com
-skebetter.com##.mt-2 > div.h-24.md\:h-48.p-1
+skebetter.com##.h-16.md\:h-24.p-1
+skebetter.com##.h-24.md\:h-48.p-1
+skebetter.com##.max-w-2xl.sm\:py-12.sm\:px-6.lg\:max-w-7xl
 skebetter.com##.mt-2 > div.max-w-2xl.sm\:py-12.sm\:px-6
 skebetter.com##.mt-2 > div.mb-3.md\:h-24.h-16
 skebetter.com##a[href^="https://al.dmm.co.jp/"][target="_blank"]
@@ -4222,6 +4230,9 @@ hrs-game.main.jp,main-hrs-game.ssl-lolipop.jp,jishin-yogen.com##.ads_970x90
 valorantnews.jp##.header-cls
 valorantnews.jp###amgatti_sk-2
 monayoblog.com##.kaisetsu-box2
+||denfaminicogamer.jp/wp-content/plugins/dfng-amazon-widgets/
+||denfaminicogamer.jp/wp-content/themes/dfng_news_org/js/ad-jack.js
+news.denfaminicogamer.jp##.amazon-ranking
 news.denfaminicogamer.jp##aside[id^="ad_jack"]
 news.denfaminicogamer.jp###pc_article_billboard
 wiki.famitsu.com,wiki.denfaminicogamer.jp,wiki.dengekionline.com###ad-wiki-content-lower
@@ -4546,7 +4557,7 @@ adultcomic.dbsearch.net##.sph250
 moti-soku.com,xn--icktho51ho02a0dc.com##.widgetPost-top
 taxtax.hatenablog.jp##.size_b12
 news.dmm.co.jp##.area-ad
-||dmm.co.jp/litevideo/-/part/=/affi_id=$domain=av-danyu.com
+||dmm.co.jp/litevideo/-/part/=/affi_id=$domain=av-danyu.com|okinny.heypo.net
 ||av-danyu.com/img/pic_fv.
 ||av-danyu.com/img/pr_b_
 av-danyu.com##table[width="142"]
@@ -5259,8 +5270,6 @@ sukima.me##div[style="height: 310px; overflow: hidden;"]
 instagrammernews.com##div[style$="background: rgba(0, 0, 0, 0.7);z-index:99999;text-align:center;"]
 instagrammernews.com##[href^="https://www.roy-union.com/contents/ard.php"]
 loco.yahoo.co.jp###yjAdsLrec
-newswitch.jp##div[id^="JP_NS_"][style^="min-width"]
-newswitch.jp##.banner-top
 nikkan.co.jp##.pr_txt
 nfljapan.com##.pcbl.bannerlist
 nfljapan.com##aside > .banner
@@ -5676,6 +5685,7 @@ downtownreport.net##.adSingleFV300-250
 zokugo-dict.com###goomid
 zokugo-dict.com###shop td
 zokugo-dict.com##.tuhantitle
+privatter.net###right div[align="center"] > table[border="0"]
 privatter.net##p.“hidden-print”
 privatter.net##a[href="/adcookie.php"]
 nurse-senka.jp###side > div.inline-block
@@ -7164,6 +7174,8 @@ gtoys.blog.fc2.com###adright
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/140718
+@@||hbb.afl.rakuten.co.jp/hgb/*%3A%2F%2Fthumbnail.$image,domain=angelfish.jp
 ! unbreak www.low-ya.com
 @@||low-ya.com/banners/$~third-party
 ! unbreak http://www.synapse.ne.jp/ads/
@@ -7388,9 +7400,8 @@ eromanga-school.com#@#.related-ad-area
 @@||affiliate.dtiserv.com/image/$domain=xn--eckveb0l002pve5b.com
 ! doesn't trigger anti-adb, exception made for privacy
 @@||vippers.jp/settings/ad.js
-! https://github.com/AdguardTeam/AdguardFilters/issues/140718
 ! https://github.com/uBlockOrigin/uAssets/issues/9693
-@@||hbb.afl.rakuten.co.jp/hgb/*%3A%2F%2Fthumbnail.$image,domain=blog.livedoor.jp|angelfish.jp
+@@||hbb.afl.rakuten.co.jp/hgb/*%3A%2F%2Fthumbnail.*%3D128x128$image,domain=blog.livedoor.jp
 ! potentially useful
 komachi.yomiuri.co.jp#@#._popIn_recommend_article_ad_reserved
 ! fix Topics on news.ameba.jp,ameblo.jp
