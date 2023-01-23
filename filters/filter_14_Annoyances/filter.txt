@@ -12930,6 +12930,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/140686
+@@||cdn.privacy-mgmt.com/*businessinsider.com$domain=businessinsider.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140777
 @@||sw-i.de/typo3conf/ext/epl_site/Resources/Public/js/lib/cookieconsent.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/137724
@@ -19398,6 +19400,9 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+awaliwa.com##.activity-wrap
+boldsky.com##.commentsToolTip
+boldsky.com##body > a[href="#"][style^="position: fixed; display: flex;"]
 developernation.net#$#div[aria-describedby="simple-modal-description"] { display: none !important; }
 developernation.net#$#body { overflow: auto !important; }
 developernation.net#?#header[class] > div > div[class^="jss"]:has(> svg[class^="jss"])
@@ -20904,7 +20909,6 @@ sddhelp.ru##.modal--discount
 tgju.org###popup-layer-container
 lifestyle.livemint.com##div[class^="newsletter"]
 reopen.europa.eu##.ecl-language-list
-filmibeat.com###oiNotification
 coursed.co##.ht-notification-section
 online-audio-converter.com,online-video-cutter.com,video-converter.com,convert.io,extract.me,online-voice-recorder.com,audio-joiner.com,pdf.io,webcamera.io,mp3cut.net,123apps.com###allapps-extension-popup
 google.*###google-hats-survey
@@ -26203,7 +26207,7 @@ vc.ru,dtf.ru##.push_offer
 evidea.com###pa-push-notification-subscription-overlay
 lenta.ru##.js-custom-push-notifications
 goodreturns.in,oneindia.com##.notf-overlay
-goodreturns.in,oneindia.com###oiNotification
+boldsky.com,filmibeat.com,goodreturns.in,oneindia.com###oiNotification
 storia.me##.web-push
 spletnik.ru##.push-wrap
 turkuvazradyolar.com##.notBar
@@ -33801,6 +33805,8 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~xltrax.ee,~hitta.se,~mail.ru,~v7player.wostreaming.net,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+businessinsider.com#$#.in-app-banner { display: none !important; }
+businessinsider.com#$#body { overflow: auto !important; }
 polityka.pl##.cg_cm_app_banner
 meetup.com##div[class="rounded-t-3xl sm:hidden bg-white rounded-t-lg shadow-lg px-7 pt-9 relative z-50 w-full max-h-full d1lccfry"]
 63.ru###record-header > div.OSZas
@@ -34067,6 +34073,8 @@ instagram.com#?#div[style*="opacity"] > div > div[class]:has(> div[class] > div[
 !
 ! End: Instagram.com
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/140679
+||geo.dailymotion.com/libs/player/$domain=boldsky.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140528
 cnbc.com#$#.UniversalVideoPlayer-videoContainer { position: absolute !important; }
 cnbc.com##.UniversalVideoPlayer-videoContainer.customControls #jw-container
@@ -34369,7 +34377,7 @@ roomie.jp,gizmodo.jp##fw-storyblock
 ||fireworkapi1.com/embed/v2/playlists/5m1wZ5/feeds?page_size=10
 ||fireworkapi1.com/embed/v2/channels/whats_trending
 ||fireworkapi.com/embed/v2/publisher_clients/
-||fireworkapi1.com^$domain=jj-jj.net|mensnonno.jp|olive-hitomawashi.com|gizmodo.jp|final-inc.com|roomie.jp|gendai.media|as-web.jp
+||fireworkapi1.com^$domain=jj-jj.net|mensnonno.jp|olive-hitomawashi.com|gizmodo.jp|final-inc.com|roomie.jp|gendai.media|as-web.jp|boldsky.com
 olive-hitomawashi.com##.ly_main_inner[style^="margin-top: 50px; "]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/109710
 sunnylife.tw##.bottom-side-menu > li > a:not([title="GOTOP"])
@@ -42228,6 +42236,7 @@ blog.livedoor.jp##div[class^="footrss"]
 blog.livedoor.jp##div[class^="shitarss_"]
 blog.livedoor.jp##div[id^="shitarss_title_"]
 !
+oniyomediary.com###footer-rss
 suzusoku.blog.jp###lite_link
 gameinn.jp##.p-linkList
 moyugenn.youblog.jp##.main-column-inner > div[align="center"]
