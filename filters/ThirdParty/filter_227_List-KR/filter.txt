@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0122.0
+! OriginalVersion: 2023.0123.1
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -366,9 +366,9 @@
 ##iframe[src*="//www.mediacategory.com/servlet/"]
 ##div[id^="targetpushAd_"]
 !#if (adguard_ext_android_cb || adguard_app_ios)
-m.humoruniv.com##span[style*="font-weight:"] div ~ *[id] div[class*=" "][style*="text-align:"]
-m.humoruniv.com###read div[id][onclick]:not([style]) > table
-m.humoruniv.com##[id][class] > div[class]:not([class*=" "]) > div[class]:not([class*=" "]) table[id]
+m.humoruniv.com##span[style*="font-weight:"] div ~ *[id] div[class*=" "][style*="border-width:"]
+m.humoruniv.com###read *[id][onclick]:not([style]) > table
+m.humoruniv.com##*[id][class] > div[class]:not([class*=" "]) > div[class]:not([class*=" "]) table[style]
 !#endif
 !#if adguard_app_windows
 funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,funbe208.com,funbe209.com,funbe210.com,funbe211.com,funbe212.com,funbe213.com,funbe214.com,funbe215.com,funbe216.com##img[src^="/images/"]
@@ -1043,6 +1043,7 @@ funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,fu
 !
 ! DOMAIN-REFRESHER: START
 !
+/^https:\/\/manatoki[0-9]+\.net\/tokinbtoki\//
 /^https:\/\/ohli24\.[a-z]+\/img\/[0-9]{4}\/[A-z]+\.[a-z]{3}$/
 /^https:\/\/[a-z0-9\.]*torrentdia[0-9]+\.com\/data\/to_list\//
 ||ifh.cc^$domain=tkr177.com|tkr178.com|tkr179.com|tkr180.com|tkr181.com|tkr182.com|tkr183.com|tkr184.com|tkr185.com|tkr186.com|tkr187.com|tkr188.com
@@ -1150,7 +1151,6 @@ funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,fu
 /^https:\/\/[0-9a-z\.]+\.blogspot\.com\//$domain=blacktoon199.com|blacktoon200.com|blacktoon201.com|blacktoon202.com|blacktoon203.com|blacktoon204.com|blacktoon205.com|blacktoon206.com|blacktoon207.com|blacktoon208.com|blacktoon209.com|blacktoon210.com
 /^https:\/\/blacktoon[0-9]+\.com\/upload\/[0-9]{4}\/[0-9]{4}\/[0-9]{21}/
 /^https:\/\/newtoki[0-9]+\.com\/tokinbtoki\/[0-9]{2,}/
-/^https:\/\/manatoki[0-9]+\.net\/tokinbtoki\/[0-9]{3,}/
 ||toonkor*.com/images/*.gif
 ||wwwimageup.angle777899.com/other/atoona/
 !
@@ -2567,7 +2567,7 @@ blacktoon199.com,blacktoon200.com,blacktoon201.com,blacktoon202.com,blacktoon203
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet('abort-current-inline-script', 'popMagic.init')
 !
-m.humoruniv.com#%#//scriptlet('abort-current-inline-script', '$.prototype.html', '/\/images\/[A-z0-9-_]+\.jpg/')
+m.humoruniv.com#%#//scriptlet('abort-current-inline-script', '$.prototype.html', '/\/images\/[A-z0-9-_]+\.(jpg|gif)/')
 m.humoruniv.com#%#//scriptlet('prevent-setTimeout', '/[A-z0-9_]+\(ch[0-9]+_[A-z0-9]+\)/')
 sbs.co.kr#%#//scriptlet('set-constant', 'player.renderAdSequence', 'undefined')
 domin.co.kr#%#//scriptlet('set-constant', 'bannerpop.popup', 'noopFunc')
