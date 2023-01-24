@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0123.2
+! OriginalVersion: 2023.0124.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -365,11 +365,6 @@
 ##ins.kakao_ad_area
 ##iframe[src*="//www.mediacategory.com/servlet/"]
 ##div[id^="targetpushAd_"]
-!#if (adguard_ext_android_cb || adguard_app_ios)
-m.humoruniv.com##span[style*="font-weight:"] div ~ *[id] div[class*=" "][style*="border-width:"]
-m.humoruniv.com###read *[id][onclick]:not([style]) > table
-m.humoruniv.com##*[id][class] > div[class]:not([class*=" "]) > div[class]:not([class*=" "]) table[style]
-!#endif
 !#if adguard_app_windows
 funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,funbe208.com,funbe209.com,funbe210.com,funbe211.com,funbe212.com,funbe213.com,funbe214.com,funbe215.com,funbe216.com##img[src^="/images/"]
 !#endif
@@ -406,6 +401,9 @@ funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,fu
 /data/banner.json?
 /ad-manager.min.js
 !
+||thewordcracker.com/wp-content/uploads/*/maintenance$image
+||thewordcracker.com/wp-content/uploads/*/navercafe.webp
+||thewordcracker.com/wp-content/uploads/*/BH_D.jpg
 ||ifh.cc^$domain=m-sooriya.tistory.com
 ||wjdqhzld.com/wp-content/plugins/advanced-ads-pro/
 ||m-economynews.com/data/banner/
@@ -1217,6 +1215,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+thewordcracker.com##.et_bloom_popup
 wjdqhzld.com##div[id^="wjdqh"]
 mw.wemakeprice.com##div[data-bottom-banner]
 mw.wemakeprice.com##div[data-list-wrapper="ad"]
