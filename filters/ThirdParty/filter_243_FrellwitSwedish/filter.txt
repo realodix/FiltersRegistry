@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-01-24 20:57:15 CET
+! Last modified: 2023-01-25 10:00:00 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -167,6 +167,7 @@ ehandel.se##.aside-list--heading:has-text(/^sponsra/i):upward(.aside-list)
 ehandel.se##.code-block:has-text(/annons/i)
 ehandelstips.se##[href*="/author/sponsradeartiklar/"]:upward(li, article)
 ekonominyheter.se##a[href*="casino"]:upward(.td-fix-index)
+elinstallatoren.se#$#.mediaconnect-paywall { margin-top:70px!important }
 elinstallatoren.se,fof.se,fokus.se,spraktidningen.se#$#.mediaconnect-protected-content, .mediaconnect-protected-content--show { max-height: unset !important; overflow: unset !important; }
 elinstallatoren.se,fof.se,fokus.se,spraktidningen.se#$#.mediaconnect-protected-content::after { background: unset !important; }
 elle.se##section.c-native_banner:upward(2)
@@ -696,6 +697,7 @@ home2tiny.se#%#//scriptlet('ubo-aeld.js', '/mousewheel|DOMMouseScroll/')
 ##a#top-banner.banner-holder
 ##a.adv-link
 ##a.card.-sponsored
+##a.is-native-ad
 ##a[data-bid="1"][href*="/linkout"]
 ##a[href$=".se/go/betsafe"]
 ##a[href*="/annonsartiklar/"]
@@ -886,6 +888,7 @@ home2tiny.se#%#//scriptlet('ubo-aeld.js', '/mousewheel|DOMMouseScroll/')
 .se/Banners/
 .se/bildbank/banners/
 .se/bilder/banners/
+.se/blogcounter/image?
 .se/client-views/cookieinfo?$xmlhttprequest
 .se/components/cookiebar$script
 .se/cookiesamtykke$script
@@ -2215,6 +2218,7 @@ tidningen.se##.sidebar .widget_widget_code
 tidningenbalans.se##div[style*="z-index: 999; background-color: rgba(0, 0, 0, 0.5)"], .bg-grey.hideOnPrint, .bg-adYellow
 tidningenglobal.se##.elementor-image a[target="_blank"], .revive-box
 tidningenridsport.se##.subscribe_now_popup, .type-native, #captive
+tina.se##div[data-ai]
 tittapavideon.se##.adv
 totallyorebro.se,totallystockholm.se##div.tot-content-preview-container-small[style*="border-top:4px solid #ffb200;"], .content-overlay--black, a[href*="casino"], a[href*="/sponsrat/"], a[href*="/sponsrat/"] + p.tot-content-preview--meta, .newaddiv
 tradera.com##ads-takeover
@@ -2808,6 +2812,7 @@ zeromagazine.nu##div[id^="ads"]
 ||sa.svenskalag.se/*/__tm.gif
 ||salesiq.zoho.com/widget$domain=seodesign.se
 ||salesmanago.pl/api/popup$domain=land.se
+||salesmanago.pl/api/push/notification$domain=aikfotboll.se
 ||sannsyn.com^$third-party
 ||scandicpartners.se^$third-party
 ||schibsted.com/privacy-notifier
