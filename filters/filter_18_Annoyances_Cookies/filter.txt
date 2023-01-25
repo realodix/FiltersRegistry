@@ -12598,7 +12598,7 @@ dlr.de,clickbaits.de,gesundheitswissen.de#%#//scriptlet('remove-class', 'ccm-blo
 filmweb.pl#%#//scriptlet('remove-class', 'rodo', 'body.rodo')
 pharmazeutische-zeitung.de#%#document.cookie="erlaubte_cookies=1; path=/;";
 klaviano.com#%#document.cookie="klaviano_police=1; path=/;";
-oyunskor.com#%#AG_onLoad(function() { setTimeout(function() { var el = document.querySelector('button[class*="intro_acceptAll-"]'); if(el) { el.click(); } }, 600); });
+oyunskor.com#%#//scriptlet('set-cookie', 'OptanonAlertBoxClosed', 'true')
 alpro.com#%#document.cookie='cookieConsent={"statistical":0,"personalization":0,"targeting":0}; path=/;';
 al.to,x-kom.pl#%#(function(){if(!document.cookie.includes("trackingPermissionConsentsValue=")){var a=encodeURIComponent('"cookies_analytics":false,"cookies_personalization":false,"cookies_advertisement":false');document.cookie="trackingPermissionConsentsValue={"+a+"}; path=/;"}})();
 ffm.to#%#document.cookie="allowTracking=false; path=/;"; document.cookie="trackingSettings={%22ads%22:false%2C%22performance%22:false}; path=/;";
@@ -12945,6 +12945,11 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/140903
+!#if (adguard_app_ios || adguard_ext_android_cb || ext_ublock)
+oyunskor.com#@##onetrust-consent-sdk
+@@||cookie-cdn.cookiepro.com^$domain=oyunskor.com
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140849
 studentenwerk-dresden.de#@##cookieconsent
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140826
@@ -12975,7 +12980,7 @@ image-line.com#@#.cookie-consent-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139120
 @@||cdn.privacy-mgmt.com^$domain=kylie.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139313
-!#if (adguard_ext_firefox || adguard_ext_opera adguard_ext_android_cb)
+!#if (adguard_ext_firefox || adguard_ext_opera || adguard_ext_android_cb)
 trendingtopics.eu#@#.cookie-modal
 trendingtopics.eu#@#.cookie-notice:not(body):not(html)
 !#endif

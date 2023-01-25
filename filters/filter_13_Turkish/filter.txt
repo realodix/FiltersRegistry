@@ -80,6 +80,9 @@
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
 !
+||glizauvo.net^
+||yrstwbyl.xyz^
+||gaiphaud.xyz^
 ||dzypro.xyz^
 ://sportframe*.cfd^$third-party
 ||storj.cloud^
@@ -382,6 +385,7 @@
 ! Bad: ||legitwebsite.com^$third-party (should be in adservers.txt)
 !
 !
+||r.yabancidizi.in^
 ||ads.dygdigital.com^
 ||ads.igfhaber.com^
 ||ad.hepsiburada.com^
@@ -461,6 +465,8 @@ zamaninvarken.com,kredi.biz.tr,kriptoradar.com,morlevha.com,bakimlikadin.net,kor
 iyibeslenme.net,teknop.net,kirtkirtla.com,buneymis.net,ozgunbilgi.com#%#//scriptlet("set-constant", "adblock.check", "noopFunc")
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/140904
+@@||hb.improvedigital.com/pbw/headerlift.min.js$domain=oyungemisi.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140866
 biasyadizi.com#$#.ads_block_block.ads.reklam.advertisement.banner.gizli { display: block !important; }
 !#if (adguard_app_ios || adguard_ext_android_cb)
@@ -991,6 +997,7 @@ dizipal503.com,dizipal504.com,dizipal505.com,dizipal506.com,dizipal507.com,dizip
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
 !
+evrimagaci.org#?##feed-contents > div.cbox > div.infotop span.left:contains(Reklam):upward(div.cbox)
 cimri.com#?##cimri-product ~ section:has(> div[id^="adslot-"])
 jsh2m5z.cloud,ad-manager.cloud#?##oframeplayerjs > pjsdiv:has(> pjsdiv[style] > pjsdiv:contains(FREESPİN))
 trwebtoon.com#?#.right-wrapper > div.grid-margin:has(> div.card > div.card-header:contains(Sponsor))
@@ -2443,7 +2450,7 @@ bursa.com,sozcu.com.tr,megahaber27.com,yemektarifleri.org,lifebursa.com,mshowto.
 !
 ! For URL shorteners or simple sites with frequently changed ad servers.
 ! Incorrectly blocked domains can be excluded using regex(synchronize this regexp in all filters)
-/^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com)).*$/$third-party,script,domain=erotik-film.org|pollos.cyou|dizigom1.com|fullindirsene.net
+/^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com)).*$/$third-party,script,domain=erotik-film.org|pollos.cyou|dizigom1.com|fullindirsene.net|ehliyetsinavsorulari.org
 !
 ! Turkish digital magazines
 /service/advertchannels?$domain=ozgunkocaeli.com.tr|urfanatik.com|dirilispostasi.com|turkuazgazetesi.net|yenialanya.com|bugunkocaeli.com.tr|cagdaskocaeli.com.tr|mansetaydin.com|enkocaeli.com|kocaelikoz.com|kocaelibarisgazetesi.com|seskocaeli.com|sigortahaber.com|gaziantepgunes.com
@@ -2451,8 +2458,12 @@ bursa.com,sozcu.com.tr,megahaber27.com,yemektarifleri.org,lifebursa.com,mshowto.
 /service/advertchannels?$xmlhttprequest,redirect=nooptext,domain=mardinhaber.com.tr|gidahatti.com|bolugundem.com
 dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdaskocaeli.com.tr,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.us
 !
+evrimagaci.org###feed-contents > div[style="z-index:3;"]
+oyunskor.com##body .advert.mpu
+oyungemisi.com##.slot-container
+||yabancidizi.co/video/*.gif
 fullhdfilmizle.vip##.fbnx
-||cdn.doccloud.me/rrk/
+||doccloud.me/rrk/
 ||hdfilmcanavari.org/hm/hm.php
 fullhdfilmizle5.com##div[class^="r_header_"] > a
 ||fullhdfilmmodu.live/flam/fix/rek.mp4
