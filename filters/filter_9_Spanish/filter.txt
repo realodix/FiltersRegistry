@@ -283,6 +283,11 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/140890
+pobre.wtf#%#//scriptlet('set-constant', 'adBlockerActive', 'false')
+pobre.wtf#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=pobre.wtf
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139850
 ||suaads.com/peel1-ad-300x250.js
 suaurl.com#%#//scriptlet('prevent-setInterval', 'adblock')
@@ -1951,6 +1956,8 @@ maisgasolina.com#?##main [id$="Block"][-ext-has='.adsbygoogle']
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/140890
+pobre.wtf#%#//scriptlet('set-constant', 'ads', 'false')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139850
 suaurl.com#%#//scriptlet('set-constant', 'acdl', 'undefined')
 suaurl.com#%#//scriptlet('prevent-setTimeout', 'window.location.href')
@@ -2547,6 +2554,7 @@ bebe.abril.com.br,tribunapr.uol.com.br,diariodonordeste.verdesmares.com.br,sbt.c
 ! ##.banner
 elinformador.com.co,cronista.com,rionegro.com.ar,diariodecuyo.com.ar,voydeviaje.com.ar,guarda14.com,viapais.com.ar,agazeta.com.br,eleconomista.com.mx,metropolitanafm.com.br,tycsports.com,elespectador.com,bnews.com.br,migalhas.com.br,losandes.com.ar,lavoz.com.ar,mundo.sputniknews.com,omelete.com.br,lapoliticaonline.com.ar,mundotecnologias.com,valenciaplaza.com,veneapp.com,dalealbo.cl,globo.com,defesanet.com.br,mibrujula.com,lyon.kim,26noticias.com.ar,auniao.com,clickpb.com.br,emagister.com,lanacion.com.ar,parana-online.com.br,r7.com,toxico-pc.com,uol.com.br##.banner
 !
+||cloud.mail.ru/weblink/view/*?adVideo$media,redirect=noopmp3-0.1s,domain=pobre.wtf
 elpilon.com.co##div[style^="width: 300px;"][style*="height: 250px"]
 ||eluniversal.com.co/mcm/publicidad/dfp-sb/publicidad_internas_*.js
 eluniversal.com.co###tg-adhesion
