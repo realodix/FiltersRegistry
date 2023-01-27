@@ -2136,8 +2136,8 @@ digitalproduction.com,eventim-light.com,tirendo.de,urlaubstracker.de,hasepost.de
 hyser.com.ua,ebrarbilgisayar.com,tvf.com.tr,ukrainianwall.com,hvylya.net,politeka.net,znaj.ua,cointelegraph.com,tupras.com.tr,hesapkurdu.com,ku.dk,auto-motor-i-sport.pl,menshealth.pl,motocykl-online.pl,runners-world.pl,womenshealth.pl##.privacy-policy
 !
 ! For the case if the scroll page is blocked
-joabet.fr,rtl.lu,xataka.com,lejdd.fr,filmweb.pl,speedy.fr,manomano.fr,mein-mmo.de,talent-soft.com,jofogas.hu,m.rtl.be,elmundo.es,vecernji.hr,zive.cz,gamepro.de#$##didomi-host { display: none !important; }
-joabet.fr,rtl.lu,xataka.com,lejdd.fr,filmweb.pl,speedy.fr,manomano.fr,mein-mmo.de,talent-soft.com,jofogas.hu,m.rtl.be,elmundo.es,vecernji.hr,zive.cz,gamepro.de#$#html > body.didomi-popup-open { overflow: auto !important; position: unset !important; }
+marca.com,joabet.fr,rtl.lu,xataka.com,lejdd.fr,filmweb.pl,speedy.fr,manomano.fr,mein-mmo.de,talent-soft.com,jofogas.hu,m.rtl.be,elmundo.es,vecernji.hr,zive.cz,gamepro.de#$##didomi-host { display: none !important; }
+marca.com,joabet.fr,rtl.lu,xataka.com,lejdd.fr,filmweb.pl,speedy.fr,manomano.fr,mein-mmo.de,talent-soft.com,jofogas.hu,m.rtl.be,elmundo.es,vecernji.hr,zive.cz,gamepro.de#$#html > body.didomi-popup-open { overflow: auto !important; position: unset !important; }
 ! realCookieBanner
 audiovision.de,ratgeber-umschulung.de,viel-unterwegs.de,ahorn-camp.de,mmo-sankar.de,der-windows-papst.de#%#//scriptlet("set-constant", "realCookieBanner", "undefined")
 ! viel-unterwegs.de,ahorn-camp.de,mmo-sankar.de,der-windows-papst.de#@%#//scriptlet("set-constant", "realCookieBanner", "undefined")
@@ -2200,6 +2200,7 @@ eatsmarter.de,inside-digital.de,hs.fi,vrt.be,manager-magazin.de,whats-on-netflix
 !
 !
 !
+skgelios.ru##.polit-disclaimer
 mednavi.pl##.CookiesNotice
 hotcourses.ru#$##ckieOvrlayDiv { display: none !important; }
 hotcourses.ru#$##cookiePopUpId { display: none !important; }
@@ -9345,7 +9346,7 @@ biedronka.pl###cookiepopupdiv
 slidedog.com,finanztreff.de###cookiereminder
 lamarinaresort.com###cookies-advice
 roxy-germany.de,quiksilver.de,billabong.de,uk.gilera.com###cookies-disclaimer
-hitpaw.com,tenorshare.com,miuios.cz,ascii-code.com,htmlsymbols.xyz,dietotenhosen.de,cambio16.com,hacker-pschorr.com,gamersglobal.de,spinninrecords.com,operamusica.com,splashdamage.com###cookies-eu-banner
+gowork.pl,hitpaw.com,tenorshare.com,miuios.cz,ascii-code.com,htmlsymbols.xyz,dietotenhosen.de,cambio16.com,hacker-pschorr.com,gamersglobal.de,spinninrecords.com,operamusica.com,splashdamage.com###cookies-eu-banner
 greedfall.com###cookies-interface
 montpellierhandball.com###cookies-messages-wrapper
 dziennikprawny.pl,sklep.hyperbook.pl###cookies-wiadomosc-box
@@ -9595,7 +9596,7 @@ dfiles.ru##.cookie_popup
 mrskin.com##.cookie_usage
 kla.tv##.cookie_warn_box
 nexttechnology.io,lacalut.ru,novatours.ee,empik.com##.cookies-accept
-lexception.com,mtb.ua,kiehls.ru,privetmir.ru,eventvods.com,fendi.com##.cookies-disclaimer
+skgelios.ru,lexception.com,mtb.ua,kiehls.ru,privetmir.ru,eventvods.com,fendi.com##.cookies-disclaimer
 komputerswiat.pl##.cookies-eu
 denik.cz##.cookies-lista
 dedeman.ro##.cookies-notification-bar
@@ -12872,6 +12873,9 @@ topics.nl#%#AG_onLoad(function() { setTimeout(function() {if(document.getElement
 trouw.nl#%#AG_onLoad(function() { var check = document.getElementsByClassName('site-tr bg-blur has-shadow')[0]; if (check){document.cookie = "nl_cookiewall_version=1"; location.reload();}; });
 volkskrant.nl#%#AG_onLoad(function() { setTimeout(function() {if(document.getElementsByClassName("modal-overlay")[0].isvisible = true){document.getElementsByClassName("button button--accept")[0].click();}}, 300); });
 ziekenhuis.nl#%#AG_onLoad(function() { setTimeout(function() {var check = document.getElementsByClassName('cookiewall')[0]; if (check){document.cookie = "acceptcookies=true"; location.reload();}; }, 300); });
+! TODO: remove when `trusted-click-element` will be available in all AdGuard release verions
+! https://github.com/AdguardTeam/AdguardFilters/issues/141173
+brico.be#%#AG_onLoad(function(){if(window.location.href.includes("brico.be")){var g=new MutationObserver(function(){var b=document.querySelector('button[data-gtm-id="consent_marketing"]');b&&b.click();});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1E4)}});
 ! TODO: remove when `trusted-set-local-storage-item` will be available in all AdGuard release verions
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141023
 szkolenia.pfp.com.pl#%#if (typeof localStorage != 'undefined' && localStorage.setItem) { localStorage.setItem('persist:cookies', '{"isAccepted":"true"}'); };
