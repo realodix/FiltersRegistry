@@ -13009,8 +13009,9 @@ image-line.com#@#.cookie-consent-banner
 @@||consent.cookiefirst.com^$domain=lsm.lv
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140083
 @@||clickio.mgr.consensu.org^$domain=ilfattoquotidiano.it
+! https://github.com/AdguardTeam/AdguardFilters/issues/141451
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139923
-@@||leroymerlin.ro/build/assetic/core/common/js/cookie-policy-acceptance.js
+@@||leroymerlin.ro/build/assetic/core/common/js/cookie-policy-acceptance*.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139952
 @@||iubenda.com^$script,xmlhttprequest,domain=tecnologia.libero.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139870
@@ -16721,6 +16722,7 @@ w3resource.com#@#.ad-placement
 ! SECTION: Anti-adblock - Regular rules
 ! Do not forget about '!#safari_cb_affinity' section for exclusions
 !
+examtadka.com###modalpop
 websearch.rakuten.co.jp###adblocker-warning-popup
 hellomagazine.com#$#a.ad-slot.ad-mpu[href^="http://ad.doubleclick.net/"][style*="left: -10000px !important; top: -1000px !important;"] { display: block !important; }
 hellomagazine.com#$#.afs_ads.ad-placement[style="width: 1px; height: 1px; position: absolute; background: transparent;"] { display: block !important; }
@@ -19476,6 +19478,10 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+stories.starbucks.co.jp##.story-stick--sticky
+womenshealthmag.com###recommended-modal
+spojoba.com##.line-nav
+times.abema.tv##.js-nowonair-fixed
 lovepik.com##.anniversary_detail
 mygreatlearning.com###gla-login-exit-popup-variant
 milenio.com#%#//scriptlet('prevent-addEventListener', 'mouseleave')
@@ -25304,6 +25310,7 @@ easy-deutsch.de#%#AG_onLoad(function() { setTimeout(function() { var el = docume
 !
 ! SECTION: Popups - Mobile sites only
 !#if (adguard_app_android || adguard_app_ios || adguard_ext_android_cb || ext_ublock)
+mama.chintaistyle.jp##.footer-fixed-banner
 cmoa.jp##.cam_term_area
 4years.asahi.com##.app_dl_banner
 partitionwizard.jp##.cooperation-amazon-wrap
@@ -33946,6 +33953,7 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~xltrax.ee,~hitta.se,~mail.ru,~v7player.wostreaming.net,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+symbolab.com##.solver_app
 mannheimer-morgen.de###midcol-banner
 realestate.yahoo.co.jp##.textLinkArea_apliIcon
 tradingview.com##div[class^="js-container-"][class$="-notification"]
@@ -38792,6 +38800,11 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+trilltrill.jp##.articleDetail-PVBoostLink
+trilltrill.jp##.articleDetail-PVBoostLink_Item
+trilltrill.jp##.articleDetail-PVBoostLink_Header
+sexcelebrity.net##.sponsor
+spojoba.com###ad_1
 emailnator.com###mailList
 neilpatel.com##.widget-analyzer
 ||h1.rmr.rocks/auto/44/82/89/14.png
@@ -40454,8 +40467,9 @@ vp.rambler.ru#%#//scriptlet('set-constant', 'Object.prototype.minPlayingVisibleH
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139256
 fikper.com#%#//scriptlet("adjust-setInterval", "downloadToken", "*", "0.02")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139194
-djxmaza.in#%#//scriptlet('remove-class', 'disabled', '#wait1button')
-djxmaza.in#%#//scriptlet('remove-attr', 'disabled', '#wait1button')
+! https://github.com/AdguardTeam/AdguardFilters/issues/141410
+examtadka.com,djxmaza.in#%#//scriptlet('remove-class', 'disabled', '#wait1button')
+examtadka.com,djxmaza.in#%#//scriptlet('remove-attr', 'disabled', '#wait1button')
 ! https://github.com/uBlockOrigin/uAssets/issues/16166
 adzz.in,proappapk.com#%#//scriptlet("remove-attr", "disabled", "#gotolink")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/137292
@@ -42423,6 +42437,11 @@ blog.livedoor.jp##div[class^="footrss"]
 blog.livedoor.jp##div[class^="shitarss_"]
 blog.livedoor.jp##div[id^="shitarss_title_"]
 !
+||anicobin.ldblog.jp^$subdocument,~third-party
+anicobin.ldblog.jp#$#.rss-wrapper2 { height: 0 !important; background: none !important; padding-bottom: 0 !important; }
+anicobin.ldblog.jp#?#.related-wadai:contains(新着ニュース)
+anicobin.ldblog.jp##.rss-column-middle2
+pioncoo.net##.rssBlock
 hiroburo.com##div[style="margin:0px;padding:0px;line-height:1.3;width:780px;"]
 ||slotlog.blog.jp/rss_top2.html
 ||kateich.net/headline.html
