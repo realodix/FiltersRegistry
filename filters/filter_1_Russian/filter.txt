@@ -6239,8 +6239,6 @@ livejournal.com#%#//scriptlet("set-constant", "begun_new_callbacks", "undefined"
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/126380
-online.anidub.com#?#.wrap > div.wrap-main:has(div:not([class]))
 ! adme.media
 ! ads in the recommended feed - articles
 adme.media#?#div[data-test-id="article-bottom-recommended"] > div > div > div:not(:has(> a[data-test-id="logo-link"]))
@@ -7517,6 +7515,9 @@ tracker.0day.kiev.ua#?#td[valign="top"] > table[style^="margin-bottom: 20px"][-e
 !
 ! START: Mail.Ru
 !
+! Ad on the main page
+mail.ru#?#div[slot="main-column"] > div:has(> svg[width="100%"][height="90"])
+!
 cloud.mail.ru#?#div[class^="Public-desktop__rightCol"]:has(> section[class^="Rightinfo__root"] > div[class^="Rightinfo_"] > h3[class^="Rightinfo_"]:contains(Реклама))
 cloud.mail.ru#$?#.w-public__content  > div.b-layout > div.b-layout__col_1_2 { margin-right: auto !important; }
 !
@@ -8706,6 +8707,10 @@ disk.yandex.*#%#//scriptlet('remove-class', 'has-fullscreen-banner','.public__ro
 !------- CSS -----------
 !-----------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/141549
+kinometro.ru#$#body > div.wrapper { background: none !important; padding-top: 0 !important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/141543
+s13.ru#$#body > div.wrapper { top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140251
 kinobusiness.com#$#.wrapper > div.site { margin-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139590
@@ -11207,6 +11212,12 @@ progorod76.ru,riamobalashiha.ru,sobesednik.com,vz.ru,autoparus.by,ctv.by,hightec
 !
 !
 !
+igromania.ru##.headerline_outer > a.strunmenu
+||kinometro.ru/res/pic/brand/
+kinometro.ru##section[id^="banner-"]
+cxem.net##a[href^="https://www.pcbonline.com/"] > img
+cxem.net##a[href^="https://www.promelec.ru/"] > img
+cxem.net##div[id^="ban_pod"]
 ||pidru4niki.com/images/zsu_help.png
 mayaksbor.ru##.module__block_rectangle
 mayaksbor.ru##div[class*="adfox"]
@@ -21741,7 +21752,6 @@ vost.pw,animevost.am,smotret-anime-365.ru,animevost.site,animevost.online,animev
 ||stats.anidub.life/vast.php$xmlhttprequest,redirect=noopvast-3.0
 anime.anidub.life,online.anidub.com##div[style*="width: 240px"][style*="height: 400px"]
 anime.anidub.life,online.anidub.com##.plyr__ads
-anime.anidub.life,online.anidub.com##.wrap > .sticky-wrap + div:not([style]):not([class="popular"])
 anime.anidub.life,online.anidub.com##div[style^="width: 240px;height: 400px;"]
 !
 4pda.to##a[href*="//4pda.to/honor/?utm_"]
@@ -22180,7 +22190,6 @@ gamer-info.com###games-db-main-listblock > a[class="gmv2-it"] + div[class]
 !
 !
 ! START: mail.ru
-mail.ru##div[slot="main-column"] > div.tgb-wrapper
 mail.ru##div[data-testid="grid-header"] > div.toolbar
 !
 !!! !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)

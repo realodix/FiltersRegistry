@@ -1744,6 +1744,8 @@ teleboy.ch#@#.adWrapper
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/141539
+mobile.de#?##root > div > div[class] > div[class]:has(> div[id*="_WALL"])
 ! pcgames.de - ad in ticker
 pcgames.de#?#.articleTicker > .item:has(> .itemHeadline > .titleFrame > a > h3 > .itemTitle:contains([Werbung]))
 ! blickpunktfilm.de - left-over at top
@@ -2824,6 +2826,9 @@ menshealth.de#%#function google_ad_request_done() {};
 !------- CSS fixes --------------------!
 !--------------------------------------!
 !
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/141539
+mobile.de#$##root > div > div[class] > div[class][style="display: none !important;"] + article { margin-top: 0px !important; }
 ! heise.de - big left-over at bottom
 heise.de#$#body[style*="padding-bottom"] { padding-bottom: 0px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/pull/139865
@@ -3120,6 +3125,7 @@ winfuture.de,netzwelt.de,quoka.de,farmeramania.de,bravofly.de,computerbild.de,di
 ! ##.billboard
 krautundrueben.de,motorsport-total.com,traktorpool.de,fnweb.de,laborjournal.de,tarnkappe.info,deraktionaer.tv,food-tiger.de,morgenweb.de##.billboard
 !
+mobile.de##div[data-label="Anzeige"]
 mbpassion.de##.sidebar-wrap.sticky-sb
 petbook.de##div[class^="affilitron"]
 petbook.de##.widget-fel

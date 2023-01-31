@@ -97,6 +97,10 @@ instagram.com#?#div[style*="opacity"] > div > div[class]:has(> div[class] > div[
 !
 ! End: Instagram.com
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/141549
+kinometro.ru##.newsend-sots
+! https://github.com/AdguardTeam/AdguardFilters/issues/141544
+koko.by##.social
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141401
 booklog.jp##footer ~ div[style^="position:fixed;"][style*="z-index:"] > a[href^="/hon/info/booklogdebut-campaign"] > img
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141178
@@ -3160,6 +3164,11 @@ rasp.yandex.*##.TravelHotelsBanner
 @@||yastatic.net/daas/atom.js$domain=mail.yandex.by|mail.yandex.kz|mail.yandex.ru|mail.yandex.com|mail.yandex.com.tr
 !-----------------------------------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/141546
+!+ NOT_PLATFORM(windows, mac, android)
+liga.net##a[href="https://www.liga.net/adfree"]
+!+ PLATFORM(windows, mac, android)
+liga.net#$#a[href="https://www.liga.net/adfree"] { position: absolute !important; left: -9999px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140450
 cyclismactu.net##div[id^="stop_pub_"]
 ! https://github.com/AdguardTeam/AdguardFilters/issues/139532
@@ -4673,6 +4682,8 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+ixbt.com##.container__left > a.menu__part_link[title^="Реклама"]
+tonkosti.ru##.SeasonBloks
 archiproducts.com##.banner-wrapper
 daily.afisha.ru##a[class^="AfishaSidebarBanner_"]
 lurenewsr.com#?#.list-box div.list-data > p.list-cat:contains(Sponsored):upward(.list-box)
