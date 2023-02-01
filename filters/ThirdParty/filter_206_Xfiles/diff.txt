@@ -88,6 +88,10 @@ youtube.com,youtube-nocookie.com##+js(json-prune.js, [].playerResponse.adPlaceme
 youtube.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
 ! Rule "gadget.pico.tools##+js(json-prune, locked)" converted to: "gadget.pico.tools#%#//scriptlet('ubo-json-prune.js', 'locked')"
 gadget.pico.tools##+js(json-prune, locked)
+! Unable to convert rule to AdGuard syntax: aerzteblatt.de##+js(rc, restricted, div.restricted');
+aerzteblatt.de##+js(rc, restricted, div.restricted');
+! Unable to convert rule to AdGuard syntax: aerzteblatt.de##+js(rc, unsharp, div.unsharp');
+aerzteblatt.de##+js(rc, unsharp, div.unsharp');
 ! Rule "alternatives-economiques.fr##+js(ra, style, div[data-ae-poool], stay)" converted to: "alternatives-economiques.fr#%#//scriptlet('ubo-ra.js', 'style', 'div[data-ae-poool]', 'stay')"
 alternatives-economiques.fr##+js(ra, style, div[data-ae-poool], stay)
 ! Rule "ambito.com##+js(cookie-remover, TDNotesRead)" converted to: "ambito.com#%#//scriptlet('ubo-cookie-remover.js', 'TDNotesRead')"
@@ -308,8 +312,12 @@ thehindubusinessline.com##+js(set, window.isNonSubcribed, false)
 theneweuropean.co.uk##+js(ra, data-show-has-access, div[data-show-has-access])
 ! Rule "thepointmag.com##+js(cookie-remover, monthly_history)" converted to: "thepointmag.com#%#//scriptlet('ubo-cookie-remover.js', 'monthly_history')"
 thepointmag.com##+js(cookie-remover, monthly_history)
+! Rule "thequint.com##+js(ra, class, div#story-body-wrapper, stay)" converted to: "thequint.com#%#//scriptlet('ubo-ra.js', 'class', 'div#story-body-wrapper', 'stay')"
+thequint.com##+js(ra, class, div#story-body-wrapper, stay)
 ! Rule "thesaturdaypaper.com.au##+js(cookie-remover, /^/)" converted to: "thesaturdaypaper.com.au#%#//scriptlet('ubo-cookie-remover.js', '/^/')"
 thesaturdaypaper.com.au##+js(cookie-remover, /^/)
+! Rule "thetimes.co.uk##+js(ra, style, body[style], stay)" converted to: "thetimes.co.uk#%#//scriptlet('ubo-ra.js', 'style', 'body[style]', 'stay')"
+thetimes.co.uk##+js(ra, style, body[style], stay)
 ! Rule "time.com##body:style(position:relative !important)" converted to: "time.com#$#body { position:relative !important }"
 time.com##body:style(position:relative !important)
 ! Rule "bendigoadvertiser.com.au,bordermail.com.au,canberratimes.com.au,centralwesterndaily.com.au,dailyadvertiser.com.au,dailyliberal.com.au,examiner.com.au,illawarramercury.com.au,newcastleherald.com.au,northerndailyleader.com.au,standard.net.au,theadvocate.com.au,thecourier.com.au,westernadvocate.com.au##+js(rc, subscribe-truncate, .subscribe-truncate)" converted to: "bendigoadvertiser.com.au,bordermail.com.au,canberratimes.com.au,centralwesterndaily.com.au,dailyadvertiser.com.au,dailyliberal.com.au,examiner.com.au,illawarramercury.com.au,newcastleherald.com.au,northerndailyleader.com.au,standard.net.au,theadvocate.com.au,thecourier.com.au,westernadvocate.com.au#%#//scriptlet('ubo-rc.js', 'subscribe-truncate', '.subscribe-truncate')"
@@ -372,10 +380,16 @@ knack.be,kw.be,levif.be##+js(ra, class|style, html, stay)
 knack.be,levif.be##+js(ra, class, div.article-body > div)
 ! Rule "aaii.com##+js(rc, fadeout, .fadeout)" converted to: "aaii.com#%#//scriptlet('ubo-rc.js', 'fadeout', '.fadeout')"
 aaii.com##+js(rc, fadeout, .fadeout)
+! Rule "bizwest.com##+js(ra, class, div.fp-content)" converted to: "bizwest.com#%#//scriptlet('ubo-ra.js', 'class', 'div.fp-content')"
+bizwest.com##+js(ra, class, div.fp-content)
 ! Rule "cmcmarkets.com##+js(rc, activePaywall, .activePaywall)" converted to: "cmcmarkets.com#%#//scriptlet('ubo-rc.js', 'activePaywall', '.activePaywall')"
 cmcmarkets.com##+js(rc, activePaywall, .activePaywall)
+! Rule "doorbraak.be##+js(ra, style, #plus-inhoud)" converted to: "doorbraak.be#%#//scriptlet('ubo-ra.js', 'style', '#plus-inhoud')"
+doorbraak.be##+js(ra, style, #plus-inhoud)
 ! Rule "hcn.org##+js(ra, content, meta[name="UID"])" converted to: "hcn.org#%#//scriptlet('ubo-ra.js', 'content', 'meta[name="UID"]')"
 hcn.org##+js(ra, content, meta[name="UID"])
+! Rule "heraldo.es/noticias/$inline-script" converted to: "heraldo.es/noticias/$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:"
+heraldo.es/noticias/$inline-script
 ! Rule "inman.com##+js(rc, paywalled-block, .paywalled-block)" converted to: "inman.com#%#//scriptlet('ubo-rc.js', 'paywalled-block', '.paywalled-block')"
 inman.com##+js(rc, paywalled-block, .paywalled-block)
 ! Rule "inman.com##+js(ra, class, div.entry-content-inner)" converted to: "inman.com#%#//scriptlet('ubo-ra.js', 'class', 'div.entry-content-inner')"
@@ -392,10 +406,14 @@ marketnews.com##+js(ra, class, div.body-description)
 meritnation.com##+js(rc, maxHeight75px, div.exp_content.maxHeight75px)
 ! Rule "nu.nl##+js(rc, authorized-content, div.authorized-content)" converted to: "nu.nl#%#//scriptlet('ubo-rc.js', 'authorized-content', 'div.authorized-content')"
 nu.nl##+js(rc, authorized-content, div.authorized-content)
+! Rule "popbitch.com##+js(ra, class, div[class*="-premium"])" converted to: "popbitch.com#%#//scriptlet('ubo-ra.js', 'class', 'div[class*="-premium"]')"
+popbitch.com##+js(ra, class, div[class*="-premium"])
 ! Rule "scribd.com##+js(ra, class, .blurred_page)" converted to: "scribd.com#%#//scriptlet('ubo-ra.js', 'class', '.blurred_page')"
 scribd.com##+js(ra, class, .blurred_page)
 ! Rule "splainer.in##+js(rc, hide-section, .hide-section)" converted to: "splainer.in#%#//scriptlet('ubo-rc.js', 'hide-section', '.hide-section')"
 splainer.in##+js(rc, hide-section, .hide-section)
+! Rule "stateaffairs.com##+js(rc, access-restricted, body.access-restricted)" converted to: "stateaffairs.com#%#//scriptlet('ubo-rc.js', 'access-restricted', 'body.access-restricted')"
+stateaffairs.com##+js(rc, access-restricted, body.access-restricted)
 ! Rule "stylist.co.uk##+js(ra, class|style, div.paywall)" converted to: "stylist.co.uk#%#//scriptlet('ubo-ra.js', 'class|style', 'div.paywall')"
 stylist.co.uk##+js(ra, class|style, div.paywall)
 ! Rule "stylist.co.uk##+js(ra, class, div.css-tu9vsa, stay)" converted to: "stylist.co.uk#%#//scriptlet('ubo-ra.js', 'class', 'div.css-tu9vsa', 'stay')"
@@ -420,22 +438,24 @@ amp.elle.fr,challenges.fr,lopinion.fr##+js(ra, amp-access-hide, [amp-access][amp
 bienpublic.com,dna.fr,estrepublicain.fr,lalsace.fr,ledauphine.com,lejsl.com,leprogres.fr,republicain-lorrain.fr,vosgesmatin.fr##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
 ! Rule "centrepresseaveyron.fr,ladepeche.fr,lindependant.fr,midi-olympique.fr,midilibre.fr,nrpyrenees.fr,petitbleu.fr##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "centrepresseaveyron.fr,ladepeche.fr,lindependant.fr,midi-olympique.fr,midilibre.fr,nrpyrenees.fr,petitbleu.fr#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
 centrepresseaveyron.fr,ladepeche.fr,lindependant.fr,midi-olympique.fr,midilibre.fr,nrpyrenees.fr,petitbleu.fr##+js(ra, subscriptions-section, [subscriptions-section="content"])
-! Rule "adelaidenow.com.au,codesports.com.au,couriermail.com.au,dailytelegraph.com.au,heraldsun.com.au,amp.theaustralian.com.au,themercury.com.au##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "adelaidenow.com.au,codesports.com.au,couriermail.com.au,dailytelegraph.com.au,heraldsun.com.au,amp.theaustralian.com.au,themercury.com.au#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
-adelaidenow.com.au,codesports.com.au,couriermail.com.au,dailytelegraph.com.au,heraldsun.com.au,amp.theaustralian.com.au,themercury.com.au##+js(ra, subscriptions-section, [subscriptions-section="content"])
-! Rule "augsburger-allgemeine.de,muensterschezeitung.de,mz.de,westfalen-blatt.de,wn.de,haz.de,kn-online.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,ostsee-zeitung.de,volksstimme.de##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "augsburger-allgemeine.de,muensterschezeitung.de,mz.de,westfalen-blatt.de,wn.de,haz.de,kn-online.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,ostsee-zeitung.de,volksstimme.de#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
-augsburger-allgemeine.de,muensterschezeitung.de,mz.de,westfalen-blatt.de,wn.de,haz.de,kn-online.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,ostsee-zeitung.de,volksstimme.de##+js(ra, subscriptions-section, [subscriptions-section="content"])
+! Rule "adelaidenow.com.au,codesports.com.au,couriermail.com.au,dailytelegraph.com.au,goldcoastbulletin.com.au,heraldsun.com.au,ntnews.com.au,theaustralian.com.au,thechronicle.com.au,themercury.com.au,weeklytimesnow.com.au##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "adelaidenow.com.au,codesports.com.au,couriermail.com.au,dailytelegraph.com.au,goldcoastbulletin.com.au,heraldsun.com.au,ntnews.com.au,theaustralian.com.au,thechronicle.com.au,themercury.com.au,weeklytimesnow.com.au#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
+adelaidenow.com.au,codesports.com.au,couriermail.com.au,dailytelegraph.com.au,goldcoastbulletin.com.au,heraldsun.com.au,ntnews.com.au,theaustralian.com.au,thechronicle.com.au,themercury.com.au,weeklytimesnow.com.au##+js(ra, subscriptions-section, [subscriptions-section="content"])
+! Rule "augsburger-allgemeine.de,muensterschezeitung.de,mz.de,westfalen-blatt.de,wn.de,volksstimme.de##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "augsburger-allgemeine.de,muensterschezeitung.de,mz.de,westfalen-blatt.de,wn.de,volksstimme.de#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
+augsburger-allgemeine.de,muensterschezeitung.de,mz.de,westfalen-blatt.de,wn.de,volksstimme.de##+js(ra, subscriptions-section, [subscriptions-section="content"])
 ! Rule "nw.de##+js(ra, amp-access-hide, [amp-access][amp-access-hide])" converted to: "nw.de#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]')"
 nw.de##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
 ! Rule "abendblatt.de,braunschweiger-zeitung.de,morgenpost.de,nrz.de,otz.de,thueringer-allgemeine.de,tlz.de,waz.de,wp.de,wr.de##+js(ra, amp-access-hide, [amp-access][amp-access-hide])" converted to: "abendblatt.de,braunschweiger-zeitung.de,morgenpost.de,nrz.de,otz.de,thueringer-allgemeine.de,tlz.de,waz.de,wp.de,wr.de#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]')"
 abendblatt.de,braunschweiger-zeitung.de,morgenpost.de,nrz.de,otz.de,thueringer-allgemeine.de,tlz.de,waz.de,wp.de,wr.de##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
 ! Rule "nwzonline.de,shz.de,svz.de##+js(ra, amp-access-hide, [amp-access][amp-access-hide])" converted to: "nwzonline.de,shz.de,svz.de#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]')"
 nwzonline.de,shz.de,svz.de##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
-! Rule "corriere.it,ilfattoquotidiano.it,ilfoglio.it,repubblica.it##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "corriere.it,ilfattoquotidiano.it,ilfoglio.it,repubblica.it#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
-corriere.it,ilfattoquotidiano.it,ilfoglio.it,repubblica.it##+js(ra, subscriptions-section, [subscriptions-section="content"])
+! Rule "corriere.it,ilfattoquotidiano.it,ilfoglio.it##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "corriere.it,ilfattoquotidiano.it,ilfoglio.it#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
+corriere.it,ilfattoquotidiano.it,ilfoglio.it##+js(ra, subscriptions-section, [subscriptions-section="content"])
+! Rule "espresso.repubblica.it##+js(ra, amp-access-hide, [amp-access][amp-access-hide])" converted to: "espresso.repubblica.it#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]')"
+espresso.repubblica.it##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
 ! Rule "ilgiorno.it,ilrestodelcarlino.it,iltelegrafolivorno.it,lanazione.it,quotidiano.net##+js(ra, amp-access-hide, [amp-access][amp-access-hide])" converted to: "ilgiorno.it,ilrestodelcarlino.it,iltelegrafolivorno.it,lanazione.it,quotidiano.net#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]')"
 ilgiorno.it,ilrestodelcarlino.it,iltelegrafolivorno.it,lanazione.it,quotidiano.net##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
-! Rule "amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
-amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com##+js(ra, subscriptions-section, [subscriptions-section="content"])
+! Rule "amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.mcclatchydc.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.mcclatchydc.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
+amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.mcclatchydc.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com##+js(ra, subscriptions-section, [subscriptions-section="content"])
 ! Rule "amp.brisbanetimes.com.au,amp.smh.com.au,amp.theage.com.au,amp.watoday.com.au##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "amp.brisbanetimes.com.au,amp.smh.com.au,amp.theage.com.au,amp.watoday.com.au#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
 amp.brisbanetimes.com.au,amp.smh.com.au,amp.theage.com.au,amp.watoday.com.au##+js(ra, subscriptions-section, [subscriptions-section="content"])
 ! Rule "amp.elmundo.es,amp.expansion.com,amp.marca.com,elespanol.com,elespectador.com,em.com.br,folha.uol.com.br,observador.pt##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "amp.elmundo.es,amp.expansion.com,amp.marca.com,elespanol.com,elespectador.com,em.com.br,folha.uol.com.br,observador.pt#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
@@ -708,8 +728,12 @@ thehindubusinessline.com#%#//scriptlet('ubo-set.js', 'window.isNonSubcribed', 'f
 theneweuropean.co.uk#%#//scriptlet('ubo-ra.js', 'data-show-has-access', 'div[data-show-has-access]')
 ! thepointmag.com#%#//scriptlet('ubo-cookie-remover.js', 'monthly_history') is excluded by "#%#//scriptlet" in exclusions-low.txt
 thepointmag.com#%#//scriptlet('ubo-cookie-remover.js', 'monthly_history')
+! thequint.com#%#//scriptlet('ubo-ra.js', 'class', 'div#story-body-wrapper', 'stay') is excluded by "#%#//scriptlet" in exclusions-low.txt
+thequint.com#%#//scriptlet('ubo-ra.js', 'class', 'div#story-body-wrapper', 'stay')
 ! thesaturdaypaper.com.au#%#//scriptlet('ubo-cookie-remover.js', '/^/') is excluded by "#%#//scriptlet" in exclusions-low.txt
 thesaturdaypaper.com.au#%#//scriptlet('ubo-cookie-remover.js', '/^/')
+! thetimes.co.uk#%#//scriptlet('ubo-ra.js', 'style', 'body[style]', 'stay') is excluded by "#%#//scriptlet" in exclusions-low.txt
+thetimes.co.uk#%#//scriptlet('ubo-ra.js', 'style', 'body[style]', 'stay')
 ! time.com#$#body { position:relative !important } is excluded by "#$#" in exclusions-low.txt
 time.com#$#body { position:relative !important }
 ! bendigoadvertiser.com.au,bordermail.com.au,canberratimes.com.au,centralwesterndaily.com.au,dailyadvertiser.com.au,dailyliberal.com.au,examiner.com.au,illawarramercury.com.au,newcastleherald.com.au,northerndailyleader.com.au,standard.net.au,theadvocate.com.au,thecourier.com.au,westernadvocate.com.au#%#//scriptlet('ubo-rc.js', 'subscribe-truncate', '.subscribe-truncate') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -772,8 +796,12 @@ knack.be,kw.be,levif.be#%#//scriptlet('ubo-ra.js', 'class|style', 'html', 'stay'
 knack.be,levif.be#%#//scriptlet('ubo-ra.js', 'class', 'div.article-body > div')
 ! aaii.com#%#//scriptlet('ubo-rc.js', 'fadeout', '.fadeout') is excluded by "#%#//scriptlet" in exclusions-low.txt
 aaii.com#%#//scriptlet('ubo-rc.js', 'fadeout', '.fadeout')
+! bizwest.com#%#//scriptlet('ubo-ra.js', 'class', 'div.fp-content') is excluded by "#%#//scriptlet" in exclusions-low.txt
+bizwest.com#%#//scriptlet('ubo-ra.js', 'class', 'div.fp-content')
 ! cmcmarkets.com#%#//scriptlet('ubo-rc.js', 'activePaywall', '.activePaywall') is excluded by "#%#//scriptlet" in exclusions-low.txt
 cmcmarkets.com#%#//scriptlet('ubo-rc.js', 'activePaywall', '.activePaywall')
+! doorbraak.be#%#//scriptlet('ubo-ra.js', 'style', '#plus-inhoud') is excluded by "#%#//scriptlet" in exclusions-low.txt
+doorbraak.be#%#//scriptlet('ubo-ra.js', 'style', '#plus-inhoud')
 ! hcn.org#%#//scriptlet('ubo-ra.js', 'content', 'meta[name="UID"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 hcn.org#%#//scriptlet('ubo-ra.js', 'content', 'meta[name="UID"]')
 ! inman.com#%#//scriptlet('ubo-rc.js', 'paywalled-block', '.paywalled-block') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -792,10 +820,14 @@ marketnews.com#%#//scriptlet('ubo-ra.js', 'class', 'div.body-description')
 meritnation.com#%#//scriptlet('ubo-rc.js', 'maxHeight75px', 'div.exp_content.maxHeight75px')
 ! nu.nl#%#//scriptlet('ubo-rc.js', 'authorized-content', 'div.authorized-content') is excluded by "#%#//scriptlet" in exclusions-low.txt
 nu.nl#%#//scriptlet('ubo-rc.js', 'authorized-content', 'div.authorized-content')
+! popbitch.com#%#//scriptlet('ubo-ra.js', 'class', 'div[class*="-premium"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
+popbitch.com#%#//scriptlet('ubo-ra.js', 'class', 'div[class*="-premium"]')
 ! scribd.com#%#//scriptlet('ubo-ra.js', 'class', '.blurred_page') is excluded by "#%#//scriptlet" in exclusions-low.txt
 scribd.com#%#//scriptlet('ubo-ra.js', 'class', '.blurred_page')
 ! splainer.in#%#//scriptlet('ubo-rc.js', 'hide-section', '.hide-section') is excluded by "#%#//scriptlet" in exclusions-low.txt
 splainer.in#%#//scriptlet('ubo-rc.js', 'hide-section', '.hide-section')
+! stateaffairs.com#%#//scriptlet('ubo-rc.js', 'access-restricted', 'body.access-restricted') is excluded by "#%#//scriptlet" in exclusions-low.txt
+stateaffairs.com#%#//scriptlet('ubo-rc.js', 'access-restricted', 'body.access-restricted')
 ! stylist.co.uk#%#//scriptlet('ubo-ra.js', 'class|style', 'div.paywall') is excluded by "#%#//scriptlet" in exclusions-low.txt
 stylist.co.uk#%#//scriptlet('ubo-ra.js', 'class|style', 'div.paywall')
 ! stylist.co.uk#%#//scriptlet('ubo-ra.js', 'class', 'div.css-tu9vsa', 'stay') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -820,22 +852,24 @@ amp.elle.fr,challenges.fr,lopinion.fr#%#//scriptlet('ubo-ra.js', 'amp-access-hid
 bienpublic.com,dna.fr,estrepublicain.fr,lalsace.fr,ledauphine.com,lejsl.com,leprogres.fr,republicain-lorrain.fr,vosgesmatin.fr#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]')
 ! centrepresseaveyron.fr,ladepeche.fr,lindependant.fr,midi-olympique.fr,midilibre.fr,nrpyrenees.fr,petitbleu.fr#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 centrepresseaveyron.fr,ladepeche.fr,lindependant.fr,midi-olympique.fr,midilibre.fr,nrpyrenees.fr,petitbleu.fr#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
-! adelaidenow.com.au,codesports.com.au,couriermail.com.au,dailytelegraph.com.au,heraldsun.com.au,amp.theaustralian.com.au,themercury.com.au#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
-adelaidenow.com.au,codesports.com.au,couriermail.com.au,dailytelegraph.com.au,heraldsun.com.au,amp.theaustralian.com.au,themercury.com.au#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
-! augsburger-allgemeine.de,muensterschezeitung.de,mz.de,westfalen-blatt.de,wn.de,haz.de,kn-online.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,ostsee-zeitung.de,volksstimme.de#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
-augsburger-allgemeine.de,muensterschezeitung.de,mz.de,westfalen-blatt.de,wn.de,haz.de,kn-online.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,ostsee-zeitung.de,volksstimme.de#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
+! adelaidenow.com.au,codesports.com.au,couriermail.com.au,dailytelegraph.com.au,goldcoastbulletin.com.au,heraldsun.com.au,ntnews.com.au,theaustralian.com.au,thechronicle.com.au,themercury.com.au,weeklytimesnow.com.au#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
+adelaidenow.com.au,codesports.com.au,couriermail.com.au,dailytelegraph.com.au,goldcoastbulletin.com.au,heraldsun.com.au,ntnews.com.au,theaustralian.com.au,thechronicle.com.au,themercury.com.au,weeklytimesnow.com.au#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
+! augsburger-allgemeine.de,muensterschezeitung.de,mz.de,westfalen-blatt.de,wn.de,volksstimme.de#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
+augsburger-allgemeine.de,muensterschezeitung.de,mz.de,westfalen-blatt.de,wn.de,volksstimme.de#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
 ! nw.de#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 nw.de#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]')
 ! abendblatt.de,braunschweiger-zeitung.de,morgenpost.de,nrz.de,otz.de,thueringer-allgemeine.de,tlz.de,waz.de,wp.de,wr.de#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 abendblatt.de,braunschweiger-zeitung.de,morgenpost.de,nrz.de,otz.de,thueringer-allgemeine.de,tlz.de,waz.de,wp.de,wr.de#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]')
 ! nwzonline.de,shz.de,svz.de#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 nwzonline.de,shz.de,svz.de#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]')
-! corriere.it,ilfattoquotidiano.it,ilfoglio.it,repubblica.it#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
-corriere.it,ilfattoquotidiano.it,ilfoglio.it,repubblica.it#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
+! corriere.it,ilfattoquotidiano.it,ilfoglio.it#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
+corriere.it,ilfattoquotidiano.it,ilfoglio.it#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
+! espresso.repubblica.it#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]') is excluded by "#%#//scriptlet" in exclusions-low.txt
+espresso.repubblica.it#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]')
 ! ilgiorno.it,ilrestodelcarlino.it,iltelegrafolivorno.it,lanazione.it,quotidiano.net#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 ilgiorno.it,ilrestodelcarlino.it,iltelegrafolivorno.it,lanazione.it,quotidiano.net#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]')
-! amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
-amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
+! amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.mcclatchydc.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
+amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.mcclatchydc.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
 ! amp.brisbanetimes.com.au,amp.smh.com.au,amp.theage.com.au,amp.watoday.com.au#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 amp.brisbanetimes.com.au,amp.smh.com.au,amp.theage.com.au,amp.watoday.com.au#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
 ! amp.elmundo.es,amp.expansion.com,amp.marca.com,elespanol.com,elespectador.com,em.com.br,folha.uol.com.br,observador.pt#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -866,3 +900,5 @@ tasma.ru#%#//scriptlet('ubo-aopw.js', 'decodeURIComponent')
 tomadivx.tv#%#//scriptlet('ubo-aopr.js', 'WebAssembly')
 ! tubettajat.net#%#//scriptlet('ubo-aopr.js', 'miner') is excluded by "#%#//scriptlet" in exclusions-low.txt
 tubettajat.net#%#//scriptlet('ubo-aopr.js', 'miner')
+! Error: Invalid selector: 'section>div>div>*:has(path[d='M19.498 3h-15c-1.381 0-2.5 1.12-2.5 2.5v13c0 1.38 1.119 2.5 2.5 2.5h15c1.381 0 2.5-1.12 2.5-2.5v-13c0-1.38-1.119-2.5-2.5-2.5zm-3.502 12h-2v-3.59l-5.293 5.3-1.414-1.42L12.581 10H8.996V8h7v7z'])! [NoAds X Files - Filtri per blocco popup accettazione Cookie (sperimentale)]' -- Unbalanced attribute brackets in selector: 'section>div>div>*:has(path[d='M19.498 3h-15c-1.381 0-2.5 1.12-2.5 2.5v13c0 1.38 1.119 2.5 2.5 2.5h15c1.381 0 2.5-1.12 2.5-2.5v-13c0-1.38-1.119-2.5-2.5-2.5zm-3.502 12h-2v-3.59l-5.293 5.3-1.414-1.42L12.581 10H8.996V8h7v7z'])! [NoAds X Files - Filtri per blocco popup accettazione Cookie (sperimentale)]' in rule:
+twitter.com##section>div>div>*:has(path[d='M19.498 3h-15c-1.381 0-2.5 1.12-2.5 2.5v13c0 1.38 1.119 2.5 2.5 2.5h15c1.381 0 2.5-1.12 2.5-2.5v-13c0-1.38-1.119-2.5-2.5-2.5zm-3.502 12h-2v-3.59l-5.293 5.3-1.414-1.42L12.581 10H8.996V8h7v7z'])! [NoAds X Files - Filtri per blocco popup accettazione Cookie (sperimentale)]
