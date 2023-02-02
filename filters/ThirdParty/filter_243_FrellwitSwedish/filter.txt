@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-02-01 09:51:17 CET
+! Last modified: 2023-02-02 12:30:09 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -93,7 +93,7 @@ barometern.se,blt.se,bt.se,kalmarposten.se,klt.nu,kristianstadsbladet.se,meraost
 biblioteksforeningen.se#$#body { opacity:1!important }
 bicycling.se,cleannet.se,dagenshandel.se,entreprenad.com,food-supply.se,foodnet.se,fri-kopenskap.se,habit.se,kemivarldenbiotech.se,lifesciencesweden.se,medtechmagazine.se,motormagasinet.se,packnet.se,plastnet.se,processnet.se,recyclingnet.se,rt-forum.se,runnersworld.se,transportnet.se,uochd.se,verkstaderna.se,woodnet.se#$#.modal-open { overflow:initial!important }
 bilresaieuropa.se##.widget-title:has-text(/spons/i):upward(.widget_text)
-biostock.se,hejauppsala.com,hemmanytt.se,karriarlakare.se,svenskfilmdatabas.se#$#.cli-barmodal-open { overflow:auto!important }
+biostock.se,hejauppsala.com,hemmanytt.se,karriarlakare.se,morakniv.se,svenskfilmdatabas.se#$#.cli-barmodal-open { overflow:auto!important }
 bohuslaningen.se,harrydaposten.se,markposten.se,stromstadstidning.se##footer + div:has(form[name="stampenCookieForm"])
 boktugg.se,carup.se,dinbyggare.se,ettgottskratt.se,humorbibeln.se,lakartidningen.se,matsafari.nu,newsner.com,sportbibeln.se,sportpanelen.se,trafiksakerhet.se,villalivet.se,zeinaskitchen.se#%#//scriptlet('ubo-acs.js', 'monsterinsights_frontend')
 boktugg.se,carup.se,dinbyggare.se,ettgottskratt.se,humorbibeln.se,lakartidningen.se,matsafari.nu,newsner.com,sportbibeln.se,sportpanelen.se,trafiksakerhet.se,villalivet.se,zeinaskitchen.se#%#//scriptlet('ubo-set.js', 'mi_track_user', 'false')
@@ -246,8 +246,8 @@ gynning.net##.sponsored-notification:upward([id^="post-"])
 happypancake.se#%#//scriptlet('ubo-aopr.js', 'Object.prototype.adUnits')
 hejaolika.se#%#//scriptlet('ubo-acs.js', 'advads_passive_placements')
 hejauppsala.com##div[class^="u-text"]:has-text(/^Reklam$/):upward(section)
-heleneholmsif.se,historiskahem.se,melodifestivalklubben.se,morotsliv.com,newsvoice.se,pppress.se,thorengruppen.se,trafikskola.se,utslappsratt.se#%#//scriptlet('ubo-set.js', 'em_track_user', 'false')
-heleneholmsif.se,historiskahem.se,melodifestivalklubben.se,morotsliv.com,newsvoice.se,pppress.se,thorengruppen.se,trafikskola.se,utslappsratt.se#%#//scriptlet('ubo-set.js', 'exactmetrics_frontend', 'undefined')
+heleneholmsif.se,historiskahem.se,melodifestivalklubben.se,morotsliv.com,pppress.se,thorengruppen.se,trafikskola.se,utslappsratt.se#%#//scriptlet('ubo-set.js', 'em_track_user', 'false')
+heleneholmsif.se,historiskahem.se,melodifestivalklubben.se,morotsliv.com,pppress.se,thorengruppen.se,trafikskola.se,utslappsratt.se#%#//scriptlet('ubo-set.js', 'exactmetrics_frontend', 'undefined')
 hemmafixbloggen.se##.sponsor-summary:upward(.post-item)
 hemnet.se##.qa-consent-modal:upward(.ReactModalPortal)
 hemnet.se##.recent-news__category:has-text(/sponsrad/i):upward(.recent-news__item)
@@ -349,7 +349,6 @@ mytaste.se#$#body.modal-active.modal-open::before, body.modal-active::before { o
 nasdaqomxnordic.com#%#//scriptlet('ubo-acs.js', '$', 'shuffle')
 netflixguiden.se#%#//scriptlet('ubo-aopr.js', 'prebidAdUnits')
 news55.se##a[href]:not([href*="/news55.se"]):upward(section.sidebar)
-newsvoice.se#%#//scriptlet('ubo-acs.js', 'exactmetrics_scroll_tracking_load')
 newsvoice.se##.td-post-author-name > a:has-text(/extern skribent/i):upward(5)
 newsvoice.se##.td-post-author-name > a[href$="/author/foretagaren/"]:upward(5)
 newsvoice.se##.td-post-author-name > a[href$="/author/underhallning/"]:upward(5)
@@ -590,8 +589,8 @@ home2tiny.se#%#//scriptlet('ubo-aeld.js', '/mousewheel|DOMMouseScroll/')
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1395,6 +1394,7 @@ home2tiny.se#%#//scriptlet('ubo-aeld.js', '/mousewheel|DOMMouseScroll/')
 /plugins/vizzit-analytics
 /plugins/webtoffee-gdpr-cookie-consent$domain=forskning.se|hejaolika.se|kvartal.se
 /plugins/wf-cookie-consent
+/plugins/woocommerce-google-adwords
 /plugins/wordpress-popup$domain=buzzter.se|lesscarbs.se|maklarvarlden.se
 /plugins/wordpress-stats-manager-pro
 /plugins/wp-adsense
@@ -1651,7 +1651,7 @@ aktiespararna.se,alekuriren.se,civilekonomen.se,tidningen.se##.native
 aktivtraning.se,digitalfotoforalla.se,iform.se,militarhistoria.se,pctidningen.se,popularhistoria.se##.scroll-message, .gallery-banner, .horseshoe, [data-ad-type]
 aktuellhallbarhet.se,byggindustrin.se,dagensmedia.se,dagensmedicin.se,dagenssamhalle.se,dagligvarunytt.se,fastighetsnytt.se,market.se,resume.se##a[href^="/annons/"], a[href^="/native/"], .slot-module, .slot-articlemodule
 aktuellsakerhet.se##.front-slider-reklamsamarbete, .category-gastkronika-reklamsamarbete, .front-top-reklamsamarbete
-aktuellsakerhet.se,battrestadsdel.se,butikstrender.se,cookaholic.se,forskning.se,hemmanytt.se,influens.se,karriarlakare.se,kvartal.se,livinguppsala.se,maklarvarlden.se,natursidan.se,nongrata.se,raa.se,sjostadsbladet.se,smaspararguiden.se,svenskfilmdatabas.se,teknikhype.se,tidningenridsport.se,vardfokus.se,varvat.se,vinliv.se###cookie-law-info-bar
+aktuellsakerhet.se,battrestadsdel.se,butikstrender.se,cookaholic.se,forskning.se,hemmanytt.se,influens.se,karriarlakare.se,kvartal.se,livinguppsala.se,maklarvarlden.se,morakniv.se,natursidan.se,nongrata.se,raa.se,sjostadsbladet.se,smaspararguiden.se,svenskfilmdatabas.se,teknikhype.se,tidningenridsport.se,vardfokus.se,varvat.se,vinliv.se###cookie-law-info-bar
 aktuellsakerhet.se,borattforum.se,sjostadsbladet.se##.td-a-rec
 alandsradio.ax,automobil.se,bike.se,caroftheyear.se,cgi.com,endurobloggen.se,husbilhusvagn.se,kantarsifo.se,klassiker.nu,mopedgaraget.se,plastikoperationsforum.se,riksettan.net,spraktidningen.se,svjt.se,ungforetagsamhet.se,vibilagare.se###sliding-popup
 alandstidningen.ax##.revive-wrapper
@@ -2427,7 +2427,7 @@ zeromagazine.nu##div[id^="ads"]
 ||conviva.com^$third-party
 ||cookie-disclaimer.onewp.net^$third-party
 ||cookie-script.com^$third-party
-||cookiebot.com^$domain=accentmagasin.se|allsvenskan.se|alltomarbetsmiljo.se|bax-shop.se|byggfaktadocu.se|circlek.se|energi.se|enirobuddy.se|findroommate.se|fokus.se|framtid.se|goteborgdirekt.se|kingsizemag.se|konsumentmagasinet.se|kreditrapporten.se|kurera.se|mitti.se|ng.se|polistidningen.se|sakochliv.se|sis.se|smartsenior.se|spraktidningen.se|superettan.se|sverigesnatur.org|swedroid.se|tco.se|totallyorebro.se|totallystockholm.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|vastsverige.com|wesafe.se
+||cookiebot.com^$domain=accentmagasin.se|allsvenskan.se|alltomarbetsmiljo.se|bax-shop.se|byggfaktadocu.se|circlek.se|energi.se|enirobuddy.se|findroommate.se|fokus.se|framtid.se|goteborgdirekt.se|husdjur.se|kingsizemag.se|konsumentmagasinet.se|kreditrapporten.se|kurera.se|mitti.se|ng.se|polistidningen.se|sakochliv.se|sis.se|smartsenior.se|spraktidningen.se|superettan.se|sverigesnatur.org|swedroid.se|tco.se|totallyorebro.se|totallystockholm.se|trafiken.nu|upplysning.se|vaningen.se|varden.se|vasterastidning.se|vastsverige.com|wesafe.se
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$domain=folkofolk.se|gds.se|minbostad.se|viivilla.se
 ||cookieinfoscript.com^$third-party
