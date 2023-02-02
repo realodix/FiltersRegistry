@@ -8709,6 +8709,8 @@ disk.yandex.*#%#//scriptlet('remove-class', 'has-fullscreen-banner','.public__ro
 !------- CSS -----------
 !-----------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/141736
+kinobar.vip#$#body { padding-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141549
 kinometro.ru#$#body > div.wrapper { background: none !important; padding-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141543
@@ -11214,6 +11216,7 @@ progorod76.ru,riamobalashiha.ru,sobesednik.com,vz.ru,autoparus.by,ctv.by,hightec
 !
 !
 !
+||kinobar.vip/bg/glavnyy_geroy.jpg
 igromania.ru##.headerline_outer > a.strunmenu
 ||kinometro.ru/res/pic/brand/
 kinometro.ru##section[id^="banner-"]
@@ -22187,6 +22190,8 @@ gamer-info.com###games-db-main-listblock > a[class="gmv2-it"] + div[class]
 !
 ! START: mail.ru
 mail.ru##div[data-testid="grid-header"] > div.toolbar
+!+ PLATFORM(windows, mac, android)
+mail.ru##div[slot="main-column"] > div.tgb-wrapper
 !
 !!! !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android)
 mail.ru##.skeleton + a[href^="https://r.mail.ru/redir/"]
