@@ -2200,6 +2200,7 @@ eatsmarter.de,inside-digital.de,hs.fi,vrt.be,manager-magazin.de,whats-on-netflix
 !
 !
 !
+sunfun.pl##div[class^="CookieBar-"]
 bestreisengroup.pl,volare.pl,oasistours.com.pl##.cookiesConsent
 bpmarco.pl##.floating-strip
 new.globe.com.ph##.privacyNotice
@@ -3935,9 +3936,9 @@ fernsehserien.de#$#body { overflow: visible !important; }
 ticketservices.gr###cookieprefs
 ameblo.jp###acmp-opt-in
 calzedoniagroup.com,altamiraweb.com###divprivacycookies
-muenchner-bank.de#$#.darken-layer { display: none !important; }
-muenchner-bank.de#$#.lightbox--cookie-consent { display: none !important; }
-muenchner-bank.de#$#body.no-scroll { position: unset !important; }
+meinebank.de,muenchner-bank.de#$#.darken-layer { display: none !important; }
+meinebank.de,muenchner-bank.de#$#.lightbox--cookie-consent { display: none !important; }
+meinebank.de,muenchner-bank.de#$#body.no-scroll { position: unset !important; }
 onlinefinanzierung.vr-smart-finanz.de##.cookieconsentContainer
 gvm.com.tw###privacy_policy
 danmis.com.pl##body #catapult-cookie-bar
@@ -11847,6 +11848,7 @@ privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 consent.unilad.com,consent.ladbible.com,consent.gamingbible.co.uk,consent.unilad.co.uk#%#AG_onLoad(function(){if(window.location.href.includes("consentUUID")){var g=new MutationObserver(function(){var b=document.querySelector('button[title*="Accept" i]');b&&(g.disconnect(),b.click())});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1E4)}});
 !
+orextravel.pl#%#document.cookie='CookieConsent={"necessary":true,"preferences":true,"statistics":true,"marketing":true,"unclassified":true}';
 ledauphine.com#%#//scriptlet('trusted-click-element', 'button[id="didomi-notice-agree-button"]')
 justanswer.es,justanswer.de,justanswer.com,justanswer.co.uk#%#//scriptlet('set-cookie', 'cbChecked', 'true')
 lego.com#%#//scriptlet('trusted-set-cookie', 'LEGO_COOKIE_SETTINGS', '{"preferences":[{"key":"analytics","value":true},{"key":"legomarketing","value":true},{"key":"necessary","value":true},{"key":"thirdparty","value":true}]}')
@@ -13022,6 +13024,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/141740
+meinebank.de#@#.cookie-consent:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141540
 ||sdk.privacy-center.org/*/loader.js$script,redirect=didomi-loader,domain=radioclassique.fr
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb || ext_ublock)

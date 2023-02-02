@@ -79,6 +79,9 @@
 ! Bad: example.org###rek (should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/141714
+member.neofinancial.com#%#//scriptlet('set-constant', '__fpjs_p_l_b', 'emptyObj')
+member.neofinancial.com#%#//scriptlet('set-constant', '__fpjs_p_l_b.load', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140178
 itsu.com#%#//scriptlet('set-constant', 'AtreemoTrackingLbr', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140059
@@ -43700,6 +43703,10 @@ $app=com.miui.analytics
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/141714
+||fpnpmcdn.net/v*/*/loader_*.js$script,redirect=noopjs,domain=member.neofinancial.com
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||fpnpmcdn.net/v*/*/loader_*.js$domain=member.neofinancial.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141229
 @@||wipe.de/wa.js$domain=dasoertliche.de
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141599
