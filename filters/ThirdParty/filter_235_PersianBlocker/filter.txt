@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2023-02-04
+! Last modified: 2023-02-05
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -54,6 +54,7 @@
 !-------------------------^ Experimental Generic Filters ^-----------------------!
 !-------------------------v Persian Ads/Trackers/Annoyances Filters v-----------------------!
 ! >> A <<
+||affilio.ir^$all
 ||analyt.ir^$all
 ||scripts-ads.s3.ir-thr-at1.arvanstorage.com^$all
 ||error-tracking.arvancloud.com^$all
@@ -2498,14 +2499,12 @@ yasdl.com##.sidebar-textads
 yeknet.ir#%#//scriptlet('ubo-aopr.js', 'needpop')
 ! >> Z <<
 ! https://github.com/MasterKia/PersianBlocker/issues/30
-||zibamoon.com/Files/Ads^
-zibamoon.com###BannerHome
+||zibamoon.com/Files/Ads/$image,~third-party
 zibamoon.com##.BannerA
-zibamoon.com##.Banner
-zibamoon.com##.AdAreaDetail
-zibamoon.com##.NewsLetterPopUp
-zibamoon.com###RelatedContentPopupArea
-zibamoon.com##[id^="BehinAva"]
+zibamoon.com###BannerHome
+zibamoon.com##div[id^="BehinAva"]
+zibamoon.com##.DetailArea > .AdAreaDetail
+zibamoon.com##.LeftSide > .TableOfContent > div[style="text-align:center;"]:has-text(صفحات مرتبط):upward(.TableOfContent)
 !#if env_mobile
 zibamoon.com##.MobileBannerArea
 !#endif
@@ -2518,21 +2517,24 @@ zohur12.ir##.sideads
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79988
 ! https://github.com/AdguardTeam/AdguardFilters/issues/110569
 ! https://github.com/MasterKia/PersianBlocker/issues/4
+zoomg.ir$$script[tag-content="bannersAsJson"][max-length="262144"]
+!#if !cap_html_filtering
 zoomg.ir#%#//scriptlet('ubo-aopr.js', 'banner')
-||zoomg.ir/common/visitcount^
-||zoomg.ir/Themes/Zoomg.ir/Content/css/img/AD.svg
-zoomg.ir##.wide-adv-box
+!#endif
+!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_firefox)
+zoomg.ir#%#//scriptlet('ubo-aopr.js', 'banner')
+!#endif
+||zoomg.ir/common/visitcount^$xmlhttprequest,~third-party
+||cdn.zoomg.ir/Themes/Zoomg.ir/Content/css/img/AD.svg$image,~third-party
 zoomg.ir##.main-top-ads
-zoomg.ir##.main-inside-ads
-zoomg.ir##.top-ads
-zoomg.ir##.afterintro
+zoomg.ir##.wide-ad-row
 !#if env_mobile
 zoomg.ir###mobileBannerAfterTags
 !#endif
 !#if (adguard_app_android || adguard_app_ios)
 zoomg.ir###mobileBannerAfterTags
 !#endif
-@@||cdn.zoomg.ir/banners/demo/advertise-$image,~third-party
+@@||cdn.zoomg.ir/banners/demo/advertise-zoomg.jpg$image,~third-party
 ! https://github.com/AdguardTeam/AdguardFilters/issues/78626
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79988
 ! https://github.com/MasterKia/PersianBlocker/issues/4
