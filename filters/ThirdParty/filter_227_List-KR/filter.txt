@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0206.1
+! OriginalVersion: 2023.0206.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -407,6 +407,7 @@ funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,fu
 /data/banner.json?
 /ad-manager.min.js
 !
+||segyebiz.com/static/segyefn/resources/images/*_ad.
 ||hellot.net/data/cache/public/banner/
 /^https?:\/\/[a-z0-9]+\.soonwe\.com\/[A-z0-9-]+\/ad_[0-9]+_[0-9]+\.js/
 /^https?:\/\/[a-z0-9]+\.soonwe\.com\/[A-z0-9-]+\/wt_[0-9]+_[0-9]+\.html/
@@ -1226,6 +1227,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+segyebiz.com##article > div[id^="wps_layout"] > div[style*="height:"]
 hellot.net##.wrapper > div[style*=" "]#container > div:not([class])
 meeco.kr###cCon + aside.sidebar2
 pushoong.com##div[id*="_banner_"]
@@ -1945,7 +1947,7 @@ munhwa.com##img[src*="//image.munhwa.com/www/banner/"]
 mk.co.kr##div[class^="bn_sec"]
 m.ilbe.com##article.cutin-banner
 bloomingbit.io##.promotion
-segye.com##div[id^="wps_layout"][data-desc="텍스트광고"][data-box-file^="/news/box/ad"]
+segyebiz.com,segye.com##div[id^="wps_layout"][data-desc*="광고"][data-box-file*="/box/"]
 avjamak.net##.widget-box.widget-img
 kmib.co.kr##.mn_ad
 hankookilbo.com##.side-ad-box
@@ -2698,6 +2700,7 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
 !
+@@||kpanews.co.kr^$generichide
 starrykss.tistory.com,ilsangt.tistory.com,jimnong.tistory.com,webtv.dothome.co.kr##.adblock-on
 genshin.gamedot.org#%#//scriptlet("prevent-setTimeout", "adblockChecker")
 ||ssulwar.com/dev/modules/board/skins/*/js/adblockblock.js$redirect=noopjs
@@ -2790,6 +2793,7 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+@@||kpanews.co.kr^$generichide
 starrykss.tistory.com##.adblock-on
 ||genshin.gamedot.org/module/genshinmaps/asset/image/ab-2211-*.
 @@||klauncher.kr/theme/NB-Basic/storage/image/logo-logo.png#ad&adv_keywords=
