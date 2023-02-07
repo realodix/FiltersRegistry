@@ -42517,6 +42517,8 @@ twgreatdaily.com$$script[tag-content="indexOf|css|fn|this|attr|unselectable|cons
 ! Other domain having similar problem: seesaa.net,blog.fc2.com,blog.2nt.com
 ! Except for very unique and safe selector, avoid rules like `blog.jp##.rule` but specify subdomain: `futamato.blog.jp##.rule`
 ! In case of blog.livedoor.jp, make your rule as specific or use $path
+||blog.livedoor.jp/yakiusoku/rss$subdocument,~third-party
+||blog.livedoor.jp/misopan_news/headline$subdocument,~third-party
 blog.livedoor.jp##.rsslist
 ! risky if without $path
 [$path=/diet2channel]blog.livedoor.jp##.article-footer2
@@ -42593,6 +42595,14 @@ blog.livedoor.jp##div[class^="footrss"]
 blog.livedoor.jp##div[class^="shitarss_"]
 blog.livedoor.jp##div[id^="shitarss_title_"]
 !
+animalch.net##.osusume
+||kyousoku.net/js/rss$script,~third-party
+crx7601.com##.box14
+matometanews.com###container > div[style^="width:1218px;"]
+mindhack2ch.com##.article__footer > p.section-title
+scienceplus2ch.com###rss-roll-01
+vsnp.net###link_area
+vsnp.net###link_etc2
 beasoku.com##.l-rss-header
 beasoku.com##.l-rss-header_title
 negisoku.com###main > div.column-inner > div.column-inner-2 > div[style^="overflow: auto;"]
@@ -42869,7 +42879,7 @@ anige-sokuhouvip.com##div[class^="top_center"]
 anige-sokuhouvip.com##div[style^="border : 2px solid gray;height:245px; width:825px;"]
 gahalog.2chblog.jp##.rss-pickup
 gahalog.2chblog.jp##.rss-pickup-title
-usi32.com,gahalog.2chblog.jp##.rss-outer
+animalch.net,usi32.com,gahalog.2chblog.jp##.rss-outer
 shuraba-matome.com###rss-area
 erogematome.com,syurabahazard.com,shuraba-matome.com,rebosoku.com##.toprss
 shuraba-matome.com##p[style="margin:0;"]
