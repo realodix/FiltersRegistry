@@ -127,14 +127,14 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 ! glomex player adblock detection
-heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-213
-heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-250x300
-heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-250
-heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-197
-heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-2-160x600
-heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-19
-heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-2
-heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-21
+kreiszeitung.de,heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-213
+kreiszeitung.de,heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-250x300
+kreiszeitung.de,heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-250
+kreiszeitung.de,heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-197
+kreiszeitung.de,heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-2-160x600
+kreiszeitung.de,heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-19
+kreiszeitung.de,heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-2
+kreiszeitung.de,heidelberg24.de,nordbayern.de,volksfreund.de,infranken.de,merkur.de#@##ad-21
 !
 !--- Prevent AdFender detection ---
 !### Temporary ###
@@ -2380,49 +2380,11 @@ wochenblitz.com#?##rightcol > .module:contains(Spezial)
 ! https://forum.adguard.com/index.php?threads/spieletest-at.24493/
 spieletest.at#?#.col-lg-6 > h2:contains(Anzeige)
 ! https://forum.adguard.com/index.php?threads/kreiszeitung-de.24399/
-kreiszeitung.de#?#.id-SiteMain > .id-g--oneCol[-ext-has='div.id-Container--proBEEP']
-kreiszeitung.de#?#.id-SiteMain > .id-g--oneCol[-ext-has='> div > div > div[data-id-advertdfpconf]']
+kreiszeitung.de#?#.id-SiteMain > .id-g--oneCol:has(> div > div > div[data-id-advertdfpconf])
 ! https://forum.adguard.com/index.php?threads/op-online-de.24398/
-op-online.de#?#.id-SiteMain > .id-g--oneCol[-ext-has='> div > div > div[data-id-advertdfpconf]']
-! https://forum.adguard.com/index.php?threads/24179/
-tagesspiegel.de#?#.hcf-teaser-list > ul > li[-ext-has='div[id^="urban-"]']
-! https://github.com/AdguardTeam/AdguardFilters/issues/6127
-focus.de#?#.articleContent >div[class="clearfix"]:contains(Anzeige)
-! https://github.com/AdguardTeam/AdguardFilters/issues/5947
-psd-tutorials.de#?#.container > [class="site-sidebar-bottom footerbox-table"] > [class="footerbox-table-col"][-ext-has='.content-headline:contains(Anzeige)']
-! https://forum.adguard.com/index.php?threads/23468/
-gamestar.de#?#.fxAuHht > .elemCont:not([style])[-ext-has="> div#ad-rectangle1-outer"]
+op-online.de#?#.id-SiteMain > .id-g--oneCol:has(> div > div > div[data-id-advertdfpconf])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/5639
-vip.de#?#.rtli-master-article > [class="rtli-master-section"][-ext-has='.rtli-master-ad']
-! https://github.com/AdguardTeam/AdguardFilters/issues/5617
-focus.de#?##sidebar > .block.grid_4[-ext-has='> .content > [id^="fwid"] > .surftippTitle > .surftipp:contains(Partnerangebot)']
-! https://github.com/AdguardTeam/AdguardFilters/issues/5476
-amp-focus-de.cdn.ampproject.org#?#article.card[data-teaser-type="unspecified_group"][-ext-has='>div>amp-iframe[src^="https://widgets.outbrain.com/hub/amp.html"]']
-! https://github.com/AdguardTeam/AdguardFilters/issues/5327
-k-zeitung.de#?##page > #center > div.col3.flr > .tabbox[-ext-has='ul.tabs > li.active > a[href="javascript:void(0);"]:contains(Anzeige)']
-! https://forum.adguard.com/index.php?threads/teilzeithelden-de.22478/
-teilzeithelden.de#?#.widget.box-content-sidebar[-ext-has='>.four-ads-blocks,>.ads300-thumb']
-! https://forum.adguard.com/index.php?threads/4kfilme-de.22389/
-4kfilme.de#?#.buble-link[-ext-has='.publication-date:contains(Anzeige)']
-! https://forum.adguard.com/index.php?threads/lvz-de.22240/
-lvz.de#?#ul[class^="pd"][class*="-mostviewed-ul"] > li[class^="pd"][class*="-list-accordion"][-ext-has='span:contains(Anzeige)']
-lvz.de#?#ul.pda-related-list > li[-ext-has='span:contains(Anzeige)']
-m.lvz.de#?#.pdma-block-link-collection > .js-linkblock[-ext-has='strong.pdma-subheadline:contains(Anzeige)']
-t.lvz.de#?#.pdta-related-li > a[-ext-has='span:contains(Anzeige)']
-! futurezone.at ads
-futurezone.at#?#.type-content-box[-ext-has='.poweredby']
-futurezone.at##.frontend-fuzo .slider[ext-has='#paidcontentslider']
-! https://forum.adguard.com/index.php?threads/suedkurier-de.21959/
-suedkurier.de#?#.equalheight_outer > .equalheight_inner[-ext-has='div#rechtenavi_werbcontainer']
-! https://github.com/AdguardTeam/AdguardFilters/issues/5076
-hoerzu.de#?##tvd-main > div[id="block-block-203"][-ext-has="> div.tvd-box > div[style] > div[style]:contains(ANZEIGE)"]
-! https://forum.adguard.com/index.php?threads/bremen-de.21762/
-bremen.de#$?#.kachel1x1[-ext-has='>.anzeige']{visibility:hidden!important;}
-! https://forum.adguard.com/index.php?threads/muenchen-de.21755/
-muenchen.de#?#section.mrow:not(.mrow--nocard) > .mrow__mcol[-ext-has='label:contains(Anzeige)']
-muenchen.de#?#.mrow__mcol > .mrow__mcol__content > div.container[-ext-has='label:contains(Anzeige)']
-! https://forum.adguard.com/index.php?threads/berlin-de.21754/
-berlin.de#?#.teaser[-ext-has='>.inner>h3>a.trakkking,>.inner>h3:not(:has(>*))']
+vip.de#?#.rtli-master-article > [class="rtli-master-section"]:has(.rtli-master-ad)
 ! https://forum.adguard.com/index.php?threads/21652/
 chip.de#?#.NewsArticle__Sidebar > div[-ext-has='div.bullet-sponsored-links-gray']
 ! https://forum.adguard.com/index.php?threads/wetter-ch.21585/
