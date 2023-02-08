@@ -79,6 +79,10 @@
 ! Bad: example.org###rek (should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/142311
+! Fixes comment section loading
+apkpure.com#%#//scriptlet('set-constant', '$$.analytics', 'emptyObj')
+apkpure.com#%#//scriptlet('set-constant', '$$.analytics.send', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141714
 member.neofinancial.com#%#//scriptlet('set-constant', '__fpjs_p_l_b', 'emptyObj')
 member.neofinancial.com#%#//scriptlet('set-constant', '__fpjs_p_l_b.load', 'noopFunc')
@@ -40503,8 +40507,6 @@ nnmclub.ro,nnm-club.t0r.xyz,nnmclub.to#@#img[width="88"][height="31"]
 @@||cdn-gl.imrworldwide.com/novms/*/ggng*.js$domain=heraldsun.com.au
 ! https://github.com/AdguardTeam/AdguardFilters/issues/34135
 @@||cdn-gl.imrworldwide.com/novms/*/ggng*.js$domain=news.com.au
-! https://github.com/AdguardTeam/AdguardFilters/issues/33999
-@@||galt.hit.gemius.pl/gplayer.js$domain=lrt.lt
 ! https://github.com/AdguardTeam/AdguardFilters/issues/33932
 @@||google-analytics.com/analytics.js$domain=hanime.tv
 ! https://github.com/AdguardTeam/AdguardFilters/issues/28292
