@@ -1,7 +1,7 @@
 !
 ! Title: 🏔️ Dandelion Sprouts nordiske filtre for ryddigere nettsider (for AdGuard)
 ! Translated title: Dandelion Sprout's Nordic filters for tidier websites (for AdGuard)
-! OriginalVersion: 01February2023v3
+! OriginalVersion: 09February2023v2
 ! Expires: 1 day
 ! Lisens / Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
@@ -379,6 +379,7 @@ nettavisen.no#?#.optimus-complex-front:has(amedia-include[manifest*=".norkon."])
 retrospilling.no#?#.widget:has-text(Play-Asia)
 retrospilling.no#?#.widget:has-text(Reklame)
 allematpriser.no##.bottom-center-box
+startsiden.no##.wp-block-create-block-prisjakt-product
 ! — — — — — — — — —
 ! 🇳🇴: Oppføringer for minst 3 nettsteder
 ! 🇬🇧: Entries for at least 3 websites
@@ -412,7 +413,7 @@ latterkula.no,gunnarandreassen.com##a[href*=spill]
 ! norskenettsider.no, sva.no
 ~playpilot.com##a[href*="online.adservicemedia.dk"]
 ! https://www.diskusjon.no/topic/1760306-ogs%C3%A5-onecall-lanserer-rollover-av-data/
-~prisguiden.no##.prisguidePost
+~prisguiden.no##.prisguidePost:not(html, body)
 ! tv2.no
 ##.spklw-post-attr[data-type=ad]
 tv2.no##.spklw-post-attr[data-pc]
@@ -1285,6 +1286,9 @@ matematikbogen.dk##td:nth-of-type(3)
 matoppskrift.no###sticky
 matoppskrift.no##.overskrift_naeringsinnhold
 matoppskrift.no#?#.text-center:not(:has(img))
+digi.no##div[class*=ads-wrapper]
+digi.no##.banner
+digi.no,tu.no#?#div[id^=row-]:has(.banner)
 mbl.is#$#.container { margin-top: 0 !important }
 mbl.is#$#.main-header { margin-top: 0 !important }
 mbl.is#?#.col-sm-6.col-12:has(.augl):not(:has(.fluid))
@@ -1601,6 +1605,7 @@ gulesider.no#?#.MuiContainer-root .MuiGrid-root + .MuiBox-root:has(div[id*=gpt])
 tv2.dk##div[class=tc_deck]
 purehelp.no##.h-300px
 gulesider.no##div[class*=-spacing-xs-] > div[class^="MuiBox-root css-"]
+startsiden.no##div[class*=layout_adsContainer__]
 ! — — — — —
 ! 🇳🇴: Oppføringer med spesielle omstendigheter
 ! 🇬🇧: Entries with special circumstances
@@ -1667,7 +1672,7 @@ kulturplot.no,dagensperspektiv.no,velferd.no###main > .small-12:nth-of-type(1)
 seher.no#$#.content-marketing-ribbon { margin-top: 20px !important }
 !#endif
 ! sol.no
-~basketnews.lt,~basketnews.com,~hero-magazine.com,~ut.no##.advertisement
+~basketnews.lt,~basketnews.com,~hero-magazine.com,~ut.no##.advertisement:not(html, body)
 ##div[itemtype$=WPAdBlock]
 ! www.qxl.no
 ###BannerEniro
@@ -2185,7 +2190,7 @@ sofabold.dk##div[class^=sidebanner]
 sofabold.dk##.centerMgfx
 klikk.no##.affiliate-content
 ! https://www.avvir.no/samegiella-ja-mearkagiella-vuosttasgiellan/
-~nytid.no##.td-a-rec
+~nytid.no##.td-a-rec:not(html, body)
 ! jyllands-posten.dk (09/07/2020)
 ###topBanners
 !#endif
@@ -2624,7 +2629,7 @@ vg.no##div[data-test-tag=timestamp] + p + div::before
 ! 🇳🇴/🇩🇰: ——— Anti-anti-reklameblokkering ———
 ! 🇮🇸: ——— And-and-auglýsingshindrun ———
 ! 🇬🇧: ——— Anti-anti-adblocking ———
-! Last updated: 01August2022v1-Extension
+! Last updated: 09February2023v2-Extension
 dagensbyggeri.dk#%#//scriptlet('ubo-std.js', '()', '2500')
 eurosport.*#%#//scriptlet('ubo-aeld.js', 'contextmenu')
 techstart.dk#%#//scriptlet('ubo-set.js', 'adblock', 'false')
