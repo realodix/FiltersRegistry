@@ -86,6 +86,7 @@
 ! not for DNS
 ||ias.rakuten.co.jp^$third-party,domain=~rakuten--.co.jp
 !
+||yads.c.yimg.jp^
 ||link-a.net^$third-party
 ||corectcustom.com^$all
 ||moro-douga.link^$all
@@ -651,7 +652,6 @@ nordot.app#%#//scriptlet('abort-current-inline-script', 'document.createElement'
 modalina.jp#%#//scriptlet('abort-on-property-read', 'AdBlockLimitation')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116093
 realtime-chart.info##td[style^="vertical-align"] div[style^="top:"] a[onmousedown]
-realtime-chart.info#$#div[style^="top:1"] > a[href^="https://a.r10.to"] { pointer-events: none !important; }
 realtime-chart.info#%#//scriptlet('remove-attr', 'onclick', 'td[style] div[style^="top:1"] > div')
 realtime-chart.info#?#td[style="vertical-align: top"] > div[id] > div[id] > div[id] > div[style="top:1437px"] > div[style="z-index:-1"]:contains(/^広告非表示だと色々と不具合が発生します$/)
 sekai-kabuka.com#$?#table[width="762px"] > tbody > tr > td[class] > div[id][class] > div[style="width: 225px;"]:contains(不具合が) { z-index: -1 !important; }
@@ -968,7 +968,6 @@ otonasalone.jp,sumaiweb.jp#?#._popIn_infinite_page > a._popIn_recommend_article_
 !
 !
 !
-matome-tarou.ldblog.jp#?#.column-inner-2 > .plugin-memo:has(*[src*=".amazon-adsystem.com/"])
 matome-tarou.ldblog.jp#?#.article-body-inner > table:has(> tbody div[class^="google-user-ad-"])
 nijimoemoe.com#?#.plugin-memo > div.side > center > div[id^="im-"]:upward(3)
 nijimoemoe.com#?#.plugin-memo > div.side > script[src^="//150601.fc2rs.com"]:upward(2)
@@ -1343,8 +1342,8 @@ cnn.co.jp#?#.pg-container-side div.cb-l1-m2 > div.cb > .OUTBRAIN:upward(2)
 sagatv.co.jp#?#.c-content-main > h2:not([data-bg-pattern]):contains(こちらもおすすめ)
 blog.jp#?#.plugin-memo > div.side > a[href^="https://hb.afl.rakuten.co.jp/hsc/"][target="_blank"][rel="nofollow"][style="word-wrap:break-word;"]:upward(2)
 blog.jp#?#.plugin-memo > div.side > center > ins.adsbygoogle:upward(3)
-blog.livedoor.jp,blog.jp#?#.plugin-memo > div.side > iframe[src*="//rcm-fe.amazon-adsystem.com"]:upward(2)
-doorblog.jp,blog.jp#?#.plugin-memo > div.side > script[src^="//z-fe.amazon-adsystem.com"]:upward(2)
+ldblog.jp,blog.livedoor.jp,blog.jp#?#.plugin-memo > div.side > iframe[src*="//rcm-fe.amazon-adsystem.com"]:upward(2)
+ldblog.jp,doorblog.jp,blog.jp#?#.plugin-memo > div.side > script[src^="//z-fe.amazon-adsystem.com"]:upward(2)
 blog.jp#?#.plugin-memo > div.side > img[src*="a8.net/"]:upward(2)
 elog-ch.com#?#.d_line > img[src$="/cat20.gif"]:upward(1)
 elog-ch.com#?##content > h2:contains([PR])
@@ -1364,7 +1363,6 @@ hoimiso.xsrv.jp#?##mybox > ul > li > div.textwidget > ins.adsbygoogle:upward(3)
 hoimiso.xsrv.jp#?#.kizi-under-box > div.textwidget > p:contains(スポンサーリンク)
 hoimiso.xsrv.jp#?#.hentry > aside > script + div:contains(スポンサーリンク)
 9db.jp#?#.frame > div[style="background-color:transparent;"] > ins.adsbygoogle:upward(2)
-dq-10.ldblog.jp#?#.plugin-memo:has(> div.side > div > iframe[src^="//rcm-fe.amazon-adsystem.com/"])
 main-hrs-game.ssl-lolipop.jp#?#li > .p0[href^="https://amzn.to"][title="Amazonを新しいタブで開く"]:upward(1)
 hateblo.jp,hatenablog.com,hatenablog.jp,hatenadiary.com,hatenadiary.jp#?#.hatena-module-html > div.hatena-module-body > script[src^="//z-fe.amazon-adsystem.com/"]:upward(2)
 hateblo.jp,hatenablog.com,hatenablog.jp,hatenadiary.com,hatenadiary.jp#?#.hatena-module-html > div.hatena-module-body > a[href^="https://adf.shinobi.jp/"]:upward(2)

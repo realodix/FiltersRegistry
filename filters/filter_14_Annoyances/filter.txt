@@ -2203,6 +2203,8 @@ rollingstone.de,eatsmarter.de,inside-digital.de,hs.fi,vrt.be,manager-magazin.de,
 !
 !
 !
+malijunaki.si#$#body { overflow: auto !important; position: unset !important; }
+malijunaki.si#$##cookies { display: none !important; }
 youporngay.com###js_euCookieBanner
 whatsapp.com##div[data-testid="wa_cookies_banner_modal"]
 wid.cert-bund.de#$#portal-cookie-dialog { display: none !important; }
@@ -13084,7 +13086,12 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
-! ! https://github.com/AdguardTeam/AdguardFilters/issues/142387
+! https://github.com/AdguardTeam/AdguardFilters/issues/142369
+@@||sdk.privacy-center.org/sdk.*.js$domain=beinsports.com
+@@||sdk.privacy-center.org/*/loader.js$domain=beinsports.com
+! https://github.com/AdguardTeam/AdguardFilters/issues/142413
+malijunaki.si#@#.cookies-container
+! https://github.com/AdguardTeam/AdguardFilters/issues/142387
 !#if (adguard_ext_android_cb)
 @@||cmp.quantcast.com^$domain=glasgowlive.co.uk
 glasgowlive.co.uk#@#.qc-cmp2-container
@@ -16562,6 +16569,7 @@ reddit.com#@#.ADBAR
 !#safari_cb_affinity
 !
 ! Add same rules to the Admiral section of Tracking Protection filter
+||magicaljoin.com^$third-party
 ||exchangedetail.com^$third-party
 ||dustyhammer.com^$third-party
 ||carvecakes.com^$third-party
@@ -16705,6 +16713,7 @@ w3resource.com#@#.ad-placement
 ! SECTION: Anti-adblock - Regular rules
 ! Do not forget about '!#safari_cb_affinity' section for exclusions
 !
+fosslinux.com#%#//scriptlet('set-constant', 'penci_adlbock', 'undefined')
 watch.sports247.sbs###vidorev_post_extensions-2
 grabify.link###ab
 thegay.tube###ablock-notify
@@ -19289,6 +19298,9 @@ dniwolne.eu#$#.adsbygoogle { height: 1px!important; }
 ! SECTION: Anti-adblock - The rules for content blockers only
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
 !#safari_cb_affinity(general)
+fosslinux.com#@#.adsbygoogle
+fosslinux.com#@#.sidebar-ad
+fosslinux.com#@#.Ad-Container
 pornone.com#@#.overheaderbanner
 @@||a.realsrv.com/ads.js$domain=pornone.com
 @@||www3.doubleclick.net/|$xmlhttprequest,domain=photosonic.writesonic.com
@@ -19465,6 +19477,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+irishtimes.com###it-toast
 geeksforgeeks.org#%#//scriptlet('prevent-setTimeout', '.login-modal-btn:eq(0)')
 antoniomote.com###elementor-popup-modal-2347
 broadsheet.com.au#?#.site-layout > div[class^="Wrapper"]:has(> div[class^="Container"] > a[href="/join"])
@@ -25878,6 +25891,7 @@ macwelt.de,pcwelt.de#%#//scriptlet("set-constant", "firebase.messaging", "noopFu
 !
 ! SECTION: Push notifications - Regular rules
 !
+irishtimes.com###webpush-custom-prompt
 ||ifa.com.au/sw.js
 shindanmaker.com##.webpush_subscribe_infomation
 los40.com###cont_webpush
@@ -26560,6 +26574,8 @@ edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,morgenpos
 !
 ! SECTION: Subscriptions - Regular rules
 !
+wsj.com##div[id="Engagement-tile"]
+irishtimes.com###it-paywall-soa
 narecza.com###header > div.forDesktop
 publimetro.pe##.googlenews-btn
 publimetro.pe##aside a[href="https://t.me/publimetro_peru"]
@@ -31636,6 +31652,7 @@ atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-mail.org,ortobom.com
 ! notifications - part of the functionality
 ! discord.com##div[class^="container"] > nav[class^="wrapper"] + div[class^="base"] > div[class^="notice-"]
 !
+manga-park.com##.right.pc-only
 pyszne.pl##div[data-selector-id="app-banner"]
 apkmody.io###body-fixed-footer
 ||snoway.jp/img/v*/ad/snoway_300x80
@@ -34016,6 +34033,7 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~xltrax.ee,~hitta.se,~mail.ru,~v7player.wostreaming.net,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+manga-park.com##.app-dl-guide
 telnavi.jp#?#.directory_entry > tbody > tr:has(> th:contains(PR文))
 investing.com##.seeThisInPopup
 voicy.jp##.app-leading
@@ -43035,7 +43053,7 @@ anacap.doorblog.jp##div[class^="anacap-roll"]
 healthylives.tw#$?##fbVideo { remove: true; }
 healthylives.tw###fbBox
 evofone.com##.whatsapp-message
-||matome-tarou.ldblog.jp/*_rss.html
+||matome-tarou.ldblog.jp^$subdocument,~third-party
 matome-tarou.ldblog.jp###j_rss
 bachlong.vn###fb-root
 ||widget.oncustomer.asia^
