@@ -1,12 +1,12 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 03February2023v2-Beta-Compilation
+! OriginalVersion: 09February2023v1-Compilation
 ! Expires: 2 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, prayer time clocks on newssites, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds, opt-out autoplay on video sites
 ! What this broad compilation does not block: Newsletters, cookie banners, social media links to company pages
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
-! OriginalVersion: 17January2023v1
+! OriginalVersion: 09February2023v1
 ! Title: 📱 Staying On The Phone Browser
 ! Expires: 10 days
 ! Description: Created as a proof of concept, and for the benefit of people who really like their phone's web browsers and who are less keen on using various apps.
@@ -11363,12 +11363,12 @@ deezer.com#?#.page-alerts:has(a[href$="/download"])
 fileinfo.com##.fv
 fileinfo.com#?#.top:has(a[href*="/windows_file_viewer"])
 ! Title: 🚪 Browse websites without logging in
-! OriginalVersion: 27January2023v1
+! OriginalVersion: 09February2023v1
 ! Expires: 3 days
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! This is an extension file, not an independent list.
-! Extension file's version: 20November2022v1-Extension
+! Extension file's version: 09February2023v1-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -11584,7 +11584,7 @@ spanishdict.com#?#.ReactModal__Overlay:has(video[src$="/bloom2.mp4"])
 ! Makes the official article previews fully visible
 ! https://www.zeit.de/2020/06/alfred-bauer-filmbuerokratie-nationalsozialismus-berlinale
 zeit.de#$?#.paragraph--faded { overflow: visible !important }
-zeit.de#$?#.paragraph--faded:before { background-image: none !important }
+zeit.de#$?#.paragraph--faded::before { background-image: none !important }
 zeit.de#$?##paywall { top: 250px !important }
 ! ScienceDirect
 ! Removes a sudden, immediate and somewhat large account creation prompt
@@ -11851,7 +11851,7 @@ investing.com###PromoteSignUpPopUp
 ! Removes a small login prompt in the bottom left
 context.reverso.net###register-popup-bottom
 ! Title: 🌫 Media Player Gradient Remover
-! OriginalVersion: 13September2022v2-Alpha
+! OriginalVersion: 09February2023v1-Alpha
 ! Expires: 6 days
 ! Description: So you're trying to enjoy a new episode of Butterbean's Café, but you keep bumping into the mouse, which causes the control bar to warp the colours on a third of a screen which ruins the scenic view, and you wait impatiently for the colours to return to normal, which ruins your fun and immersion? If so, this is the perfect list for you.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -12403,7 +12403,7 @@ fandom.com#$#.right-rail-wrapper { padding: 0 1px !important }
 fandom.com#$##WikiaAdInContentPlaceHolder { padding: 7px !important }
 !#endif
 ! Title: 🚤 Anti-'Snow marketing' List
-! OriginalVersion: 16January2023v1-Beta
+! OriginalVersion: 09February2023v1-Beta
 ! Expires: 3 days
 ! Description: With Christmas being full of arcane, complicated, and very, _very_ rigid traditions in large parts of the world, the snow that is everywhere on many websites during that time isn't helping on confused peoples' mood either. So here's a list to remove the snow from those websites.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -12871,98 +12871,7 @@ nettavisen.no###topover
 ! Prevents sites from making wiki pages impossible to edit on phone screens 📛
 pcgamingwiki.com#$?##mw-head-right > li { display: inline-block !important }
 pcgamingwiki.com#$?##mw-head-more { display: inline-block !important }
-!+ NOT_OPTIMIZED
-! Title: 🔴 Anti-'Unnecessary notification counters' List
-! OriginalVersion: 16February2021v1-Alpha
-! Expires: 7 days
-! Description: Having something display a permanent fake notification counter, to make the users think that they've received a notification when they haven't, takes quite a bit of scumminess on the maker's behalf to pull off. Here's how to filter them out of sight.
-! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
-! Google Play Store
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.allmessages.inonemessenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.barleymobile.mms"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.bestringtonesapps.freeringtonesforandroid"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.betmesage.socialmessager"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.calea.echo"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.callapp.contacts"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.callerid.block"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.cumong.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.domobile.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.ezapp.dual.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.fast.messages.social.messenger.free"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.godza.forecastweather"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.hakomuna"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.heyemoji.onemms.flat"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.icq.mobile.client"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.jb.gosms.pctheme.newmessengerversion2017"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.jb.mail"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.link.messages.sms"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.litefb.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.mapswithme.maps.pro"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.melonsapp.privacymessenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.messagingnew.allinone"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.messengerforall.messagingpro"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.q2developer.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.sms.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.textu.sms.privacy.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.trtf.blue"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.unseen.hidelastseen.noseen"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=comm.mailboxall.inone"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=eshbuildgroup.our.com.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=facebook.lite.messengerlite"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=me.bluemail.mail"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=messages.messenger.messages"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=messages.messenger.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=Messenger+:+Free+Videos,Text,+Messages"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=messenger.chat.social.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=messenger.facebooklite.messengerforfacebook"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=messenger.free.video.call.chat"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=messenger.messenger.messanger.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=messenger.messenger.messenger.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=messenger.messenger.videocall.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=messenger.pro.messenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=messenger.social.chat.apps"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=messengertalk.videochat.messenger.easymessenger"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=park.exchange.client.app"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=park.hotm.email.app"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=ru.mail.mailapp"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=ru.ok.messages"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=text.free.messenger.com.mymessengers2018"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.mail.emailapp.easymail2018"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.mastercomlimited.cardriving_t"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.play365.ultramike"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.boxitsoft.battleofwizards"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.extremefungames.mototrafficrace"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.strategygame.gameofwarriors"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.playappking.ametalsoldiers"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.tap4fun.callofsparta"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.gdcompany.metalmadness"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.EvilChaotic.ModernWarplanes"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.gdcompany.deepwaters"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.polyplayinc.combatassault"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.CubeSoftware.BattleOfWarships"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.godza.weatherapps2019"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.godza.audiorecorder"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.godza.weatherpapanoel"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=ru.azurinteractive.robotwarfare"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.zonmob.HeroLegend.KingdomDefense"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=com.worldofbattleships.warofpacificrim"])
-play.google.com#?#.no-rationale.card:has(a[href*=apps]):has([href*="=mobi.ifunny"])
-! Other fake counters
-philips.*##.p-discount.p-promotion-lens-xs.p-promotion-lens
-my.nintendo.com##.badge
-sidereel.com##.anonymous .notifications-count
-arabiaweather.com##.red-dot.anonymous-user-only::after
-fanpage.it##.button-notifications
-17track.net##.avatar-away > i
-infoq.com##.icon__notifications > .badge
-! Counters that are technically real, but which can't be dismissed with ease at all
-portalbank.no##li.navigation__item:nth-of-type(6)::after
-! Counters for things that probably shouldn't have had counters for them, e.g. 'Breaking News' feeds
-timesofindia.com##.track::before
-timesofindia.com##.id_track::after
-! Online presence counters that are extremely unreliable
-mewe.com##.chat-avatar_dot
-mewe.com##.h-dot
+!!! !#include Android%20Scum%20Class%20%E2%80%94%20Fake%20notification%20counters.txt
 !+ NOT_OPTIMIZED
 ! Title: 🕳 Empty Padding Remover
 ! OriginalVersion: 18January2023v1-Alpha
@@ -16529,7 +16438,7 @@ ourcodeworld.com##.mouse-cursor
 ! No iMacs have had less than 1600px wide monitors since 2006, MacBook Pro since 2012, or MacBook Air since 2017. Thus I'm taking a gamble by embedding this for Mac users:
 !+ NOT_OPTIMIZED
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! OriginalVersion: 03February2023v1-Beta
+! OriginalVersion: 09February2023v1-Beta
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
