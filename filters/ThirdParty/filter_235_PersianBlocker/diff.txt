@@ -2,8 +2,10 @@
 opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/):others()
 ! xip.li##.form-inline:others() is excluded by "xip.li##.form-inline:others()" in exclusions.txt
 xip.li##.form-inline:others()
-! Rule "/wp-admin/admin-ajax.php?postviews_id=$xhr" converted to: "/wp-admin/admin-ajax.php?postviews_id=$xmlhttprequest"
-/wp-admin/admin-ajax.php?postviews_id=$xhr
+! Rule "||websocket.*/?u=*&s=$websocket,1p" converted to: "||websocket.*/?u=*&s=$websocket,~third-party"
+||websocket.*/?u=*&s=$websocket,1p
+! Rule "/wp-admin/admin-ajax.php?postviews_id=$xhr,1p" converted to: "/wp-admin/admin-ajax.php?postviews_id=$xmlhttprequest,~third-party"
+/wp-admin/admin-ajax.php?postviews_id=$xhr,1p
 ! Rule "||aasaam.com^$3p" converted to: "||aasaam.com^$third-party"
 ||aasaam.com^$3p
 ! Rule "||akhbarrasmi.com^$3p" converted to: "||akhbarrasmi.com^$third-party"
