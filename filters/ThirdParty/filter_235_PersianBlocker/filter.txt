@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2023-02-09
+! Last modified: 2023-02-13
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -703,6 +703,8 @@ click.ir##.clads-inner
 ||caffecinema.com/media/banners/
 @@||caffecinema.com/media/banners/telegram-$image,~third-party
 ! >> D <<
+! https://github.com/MasterKia/PersianBlocker/issues/130
+daneshchi.ir##div[id^="ads"]
 dlrozaneh.ir##.index-adstop > a:not([href*="dlrozaneh.ir"])
 dlrozaneh.ir##.linkbox > header:has-text(تبلیغات متنی):upward(.linkbox)
 ! https://github.com/MasterKia/PersianBlocker/issues/109
@@ -2671,24 +2673,20 @@ zoomtech.org###posts_single_ads
 ||shamining.com^$document
 ! https://github.com/Webamoozcom/warning-list/discussions/125
 ||t.me/BITBOD_TRADING_CLUB^$document
+! https://github.com/Webamoozcom/warning-list/discussions/129
+||ccnnetwork.co^$document
 ! https://github.com/Webamoozcom/warning-list/discussions/130
 ||wintap.io^$document
 ! https://github.com/Webamoozcom/warning-list/discussions/132
 ||frzss.com^$document
-! https://t.me/MiladNouriChannel/685
-! https://instagram.com/p/Ch7u5KrjAkP
-! https://cyber-alerts.com/2022/08/27/websites-related-to-usdtpkpgmail-com
-||usdtbang.com^$all
-||usdteng.com^$all
-||usdtcan.com^$all
-||usdtbbc.com^$all
-||imtokenwallet.biz^$all
-||emenshowapp.xyz^$all
-! ^ Phishing
+! https://github.com/Webamoozcom/warning-list/discussions/138
+||hoho.mobi^$document
+!-------------------------^ Scam Sites ^-----------------------!
+!-------------------v Malware/Phishing Sites v-----------------!
 ! https://shahrsakhtafzar.com/fa/news/security/42227-google-play-rubika-app-spy-users-personal-information
 ! https://farnet.io/1401/08/324594/rubika-is-detected-as-malware/
 ||rubika.ir^$all,domain=~web.rubika.ir
-!-------------------------^ Scam Sites ^-----------------------!
+!-------------------^ Malware/Phishing Sites ^-----------------!
 !-------------------------v Warning for video censorship sites v-----------------------!
 ! https://github.com/MasterKia/PersianBlocker/issues/119
 www.google.com#$#.g a[href*="filmr.ir"]> h3::after { content: ' [دارای حذفیات] ' !important; color: #E6000D !important; }
