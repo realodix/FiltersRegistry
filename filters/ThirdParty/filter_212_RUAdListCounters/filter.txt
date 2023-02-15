@@ -1,8 +1,8 @@
 !
-! Checksum: QnBTTpJNrAxQGi2APOIUhA
-! OriginalVersion: 202302151650
+! Checksum: /mEYIffiDFHpdNfCPNP/ZQ
+! OriginalVersion: 202302152030
 ! Title: RU AdList: Counters
-! Last modified: 15 Feb 2023 16:50 UTC
+! Last modified: 15 Feb 2023 20:30 UTC
 ! Expires: 1 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -339,6 +339,7 @@ _pagespeed_beacon?
 ||catalog.metka.ru^$third-party
 ||cc.calltracking.ru^$third-party
 ||cdn-rum.ngenix.net^$third-party
+||cdn.ddmanager.ru^$third-party
 ||cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js
 ||cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js
 ||cdn.scarabresearch.com^$third-party
@@ -1117,7 +1118,7 @@ zannn.top#@?#this-is-a-malicious-site
 ||cxense.com^$third-party,domain=delfi.lt
 ||footboom.com/dist/app/js/antiAdBlock-
 ||google-analytics.com^$domain=4pda.to|cdnvideo.ru|igromania.ru|rambler.ru
-||googletagmanager.com/gtm.js$domain=5-tv.ru|censor.net|citilink.ru|dtf.ru|gazeta.ru|ixbt.com|ixbt.games|ixbt.market|ixbt.video|kp.kg|kp.kz|kp.md|kp.ru|lifehacker.ru|livejournal.com|motor.ru|nur.kz|rambler.ru|rbkgames.com|rutube.ru|sports.ru|tsn.ua|tut.by|vc.ru
+||googletagmanager.com/gtm.js$domain=5-tv.ru|censor.net|citilink.ru|dtf.ru|gazeta.ru|ixbt.com|ixbt.games|ixbt.market|ixbt.video|kp.kg|kp.kz|kp.md|kp.ru|lifehacker.ru|livejournal.com|motor.ru|nur.kz|rambler.ru|rbkgames.com|rutube.ru|sbermegamarket.ru|sports.ru|tsn.ua|tut.by|vc.ru
 ||rcm.rambler.ru^$domain=championat.com|gazeta.ru|lenta.ru|rambler.ru
 ||rcmjs.rambler.ru^$domain=autorambler.ru|championat.com|gazeta.ru|lenta.ru|rambler.ru
 ||yastatic.net/naydex/autoru/$script,redirect=empty
@@ -1125,7 +1126,6 @@ zannn.top#@?#this-is-a-malicious-site
 ! yandex
 /^https?://mail\.yandex\.[^\s]{125,}/$redirect=nooptext,script,~third-party
 /^https?://yastatic\.net\/www\/_\/[^\s]{150,}/$redirect=nooptext,image,domain=yandex.by|yandex.kz|yandex.ru|yandex.uz
-@@/^https?://yandex\.ru\/turbo[^\s]+(dni24\.com|fishki\.net|news\.ru|publy\.ru|tsargrad\.tv)/$csp=script-src
 @@://yandex.*/news/$generichide
 @@://yandex.*/news|$generichide
 disk.yandex.*,mail.yandex.*##.Base-Onboarding
@@ -1233,6 +1233,7 @@ yandex.*#?#.touch-feed > div > .feed-item[id^="zen-row-"]:-abp-has([class^="zen-
 4pda.*##html[style] > body a[href*="goo.gl"]
 4pda.*##html[style] > body a[href*="is.gd"]
 4pda.*##html[style] > body div[class$="-brand-header"]
+4pda.*#?#.article div[style^="background-color:"]:-abp-has(> a[href*="bit.ly"])
 4pda.*#?#[itemprop="articleBody"] > div[style^="background-color:"]:-abp-has(> a[href*="://s.zbanx.com/r/"])
 4pda.*#?#html[style] > body a.rounded[href][target="_blank"]:-abp-contains(/^Узнать /)
 ! анонс в мобильно-планшетной версии макета
