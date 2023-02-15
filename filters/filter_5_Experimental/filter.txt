@@ -282,6 +282,10 @@ ozerki.ru#?#header > div.popup:has(> div.popup__container div.rkf_popup_button >
 !#if (adguard && !adguard_ext_safari)
 ||chrome.test.filter.com^$third-party
 !#endif
+!
+! https://github.com/AdguardTeam/AdguardFilters/issues/142875
+imdb.com#?#div[data-testid="promptable"]:has(.ipc-rating-display-with-poster__image)
+imdb.com#$?#body:has(div[data-testid="promptable"] .ipc-rating-display-with-poster__image) { overflow: auto !important; }
 !-------------------------------------------------------------------!
 !------- Experimental rules for Mobile ads filter-------------------!
 !-------------------------------------------------------------------!
