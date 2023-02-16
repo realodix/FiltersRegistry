@@ -6,8 +6,8 @@
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies i EasyList/AdGuard Base!
 ! Collaborators: MajkiIT, F4z, xxcriticxx, blocker999, hawkeye116477, krystian3w
 ! Homepage: https://www.certyficate.it/
-! OriginalVersion: 2023.2.5.0
-! Last modified: Sun, 05 Feb 2023, 20:40 UTC+01:00
+! OriginalVersion: 2023.2.15.0
+! Last modified: Wed, 15 Feb 2023, 20:51 UTC+01:00
 ! Expires: 2 days
 ! Support:
 !   Email => errorsfilters@certyficate.it
@@ -18,7 +18,7 @@
 ! Copyright © 2022 Certyficate IT
 ! Copyright © 2022 Filters Heroes
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock/
-! v.2023.2.5.0 aktualizacja: nie, 05 lut 2023, 20:40 UTC+01:00
+! v.2023.2.15.0 aktualizacja: śro, 15 lut 2023, 20:51 UTC+01:00
 !
 !
 ! Specyficzne reguły ukrywające
@@ -1500,6 +1500,7 @@ kingsong.pl##body > div:nth-of-type(5)[style*="position"][style*="fixed"]
 kino-sokol.pl###site-settings-popup.cmp-popup
 kino.ck.przemysl.pl###widget-12
 kino.mdkwagrowiec.pl#?##myModals:-abp-contains(RODO)
+kinomoc.com##.message-alert
 kinonh.pl,nowehoryzonty.pl###div_ac
 kioxia.com##.modaal-inline.modaal-wrapper[id], .modaal-overlay[id]
 kkm.ztm.kielce.pl##.trn-modal-info-rodo
@@ -2457,6 +2458,7 @@ salonydenon.pl##.tvcmscookies-notice
 salonynoma.pl##.alert-container.pp-alert-noma
 samnaprawiam.com##.gdprcookie
 samochod.porowneo.pl#?##root > #main-app-container > div[class^="sc-"]:nth-last-child(-n+2):-abp-has(> button ~ div > a[href*="rules=polityka_prywatnosci"])
+samochody.pl#?#.react-portal:-abp-has(> div[class*="Modal"] [class*="Cookies_box_"] button)
 samsonite.pl##div.cookies-dialog
 samsung.com##.cm-cookie-geo
 sandecja.pl###rodoPolicy
@@ -2525,6 +2527,7 @@ six-payment-services.com#?#.warning.state:-abp-has(.system-notification-text:-ab
 skijumping.pl###modalGdpr
 sklep-agro-sklep.pl##.footer.config-messages
 sklep-domwhisky.pl###rodo-modal-all
+sklep-elektronik.pl#?#.jconfirm:-abp-has(.pdcookie-show-submit.btn)
 sklep-galvet.pl###privacy-message
 sklep-tosia.eu##.cookie-center
 sklep.audiopunkt.com.pl,talbud.pl,termgaz.pl###cook_woyt
@@ -2600,6 +2603,8 @@ splendor24.pl#?#.box_custom:-abp-has(span:-abp-contains(PRYWATNOŚĆ))
 spolem.bialystok.pl###popup-announcement-wrap, #popup-announcement-overlay
 spolemkatowice.pl###btn-to-top-wrap
 sport-time.com.pl###divId
+sportano.pl##.global-cookie
+sportano.pl##body.cookie-overlay-active::after
 sportraw.pl##div[id^="tws"]:not(.toplayerSpecialClass), #topLayerBackDrop
 sportsdirect.com###divCookieAcceptance
 sportsevents365.pl##.header-GDPR-desktop, .header-GDPR-mobile
@@ -2767,6 +2772,7 @@ trovit.pl###welcomebar-wrapper
 truckstore.com##.tso-popup-footer, .tso-popup-overlay
 trustmate.io##div[class^="Cookies__CookiesWrapper-sc-"]
 trzcinica.com.pl##.window, #maseczka
+tst.pl#?#footer ~ div.fixed:-abp-has([href="/prywatnosc"])
 tupperware.pl##.topRibbon
 turio.com.pl##.cookie-info-dlg
 turtlewax.pl###js-notify.notify
@@ -3156,6 +3162,7 @@ oetker.*/static/js/privacy-dialog/
 /cookies-legal-
 /cookies.smartgroup.min.js
 /cookieser.js$script
+/cookiespopup/*$domain=pl
 /cookiesWidget/widget.js$script
 /cookiewarning*.js$script
 /css/cukiernia.css$~third-party
@@ -4082,6 +4089,7 @@ puratos.pl#@##cookieBannerModal
 ranking.perspektywy.pl#@##cookieModal ~ .modal-backdrop
 selgros.pl#@##cookie_accept
 senda.pl#@##__next div[class*="CookieConsent"]
+senda.pl#@#.CookieConsent:not(body):not(html)
 sonarhome.pl#@#.bg-facebook
 toteraz.pl#@##cookie-preferences
 tvp.pl#@#.tvp-cookie-overlay:not(body):not(html)
@@ -4107,7 +4115,7 @@ e-zikoapteka.pl,mcdonalds.pl#@#.cookies-info:not(body):not(html)
 ebilet.pl#@##cookies-overlay:not(body):not(html)
 ebilet.pl,orange.pl#@##cookies-info:not(body):not(html)
 elavon.pl#@#.cookiePolicy:not(.reveal):not(body):not(html)
-electrolux.pl,sedna.pl#@#.CookieConsent:not(body):not(html)
+electrolux.pl,senda.pl#@#.CookieConsent:not(body):not(html)
 eurogamer.pl#@##optanon:not(body):not(html)
 eurogamer.pl#@#.optanon-alert-box-wrapper:not(body):not(html)
 gdansk.pl,gokf.gda.pl,wins.pl#@##cookies:not(body):not(html):not(.section):not(.fade)
@@ -4152,7 +4160,7 @@ wtk.pl#@#.privacy-container:not(body):not(html):not(.content-container)
 4lomza.pl#$#body.polityka-cookies { margin-top: 0 !important; }
 7ryb.pl,etransport.pl,grupawsparcia.pl##.modals.dimmer
 7ryb.pl,etransport.pl,grupawsparcia.pl,hrkgame.com#$#.dimmable, .dimmed { overflow: auto !important; }
-24wroclaw.pl,academy.asseco.pl,auto-czesci-lipiec.pl,azb-cuw.pl,babyland.pl,barbara.net.pl,biblioteka-cybinka.pl,bilety.mazowieckie.com.pl,bilety.wok.walbrzych.pl,bip.ug.giby.wrotapodlasia.pl,bip.ug.kolaki.wrotapodlasia.pl,bip.unesco.lodz.pl,biznes24.pgnig.pl,bizneswregionie.pl,bosch-easycontrol.com,cateringslask.pl,ceres.pl,ciekaweblogi.pl,cinkciarz.pl,club.galilea.com.pl,crfop.gdos.gov.pl,czescizamienne.amica.pl,dabrowka.net.pl,dane.gov.pl,dawg.pl,delikarta.pl,dm.pgi.gov.pl,dobrapogoda24.pl,doleasingu.com,dyzurnet.pl,dzialoszyn.pl,e-sochaczew.pl,echomedia.info,eforia.pl,elixirgroup.pl,empik.com,epaka.pl,euromobil.com.pl,euromotor.pl,falkow.pl,franklintempleton.pl,gemini.pl,giantfabryczna.pl,gmina-aleksandrow.pl,goldenline.pl,grabow.pl,grebkow.pl,gry.lotto.pl,handluj.com,hortico.pl,hotelpiast.slupsk.pl,inframost.info,jaktorow.pl,japanmotors.pl,jawor24h.pl,katarzynatryniszewska.pl,komugroup.eu,koreamotors.pl,korytnica.pl,kpcen-torun.edu.pl,lechpol.pl,lektury.gov.pl,lgd-wieruszow.pl,liv-cycling.com,m.24jgora.pl,makro.pl,metropoliaztm.pl,mistravel.pl,mkidn.gov.pl,monitoring.prospect.pl,moto-firma.pl,multimediago.pl,mzbm.tychy.pl,naekranie.pl,obywatel.gov.pl,ogladajanime.pl,ogloszenia.jmlnet.pl,olesnica24.com,osieck.pl,paczkomaty.pl,panoramafirm.pl,pgd.pl,podleze-piekielko.pl,poradnikbudowlany.eu,portalpasazera.pl,printoteka.pl,puma.com,puratos.pl,qa-stack.pl,raciazek.pl,ranking.perspektywy.pl,reczno.pl,rekrutacja.wsfiz.edu.pl,repostuj.pl,rosciszewo.pl,samasz.pl,secure.edu.pl,silesiacitycenter.com.pl,sklep.krisauto.pl,sleza-olawa.pl,smokolandia.pl,sobieniejeziory.pl,sobolew.pl,socialdruk.pl,ssm.insp.waw.pl,strefakultury.pl,tanibus.com,tanikurier.com,tarnobrzeg.info,tvbraniewo24.pl,tvdami.eu,tvgo.orange.pl,tvmalbork.pl,tvregionalna24.pl,tvsztum.pl,vwbank.pl,wapex.pl,warta.pl,wedding.pl,wedkuje.pl,wit.edu.pl,wrzesnia.info.pl,www.gbl.waw.pl,zamowienia.gbl.waw.pl,ztm.gda.pl,zulawyimierzeja24.pl,zwolen.pl,zyjzdrowo.info#$#.modal-open[class] { overflow: visible !important; padding-right: 0 !important; margin-right: 0 !important; }
+24wroclaw.pl,academy.asseco.pl,auto-czesci-lipiec.pl,azb-cuw.pl,babyland.pl,barbara.net.pl,biblioteka-cybinka.pl,bilety.mazowieckie.com.pl,bilety.wok.walbrzych.pl,bip.ug.giby.wrotapodlasia.pl,bip.ug.kolaki.wrotapodlasia.pl,bip.unesco.lodz.pl,biznes24.pgnig.pl,bizneswregionie.pl,bosch-easycontrol.com,cateringslask.pl,ceres.pl,ciekaweblogi.pl,cinkciarz.pl,club.galilea.com.pl,crfop.gdos.gov.pl,czescizamienne.amica.pl,dabrowka.net.pl,dane.gov.pl,dawg.pl,delikarta.pl,dm.pgi.gov.pl,dobrapogoda24.pl,doleasingu.com,dyzurnet.pl,dzialoszyn.pl,e-sochaczew.pl,echomedia.info,eforia.pl,elixirgroup.pl,empik.com,euromobil.com.pl,euromotor.pl,falkow.pl,franklintempleton.pl,gemini.pl,giantfabryczna.pl,gmina-aleksandrow.pl,goldenline.pl,grabow.pl,grebkow.pl,gry.lotto.pl,handluj.com,hortico.pl,hotelpiast.slupsk.pl,inframost.info,jaktorow.pl,japanmotors.pl,jawor24h.pl,katarzynatryniszewska.pl,komugroup.eu,koreamotors.pl,korytnica.pl,kpcen-torun.edu.pl,lechpol.pl,lektury.gov.pl,lgd-wieruszow.pl,liv-cycling.com,m.24jgora.pl,makro.pl,metropoliaztm.pl,mistravel.pl,mkidn.gov.pl,monitoring.prospect.pl,moto-firma.pl,multimediago.pl,mzbm.tychy.pl,naekranie.pl,obywatel.gov.pl,ogladajanime.pl,ogloszenia.jmlnet.pl,olesnica24.com,osieck.pl,paczkomaty.pl,panoramafirm.pl,pgd.pl,podleze-piekielko.pl,poradnikbudowlany.eu,portalpasazera.pl,printoteka.pl,puma.com,puratos.pl,qa-stack.pl,raciazek.pl,ranking.perspektywy.pl,reczno.pl,rekrutacja.wsfiz.edu.pl,repostuj.pl,rosciszewo.pl,samasz.pl,secure.edu.pl,silesiacitycenter.com.pl,sklep.krisauto.pl,sleza-olawa.pl,smokolandia.pl,sobieniejeziory.pl,sobolew.pl,socialdruk.pl,ssm.insp.waw.pl,strefakultury.pl,tanibus.com,tanikurier.com,tarnobrzeg.info,tvbraniewo24.pl,tvdami.eu,tvgo.orange.pl,tvmalbork.pl,tvregionalna24.pl,tvsztum.pl,vwbank.pl,wapex.pl,warta.pl,wedding.pl,wedkuje.pl,wit.edu.pl,wrzesnia.info.pl,www.gbl.waw.pl,zamowienia.gbl.waw.pl,ztm.gda.pl,zulawyimierzeja24.pl,zwolen.pl,zyjzdrowo.info#$#.modal-open[class] { overflow: visible !important; padding-right: 0 !important; margin-right: 0 !important; }
 24wroclaw.pl,bizneswregionie.pl,dabrowka.net.pl,generali.pl,lepszytrener.pl,m.24jgora.pl,poradnikbudowlany.eu,saleswww.proama.pl,tvbraniewo24.pl,tvmalbork.pl,tvregionalna24.pl,tvsztum.pl,wit.edu.pl,zulawyimierzeja24.pl###rodoModal, .modal-backdrop
 abcalkoholu.pl#$#.cookielaw { padding-top: 0 !important; }
 absolvent.pl###__next > div > footer ~ div:last-child
@@ -4365,7 +4373,6 @@ empik.com##body.cookies-consent-component__prevent-scroll footer ~ div[class$="-
 empik.com#$#html.cookies-consent-component__prevent-scroll { overflow-y: auto !important; }
 enerad.pl#$#.cli-barmodal-open { overflow: visible !important; }
 enerad.pl##.wt-cli-cookie-bar-container
-epaka.pl###colorbox, .modal-backdrop
 epicdrama.pl##.ui-modal[id^="modal_cookie"]
 epicdrama.pl,odrabiamy.pl,patronite.pl#$#.blur { filter: none !important; }
 eschenker.dbschenker.com###es-shell-overlay-container:has(es-privacy-modal)
