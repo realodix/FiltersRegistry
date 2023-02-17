@@ -1617,6 +1617,7 @@
 !
 ! SECTION: Cookies - General URL
 !
+||cmp.setupcmp.com^$third-party
 ||cmp.pubtech.ai^$third-party
 ||hu-manity.co^$third-party
 ||cookie-lista.cz^$third-party
@@ -11562,7 +11563,7 @@ blumixx.de,roesle.com,moses-verlag.de,radonline.de,arctic.de#$#.acris-cookie-con
 ! Misc rules, removed during optimization. If some rules are in groups, no need to move them here
 !
 !+ PLATFORM(ios)
-news.sky.com#$?#body { overflow: auto !important; position: static !important; }
+cdn.privacy-mgmt.com,news.sky.com#%#//scriptlet('trusted-click-element', 'button[title="Accept all"]')
 !+ NOT_OPTIMIZED
 tiktok.com##tiktok-cookie-banner
 !+ NOT_OPTIMIZED
@@ -13044,6 +13045,9 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/143028
+!+ PLATFORM(ios, ext_android_cb)
+@@||cdn.privacy-mgmt.com^$domain=news.sky.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142911
 easyticket.de#@#.cookie-overlay:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142883
@@ -26481,6 +26485,8 @@ jiji.com,edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,
 !
 ! SECTION: Subscriptions - Regular rules
 !
+aucview.com##.alertModal
+aucview.com###alertModalBg
 dell.com#$##mh-ext-signupemail-modal { display: none !important; }
 dell.com#$#html[email-modal-open] > body:not(#style_important) { position: static !important; }
 dizipal507.com#$#.mfp-wrap { display: none!important; }
@@ -38910,6 +38916,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+tripadvisor.com##footer ~ div[class^="Su"][style="bottom: 284px;"]
 tokyo-np.co.jp##.koudoku_annai
 hepsiburada.com##div[id^="sponProduct"]
 live.kufu.co.jp##.ad_list_block
@@ -43672,7 +43679,7 @@ kahoku.news##div[style="min-height:492px;"]
 news.ntv.co.jp##.recommend-list-wrapper
 otekomachi.yomiuri.co.jp###_popIn_right
 ctinews.com#?#.border-b > div#_popIn_recommend:upward(1)
-kakakumag.com###_popIn_recommend
+ameblo.jp,kakakumag.com###_popIn_recommend
 itmedia.co.jp##._popIn_recommend:empty
 mbs.jp##.common-wrap--ranking
 ||api.popin.cc^$third-party

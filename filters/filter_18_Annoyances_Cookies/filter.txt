@@ -1617,6 +1617,7 @@
 !
 ! SECTION: Cookies - General URL
 !
+||cmp.setupcmp.com^$third-party
 ||cmp.pubtech.ai^$third-party
 ||hu-manity.co^$third-party
 ||cookie-lista.cz^$third-party
@@ -11562,7 +11563,7 @@ blumixx.de,roesle.com,moses-verlag.de,radonline.de,arctic.de#$#.acris-cookie-con
 ! Misc rules, removed during optimization. If some rules are in groups, no need to move them here
 !
 !+ PLATFORM(ios)
-news.sky.com#$?#body { overflow: auto !important; position: static !important; }
+cdn.privacy-mgmt.com,news.sky.com#%#//scriptlet('trusted-click-element', 'button[title="Accept all"]')
 !+ NOT_OPTIMIZED
 tiktok.com##tiktok-cookie-banner
 !+ NOT_OPTIMIZED
@@ -13044,6 +13045,9 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/143028
+!+ PLATFORM(ios, ext_android_cb)
+@@||cdn.privacy-mgmt.com^$domain=news.sky.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142911
 easyticket.de#@#.cookie-overlay:not(html):not(body)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142883
