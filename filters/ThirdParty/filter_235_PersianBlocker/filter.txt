@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2023-02-16
+! Last modified: 2023-02-17
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -1357,6 +1357,11 @@ jobinja.ir##.c-forceToLogin__message.o-box
 jobinja.ir#$#[class*="forceToLogin"] [class*="forceToLogin"] { filter: none !important }
 ||javanmobile.com/wp-content/cache/min/*/wp-content/plugins/adrotate
 ! >> K <<
+! https://github.com/MasterKia/PersianBlocker/issues/134
+||khabarerooz.com/servev2/*.gif$image,~third-party
+||khabarerooz.com/linkhelpers^$xmlhttprequest,~third-party
+khabarerooz.com##.zxc
+khabarerooz.com##.news-bottom-link
 ! https://github.com/MasterKia/PersianBlocker/issues/110
 ||khodropluss.ir/wp-json/wp-statistics^
 khodropluss.ir##.top_img_ads
@@ -2141,10 +2146,11 @@ saednews.com##.w-100.justify-content-center.d-flex
 saednews.com##.mb-3.top-1.sticky-top
 saednews.com###header-banner-4
 saednews.com###rt-backlinks-pos
-saat24.news##[href^="/redirect/ads/"]
-saat24.news##.ads.box
-saat24.news###box145
-saat24.news###box167
+! https://github.com/MasterKia/PersianBlocker/issues/133
+||media.saat24.news/d/*.gif$image,~third-party
+||saat24.news/rest/visit^$xmlhttprequest,~third-party
+saat24.news##li[id^="ad"]:upward(section.box)
+saat24.news##section.box ul > li.bklnk:upward(section.box)
 ||1000site.ir/asset/media/banner
 1000site.ir##.kanban-col
 1000site.ir##.col-md-offset-6.col-md-3
