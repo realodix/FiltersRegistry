@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0217.4
+! OriginalVersion: 2023.0218.0
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -2732,6 +2732,10 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
 !
+1412.rest#%#//scriptlet('abort-on-stack-trace', 'jQuery.prototype.css', 'check_adBlock')
+!#if (adguard_app_ios)
+1412.rest#@##google_ads
+!#endif
 sysnet.pe.kr#%#//scriptlet('abort-on-stack-trace', 'CSS2Properties.prototype.getPropertyValue', 'setTimeout')
 !#if (adguard_app_ios)
 @@||sysnet.pe.kr^$generichide
@@ -2835,6 +2839,7 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+1412.rest#@##google_ads
 @@||sysnet.pe.kr^$generichide
 @@||tsuvod.com/data/utep_ad.js
 @@||tsuvod.com/data/yzfdmoan.js
