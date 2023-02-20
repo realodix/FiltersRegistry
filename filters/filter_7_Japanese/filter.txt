@@ -466,6 +466,9 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/143424
+!+ PLATFORM(ios, ext_safari)
+||code.piano.io/api/tinypass.min.js$domain=tokyo-sports.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143053
 tojav.net#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com')
 tojav.net##div[id][class^="popup"][class$="wrap"]
@@ -2349,6 +2352,8 @@ kuruma-news.jp,magmix.jp,trafficnews.jp$$div[data-history="photo_extra"]
 /wp-content/plugins/amazonjs/*
 !
 ! Malware/Phishing
+://amazon-*.com/mobile/signin.php|$document
+-co-jp.*.top/ai/?authenticated=true&openid%2Fgp%2Fsignin%2F$document
 .com/ae/login.php?openid.pape.max_auth_age=0&openid.return_to=%$document
 ||s.asu-kuronekoy*-jp.icu^$document
 /DOCOMO.apk^$document
@@ -8033,7 +8038,8 @@ point-g.rakuten.co.jp#@#.searchAd
 !
 @@||afi-b.com/assets/dist/img/general/top/img/ad/$image,~third-party
 @@||afi-b.com/assets/img/general/common/$image,domain=affiliate-b.com
-! FP by generic cosmetic rules
+! FP by EasyList generic cosmetic rules
+mamastar.jp#@#.adstop
 ironsaga-msoku.xyz,takushoku.info#@#.ad.widget
 ringo-no-mori.jp#@#.ad-bnr
 arukikata.co.jp#@#.ad_btn
