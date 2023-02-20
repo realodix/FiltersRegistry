@@ -2205,6 +2205,14 @@ eveningnews24.co.uk,rollingstone.de,eatsmarter.de,inside-digital.de,hs.fi,vrt.be
 !
 !
 !
+/marked-cookie-consent-web/*$domain=orskogsparebank.no|hjartdalbanken.no|jaerensparebank.no
+fileee.com#$##gdpr-notice { position: absolute !important; left: -3000px !important; }
+fileee.com#$##gdpr-overlay { position: absolute !important; left: -3000px !important; }
+portal.librus.pl##.consent-categories-modal-wrapper
+musicboard.app#$#body[style="overflow: hidden;"] { overflow: auto !important; }
+musicboard.app#?#div[class^="popup_overlay_"]:has(div[class^="cookiespopup_content"])
+indomus.it##.cookiefox
+castorama.pl##body.cookieBar-darkening::before
 piearsta.lv##.acceptCookiesBlock
 picwish.com###cookies-win
 brightdata.com#$#.cookies_popup_overlay { display: none !important; }
@@ -11565,9 +11573,9 @@ teleperformance.com#$#body { overflow: auto!important; }
 teleperformance.com#$#.row.OpacityTotal { opacity: unset!important; }
 !
 ! https://github.com/AdguardTeam/AdguardFilters/issues/75007
-blumixx.de,roesle.com,moses-verlag.de,radonline.de,arctic.de#$#body.modal-open { overflow: visible !important; padding-right: 0 !important; }
-blumixx.de,roesle.com,moses-verlag.de,radonline.de,arctic.de#$#.acris-cookie-consent { display: none !important; }
-blumixx.de,roesle.com,moses-verlag.de,radonline.de,arctic.de#$#.acris-cookie-consent ~ .modal-backdrop { display: none !important; }
+bikebox-shop.de,mline.com,blumixx.de,roesle.com,moses-verlag.de,radonline.de,arctic.de#$#body.modal-open { overflow: visible !important; padding-right: 0 !important; }
+bikebox-shop.de,mline.com,blumixx.de,roesle.com,moses-verlag.de,radonline.de,arctic.de#$#.acris-cookie-consent { display: none !important; }
+bikebox-shop.de,mline.com,blumixx.de,roesle.com,moses-verlag.de,radonline.de,arctic.de#$#.acris-cookie-consent ~ .modal-backdrop { display: none !important; }
 !
 ! Misc rules, removed during optimization. If some rules are in groups, no need to move them here
 !
@@ -11866,6 +11874,7 @@ privacy.lecker.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent
 privacy.madame.de#%#AG_onLoad(function(){if(!document.cookie.includes("euconsent-v2")){var g=new MutationObserver(function(){setTimeout(function(){var b=document.querySelector('button.no-children[path="\[0,2,1\]"]');b&&b.click();},300);setTimeout(function(){var c=document.querySelector('div[title="Berechtigte Interessen"]'); c&&c.click();},300);setTimeout(function(){var d=document.querySelectorAll('label[aria-checked="true"] > .off'); d.forEach(function(d){d.click();});},800); var f=document.querySelector('button.no-children[path="\[0,3,0\]"]'); setTimeout(function(){f&&f.click();},1000);});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},3E4)}});
 consent.unilad.com,consent.ladbible.com,consent.gamingbible.co.uk,consent.unilad.co.uk#%#AG_onLoad(function(){if(window.location.href.includes("consentUUID")){var g=new MutationObserver(function(){var b=document.querySelector('button[title*="Accept" i]');b&&(g.disconnect(),b.click())});g.observe(document,{childList:!0,subtree:!0});setTimeout(function(){g.disconnect()},1E4)}});
 !
+hsl.fi#%#//scriptlet('trusted-set-cookie', 'notice_gdpr_prefs', '0,1,2:')
 octopusenergy.es#%#//scriptlet("set-cookie", "dismissCookieMessage", "true")
 ebatpro.fr#%#//scriptlet('set-cookie', 'cookie_necessity', '1')
 arthousecnma.de#%#//scriptlet('trusted-set-local-storage-item', 'cookieSettings', '{"fullOptIn":false,"googleAnalytics":false,"facebookTrackingPixel":false,"googleAds":false}')
@@ -12001,7 +12010,7 @@ e-ladestation.aldi-sued.de#%#AG_onLoad(function() {var b=new MutationObserver(fu
 uxfeedback.ru#%#//scriptlet('set-local-storage-item', 'uxfb_cookies', 'true')
 premiumkino.de#%#//scriptlet('set-cookie', 'cookie_required', 'true')
 happydog.de#%#//scriptlet('set-cookie', 'mnd-cookie-accepted-happydogde4', '1')
-superpreis-moebel.de,kantenschutzprofi.shop,diorama-world.com,colvital.de#%#//scriptlet('set-cookie-reload', 'epCookieConsent', '0')
+team-undercover.de,superpreis-moebel.de,kantenschutzprofi.shop,diorama-world.com,colvital.de#%#//scriptlet('set-cookie-reload', 'epCookieConsent', '0')
 lolaliza.com#%#//scriptlet('set-cookie', 'enableTracking', 'false')
 peakd.com#%#//scriptlet('set-cookie', 'COOKIE_CONSENT_ACCEPTED', 'true')
 tweakers.net#%#AG_onLoad(function(){var c=new MutationObserver(function(){var a=document.querySelector("button.ctaButton[data-action=\"acceptAll\"]"),b=document.querySelector("#koekieBar");a&&b&&getComputedStyle(b)&&getComputedStyle(b).display&&"block"===getComputedStyle(b).display&&(c.disconnect(),a.click())});c.observe(document,{childList:!0,subtree:!0}),setTimeout(function(){c.disconnect()},1E4)});
@@ -13058,6 +13067,9 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/143409
+@@||consent.truste.com/notice?domain=$domain=hsl.fi
+@@||consent.trustarc.com/asset/notice.js$domain=hsl.fi
 ! coastwatersports.co.uk - broken content
 @@||coastwatersports.co.uk/min/?f=ext/jquery/
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143102
