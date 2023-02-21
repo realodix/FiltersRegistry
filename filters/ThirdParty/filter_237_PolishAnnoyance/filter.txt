@@ -5,8 +5,8 @@
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
 ! Expires: 2 days
-! Last modified: Sat, 18 Feb 2023, 16:30 UTC+01:00
-! OriginalVersion: 2023.2.18.0
+! Last modified: Mon, 20 Feb 2023, 23:48 UTC+01:00
+! OriginalVersion: 2023.2.20.1
 ! Najnowsza wersja zawsze na: https://github.com/FiltersHeroes/PolishAnnoyanceFilters
 ! Zgłoszenia:
 !   Formularz (nie wymaga rejestracji) => https://polishannoyancefilters.netlify.app/issues
@@ -15,7 +15,7 @@
 ! Homepage: https://polishannoyancefilters.netlify.app
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: sob, 18 lut 2023, 16:30 UTC+01:00
+! Aktualizacja: pon, 20 lut 2023, 23:48 UTC+01:00
 !
 !
 ! Newslettery (nie popupy)
@@ -4320,6 +4320,7 @@ tokyomask.pl##.g5core-back-to-top
 tor-konferencje.pl##.tk-goto-top
 toshiba.semicon-storage.com##.dt_pagetop
 tourde.pl###imPageToTop_img
+transinfo.pl##.main-footer__back-to-top
 travelist.pl###returnToTopButton
 triathlonprzechlewo.pl##.grve-top-btn
 trofeasportowe.com##button#myBtn
@@ -11859,7 +11860,8 @@ tokfm.pl#%#//scriptlet('ubo-set.js', 'gazeta_pl.Player.FloatingPlayer.floatPlaye
 topagrar.pl#%#//scriptlet('ubo-aeld.js', 'scroll', '[native code]')
 wzielonej.pl#$##the-sticky-video.video-is-sticky { visibility: hidden !important; }
 !#if !env_mobile
-abczdrowie.pl,autocentrum.pl,autokult.pl,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,parenting.pl,~poczta.o2.pl,~poczta.wp.pl,pudelek.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl#%#//scriptlet('ubo-aeld.js', 'openFloatingPlayer', 'FloatingPlayer')
+!+ NOT_PLATFORM(ext_ff, ext_opera)
+~1login.wp.pl,abczdrowie.pl,autocentrum.pl,autokult.pl,fotoblogia.pl,gadzetomania.pl,komorkomania.pl,money.pl,o2.pl,parenting.pl,~pilot.wp.pl,~poczta.o2.pl,~poczta.wp.pl,pudelek.pl,wp.pl,www.dobreprogramy.pl,~www.wp.pl#%#//scriptlet('ubo-aeld.js', 'openFloatingPlayer', 'FloatingPlayer')
 !#endif
 !#if cap_user_stylesheet
 !
@@ -11874,7 +11876,7 @@ infozdrowie24.pl#$#.normplayer { transition: unset !important; }
 !#endif
 !
 !
-! Reguły specjalne
+! Filtry specjalne
 !#if !ext_ublock
 polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com###pafadguard
 !#endif
