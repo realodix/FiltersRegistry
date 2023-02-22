@@ -84,6 +84,7 @@
 !#######################################################
 ! SECTION: Cookies - General element hiding
 !
+###spicookiebanner
 ###cm-cookie-policy
 ##.cookie-bg
 ##.thb-cookie-bar
@@ -2210,6 +2211,8 @@ eveningnews24.co.uk,rollingstone.de,eatsmarter.de,inside-digital.de,hs.fi,vrt.be
 !
 !
 !
+ras.bz.it##body.dp--cookie-consent .body-inner::before
+forethought.ai##.md-consent
 prensariomusica.com##.rgpd-leyend
 st-andrews.ac.uk##div[id^="sta-cc"][aria-label^="Cookie preferences"]
 wolt.com##.ConsentsBannerOverlay
@@ -6831,6 +6834,9 @@ pfr.gov.ru##.user-data-processing-wrapper
 domainnameapi.com,atakdomain.com,teknolojio.com.tr###site-cookie
 otonomi.com##.footer-kvkk
 carlrippon.com#?#header > div:has(> a[href="/privacy"])
+autohaus24.de#$#.cookie-banner { display: none !important; }
+autohaus24.de#$#header ~ .cookie-banner + div[class]:empty { display: none !important; }
+autohaus24.de#$?#header ~ .cookie-banner + div[class]:empty { remove: true; }
 autohaus24.de#$#body { overflow: auto !important; }
 autohaus24.de#$#.coo__container { display: none !important; }
 116117.de,kbv.de##.layer-cookie
@@ -7243,7 +7249,6 @@ spelsberg.de##.swCookieBannerWarpper
 connect.coron.tech###noticemessage
 ||deutsche-apotheker-zeitung.de/_Resources/Static/Packages/CRON.DazSite/js/cookie-approval.js
 concept-computer.de,hygiene-onlineshop.de##div[id^="ecomas-scch-ex"]
-zmk-aktuell.de###spicookiebanner
 shopxp.com.br,concursosnobrasil.com.br,gkinfostore.com.br###lgpd
 gov.br###lgpd-cookie-banner-janela
 picfont.com###content_cookie_1
@@ -13094,6 +13099,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/143252
+autohaus24.de#@#.cookie-banner:not(body):not(html)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143247
 @@||appewa.com/assets/CookieBanner.$stylesheet,script
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143240
