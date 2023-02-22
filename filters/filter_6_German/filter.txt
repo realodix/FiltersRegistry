@@ -2268,14 +2268,16 @@ jetzt.de#?#.stream__list > li:has( > .teaser--spost)
 1000ps.at#?#.dfpboxright > span.bold:contains(Anzeige)
 1000ps.at#?##inhalt > .inhaltsmall:has(> .topzubehoeranzeige-berichte[onclick*="Werbung"])
 ! freundin.de - ads in teaser list and sponsored articles
-freundin.de#?#div[class*="teaser-list"] > article:has(> .teaser__caption > .item-marketing-advertorial)
-freundin.de#?#.item-content__row-col > article:has(> .teaser__caption > .item-marketing-sponsored)
-freundin.de#?#div[class^="pls"] > div[class^="pls"] > div:has(> div[class] div[class] > a + div[class] span:contains(Anzeige))
-freundin.de#?#div[class^="adykos"]:has(> div[class] > div[class] > span > svg > g#harpers_bezahlte_partnerschaft)
-freundin.de#?#.adykos-0:has(> div > a + div > span > svg#main > #harpers_bezahlte_partnerschaft)
-freundin.de#?#.fullWidthPagePresenter > div[class] > div[class]:has(> a > div[class] > div[class] > svg > g#harpers_bezahlte_partnerschaft)
-freundin.de#?#.fullWidthPagePresenter > div[class] > div[class]:has(> a > div[class] > div[class]:contains(Anzeige))
-freundin.de#?#.ab-ad_placement-article ~ div .ab-products-entityType_not_set:upward(2)
+! reenable rule if ad surfaces until 01.03.2023
+! freundin.de#?#div[class*="teaser-list"] > article:has(> .teaser__caption > .item-marketing-advertorial)
+! freundin.de#?#.item-content__row-col > article:has(> .teaser__caption > .item-marketing-sponsored)
+! freundin.de#?#div[class^="pls"] > div[class^="pls"] > div:has(> div[class] div[class] > a + div[class] span:contains(Anzeige))
+! freundin.de#?#div[class^="adykos"]:has(> div[class] > div[class] > span > svg > g#harpers_bezahlte_partnerschaft)
+! freundin.de#?#.adykos-0:has(> div > a + div > span > svg#main > #harpers_bezahlte_partnerschaft)
+! freundin.de#?#.fullWidthPagePresenter > div[class] > div[class]:has(> a > div[class] > div[class] > svg > g#harpers_bezahlte_partnerschaft)
+! freundin.de#?#.fullWidthPagePresenter > div[class] > div[class]:has(> a > div[class] > div[class]:contains(Anzeige))
+! freundin.de#?#.ab-ad_placement-article ~ div .ab-products-entityType_not_set:upward(2)
+freundin.de#?#div[class]:has(> div[class] > div[class] > a[href*="e-commerce"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/38629
 rennrad-news.de#?#.js-replyNewMessageContainer > .message--post[data-author="MTB-News.de"]:has(div[id^="div-gpt-ad"])
 ! winfuture-forum.de - ad category
@@ -2899,6 +2901,7 @@ winfuture.de,netzwelt.de,quoka.de,farmeramania.de,bravofly.de,computerbild.de,di
 ! ##.billboard
 formel1.de,krautundrueben.de,motorsport-total.com,traktorpool.de,fnweb.de,laborjournal.de,tarnkappe.info,deraktionaer.tv,food-tiger.de,morgenweb.de##.billboard
 !
+infranken.de##.ad_bildergalerie
 alleantworten.de##div[style^="min-height:"][class^="r89"]
 alleantworten.de##div[style="text-align: center; margin: 20px"]
 photografix-magazin.de##.herald-da
@@ -3241,6 +3244,7 @@ businessinsider.de##.bi-inpage
 gamestar.de##div[id^="aktion-"]
 besamex.de##.besamex-kairion-banner-box
 winfuture.de###news_content > a[href^="https://winfuture.de/r?h="]
+winfuture.de###news_content > a[href^="https://winfuture.de/r?h="] + br
 t-online.de##article div[class*="buttonwidgetv"]
 t-online.de##section > div[data-tb-region] > aside[data-testid]
 t-online.de##div[data-commercial-breakpoint]
