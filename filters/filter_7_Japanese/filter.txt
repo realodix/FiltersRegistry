@@ -658,21 +658,16 @@ nordot.app#%#//scriptlet('abort-current-inline-script', 'document.createElement'
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85641
 modalina.jp#%#//scriptlet('abort-on-property-read', 'AdBlockLimitation')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116093
-realtime-chart.info#$?#td[style^="vertical-align"] div[style^="top:3"]:matches-attr("style"="/^\s*top\s*:\s*3\d{2}\.?\d*px;?\s*/") > div[onclick] td > a[href*="/-"] { pointer-events: auto !important; }
 ||realtime-chart.info^$subdocument,domain=sekai-kabuka.com
-realtime-chart.info#$?#td[style^="vertical-align"] div[style*="top"]:matches-attr("style"="/^\s*top\s*:\s*3\d{2}\.?\d*px;?\s*/") > a[onmousedown*="()"] { pointer-events: none !important; }
-realtime-chart.info#$?#td[style^="vertical-align"] div[style^="top:3"]:matches-attr("style"="/^\s*top\s*:\s*3\d{2}\.?\d*px;?\s*/") > div[onclick] { pointer-events: none !important; }
-realtime-chart.info#$#td[style^="vertical-align"] div[style^="top:3"] > div[onmousedown] { pointer-events: none !important; }
+realtime-chart.info#$#td[style^="vertical-align"]  div[onclick][target="_blank"] { pointer-events: none !important; }
+realtime-chart.info#$?#td[style^="vertical-align"] div[onclick]:has(> img[src*="/clip_"] + b):not(:has(b td > a[href])) { pointer-events: none !important; }
+realtime-chart.info#$?#td[style^="vertical-align"] div[onmousedown]:has(> img[src*="/clip_"] + b):not(:has(b td > a[href])) { pointer-events: none !important; }
 realtime-chart.info#%#//scriptlet('remove-attr', 'onclick', 'td[style] div[style^="top:1"] > div')
-realtime-chart.info#?#td[style="vertical-align: top"] > div[id] > div[id] > div[id] > div[style="top:1437px"] > div[style="z-index:-1"]:contains(/^広告非表示だと色々と不具合が発生します$/)
 sekai-kabuka.com#$?#table[width="762px"] > tbody > tr > td[class] > div[id][class] > div[style="width: 267px;"]:contains(不具合が) { z-index: -1 !important; }
 sekai-kabuka.com#$#ins.adsbygoogle > div[style="width:728px;height:90px;position:absolute;z-index:999;line-height:1.1;display:flex;justify-content:center;align-items:center;"] { height: 1px !important; overflow: auto !important; }
 realtime-chart.info#$#div[style="top:1628px"] > [style*="font-size:"]:is(b, span, a) { font-size: 0 !important; }
 sekai-kabuka.com#$#div[id][class][style^="position:relative;background:#000;"][style*="width:729px;"][style*="height: 90px;"] { height: 1px !important; }
 sekai-kabuka.com#%#//scriptlet('remove-attr', 'onclick', 'div[data-js][style*="background"]', 'stay')
-realtime-chart.info#$?#div[style="height:241px;"] > div[class]:contains(/^広告非表示だと色々と不具合が発生します$/) { font-size: 0 !important; }
-realtime-chart.info#$?#div[style="top:1424px"] > div[class]:contains(/^広告 非表示だと色々と不具合が発生します$/) { font-size: 0 !important; }
-realtime-chart.info#$#div[style="width:120px;line-height:1.1;position:relative;"] > b[style="font-size:32px"] { font-size: 0 !important; }
 sekai-kabuka.com#$#div[data-js] { background: none !important; cursor: default !important; }
 @@||realtime-chart.info^$generichide
 @@||sekai-kabuka.com^$generichide
@@ -1535,7 +1530,6 @@ heim.jp#?#.l-section > div.u-alignCenter > ins.adsbygoogle:upward(2)
 akb48taimuzu.livedoor.biz#?##extra div.plugin-memo > div.side > div[id]:upward(.plugin-memo)
 akb48taimuzu.livedoor.biz#?##extra div.plugin-memo script[src^="https://js.gsspcln.jp/"]:upward(.plugin-memo)
 blog.fc2.com#?##reserve > section.side-menu > div.sidebar-style ins.adsbygoogle:upward(section.side-menu)
-realtime-chart.info#?#.konekoup + table tr:nth-child(2):has(span:contains(PR))
 smart-flash.jp#?#.section > h3:contains(今、あなたにおすすめの記事)
 momiage.work#?#.hatena-module-html > div.hatena-module-body > a[href^="https://tradingview"]:upward(2)
 hateblo.jp,hatenablog.com,hatenablog.jp,hatenadiary.com,hatenadiary.jp,momiage.work#?#.hatena-module-html > div.hatena-module-body > ins.adsbygoogle:upward(2)
@@ -6013,7 +6007,6 @@ aniplexplus.com##.hotentry
 ||x.sekai-kabuka.com/nandemo1.gif
 ||x.sekai-kabuka.com/gneko$image
 ||x.sekai-kabuka.com/http/$image
-realtime-chart.info##div[class][id][style="top: 340px;"] > a[id][onclick]
 realtime-chart.info,sekai-kabuka.com###neko_ad
 ||amazon-adsystem.com/widgets/$important,domain=realtime-chart.info|mashlife.doorblog.jp|lamsect.blog112.fc2.com|blog.domesoccer.jp|neo-blood.co.jp|katuru2ch.blog12.fc2.com|azurlanesokuhou.blog.jp|ima.goo.ne.jp|michaelsan.livedoor.biz|bluebluesunset.blog.fc2.com|kokuhakutaiken.com|netorarezukiview.com
 hana3939.com,baseballchannel.jp###text-13
@@ -8041,9 +8034,7 @@ signal-flag-z.blogspot.com#@#.vertical-ads
 @@||s.yimg.jp/bdv/yahoo/darla/*/js/darla-secure-*.js$domain=mail.yahoo.co.jp
 !
 @@||nazolog.com^$generichide
-publicdomainq.net#@#.adsbygoogle
 @@||ad.nicovideo.jp/server/get?$domain=nicovideo.jp
-@@||api.weblio.jp/act/quote/*&opul=chrome-extension$subdocument
 @@||dietnavi.com/ad_images/$image,domain=dietnavi.com
 @@||dietnavi.com^*/img/ad/$image,domain=dietnavi.com
 !
@@ -8051,19 +8042,26 @@ publicdomainq.net#@#.adsbygoogle
 point-g.rakuten.co.jp#@#.searchAd
 @@||point-g.rakuten.co.jp/pg_assets/item/contets/*/300_250_$~third-party
 @@||point-g.rakuten.co.jp/pg_assets/item/contets/*_300x250$image,~third-party
-@@||a8.net/svt/bgt$image,domain=moppy.jp|warau.jp|point-g.rakuten.co.jp
-@@||accesstrade.net^$image,domain=moppy.jp|warau.jp
+@@||a8.net/svt/bgt$image,domain=moppy.jp|warau.jp|point-g.rakuten.co.jp|point.i2i.jp
+@@||accesstrade.net^$image,domain=moppy.jp|warau.jp|point.i2i.jp
 @@||ad-track.jp^$image,domain=moppy.jp|warau.jp
 @@||advack.net/p/?ad=$image,domain=warau.jp
-@@||af-110.com/banner/$image,domain=warau.jp
+@@||aeonshop.com/assets/file/pages/img/AD/$image,domain=point.i2i.jp
+@@||afi-b.com/upload_image/$domain=point.i2i.jp
+@@||af-110.com/banner/$image,domain=warau.jp|point.i2i.jp
 @@||affiliate-b.com/upload_image/$domain=warau.jp
-@@||amazonaws.com/affiliate-img.docomo.ne.jp/banner/$image,domain=moppy.jp
+@@||amazonaws.com/affiliate-img.docomo.ne.jp/banner/$image,domain=moppy.jp|point.i2i.jp
+@@||amazonaws.com/img.point.i2i.jp/banner/*/300x250_$image,domain=point.i2i.jp
+@@||amazonaws.com/img.point.i2i.jp/banner/*_300x250.$image,domain=point.i2i.jp
+@@||atown.jp^$image,domain=point.i2i.jp
 @@||ci-labo.com/*/brand/images/300x250.jpg$domain=moppy.jp
-@@||j-a-net.jp^$image,domain=moppy.jp|warau.jp
+@@||j-a-net.jp^$image,domain=moppy.jp|warau.jp|point.i2i.jp
 @@||moppy.jp/pub/global/pc/banner/gacha/468x60.jpg$~third-party
 @@||prf.hn/source/$image,domain=moppy.jp
 @@||trafficgate.net/t/b/$image,domain=moppy.jp|warau.jp|point-g.rakuten.co.jp
-@@||valuecommerce.com^$image,domain=moppy.jp
+@@||valuecommerce.com^$image,domain=moppy.jp|point.i2i.jp
+@@||virusbuster.jp/aff/banner/vb/468_60.gif$image,domain=point.i2i.jp
+@@||wowma.net/market/linkshare/$image,domain=point.i2i.jp
 !
 @@||afi-b.com/assets/dist/img/general/top/img/ad/$image,~third-party
 @@||afi-b.com/assets/img/general/common/$image,domain=affiliate-b.com
