@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0221.3
+! OriginalVersion: 2023.0222.5
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -412,6 +412,8 @@ funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,fu
 /data/banner.json?
 /ad-manager.min.js
 !
+||watchfreejavonline.co/wp-content/uploads/*.mp4
+/^https:\/\/i0\.wp\.com\/watchfreejavonline\.co\/wp-content\/uploads\/[0-9]+\/[0-9]+\/cropped-favicon-watchfreejav\.png/
 /^https:\/\/www\.busan\.com\/nas\/wcms\/public\/pc\/images\/new\/[0-9]+[a-z]+\.gif/
 ||edudonga.com/data/banner/
 ||img.asiatoday.co.kr/adver/
@@ -941,7 +943,6 @@ funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,fu
 ||mangacat.cc/mainhover/
 ||a.realsrv.com/ad-provider.js
 ||watchfreejavonline.co/wp-content/uploads/*.gif
-||i0.wp.com/watchfreejavonline.co/wp-content/uploads/
 ||static.javhd.com/h5/files/
 ||mdjournal.kr/banner/
 ||nts.go.kr/images/ad/lgnm/popup/popup_img_openinfo_high.jpg
@@ -1243,6 +1244,11 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+enuri.com##div[id$="_banner"][class^="banner_"]
+enuri.com##li[class^="ad-"]
+eleparts.co.kr##.main > .main_visual + .section_1
+eleparts.co.kr##.main > .main_visual
+eleparts.co.kr##div[id$="-banner"][style]
 eoreuni.com##.adadwrap
 postshare.co.kr##body > div[style^="position:fixed;"][style*="z-index:9999"][style*="width:"]
 commutil.kr##.mdsns_reply > div[style^="margin-bottom:"]
@@ -2396,6 +2402,7 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+enuri.com#?#.m-row > div[class^="col col-"]:not(:has(> .col__inner a:not([href*="ad-api.enuri.info"]))):has(.bnrbox ul[id][class^="bnr__"])
 meeco.kr#?#[class] > div[style*="float:"][style*="left;"].xe-widget-wrapper:has(li[style^="width:"] a[href^="/Enterprise/"])
 gigglehd.com#?##gap > div[style*=": "].xe-widget-wrapper:has(.widget_banner_skin > .banner_list)
 itwind.co.kr#?##footer-wrapper div[id^="footer"].footer:has(img[src*="=s"])
@@ -2633,6 +2640,7 @@ blacktoon199.com,blacktoon200.com,blacktoon201.com,blacktoon202.com,blacktoon203
 ! PopMagic
 watchfreejavonline.co#%#//scriptlet('abort-current-inline-script', 'popMagic.init')
 !
+enuri.com#%#//scriptlet('json-prune', 'data.supertopADNos')
 m.humoruniv.com#%#//scriptlet('abort-current-inline-script', '$.prototype.html', '/\/images\/[A-z0-9-_]+\.(jpg|gif)/')
 m.humoruniv.com#%#//scriptlet('prevent-setTimeout', '/[A-z0-9_]+\(ch[0-9]+_[A-z0-9]+\)/')
 sbs.co.kr#%#//scriptlet('set-constant', 'player.renderAdSequence', 'undefined')
