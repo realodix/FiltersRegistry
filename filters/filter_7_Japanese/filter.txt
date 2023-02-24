@@ -804,45 +804,9 @@ video.tv-tokyo.co.jp#@#.ad-placeholder
 !+ PLATFORM(ios, ext_android_cb)
 @@||gagetmatome.com^$generichide
 ! https://github.com/AdguardTeam/AdguardFilters/issues/7918
-!! for safety due to possible ban
-! disabled these rules and `@@||s10.histats.com/js15_as.js$domain=avgle.com` in https://forum.adguard.com/index.php?threads/34852/
-!@@||avgle.com/video/$genericblock,generichide
-!@@||avgle.com/embed/$genericblock,generichide
-!!
-avgle.com#@#.adsBox
-avgle.com#@#.pub_300x250
-avgle.com#@#.pub_300x250m
-avgle.com#@#.pub_728x90
-avgle.com#@#.text-ad
-avgle.com#@#.textAd
-avgle.com#@#.text_ad
-avgle.com#@#.text_ads
-avgle.com#@#.text-ads
-avgle.com#@#.text-ad-links
 avgle.com#@#img[src*=".php"]
-avgle.com#@#a[href*="/redirect"]
 avgle.com#@#iframe[width="300"][height="250"]
 avgle.com#@#iframe[width="728"][height="90"]
-avgle.com#@#a[href^="http://www.poweredbyliquidfire.mobi/"]
-avgle.com#@#a[href^="http://bongacams.com/track?"]
-!@@||avgle.com/templates/frontend/p2p.js
-!@@||avgle.com/avideos.php
-!@@||avgle.com/avideos.js
-!@@||avgle.com/images.php
-!@@||avgle.com/av^$image
-!@@||pussl48.com^$domain=avgle.com
-!@@||ads.exoclick.com/ads.js$domain=avgle.com
-!@@||ads.exosrv.com/ads.js$domain=avgle.com
-!@@||syndication.exosrv.com/ads-iframe-display.php^$domain=avgle.com
-!@@||adserver.juicyads.com/js/jads.js$domain=avgle.com
-!@@||isafe.pro/img/b_a.gif^$domain=avgle.com
-!@@||adserver.juicyads.com/adshow.php$domain=avgle.com
-!@@||boudja.com^$domain=avgle.com
-!@@||*.club^$domain=avgle.com
-!@@||*.info^$domain=avgle.com
-!@@||ie8eamus.com/sfp.js$domain=avgle.com
-!@@||fingahvf.top/advertisers.js$domain=avgle.com
-@@||avgle.com/include/ajax/related_videos.php
 !+ PLATFORM(ios, android, ext_android_cb)
 @@||static.avgle.com/media/av^
 ! https://github.com/AdguardTeam/AdguardFilters/issues/9125
@@ -1236,8 +1200,6 @@ uraaka-joshi.com#?##main-block > .grid > div[class^="grid-cell"]:has(iframe[src*
 famitsu.com#?#.search-box ~ div.l-contents-block:has(.card-game-sale-rank--amazon)
 jav.direct,openloadpro.com,javmix.*#?#.home-h > h1:contains(ライブチャット)
 jav.direct,openloadpro.com,javmix.*#?#.home-h > h3:contains(Stripchat)
-sankeibiz.jp#?##main-column > div.custom-html-feature:has(> div.biz-column > header > h2:contains(Recommend))
-sankeibiz.jp#?##main-column > div.grid > div > div.gptAd:upward(1)
 haijin-boys.com#?#.widget > div:contains(/^スポンサーリンク$/):upward(1)
 haijin-boys.com#?#.widget > div:contains(おすすめ):upward(1)
 gigafree.net#?#.bottombox > div > span[class="accent"]:upward(2)
@@ -1820,7 +1782,6 @@ matomame.jp#?##col_content > div.footer_content:has(> div.ads)
 masterwiki.net#?##content > center:has(> script[src="http://pagead2.googlesyndication.com/pagead/show_ads.js"])
 nishinippon.co.jp#?#.l-section-side h2.c-heading-side-h2--otherStyle__text:upward(.l-section-side)
 ldblog.jp,blogo.jp#?#.plugin-memo:has(> div.side > a[href*="www.dlsite"])
-sankeibiz.jp#?##wrapper > main > section.module_recommend:has(> div.module_content > div.OUTBRAIN)
 followcheck.itby.net#?#.uk-width-large-1-3 > div[style="text-align: center;margin:0px;"] > ins.adsbygoogle:upward(2)
 ascii2d.net#?#.col-lg-4 > .p-t-1:has(> h5:contains(広告))
 nijinchu.com#?#article > div.entry_content > h3:contains(おすすめ商品)
@@ -2413,8 +2374,8 @@ _ap/signin*?_encoding=UTF8&openid.assoc_handle=jpflex&openid.claimed_id=&action=
 .cn/eorico/login.php|$document
 /Softbank.apk^$document
 /all/login.php?idsmt=*&nextfunck=$document
-/index.php?main_page=product_info&cPath=$document,domain=bar|best|buzz|cyou|fun|life|live|online|shop|site|store|top|xyz
-/index.php?main_page=product_info&products_id=$document,domain=bar|best|buzz|cyou|fun|life|live|online|shop|site|store|top|xyz
+/index.php?main_page=product_info&cPath=$document,domain=bar|best|buzz|cyou|fun|life|live|online|sa.com|shop|site|store|top|xyz
+/index.php?main_page=product_info&products_id=$document,domain=bar|best|buzz|cyou|fun|life|live|online|sa.com|shop|site|store|top|xyz
 ://eki-net.com.*.com/Personal/member/Login/index.php?oneTimeAccessID=$document
 /Softbank%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3.apk^$document
 /%E3%81%82%E3%82%93%E3%81%97%E3%82%93%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3.apk^$document
@@ -5219,7 +5180,7 @@ timeout.jp##div[id^="ad-side-"]
 ebitsu.net##.itemTitle
 livenan.com,all-nationz.com,kyarabetsunijiero.net##.right-column-inner > div.plugin-memo:first-child
 kyarabetsunijiero.net,moyugenn.youblog.jp,ebitsu.net##.left-column-inner > div.plugin-memo:last-child
-iza.ne.jp,sankeibiz.jp,sanspo.com,sankei.com,zakzak.co.jp##.gptAd
+iza.ne.jp,sanspo.com,sankei.com,zakzak.co.jp##.gptAd
 zakzak.co.jp##.special.pr
 travel.co.jp##.power_item--PR
 travel.co.jp##.pickup_item--PR
@@ -8063,8 +8024,6 @@ hs-exp.jp#@##search-ad
 ! https://github.com/AdguardTeam/AdguardFilters/issues/41169
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
 @@||moppy.jp^$~script,~image,~stylesheet,domain=moppy.jp
-! https://github.com/AdguardTeam/AdguardFilters/issues/39382
-@@||s.yimg.jp/bdv/yahoo/darla/*/js/darla-secure-*.js$domain=mail.yahoo.co.jp
 !
 @@||nazolog.com^$generichide
 @@||ad.nicovideo.jp/server/get?$domain=nicovideo.jp
