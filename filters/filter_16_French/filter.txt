@@ -876,11 +876,11 @@ canalplus.com#%#//scriptlet('json-prune', 'ads.*.default ads.*.url ads.enableMid
 ! https://github.com/AdguardTeam/AdguardFilters/issues/100525
 ! https://gist.github.com/ameshkov/265f353a816110e8b9d5fc37ad66c31a
 prod-player.tf1.fr#%#(function(){let callCounter=0;const nativeJSONParse=JSON.parse;const handler={apply(){callCounter++;const obj=Reflect.apply(...arguments);if(callCounter<=10){if(obj.hasOwnProperty('env')&&obj.env.hasOwnProperty('origin')){if(!obj.hasOwnProperty('ads')){obj.ads={};}obj.ads.enable=false;obj.ads._prerolls=false;obj.ads._midrolls=false;}}else{JSON.parse=nativeJSONParse;}return obj;}};JSON.parse=new Proxy(JSON.parse,handler);})();
-tf1.fr#%#//scriptlet('set-constant', 'tv.freewheel.SDK.Util.pingURLWithForm', 'trueFunc')
-tf1.fr#%#//scriptlet('set-constant', 'tv.freewheel.SDK.Util.pingURLWithImage', 'trueFunc')
-tf1.fr#%#//scriptlet('set-constant', 'tv.freewheel.SDK.Util.pingURLWithScript', 'trueFunc')
-tf1.fr#%#//scriptlet('set-constant', 'tv.freewheel.SDK.Util.pingURLWithXMLHTTPRequest', 'trueFunc')
-tf1.fr#%#//scriptlet('set-constant', 'tv.freewheel.SDK.Util.sendAdRequestWithXMLHTTPRequest', 'trueFunc')
+6play.fr,tf1.fr#%#//scriptlet('set-constant', 'tv.freewheel.SDK.Util.pingURLWithForm', 'trueFunc')
+6play.fr,tf1.fr#%#//scriptlet('set-constant', 'tv.freewheel.SDK.Util.pingURLWithImage', 'trueFunc')
+6play.fr,tf1.fr#%#//scriptlet('set-constant', 'tv.freewheel.SDK.Util.pingURLWithScript', 'trueFunc')
+6play.fr,tf1.fr#%#//scriptlet('set-constant', 'tv.freewheel.SDK.Util.pingURLWithXMLHTTPRequest', 'trueFunc')
+6play.fr,tf1.fr#%#//scriptlet('set-constant', 'tv.freewheel.SDK.Util.sendAdRequestWithXMLHTTPRequest', 'trueFunc')
 tf1info.fr#%#//scriptlet('set-constant', '__NEXT_DATA__.runtimeConfig.playerTF1.ads.enable', 'false')
 !
 !--------------------------------------!
@@ -984,6 +984,7 @@ voirseries.io$$script[src="KGZ1bmN0aW9uKCQsZG9jdW1lbnQp"]
 /^(?!.*(bootstrapcdn.com|cdn.ampproject.org|cloudflare.com|cdn.staticfile.org|disqus.com|disquscdn.com|dmca.com|ebacdn.com|facebook.net|fastlylb.net|fbcdn.net|fluidplayer.com|fontawesome.com|github.io|google.com|googleapis.com|googletagmanager.com|gstatic.com|jquery.com|jsdelivr.net|jwpcdn.com|jwplatform.com|polyfill.io|recaptcha.net|shrink.pe|twitter.com|ulogin.ru|unpkg.com|userapi.com|vidazoo.com|vk.com|yandex.|yastatic.net|ytimg.com|zencdn.net|player|youtube.com|cackle.me|googleoptimize.com|vuukle.com|chatango.com|twimg.com|google-analytics.com|hcaptcha.com|raincaptcha.com|media-imdb.com|blogger.com|hwcdn.net|instagram.com|wp.com)).*$/$third-party,script,domain=scan-fr.cc
 !
 !
+||vod.6cloud.fr/pub/*.mp4$media,redirect=noopmp3-0.1s,domain=6play.fr
 leboncoin.fr##div#outlined[class^="styles_ad_"]
 60millions-mag.com##.block-banner-autopromo
 nostalgie.fr##.blockDisplay
