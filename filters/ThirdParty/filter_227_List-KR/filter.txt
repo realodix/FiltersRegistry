@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0224.3
+! OriginalVersion: 2023.0226.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -10,6 +10,8 @@
 ! Version must be UTC format.
 !
 !#if adguard
+||ad.buzzvil.com^
+||screen.buzzvil.com^
 ||ad-script.viewus.co.kr^
 ||ad.admine.co.kr^
 ||ads.sportsseoul.com^
@@ -372,6 +374,12 @@
 ##ins.kakao_ad_area
 ##iframe[src*="//www.mediacategory.com/servlet/"]
 ##div[id^="targetpushAd_"]
+!#if adguard_app_ios
+m.ppomppu.co.kr##ul[class^="bbsList"] > div[style*="clear: both;"].sect0
+!#endif
+!#if adguard_app_ios
+m.fmkorea.com##iframe[src*="//loader.fmkorea.com/"][src*="_loader/"]
+!#endif
 !#if adguard_app_windows
 funbe202.com,funbe203.com,funbe204.com,funbe205.com,funbe206.com,funbe207.com,funbe208.com,funbe209.com,funbe210.com,funbe211.com,funbe212.com,funbe213.com,funbe214.com,funbe215.com,funbe216.com##img[src^="/images/"]
 !#endif
@@ -2752,8 +2760,13 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
 !
-somenotes247.blogspot.com#@#.vertical-ads
+!#if (adguard_app_ios)
 1412.rest#@##google_ads
+!#endif
+1412.rest#%#//scriptlet('abort-on-stack-trace', 'jQuery.prototype.html', 'adError')
+1412.rest#$#.et_vars { height: auto !important; overflow: visible !important; }
+1412.rest#$#.atc_ex { height: auto !important; overflow: visible !important; }
+somenotes247.blogspot.com#@#.vertical-ads
 sysnet.pe.kr#%#//scriptlet('abort-on-stack-trace', 'CSS2Properties.prototype.getPropertyValue', 'setTimeout')
 !#if (adguard_app_ios)
 @@||sysnet.pe.kr^$generichide
