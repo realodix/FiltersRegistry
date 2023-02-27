@@ -116,7 +116,7 @@ Every filter can be marked by a number of tags. Every tag metadata listed in `/t
 Possible tags:
 * `lang:*` — for language-specific filters; one or multiple lang-tags can be used. For instance, AdGuard Russian filter is marked with the `lang:ru` tag.
 
-* `purpose:*` — determines filters purposes; multiple purpose-tags can be used for one filter list. For instance, `List-KR` is marked with both `purpose:ads` and `purpose:privacy`.
+* `purpose:*` — determines filters purposes; multiple purpose-tags can be used for one filter list. For instance, `AdGuard DNS` is marked with both `purpose:ads` and `purpose:privacy`.
 
 * `recommended` — for low-risk filter lists which are recommended to use in their category. The category is determined by the pair of the `lang:*` and `purpose:*` tags.
 
