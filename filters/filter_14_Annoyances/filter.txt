@@ -2216,6 +2216,10 @@ mein-schoener-garten.de,eveningnews24.co.uk,rollingstone.de,eatsmarter.de,inside
 !
 !
 !
+eldorado.ru##.cookie-banner__wrapper
+seb.lv#$##cookiesMessage { display: none !important; }
+seb.lv#$##cookiesMessage ~ .modal-backdrop { display: none !important; }
+seb.lv#$#body { overflow: auto !important; padding-right: 0 !important; }
 vocabulary.com##.cookie-privacy-banner
 nedis.com###laravel-cookies-consent
 loteriakozel.pl###cookies_modal
@@ -13137,6 +13141,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/143641
+seb.lv#@##cookiesMessage
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143693
 @@||consent.cookiebot.com/uc.js$domain=plaion.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143282
@@ -26622,6 +26628,7 @@ jiji.com,edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,
 !
 ! SECTION: Subscriptions - Regular rules
 !
+hibiny.com#?#.news-item-left > div.box > div.margintop16:has(> div.share-text)
 teleggid.com##.mypopup-modal
 secretchicago.com##form[data-name^="Newsletter"]
 bijutsutecho.com#%#//scriptlet('prevent-addEventListener', 'scroll', 't.attemptLoad')
@@ -30176,7 +30183,7 @@ journaldunet.com#?##jSidebarSticky > div.sticky-zone:has(> div.sticky-element sp
 vangraaf.com##.pc-newsletter
 beverfood.com##.widget-subscribe
 lung.org##.section-signup-email
-techgistafrica.com##.jeg_push_notification
+techacrobat.com,techgistafrica.com##.jeg_push_notification
 sportpanorama.by##.b-bottom-plates-section
 hotstunners.com##.mail_address
 washingtonpost.com##div[data-qa="newsletter"]
@@ -34185,6 +34192,8 @@ google.ad,google.ae,google.al,google.am,google.as,google.at,google.az,google.ba,
 ! causes some issues: https://github.com/AdguardTeam/AdguardForMac/issues/550
 ~lafenice.io,~kurer-sreda.ru,~chorki.com,~zattoo.com,~zaycev.net,~xltrax.ee,~hitta.se,~mail.ru,~v7player.wostreaming.net,~facebook.com,~instagram.com,~drive.google.com$$link[rel="manifest"]
 !
+m.digi24.ro#$#div.smartbanner { display: none !important; }
+m.digi24.ro#%#//scriptlet('remove-class', 'smartbanner-visible', 'body')
 agoda.com##div[class*="WhiteBanner__AppBanner-"]
 agoda.com##section[class^="TallBanner__container-"]
 agoda.com#%#(function(){if(-1==document.cookie.indexOf("agoda.banner")){const a=new Date,b=a.getTime(),c=new Date(b+1314000000);document.cookie=`agoda.banner=OverlayBanner - Promo=1; path=/; expires=${c.toUTCString()}`,location.reload()}})();
