@@ -463,7 +463,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 23February2023v2
+! OriginalVersion: 28February2023v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -13780,7 +13780,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ! Placeholder line for alternate list versions
 !#endif
 ! Title: 🐐 Dandelion Sprout's Lightweight Anti-'Social share' List
-! OriginalVersion: 19February2023v1-Alpha
+! OriginalVersion: 28February2023v1-Alpha
 ! Expires: 3 days
 ! Description: This list aims to achieve pretty broad (if not overly broad) coverage of social sharing buttons, with perhaps 1/50th~1/100th as many entries as what the biggest anti-'social button' lists out there have.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -13819,7 +13819,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ###tell-a-friend
 ###top_share
 ##.addthis_button_facebook:not(html, body)
-##.addthis_button_linkedin:not(html, body)
+~linkedin.com##.addthis_button_linkedin:not(html, body)
 ##.addthis_button_messenger:not(html, body)
 ##.addthis_button_more:not(html, body)
 ##.addthis_counter:not(html, body)
@@ -13842,7 +13842,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ##.button--share:not(html, body)
 ##.button__facebook:not(html, body)
 ##.button__instagram:not(html, body)
-##.button__linkedin:not(html, body)
+~linkedin.com##.button__linkedin:not(html, body)
 ##.button__twitter:not(html, body)
 ##.c-article__byline-social:not(html, body)
 ##.c-share-tools:not(html, body)
@@ -13876,7 +13876,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ##.js-share-twitter:not(html, body)
 ##.jw-sharing-icon:not(html, body)
 ##.like_facebook:not(html, body)
-##.linkedinShare:not(html, body)
+~linkedin.com##.linkedinShare:not(html, body)
 ##.loader-container.shares:not(html, body)
 ##.mashsb-box:not(html, body)
 ##.meta-share-wrapper:not(html, body)
@@ -13903,7 +13903,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ##.share-it:not(html, body)
 ##.share-item-plus:not(html, body)
 ##.share-link.js-require-widget:not(html, body)
-##.share-linkedin:not(html, body)
+~linkedin.com##.share-linkedin:not(html, body)
 ##.share-metas:not(html, body)
 ##.share-networks:not(html, body)
 ##.share-nw:not(html, body)
@@ -14045,7 +14045,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ##a[onmouseover^="return addthis_open"]
 ##a[title="Share on Baidu" i]
 ##a[title="Share on Facebook" i]
-##a[title="Share on LinkedIn" i]
+~linkedin.com##a[title="Share on LinkedIn" i]
 ##a[title="Share on Pinterest" i]
 ##a[title="Share on Reddit" i]
 ##a[title="Share on Telegram" i]
@@ -14120,7 +14120,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 ##li[class$=-share-toggle]
 ##li[class*=link_facebook]
 ##li[data-share=facebook]
-##li[data-share=linkedin]
+~linkedin.com##li[data-share=linkedin]
 ##li[data-share=twitter]
 ##p[class^=del-artikel]
 ##share-grid
@@ -16110,7 +16110,7 @@ vumoo.to#?#div.col-lg-12:has-text(IMDb)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 28February2023v1
+! OriginalVersion: 28February2023v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -18057,7 +18057,7 @@ $removeparam=name,domain=nytimes.com|nytimesn7cgmftshazwhfgzm37qxb44r64ytbb2dj3x
 $removeparam=m_sc,domain=bloomingdales.com
 ! https://us.boohoo.com/?$3p=a_cj_affiliate&~click_id=8c77e9c00c1e11ec82da00790a180510&~secondary_publisher=Offers.com%20-%20Vertive%2C%20LLC&$canonical_url=https%3A%2F%2Fus.boohoo.com%2F&~keyword=8807380&cj_linkd=12344165&cj_webid=8807380&cj_affid=1397064&cj_affname=Offers.com%20-%20Vertive%2C%20LLC&_branch_match_id=962049055156509358
 ! https://www.forever21.com/?$3p=a_cj_affiliate&~click_id=b8c806cf0cad11ec806d4d010a18050d&~secondary_publisher=Offers.com%20-%20Vertive%2C%20LLC&$canonical_url=http%3A%2F%2Fwww.forever21.com&cj_pub_sid=06gtKjdPmfBs463ojiL8awp&_branch_match_id=962306946010631351
-$removeparam=/^[$],domain=boohoo.com|forever21.com
+$removeparam=/^(\$)/,domain=boohoo.com|forever21.com
 $removeparam=/^\~/,domain=boohoo.com|forever21.com
 ! https://www.columbia.com/?uid=10728209&nid=8807380
 $removeparam=nid,domain=columbia.com|sorel.com
@@ -18890,9 +18890,11 @@ $removeparam=refresh,domain=cnn.com
 ! https://www.argos.co.uk/product/9381878?rec=PDP[6537474]:bottomSlider:P1:OHAT:alternatives:9381878:vfsNuIT3JJJV1Pq8begB
 ! https://www.argos.co.uk/events/home-offers?$ja=tsid%3A11674%7Cprd%3A6361382
 ! https://www.argos.co.uk/product/7553213?clickPR=plp:1:165
+! https://www.argos.co.uk/product/1488377?clickCSR=slp:cannedSearch
 $removeparam=rec,domain=argos.co.uk
-$removeparam=/[$]ja/,domain=argos.co.uk
+$removeparam=/(\$)ja/,domain=argos.co.uk
 $removeparam=clickPR,domain=argos.co.uk
+$removeparam=clickCSR,domain=argos.co.uk
 ! https://blog.getadblock.com/getting-started-with-the-adblock-extension-2219b3c7878c?gi=285fe5d9ab7d
 ||blog.getadblock.com^$removeparam=gi
 ! https://www.pinkbike.com/news/all-the-winners-of-the-2021-pinkbike-advent-calendar.html?pbref=p
