@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-02-26 07:04:20 CET
+! Last modified: 2023-02-28 07:02:38 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -518,6 +518,7 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||s.arclk.net/tr?$all
 ||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=tv4play.se
 ||trailer-admin-cdn.a2d.tv^$media,redirect=noopmp4-1s,domain=tv4play.se
+||widget.playoncenter.com/newplayer/js/pb_$redirect=noopjs,script
 ||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|godare.se|svd.se|wellness.se
 ||youplay.se/*.js*ap=true$removeparam=/^ap/,script
 !#if env_chromium
@@ -530,8 +531,9 @@ proffs.se#$#*::-webkit-scrollbar { display: unset !important; }
 ||p.typekit.net/p.css
 !#endif
 !#if !env_chromium
-temadagar.se$$script[tag-content="__ez"][max-length="262144"]
 branschkoll.se,datormagazin.se,kimura.se,polistidningen.se,rocknytt.net,samnytt.se,upphandling24.se,villalivet.se$$script[tag-content="advads"][max-length="262144"]
+temadagar.se$$script[tag-content="__ez"][max-length="262144"]
+||fast.fonts.net/lt/1.css$domain=arkitekt.se
 ||p.typekit.net/p.css$domain=lundagard.se|vaningen.se
 ||vimedbarn.se^$csp=upgrade-insecure-requests
 !#endif
@@ -2004,7 +2006,7 @@ kartor.eniro.se##.e-banner
 katerinamagasin.se##.adv-area, #right-areas, a[href*=".casino"], body > div.code-block
 kb.se##.sv-marketplace-sitevision-cookie-consent, .sv-cookie-consent-modal, .env-modal-dialog__backdrop, .env-modal-dialog__backdrop--in
 kiacarclub.se##.forumlist-main-inner > div[style]
-kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"], .addafterpreview, .addafter1preview
+kimura.se##.bg, a[href*="unibet.com"], a[href*="/kampanjer."], a[href*="utm_campaign"], .addafterpreview, .addafter1preview, .samarbeten
 kingsizemag.se##div#video-overlay, div.sidebar_frame, #affiliates, #affiliates + .text, #popup-interstitial-overlay, .cu_banner
 kittad.se###header-top, div[data-hook="consent-banner-root"]
 klart.se###overlay, .gdpr-onboarding-container, a[rel*="sponsored"], .-panorama-ad-wrapper
@@ -2630,7 +2632,6 @@ zeromagazine.nu##div[id^="ads"]
 ||kyrkoskatten.se^
 ||kyrkskatt.se^
 ||laget.se^*/retarget.js
-||laikabook.se/ib/banner
 ||lajvo.se/addImpression
 ||lanapengar.expressen.se^
 ||lantbruksnet.se/files/reklan/
@@ -2882,6 +2883,7 @@ zeromagazine.nu##div[id^="ads"]
 ||stats.easyweb.se^$third-party
 ||stats.helsingborg.se^
 ||stats.jibber.social^
+||stats.playoncenter.com^
 ||stats.poddtoppen.se^
 ||stats.tipser.com^$xmlhttprequest
 ||stayfriends.de/metatag
