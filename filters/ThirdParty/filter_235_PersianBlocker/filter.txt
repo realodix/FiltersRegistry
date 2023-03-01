@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2023-02-17
+! Last modified: 2023-03-01
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -56,6 +56,7 @@
 !-------------------------^ Experimental Generic Filters ^-----------------------!
 !-------------------------v Persian Ads/Trackers/Annoyances Filters v-----------------------!
 ! >> A <<
+||adrooz.com^$all
 ||affilio.ir^$all
 ||analyt.ir^$all
 ||scripts-ads.s3.ir-thr-at1.arvanstorage.com^$all
@@ -1710,6 +1711,12 @@ opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/) > p
 !#endif
 omidnamehnews.ir##.adspanel
 ! >> P <<
+||analytics.plaza.ir^$all
+||plaza.ir/location/find-client-location^$xmlhttprequest,~third-party
+||plaza.ir/wp-admin/admin-ajax.php?action=getClientDeviceRelatedPostItems^$xmlhttprequest,~third-party
+plaza.ir##.ad--content
+plaza.ir##.post > .post__content > .post__category:has-text(رپورتاژ آگهی):upward(.post)
+plaza.ir#@#.ad__header
 ! https://github.com/MasterKia/PersianBlocker/issues/103
 ||par30media.com/wp-content/uploads/*.gif
 par30media.com##.right-sidebar > aside > .tit-side:has-text(لینک های مفید):upward(aside)
@@ -2691,6 +2698,10 @@ zoomtech.org###posts_single_ads
 ||frzss.com^$document
 ! https://github.com/Webamoozcom/warning-list/discussions/138
 ||hoho.mobi^$document
+! https://github.com/Webamoozcom/warning-list/discussions/170
+||unitedsolarinfinity.com^$document
+! https://github.com/Webamoozcom/warning-list/discussions/171
+||mogo-crypto.net^$document
 !-------------------------^ Scam Sites ^-----------------------!
 !-------------------v Malware/Phishing Sites v-----------------!
 ! https://shahrsakhtafzar.com/fa/news/security/42227-google-play-rubika-app-spy-users-personal-information
