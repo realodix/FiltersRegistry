@@ -113,7 +113,7 @@ blogsazan.com##.main_content[style="border-radius:10px;"] > div[style="padding: 
 ||backlink.behtarinseo.ir/ads
 ||backority.ir^$all
 ! https://github.com/AdguardTeam/AdguardFilters/issues/99240
-||blogfa.com/a^
+||blogfa.com/a^$script,~third-party
 ! >> C <<
 ||cayot.ir^$all
 ! Example: tamasha.com/v/DDlMB
@@ -276,16 +276,18 @@ blogsazan.com##.main_content[style="border-radius:10px;"] > div[style="padding: 
 ||tabligheirani.ir^$all
 ||tbli.ir^$all
 ||tavoos.net^$all
-@@||player.tavoos.net/jwplayer.js$script
-@@||player.tavoos.net/jwplayer.core.controls.html5.js$script
-@@||player.tavoos.net/tavoos-player.css$stylesheet
-@@||player.tavoos.net/assets/fonts/$font
-@@||player.tavoos.net/assets/$image
-! ^ Example: film.tebyan.net
-@@||tavoos.net/tavoos_player/jwplayer/jwplayer.js$script
-@@||tavoos.net/tavoos_player/jwplayer/jwplayer.core.controls.html5.js$script
-@@||tavoos.net/tavoos_player/jwplayer/tavoos-player.css$stylesheet
-@@||tavoos.net/tavoos_player/jwplayer/assets/$image
+@@||player.tavoos.net/jwplayer.js$script,third-party
+@@||player.tavoos.net/jwplayer.core.controls.html5.js$script,third-party
+@@||player.tavoos.net/jwplayer.core.controls.js$script,third-party
+@@||player.tavoos.net/provider.hlsjs.js$script,third-party
+@@||player.tavoos.net/tavoos-player.css$stylesheet,third-party
+@@||player.tavoos.net/assets/fonts/$font,third-party
+@@||player.tavoos.net/assets/$image,third-party
+! ^ Example: film.tebyan.net, namayesh.com
+@@||tavoos.net/tavoos_player/jwplayer/jwplayer.js$script,third-party
+@@||tavoos.net/tavoos_player/jwplayer/jwplayer.core.controls.html5.js$script,third-party
+@@||tavoos.net/tavoos_player/jwplayer/tavoos-player.css$stylesheet,third-party
+@@||tavoos.net/tavoos_player/jwplayer/assets/$image,third-party
 ! ^ Example: alef.ir/news/4010916082.html
 ||cashback.takhfifan.com^$all
 ! Example: https://portal.server.ir/cart.php?a=confproduct&i=0
@@ -1529,6 +1531,10 @@ lahzeakhar.com#%#//scriptlet('ubo-set.js', 'customnotify', 'noopFunc')
 ||lahzeakhar.com/ShowAds
 ! ||lahzeakhar.com/sw.js
 ! >> M <<
+||mihanvideo.com/static/js/video_player/jwplayer/plugins/vast/vast.js^$script,~third-party
+||mihanvideo.com/static/js/video_player/jwplayer/*/jwpsrv.js^$script,~third-party
+||mihanvideo.com/log^$xmlhttprequest,~third-party
+mihanvideo.com##.side-ads
 ||movienama.com/wp-content/uploads/*.gif$image
 movienama.com##.opanel-ads
 ! https://github.com/MasterKia/PersianBlocker/issues/108
@@ -1639,6 +1645,12 @@ myhastidl.cam#%#//scriptlet('ubo-set.js', 'needpop', '0')
 myhastidl.cam##center:nth-of-type(2)
 myhastidl.cam##.col-xs-12.col-md-6.main-sidebar > center
 ! >> N <<
+||namayesh.com/assets/ads^$image
+! ^ no $1p, because it's used by mihanvideo.com
+||namayesh.com/configuration/v1/video/*/lazyads^$xmlhttprequest,~third-party
+||namayesh.com/configuration/v1/video/*/log^$xmlhttprequest,~third-party
+namayesh.com###advertise
+namayesh.com###promotion
 nab-music.com#%#//scriptlet('ubo-aopr.js', 'vc_url')
 ! https://github.com/MasterKia/PersianBlocker/issues/72
 ! https://github.com/MasterKia/PersianBlocker/pull/81
@@ -2169,6 +2181,8 @@ saat24.news##section.box ul > li.bklnk:upward(section.box)
 @@||1000site.ir/asset/images/images/adpage/$image,~third-party
 @@||1000site.ir/home/ads/asset/favicon.ico$image,~third-party
 ! >> T <<
+||tvrooz.com/analytics.js^$script,~third-party
+||tvrooz.com/tvrooz-analytics.js^$script,~third-party
 ! https://github.com/MasterKia/PersianBlocker/issues/129
 ^utm_source=takhfife.com^$document,removeparam=/^utm_/
 takhfife.com##.adcbar
@@ -2535,6 +2549,7 @@ yasdl.com##.row.fixed-post.post
 yasdl.com##.sidebar-textads
 yeknet.ir#%#//scriptlet('ubo-aopr.js', 'needpop')
 ! >> Z <<
+||zinofilm.ir/wp-json/wp-statistics^$xmlhttprequest,~third-party
 ! https://github.com/MasterKia/PersianBlocker/issues/30
 ||zibamoon.com/Files/Ads/$image,~third-party
 zibamoon.com##.BannerA
