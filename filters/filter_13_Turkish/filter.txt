@@ -471,14 +471,18 @@ zamaninvarken.com,kredi.biz.tr,kriptoradar.com,morlevha.com,bakimlikadin.net,kor
 iyibeslenme.net,teknop.net,kirtkirtla.com,buneymis.net,ozgunbilgi.com#%#//scriptlet("set-constant", "adblock.check", "noopFunc")
 !
 !
+! https://github.com/uBlockOrigin/uAssets/issues/16991
+veryansintv.com#%#//scriptlet('prevent-setTimeout', 'kanews-modal-adblock', '5000')
+!#if (adguard_app_ios || adguard_ext_android_cb)
+veryansintv.com#@#ins.adsbygoogle
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=veryansintv.com
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142760
 @@||mobilkulup.com/js/*/*-page-ad.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141542
 exceldepo.com#%#//scriptlet('set-constant', 'xv_ad_block', '0')
 !#if (adguard_app_ios || adguard_ext_android_cb)
-exceldepo.com#$#.adsbygoogle { position: absolute !important; left: -3000px !important; }
 exceldepo.com#@#.ad_block
-exceldepo.com#@#.adsbygoogle
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=exceldepo.com
 !#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140904
@@ -496,9 +500,6 @@ biasyadizi.com#@#.advertisement:not(body)
 !#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140830
 tgyama.com#%#//scriptlet('set-constant', 'tie.ad_blocker_disallow_images_placeholder', 'undefined')
-! https://github.com/AdguardTeam/AdguardFilters/issues/138656
-kazanimtestleri.com.tr#@#.adsbygoogle
-kazanimtestleri.com.tr#%#//scriptlet('set-constant', 'adBlockDetector', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/138249
 sozcu.com.tr#%#//scriptlet('prevent-fetch', '/assets/js/prebid')
 sozcu.com.tr#%#//scriptlet('abort-on-property-read', 'detectedAdBlock')
@@ -2467,6 +2468,8 @@ begonya.com,egehaber.com,voleybolmagazin.com,kadinvekadin.net,savunmasanayist.co
 /service/advertchannels?$xmlhttprequest,redirect=nooptext,domain=mardinhaber.com.tr|gidahatti.com|bolugundem.com
 dirilispostasi.com,turkuazgazetesi.net,yenialanya.com,bugunkocaeli.com.tr,cagdaskocaeli.com.tr,mansetaydin.com,seskocaeli.com,kocaelibarisgazetesi.com,kocaelikoz.com,enkocaeli.com##.block-pano > div.us
 !
+||cdn-dfj.pages.dev/inattvplayer.gif
+inattv23.pro##a[target="_blank"][rel="nofollow"][href^="https://bit.ly/"]
 inattv23.pro##div[id][style="width: 100%; height: 100%; position: fixed; top: 0px; left: 0px; z-index: 9999;"]
 fullhddizifilmizle.net##img[style="width:728px; height:90px;"]
 veryansintv.com##.screen-stream
@@ -6193,7 +6196,7 @@ akademikpersonel.org,halkinhabercisi.com##.adsWidgetSidebar
 kanal7.com##.ads_kare
 kanal7.com##.ads_kule
 finansgundem.com,borsagundem.com##.adsnd
-dizipal999.com,milliyet.com.tr,diziboxx.com,mynet.com,aksam.com.tr,yemektekeyifvar.com,ttf.org.tr,perakende.org,akyazihaber.com,futbolarena.com##.adv
+haberturk.com,dizipal999.com,milliyet.com.tr,diziboxx.com,mynet.com,aksam.com.tr,yemektekeyifvar.com,ttf.org.tr,perakende.org,akyazihaber.com,futbolarena.com##.adv
 arkeolojikhaber.com,iha.com.tr##.advbox
 ahaber.com.tr##.advertItem
 gazeteyenigun.com.tr##.advertisement > a:not([href="https://gazeteyenigun.com.tr/gazete-arsiv"])
