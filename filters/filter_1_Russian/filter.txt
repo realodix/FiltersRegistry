@@ -69,8 +69,103 @@
 ! JS API FINISH
 
 !-------------------------------------------------------------------------------!
+!-------------------------------------------------------------------------------!
+!------------------ Common advertising networks --------------------------------!
+!-------------------------------------------------------------------------------!
+! ### DUMMY. Must be replaced by the actual Russian filter ###
+
+!-------------------------------------------------------------------------------!
+!------------------ Common banner names ----------------------------------------!
+!-------------------------------------------------------------------------------!
+! ### DUMMY. Must be replaced by the actual Russian filter ###
+
+!-------------------------------------------------------------------------------!
+!------------------ Common general hiding rules---------------------------------!
+!-------------------------------------------------------------------------------!
+! ### DUMMY. Must be replaced by the actual Russian filter ###
+
+!
+!-------------------------------------------------------------------------------!
 !------------------ Advertising networks ---------------------------------------!
 !-------------------------------------------------------------------------------!
+!
+! This section contains the list of advertising networks domains, which are hosted on non advertising sites as subdomains.
+! Note, that we only put rules that block full subdomains here and not URL parts (there's `general_url.txt` for that).
+!
+! Good: ||ad.doubleclick.net^
+! Bad: /banner.jpg (should be in general_url.txt)
+! Bad: ||legitwebsite.com^$third-party (should be in adservers.txt)
+!
+
+! ### DUMMY. Must be replaced by the actual Russian filter ###
+!-------------------------------------------------------------------------------!
+!------------------ Anti-adblock rules -----------------------------------------!
+!-------------------------------------------------------------------------------!
+!
+! First of all, this section has common rules that prevent most known ad block detections. In that case domain should be added to the common rules.
+! The section contains the list of the rules are against all kinds of ads reinjection or ad-blocking circumvention scripts. If such a script does not cripple the website, we add rules to the Annoyances filter.
+! Rules should generally be domain-specific. In some exceptional cases, it's allowed to add generic ones, but this should be approved by most of the maintainers.
+!
+! Good: ||example.org/adblock/detect.js
+! Good: @@/adblocker/detect.js$domain=example.org
+! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
+!
+
+! ### DUMMY. Must be replaced by the actual Russian filter ###
+!-------------------------------------------------------------------------------!
+!------------------ General javascript, CSS and HTML extensions ----------------!
+!-------------------------------------------------------------------------------!
+!
+! This section contains the list of ad blocking rules that fall under "advanced" category.
+! By advanced we mean the following rule types: CSS, scriptlets, HTML filtering (`$$` marker), JS.
+!
+! Good: example.org#$##rek { display: none !important; }; example.org#%#//scriptlet('set-cookie', 'ad', '0'); example.org#%#document.cookie = "ad =0"; ; example.org$$script[tag-content="ad"][max-length="3000"].
+! Bad: example.org###rek (should be in specific.txt)
+!
+!-------------------
+!-------JS----------
+!-------------------
+!
+!-------------------
+!-------CSS---------
+!-------------------
+!
+!
+!-------------------
+!-------HTML--------
+!-------------------
+!
+
+! ### DUMMY. Must be replaced by the actual Russian filter ###
+!-------------------------------------------------------------------------------!
+!------------------ Rules for specific web sites  ------------------------------!
+!-------------------------------------------------------------------------------!
+!
+! This section contains the list of domain-specific rules that block ads.
+!
+! Good: example.org###rek; ||example.com/ads/
+! Bad: example.org#$##rek { display: none !important; } (for instance, should be in general_extensions.txt)
+!
+
+! ### DUMMY. Must be replaced by the actual Russian filter ###
+!-------------------------------------------------------------------------------!
+!------------------ Content replacement rules ----------------------------------!
+!-------------------------------------------------------------------------------!
+! ### DUMMY. Must be replaced by the actual Russian filter ###
+!-------------------------------------------------------------------------------!
+!-------------- Fixing filtration errors (false-positive) ----------------------!
+!-------------------------------------------------------------------------------!
+!
+! This section contains the list of rules that fix incorrect blocking. Rules must be domain-specific.
+!
+! Good: example.org#@#.ad
+! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
+!
+
+! ### DUMMY. Must be replaced by the actual Russian filter ###
+!-------------------------------------------------------------------------------!
+! TODO: remove inclusions below after moving the rules to the new files
+! Old inсlusions
 !
 ! This section contains the list of third-party advertising networks domains.
 ! Note, that we only put rules that block full domains here and not URL parts (there's `general_url.txt` for that). Also, it must be domains that are used in a third-party context.
@@ -4487,9 +4582,6 @@ adbetnet.com$third-party
 ||vozer.voffka.com^
 ||vw.onlinia.net^
 
-!-------------------------------------------------------------------------------!
-!------------------ Common anti-adblock ----------------------------------------!
-!-------------------------------------------------------------------------------!
 !
 ! First of all, this section has common rules that prevent most known ad block detections. In that case domain should be added to the common rules.
 ! The section contains the list of the rules are against all kinds of ads reinjection or ad-blocking circumvention scripts. If such a script does not cripple the website, we add rules to the Annoyances filter.
@@ -6227,14 +6319,6 @@ livejournal.com#%#//scriptlet("set-constant", "begun_new_callbacks", "undefined"
 ! END: Yandex
 !
 
-!-------------------------------------------------------------------------------!
-!------------------ Extended CSS rules -----------------------------------------!
-!-------------------------------------------------------------------------------!
-! OBSOLETE FILE. Don't add new rules.
-
-!-------------------------------------------------------------------------------!
-!------------------ General hiding rules----------------------------------------!
-!-------------------------------------------------------------------------------!
 !
 ! This section contains generic element hiding rules that block ads.
 !
@@ -6848,9 +6932,6 @@ livejournal.com#%#//scriptlet("set-constant", "begun_new_callbacks", "undefined"
 ##object#banner-1
 ##td[id^="advtd"]
 
-!-------------------------------------------------------------------------------!
-!------------------ General javascript, CSS and HTML extensions ----------------!
-!-------------------------------------------------------------------------------!
 !
 ! This section contains the list of ad blocking rules that fall under "advanced" category.
 ! By advanced we mean the following rule types: CSS, scriptlets, HTML filtering (`$$` marker), JS.
@@ -8846,9 +8927,6 @@ free-torrents.org,free-torrent.org$$style[tag-content="max-width: 728px;"]
 74.ru,autochel.ru,chelyabinsk.ru,chel.ru,chelfin.ru,cheldoctor.ru,cheldiplom.ru$$div[id="sb_"]
 !
 
-!-------------------------------------------------------------------------------!
-!------------------ Banner names -----------------------------------------------!
-!-------------------------------------------------------------------------------!
 !
 ! This section contains the list of generic blocking rules.
 !
@@ -9656,13 +9734,6 @@ ucoz.ru/informer/
 ||vk.com/rtrg$third-party
 ||dondlo.$third-party
 /rttr*.min.js$~third-party
-!-------------------------------------------------------------------------------!
-!------------------ News exchange ----------------------------------------------!
-!-------------------------------------------------------------------------------!
-! Obsolete file. Remove from includes of:
-!-------------------------------------------------------------------------------!
-!------------------ Rules for specific web sites  ------------------------------!
-!-------------------------------------------------------------------------------!
 !
 ! This section contains the list of domain-specific rules that block ads.
 !
@@ -22627,9 +22698,6 @@ rg.ru##main div[class^="Section_sectionContent"] > div[class^="EditorialPageArti
 rg.ru##.page_article
 rg.ru##div[class^="NewsFeedList_banner"]
 
-!-------------------------------------------------------------------------------!
-!------------------ Content replacement rules ----------------------------------!
-!-------------------------------------------------------------------------------!
 !
 ! This section contains the list of the content replacement rules that block ads. Rules must be domain-specific.
 !
@@ -22761,9 +22829,6 @@ rg.ru##div[class^="NewsFeedList_banner"]
 !
 bender/_bender*.js$script,replace=/this\.removeShadowBlockers\(\);/true; return;/
 
-!-------------------------------------------------------------------------------!
-!-------------- Fixing filtration errors (false-positive) ----------------------!
-!-------------------------------------------------------------------------------!
 !
 ! This section contains the list of rules that fix incorrect blocking. Rules must be domain-specific.
 !
@@ -24088,3 +24153,4 @@ zastava.net.ua#@#.banners
 @@||echo.teasernet.com/crossdomain.xml
 @@||dstw.adgear.com/crossdomain.xml
 !
+
