@@ -1,7 +1,5 @@
 ! ||104.248.94.172^$all is excluded by "||104." in exclusions.txt
 ||104.248.94.172^$all
-! Rule "||merlin.pl^$doc,domain=merlin.pl|~relacje.merlin.pl|~twoje-zamowienie-moze-byc-realizowane-kilka-lat.*" converted to: "||merlin.pl^$document,domain=merlin.pl|~relacje.merlin.pl|~twoje-zamowienie-moze-byc-realizowane-kilka-lat.*"
-||merlin.pl^$doc,domain=merlin.pl|~relacje.merlin.pl|~twoje-zamowienie-moze-byc-realizowane-kilka-lat.*
 ! Rule "||vorwerk.pl/*/zamow-prezentacje/poznaj-kobold|$doc,domain=~przemysl-zamowienie-prezentacji.*" converted to: "||vorwerk.pl/*/zamow-prezentacje/poznaj-kobold|$document,domain=~przemysl-zamowienie-prezentacji.*"
 ||vorwerk.pl/*/zamow-prezentacje/poznaj-kobold|$doc,domain=~przemysl-zamowienie-prezentacji.*
 ! Rule "||vorwerk.pl/*/zamow-prezentacje/poznaj-thermomix|$doc,domain=~przemysl-zamowienie-prezentacji.*" converted to: "||vorwerk.pl/*/zamow-prezentacje/poznaj-thermomix|$document,domain=~przemysl-zamowienie-prezentacji.*"
@@ -16,6 +14,8 @@
 /\/\?[0-9a-zA-Z]{32}&[0-9]{5}&(https?|undefined$)/$1p,script
 ! Rule "/\/\?[0-9a-zA-Z]{32}&ver=[0-9]{1,3}\./$1p,script" converted to: "/\/\?[0-9a-zA-Z]{32}&ver=[0-9]{1,3}\./$~third-party,script"
 /\/\?[0-9a-zA-Z]{32}&ver=[0-9]{1,3}\./$1p,script
+! Rule "/^https:\/\/[0-9a-z]{3,}\.[-a-z]{10,}\.(?:li[fv]e|top|xyz)\/[a-z]{8}\/\?utm_campaign=\w{40,}/$doc,match-case,domain=life|live|top|xyz" converted to: "/^https:\/\/[0-9a-z]{3,}\.[-a-z]{10,}\.(?:li[fv]e|top|xyz)\/[a-z]{8}\/\?utm_campaign=\w{40,}/$document,match-case,domain=life|live|top|xyz"
+/^https:\/\/[0-9a-z]{3,}\.[-a-z]{10,}\.(?:li[fv]e|top|xyz)\/[a-z]{8}\/\?utm_campaign=\w{40,}/$doc,match-case,domain=life|live|top|xyz
 ! Rule "/^https:\/\/[0-9a-z]{3,}\.[-a-z]{10,}\.top\/[a-z]{8}\/\?(?:cid=[0-9a-z]+&)?u=[0-9a-z]+&/$doc,domain=top" converted to: "/^https:\/\/[0-9a-z]{3,}\.[-a-z]{10,}\.top\/[a-z]{8}\/\?(?:cid=[0-9a-z]+&)?u=[0-9a-z]+&/$document,domain=top"
 /^https:\/\/[0-9a-z]{3,}\.[-a-z]{10,}\.top\/[a-z]{8}\/\?(?:cid=[0-9a-z]+&)?u=[0-9a-z]+&/$doc,domain=top
 ! Rule "/^https:\/\/[a-z]+\.com\/away\.php\?url=[%0-9A-z]{100,}$/$doc" converted to: "/^https:\/\/[a-z]+\.com\/away\.php\?url=[%0-9A-z]{100,}$/$document"
@@ -24,12 +24,10 @@
 /^https:\/\/[a-z]{2,3}\d\.biz\/go\/[0-9a-z]{15,18}$/$doc,domain=biz
 ! Rule "/^https:\/\/\d{9}\.[a-z]*\.?[a-z]{3,}\.[a-z]{2}\/\d{6}\.html$/$doc,domain=cl|eu|pl" converted to: "/^https:\/\/\d{9}\.[a-z]*\.?[a-z]{3,}\.[a-z]{2}\/\d{6}\.html$/$document,domain=cl|eu|pl"
 /^https:\/\/\d{9}\.[a-z]*\.?[a-z]{3,}\.[a-z]{2}\/\d{6}\.html$/$doc,domain=cl|eu|pl
-! Rule "/^https?:\/\/(?!www)[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,6}\/(?:[0-9a-z]{6,8}\/)?\/?\?o=[0-9a-z]{7}&u=[0-9a-z]{7}/$doc,frame,match-case,domain=buzz|com|de|fun|guru|im|info|life|live|mobi|online|pw|quest|shop|site|skin|space|top|us|xyz|yachts" converted to: "/^https?:\/\/(?!www)[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,6}\/(?:[0-9a-z]{6,8}\/)?\/?\?o=[0-9a-z]{7}&u=[0-9a-z]{7}/$document,subdocument,match-case,domain=buzz|com|de|fun|guru|im|info|life|live|mobi|online|pw|quest|shop|site|skin|space|top|us|xyz|yachts"
-/^https?:\/\/(?!www)[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,6}\/(?:[0-9a-z]{6,8}\/)?\/?\?o=[0-9a-z]{7}&u=[0-9a-z]{7}/$doc,frame,match-case,domain=buzz|com|de|fun|guru|im|info|life|live|mobi|online|pw|quest|shop|site|skin|space|top|us|xyz|yachts
-! Rule "/^https?:\/\/(?!www)[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,6}\/(?:[0-9a-z]{6,8}\/)?\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$doc,frame,match-case,domain=buzz|com|de|fun|guru|im|info|life|live|mobi|online|pw|quest|shop|site|skin|space|top|us|xyz|yachts" converted to: "/^https?:\/\/(?!www)[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,6}\/(?:[0-9a-z]{6,8}\/)?\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$document,subdocument,match-case,domain=buzz|com|de|fun|guru|im|info|life|live|mobi|online|pw|quest|shop|site|skin|space|top|us|xyz|yachts"
-/^https?:\/\/(?!www)[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,6}\/(?:[0-9a-z]{6,8}\/)?\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$doc,frame,match-case,domain=buzz|com|de|fun|guru|im|info|life|live|mobi|online|pw|quest|shop|site|skin|space|top|us|xyz|yachts
-! Rule "/^https?:\/\/([\w]{1,4}\.)?[a-z]{9,}([0-9]{1,2})?\.site\/\?utm_campaign=[_0-9a-zA-Z]+&[to]=[0-9a-z]+/$doc,domain=site" converted to: "/^https?:\/\/([\w]{1,4}\.)?[a-z]{9,}([0-9]{1,2})?\.site\/\?utm_campaign=[_0-9a-zA-Z]+&[to]=[0-9a-z]+/$document,domain=site"
-/^https?:\/\/([\w]{1,4}\.)?[a-z]{9,}([0-9]{1,2})?\.site\/\?utm_campaign=[_0-9a-zA-Z]+&[to]=[0-9a-z]+/$doc,domain=site
+! Rule "/^https?:\/\/(?!www)[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,11}\/(?:[0-9a-z]{6,8}\/)?\/?\?o=[0-9a-z]{7}&u=[0-9a-z]{7}/$doc,frame,match-case,domain=buzz|com|de|fun|guru|im|info|life|live|mobi|motorcycles|online|pw|quest|shop|site|skin|space|top|us|xyz|yachts" converted to: "/^https?:\/\/(?!www)[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,11}\/(?:[0-9a-z]{6,8}\/)?\/?\?o=[0-9a-z]{7}&u=[0-9a-z]{7}/$document,subdocument,match-case,domain=buzz|com|de|fun|guru|im|info|life|live|mobi|motorcycles|online|pw|quest|shop|site|skin|space|top|us|xyz|yachts"
+/^https?:\/\/(?!www)[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,11}\/(?:[0-9a-z]{6,8}\/)?\/?\?o=[0-9a-z]{7}&u=[0-9a-z]{7}/$doc,frame,match-case,domain=buzz|com|de|fun|guru|im|info|life|live|mobi|motorcycles|online|pw|quest|shop|site|skin|space|top|us|xyz|yachts
+! Rule "/^https?:\/\/(?!www)[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,11}\/(?:[0-9a-z]{6,8}\/)?\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$doc,frame,match-case,domain=buzz|com|de|fun|guru|im|info|life|live|mobi|motorcycles|online|pw|quest|shop|site|skin|space|top|us|xyz|yachts" converted to: "/^https?:\/\/(?!www)[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,11}\/(?:[0-9a-z]{6,8}\/)?\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$document,subdocument,match-case,domain=buzz|com|de|fun|guru|im|info|life|live|mobi|motorcycles|online|pw|quest|shop|site|skin|space|top|us|xyz|yachts"
+/^https?:\/\/(?!www)[0-9a-z]*\.?[-0-9a-z]{4,}\.[a-z]{2,11}\/(?:[0-9a-z]{6,8}\/)?\/?\?u=[0-9a-z]{7}&o=[0-9a-z]{7}/$doc,frame,match-case,domain=buzz|com|de|fun|guru|im|info|life|live|mobi|motorcycles|online|pw|quest|shop|site|skin|space|top|us|xyz|yachts
 ! Rule "/counts.php?cat=1&t=$3p,script" converted to: "/counts.php?cat=1&t=$third-party,script"
 /counts.php?cat=1&t=$3p,script
 ! Rule "/fck_files/*.xml$doc,domain=m-vision.com.pl" converted to: "/fck_files/*.xml$document,domain=m-vision.com.pl"
