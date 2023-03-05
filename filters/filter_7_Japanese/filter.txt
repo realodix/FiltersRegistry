@@ -668,6 +668,7 @@ nordot.app#%#//scriptlet('abort-current-inline-script', 'document.createElement'
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85641
 modalina.jp#%#//scriptlet('abort-on-property-read', 'AdBlockLimitation')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116093
+realtime-chart.info#$?#td[align="center"] > table > tbody > tr > td:has(> a[href^="https://hb.afl.rakuten.co.jp/"] > img) + td[style="background:#fff"] > b[style="font-size:56px"]:contains(楽天) { font-size: 0 !important; }
 realtime-chart.info#$?#td[style^="vertical-align: top"] div[onclick*="()"]:matches-attr("style"="/top\s*:\s*1[0-2]\d{2}\.?\d*px/") { pointer-events: none !important; }
 realtime-chart.info#$?#td[style^="vertical-align: top"] div[onclick*="()"][target="_blank"]:has(div[style*="background-image: url\(\"data:image/jpg;"]:matches-attr("style"="/height\s*:\s*[12]\d{2}\.?\d*px/")) { pointer-events: none !important; }
 realtime-chart.info#$?#td[style^="vertical-align"] div[style*="top"]:matches-attr("style"="/^\s*top\s*:\s*3\d{2}\.?\d*px;?\s*/") > a[id][onmousedown] { pointer-events: none !important; }
@@ -1929,7 +1930,7 @@ nijinchu.com#?#article > div.entry_content > h3:contains(おすすめ商品)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144212
 anianierosuki.work#%#//scriptlet('prevent-addEventListener', 'click', 'event')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142720
-mk.yopo.work,sushi.ski,warpday.net,zadankai.club,misskey.io#%#//scriptlet('json-prune', 'ads.[].imageUrl')
+mk.yopo.work,sushi.ski,warpday.net,zadankai.club,misskey.io,misskey.oga.ninja#%#//scriptlet('json-prune', 'ads.[].imageUrl')
 ! popup
 oppaideippai.net#%#//scriptlet('prevent-window-open')
 ! ads
@@ -2551,9 +2552,11 @@ akege.blog.jp,antena-matome.net,badminton.doorblog.jp,buybuykorea.doorblog.jp,ch
 !
 !
 !
+totoneko.net###pc_text-19
+totoneko.net###pc_text-23
 free.foto.ne.jp##.list_row3_ad_2column
 ||zadankai.club/ads/
-mk.yopo.work,sushi.ski,warpday.net,zadankai.club,misskey.io##.xF6dY
+mk.yopo.work,sushi.ski,warpday.net,zadankai.club,misskey.io,misskey.oga.ninja##.xF6dY
 aaieba.livedoor.biz###scroll
 aaieba.livedoor.biz##.aaieba-e
 aaieba.livedoor.biz##.article-body-inner > div[align="center"] > table
@@ -7784,6 +7787,8 @@ avgle.com##.well#ps32-container
 $popup,domain=avgle.com,third-party
 avgle.com##.container > div[style*="overflow: hidden"]
 !
+!+ PLATFORM(ext_ublock)
+totoneko.net##iframe.lazyloaded[width="728"][height="90"]
 !+ PLATFORM(ext_ublock)
 kyobun.co.jp##.td-a-rec-id-custom_ad_2
 !+ PLATFORM(ext_ublock)
