@@ -1244,6 +1244,7 @@
 ##.cookie-permission
 ##.cookie-policy:not(body):not(html)
 ##.cookie-policy-banner
+##.cookie-policy__banner
 ##.cookie-policy-box
 ##.cookie-policy-message
 ##.cookie-policy-notice
@@ -2218,6 +2219,10 @@ freundin.de,utopia.de,mein-schoener-garten.de,eveningnews24.co.uk,rollingstone.d
 !
 !
 !
+playlumi.com#$#body { overflow: auto !important; padding-right: 0 !important; }
+playlumi.com#$#div[data-dialog-ref="cookie-notification"] { display: none !important; }
+coolblue.be##.modal-box
+vitalsource.com##div[role="dialog"][aria-label="Cookie Policy"]
 search.brave.com###usage-metrics-notice
 headspace.com##div[data-testid="gdpr-modal"]
 tcaeintegral.es#$#.c--anim { display: none !important; }
@@ -13135,6 +13140,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/144838
+playlumi.com#@##cookie-notification
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144172
 @@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=tvguide.com
 tvguide.com#@##onetrust-consent-sdk
@@ -31767,6 +31774,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! notifications - part of the functionality
 ! discord.com##div[class^="container"] > nav[class^="wrapper"] + div[class^="base"] > div[class^="notice-"]
 !
+coolblue.be#?#.grid > div[class^="col"]:has(> div[class] > a[href="https://www.coolblue.be/nl/c/app.html"])
 ehonnavi.net#?##m_leftColumn > div.c_mb30:has(> a[href="/premium/"])
 roomclip.jp##.HeaderApplink
 folk-media.com###mobile_app_link_button
@@ -39158,6 +39166,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+||error.fc2.com/web/image/bnr_kantan_404.png
 amazon.*##article[data-automation-id="hero-quick-promo"]
 ||kashi-mo.com/media/wp-content/themes/kashimo/img/kashimo_wimax/220625_
 llbean.ca###pc5
