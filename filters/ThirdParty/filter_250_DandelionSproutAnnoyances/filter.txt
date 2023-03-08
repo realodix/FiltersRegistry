@@ -463,7 +463,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 07March2023v4
+! OriginalVersion: 08March2023v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1478,6 +1478,9 @@ zombooru.com##a[href="http://www.hard55.com"]
 !#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/143281
 ! Unsuited for wildcarding
+! https://github.com/AdguardTeam/AdguardFilters/issues/144823
+!+ NOT_OPTIMIZED
+://landings.*_slots/?partner=$document
 ! ——— Standard malware that I stumbled upon on my own ———
 ! http://www.toorgle.net/results.php?q=fetishkitsch&security=666
 ##a[href*=".downloadprovider.me/"]
@@ -2143,7 +2146,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 07March2023v3
+! OriginalVersion: 07March2023v4
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -13373,6 +13376,8 @@ cdburnerxp.se##[href*="/downloadsetup.exe"]
 ! https://app.any.run/tasks/0f8b5786-177a-45c0-a1de-32e0d68beff2
 ||123secure.org^$all
 ||sup2.10239.org^$all
+! https://github.com/RPiList/specials/issues/948#issuecomment-1458739160
+||yuppdownload.com^$all
 ! ——— Horrendously bad copypasted Android rooting "guides" (often with fake titles) that bricked two of my phones ———
 ! Most of the guides haven't even accounted for how modern phones have replaced the recovery environment with an extra boot environment, leading to very critical Fastboot commands not working and/or bricking the phone.
 ||unofficialtwrp.com^$document
