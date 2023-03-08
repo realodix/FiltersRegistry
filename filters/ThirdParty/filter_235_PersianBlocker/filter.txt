@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2023-03-02
+! Last modified: 2023-03-08
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -260,14 +260,10 @@ blogsazan.com##.main_content[style="border-radius:10px;"] > div[style="padding: 
 ||trustseal.e-rasaneh.ir^$all
 ! Example: anaj.ir
 ||triboon.net^$all
-||tamasha.com^$removeparam=vastUrl
-||tamasha.com/et/play?ntt=
-||tamasha.com/dist/*/contrib/player/js/videojs.ima.min.js
-||tamasha.com/dist/*/contrib/player/js/videojs-contrib.min.js
-||tamasha.com/dist/*/contrib/player/js/ima
-||tamasha.com/dist/*/js/ads_tracker.min.js
-||tamasha.com/dist/*/js/tracker.min.js
-@@||tamasha.com/embed^$subdocument
+@@||tamasha.com/embed^$subdocument,third-party
+||tamasha.com/embed^$third-party,removeparam=vastUrl
+||tamasha.com/dist/*/js/ads_tracker.min.js^$script
+||tamasha.com/dist/*/js/tracker.min.js^$script
 ! Example: ejiga.com/w/SQxMqtz
 ||te1.ir^$all
 ||talapop.ir^$all
@@ -307,10 +303,9 @@ blogsazan.com##.main_content[style="border-radius:10px;"] > div[style="padding: 
 ! >> V <<
 ||vatanclick.ir^$all
 ! >> W <<
-||webgozar.com/c.aspx*&t=counter
-||webgozar.ir/c.aspx*&t=counter
+||webgozar.ir/c.aspx?Code=*&t=counter$script,third-party
+||webgozar.com/c.aspx?Code=*&t=counter$script,third-party
 ||wideads.com^$all
-! ||wideads.com^$popup
 ! >> X <<
 ||xjs.lol^$all
 ||xmlx.lol^$all
@@ -928,8 +923,8 @@ econews.ir#$#.container { width: 95% !important; }
 ! https://github.com/MasterKia/PersianBlocker/issues/55
 ||eghtesaad24.ir/files/adv^
 ! https://github.com/MasterKia/PersianBlocker/issues/50
-||ejiga.com/content/player/js/rmp-vast.js
-||ejiga.com/content/player/css/rmp-vast.css
+||ejiga.com/content/player/js/rmp-vast.js^$script,~third-party
+||ejiga.com/content/player/css/rmp-vast.css^$stylesheet,~third-party
 ejiga.com##.adv
 ejiga.com##.adv-ttl
 emeil.ir##[class*="text_ads"]
@@ -1727,6 +1722,9 @@ opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/) > p
 !#endif
 omidnamehnews.ir##.adspanel
 ! >> P <<
+! https://github.com/MasterKia/PersianBlocker/issues/139
+||peivast.com/wp-content/uploads/*.webm$media,~third-party
+peivast.com##.multi-ads-container
 ||analytics.plaza.ir^$all
 ||plaza.ir/location/find-client-location^$xmlhttprequest,~third-party
 ||plaza.ir/wp-admin/admin-ajax.php?action=getClientDeviceRelatedPostItems^$xmlhttprequest,~third-party
@@ -2196,7 +2194,12 @@ tamasha.com#%#//scriptlet('ubo-set.js', 'socketUrl', 'undefined')
 tamasha.com#%#//scriptlet('ubo-set.js', 'VASTEnabled', 'false')
 tamasha.com#%#//scriptlet('ubo-set.js', 'vastURL', '[]')
 tamasha.com#%#//scriptlet('ubo-cookie-remover.js', 'tracker_visitor_id')
-||tamasha.com/visid^
+||tamasha.com/dist/*/contrib/player/js/ima3.min.js^$script
+||tamasha.com/dist/*/contrib/player/js/videojs.ima.min.js^$script
+||tamasha.com/dist/*/contrib/player/css/videojs.ima.min.css^$stylesheet
+||tamasha.com/dist/*/contrib/player/js/videojs-contrib.min.js^$script
+||tamasha.com/dist/*/contrib/player/css/videojs-contrib.min.css^$stylesheet
+||tamasha.com/visid^$xmlhttprequest
 ! Example: tamasha.com/v/DDlMB
 ! https://github.com/MasterKia/PersianBlocker/issues/47
 ||ad.technews-iran.com^$all

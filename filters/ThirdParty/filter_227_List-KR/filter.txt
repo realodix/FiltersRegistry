@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0308.1
+! OriginalVersion: 2023.0308.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1257,6 +1257,8 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+msearch.shopping.naver.com##div[class^="products_search_list"] div[class^="adProduct_"][id*="lst_"]
+mlbpark.donga.com##.sub_lists_today li.items::before
 22st.net###googleTop
 meeco.kr##html[class*="mobile"] .list_document li:not([class])
 compuzone.co.kr##ul[id*="_ad_"]
@@ -1561,7 +1563,6 @@ koya-culture.com##div[itemprop="articleBody"] ~ div[style]
 eroun.net##body > div[style]:not([class]):not([id])
 ilemonde.com,mjmedi.com,eroun.net###layer-popups
 hogaeng.co.kr##div[id^="container_"] .slide_box
-mlbpark.donga.com##.contents > .left_cont > div[style]
 shopping.interpark.com##.contentsWrap #idRecommendWrap
 zdnet.co.kr##div[class*="_bn_"][style]
 interpark.com##.welcomeWrapper .interparkInner .eventWrapper
@@ -2067,8 +2068,6 @@ daum.net##iframe[src^="//shop-redapi.daum.net/red-apigate/daumtop/"]
 jjang0u.com##.banner-web
 jjang0u.com##div[id^="bidrich_"]
 thebell.co.kr##a[onclick^="goAD"][onclick$="()"]
-search.shopping.naver.com##li[class^="basicList_item__"].ad
-msearch.shopping.naver.com##div[class^="brandAd_brand_ad"]
 search.daum.net###splinkColl
 search.daum.net##.adLinkColl
 pcmap.place.naver.com###_pcmap_list_scroll_container > ul > li[data-laim-exp-id="undefined*e"]
@@ -2424,6 +2423,7 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+search.shopping.naver.com#?##content .list_basis div:has(> .ad)
 enuri.com#?#.m-row > div[class^="col col-"]:not(:has(> .col__inner a:not([href*="ad-api.enuri.info"]))):has(.bnrbox ul[id][class^="bnr__"])
 gigglehd.com#?##gap > div[style*=": "].xe-widget-wrapper:has(.widget_banner_skin > .banner_list)
 itwind.co.kr#?##footer-wrapper div[id^="footer"].footer:has(img[src*="=s"])

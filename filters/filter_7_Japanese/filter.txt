@@ -667,7 +667,7 @@ nordot.app#%#//scriptlet('abort-current-inline-script', 'document.createElement'
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85641
 modalina.jp#%#//scriptlet('abort-on-property-read', 'AdBlockLimitation')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116093
-realtime-chart.info#$?#td[align="center"] > table > tbody > tr > td:has(> a[href^="https://hb.afl.rakuten.co.jp/"]) + td > b[style="font-size:32px"]:contains(楽天) { font-size: 0 !important; }
+realtime-chart.info#$?#td[align="center"] > table > tbody > tr > td:has(> a[href^="https://hb.afl.rakuten.co.jp/"]) + td > b[style="font-size:32px;"]:contains(楽天) { font-size: 0 !important; }
 realtime-chart.info#$?#td[style^="vertical-align: top"] div[onclick*="()"]:matches-attr("style"="/top\s*:\s*1[0-2]\d{2}\.?\d*px/") { pointer-events: none !important; }
 realtime-chart.info#$?#td[style^="vertical-align: top"] div[onclick*="()"][target="_blank"]:has(div[style*="background-image: url\(\"data:image/jpg;"]:matches-attr("style"="/height\s*:\s*[12]\d{2}\.?\d*px/")) { pointer-events: none !important; }
 realtime-chart.info#$?#td[style^="vertical-align"] div[style*="top"]:matches-attr("style"="/^\s*top\s*:\s*3\d{2}\.?\d*px;?\s*/") > a[id][onmousedown] { pointer-events: none !important; }
@@ -933,6 +933,7 @@ otonasalone.jp,sumaiweb.jp#?#._popIn_infinite_page > a._popIn_recommend_article_
 !
 !
 !
+blog.2nt.com#?#div[class$="_outline"] > div > div.plugin-freearea > a[href*="dmm.co"][target="_blank"] > img:upward(4)
 f1jouhou2.blog.fc2.com#?#.rmenubox + div.p1_title:contains(【PR】)
 f1jouhou2.blog.fc2.com#?#.rmenubox > div.plugin-freearea > div[style^="width:230px"]:upward(2)
 i2chmeijin.blog.fc2.com#?#.plugin2_body > .plugin-freearea > div > ins.adsbygoogle:upward(3)
@@ -1133,7 +1134,7 @@ cinematoday.jp#$?#.feed-item > div[id^="div-gpt-"]:upward(1) { remove: true; }
 moez-m.com#?#.widget-content-top table.has-fixed-layout td:has(> div > div.topprimg)
 garanger.net#?#.box > div[id^="andhub"]:upward(1)
 qiita.com#?#div[id^="New2HomeTrendPage-"] > div[class] > div[class] > div[class]:has(> div#trend-side-ad:only-child)
-blog.fc2.com#?#div[class$="_outline"] > div > div.plugin-freearea > a[href^="https://www.amazon.co.jp/dp/"][target="_blank"]:not([name]):upward(3)
+blog.2nt.com,blog.fc2.com#?#div[class$="_outline"] > div > div.plugin-freearea > a[href*="amazon.co.jp/"][target="_blank"]:not([name]):upward(3)
 blog55.fc2.com,blog.fc2.com#?#div[class$="_outline"] > div > div.plugin-freearea > center > ins.adsbygoogle:upward(4)
 blog55.fc2.com,blog.fc2.com#?#div[class$="_outline"] > div > div.plugin-freearea > ins.adsbygoogle:upward(3)
 jobcatalog.yahoo.co.jp#?#div[class*="__"] > div[id$="ad1"]:upward(1)
