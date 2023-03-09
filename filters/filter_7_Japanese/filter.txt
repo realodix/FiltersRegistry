@@ -667,6 +667,7 @@ nordot.app#%#//scriptlet('abort-current-inline-script', 'document.createElement'
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85641
 modalina.jp#%#//scriptlet('abort-on-property-read', 'AdBlockLimitation')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/116093
+realtime-chart.info#$?#div[id] > div[id]:has(> div[style="top:1538px"]) + div > div[style="top:1538px"] > [style*="font-size:"]:is(b, span, a):not(:has(td > a)) { font-size: 0 !important; }
 realtime-chart.info#$?#td[align="center"] > table > tbody > tr > td:has(> a[href^="https://hb.afl.rakuten.co.jp/"]) + td > b[style="font-size:32px;"]:contains(楽天) { font-size: 0 !important; }
 realtime-chart.info#$?#td[style^="vertical-align: top"] div[onclick*="()"]:matches-attr("style"="/top\s*:\s*1[0-2]\d{2}\.?\d*px/") { pointer-events: none !important; }
 realtime-chart.info#$?#td[style^="vertical-align: top"] div[onclick*="()"][target="_blank"]:has(div[style*="background-image: url\(\"data:image/jpg;"]:matches-attr("style"="/height\s*:\s*[12]\d{2}\.?\d*px/")) { pointer-events: none !important; }
@@ -677,7 +678,6 @@ realtime-chart.info#$?#td[style^="vertical-align"] div[onmousedown]:has(> img[sr
 realtime-chart.info#%#//scriptlet('remove-attr', 'onclick', 'td[style] div[style^="top:1"] > div')
 sekai-kabuka.com#$?#table[width="762px"] > tbody > tr > td[class] > div[id][class] > div[style="width: 256px;"]:contains(不具合が) { z-index: -1 !important; }
 sekai-kabuka.com#$?#table[width="762px"] table[width="100%"] td[align="center"] > div > div[style$="width:728px;line-height: 1.2;height: 90px;"]:has(> ins.adsbygoogle[style="display:inline-block;width:728px;height:90px;position:absolute"] > iframe#aswift_1) { height: 1px !important; }
-!realtime-chart.info#$#div[style="top:1644px"] > [style*="font-size:"]:is(b, span, a) { font-size: 0 !important; }
 sekai-kabuka.com#$#div[id][class][style^="position:relative;background:#000;"][style*="width:729px;"][style*="height: 90px;"] { height: 1px !important; }
 sekai-kabuka.com#%#//scriptlet('remove-attr', 'onclick', 'div[data-js][style*="background"]', 'stay')
 sekai-kabuka.com#$#div[data-js] { background: none !important; cursor: default !important; }
@@ -1500,7 +1500,7 @@ blog.livedoor.jp#?#.plugin-memo > div.side > div > b > a[href^="https://www.amaz
 blog.livedoor.jp#?#.article-body-inner > div.t_b ~ b > a[href^="https://www.amazon.co.jp/dp/"]:upward(1)
 blog.livedoor.jp#?#.article-body-inner > div[style="margin:0;padding:5px;font-size:12px;word-break: break-all;"] > a[href^="https://al.dmm.co.jp"]:upward(1)
 blog.livedoor.jp#?#.plugin-memo > div.side > a[href^="https://pcmax.jp/lp/"]:upward(2)
-kimsoku.com,pachinkopachisro.com,toushichannel.net,michaelsan.livedoor.biz#?#.plugin-memo:has(> div.side > a[href*="amazon.co.jp"])
+baseballstats2011.jp,kimsoku.com,pachinkopachisro.com,toushichannel.net,michaelsan.livedoor.biz#?#.plugin-memo:has(> div.side > a[href*="amazon.co.jp"])
 blog.livedoor.jp#?#.plugin-memo > div.side > a[href^="https://affiliate.suruga-ya.jp"]:upward(2)
 blog.livedoor.jp#?#.article-body-more > div[align="center"] > a[href^="https://www.sokmil.com/av/_item/"]:upward(1)
 blog.livedoor.jp#?#.left-container > div.plugin-memo:has(> div.side > div.amakuri-undertext)
@@ -1589,7 +1589,7 @@ livedoor.biz,blog.livedoor.jp,blog.jp,2chblog.jp,doorblog.jp,youblog.jp#?#.plugi
 football-2ch.com#?##article-options > div[style="width: 100%;"] + h3:contains(楽天)
 football-2ch.com#?#.plugin-memo > div.side > script[src*="i2i.jp/"]:upward(2)
 w.atwiki.jp#?##body_footer:has(> a[href^="https://www.amazon.co.jp/"] > img)
-taikankyohou.com,doorblog.jp,burusoku-vip.com,tsuisoku.com,squallchannel.com,crx7601.com,blog.jp,akb48rompen.com,ldblog.jp,blog.livedoor.jp,gamehig.com#?#.plugin-memo > div.side > ins.adsbygoogle:upward(2)
+taikankyohou.com,doorblog.jp,burusoku-vip.com,tsuisoku.com,squallchannel.com,crx7601.com,blog.jp,baseballstats2011.jp,akb48rompen.com,ldblog.jp,blog.livedoor.jp,gamehig.com#?#.plugin-memo > div.side > ins.adsbygoogle:upward(2)
 gamehig.com#?#.left-column-inner > .plugin-memo:nth-child(2):has(> div.side > a[href^="https://www.amazon.co.jp/"])
 fireflyframer.blog.jp#?#.article-body-inner > div:last-child > div:has(> a[href^="https://ck.jp.ap.valuecommerce.com/"])
 bokuslog.com#?#.readmoreWrap > p > ins.adsbygoogle:upward(1)
@@ -1888,7 +1888,7 @@ nijinchu.com#?#article > div.entry_content > h3:contains(おすすめ商品)
 ##.insentence-adsense
 ##.itiran-ad
 ##.js-kb-click
-~kaereba.com##.krb-amzlt-box
+~kaereba.com##.krb-amzlt-info
 ##.master-post-advert
 ##.my_ads
 ##.p-entry__ad
@@ -3731,7 +3731,7 @@ jm1xtk.com##div[class$="_ad"]
 my-best.com##.l-footer__fixed
 print-kids.net##div[id^="ad-"]
 print-kids.net##div[id$="-rectangle"]
-twidropper.appspot.com,print-kids.net##.adsense-responsive
+anzn.net,twidropper.appspot.com,print-kids.net##.adsense-responsive
 cojicaji.jp##div[class^="adsense-below-"]
 print-kids.net##.sponsor-responsive
 hentaicovid.com###banner-deital
@@ -6163,7 +6163,7 @@ aniplexplus.com##.hotentry
 ||x.sekai-kabuka.com/gneko$image
 ||x.sekai-kabuka.com/http/$image
 realtime-chart.info,sekai-kabuka.com###neko_ad
-||amazon-adsystem.com/widgets/$important,domain=realtime-chart.info|mashlife.doorblog.jp|lamsect.blog112.fc2.com|blog.domesoccer.jp|neo-blood.co.jp|katuru2ch.blog12.fc2.com|azurlanesokuhou.blog.jp|ima.goo.ne.jp|michaelsan.livedoor.biz|bluebluesunset.blog.fc2.com|kokuhakutaiken.com|netorarezukiview.com|getuploader.com|i-bbs.sijex.net|kandatasokuho.blog.fc2.com
+||amazon-adsystem.com/widgets/$important,domain=realtime-chart.info|mashlife.doorblog.jp|lamsect.blog112.fc2.com|blog.domesoccer.jp|neo-blood.co.jp|katuru2ch.blog12.fc2.com|azurlanesokuhou.blog.jp|ima.goo.ne.jp|michaelsan.livedoor.biz|bluebluesunset.blog.fc2.com|kokuhakutaiken.com|netorarezukiview.com|getuploader.com|i-bbs.sijex.net|kandatasokuho.blog.fc2.com|baseballstats2011.jp
 hana3939.com,baseballchannel.jp###text-13
 web.gekisaka.jp###PC_SP_NEWS_D_GROUP
 web.gekisaka.jp##.PC_NEWS_D_PC_ONLY
