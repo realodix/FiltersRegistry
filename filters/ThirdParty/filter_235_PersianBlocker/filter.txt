@@ -90,10 +90,11 @@
 ||adro.co^$all
 ||affstat.adro.co^$all
 ||adro.ir^$all
-||1abzaar.ir/abzar/tools/no-rightclick.js
-||1abzaar.ir/abzar/tools/no-selects.js
-||1abzar.ir/abzar/tools/post-view/
-||1abzar.ir/abzar/tools/stat/
+||1abzar.ir/abzar/tools/porbazdid^$script,third-party
+||1abzar.ir/abzar/tools/stat^$script,third-party
+||1abzar.ir/abzar/tools/post-view^$script,third-party
+||1abzaar.ir/abzar/tools/no-selects.js^$script,third-party
+||1abzaar.ir/abzar/tools/no-rightclick.js^$script,third-party
 ||abzarfa.com/services/minicounter^$script
 ||abzarfa.com/services/onlineusres^$script
 ||abzarfa.com/tools/ip^$script
@@ -275,6 +276,7 @@ blogsazan.com##.main_content[style="border-radius:10px;"] > div[style="padding: 
 @@||player.tavoos.net/jwplayer.js$script,third-party
 @@||player.tavoos.net/jwplayer.core.controls.html5.js$script,third-party
 @@||player.tavoos.net/jwplayer.core.controls.js$script,third-party
+@@||player.tavoos.net/jwplayer.stats.js^$script,third-party
 @@||player.tavoos.net/provider.hlsjs.js$script,third-party
 @@||player.tavoos.net/tavoos-player.css$stylesheet,third-party
 @@||player.tavoos.net/assets/fonts/$font,third-party
@@ -502,8 +504,10 @@ aftabyazdonline.ir##.co-ads
 abipic.com##.pt-3.text-center.py-2.bg-all-box
 abipic.com##.text-center.py-3.bg-all-box
 abipic.com##.ads-text-sid
-||1abzar.com/files/ads
+||1abzar.com/files/ads.gif^$image,~third-party
+||1abzar.com/ads^$image,~third-party
 1abzar.com##.ads-post
+1abzar.com##.link-paeen
 ||aftabnews.ir/files/adv/
 aftabnews.ir##.adv_r_news2
 aftabnews.ir##.adv_l_inner5
@@ -702,6 +706,8 @@ click.ir##.clads-inner
 ||caffecinema.com/media/banners/
 @@||caffecinema.com/media/banners/telegram-$image,~third-party
 ! >> D <<
+! https://github.com/MasterKia/PersianBlocker/issues/137
+drdmag.com##a[href^="https://zaya.io/"]
 ! https://github.com/MasterKia/PersianBlocker/issues/136
 ||cdn.dolatebahar.ir/upload/Ads^$image,~third-party
 ||sai.co.ir^$third-party,domain=dolatebahar.ir
@@ -1591,6 +1597,9 @@ montiego.ir##.txt-ads-sl
 msbmusic.ir#%#//scriptlet('ubo-set.js', 'needpop', '0')
 mybia4music.com$$script[tag-content="pa_vc_url"][max-length="262144"]
 !#if !cap_html_filtering
+mybia4music.com#%#//scriptlet('ubo-acis.js', 'pa_vc_url')
+!#endif
+!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_firefox)
 mybia4music.com#%#//scriptlet('ubo-acis.js', 'pa_vc_url')
 !#endif
 mybia4music.com##.ads-banner
