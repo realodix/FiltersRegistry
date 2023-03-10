@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-03-08 08:46:42 CET
+! Last modified: 2023-03-10 07:59:54 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -27,6 +27,7 @@
 99.teknikveckan.se##.carousel-item-link:has-text(Annons:)
 ?autoPlay$subdocument,removeparam=autoplay,domain=expressen.se
 ?autoplay=true$subdocument,removeparam=autoplay,domain=expressen.se
+@@||www.spisa.nu^$document
 accentmagasin.se#%#//scriptlet('ubo-nostif.js', 'n.modal')
 affarsliv.com,alekuriren.se,allas.se,baaam.se,babyhjalp.se,barometern.se,blt.se,bt.se,byrum.se,cafe.se,corren.se,di.se,ekuriren.se,elle.se,eposten.se,expressen.se,familjeliv.se,femina.se,folkbladet.nu,folkbladet.se,fragbite.se,frida.se,golfing.se,gotlandjustnu.se,hant.se,helagotland.se,ibnytt.se,kalmarposten.se,kindaposten.se,kingmagazine.se,kkuriren.se,klt.nu,kristianstadsbladet.se,kuriren.nu,lokalti.se,lokaltidningen.nu,mabra.com,mellanbygden.nu,meraosterlen.se,mestmotor.se,mitti.se,motherhood.se,mvt.se,nordsverige.se,norrahalland.se,norran.se,norrbottensaffarer.se,nsd.se,nsk.se,nt.se,nwt.se,nyheter24.se,olandsbladet.se,praktisktbatagande.se,pt.se,realtid.se,recept.se,residencemagazine.se,skd.se,smp.se,sn.se,strengnastidning.se,svenskanamn.se,svenskdam.se,svenskgolf.se,sverigespringer.se,sydostran.se,thelocal.se,trelleborgsallehanda.se,unt.se,ut.se,vasterastidning.se,vasterbottningen.se,vaxjobladet.se,viivilla.se,vimmerbytidning.se,vk.se,vt.se,vxonews.se,youplay.se,ystadsallehanda.se#%#//scriptlet('ubo-json-prune.js', 'autoplay')
 affarsliv.com,corren.se,ekuriren.se,eposten.se,folkbladet.se,gotlandjustnu.se,helagotland.se,kindaposten.se,kkuriren.se,kuriren.nu,mvt.se,norran.se,norrbottensaffarer.se,nsd.se,nt.se,pt.se,sn.se,strengnastidning.se,unt.se,vimmerbytidning.se,vt.se#$#.sp-message-open body { overflow:unset!important;position:unset!important; }
@@ -517,6 +518,7 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||player.vimeo.com^$subdocument,redirect=click2load.html,domain=breakit.se
 ||s.arclk.net/tr?$all
 ||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=tv4play.se
+||spisa.nu^$document
 ||trailer-admin-cdn.a2d.tv^$media,redirect=noopmp4-1s,domain=tv4play.se
 ||widget.playoncenter.com/newplayer/js/pb_$redirect=noopjs,script
 ||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|godare.se|svd.se|wellness.se
@@ -588,8 +590,8 @@ home2tiny.se#%#//scriptlet('ubo-aeld.js', '/mousewheel|DOMMouseScroll/')
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -2073,6 +2075,7 @@ mestmotor.se##.panel-native, a[href*="/artiklar/partner/"]
 metalcentral.net##.bannergroupno-padding
 metromode.se##.b-topshop
 milansverige.se##.elementor-image a[target="_blank"], .oc_cb_wrapper
+miljomat.se##[id^="Annons"]
 minhembio.com##div[style="height: 120px;"]:not([id]):not([class])
 minsolresa.se##aside#text-5, aside#text-13
 missatsamtal.se##.nosnaj
@@ -2141,6 +2144,7 @@ ratsit.se##.promo
 ravarumarknaden.se###header > div > div.last, #block-4, #mvp-leader-wrap
 realm667.com#@##redim-cookiehint
 realtid.se##.realtid-add, .infinite-scroll.native-wrapper
+rejsa.nu###adsblock, #adsblockfoot, .fpright, div[onclick*="window.open"]
 reseguiden.se##.adsbox-wrapper, .banner-xxl_panorama-container, .banner-top-container
 restaurangvarlden.se##.banner-col, .alt-banner-col
 ridsport.se##.svrf__sticky-ad, .svrf-block__banner, .sv-cookie-consent-banner, .sp-banner-block, .sp-double-ad-block, .sp-head-sponsor-container, .sp-regular-sponsor-container
@@ -2790,6 +2794,7 @@ zeromagazine.nu##div[id^="ads"]
 ||reddit.com/static/button$third-party
 ||redeal.se^$third-party
 ||referralhero.com^$third-party
+||rejsa.nu/ann$image
 ||rek.ai^$third-party,domain=ng.se
 ||rekai.se^$third-party,domain=folkpool.se
 ||rektek.se/widget/extraexposurejobs$third-party
