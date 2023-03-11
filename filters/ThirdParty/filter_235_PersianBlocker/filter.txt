@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2023-03-10
+! Last modified: 2023-03-11
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -111,7 +111,7 @@ blogsazan.com##.blog-home-ads-blog
 blogsazan.com##.main_content[style="border-radius:10px;"] > div[style="padding: 10px; text-align:center; font-size:13px;"] > a:upward(.main_content)
 ||behinava.com^$all
 ||radar.bayan.ir^$all
-||backlink.behtarinseo.ir/ads
+||behtarinseo.ir^$all
 ||backority.ir^$all
 ! https://github.com/AdguardTeam/AdguardFilters/issues/99240
 ||blogfa.com/a^$script,~third-party
@@ -365,8 +365,8 @@ blogsazan.com##.main_content[style="border-radius:10px;"] > div[style="padding: 
 ||sibautomation.com^$third-party
 ! ^ Used by akhbarrasmi.com
 ! >> T <<
-||toshare.io/dl/download.php?i=
-! ^ Used by barato.ir
+||toshare.io/dl/download.php^$script,third-party
+! ^ Used by barato.ir, dailymobile.ir
 ! >> U <<
 ||useinsider.com^$third-party
 ! ^ Used by Sheypoor.com
@@ -386,10 +386,10 @@ blogsazan.com##.main_content[style="border-radius:10px;"] > div[style="padding: 
 ! >> A <<
 androidparsi.ir$$script[tag-content="vc_url"][max-length="262144"]
 !#if !cap_html_filtering
-androidparsi.ir#%#//scriptlet('ubo-acis.js', 'needpop')
+androidparsi.ir#%#//scriptlet('ubo-acis.js', 'vc_url')
 !#endif
 !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_firefox)
-androidparsi.ir#%#//scriptlet('ubo-acis.js', 'needpop')
+androidparsi.ir#%#//scriptlet('ubo-acis.js', 'vc_url')
 !#endif
 androidparsi.ir##.app_ads_banner
 avaz-kurd.ir##.page-body > .post:not(article) > .yn-bnr:empty:upward(.post)
@@ -707,6 +707,17 @@ click.ir##.clads-inner
 ||caffecinema.com/media/banners/
 @@||caffecinema.com/media/banners/telegram-$image,~third-party
 ! >> D <<
+! https://github.com/MasterKia/PersianBlocker/issues/140
+dailymobile.ir$$script[tag-content="vc_url"][max-length="262144"]
+!#if !cap_html_filtering
+dailymobile.ir#%#//scriptlet('ubo-acis.js', 'vc_url')
+!#endif
+!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_firefox)
+dailymobile.ir#%#//scriptlet('ubo-acis.js', 'vc_url')
+!#endif
+||parsaspace.com^$image,third-party,domain=dailymobile.ir
+dailymobile.ir##.adsboxfix
+dailymobile.ir##div[style*="position: fixed; right: 0px; bottom: 0px;"]:has(> .close-fixedSd)
 ! https://github.com/MasterKia/PersianBlocker/issues/137
 drdmag.com##a[href^="https://zaya.io/"]
 ! https://github.com/MasterKia/PersianBlocker/issues/136
@@ -1099,13 +1110,6 @@ fa-tools.ir##.list
 fa-tools.ir##.t-adv
 fa-tools.ir##div.post:nth-of-type(2)
 ! >> G <<
-gharbtv.com$$script[tag-content="vc_url"][max-length="262144"]
-!#if !cap_html_filtering
-gharbtv.com#%#//scriptlet('ubo-acis.js', 'needpop')
-!#endif
-!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_firefox)
-gharbtv.com#%#//scriptlet('ubo-acis.js', 'needpop')
-!#endif
 gharbtv.com##.card-ads
 gharbtv.com##.bottom-ads
 ||core.gapfilm.ir/api/*/Banner/GetBanner?bannerId=
@@ -1120,9 +1124,8 @@ gharbtv.com##.bottom-ads
 gold-team.org#%#//scriptlet('ubo-nano-sib.js')
 gold-team.org##.size-full.attachment-full
 gold-team.org##.aligncenter.wp-image-9273.size-full
-gamesetup.ir#%#//scriptlet('ubo-acis.js', 'vc_url')
-||gamesetup.ir/wp-content/uploads/*/ads
-gamesetup.ir##.sidebar > div.box:nth-of-type(5)
+||tarfandha.org/pop/popmain.js^$script
+gamesetup.ir##.sidebar > .box > .behtarinbacklink:upward(.box)
 ! https://github.com/MasterKia/PersianBlocker/commit/ccd9af83ced447f363fd706df92df2f5d0756156#commitcomment-84035664
 ||gostaresh.news/statics^
 gostaresh.news##.zxc_home
@@ -2192,6 +2195,15 @@ saat24.news##section.box ul > li.bklnk:upward(section.box)
 @@||1000site.ir/asset/images/images/adpage/$image,~third-party
 @@||1000site.ir/home/ads/asset/favicon.ico$image,~third-party
 ! >> T <<
+tarfandha.org$$script[tag-content="vc_url"][max-length="262144"]
+!#if !cap_html_filtering
+tarfandha.org#%#//scriptlet('ubo-acis.js', 'vc_url')
+!#endif
+!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_firefox)
+tarfandha.org#%#//scriptlet('ubo-acis.js', 'vc_url')
+!#endif
+tarfandha.org##.textads
+tarfandha.org##.behtarinseo
 ||tvrooz.com/analytics.js^$script,~third-party
 ||tvrooz.com/tvrooz-analytics.js^$script,~third-party
 ! https://github.com/MasterKia/PersianBlocker/issues/129
