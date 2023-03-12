@@ -1,5 +1,5 @@
 !
-! OriginalVersion: 12March2023v2
+! OriginalVersion: 12March2023v3
 ! Title: Adblock List for Finland
 ! Description: Finnish adblock list
 ! Expires: 4 days
@@ -79,6 +79,9 @@ iltalehti.fi#?#.double-column > a[href]:-abp-has(.article-container:has-text(Kau
 ! https://github.com/easylist/easylist/pull/8317
 pelaaja.fi#%#//scriptlet('ubo-aopr.js', 'ga')
 ||pelaaja.fi/sites/default/files/googleanalytics/analytics.js$important
+! Waiting for EP to support uBO filters as well
+! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/433
+muropaketti.com#$#body.noImages .content img { display: inline-block !important }
 ! -----GENERAL FILTERS-----
 /bannerCounter.php
 /js/spring.js
@@ -1488,6 +1491,10 @@ gamereactor.fi##[class^=ad_mobileLeader]
 gamereactor.fi##[class^=ad_smartphbig]
 gamereactor.fi##div[style$="color: lightgrey; font-size: 11px; text-transform: uppercase;"]
 kotiliesi.fi#?#.article-card-grid li:-abp-has(div[id^=dfp__])
+!#endif
+!#if ext_abp
+! https://github.com/finnish-easylist-addition/finnish-easylist-addition/issues/433
+@@||www.googletagmanager.com/gtm.js$script,domain=muropaketti.com
 !#endif
 ! -----UNSORTED END-----
 ! -----UNBREAK-----
