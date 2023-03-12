@@ -5,8 +5,8 @@
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
 ! Expires: 2 days
-! Last modified: Sun, 12 Mar 2023, 13:31 UTC+01:00
-! OriginalVersion: 2023.3.12.0
+! Last modified: Sun, 12 Mar 2023, 21:31 UTC+01:00
+! OriginalVersion: 2023.3.12.3
 ! Najnowsza wersja zawsze na: https://github.com/FiltersHeroes/PolishAnnoyanceFilters
 ! Zgłoszenia:
 !   Formularz (nie wymaga rejestracji) => https://polishannoyancefilters.netlify.app/issues
@@ -15,7 +15,7 @@
 ! Homepage: https://polishannoyancefilters.netlify.app
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: nie, 12 mar 2023, 13:31 UTC+01:00
+! Aktualizacja: nie, 12 mar 2023, 21:31 UTC+01:00
 !
 !
 ! Newslettery (nie popupy)
@@ -397,6 +397,7 @@ costa.pl###wrapper-newsletter
 cottonina.pl##.in-viewport.t-alt.relative
 cozaile.pl##.c-guide-newsletter
 crocs.pl##.footer-email-signup
+crolove.pl##div.footer-container .widget_mc4wp_form_widget.widget
 cryptoprofit.pl##.widget_mo_optin_widgets, a[href="http://cryptoprofit.pl/newsletter/"]
 crystal-albums.pl,monikahonory.pl##.ml-subscribe-form.ml-form-embedContainer
 ctek-ladowarki.pl###bestnewsletterbg
@@ -1695,6 +1696,7 @@ tp-link.com##.tp-follow-subscribe
 tpi.com.pl##.cmn-newsletter
 traktor.com.pl##.footer-top4.col-md-3.col-sm-6.col-12
 traktorpool.pl#?#.layout-content > .md\:block.hidden.app\:hidden:-abp-has(div:-abp-contains(e-mailową))
+traktorpool.pl#?#footer div div:-abp-has(> form[action="/service/newsletter"])
 trans.info##.newsletter-popup
 travelplanet.pl##.col-footer-newsletter-block
 trec.pl##.b-footer-top__newsletter > :nth-child(-n+3)
@@ -1828,6 +1830,7 @@ wnp.pl##.social > li:nth-of-type(1)
 wnp.pl##div[class^="box"] > .pageWidth > form[action*="/newsletter/"]
 woda.com.pl##nav > div:nth-of-type(2) > form
 woodrepublic.eu###newsletter_subscribe
+woolloop.pl###text-8
 woolloop.pl###text-10
 worldbank.org##.lp__footersearch_section
 wprost.pl##.newsletter-plugin
@@ -5200,7 +5203,6 @@ setcomp.net##.estp-tab-link.estp-internal-link
 sewel.pl###tws_i_1
 sferis.pl##.help__title
 shopalike.pl###feedback-btn
-shopee.pl###shopee-mini-chat-embedded
 showroom.pl###_elev_io
 siligan.pl###widget_5, #widget_6
 siligan.pl##.widget_contact
@@ -6267,8 +6269,6 @@ serwiswloclawek.pl##.et-visible.et_pb_side_nav
 sfd.pl##.search-cloud
 shareinfo.pl###install-button
 shipgratis.eu###soutez-wrapper
-shopee.pl##.shopee-skinny-banner
-shopee.pl##a[href*="/universal-link/"][href*="mobilebrowser"][href*="smart_download_banner"]
 sieradz.eu###site-loader
 siglo.pl##.lws-widget-container
 silesion.pl##.art-tripwire-big
@@ -11597,10 +11597,6 @@ secure.avaaz.org##.signup-petition-modal-wrapper
 sferis.pl#%#//scriptlet('ubo-acis.js', '$', 'promoNewsletter')
 shop.mango.com##.modal-container-newsletter
 shop.mango.com#$#.scroll__block { overflow: auto !important; height: auto !important; }
-shopee.pl##.home-popup
-shopee.pl#$#.shopee-no-scroll { overflow: auto !important; }
-shopee.pl##.shopee-popup:has(img[alt*="home_popup_banner"])
-shopee.pl#$#html[style*="overflow"], body[style*="overflow"] { overflow: auto !important; }
 shoplet.pl#%#//scriptlet('ubo-set.js', 'x13callback_cookie', '1')
 siriuspro.pl#$#.pum-open.pum-open-overlay, html.pum-open.pum-open-overlay.pum-open-fixed .pum-overlay { overflow: auto !important; }
 siriuspro.pl##.pum:has(.newsletter-popup)
@@ -11919,23 +11915,19 @@ polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com#%#//script
 ! Polish Annoyance Filters - Comeback Titles
 ! Codename: Comeback Titles
 ! Description: Filtry usuwające tytuły stron zachęcające do powrotu.
-! Last modified: Wed, 21 Sep 2022, 21:30 UTC+02:00
-! OriginalVersion: 2022.9.21.0
+! Last modified: Sun, 12 Mar 2023, 19:37 UTC+01:00
+! OriginalVersion: 2023.3.12.0
 ! Expires: 5 days
-! Najnowsza wersja zawsze na: https://github.com/PolishFiltersTeam/PolishAnnoyanceFilters
+! Najnowsza wersja zawsze na: https://github.com/FiltersHeroes/PolishAnnoyanceFilters
 ! Zgłoszenia:
 !   Formularz (nie wymaga rejestracji) => https://polishannoyancefilters.netlify.app/issues
-!   GitHub => https://github.com/PolishFiltersTeam/PolishAnnoyanceFilters/issues
+!   GitHub => https://github.com/FiltersHeroes/PolishAnnoyanceFilters/issues
 ! License: CC BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/deed)
 ! Homepage: https://polishannoyancefilters.netlify.app
 ! Maintainer: Filters Heroes
-! Aktualizacja: śro, 21 wrz 2022, 21:30 UTC+02:00
+! Aktualizacja: nie, 12 mar 2023, 19:37 UTC+01:00
 !
 !
-!bludshop.com##+js(aopr, onblur)
-!bludshop.com,casedrop.eu,www.mbank.pl##+js(aopr, document.title)
-!demagog.org.pl##+js(aeld, blur, function(a){return void 0===n||a&&n.event.triggered===a.type?void 0:n.event.dispatch.apply(k.elem,arguments)})
-!globkurier.pl##+js(aopr, browser_tab_title_params)
 /wp-content/plugins/change-browser-tab-title-when-tab-is-not-active/public/js/browser-tab-title-reminder-public.js$script,domain=pl
 ||inglot.pl/modules/inglotmisstab/misstab.js
 ||mbank.pl/.elements/alternative-title.html.i$xmlhttprequest,domain=www.mbank.pl
@@ -11946,10 +11938,11 @@ asta-net.pl,atthost.pl,csi.pl,e-baseus.com,elementstore.pl,~mail.asta-net.pl,~ma
 bludshop.com,sportclub.com.pl#%#//scriptlet('ubo-acis.js', 'window.onblur', 'Wróć na')
 casedrop.eu#%#//scriptlet('ubo-aeld.js', 'blur', 'title_on_blur')
 czasnabuty.pl#%#//scriptlet('ubo-set.js', 'cnbtitle_ch', 'false')
+demagog.org.pl,wrc.net.pl#%#//scriptlet('ubo-aeld.js', 'blur', 'function(e){return"undefined"!=typeof S&&S.event.triggered!==e.type?S.event.dispatch.apply(t', 'arguments):void 0}')
 dommania.pl#%#//scriptlet('ubo-nosiif.js', 'flashTitle', '1500')
 drtusz.pl#%#//scriptlet('ubo-acis.js', '$', 'Wróć na')
 dziennikprawny.pl,picodi.com#%#//scriptlet('ubo-aopr.js', 'titleBack')
-naekranie.pl#%#//scriptlet('ubo-aeld.js', 'visibilitychange', 'Zzzz')
+naekranie.pl#%#//scriptlet('ubo-nostif.js', 'Zzzz', '100')
 nocowanie.pl#%#//scriptlet('ubo-acis.js', 'changeTitle', 'Wróć')
 polt.pl,socialteam.pl#%#//scriptlet('ubo-aeld.js', 'visibilitychange', 'handleVisibilityChange')
 prawokonsumenckie.pl#%#//scriptlet('ubo-set.js', 'setReplyTitle', 'noopFunc')
@@ -11958,11 +11951,10 @@ sestimi.pl#%#//scriptlet('ubo-aeld.js', 'blur', 'document.title = message')
 sklep.solier.pl#%#//scriptlet('ubo-acis.js', '$', 'Wróć do nas')
 sklepbaterie.pl#%#//scriptlet('ubo-nosiif.js', 'lastTitle', '2500')
 taniaksiazka.pl#%#//scriptlet('ubo-set.js', 'BLUR_TITLE', '')
-wrc.net.pl#%#//scriptlet('ubo-aeld.js', 'blur', 'function(a){return void 0===n||a&&n.event.triggered===a.type?void 0:n.event.dispatch.apply(k.elem', 'arguments)}')
 www.pkobp.pl#%#//scriptlet('ubo-aeld.js', 'blur', 'blurTitle')
 !
 !
-! Reguły specjalne
+! Filtry specjalne
 !#if !ext_ublock
 polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com###pafadguard
 !#endif
