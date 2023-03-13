@@ -7,9 +7,9 @@
 ! Works best with EasyList - be sure to subscribe it as well!
 ! Działa najlepiej z EasyList - pamiętaj aby zasubskrybować!
 !   Patronite ==> https://patronite.pl/polskiefiltry
-! Last modified: 9 March 2023
+! Last modified: 12 March 2023
 ! Expires: 1 day
-! OriginalVersion: 2023030901
+! OriginalVersion: 2023031201
 ! Support:
 !   Email >> errorsfilters@certyficate.it
 !   Github >> https://github.com/MajkiIT/polish-ads-filter/issues
@@ -17,7 +17,7 @@
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright © 2023 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2023030901 aktualizacja: czw, 9 marca 2023, 08:20:00
+! v.2023031201 aktualizacja: nie, 12 marca 2023, 22:48:00
 !
 !
 !1#-----------------------General advert blocking filters-----------------------!
@@ -1600,9 +1600,6 @@ interia.pl#?#.brief-list-item:-abp-has(> .mixerAdTopRight-wrapper:not(.has-noads
 interia.pl##.ad-article-vertical-track, .ad-article-horizontal-wrapper
 interia.pl##[class^="ad-container "]
 interia.pl###sponsCont, .spons-ph
-interia.pl#$#[class^="common-header common-header--"] { top: 0px !important }
-interia.pl#$#body[class*="_ad-"] { padding-top: 0 !important; }
-interia.pl#$#header[class^="sc-"] { transform: unset !important }
 interpretacje-podatkowe.org##.adr
 inthecage.pl##.slides
 investmap.pl###app > div[class] > div[class] > div[height="300px"]
@@ -2125,7 +2122,6 @@ mgsm.pl##.is-at-top.is-anchored.sticky.text-center.show-for-large.columns.large-
 mgsm.pl##.karta-widget-prices, .reklama_caption
 mgsm.pl##[id^="AdArea"]
 mgsm.pl##hr, div.columns > small:not([style="font-size: 0.7em;"])
-mgsm.pl#$#.mediafarm { height: 0 !important; }
 mgsm.pl###users-photos__panel > .oa_photodata
 mgsm.pl###camera-back__panel > .oa_photodata
 mgsm.pl###transmissions__panel > .oa_photodata
@@ -5097,7 +5093,6 @@ wawalove.pl##.floating-ad.advertisement
 wawalove.pl##a[href="http://dajsygnal.pl/"]
 wawalove.pl,pytamy.pl,dzieci.pl##[id^="adv"]
 pogoda.wp.pl#?#.desktop > div[class*=" "]:-abp-has(div)
-www.money.pl###app > div > div:matches-css(background-image: /^url\("https:\/\/v\.wpimg\.pl/)
 !
 !32#--------------------------WP element block------------!
 ||i.wp.pl/*/stg/wpjslib-nojq.js$script,domain=www.dobreprogramy.pl
@@ -5158,11 +5153,6 @@ www.wp.pl#?#div[class*=" "]:-abp-has(> img[src$="/i.wp.pl/a/i/stg/pkf/bg.png"])
 ~www.wp.pl,~pilot.wp.pl,wp.pl##[class^="css-"]
 ~www.wp.pl,wp.pl##body > script + iframe + div:not([id])[class]
 pogoda.wp.pl##li > .item + div[class*=" "]
-pogoda.wp.pl##.grid-right > div:matches-css(background-image: /data:image\/png;base64,/)
-pogoda.wp.pl##.grid-right > div > div:matches-css(background-image: /data:image\/png;base64,/)
-o2.pl#$#body { pointer-events: auto!important; }
-o2.pl#$#body { overflow-y: visible!important; position: unset!important; }
-o2.pl#$#body > [class]:not(.settings--user):not(.article__textbox) { filter: none!important; }
 @@||o2.pl^$generichide
 !
 !34#--------------------------Pudelek/Pudelekx element hide------------!
@@ -5512,9 +5502,9 @@ avanti24.pl##.svelte-p8mgmp.inner-ban
 ! Wsparcie:
 !   Patronite ==> https://patronite.pl/polskiefiltry
 !   PayPal ==> https://www.paypal.com/pools/c/87zNJ8OJ3I
-! Last modified: 30 January 2023
+! Last modified: 12 March 2023
 ! Expires: 1 day
-! OriginalVersion: 2023013000
+! OriginalVersion: 2023031201
 ! Support:
 !   Email >> errorsfilters@certyficate.it
 !   Github >> https://github.com/MajkiIT/polish-ads-filter/issues
@@ -5522,7 +5512,7 @@ avanti24.pl##.svelte-p8mgmp.inner-ban
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
 ! Copyright © 2022 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2023013000 aktualizacja: pon, 30 stycznia 2023, 18:07:00
+! v.2023031201 aktualizacja: nie, 12 marca 2023, 22:56:00
 !
 !
 !--------------------------Rules only to uBlock-------------!
@@ -5720,8 +5710,12 @@ sportowefakty.wp.pl#%#//scriptlet('ubo-aopr.js', 'Object.prototype.bodyCode')
 open.fm#%#//scriptlet('ubo-set.js', 'Object.prototype.gafSlot', 'undefined')
 open.fm#$#body { pointer-events: auto!important; }
 abczdrowie.pl#@%#//scriptlet('ubo-no-setTimeout-if.js', 'visibility', '0')
-!
-! o2.pl
+www.money.pl###app > div > div:matches-css(background-image: /^url\("https:\/\/v\.wpimg\.pl/)
+pogoda.wp.pl##.grid-right > div:matches-css(background-image: /data:image\/png;base64,/)
+pogoda.wp.pl##.grid-right > div > div:matches-css(background-image: /data:image\/png;base64,/)
+o2.pl#$#body { pointer-events: auto!important; }
+o2.pl#$#body { overflow-y: visible!important; position: unset!important; }
+o2.pl#$#body > [class]:not(.settings--user):not(.article__textbox) { filter: none!important; }
 poczta.o2.pl,poczta.wp.pl#$#body > #page { display: block !important; }
 o2.pl##div[class][style="width:100%"] > div[class*=" "]:has(:scope > img[role="presentation"]:not([src]))
 polygamia.pl,pudelek.pl,money.pl,wideo.wp.pl##[src$="bg.png"]:upward(1)
@@ -5861,6 +5855,9 @@ ezg24.net#$#body > .menu-belt + .paralax-image { height: 0 !important; }
 ! opensubtitles.org
 opensubtitles.org#%#//scriptlet('ubo-set.js', 'displayed', 'false')
 !
+! mgsm.pl
+mgsm.pl#$#.mediafarm { height: 0 !important; }
+!
 ! milionkobiet.pl
 milionkobiet.pl#$#.gallery-embed-list-images { height: auto !important; }
 !
@@ -5887,6 +5884,9 @@ pcworld.pl#%#//scriptlet('ubo-aopr.js', 'uabpd3')
 lowcygier.pl#$#body { background-image: none !important; }
 !
 ! Interia
+interia.pl#$#[class^="common-header common-header--"] { top: 0px !important }
+interia.pl#$#body[class*="_ad-"] { padding-top: 0 !important; }
+interia.pl#$#header[class^="sc-"] { transform: unset !important }
 mamdziecko.interia.pl#$##content .brief-list-items .brief-placeholder-list { height: 320px }
 www.interia.pl#%#//scriptlet('ubo-ra.js', 'scrolling', 'iframe#sg-iframe[scrolling="no"]', 'stay')
 poczta.interia.pl#$##mainApp #sitebar, #mainApp #sitebar form { width: 100% !important; max-width: 100% !important }
@@ -6085,17 +6085,17 @@ ppe.pl###hot-slides-wrapper #hot_0, #hot-slider #m_hot_0
 ! Wsparcie:
 !   Patronite ==> https://patronite.pl/polskiefiltry
 !   PayPal ==> https://www.paypal.com/pools/c/87zNJ8OJ3I
-! Last modified: 5 Febuary 2023
+! Last modified: 12 March 2023
 ! Expires: 1 day
-! OriginalVersion: 2023020500
+! OriginalVersion: 2023021201
 ! Support:
 !   Email >> errorsfilters@certyficate.it
 !   Github >> https://github.com/MajkiIT/polish-ads-filter/issues
 ! Redundant Checker >> https://www.certyficate.it/redundant_checker/redundantRuleChecker.html
 ! License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-! Copyright © 2021 Certyficate IT
+! Copyright © 2023 Certyficate IT
 ! Najnowsza wersja zawsze na: https://www.certyficate.it/adblock
-! v.2023020500 aktualizacja: nie, 5 Luty 2023, 20:45:00
+! v.2023021201 aktualizacja: nie, 12 marca 2023, 22:56:00
 !
 !
 ! alltube.tv
@@ -6175,6 +6175,9 @@ senda.pl#$#.advert_box > div > .tablebg { height: 1px !important; visibility: hi
 www.ps4forum.pl##.googleheader
 www.ps4forum.pl#$#.forumsTabLinks.tabLinks { top: 60px !important; }
 !
+! f5.pl
+f5.pl#$#body { padding-top: 0 !important; }
+!
 ! kurnik.pl
 kurnik.pl#$#.adsbygoogle { height: 1px !important; width: 1px !important; }
 !
@@ -6248,12 +6251,24 @@ milionkobiet.pl#$#.gallery-embed-list-images { height: auto !important; }
 lowcygier.pl#$#body { background-image: none !important; }
 !
 ! Interia
+interia.pl#$#[class^="common-header common-header--"] { top: 0px !important }
+interia.pl#$#body[class*="_ad-"] { padding-top: 0 !important; }
+interia.pl#$#header[class^="sc-"] { transform: unset !important }
 mamdziecko.interia.pl#$##content .brief-list-items .brief-placeholder-list { height: 320px }
 www.interia.pl#%#//scriptlet('ubo-remove-attr.js', 'scrolling', 'iframe#sg-iframe[scrolling="no"]')
 poczta.interia.pl#$##mainApp #sitebar, #mainApp #sitebar form { width: 100% !important; max-width: 100% !important }
 !
-! money.pl
+! grupa WP
+pogoda.wp.pl##.grid-right > div:matches-css(background-image: /data:image\/png;base64,/)
+pogoda.wp.pl##.grid-right > div > div:matches-css(background-image: /data:image\/png;base64,/)
 money.pl,moneyv.wp.pl###app > div[data-reactroot] > div[class]:matches-css(background-image: /v\.wpimg\.pl\/MjAxOTA/)
+www.money.pl###app > div > div:matches-css(background-image: /^url\("https:\/\/v\.wpimg\.pl/)
+o2.pl#$#body { pointer-events: auto!important; }
+o2.pl#$#body { overflow-y: visible!important; position: unset!important; }
+o2.pl#$#body > [class]:not(.settings--user):not(.article__textbox) { filter: none!important; }
+!
+! mgsm.pl
+mgsm.pl#$#.mediafarm { height: 0 !important; }
 !
 ! purepc.pl
 purepc.pl#$#html > body { background-image: none!important; background-color: #d5d5d5!important; }
