@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 23.3.96
+! OriginalVersion: 23.3.97
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 13 Mar 2023 17:15 UTC
+! Last modified: 14 Mar 2023 04:15 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -2267,13 +2267,26 @@ _GIF1200x120-
 ~tpro.co.id##a[href^="https://tpro.co.id/affiliate/"] > img
 ~shutterstock.com##a[href^="https://submit.shutterstock.com/?ref="]
 ~uptobox.com##a[href^="https://uptobox.com/affiliate"]
-/^https:\/\/[0-9a-f]{10}\.[0-9a-f]{10}\.com\/[0-9a-f]{32}\.js$/$third-party,script
-/^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{7,16}\.com\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/(?:[1-5]\d{4}|[3-9]\d{3})\??(?:_=\d+|v=\d)?$/$third-party,script,redirect-rule=noopjs
 /[0-9a-f]{32}\/invoke\.js/$third-party,script
 /^https?:\/\/(?:www\.|[0-9a-z]{7,10}\.)?[-0-9a-z]{5,}\.com\/\/?(?:[0-9a-f]{2}\/){2,3}[0-9a-f]{32}\.js/$third-party,script,xmlhttprequest
-/^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{7,16}\.[a-z]{3,7}\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/(?:[1-6]\d{4}|[3-9]\d{3})\??(?:_=\d+|v=\d)?$/$third-party,match-case,script
+/^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{7,16}\.[a-z]{3,7}\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/(?:[1-6]\d{4}|[3-9]\d{3})\??(?:_=\d+|v=\d)?$/$third-party,match-case,script,redirect=noopjs
 /^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{7,16}\.com\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/(?:[1-6]\d{4}|[3-9]\d{3})\??(?:_=\d+|v=\d)?$/$third-party,subdocument,match-case,popup,xmlhttprequest
 /^https?:\/\/(?:[a-z]{2}\.)?[0-9a-z]{7,16}\.website\/[a-z](?=[a-z]{0,25}[0-9A-Z])[0-9a-zA-Z]{3,26}\/(?:[1-6]\d{4}|[3-9]\d{3})\??(?:_=\d+|v=\d)?$/$third-party,subdocument,match-case,popup,xmlhttprequest
+/\/t\/[0-9]{3}\/[0-9]{3}\/a[0-9]{4,9}\.js$/$script
+/^https?:\/\/[0-9a-z]{13,14}\.cloudfront\.net\/\?[a-z]{3,5}=\d{6}$/$third-party,script,xmlhttprequest
+/^https:\/\/[0-9a-f]{10}\.[0-9a-f]{10}\.com\/[0-9a-f]{32}\.js$/$third-party,script
+/^https?:\/\/[0-9a-f]{50,}\.s3\.amazonaws\.com\/[0-9a-f]{10}$/$third-party,xmlhttprequest
+/^https?:\/\/s3\.us-east-1\.amazonaws\.com\/[0-9a-f]{50,}\/[0-9a-f]{10}$/$third-party,xmlhttprequest
+.top/event|$third-party,xmlhttprequest
+.xyz/event|$third-party,xmlhttprequest
+/^https?:\/\/[a-z]{8,15}\.top(\/(?:\d{1,5}|0NaN|articles?|browse|index|movie|news|pages?|static|view|web|wiki)){1,4}(?:\.html|\/)$/$third-party,subdocument,match-case
+/^https?:\/\/[a-z]{8,15}\.top\/[-a-z]{4,}\.css\?aHR0c[\/0-9a-zA-Z]{33,}=?=?$/$third-party,stylesheet,match-case
+/^https?:\/\/[a-z]{8,15}\.top\/[a-z]{4,}\.json$/$third-party,match-case,xmlhttprequest
+/^https?:\/\/[a-z]{8,15}\.top\/[a-z]{4,}\.png\?aHR0c[\/0-9a-zA-Z]{33,}=?=?$/$third-party,image,match-case
+/^https?:\/\/[a-z]{8,15}\.xyz(\/(?:\d{1,5}|0NaN|articles?|browse|index|movie|news|pages?|static|view|web|wiki)){1,4}(?:\.html|\/)$/$third-party,subdocument,match-case
+/^https?:\/\/[a-z]{8,15}\.xyz\/[-a-z]{4,}\.css\?aHR0c[\/0-9a-zA-Z]{33,}=?=?$/$third-party,stylesheet,match-case
+/^https?:\/\/[a-z]{8,15}\.xyz\/[a-z]{4,}\.json$/$third-party,match-case,xmlhttprequest
+/^https?:\/\/[a-z]{8,15}\.xyz\/[a-z]{4,}\.png\?aHR0c[\/0-9a-zA-Z]{33,}=?=?$/$third-party,image,match-case
 /^https?:\/\/[-a-z]{6,}\.com?\/[a-d][-\.\/_A-Za-z][DHWXm][-\.\/_A-Za-z][59FVZ][-\.\/_A-Za-z][6swyz][-\.\/_A-Za-z][-\/_0-9a-zA-Z][-\.\/_A-Za-z][-\/_0-9a-zA-Z]{22,162}$/$third-party,match-case,script,xmlhttprequest
 /^https?:\/\/[-a-z]{6,}\.info\/[a-d][-\.\/_A-Za-z][DHWXm][-\.\/_A-Za-z][59FVZ][-\.\/_A-Za-z][6swyz][-\.\/_A-Za-z][-\/_0-9a-zA-Z][-\.\/_A-Za-z][-\/_0-9a-zA-Z]{22,162}$/$third-party,match-case,script,xmlhttprequest
 /^https?:\/\/[-a-z]{6,}\.pro\/[a-d][-\.\/_A-Za-z][DHWXm][-\.\/_A-Za-z][59FVZ][-\.\/_A-Za-z][6swyz][-\.\/_A-Za-z][-\/_0-9a-zA-Z][-\.\/_A-Za-z][-\/_0-9a-zA-Z]{22,162}$/$third-party,match-case,script,xmlhttprequest
