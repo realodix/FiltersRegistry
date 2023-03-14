@@ -2227,6 +2227,7 @@ freundin.de,utopia.de,mein-schoener-garten.de,eveningnews24.co.uk,rollingstone.d
 !
 ! NOTE: Regular rules
 !
+webmotors.com.br#?##root > div:has(> button#btn_understoodCookieWarn)
 connectgas.ru##div[class^="cookieAgreement_"]
 thenounproject.com##.yCpfT
 0rechner.de###precmpdialog
@@ -26709,6 +26710,8 @@ jiji.com,edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,
 !
 ! SECTION: Subscriptions - Regular rules
 !
+bits.media#?#.article-page > div:has(> p > strong > a[href^="https://t.me/"])
+runews24.ru##a.button_type_link[target="_blank"][href]
 decrypt.co#?#.post-content > div.text-left:has(> form > label[for="article-footer-email"])
 geo.fr##.pmcPushv
 territoris.cat##.widget-advise-bottom-wrapper
@@ -40506,6 +40509,8 @@ eiga.com##.header-pure-banner
 !##############################
 ! SECTION: Tweaks - CSS
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/145124
+mixnews.lv#$#.amp-wp-footer > div.menu-footer-menu-container > ul:not([id]):not([class]) { margin-bottom: 0px !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145402
 link.idblog.eu.org#$#.link1 { display: block !important; }
 link.idblog.eu.org#$#.pembukalink1 { display: none !important; }
