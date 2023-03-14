@@ -1,7 +1,7 @@
 !
 ! Title: List-KR
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0313.3
+! OriginalVersion: 2023.0314.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -192,6 +192,7 @@
 ||safeframe.googlesyndication.com^
 ||adservice.google.com^
 ||partner.googleadservices.com^
+||external-api.impression-neo.naver.com^
 ||shoppingcall.me^
 ||googletagservices.com^
 ||bidr.io^
@@ -632,7 +633,6 @@ sonagitv.live##.blocks-gallery-item img[src*="/sonagi_me/sites/"]
 ||image.aladin.co.kr/img/adbn/
 ||image.aladin.co.kr/img/bn/wflash/*_ad
 ||image.dizzo.com/dizzo2/banner/
-||external-api.impression-neo.naver.com/api/v*/ads/search-jsonp
 /https:\/\/[a-z0-9]+\.wp\.com\/wowtale\.net\/wp-content\/uploads\/[0-9]{4}\/[0-9]{2}\/wowtale\.net-.+[0-9]{2,}(x|-)[0-9]{2,}\./$domain=wowtale.net
 ||images.nstatic.org/br/
 ||nesin.com/images/Ad_img/
@@ -1059,7 +1059,6 @@ sonagitv.live##.blocks-gallery-item img[src*="/sonagi_me/sites/"]
 ||clien.net/service/api/coupang/ad?
 ||cdn.halfclub.com/images_web/Etc/banner/
 ||cimage.ondisk.co.kr/data/mdns_bigbanner/
-||external.impression-neo.naver.com/api/*/ads/search-jsonp
 ||img.newspim.com/banner/
 ||img.newspim.com/ad/
 ||arca.live/static/ad/
@@ -1259,6 +1258,16 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+m.clien.net##.nav_container > .content_view_list > div[class^="list_bottom_"]
+m.clien.net##.nav_container > div[class^="content_"][class$="_list"] a[href^="/service/board"] ~ div[class^="list_center_"]
+m.clien.net##.nav_container .post_view > div[class^="view_top_"]
+m.clien.net##.nav_container > div[class^="list_bottom_"]
+m.clien.net##.nav_container > .content_main > div[class^="main_top_"]
+m.clien.net##.nav_container > .content_main > div[class^="main_center_"]
+clien.net##.nav_container > div[id$="_content"][class^="content_"] .contents_main > div[class^="main_center_"]
+clien.net##.nav_container > div[id$="_content"][class^="content_"] .section_list.notice > div[class^="main_top_"]
+clien.net##.nav_content > div[id$="_content"][class^="content_"] div[class^="post_"] > div[class^="view_center_"]
+clien.net##.nav_content > div[id$="_content"][class^="content_"] > div[class^="list_top_"]:not([class*=" "])
 quasarzone.com##div[id^="bidrich-"]
 m.ygosu.com##div[id^="clickmon_"][style]
 m.ygosu.com##div[id^="bidrich_"][style]
@@ -2485,9 +2494,6 @@ koreatimes.net#?#*:has(> a[target="_blank"] img[src^="/images/KTImage/"])
 aladin.co.kr#?##welcomeMainBanner_welcomeMain div[id*="_containerWrap_"]:has(img[src$="Banner/ad.jpg"]):remove()
 aladin.co.kr#?##welcomeMainBanner_welcome_tab li[id]:has(img[src*="/img/banner/flash/welcome/nav/"]:not([src*="/nav/181010_"]))
 aladin.co.kr#?##welcomeMainBanner_welcome_tab li[id]:has(img[src*="/img/banner/flash/welcome/nav/"]:not([src*="/nav/181010_"])) + li[style]
-m.clien.net#?#div[class*="_"] div[class*="_"]:has(> div[class$="_mid"] > div[class^="ad_"])
-m.clien.net#?#div[class*="_"] div[class*="_"]:has(> div[class*="_"] > div[id*="-"][class^="ad_"])
-clien.net#?#div[class*="content"][id*="content"] div[class*="_"]:has(> div[class^="ad_"])
 kharn.kr#?#div[class*="inner"].column > div:has(a[href*="/banner_click.php"])
 m.danawa.com#?##mdnw-main-recommend-realCuration-swipeContainer > div[id*="-ad-"]:remove()
 programmers.co.kr#?#div[class*="Banner"] div[data-swiper-slide-index].swiper-slide:has(a[href^="/banners/"]):remove()
