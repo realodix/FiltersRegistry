@@ -84,6 +84,7 @@
 ! https://forum.adguard.com/index.php?threads/ivoox-com-podcasts-issues.29530/
 ! ||addevweb.com^$third-party
 !
+||spacelala.com^
 ||pitors.com^
 ||texamp.com^
 ||smart-placements-sdk.ex.co^
@@ -1786,6 +1787,8 @@ peru21.pe#@#.adstop
 ! https://github.com/AdguardTeam/AdguardFilters/issues/24801
 yahoo.com#?#ul[class^="Mb(0)"] > li.js-stream-content:has(> div > a[rel="nofollow noopener noreferrer"]+div:contains(Patrocinado))
 !
+hentaikai.com#?#.main > .card-serie:has(> a[href^="https://www.tufos.com.br/"])
+superhq.net#?#.post-list-grade > .item-post-grade:has(> .entry-featured-media > a > .selos > .ad)
 diariofutrono.cl#?#.row > div#body_right > div.row:has(> script[src^="/base/printadv/"])
 tudn.com,univision.com#?#article > div[class] > div[class]:has(> div.OUTBRAIN)
 univision.com#?#div:not([class]) > div[class]:has(> div[id^="div-gpt-ad-"])
@@ -2056,6 +2059,9 @@ seriesgato.com#?#.TPlayerNv > li.Button:has(> span:contains(Publicidad))
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/145476
+superhq.net#%#//scriptlet('abort-on-property-write', 'exopop')
+hentaikai.com,superhq.net#%#//scriptlet('abort-on-property-write', 'protData')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/142854
 cuevana.run#%#//scriptlet('prevent-window-open')
 cuevana.run#%#//scriptlet('abort-on-property-read', 'cJsEdge')
@@ -2666,6 +2672,9 @@ bebe.abril.com.br,tribunapr.uol.com.br,diariodonordeste.verdesmares.com.br,sbt.c
 ! ##.banner
 economipedia.com,informador.mx,elinformador.com.co,cronista.com,rionegro.com.ar,diariodecuyo.com.ar,voydeviaje.com.ar,guarda14.com,viapais.com.ar,agazeta.com.br,eleconomista.com.mx,metropolitanafm.com.br,tycsports.com,elespectador.com,bnews.com.br,migalhas.com.br,losandes.com.ar,lavoz.com.ar,mundo.sputniknews.com,omelete.com.br,lapoliticaonline.com.ar,mundotecnologias.com,valenciaplaza.com,veneapp.com,dalealbo.cl,globo.com,defesanet.com.br,mibrujula.com,lyon.kim,26noticias.com.ar,auniao.com,clickpb.com.br,emagister.com,lanacion.com.ar,parana-online.com.br,r7.com,toxico-pc.com,uol.com.br##.banner
 !
+||superhq.net/pop/
+superhq.net##body .banner-750x250-single
+hentaikai.com##a[href^="https://www.tufos.com.br/"]
 diariocorreo.pe###spc_post_stories:empty
 spdiario.com.br###interna_banner_side
 spdiario.com.br##div[id$="_banner_quadrado"]
