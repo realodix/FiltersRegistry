@@ -85,6 +85,12 @@ module.exports = {
         "path": "ios",
         "configuration": {
             "removeRulePatterns": [
+                "\\$extension",
+                ",extension",
+                "\\$removeparam",
+                ",removeparam",
+                "\\$removeheader",
+                ",removeheader",
                 "^((?!#%#).)*\\$\\$|\\$\\@\\$",
                 "\\$(.*,)?mp4",
                 "\\$(.*,)?replace=",
@@ -103,7 +109,7 @@ module.exports = {
                 "\\$empty",
                 ",empty",
                 "\\$webrtc",
-                "\\$csp=",
+                "\\$csp",
                 "\\$network",
                 "^\\[.+?\\].*#(\\$|\\@|\\?|\\@){0,2}#"
             ],
@@ -182,6 +188,10 @@ module.exports = {
         "path": "extension/safari",
         "configuration": {
             "removeRulePatterns": [
+                "\\$removeparam",
+                ",removeparam",
+                "\\$removeheader",
+                ",removeheader",
                 "^((?!#%#).)*\\$\\$|\\$\\@\\$",
                 "\\$(.*,)?mp4",
                 "\\$(.*,)?replace=",
