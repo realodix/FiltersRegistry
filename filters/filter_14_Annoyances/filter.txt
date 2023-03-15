@@ -2227,6 +2227,7 @@ freundin.de,utopia.de,mein-schoener-garten.de,eveningnews24.co.uk,rollingstone.d
 !
 ! NOTE: Regular rules
 !
+app.bionic-reading.com#?#.MuiDialog-root:has(#cookie_svg__a)
 webmotors.com.br#?##root > div:has(> button#btn_understoodCookieWarn)
 connectgas.ru##div[class^="cookieAgreement_"]
 thenounproject.com##.yCpfT
@@ -40726,8 +40727,10 @@ kingtalks.net#$##mybutton { display: block !important; }
 nestoria.de#$##js-filters-view { padding-top: 0!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/91434
 designwizard.com#$#.main-header { top: 0!important; }
+! https://github.com/AdguardTeam/AdguardFilters/issues/144932
 ! https://github.com/uBlockOrigin/uAssets/issues/4501
-aulete.com.br#$#.definicao_verbete_homologado_interna { height:100% !important; }
+aulete.com.br#$##coluna_central_conteudo_home > div[style*="height:"] { height: auto !important; }
+aulete.com.br#$#body .definicao_verbete_homologado_interna:not(#style_important) { height: 100% !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/88786
 dl03.magix.net#$#header { margin-top: 0!important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/85775
@@ -43030,6 +43033,8 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 ! NOTE: Blogroll third-party sites
 !
+||kininatta2chmatome.doorblog.jp/rss*.index.html
+||js.blozoo.info/js/locktool/blogparts.js$domain=kininatta2chmatome.doorblog.jp
 ||blogmaterial.nicoblomaga.jp/material/279/js/rss/
 alfalfalfa.com##.rss_headline
 alfalfalfa.com##.rss_headline_title
