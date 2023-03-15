@@ -299,6 +299,12 @@ module.exports = {
         "path": "extension/android-content-blocker",
         "configuration": {
             "removeRulePatterns": [
+                "\\$extension",
+                ",extension",
+                "\\$removeparam",
+                ",removeparam",
+                "\\$removeheader",
+                ",removeheader",
                 "^((?!#%#).)*\\$\\$|\\$\\@\\$",
                 "#%#",
                 "#@%#",
