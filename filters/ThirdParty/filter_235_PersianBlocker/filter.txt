@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2023-03-11
+! Last modified: 2023-03-16
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -1332,6 +1332,19 @@ itbazar.com###banners-position-14
 irna.ir##.ads.box
 ||irlanguage.com/themes/Mashhadteam-Default/script/ga.js
 ! >> J <<
+! https://github.com/MasterKia/PersianBlocker/issues/141
+jafekri.com#$#* { cursor: revert !important; -webkit-touch-callout: default !important; -webkit-user-select: text !important; -khtml-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; -webkit-tap-highlight-color: revert !important; }
+!#if !cap_html_filtering
+jafekri.com#%#//scriptlet('ubo-acis.js', 'reEnable')
+jafekri.com#%#//scriptlet('ubo-acis.js', 'document.oncontextmenu')
+jafekri.com#%#//scriptlet('ubo-acis.js', 'jQuery', 'wccp_pro')
+jafekri.com#%#//scriptlet('ubo-acis.js', 'clear_body_at_all_for_extentions')
+jafekri.com#$?#style:has-text(@media print) { remove: true; }
+!#endif
+||jafekri.com/wp-content/plugins/wccp-pro^$script,stylesheet,xmlhttprequest,image
+||podbean.com/player^$xmlhttprequest,removeparam=referrer
+||podbean.com/pb^$media,removeparam=pbss
+podbean.com##.download-dialog
 ! https://github.com/MasterKia/PersianBlocker/issues/128
 ||jobsacademy.ir/wp-content/uploads/*.gif
 ! https://github.com/MasterKia/PersianBlocker/issues/61
@@ -1959,6 +1972,9 @@ rastannews.ir##.all_ads
 ||rajanews.com/sites/default/files/superadmin/*.gif
 rajanews.com###block-block-22.ads
 ! >> S <<
+! https://github.com/MasterKia/PersianBlocker/issues/142
+sariasan.com##.ush_image_2
+sariasan.com##.widget > h3:has-text(مطالب مفید):upward(.widget)
 ! https://github.com/MasterKia/PersianBlocker/issues/125
 ||websocket.sobhtazeh.news^$all
 ||sobhtazeh.news/rss-file.php^$xmlhttprequest

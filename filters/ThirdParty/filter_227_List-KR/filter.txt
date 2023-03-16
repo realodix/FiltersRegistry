@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0316.1
+! OriginalVersion: 2023.0316.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -10,6 +10,7 @@
 ! Version must be UTC format.
 !
 !#if adguard
+||adw.gomtv.com^
 ||ad.ari.skt-jive.com^
 ||ad.planbplus.co.kr^
 ||ad.buzzvil.com^
@@ -2444,6 +2445,7 @@ tgd.kr#$##article-info > h2 { overflow: visible !important; }
 2cpu.co.kr#$#header .row[style] { margin-bottom: 35px !important; }
 sign.dcinside.com#$#.login_inputbox { width: 100% !important; }
 !#endif
+noonoo.info#?#section[tabindex].wixui-section:has(.wixui-image a[href^="http"] img)
 search.shopping.naver.com#?##content .list_basis div:has(> .ad)
 enuri.com#?#.m-row > div[class^="col col-"]:not(:has(> .col__inner a:not([href*="ad-api.enuri.info"]))):has(.bnrbox ul[id][class^="bnr__"])
 gigglehd.com#?##gap > div[style*=": "].xe-widget-wrapper:has(.widget_banner_skin > .banner_list)
@@ -2611,6 +2613,9 @@ algumon.com#$?#.nav-mobile:matches-css(display: none) ~ .base > .main { width: c
 news.op.gg#$?#header + div[class] div[class^="css-"] > div[class^="css-"] > div[class^="css-"]:has( ~ .youtube-iframe) { margin-top: 8px !important; }
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
+!#if (adguard_app_ios)
+m.humoruniv.com#?##naver_adpost_wrap_fix ~ *:has([style][align] [style] [onclick])
+!#endif
 bonik.me#?##sidebar > .module:contains(Ad)
 msearch.wemakeprice.com#?#article[data-list-container="searchList"] li:has(span:contains(AD).gray_round_badge)
 search.wemakeprice.com#?#.search_box_listdeal > .list_conts_wrap:has(span:contains(AD).round_badge)
@@ -3000,6 +3005,7 @@ ff14angler.com#@#ins.adsbygoogle
 !#if (adguard && adguard_app_windows)
 !
 ||videoads.kakao.com/adserver/api/v*/vmap$redirect=noopvmap-1.0,app=PotPlayer.exe
+||cubec.gomtv.com/TextAdInfo_new.gom
 ||safevisit.org/appdisplay?$redirect=noopframe
 184.25.232.20:443$network,app=ALYac.aye
 ||data.news.zumst.com/alyac/popular/news.json
