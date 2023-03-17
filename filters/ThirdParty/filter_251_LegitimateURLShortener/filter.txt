@@ -1,6 +1,6 @@
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 15March2023v1
+! OriginalVersion: 17March2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -49,7 +49,7 @@ $removeparam=/^utm_/i,domain=~redir.tradedoubler.com|~sendgb.com|~allegro.pl|~ti
 $removeparam=/^itm_/,domain=~redir.tradedoubler.com
 $removeparam=/^stm_/,domain=~redir.tradedoubler.com
 ! https://www.ixigua.com/6888869154099629319?logTag=Y8JlCALntSDuDesMiPno8 (31/10/2020)
-$removeparam=logTag
+$removeparam=logTag,document
 ! https://www.jula.no/catalog/fritid/trening/treningsutstyr/manualer-og-vektstenger/manualsett-951150?gclid=Cj0KCQjwlvT8BRDeARIsAACRFiUj4R30NdrcmVwC1-pBi43uGBKic6uEq0zEJfkXS3hxOfGrJ3CrR9waAoy9EALw_wcB&gclsrc=aw.ds (31/10/2020)
 $removeparam=gclsrc
 ! https://www.nytimes.com/2020/11/10/us/yellowstone-chickens.html?smid=tw-share (11/11/2020)
@@ -3252,6 +3252,8 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 @@/unsub/?$removeparam
 ! Fix driver download section
 @@||canon.*/supportproduct/gettabcontent$removeparam=referrer
+! https://github.com/AdguardTeam/AdguardFilters/issues/89618
+@@||urldefense.com^$removeparam
 !#if adguard
 !#if adguard_ext_firefox
 ! https://github.com/DandelionSprout/adfilt/issues/376

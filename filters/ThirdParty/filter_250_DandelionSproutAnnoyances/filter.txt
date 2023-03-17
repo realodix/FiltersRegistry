@@ -16240,7 +16240,7 @@ vumoo.to#?#div.col-lg-12:has-text(IMDb)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 15March2023v1
+! OriginalVersion: 17March2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -16289,7 +16289,7 @@ $removeparam=/^utm_/i,domain=~redir.tradedoubler.com|~sendgb.com|~allegro.pl|~ti
 $removeparam=/^itm_/,domain=~redir.tradedoubler.com
 $removeparam=/^stm_/,domain=~redir.tradedoubler.com
 ! https://www.ixigua.com/6888869154099629319?logTag=Y8JlCALntSDuDesMiPno8 (31/10/2020)
-$removeparam=logTag
+$removeparam=logTag,document
 ! https://www.jula.no/catalog/fritid/trening/treningsutstyr/manualer-og-vektstenger/manualsett-951150?gclid=Cj0KCQjwlvT8BRDeARIsAACRFiUj4R30NdrcmVwC1-pBi43uGBKic6uEq0zEJfkXS3hxOfGrJ3CrR9waAoy9EALw_wcB&gclsrc=aw.ds (31/10/2020)
 $removeparam=gclsrc
 ! https://www.nytimes.com/2020/11/10/us/yellowstone-chickens.html?smid=tw-share (11/11/2020)
@@ -19495,6 +19495,8 @@ buffalonews.com#%#//scriptlet('ubo-set.js', 'lee_trkLinkSrc', 'noopFunc')
 @@/unsub/?$removeparam
 ! Fix driver download section
 @@||canon.*/supportproduct/gettabcontent$removeparam=referrer
+! https://github.com/AdguardTeam/AdguardFilters/issues/89618
+@@||urldefense.com^$removeparam
 !#if adguard
 !#if adguard_ext_firefox
 ! https://github.com/DandelionSprout/adfilt/issues/376
@@ -19618,7 +19620,7 @@ nerdelandslaget.no#$#html { cursor: auto !important }
 ! No iMacs have had less than 1600px wide monitors since 2006, MacBook Pro since 2012, or MacBook Air since 2017. Thus I'm taking a gamble by embedding this for Mac users:
 !+ NOT_OPTIMIZED
 ! Title: 🖥️ Dandelion Sprout's Website Stretcher
-! OriginalVersion: 16March2023v2-Beta
+! OriginalVersion: 17March2023v1-Beta
 ! Expires: 3 days
 ! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
 ! Description: Have you ever felt bothered by how many websites still think that everyone are using narrow monitors? Well, here's how to stretch them out like a piece of gum!
@@ -19630,7 +19632,7 @@ nerdelandslaget.no#$#html { cursor: auto !important }
 ! Redesign
 prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#.category-page > div { max-width: 98vw !important }
 prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#.category-page--wrapper { max-width: none !important }
-prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#div[class^=Content-] { max-width: none !important }
+prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#div[class^=Content-] { max-width: calc(100vw - 100px) !important }
 prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#div[class^=PageContent-] { max-width: 97vw !important }
 prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#.category-list--top-level-item { flex: unset !important; margin-right: 15px !important }
 prisjakt.*,pricespy.*,prisjagt.dk,hintaopas.fi,ledenicheur.fr#$#nav[class^=Navigation-] { max-width: 95vw !important }
