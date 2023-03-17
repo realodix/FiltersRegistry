@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2023-03-16
+! Last modified: 2023-03-17
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -384,6 +384,10 @@ blogsazan.com##.main_content[style="border-radius:10px;"] > div[style="padding: 
 !-------------------------^ Non-Persian Ads/Trackers/Annoyances Filters used in Persian websites ^-----------------------!
 !-------------------------v Site-Specific Filters v-----------------------!
 ! >> A <<
+! https://github.com/MasterKia/PersianBlocker/issues/144
+alldriver.ir###kaprila_linktable
+alldriver.ir###popular
+alldriver.ir##.lolo
 androidparsi.ir$$script[tag-content="vc_url"][max-length="262144"]
 !#if !cap_html_filtering
 androidparsi.ir#%#//scriptlet('ubo-acis.js', 'vc_url')
@@ -1766,7 +1770,15 @@ par30media.com##.right-sidebar > aside > .tit-side:has-text(لینک های مف
 ! https://github.com/MasterKia/PersianBlocker/issues/105
 parsfootball.com###ads-120 > .textwidget > p > a
 parsfootball.com##[class*="block-ads"]
-||power-music.ir/sw.js^
+power-music.ir$$script[tag-content="window.open"][max-length="262144"]
+!#if !cap_html_filtering
+power-music.ir#%#//scriptlet('ubo-nowoif.js')
+!#endif
+!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_firefox)
+power-music.ir#%#//scriptlet('ubo-nowoif.js')
+!#endif
+||spotyfile.com^$domain=power-music.ir
+||power-music.ir/sw.js^$script,~third-party
 power-music.ir##.ytn-hamsan
 power-music.ir##.yn-bnr
 power-music.ir##.sidbar > p > strong:has-text(پیوندها):upward(.sidbar)
@@ -2211,6 +2223,11 @@ saat24.news##section.box ul > li.bklnk:upward(section.box)
 @@||1000site.ir/asset/images/images/adpage/$image,~third-party
 @@||1000site.ir/home/ads/asset/favicon.ico$image,~third-party
 ! >> T <<
+! https://github.com/MasterKia/PersianBlocker/issues/143
+tak3da.com#%#//scriptlet('ubo-aopr.js', 'SGPB_POPUP_PARAMS')
+||tak3da.com/wp-content/plugins/popup-builder^$script,~third-party
+tak3da.com##.container_ads
+tak3da.com##.adss
 tarfandha.org$$script[tag-content="vc_url"][max-length="262144"]
 !#if !cap_html_filtering
 tarfandha.org#%#//scriptlet('ubo-acis.js', 'vc_url')
