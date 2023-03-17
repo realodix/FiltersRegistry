@@ -441,13 +441,14 @@ androidzoom.ir#$#.content { width: 100% !important; }
 akharinnews.com###left2
 akharinnews.com###ads
 akharinnews.com##.yn-bnr:upward(.custom)
-||img.cdn.asandl.com/Panel/*.gif
-asandl.com##.game.post
+! https://github.com/MasterKia/PersianBlocker/issues/146
+||img.cdn.asandl.com/Panel^$image,~third-party
 asandl.com##.content-box
-asandl.com##.box:not(.counter, .post)
-asandl.com##.widget-asan:has(a[rel="nofollow"][target="_blank"])
+asandl.com##.box[class^="asan"]
+asandl.com##article.post.game:not(:has(.button, .post-cat))
 asandl.com##.text-asan
-@@||img.cdn.asandl.com/Panel/AsanDl-3.gif$image,~third-party
+asandl.com##.widget-asan > span > a:upward(.widget-asan)
+asandl.com###kaprila_linktable
 @@||asandl.com/ads/img/AsanDl-$image,~third-party
 ||arga-mag.com/file/img/*.gif
 ||arga-mag.com/wp-content/plugins/meks-easy-ads-widget^
@@ -568,12 +569,11 @@ biainobokhor.ir#$#.step:nth-of-type(4)::after { content: 'هشدار از طرف
 b2n.ir##.banner
 b2n.ir##.abox
 bils.ir###iddivtoplevelscript
-bils.ir##div:nth-of-type(3)
+bils.ir##div[style]:nth-of-type(3)
 ||byst.ir/ThemesStore/ads
 ||byst.ir/Visit/view
-||behmusic.com/wp-content/*/behpopup.js
-behmusic.com##.mp_left > .mpbb_ads.mpb_body
-behmusic.com##.mp_right > .mpbb_ads.mpb_body
+! https://github.com/MasterKia/PersianBlocker/issues/145
+behmusic.com##.mpbb_ads img:upward(.mp_box_x1)
 @@||blogfa.com/static/ads/$image,~third-party
 ||bultannews.com/files/adv/
 bultannews.com##.parent_txt_adv_container2
@@ -1532,6 +1532,9 @@ k2cod.com###table10 > tbody > tr > .textBoldColor
 k2cod.com##.bgleftmenu > div > div
 k2cod.com###table10
 ! >> L <<
+! https://github.com/MasterKia/PersianBlocker/issues/147
+||learnparsi.com/wp-content/uploads/*.gif$image,~third-party
+learnparsi.com##a[href^="https://bit.ly/"]
 lordroid.com##.lnk > center > a > img[alt="ADS"]:upward(center)
 lordroid.com##.footer_column > div > ul > li > a:has-text(طراحی سایت)
 listen2music.ir##.down-box-ads
@@ -1768,8 +1771,13 @@ plaza.ir#@#.ad__header
 ||par30media.com/wp-content/uploads/*.gif
 par30media.com##.right-sidebar > aside > .tit-side:has-text(لینک های مفید):upward(aside)
 ! https://github.com/MasterKia/PersianBlocker/issues/105
-parsfootball.com###ads-120 > .textwidget > p > a
-parsfootball.com##[class*="block-ads"]
+||parsfootball.com/wp-content/uploads/*.gif$image,~third-party
+||parsfootball.com/na/wp-content/uploads/*.gif$image,~third-party
+parsfootball.com###ads-120
+parsfootball.com##.block-ads
+parsfootball.com##.block-ads2
+parsfootball.com##.block-ads4
+parsfootball.com#@#.navad
 power-music.ir$$script[tag-content="window.open"][max-length="262144"]
 !#if !cap_html_filtering
 power-music.ir#%#//scriptlet('ubo-nowoif.js')

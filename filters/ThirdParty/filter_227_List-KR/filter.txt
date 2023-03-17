@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0316.4
+! OriginalVersion: 2023.0317.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -428,6 +428,7 @@ sonagitv.live##.blocks-gallery-item img[src*="/sonagi_me/sites/"]
 /data/banner.json?
 /ad-manager.min.js
 !
+||pennmike.com/script/bannerpop.js
 ||jjang0u.com/img/banner_ad_
 ||ssl.pstatic.net/static/comic/images/txt_ads_v
 ||medicaltimes.com/Main/images/*AD
@@ -1260,6 +1261,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+mnetplus.world###mnetplus-modal-root
 clien.net##.aside > div[class^="side_"]:not([class*="account"])
 m.clien.net##.nav_container > .content_view_list > div[class^="list_bottom_"]
 m.clien.net##.nav_container > div[class^="content_"][class$="_list"] a[href^="/service/board"] ~ div[class^="list_center_"]
@@ -2785,6 +2787,9 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
 !
+!#if (adguard_app_ios)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=spotvnow.co.kr
+!#endif
 ||ssl.pstatic.net/tveta/libs/ssp-video/prod/ssp.web.sdk_$script,redirect=noopjs,domain=m.sports.naver.com
 !#if (adguard_app_ios || adguard_ext_safari)
 @@||ssl.pstatic.net/tveta/libs/ssp-video/prod/ssp.web.sdk_$script,domain=m.sports.naver.com
@@ -2827,7 +2832,7 @@ sogirl.so#%#//scriptlet('set-constant', 'DHAntiAdBlocker', 'true')
 @@||ad.smartmediarep.com/NetInsight/video/smr$domain=programs.sbs.co.kr|allclip.sbs.co.kr|mplay.mk.co.kr|static.cloud.sbs.co.kr
 @@||op.gg^$generichide
 ||adimg.nate.com/img/*?n=$redirect=2x2-transparent.png,domain=tv.nate.com
-noonnu.cc#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+spotvnow.co.kr,noonnu.cc#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
 @@||t1.daumcdn.net/adfit/static/kp.js$domain=laftel.net
 @@||asset.laftel.net/static/assets/googleads-advertisement.js$domain=laftel.net
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=google-ima3,domain=laftel.net
@@ -2895,6 +2900,7 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=spotvnow.co.kr
 1412.rest#@#.ads
 remiz.co.kr#@#ins.adsbygoogle
 remiz.co.kr#@#.googleAd

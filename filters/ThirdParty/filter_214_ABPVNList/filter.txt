@@ -1,8 +1,8 @@
 !#if (adguard_ext_android_cb)
 ! version for AdGuard Content Blocker only
-! OriginalVersion: 20230317143630
+! OriginalVersion: 20230317165703
 ! Title: ABPVN List
-! Last modified: 17 Mar 2023 14:36:30 UTC+7
+! Last modified: 17 Mar 2023 16:57:03 UTC+7
 ! Expires: 1 days (update frequency)
 !
 ! ABPVN List filter
@@ -520,7 +520,6 @@
 ||xenosmussal.com^
 ||yoads.network^
 ||yomedia.vn^$third-party
-||zo.minunetclose.com^
 !---------------Element Hiding--------------
 ###banner-top
 ###mobileCatfish
@@ -1361,7 +1360,6 @@ $third-party,script,domain=sexdiaryz.us
 ##iframe[src^="https://media.vivaclix.com/js/ifr.html?"]
 cliphotvn.2tenz.top###video_player ~ div[id]
 cliphotvn.2tenz.top##div[style^="position:fixed;inset:0px;z-index:100000;"]
-javtopxx.com##.ads
 javtopxx.com##.cat-fish.a-play
 javtopxx.com##.overlay
 phim18hd.info##.top-mobile-banner
@@ -1391,11 +1389,10 @@ tuoinung.co###hide_float_right
 video.xembed.club###istext
 video.xembed.club##body>div[id]
 vlxx.cc###adx
+vlxx.cc##.catfish-bottom
+vlxx.cc##.ff-banner
 vlxx.cc##div.banner-catfish-bottom
-vlxx.info###adx
-vlxx.info##.ads
-vlxx.info##.catfish-bottom
-vlxx.info##.ff-banner
+vlxx.cc,javtopxx.com##.ads
 vn.javbabe.net##.b-player
 vn.phym18.com##div#bnads
 ! --- Hot fix rule for content blocker (ABP for Samsung internet, Adguard Content Blocker)
@@ -1406,9 +1403,9 @@ vn.phym18.com##div#bnads
 !
 !#if (!adguard_ext_android_cb)
 ! version for all other AdGuard products
-! OriginalVersion: 20230317143630
+! OriginalVersion: 20230317165703
 ! Title: ABPVN List
-! Last modified: 17 Mar 2023 14:36:30 UTC+7
+! Last modified: 17 Mar 2023 16:57:03 UTC+7
 ! Expires: 1 days (update frequency)
 !
 ! ABPVN List filter
@@ -1926,7 +1923,6 @@ vn.phym18.com##div#bnads
 ||xenosmussal.com^
 ||yoads.network^
 ||yomedia.vn^$third-party
-||zo.minunetclose.com^
 !---------------Element Hiding--------------
 ###banner-top
 ###mobileCatfish
@@ -2754,7 +2750,6 @@ $third-party,script,domain=sexdiaryz.us
 ##iframe[src^="https://media.vivaclix.com/js/ifr.html?"]
 cliphotvn.2tenz.top###video_player ~ div[id]
 cliphotvn.2tenz.top##div[style^="position:fixed;inset:0px;z-index:100000;"]
-javtopxx.com##.ads
 javtopxx.com##.cat-fish.a-play
 javtopxx.com##.overlay
 phim18hd.info##.top-mobile-banner
@@ -2784,11 +2779,10 @@ tuoinung.co###hide_float_right
 video.xembed.club###istext
 video.xembed.club##body>div[id]
 vlxx.cc###adx
+vlxx.cc##.catfish-bottom
+vlxx.cc##.ff-banner
 vlxx.cc##div.banner-catfish-bottom
-vlxx.info###adx
-vlxx.info##.ads
-vlxx.info##.catfish-bottom
-vlxx.info##.ff-banner
+vlxx.cc,javtopxx.com##.ads
 vn.javbabe.net##.b-player
 vn.phym18.com##div#bnads
 ! ---------Rule only for AdGuard------
@@ -2839,7 +2833,7 @@ vcomic.net,truyen86.com#%#//scriptlet("abort-current-inline-script", "Object", "
 vebo3.org,90phut6.live,90phut4.live,khomuc8.tv,banhkhuc6.com##.modal-backdrop.show
 vebo3.org,90phut6.live,90phut4.live,khomuc8.tv,banhkhuc6.com##.show.fade.modal
 vebo3.org,90phut6.live,90phut4.live,khomuc8.tv,banhkhuc6.com#$#body {overflow: visible!important;}
-viet69.love,ungtycomicsvip.com,vlxx.info,vlxx.cc#%#//scriptlet("abort-current-inline-script", "WebAssembly", "instantiate")
+viet69.love,ungtycomicsvip.com,vlxx.cc,vlxx.cc#%#//scriptlet("abort-current-inline-script", "WebAssembly", "instantiate")
 viettoons.tv,phimmoiaz.cc,zo3x.us,m.blogtruyen.vn#%#//scriptlet("abort-on-property-read", "open")
 vungoctuan.vn#%#//scriptlet("abort-current-inline-script", "document.write", "snow")
 vungoctuan.vn#%#//scriptlet("prevent-xhr", "ads")
