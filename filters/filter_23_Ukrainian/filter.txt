@@ -1509,6 +1509,7 @@ ucoz.ru/informer/
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||adssubdomain.legitwebsite.com^ (should be in adservers_firstparty.txt)
 !
+||clicktroute.com^
 ||riamiavid.com^
 ||octolinkcom.me^
 ||clickatdcode.com^
@@ -5725,7 +5726,7 @@ adbetnet.com$third-party
 ! Bad: /banner.jpg (should be in general_url.txt)
 ! Bad: ||legitwebsite.com^$third-party (should be in adservers.txt)
 !
-! test_common_adservers_firstparty.txt
+
 !
 ! This section contains the list of advertising networks domains, which are hosted on non advertising sites as subdomains.
 ! Note, that we only put rules that block full subdomains here and not URL parts (there's `general_url.txt` for that).
@@ -5949,7 +5950,7 @@ tapochek.net,sht.at.ua,rustorka.com,rustorka.net,rustorkacom.lib,naylo.top,kinos
 ! utarget
 jetvis.ru#%#//scriptlet("abort-on-property-read", "u_global_data")
 narod.ru,at.ua#%#//scriptlet("abort-current-inline-script", "u_global_data")
-nnmclub.ro,nnm-club.t0r.xyz,nnmclub.to,friends-online.me,doramakun.ru,kinogo.eu,kino-live2.org#%#//scriptlet("abort-on-property-read", "utarget_script")
+nnmclub.to,friends-online.me,doramakun.ru,kinogo.eu,kino-live2.org#%#//scriptlet("abort-on-property-read", "utarget_script")
 ! RedTram (`/ru-n4p/`)
 rivnepost.rv.ua,telegraf.in.ua,vlast.kz,mignews.com.ua,sibkray.ru,kursiv.kz,livekavkaz.ru,times.km.ua,grad.ua,altyn-orda.kz,viva.ua,newsoneua.tv,zikua.news,pnk.tv,cikavosti.com,womo.ua,4studio.com.ua,tverigrad.ru,kapital-rus.ru,volyninfa.com.ua,gorodkiev.com.ua,vsviti.com.ua,tenews.org.ua,provce.ck.ua,portal.lviv.ua,rivnenews.com.ua,teren.in.ua,prichernomorie.com.ua,marieclaire.ua,politnavigator.net,redpost.com.ua,narodna-pravda.ua,dv-gazeta.info,elle.ua,womanel.com,nr2.com.ua,plitkar.com.ua,zik.ua,edinstvennaya.ua,molbuk.ua,sud.ua,newsua.one,tele.ru,pingvin.pro,glavnoe.ua,glavpost.com,enovosty.com,bagnet.org,versii.if.ua,comments.ua,cbn.com.ua,comments.ua,otvetnavse.com,news.dks.com.ua,golos.te.ua,procherk.info,cheline.com.ua,4mama.ua,ogo.ua,rusjev.net,fakty.ua,fainaidea.com,unn.com.ua#%#//scriptlet('abort-current-inline-script', 'document.createElement', '/загрузка/')
 365news.biz,cbn.com.ua#%#//scriptlet("abort-current-inline-script", "document.createElement", "/n4p/")
@@ -6161,7 +6162,7 @@ i.ua$$script[tag-content="var branding"][max-length="2000"]
 ||dsn-fishki.ru^$~xmlhttprequest
 !
 ! adbetnet domains
-||cdn.*/libs/b.js$third-party,domain=nnmclub.ro|nnm-club.t0r.xyz|nnmclub.to
+||cdn.*/libs/b.js$third-party,domain=nnmclub.to
 !
 ! luckyads.tech - 'Lucky' at advertising domain tab's name
 ! another new 03.06.2020
@@ -7699,7 +7700,6 @@ kafa-info.com.ua,konkurent.in.ua,niknews.mk.ua,novosti.dn.ua###banner
 ! Good: example.org#@#.ad
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
-! test_common_allowlist.txt
 
 !
 ! This section contains the list of rules that fix incorrect blocking. Rules must be domain-specific.
