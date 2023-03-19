@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-03-17 08:13:17 CET
+! Last modified: 2023-03-19 12:01:19 CET
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -470,6 +470,7 @@ trendenser.se##strong:has-text(/reklam/i):upward(.post_feed_post)
 tripadvisor.se##div:has-text(Sponsrat av):upward(div[data-curated-shelf-id])
 tv.nu###tv-schedule section:has-text(ANNONS)
 tv4play.se#$#.avod-web-player-pause { background-color:transparent!important; }
+tv4play.se##button:has-text(Besök annonsör)
 underbaraclaras.se##.jet-listing-dynamic-field__content:has-text(/annonssamarbete|reklamsamarbete/i):upward(.jet-listing-grid__item)
 upptack-sverige.se##.front-cta:has-text(/sponsrat innehåll/i)
 utm_$document,removeparam=/^utm_/,domain=aftonbladet.se|booli.se|bostad.blocket.se|expressen.se|tv.nu
@@ -505,9 +506,7 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||amazon-adsystem.com^$important,third-party,domain=bilresaieuropa.se
 ||best-prizes-now.*^$all
 ||biowebb-data.*.amazonaws$important,third-party
-||bumpers.tv4play.se^$media,redirect=noopmp4-1s,domain=tv4play.se
 ||cision.com^$badfilter
-||cloudfront.net^$media,redirect=noopmp4-1s,domain=tv4play.se
 ||discord.com^$subdocument,redirect=click2load.html,domain=spelrum.net
 ||google-analytics.com^$important,domain=aftonbladet.se|tradera.com|xxl.se
 ||googletagmanager.com^$important,domain=tradera.com|xxl.se
@@ -524,7 +523,6 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||s.arclk.net/tr?$all
 ||se-tv4.videoplaza.tv/proxy/distributor$removeparam=s,xmlhttprequest,domain=fotbollskanalen.se|koket.se|tv4.se|tv4play.se
 ||spisa.nu^$document
-||trailer-admin-cdn.a2d.tv^$media,redirect=noopmp4-1s,domain=tv4play.se
 ||widget.playoncenter.com/newplayer/js/pb_$redirect=noopjs,script
 ||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|godare.se|svd.se|wellness.se
 ||youplay.se/*.js*ap=true$removeparam=/^ap/,script
@@ -595,8 +593,8 @@ home2tiny.se#%#//scriptlet('ubo-aeld.js', '/mousewheel|DOMMouseScroll/')
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###cookieNotice
 ###CookieNotice
+###cookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -2248,7 +2246,6 @@ tripadvisor.se##[class$="banner_ad"]
 turismnytt.se##.site-wrap > .row > .col-sm-3
 turistmal.se###col_right
 tv.nu##a[href*="adform.net"], .ad-fullscreenWallpaper__container
-tv4play.se##.visit-advertiser-link
 tvkanalengodare.se##.privacy-information--visible
 tvmatchen.nu##.bet365, .panorama-wrapper, .tvg-manager-box, img[src*="/tvchannels"][alt*="Snabbare"]
 tvprogram.se##.backdrop, .fcb
@@ -2448,7 +2445,7 @@ zeromagazine.nu##div[id^="ads"]
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$domain=folkofolk.se|minbostad.se|viivilla.se
 ||cookieinfoscript.com^$third-party
-||cookielaw.org^$domain=arbetet.se|atgplay.se|booli.se|cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|ilikeradio.se|infotorgjuridik.se|internetkunskap.se|internetstiftelsen.se|ka.se|kokaihop.se|koket.se|livetochdiabetes.se|malarnasfacktidning.se|manpower.se|motesplatsen.se|mtv.se|natgeotv.com|nok.se|nvp.se|nyamitten.se|placera.se|recept.se|sekotidningen.se|spisa.nu|sv.bab.la|svenskarnaochinternet.se|sydkusten.es|thelocal.se|tidningenelektrikern.se|tripadvisor.se|tv4.se|tv4play.se|voister.se|yelp.se
+||cookielaw.org^$domain=arbetet.se|atgplay.se|booli.se|cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|ikea.com|ilikeradio.se|infotorgjuridik.se|internetkunskap.se|internetstiftelsen.se|ka.se|kokaihop.se|koket.se|livetochdiabetes.se|malarnasfacktidning.se|manpower.se|motesplatsen.se|mtv.se|natgeotv.com|nok.se|nvp.se|nyamitten.se|placera.se|recept.se|sekotidningen.se|spisa.nu|sv.bab.la|svenskarnaochinternet.se|sydkusten.es|thelocal.se|tidningenelektrikern.se|tripadvisor.se|tv4.se|voister.se|yelp.se
 ||cookienotice.co^$third-party
 ||cookiepolicy.peytz.dk^$third-party
 ||cookiepro.com^$domain=aktiespararna.se|birthday.se|djurskyddet.se|fiskejournalen.se|foretagande.se|friendsarena.se|fz.se|hastnet.se|havet.nu|spela.se|svenskfast.se|sweclockers.com
@@ -2483,7 +2480,6 @@ zeromagazine.nu##div[id^="ads"]
 ||dayviews.com/cdn/img/*casino
 ||dayviews.com/p/tourn/
 ||dayviews.com^$third-party,domain=filmtipset.se|hamsterpaj.net
-||dbf0a92kfjvxs.cloudfront.net/creatives/assets$image,domain=tv4play.se
 ||deals.innocode.no^$third-party
 ||delivery.youplay.se/api/player_metrics?
 ||delivery.youplay.se/report?$image
@@ -2828,10 +2824,10 @@ zeromagazine.nu##div[id^="ads"]
 ||sannsyn.com^$third-party
 ||scandicpartners.se^$third-party
 ||schibsted.com/privacy-notifier
-||schibsted.com/pulse$domain=~vg.no
+||schibsted.com/pulse$domain=aftonbladet.se
 ||script.e-space.se^$third-party
 ||sdk.mrf.io/statics/marfeel-sdk
-||sdk.pulse.schibsted.com^$script,domain=~vg.no
+||sdk.pulse.schibsted.com^$script,domain=aftonbladet.se
 ||se-affiliate-gallery.aws.aller.com^
 ||se.azrhymes.com/detroitchicago
 ||seenthis.se^$third-party
@@ -2874,7 +2870,6 @@ zeromagazine.nu##div[id^="ads"]
 ||stackpathcdn.com^*/shrMain$script
 ||stadiumstage.com^$third-party
 ||stallet.se/scripts/bx-abd.js
-||stat-api.tv4play.se^
 ||stat.modette.se^
 ||static.hupso.com/share/js/counters.js
 ||static.influencersofsweden.se/js/inos
