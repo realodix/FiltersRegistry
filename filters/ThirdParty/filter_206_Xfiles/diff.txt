@@ -86,6 +86,8 @@ bergamonews.it##^script:has-text(request_ads)
 youtube.com,youtube-nocookie.com##+js(json-prune.js, [].playerResponse.adPlacements [].playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds)
 ! Rule "youtube.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)" converted to: "youtube.com#%#//scriptlet('ubo-set.js', 'ytInitialPlayerResponse.adPlacements', 'undefined')"
 youtube.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
+! Rule "ansa.it/sito/js/cookie_wall.js$1p,script,redirect=noopjs! [NoAds X Files - Filtri per blocco popup accettazione Cookie (sperimentale)]" converted to: "ansa.it/sito/js/cookie_wall.js$~third-party,script,redirect=noopjs! [NoAds X Files - Filtri per blocco popup accettazione Cookie (sperimentale)]"
+ansa.it/sito/js/cookie_wall.js$1p,script,redirect=noopjs! [NoAds X Files - Filtri per blocco popup accettazione Cookie (sperimentale)]
 ! Rule "gadget.pico.tools##+js(json-prune, locked)" converted to: "gadget.pico.tools#%#//scriptlet('ubo-json-prune.js', 'locked')"
 gadget.pico.tools##+js(json-prune, locked)
 ! Rule "aerzteblatt.de##+js(rc, restricted, div.restricted)" converted to: "aerzteblatt.de#%#//scriptlet('ubo-rc.js', 'restricted', 'div.restricted')"
@@ -112,6 +114,10 @@ bloomberg.com##+js(cookie-remover, gatehouse_id, stay)
 bloomberg.com##+js(aopr, localStorage)
 ! Rule "bloomberg.com##+js(ra, data-paywall-overlay-status, body[data-paywall-overlay-status], stay)" converted to: "bloomberg.com#%#//scriptlet('ubo-ra.js', 'data-paywall-overlay-status', 'body[data-paywall-overlay-status]', 'stay')"
 bloomberg.com##+js(ra, data-paywall-overlay-status, body[data-paywall-overlay-status], stay)
+! Rule "||bloombergadria.com/*/news/$inline-script" converted to: "||bloombergadria.com/*/news/$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:"
+||bloombergadria.com/*/news/$inline-script
+! Rule "bloombergadria.com##+js(ra, style, article[style])" converted to: "bloombergadria.com#%#//scriptlet('ubo-ra.js', 'style', 'article[style]')"
+bloombergadria.com##+js(ra, style, article[style])
 ! Rule "cen.acs.org##+js(cookie-remover, paywall-cookie)" converted to: "cen.acs.org#%#//scriptlet('ubo-cookie-remover.js', 'paywall-cookie')"
 cen.acs.org##+js(cookie-remover, paywall-cookie)
 ! Rule "challenges.fr##+js(ra, hidden, .user-paying-content)" converted to: "challenges.fr#%#//scriptlet('ubo-ra.js', 'hidden', '.user-paying-content')"
@@ -190,6 +196,8 @@ hbrchina.org##+js(ra, style, div#the_content)
 hbrtaiwan.com##+js(cookie-remover, guest)
 ! Rule "indianexpress.com##+js(ra, style, div#pcl-rest-content[style])" converted to: "indianexpress.com#%#//scriptlet('ubo-ra.js', 'style', 'div#pcl-rest-content[style]')"
 indianexpress.com##+js(ra, style, div#pcl-rest-content[style])
+! Rule "inkl.com##+js(ra, class, div.paywall)" converted to: "inkl.com#%#//scriptlet('ubo-ra.js', 'class', 'div.paywall')"
+inkl.com##+js(ra, class, div.paywall)
 ! Rule "japantimes.co.jp##+js(cookie-remover, /xbc/)" converted to: "japantimes.co.jp#%#//scriptlet('ubo-cookie-remover.js', '/xbc/')"
 japantimes.co.jp##+js(cookie-remover, /xbc/)
 ! Rule "journaldunet.com##+js(ra, style, .entry_reg_wall)" converted to: "journaldunet.com#%#//scriptlet('ubo-ra.js', 'style', '.entry_reg_wall')"
@@ -234,8 +242,10 @@ loeildelaphotographie.com##+js(ra, class, .paywall)
 loeildelaphotographie.com##+js(ra, style, img[style*="blur"])
 ! Rule "mv-voice.com##+js(cookie-remover, /^/)" converted to: "mv-voice.com#%#//scriptlet('ubo-cookie-remover.js', '/^/')"
 mv-voice.com##+js(cookie-remover, /^/)
-! Rule "nknews.org##+js(cookie-remover, issuem_lp)" converted to: "nknews.org#%#//scriptlet('ubo-cookie-remover.js', 'issuem_lp')"
-nknews.org##+js(cookie-remover, issuem_lp)
+! Rule "newsday.com##+js(ra, class, html[class])" converted to: "newsday.com#%#//scriptlet('ubo-ra.js', 'class', 'html[class]')"
+newsday.com##+js(ra, class, html[class])
+! Rule "nknews.org##+js(cookie-remover, /^issuem_lp/)" converted to: "nknews.org#%#//scriptlet('ubo-cookie-remover.js', '/^issuem_lp/')"
+nknews.org##+js(cookie-remover, /^issuem_lp/)
 ! Rule "nrc.nl##+js(cookie-remover, counter)" converted to: "nrc.nl#%#//scriptlet('ubo-cookie-remover.js', 'counter')"
 nrc.nl##+js(cookie-remover, counter)
 ! Rule "nybooks.com##+js(rc, paywall-article, .paywall-article)" converted to: "nybooks.com#%#//scriptlet('ubo-rc.js', 'paywall-article', '.paywall-article')"
@@ -256,10 +266,6 @@ public.fr##+js(ra, data-poool-mode, .cnt[data-poool-mode="hide"])
 puck.news##+js(rc, paywall-active, body)
 ! Rule "puck.news##+js(ra, style, article)" converted to: "puck.news#%#//scriptlet('ubo-ra.js', 'style', 'article')"
 puck.news##+js(ra, style, article)
-! Rule "qz.com##+js(ra, class, div#email-content[class], stay)" converted to: "qz.com#%#//scriptlet('ubo-ra.js', 'class', 'div#email-content[class]', 'stay')"
-qz.com##+js(ra, class, div#email-content[class], stay)
-! Rule "qz.com##+js(ra, scrolling, iframe[scrolling], stay)" converted to: "qz.com#%#//scriptlet('ubo-ra.js', 'scrolling', 'iframe[scrolling]', 'stay')"
-qz.com##+js(ra, scrolling, iframe[scrolling], stay)
 ! Rule "rugbypass.com/plus/$inline-script" converted to: "rugbypass.com/plus/$csp=script-src 'self' 'unsafe-eval' http: https: data: blob: mediastream: filesystem:"
 rugbypass.com/plus/$inline-script
 ! Rule "rugbypass.com##+js(rc, premium-fold-bottom, .premium-fold-bottom)" converted to: "rugbypass.com#%#//scriptlet('ubo-rc.js', 'premium-fold-bottom', '.premium-fold-bottom')"
@@ -372,10 +378,12 @@ iltirreno.it##+js(cookie-remover, /^/)
 lanuovasardegna.it##+js(cookie-remover, /^/)
 ! Rule "corriereadriatico.it,ilgazzettino.it,ilmattino.it,ilmessaggero.it,quotidianodipuglia.it##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "corriereadriatico.it,ilgazzettino.it,ilmattino.it,ilmessaggero.it,quotidianodipuglia.it#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
 corriereadriatico.it,ilgazzettino.it,ilmattino.it,ilmessaggero.it,quotidianodipuglia.it##+js(ra, subscriptions-section, [subscriptions-section="content"])
+! Rule "profi.de,topagrar.at,topagrar.com,wochenblatt.com##+js(ra, class|style, div.paywall-full-content[style])" converted to: "profi.de,topagrar.at,topagrar.com,wochenblatt.com#%#//scriptlet('ubo-ra.js', 'class|style', 'div.paywall-full-content[style]')"
+profi.de,topagrar.at,topagrar.com,wochenblatt.com##+js(ra, class|style, div.paywall-full-content[style])
 ! Rule "birdwatchingdaily.com,digitalphotopro.com,dpmag.com,jazztimes.com,outdoorphotographer.com,planeandpilotmag.com,writermag.com,##+js(cookie-remover, /^article_/)" converted to: "birdwatchingdaily.com,digitalphotopro.com,dpmag.com,jazztimes.com,outdoorphotographer.com,planeandpilotmag.com,writermag.com,#%#//scriptlet('ubo-cookie-remover.js', '/^article_/')"
 birdwatchingdaily.com,digitalphotopro.com,dpmag.com,jazztimes.com,outdoorphotographer.com,planeandpilotmag.com,writermag.com,##+js(cookie-remover, /^article_/)
-! Rule "dnn.de,gnz.de,goettinger-tageblatt.de,haz.de,kn-online.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,op-marburg.de,ostsee-zeitung.de,paz-online.de,rnd.de,siegener-zeitung.de,sn-online.de,waz-online.de##+js(set, Fusion.globalContent.isPaid, false)" converted to: "dnn.de,gnz.de,goettinger-tageblatt.de,haz.de,kn-online.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,op-marburg.de,ostsee-zeitung.de,paz-online.de,rnd.de,siegener-zeitung.de,sn-online.de,waz-online.de#%#//scriptlet('ubo-set.js', 'Fusion.globalContent.isPaid', 'false')"
-dnn.de,gnz.de,goettinger-tageblatt.de,haz.de,kn-online.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,op-marburg.de,ostsee-zeitung.de,paz-online.de,rnd.de,siegener-zeitung.de,sn-online.de,waz-online.de##+js(set, Fusion.globalContent.isPaid, false)
+! Rule "dnn.de,gnz.de,goettinger-tageblatt.de,haz.de,kn-online.de,landeszeitung.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,op-marburg.de,ostsee-zeitung.de,paz-online.de,rnd.de,siegener-zeitung.de,sn-online.de,waz-online.de##+js(set, Fusion.globalContent.isPaid, false)" converted to: "dnn.de,gnz.de,goettinger-tageblatt.de,haz.de,kn-online.de,landeszeitung.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,op-marburg.de,ostsee-zeitung.de,paz-online.de,rnd.de,siegener-zeitung.de,sn-online.de,waz-online.de#%#//scriptlet('ubo-set.js', 'Fusion.globalContent.isPaid', 'false')"
+dnn.de,gnz.de,goettinger-tageblatt.de,haz.de,kn-online.de,landeszeitung.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,op-marburg.de,ostsee-zeitung.de,paz-online.de,rnd.de,siegener-zeitung.de,sn-online.de,waz-online.de##+js(set, Fusion.globalContent.isPaid, false)
 ! Rule "independent.ie##+js(ra, style, div#flip-pay[style])" converted to: "independent.ie#%#//scriptlet('ubo-ra.js', 'style', 'div#flip-pay[style]')"
 independent.ie##+js(ra, style, div#flip-pay[style])
 ! Rule "denverpost.com,eastbaytimes.com,mercurynews.com,ocregister.com,pe.com,twincities.com##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "denverpost.com,eastbaytimes.com,mercurynews.com,ocregister.com,pe.com,twincities.com#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
@@ -474,6 +482,8 @@ espresso.repubblica.it##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
 ilgiorno.it,ilrestodelcarlino.it,iltelegrafolivorno.it,lanazione.it,quotidiano.net##+js(ra, amp-access-hide, [amp-access][amp-access-hide])
 ! Rule "amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.mcclatchydc.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.mcclatchydc.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
 amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.mcclatchydc.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com##+js(ra, subscriptions-section, [subscriptions-section="content"])
+! Rule "amp.sacbee.com##+js(ra, subscriptions-action, div[subscriptions-action][subscriptions-display="NOT data.hasError"])" converted to: "amp.sacbee.com#%#//scriptlet('ubo-ra.js', 'subscriptions-action', 'div[subscriptions-action][subscriptions-display="NOT data.hasError"]')"
+amp.sacbee.com##+js(ra, subscriptions-action, div[subscriptions-action][subscriptions-display="NOT data.hasError"])
 ! Rule "amp.brisbanetimes.com.au,amp.smh.com.au,amp.theage.com.au,amp.watoday.com.au##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "amp.brisbanetimes.com.au,amp.smh.com.au,amp.theage.com.au,amp.watoday.com.au#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
 amp.brisbanetimes.com.au,amp.smh.com.au,amp.theage.com.au,amp.watoday.com.au##+js(ra, subscriptions-section, [subscriptions-section="content"])
 ! Rule "amp.elmundo.es,amp.expansion.com,amp.marca.com,elespanol.com,elespectador.com,em.com.br,folha.uol.com.br,observador.pt##+js(ra, subscriptions-section, [subscriptions-section="content"])" converted to: "amp.elmundo.es,amp.expansion.com,amp.marca.com,elespanol.com,elespectador.com,em.com.br,folha.uol.com.br,observador.pt#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')"
@@ -560,6 +570,8 @@ bloomberg.com#%#//scriptlet('ubo-cookie-remover.js', 'gatehouse_id', 'stay')
 bloomberg.com#%#//scriptlet('ubo-aopr.js', 'localStorage')
 ! bloomberg.com#%#//scriptlet('ubo-ra.js', 'data-paywall-overlay-status', 'body[data-paywall-overlay-status]', 'stay') is excluded by "#%#//scriptlet" in exclusions-low.txt
 bloomberg.com#%#//scriptlet('ubo-ra.js', 'data-paywall-overlay-status', 'body[data-paywall-overlay-status]', 'stay')
+! bloombergadria.com#%#//scriptlet('ubo-ra.js', 'style', 'article[style]') is excluded by "#%#//scriptlet" in exclusions-low.txt
+bloombergadria.com#%#//scriptlet('ubo-ra.js', 'style', 'article[style]')
 ! cen.acs.org#%#//scriptlet('ubo-cookie-remover.js', 'paywall-cookie') is excluded by "#%#//scriptlet" in exclusions-low.txt
 cen.acs.org#%#//scriptlet('ubo-cookie-remover.js', 'paywall-cookie')
 ! challenges.fr#%#//scriptlet('ubo-ra.js', 'hidden', '.user-paying-content') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -632,6 +644,8 @@ hbrchina.org#%#//scriptlet('ubo-ra.js', 'style', 'div#the_content')
 hbrtaiwan.com#%#//scriptlet('ubo-cookie-remover.js', 'guest')
 ! indianexpress.com#%#//scriptlet('ubo-ra.js', 'style', 'div#pcl-rest-content[style]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 indianexpress.com#%#//scriptlet('ubo-ra.js', 'style', 'div#pcl-rest-content[style]')
+! inkl.com#%#//scriptlet('ubo-ra.js', 'class', 'div.paywall') is excluded by "#%#//scriptlet" in exclusions-low.txt
+inkl.com#%#//scriptlet('ubo-ra.js', 'class', 'div.paywall')
 ! japantimes.co.jp#%#//scriptlet('ubo-cookie-remover.js', '/xbc/') is excluded by "#%#//scriptlet" in exclusions-low.txt
 japantimes.co.jp#%#//scriptlet('ubo-cookie-remover.js', '/xbc/')
 ! journaldunet.com#%#//scriptlet('ubo-ra.js', 'style', '.entry_reg_wall') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -674,8 +688,10 @@ loeildelaphotographie.com#%#//scriptlet('ubo-ra.js', 'class', '.paywall')
 loeildelaphotographie.com#%#//scriptlet('ubo-ra.js', 'style', 'img[style*="blur"]')
 ! mv-voice.com#%#//scriptlet('ubo-cookie-remover.js', '/^/') is excluded by "#%#//scriptlet" in exclusions-low.txt
 mv-voice.com#%#//scriptlet('ubo-cookie-remover.js', '/^/')
-! nknews.org#%#//scriptlet('ubo-cookie-remover.js', 'issuem_lp') is excluded by "#%#//scriptlet" in exclusions-low.txt
-nknews.org#%#//scriptlet('ubo-cookie-remover.js', 'issuem_lp')
+! newsday.com#%#//scriptlet('ubo-ra.js', 'class', 'html[class]') is excluded by "#%#//scriptlet" in exclusions-low.txt
+newsday.com#%#//scriptlet('ubo-ra.js', 'class', 'html[class]')
+! nknews.org#%#//scriptlet('ubo-cookie-remover.js', '/^issuem_lp/') is excluded by "#%#//scriptlet" in exclusions-low.txt
+nknews.org#%#//scriptlet('ubo-cookie-remover.js', '/^issuem_lp/')
 ! nrc.nl#%#//scriptlet('ubo-cookie-remover.js', 'counter') is excluded by "#%#//scriptlet" in exclusions-low.txt
 nrc.nl#%#//scriptlet('ubo-cookie-remover.js', 'counter')
 ! nybooks.com#%#//scriptlet('ubo-rc.js', 'paywall-article', '.paywall-article') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -696,10 +712,6 @@ public.fr#%#//scriptlet('ubo-ra.js', 'data-poool-mode', '.cnt[data-poool-mode="h
 puck.news#%#//scriptlet('ubo-rc.js', 'paywall-active', 'body')
 ! puck.news#%#//scriptlet('ubo-ra.js', 'style', 'article') is excluded by "#%#//scriptlet" in exclusions-low.txt
 puck.news#%#//scriptlet('ubo-ra.js', 'style', 'article')
-! qz.com#%#//scriptlet('ubo-ra.js', 'class', 'div#email-content[class]', 'stay') is excluded by "#%#//scriptlet" in exclusions-low.txt
-qz.com#%#//scriptlet('ubo-ra.js', 'class', 'div#email-content[class]', 'stay')
-! qz.com#%#//scriptlet('ubo-ra.js', 'scrolling', 'iframe[scrolling]', 'stay') is excluded by "#%#//scriptlet" in exclusions-low.txt
-qz.com#%#//scriptlet('ubo-ra.js', 'scrolling', 'iframe[scrolling]', 'stay')
 ! rugbypass.com#%#//scriptlet('ubo-rc.js', 'premium-fold-bottom', '.premium-fold-bottom') is excluded by "#%#//scriptlet" in exclusions-low.txt
 rugbypass.com#%#//scriptlet('ubo-rc.js', 'premium-fold-bottom', '.premium-fold-bottom')
 ! rugbypass.com#%#//scriptlet('ubo-rc.js', 'fade', '.fade') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -810,10 +822,12 @@ iltirreno.it#%#//scriptlet('ubo-cookie-remover.js', '/^/')
 lanuovasardegna.it#%#//scriptlet('ubo-cookie-remover.js', '/^/')
 ! corriereadriatico.it,ilgazzettino.it,ilmattino.it,ilmessaggero.it,quotidianodipuglia.it#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 corriereadriatico.it,ilgazzettino.it,ilmattino.it,ilmessaggero.it,quotidianodipuglia.it#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
+! profi.de,topagrar.at,topagrar.com,wochenblatt.com#%#//scriptlet('ubo-ra.js', 'class|style', 'div.paywall-full-content[style]') is excluded by "#%#//scriptlet" in exclusions-low.txt
+profi.de,topagrar.at,topagrar.com,wochenblatt.com#%#//scriptlet('ubo-ra.js', 'class|style', 'div.paywall-full-content[style]')
 ! birdwatchingdaily.com,digitalphotopro.com,dpmag.com,jazztimes.com,outdoorphotographer.com,planeandpilotmag.com,writermag.com,#%#//scriptlet('ubo-cookie-remover.js', '/^article_/') is excluded by "#%#//scriptlet" in exclusions-low.txt
 birdwatchingdaily.com,digitalphotopro.com,dpmag.com,jazztimes.com,outdoorphotographer.com,planeandpilotmag.com,writermag.com,#%#//scriptlet('ubo-cookie-remover.js', '/^article_/')
-! dnn.de,gnz.de,goettinger-tageblatt.de,haz.de,kn-online.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,op-marburg.de,ostsee-zeitung.de,paz-online.de,rnd.de,siegener-zeitung.de,sn-online.de,waz-online.de#%#//scriptlet('ubo-set.js', 'Fusion.globalContent.isPaid', 'false') is excluded by "#%#//scriptlet" in exclusions-low.txt
-dnn.de,gnz.de,goettinger-tageblatt.de,haz.de,kn-online.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,op-marburg.de,ostsee-zeitung.de,paz-online.de,rnd.de,siegener-zeitung.de,sn-online.de,waz-online.de#%#//scriptlet('ubo-set.js', 'Fusion.globalContent.isPaid', 'false')
+! dnn.de,gnz.de,goettinger-tageblatt.de,haz.de,kn-online.de,landeszeitung.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,op-marburg.de,ostsee-zeitung.de,paz-online.de,rnd.de,siegener-zeitung.de,sn-online.de,waz-online.de#%#//scriptlet('ubo-set.js', 'Fusion.globalContent.isPaid', 'false') is excluded by "#%#//scriptlet" in exclusions-low.txt
+dnn.de,gnz.de,goettinger-tageblatt.de,haz.de,kn-online.de,landeszeitung.de,ln-online.de,lvz.de,maz-online.de,neuepresse.de,op-marburg.de,ostsee-zeitung.de,paz-online.de,rnd.de,siegener-zeitung.de,sn-online.de,waz-online.de#%#//scriptlet('ubo-set.js', 'Fusion.globalContent.isPaid', 'false')
 ! independent.ie#%#//scriptlet('ubo-ra.js', 'style', 'div#flip-pay[style]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 independent.ie#%#//scriptlet('ubo-ra.js', 'style', 'div#flip-pay[style]')
 ! denverpost.com,eastbaytimes.com,mercurynews.com,ocregister.com,pe.com,twincities.com#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -910,6 +924,8 @@ espresso.repubblica.it#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-acces
 ilgiorno.it,ilrestodelcarlino.it,iltelegrafolivorno.it,lanazione.it,quotidiano.net#%#//scriptlet('ubo-ra.js', 'amp-access-hide', '[amp-access][amp-access-hide]')
 ! amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.mcclatchydc.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 amp.bnd.com,amp.charlotteobserver.com,amp.fresnobee.com,amp.kansas.com,amp.kansascity.com,amp.kentucky.com,amp.mcclatchydc.com,amp.miamiherald.com,amp.newsobserver.com,amp.sacbee.com,amp.star-telegram.com,amp.thestate.com,amp.tri-cityherald.com#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
+! amp.sacbee.com#%#//scriptlet('ubo-ra.js', 'subscriptions-action', 'div[subscriptions-action][subscriptions-display="NOT data.hasError"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
+amp.sacbee.com#%#//scriptlet('ubo-ra.js', 'subscriptions-action', 'div[subscriptions-action][subscriptions-display="NOT data.hasError"]')
 ! amp.brisbanetimes.com.au,amp.smh.com.au,amp.theage.com.au,amp.watoday.com.au#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
 amp.brisbanetimes.com.au,amp.smh.com.au,amp.theage.com.au,amp.watoday.com.au#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]')
 ! amp.elmundo.es,amp.expansion.com,amp.marca.com,elespanol.com,elespectador.com,em.com.br,folha.uol.com.br,observador.pt#%#//scriptlet('ubo-ra.js', 'subscriptions-section', '[subscriptions-section="content"]') is excluded by "#%#//scriptlet" in exclusions-low.txt
@@ -942,5 +958,7 @@ tomadivx.tv#%#//scriptlet('ubo-aopr.js', 'WebAssembly')
 tubettajat.net#%#//scriptlet('ubo-aopr.js', 'miner')
 ! Error: Invalid selector: '.top_bar.top_bar_ad! [NoAds X Files - Elementi bloccati]/blocking' -- Error: unable to select by '.top_bar.top_bar_ad! [NoAds X Files - Elementi bloccati]/blocking' — '.top_bar.top_bar_ad! [NoAds X Files - Elementi bloccati]/blocking' is not a valid selector in rule:
 zpag.es##.top_bar.top_bar_ad! [NoAds X Files - Elementi bloccati]/blocking
-! Error: Invalid selector: 'section>div>div>*:has(path[d='M19.498 3h-15c-1.381 0-2.5 1.12-2.5 2.5v13c0 1.38 1.119 2.5 2.5 2.5h15c1.381 0 2.5-1.12 2.5-2.5v-13c0-1.38-1.119-2.5-2.5-2.5zm-3.502 12h-2v-3.59l-5.293 5.3-1.414-1.42L12.581 10H8.996V8h7v7z'])! [NoAds X Files - Filtri per blocco popup accettazione Cookie (sperimentale)]' -- Unbalanced attribute brackets in selector: 'section>div>div>*:has(path[d='M19.498 3h-15c-1.381 0-2.5 1.12-2.5 2.5v13c0 1.38 1.119 2.5 2.5 2.5h15c1.381 0 2.5-1.12 2.5-2.5v-13c0-1.38-1.119-2.5-2.5-2.5zm-3.502 12h-2v-3.59l-5.293 5.3-1.414-1.42L12.581 10H8.996V8h7v7z'])! [NoAds X Files - Filtri per blocco popup accettazione Cookie (sperimentale)]' in rule:
-twitter.com##section>div>div>*:has(path[d='M19.498 3h-15c-1.381 0-2.5 1.12-2.5 2.5v13c0 1.38 1.119 2.5 2.5 2.5h15c1.381 0 2.5-1.12 2.5-2.5v-13c0-1.38-1.119-2.5-2.5-2.5zm-3.502 12h-2v-3.59l-5.293 5.3-1.414-1.42L12.581 10H8.996V8h7v7z'])! [NoAds X Files - Filtri per blocco popup accettazione Cookie (sperimentale)]
+Error: "$redirect modifier is invalid" in the rule: "ansa.it/sito/js/cookie_wall.js$~third-party,script,redirect=noopjs! [NoAds X Files - Filtri per blocco popup accettazione Cookie (sperimentale)]"
+ansa.it/sito/js/cookie_wall.js$~third-party,script,redirect=noopjs! [NoAds X Files - Filtri per blocco popup accettazione Cookie (sperimentale)]
+! Error: Invalid selector: '#uniccmp! [NoAds X Files - Filtri per blocco Paywall (sperimentale)]' -- Unbalanced attribute brackets in selector: '#uniccmp! [NoAds X Files - Filtri per blocco Paywall (sperimentale)]' in rule:
+xda-developers.com###uniccmp! [NoAds X Files - Filtri per blocco Paywall (sperimentale)]
