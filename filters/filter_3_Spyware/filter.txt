@@ -147,7 +147,11 @@ app.tirelocator.ca#%#//scriptlet("set-constant", "googleAnalyticsEnhancedTrackPa
 reelrundown.com#%#//scriptlet('prevent-fetch', 'uid.mavencoalition.io')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/130197
 mirrormedia.mg#%#//scriptlet("set-constant", "dataLayer", "emptyArr")
+! https://github.com/AdguardTeam/AdguardFilters/issues/146026
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127628
+! TODO: remove prevent-addEventListener rule when new version with fix for prevent-element-src-loading will be released
+! https://github.com/AdguardTeam/Scriptlets/issues/270
+edeka.de#%#//scriptlet('prevent-addEventListener', 'bugfix', 'fix')
 edeka.de#%#(()=>{window.tC={event:{track(){}}}})();
 edeka.de#%#//scriptlet('prevent-element-src-loading', 'script','tc_DigitalesMarketing')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/127461
@@ -5266,7 +5270,6 @@ prjaga.ru#?##right > div#right_nav > h3:contains(Онлайн статистик
 ||mon.tiktokv.com^
 ||xlog.tiktokv.com^
 ||xlog-va.tiktokv.com^
-||log*-*.tiktokv.com^
 ||xlog*-*.tiktokv.com^
 ||mcs-va.tiktokv.com^
 ||mcs-va-*.tiktokv.com^
@@ -6375,7 +6378,6 @@ nethunt.com/api/v1/track/email/$image
 ||dynatrace.att.com^
 ||e-stat.huya.com^
 ||e.dr-zh.com^
-||e.reddit.com^
 ||e.tw.cx^
 ||e.viously.com^
 ||e2e.mashable.com^
