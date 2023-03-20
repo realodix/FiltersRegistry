@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 23.3.171
+! OriginalVersion: 23.3.176
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 20 Mar 2023 03:18 UTC
+! Last modified: 20 Mar 2023 07:13 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -1805,6 +1805,7 @@ _GIF1200x120-
 ##.kp-adv-widget
 ##.ktz-aftermenubanner
 ##.ktz-bannersingletop
+##.kurungiklan
 ##.labeliklan
 ##.layout__ads
 ##.leaderboard-ads-wrapper
@@ -1894,6 +1895,7 @@ _GIF1200x120-
 ##.td-ad-wrapper
 ##.td-navbar-ads
 ##.top-ads-widget
+##.top-content-ads
 ##.topads-kanan
 ##.topadsense
 ##.topline-ads
@@ -3132,6 +3134,7 @@ pasardana.id##.sda-banner
 uzone.id##.section-ads-mid
 uzone.id##.section-ads-top
 duwitmu.com##.section-sticky-ads
+sepoin.com##.sepoin-ads
 harianjogja.com##.size-300x250
 mediaindonesia.com##.skin-banner-link
 katadata.co.id##.skinads
@@ -3331,7 +3334,7 @@ suarajatimpost.com##.card:has-text(/adv/i)
 okezone.com##.center-paralax:has([id^="div-gpt-ad"])
 kontan.co.id,momsmoney.id##.center:has([id^="div-billboard" i])
 bacalagers.com##.code-block:has(.adsbyadop)
-bacaterus.com,berakal.com,dinaspendapatan.com,downloadsoftwaregratisan.com,duwitmu.com,ecaraku.com,inwepo.co,localstartupfest.id,mogamugi.com,narmadi.com,onlinemetro.id,oolean.id,pemerintahkota.com,penablog.com,saintif.com,selerasa.com,sulistio.xyz,teknoding.com,thelastsurvivors.org,winpreso.com##.code-block:has(.adsbygoogle)
+bacaterus.com,berakal.com,bersamatekno.com,carisinyal.com,dinaspendapatan.com,downloadsoftwaregratisan.com,duwitmu.com,ecaraku.com,inwepo.co,localstartupfest.id,mogamugi.com,narmadi.com,onlinemetro.id,oolean.id,pemerintahkota.com,penablog.com,saintif.com,selerasa.com,slabsoft.com,sulistio.xyz,teknoding.com,thelastsurvivors.org,winpreso.com##.code-block:has(.adsbygoogle)
 thelastsurvivors.org##.code-block:matches-css(text-align: center):has([class^="adsbyadop_"])
 buatatm.com,myjourney.id,pakaiatm.com,prosesbayar.com##.code-block:matches-css(text-align: center):has-text(/adv/i)
 blockchainmedia.id##.code-block:matches-css(text-align: center):has-text(/iklan/i)
@@ -3674,7 +3677,7 @@ m.kaskus.co.id##[id^="postdeleted"]
 /pum-site-scripts.js$script,domain=lintaslampung.com
 /sweetalert2.$script,domain=pusatiklan.my.id
 ?key=*&submetric=$third-party,popup
-bacaterus.com#%#//scriptlet('ubo-aopr.js', '$', 'showModal')
+bacaterus.com,carisinyal.com#%#//scriptlet('ubo-aopr.js', '$', 'showModal')
 cilegonnews.com#%#//scriptlet('ubo-aopr.js', 'eplm_cooki_name')
 biayatarif.com#%#//scriptlet('ubo-aopr.js', 'generateStickyDebounce')
 idfl.info#%#//scriptlet('ubo-aopr.js', 'open')
@@ -3736,12 +3739,13 @@ suara.com#$?#.detail-berita #player-video { remove: true; }
 beautynesia.id#$?#.detail__embed { remove: true; }
 cnnindonesia.com#$?#.detail_text #idvideocnn { remove: true; }
 cnnindonesia.com#$?#.detail_text .sisip_video_ds { remove: true; }
-fajar.co.id,herworld.co.id,pramborsfm.com#$?#.gliaplayer-container { remove: true; }
+carisinyal.com,fajar.co.id,herworld.co.id,pramborsfm.com#$?#.gliaplayer-container { remove: true; }
 tribunnewswiki.com#$?#.ivideo_box { remove: true; }
 kompas.com#$?#.js-read-article .rVideo-player { remove: true; }
 kompas.com#$?#.js-read-article .video-box-wrap { remove: true; }
 bola.com,bola.net,dream.co.id,kapanlagi.com,liputan6.com,merdeka.com#$?#.nativescrollingKLY:has(.nativescrollingKLY-sticky-inner-video) { remove: true; }
 kapanlagi.com#$?#.nativevideosiframe-loader { remove: true; }
+carisinyal.com#$?#.plyr { remove: true; }
 fimela.com#$?#.read-page--boost-video { remove: true; }
 briliofood.net#$?#.section:has(.video__headline) { remove: true; }
 cnnindonesia.com,haibunda.com,insertlive.com#$?#.sisip_embed_sosmed { remove: true; }
