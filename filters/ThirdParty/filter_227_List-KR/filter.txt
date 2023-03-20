@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0318.0
+! OriginalVersion: 2023.0320.4
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1196,7 +1196,7 @@ sonagitv.live##.blocks-gallery-item img[src*="/sonagi_me/sites/"]
 ||blogger.googleusercontent.com/img/$domain=hdhd197.net|hdhd198.net|hdhd199.net|hdhd200.net|hdhd201.net|hdhd202.net|hdhd202.net|hdhd203.net|hdhd204.net|hdhd205.net|hdhd206.net|hdhd207.net|hdhd208.net|hdhd209.net|hdhd210.net
 ||i.imgur.com^$domain=hdhd197.net|hdhd198.net|hdhd199.net|hdhd200.net|hdhd201.net|hdhd202.net|hdhd202.net|hdhd203.net|hdhd204.net|hdhd205.net|hdhd206.net|hdhd207.net|hdhd208.net|hdhd209.net|hdhd210.net
 /^https:\/\/imgcloud[0-9]+\.net\//$domain=wfwf248.com|wfwf249.com|wfwf250.com|wfwf251.com|wfwf252.com|wfwf253.com|wfwf254.com|wfwf255.com|wfwf256.com|wfwf257.com|wfwf258.com|wfwf259.com|wfwf260.com
-/blacktoon[0-9]+\.com\/poster_js\/[0-9]+\.js/
+/^https:\/\/blacktoon[0-9]+\.com\/poster_js\/[0-9]+\.js/
 ||toonkor*.com/images/*.gif
 ||wwwimageup.angle777899.com/other/atoona/
 !
@@ -2153,6 +2153,7 @@ www.naver.com##div.column_fix_wrap > div#shopcast
 !
 ! DOMAIN-REFRESHER: START
 !
+yatv.net###banner
 save-1.net##div[id^="float"]
 save-1.net##div[class^="header-banner-"]
 save-1.net##.at-main > .widget-box
@@ -2268,7 +2269,9 @@ x86.co.kr#@#.download_ad
 @@/^https:\/\/www\.ehanex\.com\/images\/main\/[a-z]{2}_ad\.gif$/
 @@||adimg3.search.naver.net/adpost/adpost_show_ads_min.js$domain=search.danawa.com
 @@||t1.daumcdn.net/adfit/static/kp.js$domain=pindirectshop.com|dongbanmall.com
-!
+!#if (adguard_app_ios || adguard_ext_safari)
+@@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.cafe.naver.com
+!#endif
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
 tgd.kr#$#html[style*="background-image:"][style*="//upload.tgd.kr/"]:not(.darkmode) { background-image: none !important; background-color: #f3f2f0 !important; }
@@ -2617,7 +2620,7 @@ news.op.gg#$?#header + div[class] div[class^="css-"] > div[class^="css-"] > div[
 5donews.co.kr#$?#.body > .content.xe_content:not(:has(article)) { width: auto !important; }
 mule.co.kr#$?#.section-lefttop-center:has(> .mule-today) { width: 100% !important; }
 !#if (adguard_app_ios)
-m.humoruniv.com#?##naver_adpost_wrap_fix ~ *:has([style][align] [style] [onclick])
+m.humoruniv.com#?#.adsbygoogle + div *:has(style ~ a[href][target] [style] ~ [style])
 !#endif
 bonik.me#?##sidebar > .module:contains(Ad)
 msearch.wemakeprice.com#?#article[data-list-container="searchList"] li:has(span:contains(AD).gray_round_badge)
@@ -2861,6 +2864,7 @@ $redirect-rule=nooptext,domain=lover903.net|lover904.net|lover905.net|lover906.n
 ! DOMAIN-REFRESHER: END
 !#endif
 !#if (adguard && !adguard_app_ios && !adguard_ext_safari)
+||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.cafe.naver.com,redirect=noopjs
 ||video.veilduck.app^$redirect=noopmp4-1s
 ||advod.sbs.co.kr/sbsad/$media,redirect=noopmp4-1s
 ||smrmembers-smr.smartmediarep.com/smc/smrmembers/$redirect=noopmp4-1s
@@ -2901,6 +2905,7 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+@@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.cafe.naver.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=spotvnow.co.kr
 1412.rest#@#.ads
 remiz.co.kr#@#ins.adsbygoogle
