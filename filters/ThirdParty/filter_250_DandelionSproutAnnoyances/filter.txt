@@ -1,6 +1,6 @@
 !
 ! Title: ⚙️ Dandelion Sprout's Annoyances List
-! OriginalVersion: 23February2023v1-Compilation
+! OriginalVersion: 21March2023v1-Compilation
 ! Expires: 2 days
 ! Description: This list is made in the style of Fanboy's and AdGuard's annoyances lists, to show that I can make a just as good such annoyances list as them. It combines many of my proudest and most frequently maintained international lists, as a proof-of-concept and as a curated list for simplicity's sake.
 ! What this broad compilation blocks in AdGuard and uBO (from top to bottom): Mobile app download banners, highly untrustworthy TLDs (and their Google results), domains that major tech groups lost the ownership of, PC "optimiser" sponsorships, malicious or tracker-inserting adblockers, auto-generated Android root "guides" that will brick your phone, "Share page" buttons, "Download [browser/Acrobat]" buttons, unnecessary login prompts, blurring of article previews, fake notification counters, empty padding (esp. on macOS), gradients when moving your mouse on video embeds, extra dumb comment sections, prayer time clocks on newssites, webstore "coupon" aggregator listings that are not coupons, large subscription promo banners, general annoyances on Dailymotion/Twitter/Wikia, falling snow on pages, URL parameters believed to be unnecessary or trackers, custom embedded cursors, softens and modernises Japanese fonts on Windows, spacewasting pagelist entries, the "Anonymous animal" bubbles on Google Docs, external IMDB rating embeds, opt-out autoplay on video sites
@@ -15149,7 +15149,7 @@ vimeo.com#%#//scriptlet('ubo-set.js', 'vimeo.clip_page_config.continuous_play_en
 ted.com#%#//scriptlet('ubo-sid.js', 'd.period', '1000')
 ted.com##.css-1dg07lz:has-text(Up next)
 ! Title: 🎫 Ad Removal List for Unusual Ads
-! OriginalVersion: 14March2023v1-Alpha
+! OriginalVersion: 21March2023v3-Alpha
 ! Expires: 4 days
 ! Description: This is a list to remove the kinds of ads that very few well-established international adblocker lists would want to remove, due to many of them not meeting those lists' strict criteria of what an ad actually is. So that's where this list comes into play.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
@@ -15216,13 +15216,13 @@ islandecho.co.uk#?#.herald-module:has(.category-news-in-brief)
 ! ——— Placeholders that are seemingly too small for EasyList ———
 mightytext.net###ad-block-holder
 ! ——— Denied (or implied denied) in EasyList for not being in English, denied in AdGuard Base for not being a popular site, no known language lists for it. May be submitted to uAssets at some point ———
-! https://ilanganews.co.za/
-ilanganews.co.za##.vc_single_image.wpb_wrapper
-! https://ilanganews.co.za/bayobuke-bafa-ababili-abebentshontsha-amakhebuli/
-ilanganews.co.za##.widget_media_image
-! https://github.com/AdguardTeam/AdguardFilters/issues/145446
-###bann-airtel
-###airtelMlay
+! For info on languages and which lists to send them to, see https://github.com/DandelionSprout/adfilt/blob/master/Wiki/Status%20for%20rare%20languages.md
+! —— Kazakh (Қазақша) ——
+! https://github.com/AdguardTeam/AdguardFilters/issues/146131
+kostanaytany.kz#?#.elementor-widget-image:not(:has([href*=kostanaytany]))
+kostanaytany.kz#?#.elementor-widget-image:has(a[href*=uploads])
+old.kostanaytany.kz#?#.widget > p:not(:has(a[href*=kostanaytany]))
+old.kostanaytany.kz#?#.widget > p:has(a[href*=uploads])
 ! ——— Slot machine spam ———
 deviantart.com#?#div[style^="width:"][style*="display:"]:has(a[href*="/art/"][href*=slotonline i])
 deviantart.com##a[data-hook][href*="/art/"][href*=slotonline i]
@@ -15396,6 +15396,30 @@ ctrip.com##.copyright.mod
 mafengwo.cn###footer
 jandan.net###footer
 news.sohu.com##.area.footer
+! Title: 🧜🏾‍♀️ Dandelion Sprout's African Languages List
+! OriginalVersion: 21March2023v2-Alpha
+! Expires: 4 days
+! Licence: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
+! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md
+! Description: Spun off from «Ad Removal List for Unusual Ads», as a result of not all African languages having newssites with high enough Alexa ranks to make it to AdGuard Base Filter's «Foreign» section.
+! Also recommended for African users: EasyList, AdGuard Base Filter, uBlock Filters, AdGuard French Filter, EasyList Portuguese, Liste AR
+! ——— Malagasy ———
+! https://github.com/AdguardTeam/AdguardFilters/issues/145446
+###bann-airtel
+###airtelMlay
+! ——— Swahili ———
+taifaleo.nation.co.ke##.text-center
+! https://github.com/AdguardTeam/AdguardFilters/issues/146134
+globalpublishers.co.tz##.adcontainer
+globalpublishers.co.tz##.widget_custom_html a[href="#"]
+globalpublishers.co.tz###custom_html-40
+globalpublishers.co.tz#?#.listing-item:has(> div.item-inner a[href*="-sloti-"])
+globalpublishers.co.tz#?#.listing > article:has(> div.item-inner a[href*="-kasino"])
+globalpublishers.co.tz#?#.listing > article:has(> div.item-inner a[href*="-chapride-"])
+! ——— Zulu ———
+ilanganews.co.za##.vc_single_image.wpb_wrapper
+ilanganews.co.za##.widget_media_image
+! TBD: Afrikaans (if EasyDutch rejects it), Somali, Xhosa, Amharic, Tigrinya, etc.
 ! Title: 🍿 Know Your Meme: Pure Browsing Experience
 ! OriginalVersion: 28February2021v1
 ! Expires: 10 days
