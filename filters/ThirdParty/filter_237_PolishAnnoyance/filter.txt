@@ -5,8 +5,8 @@
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
 ! Expires: 2 days
-! Last modified: Tue, 21 Mar 2023, 20:30 UTC+01:00
-! OriginalVersion: 2023.3.21.1
+! Last modified: Tue, 21 Mar 2023, 22:52 UTC+01:00
+! OriginalVersion: 2023.3.21.3
 ! Najnowsza wersja zawsze na: https://github.com/FiltersHeroes/PolishAnnoyanceFilters
 ! Zgłoszenia:
 !   Formularz (nie wymaga rejestracji) => https://polishannoyancefilters.netlify.app/issues
@@ -15,7 +15,7 @@
 ! Homepage: https://polishannoyancefilters.netlify.app
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: wto, 21 mar 2023, 20:30 UTC+01:00
+! Aktualizacja: wto, 21 mar 2023, 22:52 UTC+01:00
 !
 !
 ! Newslettery (nie popupy)
@@ -11457,8 +11457,6 @@ lomilowka.pl###modalRazemRazniej, .modal-backdrop
 lubimyczytac.pl###modalAdv, .modal-backdrop
 lubimyczytac.pl###modalZoom
 lubimyczytac.pl###modalZoom ~ .modal-backdrop:not(:has(~ .modal-backdrop))
-m.youtube.com##.upsell-dialog-lightbox:has(a[href^="https://support.google.com/youtube/?p=sign_in"])
-m.youtube.com#$#body[modal-open-body] { position: static !important; }
 macris.com.pl#$#.noscroll { overflow: visible !important; position: relative !important; }
 mamalla.pl###myModal, .modal-backdrop
 marchewkowepole.com###popup-modal, .modal-backdrop
@@ -12122,8 +12120,8 @@ wamiz.pl#$#.nav-visible .main-wrapper, .nav-visible footer, .nav-visible header 
 wandermap.net#$##sidebar[style] { max-width: 390px }
 webowe.gadu-gadu.pl#$#body#webowe > #footer { position: static !important; padding: 20px 0; margin: auto !important; }
 www.auchan.pl#$#img[height="40px"][src*="birdy"] { height: 40px !important; }
-www.youtube.com#$#ytd-rich-grid-row > #contents, ytd-rich-grid-row ytd-rich-grid-media { max-width: unset !important; }
-www.youtube.com#$#ytd-rich-grid-row { --ytd-rich-grid-items-per-row: 1 !important; }
+www.youtube.com#$?#html > head:has(> link[rel="canonical"][href="https://www.youtube.com/"]) ~ body #ytd-rich-grid-row > #contents, ytd-rich-grid-row ytd-rich-grid-media { max-width: unset !important; }
+www.youtube.com#$?#html > head:has(> link[rel="canonical"][href="https://www.youtube.com/"]) ~ body #ytd-rich-grid-row { --ytd-rich-grid-items-per-row: 1 !important; }
 zalando.pl##.js_z-mask-smartbanner.z-mask-smartbanner
 zalando.pl#$#html[style*="margin-top"] { margin-top: 0 !important; }
 zapytaj.onet.pl#%#//scriptlet('ubo-ra.js', 'src', '#yt-music-player', 'complete')
