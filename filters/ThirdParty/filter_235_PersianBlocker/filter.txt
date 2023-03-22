@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2023-03-22
+! Last modified: 2023-03-23
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -1115,6 +1115,10 @@ fa-tools.ir##.list
 fa-tools.ir##.t-adv
 fa-tools.ir##div.post:nth-of-type(2)
 ! >> G <<
+! https://github.com/MasterKia/PersianBlocker/issues/151
+||gahar.ir/wp-content/uploads/*.gif$image,~third-party
+gahar.ir##.post-ad-box
+gahar.ir##.text-ads
 gharbtv.com##.card-ads
 gharbtv.com##.bottom-ads
 ||core.gapfilm.ir/api/*/Banner/GetBanner?bannerId=
@@ -1557,6 +1561,13 @@ lahzeakhar.com#%#//scriptlet('ubo-set.js', 'customnotify', 'noopFunc')
 ||lahzeakhar.com/ShowAds
 ! ||lahzeakhar.com/sw.js
 ! >> M <<
+musickhone.com$$script[tag-content="window.open"][max-length="262144"]
+!#if !cap_html_filtering
+musickhone.com#%#//scriptlet('ubo-nowoif.js')
+!#endif
+!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_firefox)
+musickhone.com#%#//scriptlet('ubo-nowoif.js')
+!#endif
 my.mci.ir,pwa.mci.ir#%#//scriptlet('ubo-set.js', 'window.screen.width', '0')
 my.mci.ir,pwa.mci.ir#%#//scriptlet('ubo-set.js', 'window.screen.height', '0')
 my.mci.ir,pwa.mci.ir#%#//scriptlet('ubo-set.js', 'navigator.appVersion', '')
