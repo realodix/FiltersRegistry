@@ -119,7 +119,7 @@ docviewer.yandex.*#%#//scriptlet("abort-on-property-read", "Object.prototype.YaA
 !#endif
 !
 ! Yandex.Images
-[$path=/images]yandex.*#?#div[role="list"] div[class*="-Incut"]:has(div[id^="viewer_rim_direct"])
+yandex.*#?#div[role="list"] div[class*="-Incut"]:has(div[id^="viewer_rim_direct"])
 [$path=/images/]yandex.*##div[data-state*="/image/new/serp/page/commercial/incut"]
 ! TODO: remove the hint below after this task is solved
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/2465
@@ -652,6 +652,7 @@ usatoday.com#@#.ad-slot
 ! SECTION: Anti-adblock - Regular rules
 ! Do not forget about '!#safari_cb_affinity' section for exclusions
 !
+abcya.com#%#//scriptlet('prevent-element-src-loading', 'script', 'pagead2.googlesyndication.com')
 chatreplay.stream##div[style^="height:"].container
 reddit.com#$##acceptabletest { display: block !important; }
 reddit.com#$##adblocktest { display: block !important; }
@@ -10307,7 +10308,7 @@ trinixy.ru##.b-notification-push
 turkuvazradyolar.com,anews.com.tr,yeniasir.com.tr,aspor.com.tr,fikriyat.com,ahaber.com.tr,sabah.com.tr,takvim.com.tr##.notBar
 haberturk.com##.notifacition-area
 haber7.com##.notification-box
-complex.com,ifunny.co,teatroporno.com,antena3.ro,webtekno.com##.push-notification
+firstwefeast.com,complex.com,ifunny.co,teatroporno.com,antena3.ro,webtekno.com##.push-notification
 inside-digital.de,sanalbasin.com##.push-wrapper
 kommersant.ru##.push_notification
 apkdayi.com##.subsbar
@@ -10514,6 +10515,7 @@ jiji.com,edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,
 !
 ! SECTION: Subscriptions - Regular rules
 !
+firstwefeast.com##newsletter-widget
 100percentfedup.com##.newsletter-signup-form
 thewrap.com##.tpd-newsletters-form
 rtde.life##.Subscription-isReact

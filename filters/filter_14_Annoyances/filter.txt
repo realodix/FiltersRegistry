@@ -2231,6 +2231,8 @@ freundin.de,utopia.de,mein-schoener-garten.de,eveningnews24.co.uk,rollingstone.d
 !
 ! NOTE: Regular rules
 !
+inwx.com#$#.consent-background { display: none !important; }
+inwx.com#$#html.no-consent body { position: static !important; }
 laborjournal.de###cookie_popup1
 tabletka.by##.js-coockie:not([id])
 slidelizard.com###cookie-info-dialog
@@ -10531,7 +10533,6 @@ xn--sterreich-z7a.at#$#.cookiesOverlay3Box { display: none!important; }
 ||bayonne-tourisme.com/*/js/askcookies.js
 ||cdn.images.express.co.uk/cmp/cmpui.html
 ||d25yha10orzq01.cloudfront.net/cookie-widget/$domain=forum.paradoxplaza.com
-||d3nhmqrdssv741.cloudfront.net/jppol-consent
 ||fulltrannytube.com/es.php
 ||guce.oath.com/v*/consentCheck$domain=engadget.com
 ||heute.at/gcm/consent.js
@@ -13261,6 +13262,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/146263
+inwx.com#@#.consent-container
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146231
 seneca.juntadeandalucia.es#@##cookie-info-bar
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145866
@@ -16435,7 +16438,7 @@ docviewer.yandex.*#%#//scriptlet("abort-on-property-read", "Object.prototype.YaA
 !#endif
 !
 ! Yandex.Images
-[$path=/images]yandex.*#?#div[role="list"] div[class*="-Incut"]:has(div[id^="viewer_rim_direct"])
+yandex.*#?#div[role="list"] div[class*="-Incut"]:has(div[id^="viewer_rim_direct"])
 [$path=/images/]yandex.*##div[data-state*="/image/new/serp/page/commercial/incut"]
 ! TODO: remove the hint below after this task is solved
 ! https://github.com/uBlockOrigin/uBlock-issues/issues/2465
@@ -16968,6 +16971,7 @@ usatoday.com#@#.ad-slot
 ! SECTION: Anti-adblock - Regular rules
 ! Do not forget about '!#safari_cb_affinity' section for exclusions
 !
+abcya.com#%#//scriptlet('prevent-element-src-loading', 'script', 'pagead2.googlesyndication.com')
 chatreplay.stream##div[style^="height:"].container
 reddit.com#$##acceptabletest { display: block !important; }
 reddit.com#$##adblocktest { display: block !important; }
@@ -26623,7 +26627,7 @@ trinixy.ru##.b-notification-push
 turkuvazradyolar.com,anews.com.tr,yeniasir.com.tr,aspor.com.tr,fikriyat.com,ahaber.com.tr,sabah.com.tr,takvim.com.tr##.notBar
 haberturk.com##.notifacition-area
 haber7.com##.notification-box
-complex.com,ifunny.co,teatroporno.com,antena3.ro,webtekno.com##.push-notification
+firstwefeast.com,complex.com,ifunny.co,teatroporno.com,antena3.ro,webtekno.com##.push-notification
 inside-digital.de,sanalbasin.com##.push-wrapper
 kommersant.ru##.push_notification
 apkdayi.com##.subsbar
@@ -26830,6 +26834,7 @@ jiji.com,edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,
 !
 ! SECTION: Subscriptions - Regular rules
 !
+firstwefeast.com##newsletter-widget
 100percentfedup.com##.newsletter-signup-form
 thewrap.com##.tpd-newsletters-form
 rtde.life##.Subscription-isReact
@@ -43302,6 +43307,7 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 ! NOTE: Blogroll third-party sites
 !
+xn--eckybzahmsm43ab5g5336c9iug.com##div[role="complementary"] > #custom_html-11
 netouyonews.net##div[id^="head_rss"]
 netouyonews.net##div[id^="mid_rss"]
 netouyonews.net##.kijirss
