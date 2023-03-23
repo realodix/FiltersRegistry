@@ -2,6 +2,8 @@
 opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/):others()
 ! xip.li##.form-inline:others() is excluded by "xip.li##.form-inline:others()" in exclusions.txt
 xip.li##.form-inline:others()
+! Rule "/wp-content/uploads/*.gif^$image,1p" converted to: "/wp-content/uploads/*.gif^$image,~third-party"
+/wp-content/uploads/*.gif^$image,1p
 ! Rule "||websocket.*/?u=*&s=$websocket,1p" converted to: "||websocket.*/?u=*&s=$websocket,~third-party"
 ||websocket.*/?u=*&s=$websocket,1p
 ! Rule "/wp-admin/admin-ajax.php?postviews_id=$xhr,1p" converted to: "/wp-admin/admin-ajax.php?postviews_id=$xmlhttprequest,~third-party"
@@ -288,8 +290,6 @@ fardanews.com##.n-first-col-left:style(width: 100% !important;)
 farnet.io##+js(acis, eif)
 ! Rule "farsroid.com##+js(aopr, faPa)" converted to: "farsroid.com#%#//scriptlet('ubo-aopr.js', 'faPa')"
 farsroid.com##+js(aopr, faPa)
-! Rule "||gahar.ir/wp-content/uploads/*.gif$image,1p" converted to: "||gahar.ir/wp-content/uploads/*.gif$image,~third-party"
-||gahar.ir/wp-content/uploads/*.gif$image,1p
 ! Rule "gold-team.org##+js(nano-sib)" converted to: "gold-team.org#%#//scriptlet('ubo-nano-sib.js')"
 gold-team.org##+js(nano-sib)
 ! Rule "gostaresh.news##.main_wrapper:style(max-width: 95% !important;)" converted to: "gostaresh.news#$#.main_wrapper { max-width: 95% !important; }"
@@ -410,8 +410,6 @@ khabarpu.com##+js(nano-stb, document.getElementById, *, 0.01)
 khabarfoori.com##.rowTwo .right_side, .rowTwo .column_1:style(width: 100% !important;)
 ! Rule "ketabesabz.com##+js(set, KetabrahPopup, noopFunc)" converted to: "ketabesabz.com#%#//scriptlet('ubo-set.js', 'KetabrahPopup', 'noopFunc')"
 ketabesabz.com##+js(set, KetabrahPopup, noopFunc)
-! Rule "||learnparsi.com/wp-content/uploads/*.gif$image,1p" converted to: "||learnparsi.com/wp-content/uploads/*.gif$image,~third-party"
-||learnparsi.com/wp-content/uploads/*.gif$image,1p
 ! Rule "lahzeakhar.com##+js(set, customnotify, noopFunc)" converted to: "lahzeakhar.com#%#//scriptlet('ubo-set.js', 'customnotify', 'noopFunc')"
 lahzeakhar.com##+js(set, customnotify, noopFunc)
 ! Rule "musickhone.com##^script:has-text(window.open)" converted to: "musickhone.com$$script[tag-content="window.open"][max-length="262144"]"
@@ -490,10 +488,6 @@ opizo.me##+js(aeld, blur)
 ||plaza.ir/location/find-client-location^$xhr,1p
 ! Rule "||plaza.ir/wp-admin/admin-ajax.php?action=getClientDeviceRelatedPostItems^$xhr,1p" converted to: "||plaza.ir/wp-admin/admin-ajax.php?action=getClientDeviceRelatedPostItems^$xmlhttprequest,~third-party"
 ||plaza.ir/wp-admin/admin-ajax.php?action=getClientDeviceRelatedPostItems^$xhr,1p
-! Rule "||parsfootball.com/wp-content/uploads/*.gif$image,1p" converted to: "||parsfootball.com/wp-content/uploads/*.gif$image,~third-party"
-||parsfootball.com/wp-content/uploads/*.gif$image,1p
-! Rule "||parsfootball.com/na/wp-content/uploads/*.gif$image,1p" converted to: "||parsfootball.com/na/wp-content/uploads/*.gif$image,~third-party"
-||parsfootball.com/na/wp-content/uploads/*.gif$image,1p
 ! Rule "power-music.ir##^script:has-text(window.open)" converted to: "power-music.ir$$script[tag-content="window.open"][max-length="262144"]"
 power-music.ir##^script:has-text(window.open)
 ! Rule "power-music.ir##+js(nowoif)" converted to: "power-music.ir#%#//scriptlet('ubo-nowoif.js')"
@@ -524,6 +518,8 @@ rouydad24.ir##.container, .main:style(width: 95% !important;)
 rokna.net##.top_fixed_mob:remove()
 ! Rule "rokna.net##.top_fixed_mob:remove()" converted to: "rokna.net#$?#.top_fixed_mob { remove: true; }"
 rokna.net##.top_fixed_mob:remove()
+! Rule "||cdn.sargarme.com/uploads/*.gif$image,1p" converted to: "||cdn.sargarme.com/uploads/*.gif$image,~third-party"
+||cdn.sargarme.com/uploads/*.gif$image,1p
 ! Rule "||sobhtazeh.news/rss-file.php^$xhr" converted to: "||sobhtazeh.news/rss-file.php^$xmlhttprequest"
 ||sobhtazeh.news/rss-file.php^$xhr
 ! Rule "shmi.ir##.left_news_box > .left:style(width: 100% !important;)" converted to: "shmi.ir#$#.left_news_box > .left { width: 100% !important; }"
@@ -664,8 +660,6 @@ takmili.com##style:has-text(user-select):remove()
 techfars.com##:not(:matches-path(/category/website/reportage/)) .box:has-text(رپورتاژ آگهی)
 ! Rule "trainbit.com##+js(nano-stb, , , 0)" converted to: "trainbit.com#%#//scriptlet('ubo-nano-stb.js', '', '', '0')"
 trainbit.com##+js(nano-stb, , , 0)
-! Rule "||techrato.com/wp-content/uploads/*.gif$image,1p" converted to: "||techrato.com/wp-content/uploads/*.gif$image,~third-party"
-||techrato.com/wp-content/uploads/*.gif$image,1p
 ! Rule "techrato.com##:not(:matches-path(/tag/%D8%B1%D9%BE%D9%88%D8%B1%D8%AA%D8%A7%DA%98-%D8%A2%DA%AF%D9%87%DB%8C/)) .posts-list > article.tag-8164 > .clearfix > a[class="title"][href$="reportage/"]:upward(article)" converted to: "[$path=/^((?!tag/%D8%B1%D9%BE%D9%88%D8%B1%D8%AA%D8%A7%DA%98-%D8%A2%DA%AF%D9%87%DB%8C).)*$/]techrato.com## .posts-list > article.tag-8164 > .clearfix > a[class="title"][href$="reportage/"]:upward(article)"
 techrato.com##:not(:matches-path(/tag/%D8%B1%D9%BE%D9%88%D8%B1%D8%AA%D8%A7%DA%98-%D8%A2%DA%AF%D9%87%DB%8C/)) .posts-list > article.tag-8164 > .clearfix > a[class="title"][href$="reportage/"]:upward(article)
 ! Rule "tigatravel.com##+js(nostif, /^/)" converted to: "tigatravel.com#%#//scriptlet('ubo-nostif.js', '/^/')"
