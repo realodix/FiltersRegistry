@@ -2,8 +2,8 @@
 opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/):others()
 ! xip.li##.form-inline:others() is excluded by "xip.li##.form-inline:others()" in exclusions.txt
 xip.li##.form-inline:others()
-! Rule "/wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|pezeshket.com|p30konkor.com|sakhtafzar.com|techrato.com" converted to: "/wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|pezeshket.com|p30konkor.com|sakhtafzar.com|techrato.com"
-/wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|pezeshket.com|p30konkor.com|sakhtafzar.com|techrato.com
+! Rule "/wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|sakhtafzar.com|techrato.com" converted to: "/wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|sakhtafzar.com|techrato.com"
+/wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|sakhtafzar.com|techrato.com
 ! Rule "||websocket.*/?u=*&s=$websocket,1p,strict3p" converted to: "||websocket.*/?u=*&s=$websocket,~third-party,strict3p"
 ||websocket.*/?u=*&s=$websocket,1p,strict3p
 ! Rule "/wp-admin/admin-ajax.php?postviews_id=$xhr,1p" converted to: "/wp-admin/admin-ajax.php?postviews_id=$xmlhttprequest,~third-party"
@@ -126,6 +126,8 @@ logo.samandehi.ir##^responseheader(set-cookie)
 ||uptrendsdata.com^$3p
 ! Rule "||webpu.sh^$3p" converted to: "||webpu.sh^$third-party"
 ||webpu.sh^$3p
+! Rule "anzalweb.ir##:not(:matches-path(/category/%D8%B1%D9%BE%D8%B1%D8%AA%D8%A7%DA%98)) article > footer > span.post-meta-cat:has-text(رپرتاژ):upward(article)" converted to: "[$path=/^((?!\/category\/%D8%B1%D9%BE%D8%B1%D8%AA%D8%A7%DA%98).)*$/]anzalweb.ir## article > footer > span.post-meta-cat:has-text(رپرتاژ):upward(article)"
+anzalweb.ir##:not(:matches-path(/category/%D8%B1%D9%BE%D8%B1%D8%AA%D8%A7%DA%98)) article > footer > span.post-meta-cat:has-text(رپرتاژ):upward(article)
 ! Rule "androidparsi.ir##^script:has-text(vc_url)" converted to: "androidparsi.ir$$script[tag-content="vc_url"][max-length="262144"]"
 androidparsi.ir##^script:has-text(vc_url)
 ! Rule "androidparsi.ir##+js(acis, vc_url)" converted to: "androidparsi.ir#%#//scriptlet('ubo-acis.js', 'vc_url')"
@@ -522,6 +524,12 @@ rokna.net##.top_fixed_mob:remove()
 ||cdn.sargarme.com/uploads/*.gif$image,1p
 ! Rule "||sobhtazeh.news/rss-file.php^$xhr" converted to: "||sobhtazeh.news/rss-file.php^$xmlhttprequest"
 ||sobhtazeh.news/rss-file.php^$xhr
+! Rule "||shabakeh-mag.com/sites/default/files/*.gif^$image,1p" converted to: "||shabakeh-mag.com/sites/default/files/*.gif^$image,~third-party"
+||shabakeh-mag.com/sites/default/files/*.gif^$image,1p
+! Rule "||shabakeh-mag.com/sites/default/files/styles/shabake2_popular/public/images/ad^$image,1p" converted to: "||shabakeh-mag.com/sites/default/files/styles/shabake2_popular/public/images/ad^$image,~third-party"
+||shabakeh-mag.com/sites/default/files/styles/shabake2_popular/public/images/ad^$image,1p
+! Rule "||shabakeh-mag.com/modules/statistics/statistics.php^$xhr,1p" converted to: "||shabakeh-mag.com/modules/statistics/statistics.php^$xmlhttprequest,~third-party"
+||shabakeh-mag.com/modules/statistics/statistics.php^$xhr,1p
 ! Rule "shmi.ir##.left_news_box > .left:style(width: 100% !important;)" converted to: "shmi.ir#$#.left_news_box > .left { width: 100% !important; }"
 shmi.ir##.left_news_box > .left:style(width: 100% !important;)
 ! Rule "shmi.ir##.main_right_archsing > .single:style(width: 100% !important;)" converted to: "shmi.ir#$#.main_right_archsing > .single { width: 100% !important; }"

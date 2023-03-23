@@ -10,7 +10,7 @@
 !  لیستی برای برگرداندن آزادی کاربران، چون هر کاربر این آزادی را دارد که چه چیزی وارد مرورگرش می‌شود و چه چیزی وارد نمی‌شود
 !-------------------------v Experimental Generic Filters v-----------------------!
 ! digiro.ir, gahar.ir, jobsacademy.ir, mihand.ir, modirnameh.ir, pedal.ir, softsaaz.ir, technet24.ir
-/wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|pezeshket.com|p30konkor.com|sakhtafzar.com|techrato.com
+/wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|sakhtafzar.com|techrato.com
 ! https://publicwww.com/websites/%22var+socketAccess+%3D%22/
 ! websocket.eghtesadonline.com, websocket.ilna.ir, websocket.khanefootball.com, websocket.55online.news, websocket.sobhtazeh.news, websocket.varandaz.com
 ! applicationha.com, androidgozar.com, downloadkral.com, gold-team.org, iranecar.com, icoff.ee, koolakmag.ir,
@@ -387,6 +387,10 @@ blogsazan.com##.main_content[style="border-radius:10px;"] > div[style="padding: 
 !-------------------------^ Non-Persian Ads/Trackers/Annoyances Filters used in Persian websites ^-----------------------!
 !-------------------------v Site-Specific Filters v-----------------------!
 ! >> A <<
+! https://github.com/MasterKia/PersianBlocker/issues/152
+anzalweb.ir##.ads-side
+anzalweb.ir##aside > div > span > a.ani[target="_blank"][title]:upward(div)
+[$path=/^((?!\/category\/%D8%B1%D9%BE%D8%B1%D8%AA%D8%A7%DA%98).)*$/]anzalweb.ir## article > footer > span.post-meta-cat:has-text(رپرتاژ):upward(article)
 ! https://github.com/MasterKia/PersianBlocker/issues/144
 alldriver.ir###kaprila_linktable
 alldriver.ir###popular
@@ -1784,11 +1788,9 @@ power-music.ir##.sidbar > p > strong:has-text(پیوندها):upward(.sidbar)
 parsroid.net##.my-single-t-p
 ||parsaspace.com/Content/new/js/analytics.js^
 ! https://github.com/MasterKia/PersianBlocker/issues/45
-pezeshket.com###stream-item-widget-3
-pezeshket.com##.dialog-lightbox-message
-pezeshket.com#@#.widget-ad-image
-pezeshket.com#@#.stream-item-widget
-@@||pezeshket.com/wp-content/uploads/2022/07/%D9%BE%D8%B1%D8%B3%D8%B4-%D9%88-%D9%BE%D8%A7%D8%B3%D8%AE.gif
+pezeshket.com##div[class] > a > img#adinmag1:upward(div[class])
+pezeshket.com##.code-block-7 > p:has-text(مطالب پیشنهادی):upward(.code-block-7)
+pezeshket.com##.dialog-lightbox-widget-content a[href*="i.y3t.ir"]:upward(.dialog-lightbox-widget-content)
 ||pichak.net/nohe/amar.js
 ||pichak.net/ads/
 pichak.net#$?#noscript { remove: true; }
@@ -1993,12 +1995,11 @@ sariasan.com##.widget > h3:has-text(مطالب مفید):upward(.widget)
 sobhtazeh.news##.zxc
 sobhtazeh.news##.vebgardi
 ! https://github.com/MasterKia/PersianBlocker/issues/126
-||shabakeh-mag.com/sites/default/files/images/body/*.gif
-||shabakeh-mag.com/sites/default/files/styles/shabake2_popular/public/images/ad^
-||shabakeh-mag.com/modules/statistics^
+||shabakeh-mag.com/sites/default/files/*.gif^$image,~third-party
+||shabakeh-mag.com/sites/default/files/styles/shabake2_popular/public/images/ad^$image,~third-party
+||shabakeh-mag.com/modules/statistics/statistics.php^$xmlhttprequest,~third-party
 shabakeh-mag.com##.popup-box-wrapper
-shabakeh-mag.com##.ads:not(:has(a[href*="shabakeh-mag.com"]))
-shabakeh-mag.com###block-views-ad-link-block-1
+shabakeh-mag.com##.ads
 shabakeh-mag.com###block-views-shabake2-clone-of-ad-link-block
 shabakeh-mag.com###block-views-ad-link-block-2
 shabakeh-mag.com##.field-name-ads-under-summery
