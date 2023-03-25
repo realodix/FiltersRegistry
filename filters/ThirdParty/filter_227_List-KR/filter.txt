@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0325.1
+! OriginalVersion: 2023.0325.3
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -2758,8 +2758,11 @@ jootc.com,ehpub.co.kr#%#//scriptlet('abort-current-inline-script', 'ai_run_scrip
 ||fundingchoicesmessages.google.com^$domain=rdsong.com|mongri.net|meeco.kr|poketory.com|youthassembly.kr|kr.jugomobile.com|1412.rest|pyrasis.com|oceansabyss.com|yongtj.com|dora-guide.com|tailstar.net|creativestudio.kr|gamejay.net|mksports.co.kr|sisamagazine.co.kr|dreamrail.co.kr|tistory.com|gukjenews.com|issuelink.co.kr|webtool.cusis.net|koreaminecraft.net
 ! Kakao TV
 !#if (adguard_app_ios || adguard_ext_safari)
-@@||videoads.kakao.com/adserver/api/v*/vmap|$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
-@@/embed/player/image/ads.png$domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
+@@||videoads.kakao.com/adserver/api/v*/vmap|$domain=kakao.com|daum.net|namu.wiki
+@@/embed/player/image/ads.png$domain=kakao.com|daum.net|namu.wiki
+daum.net,kakao.com,namu.wiki#@#ins.kakao_ad_area
+daum.net,kakao.com,namu.wiki#@##adBlockPixelTag
+daum.net,kakao.com,namu.wiki#@#.banner_ad
 !#endif
 /^https:\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]+\/vmap/$redirect=nooptext,domain=tv.kakao.com|play-tv.kakao.com|kakaotv.daum.net
 tv.kakao.com,play-tv.kakao.com,kakaotv.daum.net#%#//scriptlet('prevent-xhr', '/^https.\/\/videoads\.kakao\.com\/adserver\/api\/v[0-9]{1,2}\/vmap$/')
@@ -2796,6 +2799,11 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
 !
+!#if (adguard_app_ios)
+@@||errornight.com^$generichide
+errornight.com#$#ins.adsbygoogle { display: none !important; }
+!#endif
+errornight.com#%#//scriptlet('abort-on-stack-trace', 'alert', 'chk_adBlock')
 !#if (adguard_app_ios)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=spotvnow.co.kr
 !#endif
@@ -2910,6 +2918,7 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+@@||errornight.com^$generichide
 @@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.cafe.naver.com
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=spotvnow.co.kr
 1412.rest#@#.ads
