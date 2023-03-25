@@ -1,8 +1,8 @@
 !
-! OriginalVersion: 23.3.232
+! OriginalVersion: 23.3.240
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 24 Mar 2023 17:10 UTC
+! Last modified: 25 Mar 2023 08:32 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
@@ -3274,6 +3274,7 @@ hongkoong.com##[href^="https://tokopedia.link/"]:has(> img)
 pertamax7.com##a[target="_blank"] div:matches-css(position: fixed)
 iwanbanaran.com,kotakgame.com,tmcblog.com#$#body { background-image: none!important; }
 pertamax7.com##center:not(:has(a[href*="pertamax7.com"])) > a
+ngopibareng.id##div:has(> p:has-text(/adv/i))
 kotakgame.com#$#html { background-image: none!important; }
 kompas.com#%#//scriptlet('ubo-rc.js', 'bapps-show', 'body.bapps-show')
 priceza.co.id###mobilePopupBtm
@@ -3494,13 +3495,14 @@ beritabalap.com##article .code-block img
 sabiru.com##aside .oxy-pricing-box
 suarakutim.com##figure img
 grid.id,gridoto.com,kompas.com,kompas.tv,kontan.co.id,motorplus-online.com,parapuan.co,suara.com,tribunnewswiki.com##div:matches-css-before(content: /Adv/)
-20jam.com,24jam.co,abchannel.id,antimetri.com,ayosolo.id,ayovibes.com,bantenraya.com,batastimor.com,bicaraberita.com,bonsernews.com,ceklisbiru.com,ciremainews.com,dkylb.com,duniaanakindonesia.com,edisi.co.id,faktaidn.com,floreseditorial.com,gerbangnalar.com,gorajuara.com,hallo.id,harianterbit.com,hidupdigital.id,hops.id,indonesiafolks.com,infosumsel.id,jendelapsikologia.com,kilat.com,klikindonesia.co.id,kontenjateng.com,mitranews.net,mudabahagia.com,muslimkita.com,nongkrong.co,palima.id,pandeglangnews.co.id,pikiran-rakyat.com,pojokmalioboro.com,pojoksemarang.com,protokol24.com,ragam-indonesia.com,rakyatpriangan.com,referensiberita.com,resepkoki.id,rubicnews.com,saluranmedia.com,satuarah.co,sawitku.id,sepakbolasemarang.com,sewaktu.com,sibermanado.com,sijogja.com,silanews.com,sportanews.com,suaraburuh.com,suaramerdeka.com,suluhdesa.com,unews.id,wartechno.com,zonabandung.com###cont-megabillboard
+20jam.com,24jam.co,abchannel.id,antimetri.com,ayosolo.id,ayovibes.com,bantenraya.com,banyumasterkini.com,batastimor.com,bicaraberita.com,bonsernews.com,ceklisbiru.com,ciremainews.com,dkylb.com,duniaanakindonesia.com,edisi.co.id,faktaidn.com,floreseditorial.com,gerbangnalar.com,gorajuara.com,hallo.id,harianterbit.com,hidupdigital.id,hops.id,indonesiafolks.com,infosumsel.id,jendelapsikologia.com,kilat.com,klikindonesia.co.id,kontenjateng.com,makenyus.com,mitranews.net,mudabahagia.com,muslimkita.com,nongkrong.co,palima.id,pandeglangnews.co.id,pikiran-rakyat.com,pojokmalioboro.com,pojoksemarang.com,protokol24.com,ragam-indonesia.com,rakyatpriangan.com,referensiberita.com,resepkoki.id,rubicnews.com,saluranmedia.com,satuarah.co,sawitku.id,sepakbolasemarang.com,sewaktu.com,sibermanado.com,sijogja.com,silanews.com,sportanews.com,suaraburuh.com,suaramerdeka.com,suluhdesa.com,unews.id,wartechno.com,zonabandung.com###cont-megabillboard
 mediaindonesia.com###content [class^="parallax_"]:has([id*="div-gpt-ad-"])
 ayobogor.com,ayoindonesia.com,ayojakarta.com,ayomalang.com,ayosolo.id,ayosurabaya.com,bekasikinian.com,beritanusra.com,cnbcindonesia.com,detik.com,fajarbanten.com,geliatekonomi.com,haibunda.com,hops.id,infoterkini24.com,inilahnews.com,jatimaktual.com,kabarrakyat.id,khatulistiwaupdate.com,klikaktual.com,klikpendidikan.id,lensapurwakarta.com,lenteratimes.com,liputanbekasi.com,mediusnews.com,mitranews.net,naratimes.com,okenusra.com,penabicara.com,portalrepublik.com,portalyogya.com,ragamindonesia.com,realitapublik.com,resepkoki.id,setiafakta.com,sukabumiupdate.com,victorynews.id###megabillboard
 mediaindonesia.com##.article #parallax_wrap
 kontan.co.id##.center:has(.heightads50)
 dream.co.id,kapanlagi.com##.dfp-bframe-cont:has([id*="div-gpt-ad-"])
 mixberita.com##.footer1:has(a[target="_blank"] > img)
+sitnas.id##.hulahopsmobile
 kompas.com##.kcm-track:matches-css(position: relative):has(.kcm-track-sticky:has([id*="div-gpt-ad-"]))
 momsmoney.id##.liftdownclass
 cnbcindonesia.com##.megabillboard
@@ -3767,6 +3769,7 @@ majalahpengusaha.com#$?##floatrightsidebar .widget-content:has(> iframe) { remov
 kaskus.co.id#$?##hotthread_visualita .jsThreadCardTvView:has(.jsHtTvIframe) { remove: true; }
 kompas.tv#$?##jxOutstreamContainer + .rVideo-wrapper { remove: true; }
 gamereactor.asia#$?##livestreamBox { remove: true; }
+ngopibareng.id#$?##ngopitv-inline { remove: true; }
 kompas.com#$?#.content_article .rVideo-middle { remove: true; }
 kompas.com#$?#.content_article .video-box-wrap { remove: true; }
 suara.com#$?#.detail-berita #player-video { remove: true; }
@@ -3779,6 +3782,7 @@ kompas.com#$?#.js-read-article .rVideo-player { remove: true; }
 kompas.com#$?#.js-read-article .video-box-wrap { remove: true; }
 bola.com,bola.net,dream.co.id,kapanlagi.com,liputan6.com,merdeka.com#$?#.nativescrollingKLY:has(.nativescrollingKLY-sticky-inner-video) { remove: true; }
 kapanlagi.com#$?#.nativevideosiframe-loader { remove: true; }
+kapanlagi.com#$?#.pages .box--video.box { remove: true; }
 carisinyal.com#$?#.plyr { remove: true; }
 fimela.com#$?#.read-page--boost-video { remove: true; }
 briliofood.net#$?#.section:has(.video__headline) { remove: true; }
@@ -4134,7 +4138,7 @@ checast.com,sattorrent.com#%#//scriptlet('ubo-aopr.js', 'SGPB_POPUP_PARAMS')
 159.65.11.63#%#//scriptlet('ubo-aopr.js', 'showPopUpBanner')
 0.0.realodix,juraganmovie.club#%#//scriptlet('ubo-aopr.js', 'ujiPopups')
 0.0.realodix#%#//scriptlet('ubo-aopr.js', 'window.pum_popups')
-0.0.realodix,139.99.61.225,144.126.148.112,144.91.116.224,144.91.76.123,149.102.143.155,149.102.143.158,154.12.235.118,159.253.120.195,159.253.120.58,161.97.152.47,161.97.167.120,161.97.86.165,167.86.125.4,173.212.216.207,176.119.30.88,176.123.2.122,176.57.150.203,178.18.254.0,185.192.96.125,185.234.69.69,194.163.139.52,194.242.56.199,209.126.1.119,212.224.88.51,217.76.48.32,217.76.57.125,217.76.57.139,31.172.83.181,31.172.83.245,38.242.195.41,38.242.202.148,38.242.202.181,38.242.237.91,38.242.255.224,75.119.147.15,75.119.159.194,75.119.159.38,89.117.53.104,89.117.58.137,89.117.58.216,89.117.58.222,89.117.58.249,89.117.62.102,91.208.206.98,91.229.239.100,91.229.239.150,91.229.239.246,91.229.239.55,amoviemedia.com,bioskopvirtual.com,clampschoolholic.web.id,drakorindos.bond,huntersekai.download,negumo.com,nimegami.id,putingfilm.com,samehada.care,sobatgo2.xyz,subindo.sbs#%#//scriptlet('ubo-window.open-defuser.js')
+0.0.realodix,139.99.61.225,144.126.148.112,144.91.116.224,144.91.76.123,149.102.143.155,149.102.143.158,154.12.235.118,159.253.120.195,159.253.120.58,161.97.152.47,161.97.167.120,161.97.86.165,167.86.125.4,173.212.216.207,176.119.30.88,176.123.2.122,176.57.150.203,178.18.254.0,185.192.96.125,185.234.69.69,194.163.139.52,194.242.56.199,209.126.1.119,212.224.88.51,217.76.48.32,217.76.57.125,217.76.57.139,31.172.83.181,31.172.83.245,38.242.149.36,38.242.195.41,38.242.202.148,38.242.202.181,38.242.237.91,38.242.255.224,75.119.147.15,75.119.159.194,75.119.159.38,89.117.53.104,89.117.58.137,89.117.58.216,89.117.58.222,89.117.58.249,89.117.62.102,91.208.206.98,91.229.239.100,91.229.239.150,91.229.239.246,91.229.239.55,amoviemedia.com,bioskopvirtual.com,clampschoolholic.web.id,drakorindos.bond,huntersekai.download,negumo.com,nimegami.id,putingfilm.com,samehada.care,sobatgo2.xyz,subindo.sbs#%#//scriptlet('ubo-window.open-defuser.js')
 putingfilm.com#%#//scriptlet('ubo-acis.js', 'parseInt', 'break;case $.')
 /wp-content/plugins/angwp/*$domain=dramabarat.com|indoxximovie.org
 jfweb10.xyz,jfweb11.xyz,jfweb12.xyz,jfweb13.xyz,jfweb14.xyz,jfweb15.xyz,jfweb16.xyz,jfweb17.xyz,jfweb18.xyz,jfweb19.xyz,jfweb2.xyz,jfweb20.xyz,jfweb4.xyz,jfweb5.xyz,jfweb6.xyz,jfweb8.xyz,jfweb9.xyz,juraganfilm.shop#%#//scriptlet('ubo-aopr.js', '$.magnificPopup.open')
@@ -5167,8 +5171,9 @@ webbrowsertools.com##.card:has-text(/advertisement/i)
 malaysiakini.com##.justify-center:has-text(/ads/i)
 mekanika.com.my##[data-advadsredirect=""]
 jobstreet.com.my##[data-automation$="-ads"]
+boom-malaysia.com##a.notrack > img
 iluminasi.com#$#* { user-select: text !important; -webkit-user-select: text !important; -webkit-touch-callout: default !important; }
-mediahiburan.my#%#//scriptlet('ubo-acis.js', 'disableSelection', 'reEnable')
+azhan.co,mediahiburan.my#%#//scriptlet('ubo-acis.js', 'disableSelection', 'reEnable')
 mediahiburan.my#%#//scriptlet('ubo-acis.js', 'document.oncontextmenu')
 ohmymedia.cc#$##mvp-site-main { margin-top: 0!important; }
 autokronika.pl,fandom.com#@#img[width="800"][height="200"]
