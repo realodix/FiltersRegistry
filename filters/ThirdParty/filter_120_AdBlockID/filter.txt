@@ -1,12 +1,12 @@
 !
-! OriginalVersion: 23.3.288
+! OriginalVersion: 23.3.303
 ! Title: AdBlockID
 ! Description: Filter list that specifically removes adverts on Indonesian language websites.
-! Last modified: 27 Mar 2023 08:57 UTC
+! Last modified: 27 Mar 2023 09:20 UTC
 ! Expires: 4 days (update frequency)
 ! Homepage: https://github.com/realodix/AdBlockID
 .id^*/ads_$domain=~cartalog.id
-/iklan/*$image,domain=~1rajaiklan.com|~anjingk9.com|~bagusiklan.com|~duniaiklangratis.com|~iklan123.net|~iklanbogor.com|~iklangratis88.com|~iklansmart.com|~jualsewakios.com|~jualsewaruko.com|~pettoto.com|~pusatiklan.co.id|~sebariklanmassalpremium.com|~sewa-apartemen.net
+/iklan/*$image,domain=~0.0.realodix|~1rajaiklan.com|~anjingk9.com|~bagusiklan.com|~iklangratis88.com|~jualsewakios.com|~jualsewaruko.com|~pettoto.com|~pusatiklan.co.id|~sebariklanmassalpremium.com|~sewa-apartemen.net
 /ngiklan/*$image,domain=~ngiklan.gratis
 /smartfren/ads.
 -ad123-
@@ -2211,6 +2211,7 @@ _GIF1200x120-
 ##img[width="720"][height="80"]
 ##img[width="720"][height="90"]
 ##img[width="728"][height="100"]
+##img[width="728"][height="120"]
 ##img[width="728"][height="60"]
 ##img[width="728"][height="80"]
 ##img[width="728"][height="90"]
@@ -2333,6 +2334,7 @@ _GIF1200x120-
 /get/*?zoneid=$script
 /lv/esnk/*$third-party,script
 /pfe/current/*$third-party,script
+||0.0.realodix^$third-party
 ||accesstrade.co.id^$third-party
 ||ad-loupe.com^$third-party
 ||addesigner.com^$third-party
@@ -2350,7 +2352,6 @@ _GIF1200x120-
 ||geozo.com^$third-party
 ||halal.ad^$third-party
 ||hitadsmedia.com^$third-party
-||iklanbogor.com^$third-party
 ||iklanhemat.com^$third-party
 ||iklanhoki.com^$third-party
 ||indoadsnet.com^$third-party
@@ -2499,6 +2500,7 @@ _promohariini.$image,domain=ruparupa.com
 ||ibb.co^$image,domain=bunaken.co.id
 ||image-korankaltim.sgp1.digitaloceanspaces.com^*/ads/$image
 ||0.0.realodix^*/bannermaker_$image
+||0.0.realodix^*/iklan-$image
 ||5news.co.id^*/banner$image
 ||abenetwork.com^*/banner-
 ||acehekspres.com/files/sewaan/$image
@@ -2618,7 +2620,6 @@ _promohariini.$image,domain=ruparupa.com
 ||infobrand.id^*/banner-$image
 ||infojambi.com^*/banner-$image
 ||infoka.id^*/iklan-$image
-||infolampungnews.com^*/iklan-$image
 ||inibengkulu.com^*/banner-$image
 ||inilahkoran.com^*/banners/
 ||inspira.tv/assets/banner/
@@ -2634,6 +2635,7 @@ _promohariini.$image,domain=ruparupa.com
 ||jogjastreamers.com^*/banner/
 ||juragancipir.com/wp-content/uploads/*.gif$image
 ||jurnalborneo.co.id^*/iklan-$image
+||jurnalmetropol.com^*-adv-$image
 ||kabar.news/uploads/blocks/$image
 ||kabargames.id/banner/
 ||kabarmedan.com^*/iklan-$image
@@ -3677,7 +3679,7 @@ iklandb.com,iklanin.info#@#.banner-125
 @@/advertising.$domain=advertising.katadata.co.id|advertising.kontan.co.id
 @@/advertising/*$domain=client.okezone.com
 @@/bannerad.$image,domain=ad.co.id
-@@/bnrs/*$image,domain=bagusiklan.com|duniaiklangratis.com|iklan123.net|iklanbogor.com|iklansmart.com
+@@/bnrs/*$image,domain=0.0.realodix|bagusiklan.com
 @@/bplogo.$image,domain=beritapagi.co.id
 @@/files/Ads/*$image,domain=iklanrumah.com
 @@/images/banner/*$image,domain=balicars.info
@@ -3801,6 +3803,7 @@ riauonline.co.id#$?#article .embed-responsive { remove: true; }
 bola.com#$?#article .js-full-iframe-vidio { remove: true; }
 detik.com#$?#article .sisip_video_ds { remove: true; }
 cnbcindonesia.com#$?#article .videocnbc { remove: true; }
+jurnas.com#$?#article .youtube-player[allow="autoplay"]:upward(1) { remove: true; }
 liputan6.com#$?#article iframe.vidio-embed { remove: true; }
 kompas.tv#$?#script + .rVideo-wrapper { remove: true; }
 intipseleb.com#$?##dmRelatedPlayer { remove: true; }
@@ -3844,7 +3847,7 @@ merdeka.com##header .assambleApp
 grid.id#$#*::selection { color:white!important;background:#0078d7!important; }
 liputan6.com#%#//scriptlet('ubo-aeld.js', 'scroll')
 mizanstore.com#@#.push-wrapper:not(body):not(html)
-berkeluarga.id,gdm.id,indonesiacoding.com#@#.share-simple
+0.0.realodix,berkeluarga.id,gdm.id#@#.share-simple
 ifra-indonesia.com#@##social-float
 m.bola.com,m.fimela.com,m.liputan6.com#@##back-to-top:not(html):not(body)
 @@/social-sharing-$script,domain=axe.com
@@ -4143,7 +4146,7 @@ checast.com,sattorrent.com#%#//scriptlet('ubo-aopr.js', 'SGPB_POPUP_PARAMS')
 0.0.realodix#%#//scriptlet('ubo-aopr.js', 'window.pum_popups')
 0.0.realodix,139.99.61.225,144.126.148.112,144.91.116.224,144.91.76.123,149.102.143.155,149.102.143.158,154.12.235.118,159.253.120.195,159.253.120.58,161.97.152.47,161.97.167.120,161.97.167.3,161.97.86.165,167.86.125.4,173.212.216.207,176.119.30.88,176.123.2.122,176.57.150.203,178.18.254.0,185.192.96.125,185.234.69.69,194.110.247.179,194.163.139.52,194.242.56.199,209.126.1.119,212.224.88.51,217.76.48.32,217.76.57.125,217.76.57.139,31.172.83.181,31.172.83.245,38.242.149.36,38.242.195.41,38.242.202.148,38.242.202.181,38.242.237.91,38.242.255.224,75.119.147.15,75.119.159.194,75.119.159.38,89.117.53.104,89.117.58.137,89.117.58.216,89.117.58.222,89.117.58.249,89.117.62.102,91.208.162.54,91.208.206.98,91.229.239.100,91.229.239.150,91.229.239.246,91.229.239.55,amoviemedia.com,bioskopvirtual.com,clampschoolholic.web.id,drakorindos.bond,huntersekai.download,negumo.com,nimegami.id,putingfilm.com,samehada.care,sobatgo2.xyz,subindo.sbs#%#//scriptlet('ubo-window.open-defuser.js')
 putingfilm.com#%#//scriptlet('ubo-acis.js', 'parseInt', 'break;case $.')
-/wp-content/plugins/angwp/*$domain=dramabarat.com|indoxximovie.org
+/wp-content/plugins/angwp/*$domain=dramabarat.com
 jfweb10.xyz,jfweb11.xyz,jfweb12.xyz,jfweb13.xyz,jfweb14.xyz,jfweb15.xyz,jfweb16.xyz,jfweb17.xyz,jfweb18.xyz,jfweb19.xyz,jfweb2.xyz,jfweb20.xyz,jfweb4.xyz,jfweb5.xyz,jfweb6.xyz,jfweb8.xyz,jfweb9.xyz,juraganfilm.shop#%#//scriptlet('ubo-aopr.js', '$.magnificPopup.open')
 144.91.116.224,173.212.224.160###fadeinbox
 jagoanime.com,meownime.my.id###hbfanback
@@ -4304,8 +4307,8 @@ semruwet.com##img[width="320"][height="90"]
 ||semawur.com/o.png$image
 safelkmeong.blogspot.com,usesafelink.blogspot.com#%#//scriptlet('ubo-ra.js', 'oncontextmenu|ondragstart|onkeydown|onmousedown|onselectstart', 'body')
 @@/abdiusu/project-safelink-viomagz/*/safelink-ViomagzV3.2-2tombol$third-party,script
-.gif$image,domain=138.201.95.38|139.99.119.236|139.99.33.205|139.99.33.221|139.99.33.222|149.248.60.75|185.225.232.26|198.199.74.44|213.202.222.16|216.155.135.144|45.14.226.94|45.32.113.5|45.89.67.165|51.81.115.212|54.39.165.146|94.237.74.112|95.214.54.104|agen-dewasa.blogspot.com|alatestnews.com|artikeljandamuda.blogspot.com|bacol.cfd|beejav.cam|bokeponlinestreaming.info|bokeptube.xyz|boshedewasa.blogspot.com|cctvbokep.online|ceritamalam.club|ceritapengenhot.blogspot.com|ceritasexindonesia.com|dutasex.site|dutasex.top|filmbokep21.one|itubokep.tech|khalidcompany.com|layarkc21.club|memekviral.live|nekopoi.care|nontonlayarxxx.blogspot.com|omekin.tv|putri77.org|putrimalam.com|ruangbokep.gay|ruangbokep.live|sijahat.ink|streamingbokep80.blogspot.com|terbaruxex.blogspot.com|videowikwikk.blogspot.com
-.webp$image,domain=avtub.shop|avtub.yt
+.gif$image,domain=0.0.realodix|138.201.95.38|139.99.119.236|139.99.33.205|139.99.33.221|139.99.33.222|149.248.60.75|185.225.232.26|198.199.74.44|213.202.222.16|216.155.135.144|45.14.226.94|45.32.113.5|45.89.67.165|51.81.115.212|54.39.165.146|94.237.74.112|95.214.54.104|agen-dewasa.blogspot.com|alatestnews.com|artikeljandamuda.blogspot.com|bacol.cfd|beejav.cam|bokeponlinestreaming.info|boshedewasa.blogspot.com|cctvbokep.online|ceritamalam.club|ceritapengenhot.blogspot.com|ceritasexindonesia.com|dutasex.site|dutasex.top|filmbokep21.one|itubokep.tech|khalidcompany.com|layarkc21.club|memekviral.live|nekopoi.care|nontonlayarxxx.blogspot.com|omekin.tv|putri77.org|putrimalam.com|ruangbokep.gay|ruangbokep.live|sijahat.ink|streamingbokep80.blogspot.com|terbaruxex.blogspot.com|videowikwikk.blogspot.com
+.webp$image,domain=avtub.digital|avtub.life
 /banner-$image,domain=94.237.74.112|bokep8.icu
 ||18.142.93.216/wp-content/uploads/$redirect=noopmp4-1s,media
 ||51.79.154.59/wp-content/themes/*.gif$image
@@ -4322,7 +4325,7 @@ herodex.org###btm_banner
 layarkc21.club,site2853.live###close-teaser
 185.150.117.129,69.197.132.190###divbwh
 185.150.117.129,69.197.132.190###divkanan
-45.63.23.4,bokep8.icu,simontok.tv,xnxx54.online###fixedban
+45.63.23.4,bokep8.icu,simontok.work,xnxx54.online###fixedban
 beritamaju.com,forumitu.com,semprot.com###fixedbox
 minioppai.org###floatcenter
 gocrot.com###gocrot_i_b_3
@@ -4336,13 +4339,13 @@ ceritaseru.sextgem.com,potobugill.sextgem.com##._xt_ad_close_internal
 139.99.33.199,139.99.33.205,enak69.com,putritetangga.com##.banner-float-bottom
 45.76.33.4##.bannersinglefot
 45.76.33.4##.box-banner
-128.199.158.141,128.199.187.59,bokepkita.co,bokepsex.top,inibokep.gay,javxxi.com,kamarbokep.cam,kamarbokep.xyz,kebokepanku.cam,kebokepanku.xyz,ruangbokep.gay,ruangbokep.live##.btm_ban
+128.199.158.141,128.199.187.59,bokepkita.co,bokepsex.top,inibokep.gay,javxxi.com,kamarbokep.cam,kamarbokep.xyz,kebokepanku.xyz,ruangbokep.gay,ruangbokep.live##.btm_ban
 66.29.129.121,66.29.129.161,xbokep.ink##.close-text
 178.128.114.78##.close_insGP
 nesaporn.com##.container p:has-text(Advertising)
 dunia121.blogspot.com##.gambar-space
 gocrot.com##.gocrot_i_b_2
-bokeptube.xyz##.happy-header
+0.0.realodix##.happy-header
 149.248.60.75,45.76.33.4##.headbanner
 159.89.221.2,167.99.31.83,188.166.197.213##.inside-player-ad
 sexcelebrity.net##.ipprtcnt
@@ -4353,7 +4356,7 @@ stampin-de-va.blogspot.com##.seoquake-nofollow
 nekopoi.care##.smartbanner
 167.99.31.83##.under-player-ad
 ceritaseru.sextgem.com,potobugill.sextgem.com##[href*="_ad_"]
-128.199.174.22,139.99.119.236,139.99.33.195,139.99.33.199,139.99.33.205,139.99.33.207,139.99.33.210,139.99.33.213,139.99.33.214,139.99.33.221,139.99.33.222,139.99.51.105,144.126.154.75,149.248.60.75,155.138.155.177,159.89.198.98,159.89.214.26,159.89.221.2,162.213.249.120,164.68.127.15,167.99.31.83,178.128.114.78,178.128.220.28,178.128.62.5,206.189.88.35,216.155.135.144,45.14.226.94,45.63.23.4,45.76.33.4,45.89.67.165,51.81.115.212,66.29.129.121,66.29.129.161,69.197.132.190,75.119.147.12,95.214.54.104,adultdeepfakes.com,alatestnews.com,avtub.shop,avtub.yt,bacol.cfd,bandarsub.com,bokep8.icu,bokepbest.net,bokepcuy.guru,bokepindo.best,bokepla.com,bokeponlinestreaming.info,bokepsd.lol,bokepsin.guru,bokepsin.net,bokepsub.com,boshedewasa.blogspot.com,cctvbokep.online,ceritabokepindonesia.com,ceritamalam.club,ceritapengenhot.blogspot.com,ceritaseru.sextgem.com,ceritasexindonesia.com,dalamhati.com,deepfakeporn.net,deepfakesweb.com,dunia121.blogspot.com,dutasex.site,dutasex.top,enak69.com,filmbokep21.one,gocrot.com,herodex.org,hijablink.sbs,indo-bioskop.blogspot.com,indo18.xyz,indojav.org,inibokep.gay,inibokep.ink,itubokep.tech,javstory.me,javsubindo.com,javxxi.com,jilboob.top,kontendewasa.xyz,kontol.in,kumpulan-film-bokep.blogspot.com,layarkc21.club,linkbokep.wiki,memekviral.live,minioppai.org,moviemantap21.blogspot.com,myhdjav.me,nekopoi.care,nesaporn.com,omekin.tv,onbatch.my.id,paptt.com,photomemek.com,playbokep.wiki,potobugill.sextgem.com,putri77.org,putrimalam.com,putritetangga.com,rajacoli.org,sangetube.com,sexcelebrity.net,simontok.tv,site2853.live,softcore69.club,stampin-de-va.blogspot.com,subindojav.club,subindojav.com,terbaruxex.blogspot.com,videoviral.cam,vidio.best,xbokep.ink,xn--bokeponline-zl9z.xyz,xnxx54.online,yabaisub.com##a[target*="blank"] > img
+128.199.174.22,139.99.119.236,139.99.33.195,139.99.33.199,139.99.33.205,139.99.33.207,139.99.33.210,139.99.33.213,139.99.33.214,139.99.33.221,139.99.33.222,139.99.51.105,144.126.154.75,149.248.60.75,155.138.155.177,159.89.198.98,159.89.214.26,159.89.221.2,162.213.249.120,164.68.127.15,167.99.31.83,178.128.114.78,178.128.220.28,178.128.62.5,206.189.88.35,216.155.135.144,45.14.226.94,45.63.23.4,45.76.33.4,45.89.67.165,51.81.115.212,66.29.129.121,66.29.129.161,69.197.132.190,75.119.147.12,95.214.54.104,adultdeepfakes.com,alatestnews.com,avtub.digital,avtub.life,bacol.cfd,bandarsub.com,bokep8.icu,bokepbest.net,bokepcuy.guru,bokepindo.best,bokepla.com,bokeponlinestreaming.info,bokepsd.lol,bokepsin.guru,bokepsin.net,bokepsub.com,boshedewasa.blogspot.com,cctvbokep.online,ceritabokepindonesia.com,ceritamalam.club,ceritapengenhot.blogspot.com,ceritaseru.sextgem.com,ceritasexindonesia.com,dalamhati.com,deepfakeporn.net,deepfakesweb.com,dunia121.blogspot.com,dutasex.site,dutasex.top,enak69.com,filmbokep21.one,gocrot.com,herodex.org,hijablink.sbs,indo-bioskop.blogspot.com,indo18.xyz,indojav.org,inibokep.gay,inibokep.ink,itubokep.tech,javstory.me,javsubindo.com,javxxi.com,jilboob.top,kontendewasa.xyz,kontol.in,kumpulan-film-bokep.blogspot.com,layarkc21.club,linkbokep.wiki,memekviral.live,minioppai.org,moviemantap21.blogspot.com,myhdjav.me,nekopoi.care,nesaporn.com,omekin.tv,onbatch.my.id,paptt.com,photomemek.com,playbokep.wiki,potobugill.sextgem.com,putri77.org,putrimalam.com,putritetangga.com,rajacoli.org,sangetube.com,sexcelebrity.net,simontok.work,site2853.live,softcore69.club,stampin-de-va.blogspot.com,subindojav.club,subindojav.com,terbaruxex.blogspot.com,videoviral.cam,vidio.best,xbokep.ink,xn--bokeponline-zl9z.xyz,xnxx54.online,yabaisub.com##a[target*="blank"] > img
 beritamaju.com,forumitu.com,semprot.com##div[class*="banner"]
 nekopoi.care##div[class^="ads"]
 beritamaju.com,forumitu.com,forumnya.com,semprot.com##div[class^="semprotnenenmontok_"]
@@ -4388,9 +4391,9 @@ softcore69.club#%#//scriptlet('ubo-acis.js', 'userout')
 dalamhati.com#%#//scriptlet('ubo-aopr.js', '$', 'SPU_master')
 139.99.33.207,155.138.155.177#%#//scriptlet('ubo-aopr.js', '$.magnificPopup.open')
 0.0.realodix#%#//scriptlet('ubo-aopr.js', 'minutes_popup')
-avtub.shop,avtub.yt,bokepbest.net,bokepsin.guru,bokepsin.net,playbokep.wiki,simontok.ink#%#//scriptlet('ubo-aopr.js', 'ujiPopups')
+avtub.digital,avtub.life,bokepbest.net,bokepsin.guru,bokepsin.net,playbokep.wiki,simontok.bio#%#//scriptlet('ubo-aopr.js', 'ujiPopups')
 memekviral.live#%#//scriptlet('ubo-aopr.js', 'window.pum_popups')
-128.199.141.12,128.199.158.141,128.199.174.22,128.199.175.251,128.199.187.59,139.59.247.35,139.99.33.195,139.99.33.199,139.99.33.205,139.99.33.207,139.99.33.210,139.99.33.213,139.99.33.214,139.99.51.105,144.126.138.140,144.126.154.75,149.248.60.75,154.12.229.9,154.53.44.57,155.138.155.177,157.230.41.236,159.89.198.98,159.89.214.26,159.89.221.2,162.213.249.120,164.68.127.15,167.172.7.30,167.99.31.83,178.128.114.78,178.128.220.28,178.128.25.172,178.128.62.5,185.193.67.184,194.163.129.165,194.163.153.227,206.189.33.151,206.189.88.35,207.244.225.48,207.244.250.35,212.90.120.57,38.242.140.59,45.14.226.94,45.63.23.4,45.76.33.4,51.81.115.212,54.39.165.146,62.171.164.179,62.182.85.163,63.141.243.30,66.29.129.121,66.29.129.161,69.197.132.190,75.119.147.12,adultdeepfakes.com,alatestnews.com,avtub.shop,avtub.yt,bacol.cfd,bandarsub.com,bokep8.icu,bokepbest.net,bokepcuy.guru,bokephdx.com,bokepindo.best,bokepindoviral.com,bokepla.com,bokeponlinestreaming.info,bokepsd.lol,bokepsin.guru,bokepsin.net,bokepsub.com,bokepviral.us,cambaby.fun,cctvbokep.online,ceritabokepindonesia.com,ceritadewasa98.com,ceritaseru.sextgem.com,ceritasex16.com,dalamhati.com,deepfakeporn.net,deepfakesweb.com,dood.homes,dunia121.blogspot.com,dutasex.top,erocafe.net,gocrot.com,herodex.org,hijablink.sbs,indo-bioskop.blogspot.com,indo18.xyz,indoxxibokep.com,inibokep.gay,inibokep.ink,javstory.me,javsubindo.com,javxxi.com,jilboob.top,kamarbokep.xyz,kebokepanku.xyz,kontol.in,kumpulan-film-bokep.blogspot.com,layarkc21.club,memekviral.live,minioppai.org,moviemantap21.blogspot.com,myhdjav.me,nekopoi.care,nesaporn.com,onbatch.my.id,paptt.com,photomemek.com,playbokep.wiki,pornogrim.bio,pornogrim.xyz,potobugill.sextgem.com,putri77.org,rajacoli.org,ruangbokep.gay,ruangbokep.live,sangetube.com,sexcelebrity.net,site2853.live,softcore69.club,stampin-de-va.blogspot.com,subindojav.club,subindojav.com,videoviral.cam,vidio.best,xbokep.ink,xbokepfb.top,xn--bokeponline-zl9z.xyz,xnxx54.online,xvideobokepgratis.fun,yabaisub.com#%#//scriptlet('ubo-window.open-defuser.js')
+128.199.141.12,128.199.158.141,128.199.174.22,128.199.175.251,128.199.187.59,139.59.247.35,139.99.33.195,139.99.33.199,139.99.33.205,139.99.33.207,139.99.33.210,139.99.33.213,139.99.33.214,139.99.51.105,144.126.138.140,144.126.154.75,149.248.60.75,154.12.229.9,154.53.44.57,155.138.155.177,157.230.41.236,159.89.198.98,159.89.214.26,159.89.221.2,162.213.249.120,164.68.127.15,167.172.7.30,167.99.31.83,178.128.114.78,178.128.220.28,178.128.25.172,178.128.62.5,185.193.67.184,194.163.129.165,194.163.153.227,206.189.33.151,206.189.88.35,207.244.225.48,207.244.250.35,212.90.120.57,38.242.140.59,45.14.226.94,45.63.23.4,45.76.33.4,51.81.115.212,54.39.165.146,62.171.164.179,62.182.85.163,63.141.243.30,66.29.129.121,66.29.129.161,69.197.132.190,75.119.147.12,adultdeepfakes.com,alatestnews.com,avtub.digital,avtub.life,bacol.cfd,bandarsub.com,bokep8.icu,bokepbest.net,bokepcuy.guru,bokephdx.com,bokepindo.best,bokepindoviral.com,bokepla.com,bokeponlinestreaming.info,bokepsd.lol,bokepsin.guru,bokepsin.net,bokepsub.com,bokepviral.us,cambaby.fun,cctvbokep.online,ceritabokepindonesia.com,ceritadewasa98.com,ceritaseru.sextgem.com,ceritasex16.com,dalamhati.com,deepfakeporn.net,deepfakesweb.com,dood.homes,dunia121.blogspot.com,dutasex.top,erocafe.net,gocrot.com,herodex.org,hijablink.sbs,indo-bioskop.blogspot.com,indo18.xyz,indoxxibokep.com,inibokep.gay,inibokep.ink,javstory.me,javsubindo.com,javxxi.com,jilboob.top,kamarbokep.xyz,kebokepanku.xyz,kontol.in,kumpulan-film-bokep.blogspot.com,layarkc21.club,memekviral.live,minioppai.org,moviemantap21.blogspot.com,myhdjav.me,nekopoi.care,nesaporn.com,onbatch.my.id,paptt.com,photomemek.com,playbokep.wiki,pornogrim.bio,pornogrim.xyz,potobugill.sextgem.com,putri77.org,rajacoli.org,ruangbokep.gay,ruangbokep.live,sangetube.com,sexcelebrity.net,site2853.live,softcore69.club,stampin-de-va.blogspot.com,subindojav.club,subindojav.com,videoviral.cam,vidio.best,xbokep.ink,xbokepfb.top,xn--bokeponline-zl9z.xyz,xnxx54.online,xvideobokepgratis.fun,yabaisub.com#%#//scriptlet('ubo-window.open-defuser.js')
 embedmanager.xyz#%#//scriptlet('ubo-window.open-defuser.js')
 kumpulan-film-bokep.blogspot.com###trickstoo-box
 207.244.225.48,207.244.250.35,75.119.147.12,herodex.org#%#//scriptlet('ubo-aopr.js', 'popup_custom_data')
