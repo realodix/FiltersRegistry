@@ -2231,6 +2231,10 @@ freundin.de,utopia.de,mein-schoener-garten.de,eveningnews24.co.uk,rollingstone.d
 !
 ! NOTE: Regular rules
 !
+deepl.com##div[dl-test="cookie-banner-strict"]
+centrumriviera.pl##.cookie-law-bar
+coolblue.nl#?#body > div.modal-box:has(> div.modal-box__container div.cookie-notification__body)
+digita.ai##.alert-popup
 stacja7.pl###st7-cookie-consent
 refurbed.at,refurbed.de,refurbed.dk,refurbed.fr,refurbed.ie,refurbed.it,refurbed.nl,refurbed.pl,refurbed.se#$#body { overflow: auto !important; }
 refurbed.at,refurbed.de,refurbed.dk,refurbed.fr,refurbed.ie,refurbed.it,refurbed.nl,refurbed.pl,refurbed.se#$#section[x-data^="CookieBanner"] { display: none !important; }
@@ -3303,9 +3307,9 @@ satis.amazon.com.tr###cookie-consent-window
 motonet.fi###cookienotify
 toulousemetro3.fr##.janusbanner
 dedeman.ro##.cookie-bar-wrap
-electrobike.fi#$#body._has-modal { overflow: auto !important; }
-electrobike.fi#$#.amgdprcookie-modal-container { display: none !important; }
-electrobike.fi#$#.modals-overlay { display: none !important; }
+freeworker.*,electrobike.fi#$#body._has-modal { overflow: auto !important; }
+freeworker.*,electrobike.fi#$#.amgdprcookie-modal-container { display: none !important; }
+freeworker.*,electrobike.fi#$#.modals-overlay { display: none !important; }
 ticketstour.ru##.using-cookies
 plusliga.pl,tauronliga.pl,tauron1liga.pl,oldboysvolleyballcup.pl,pls.pl##.cookie-manager-dialog
 pkspolonus.pl###cookies-management
@@ -19777,6 +19781,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+vanceai.com##.float-register-btn
 club.autodoc.de###ajax-popup-container
 club.autodoc.de###banner-auth
 merimeri.com#?#.needsclick:has(div[data-testid="POPUP"])
@@ -26739,6 +26744,10 @@ aol.com#$#.banner-active { margin-top: 0 !important; }
 !
 ! SECTION: Push notifications - Allowlist
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/146745
+||pushpushgo.com/js/*.js$script,redirect=noopjs,domain=centrumriviera.pl
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||pushpushgo.com/js/*.js$domain=centrumriviera.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141088
 @@||cdnt.netcoresmartech.com^$domain=cgv.vn
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140801
@@ -32086,6 +32095,7 @@ turkishairlines.com,atmos-tokyo.com,radarbox.com,ciceksepeti.com,rabota.by,temp-
 ! notifications - part of the functionality
 ! discord.com##div[class^="container"] > nav[class^="wrapper"] + div[class^="base"] > div[class^="notice-"]
 !
+vanceai.com##.install-app
 web.quizknock.com###header_iosapp_link
 bisnis.com##.download-disini
 bisnis.com##.wrapper__ads-download
