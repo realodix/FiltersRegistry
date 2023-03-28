@@ -13301,6 +13301,10 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/146471
+!#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_chromium)
+@@||sdk.privacy-center.org^$domain=ozap.com
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146761
 @@||consent.cookiebot.com^$domain=empleo.lidl.es
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146737
@@ -17025,6 +17029,7 @@ usatoday.com#@#.ad-slot
 ! SECTION: Anti-adblock - Regular rules
 ! Do not forget about '!#safari_cb_affinity' section for exclusions
 !
+darksoftware.net#?#.notices .notice--primary:contains(Adblocker)
 abcya.com#%#//scriptlet('prevent-element-src-loading', 'script', 'pagead2.googlesyndication.com')
 chatreplay.stream##div[style^="height:"].container
 reddit.com#$##acceptabletest { display: block !important; }
@@ -26924,6 +26929,10 @@ jiji.com,edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,
 !
 ! SECTION: Subscriptions - Regular rules
 !
+rtbf.be#?##id-text2speech-article > div.box-border:has(> div.container > div.bg-white > div.prose > div.flex > a[href="/mon-compte/newsletters"])
+||fastcompany.com/gallery/lightboxinteractiontype/
+fastcompany.com##.bcToaster
+fastcompany.com##.post__footer__newsletter
 hackster.io##div[class^="article_layout__signupCTA"]
 hackster.io##div[data-hacksternova-key="ProjectCountBanner"]
 parniplus.com###eaa_post_between_content
@@ -34930,6 +34939,8 @@ instagram.com#?#div[style*="opacity"] > div > div[class]:has(> div[class] > div[
 !
 ! End: Instagram.com
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/146471
+ozap.com###dailymotion-pip-large-viewport
 ! kotaku.com and partner sites - unrelated video in article
 avclub.com,clickhole.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kotaku.com,lifehacker.com,splinternews.com,theinventory.com,theonion.com,theroot.com,thetakeout.com#?#.js_post-content > div > div:has(> .instream-native-video)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145956
@@ -44770,6 +44781,8 @@ zebratechnologies.force.com##.zbrbot-container
 !
 !   SECTION: Uncategorized
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/146401
+web.ultra-soccer.jp###kindle-side-banner
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145337
 hltv.org##.featured-matches-top
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141205
