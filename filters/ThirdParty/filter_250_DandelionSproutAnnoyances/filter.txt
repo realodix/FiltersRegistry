@@ -463,7 +463,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 26March2023v2
+! OriginalVersion: 28March2023v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -538,6 +538,13 @@ www.google.*##.g:has(a[href*="/jump.cfm" i]):has(a[href*=".tk/"], a[href*=".ml/"
 www.google.*##.g:has(a[href*="/www/delivery/"]):has(a[href*=".php?"])
 www.google.*##.g:has([href*="?link=//"]):has(a[href*=".tk/"], a[href*=".ml"])
 www.google.*##.g:has([href*="&url=//"]):has(a[href*=".tk/"], a[href*=".ml"])
+www.google.*##.g:has(a[href*="/?//" i]):has(a[href*=".tk/"], a[href*=".ml/"])
+www.google.*##.g:has(a[href*="/AdRedirector.asp" i])
+www.google.*##.g:has(a[href*="&uri=/" i]):has(a[href*=".tk/"], a[href*=".ml/"])
+www.google.*##.g:has(a[href*="/global_outurl.php" i]):has(a[href*=".tk/"], a[href*=".ml/"])
+www.google.*##.g:has(a[href*="/redirect/" i]):has(a[href*=".tk/"], a[href*=".ml/"])
+www.google.*##.g:has(a[href*="&loc=/" i]):has(a[href*=".tk/"], a[href*=".ml/"])
+www.google.*##.g:has(a[href*="&orig_url=/" i]):has(a[href*=".tk/"], a[href*=".ml/"])
 !#endif
 !#if env_mobile
 ! ——— Attempted removal of Google search result entries that lead to the above top-level domains (For Google Mobile) ———
@@ -16305,7 +16312,7 @@ vumoo.to#?#div.col-lg-12:has-text(IMDb)
 !#if !env_safari
 !#if !adguard_app_ios
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 25March2023v1
+! OriginalVersion: 28March2023v1
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -16350,7 +16357,7 @@ $removeparam=ysclid
 ! https://www.dx.com/p/sliding-camera-protective-cover-for-smartphones-laptops-tablets-2729311.html?Utm_rid=91262049&Utm_source=affiliatewindow (21/11/2021)
 ! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-488307
 ! Exclude sendgb.com - https://github.com/AdguardTeam/AdguardFilters/issues/100285
-$removeparam=/^utm_/i,domain=~redir.tradedoubler.com|~sendgb.com|~allegro.pl|~tix.axs.com|~transfernow.com|~carrefourpl.snrpage.com
+$removeparam=/^utm_/i,domain=~redir.tradedoubler.com|~sendgb.com|~allegro.pl|~tix.axs.com|~transfernow.com|~carrefourpl.snrpage.com|~justdial.com
 $removeparam=/^itm_/,domain=~redir.tradedoubler.com
 $removeparam=/^stm_/,domain=~redir.tradedoubler.com
 ! https://www.ixigua.com/6888869154099629319?logTag=Y8JlCALntSDuDesMiPno8 (31/10/2020)
@@ -16575,7 +16582,7 @@ $removeparam=pjxclick_id
 $removeparam=msclkid
 ! https://m.lightinthebox.com/no/p/kvinners-svart-blaa-groenn-vintage-maxi-kjole-langarmet-troeye-med-v-hals_p4298383.html?currency=NOK&litb_from=paid_adwords_shopping&sku=1_6920%7C2_286&country_code=no&adword_mt&adword_ct=496040937781&adword_kw&adword_pos&adword_pl&adword_net=u&adword_tar&adw_src_id=7573621213_12242627236_117670768776_pla-402619472328 (22/05/2021)
 $removeparam=litb_from
-$removeparam=/^adword_/
+$removeparam=/^adword_/,domain=~justdial.com
 $removeparam=adw_src_id
 ! https://www.ericgown.no/A-Formet-Prinsesse-V-Hals-Gulvlengde-Chiffong-Selskapskjoler-Med-Frynse-Splittet-Front-017216976-g216976/?ggsub=pl&ggntk=g&ggcid=426150376762&ggkey&ggpos&ggdev=m&ggdevm&ggplm&ggtgt&currency=EUR (22/05/2021)
 $removeparam=ggsub
