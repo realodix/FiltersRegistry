@@ -130,7 +130,7 @@ capital.fr#@#.plainAd
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146165
 ! https://github.com/AdguardTeam/Scriptlets/issues/300
 !+ PLATFORM(windows, mac, android)
-capital.fr#%#(()=>{const a=function(){};window.apstag={fetchBids(c,a){"function"==typeof a&&a([])},init:a,setDisplayBids:a,targetingKeys:a}})();
+geo.fr,capital.fr#%#(()=>{const a=function(){};window.apstag={fetchBids(c,a){"function"==typeof a&&a([])},init:a,setDisplayBids:a,targetingKeys:a}})();
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141069
 @@||okmalayalam.com/player/assets/js/ads.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/140450
@@ -835,7 +835,7 @@ dl-protect.net,annuaire-telechargement.tel#%#//scriptlet('abort-on-stack-trace',
 japscan.me#%#//scriptlet("abort-current-inline-script", "JSON.parse", "document.createElement('script')")
 japscan.me#%#//scriptlet("abort-current-inline-script", "document.createElement", "document.documentElement).appendChild")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/119411
-voici.fr,programme-tv.net,gala.fr,capital.fr#%#AG_onLoad(function(){if(window.pmsCoreAds&&Array.isArray(pmsCoreAds)){window.pmsCoreAds=new Proxy(pmsCoreAds,{set:(a,b,c,d)=>{if("function"==typeof c)try{let a=!1;const b=b=>{var c=document.querySelector(".ads-core-video");c&&a?clearInterval(d):(b(),a=!0)},d=setInterval(b,1e3,c)}catch(a){}return Reflect.set(a,b,c,d)}})}});
+geo.fr,voici.fr,programme-tv.net,gala.fr,capital.fr#%#AG_onLoad(function(){if(window.pmsCoreAds&&Array.isArray(pmsCoreAds)){window.pmsCoreAds=new Proxy(pmsCoreAds,{set:(a,b,c,d)=>{if("function"==typeof c)try{let a=!1;const b=b=>{var c=document.querySelector(".ads-core-video");c&&a?clearInterval(d):(b(),a=!0)},d=setInterval(b,1e3,c)}catch(a){}return Reflect.set(a,b,c,d)}})}});
 ! allocine.fr - fixing delay in the video player
 allocine.fr#%#//scriptlet("set-constant", "AC.config.ads", "emptyObj")
 ! https://github.com/AdguardTeam/AdguardFilters/issues/118970
@@ -1213,7 +1213,7 @@ developpez.com###colonneDroite > aside > #encart_droite > div[class^="dvpb"][sty
 windsurfjournal.com##.right-pub-zone
 windsurfjournal.com##.megabanner-container
 passeportsante.net##.dynInFeed
-huffingtonpost.fr,moti.news,passeportsante.net##.ads
+geo.fr,huffingtonpost.fr,moti.news,passeportsante.net##.ads
 passeportsante.net##.pstAd
 forumgaming.fr,forumactif.com,forum-airguns.com###page-body a[onclick*="'shift'"][target="_blank"]
 allocine.fr##.main-banner
@@ -1497,6 +1497,21 @@ lesfrontaliers.lu##.ad-listing
 !
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/146830
+geo.fr#@#[data-ads-core]
+@@||tra.scds.pmdstatic.net/advertising-core/*/core-ads.js$domain=geo.fr
+||js-sec.indexww.com/ht/p/*.js$script,redirect=noopjs,domain=geo.fr
+||amazon-adsystem.com/aax2/apstag.js$script,redirect=amazon-apstag,domain=geo.fr
+||googletagmanager.com/gtm.js$script,redirect=googletagmanager-gtm,domain=geo.fr
+||securepubads.g.doubleclick.net/tag/js/gpt.js$script,redirect=googletagservices-gpt,domain=geo.fr
+||prismamedia-com.videoplayerhub.com/galleryplayer.js$script,redirect=noopjs,domain=geo.fr
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+@@||js-sec.indexww.com/ht/p/*.js$domain=geo.fr
+@@||amazon-adsystem.com/aax2/apstag.js$domain=geo.fr
+@@||googletagmanager.com/gtm.js$domain=geo.fr
+@@||securepubads.g.doubleclick.net/tag/js/gpt.js$domain=geo.fr
+@@||prismamedia-com.videoplayerhub.com/galleryplayer.js$domain=geo.fr
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146471
 !#if (!adguard_app_windows && !adguard_app_mac && !adguard_app_android && !adguard_ext_chromium)
 @@||cdn.lib.getjad.io/prebid/$domain=ozap.com
