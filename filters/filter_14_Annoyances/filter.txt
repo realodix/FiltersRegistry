@@ -12043,6 +12043,7 @@ sp-cdn.pcgames.de#%#AG_onLoad(function(){if(window.location.href.includes("conse
 goplay.be#%#AG_onLoad(function(){if(-1===document.cookie.indexOf("euconsent-v2")){var c=new MutationObserver(function(){var b=document.querySelector("#didomi-notice-learn-more-button");b&&(c.disconnect(),b.click(),setTimeout(function(){var a=document.querySelectorAll("button.didomi-components-button");a[0]&&a[0].click();},300))});c.observe(document,{childList:!0,subtree:!0}),setTimeout(function(){c.disconnect()},1E4)}});
 krone.at#%#AG_onLoad(function(){if(-1===document.cookie.indexOf("euconsent-v2")){var c=new MutationObserver(function(){var b=document.querySelector("#didomi-notice-learn-more-button");b&&(c.disconnect(),b.click(),setTimeout(function(){var a=document.querySelectorAll("button[aria-describedby=\"didomi-purpose-BeEXA9\"]");a[1]&&a[1].click();var b=document.querySelectorAll("button[aria-describedby=\"didomi-purpose-9HxF6e\"]");b[0]&&b[0].click();var c=document.querySelectorAll("button[aria-describedby=\"didomi-purpose-JmQMZH\"]");c[0]&&c[0].click()},300),setTimeout(function(){var a=document.querySelectorAll("button[aria-describedby=\"didomi-purpose-xKLmtF\"]");a[1]&&a[1].click()},300),setTimeout(function(){var a=document.querySelector("button[aria-label*=\"speichern\"]");a&&a.click()},300))});c.observe(document,{childList:!0,subtree:!0}),setTimeout(function(){c.disconnect()},1E4)}});
 !
+authentication.nutmeg.com#%#//scriptlet('trusted-click-element', '#onetrust-accept-btn-handler')
 turk.net#%#document.cookie = "cookie-consent=dismissed; path=/";
 cmp.aftonbladet.se#%#AG_onLoad(function() { setTimeout(function() { var el = document.querySelector('button[title^="Godkänn"]'); if(el) el.click(); }, 300); });
 geo.dailymotion.com#%#AG_onLoad(function(){if(window.self!==window.top&&document.referrer.startsWith("https://www.beyazperde.com/")){var a=new MutationObserver(function(){var b=document.querySelector('button.consent_screen-accept');b&&(a.disconnect(),b.click())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
@@ -13062,7 +13063,7 @@ sers.si#%#document.cookie = "cc_analytics=no"; document.cookie = "cc_necessary=n
 novmak.com#%#(function() { try { if ("undefined" != typeof localStorage) { localStorage.setItem("gdpr", "1") } } catch (ex) {} })();
 saveur.com#%#AG_onLoad(function() { setTimeout(function() { if(location.href.includes("gdpr.html?redirect")) { var el = document.querySelector('#CybotCookiebotDialogBodyButtonAccept'); if(el) { el.click(); } } }, 300); });
 polygon.com#%#AG_onLoad(function() { setTimeout(function() { var el = document.getElementsByClassName("m-privacy-consent__button-content"); if(el) { el[0].click(); } }, 1000); });
-auto.ru#%#AG_onLoad(function() { var el=document.querySelector('div[id="confirm-button"]'); if(el) el.click(); });
+auto.ru#%#//scriptlet('trusted-click-element', '.buttons > a#confirm-button')
 bk.com#%#document.cookie = "cookiePopup=%22true%22; path=/";
 web2.0calc.com#%#AG_onLoad(function(){if(-1==document.cookie.indexOf("cookies")){document.cookie="cookies=yes;path=/",location.reload()}});
 amarujala.com,www-amarujala-com.cdn.ampproject.org#%#AG_onLoad(function() { setTimeout(function() { var el = document.querySelector('amp-consent > #consentDialog > .consentPopup > button[on="tap:myUserConsent.accept"]'); if(el) el.click(); }, 500); });
@@ -13331,6 +13332,9 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/146797
+@@||cdn.cookielaw.org/scripttemplates/otSDKStub.js$domain=authentication.nutmeg.com
+authentication.nutmeg.com#@##onetrust-consent-sdk
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146883
 kultura.com.pl#@##idxrcookies
 kultura.com.pl#@##cookieModal
