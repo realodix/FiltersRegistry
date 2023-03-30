@@ -1,6 +1,6 @@
 !
 ! Title: ➗ Actually Legitimate URL Shortener Tool
-! OriginalVersion: 29March2023v1
+! OriginalVersion: 30March2023v2
 ! Expires: 1 day
 ! Description: In a world dominated by bit.ly, adf.ly, and several thousand other malware cover-up tools, this list reduces the length of URLs in a much more legitimate and transparent manner. Essentially, it automatically removes unnecessary $/& values from the URLs, making them easier to copy from the URL bar and pasting elsewhere as links. Enjoy.
 ! Homepage: https://github.com/DandelionSprout/adfilt/discussions/163
@@ -473,7 +473,7 @@ $removeparam=afn_sr
 $removeparam=cjdata
 $removeparam=cjeventid
 $removeparam=cjpixel
-$removeparam=click_id
+$removeparam=click_id,domain=~bookings.beatthatflight.*
 $removeparam=cm_soc
 $removeparam=o_lid
 $removeparam=o_sch
@@ -3256,6 +3256,8 @@ $removeparam=height,domain=i-viaplay.com.akamaized.net|media.discordapp.net|tvno
 @@||canon.*/supportproduct/gettabcontent$removeparam=referrer
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89618
 @@||urldefense.com^$removeparam
+! https://github.com/DandelionSprout/adfilt/discussions/163#discussioncomment-5475592
+@@||startpage.com/sp/qi$removeparam=sc
 !#if adguard
 !#if adguard_ext_firefox
 ! https://github.com/DandelionSprout/adfilt/issues/376
