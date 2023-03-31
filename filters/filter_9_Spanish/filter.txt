@@ -298,6 +298,10 @@
 ! Bad: ||ad.doubleclick.net^ (should be in adservers.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/146455
+niusdiario.es#@#.banner_ad
+niusdiario.es#@#.sponsored_ad
+niusdiario.es#%#//scriptlet('set-constant', '$MICROSITE_INFO.blockAdBlock', 'false')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145474
 xerifetech.com#%#//scriptlet('prevent-setTimeout', '_0x')
 xerifetech.com#%#//scriptlet('prevent-addEventListener', '', '_0x')
@@ -2059,6 +2063,8 @@ seriesgato.com#?#.TPlayerNv > li.Button:has(> span:contains(Publicidad))
 !------- JS rules ---------------------!
 !--------------------------------------!
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/146455
+niusdiario.es#%#//scriptlet('set-constant', 'google.ima.OmidVerificationVendor', 'emptyObj')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145476
 superhq.net#%#//scriptlet('abort-on-property-write', 'exopop')
 hentaikai.com,superhq.net#%#//scriptlet('abort-on-property-write', 'protData')
@@ -2675,6 +2681,8 @@ bebe.abril.com.br,tribunapr.uol.com.br,diariodonordeste.verdesmares.com.br,sbt.c
 ! ##.banner
 economipedia.com,informador.mx,elinformador.com.co,cronista.com,rionegro.com.ar,diariodecuyo.com.ar,voydeviaje.com.ar,guarda14.com,viapais.com.ar,agazeta.com.br,eleconomista.com.mx,metropolitanafm.com.br,tycsports.com,elespectador.com,bnews.com.br,migalhas.com.br,losandes.com.ar,lavoz.com.ar,mundo.sputniknews.com,omelete.com.br,lapoliticaonline.com.ar,mundotecnologias.com,valenciaplaza.com,veneapp.com,dalealbo.cl,globo.com,defesanet.com.br,mibrujula.com,lyon.kim,26noticias.com.ar,auniao.com,clickpb.com.br,emagister.com,lanacion.com.ar,parana-online.com.br,r7.com,toxico-pc.com,uol.com.br##.banner
 !
+niusdiario.es###MEGASUPERIOR
+niusdiario.es##div[class^="ads__ad_container-"]
 olhardigital.com.br##.diagonal-strip
 xatakamovil.com,genbeta.com,espinof.com###stories_container:empty
 businessinsider.es##div[class^="ad-slot_"]
@@ -5505,6 +5513,10 @@ urlcloud.us##.banner
 ! Bad:  @@||example.org^$stealth (should be in AdGuard Base - allowlist_stealth.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/146455
+||imasdk.googleapis.com/js/sdkloader/ima3.js$script,redirect=google-ima3,domain=niusdiario.es
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$domain=niusdiario.es
 ! https://github.com/AdguardTeam/AdguardFilters/issues/145203
 ||webmotors.com.br/javascripts/prebid.*.js$script,redirect=prebid,domain=webmotors.com.br
 !+ PLATFORM(ios, ext_safari, ext_android_cb)
