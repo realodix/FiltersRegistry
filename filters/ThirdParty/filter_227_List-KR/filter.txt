@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0330.38
+! OriginalVersion: 2023.0331.2
 ! Expires: 1 day
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -10,6 +10,10 @@
 ! Version must be UTC format.
 !
 !#if adguard
+||img.side.mythiell.com^
+||static.tpmn.co.kr^
+||js.newsmobile.co.kr^
+||ad.smartinmedia.co.kr^
 ||adw.gomtv.com^
 ||ad.ari.skt-jive.com^
 ||ad.planbplus.co.kr^
@@ -513,7 +517,6 @@ sonagitv.live##.blocks-gallery-item img[src*="/sonagi_me/sites/"]
 ||thebike.co.kr/img/ad/
 ||thebike.co.kr/img/ban_
 ||corearoadbike.com/*banner/
-||js.newsmobile.co.kr/inbnet_listing_banner.html
 ||img.wowtv.co.kr/MainManage/
 ||vop.co.kr/templates/adv/
 ||vop.co.kr/templates/admanager/
@@ -1257,6 +1260,9 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+heraldpop.com##.article_area .list_r
+heraldpop.com##div[id*="_ad"]
+heraldpop.com##.article_wrap div[class^="ad"]
 m.mail.daum.net##.banner_comm
 m.news.nate.com##.divAdv
 m.clien.net##.content_list.search > div[class^="list_center_"]
@@ -1338,7 +1344,6 @@ front.wemakeprice.com###_rollingBanner
 front.wemakeprice.com###_topBannerContainer
 front.wemakeprice.com###_contents div[data-container="bigBanner"]
 search.wemakeprice.com##.search_box_listdeal > .aiplus
-tenasia.hankyung.com##div[data-key="page1"].swipe-layers .wrap .banner_img .banner1
 tistory.com,oracionspace.com,poketory.com##.revenue_unit_wrap
 topstarnews.net##div[class^="Ad"]
 news.mt.co.kr##.aside_bundle > div[style*="height:"]
@@ -2268,6 +2273,7 @@ x86.co.kr#@#.download_ad
 !#endif
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+heraldpop.com#$#.article_area .article_left { width: 100% !important; }
 tgd.kr#$#html[style*="background-image:"][style*="//upload.tgd.kr/"]:not(.darkmode) { background-image: none !important; background-color: #f3f2f0 !important; }
 tgd.kr#$#html[style*="background-image:"][style*="//upload.tgd.kr/"].darkmode { background-image: none !important; background-color: #151515 !important; }
 chaoscube.co.kr#$#.container .contents > .subcontents:nth-child(1) { margin-top: 0px !important; }
@@ -2454,7 +2460,6 @@ itwind.co.kr#?##footer-wrapper div[id^="footer"].footer:has(img[src*="=s"])
 bonik.me#?##sidebar > .module:has(> div[id^="ad"])
 gobest.co.kr#?#table[width][border] td:not([width]):has(div[align="CENTER"] > .adsbygoogle, td[bgcolor] a[href*="//link.coupang.com/"] > img)
 game.naver.com#?#div[class*="_contentBody"] main > .undefined:has(> div[class*="_Banner_"])
-tenasia.hankyung.com#?#div[data-key="page1"].swipe-layers .wrap .banner_con li:has(a[href*="//io1.innorame.com/"])
 ddengle.com#?#table.bd_lst tr[data-document-srl]:has(.ad_gray)
 enuri.com#?#.trendpickup__container > .trendtab-cont:has(p.badge--ad):remove()
 enuri.com#?#.trendtabs__list > li[data-adv_yn="Y"]:remove()
