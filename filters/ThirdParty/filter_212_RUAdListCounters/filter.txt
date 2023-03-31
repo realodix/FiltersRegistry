@@ -1,8 +1,8 @@
 !
-! Checksum: hdtpp+qoReMmssq4xqPwLg
-! OriginalVersion: 202303311231
+! Checksum: DJcLEkrHzck85neV0rurZQ
+! OriginalVersion: 202303311631
 ! Title: RU AdList: Counters
-! Last modified: 31 Mar 2023 12:31 UTC
+! Last modified: 31 Mar 2023 16:31 UTC
 ! Expires: 1 days (фильтр обновляется автоматически каждые 2 дня)
 ! Homepage: https://forums.lanik.us/viewforum.php?f=102
 !
@@ -1257,7 +1257,7 @@ yandex.*#?#.touch-feed > div > .feed-item[id^="zen-row-"]:-abp-has([class^="zen-
 ! реклама в шапке форума
 4pda.*##html:not([style]) tbody > tr[valign="top"] > td[width*="20"] + td[class]
 ! реклама при скачивании на форуме
-4pda.*##html:not([style]) > body:not([itemscope]) > div[id]:not([href]) > [href="#"]:empty ~ [href^="http"]
+4pda.*##html:not([style]) > body:not([itemscope]) > div[id]:not([href]) > [href="#"]:empty ~ [id][href]
 ! реклама в QMS и мобильной версии сайта
 4pda.*##.menu-main-mobile > [style="display:none;"]
 ! редирект
@@ -1312,6 +1312,7 @@ $removeparam=irgwc
 $removeparam=mt_click_id
 $removeparam=mt_link_id,domain=vkplay.ru
 $removeparam=nr,domain=ya.ru
+$removeparam=partner,domain=steambuy.com
 $removeparam=pulse_traffic
 $removeparam=redirect_ts,domain=ya.ru
 $removeparam=ref,domain=mail.ru|sportmail.ru
