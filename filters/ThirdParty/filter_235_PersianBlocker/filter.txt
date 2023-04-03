@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2023-04-01
+! Last modified: 2023-04-03
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -1364,6 +1364,9 @@ khabareazad.com##.sticky_notify
 konkur.in##.part-content-wordpres > .title-section:has-text(پست تبلیغاتی):upward(.part-content-wordpres)
 konkur.in##.small-tab-news > .sidebar-news > ul:has-text(تبلیغات متنی):upward(.small-tab-news)
 konkur.in##section.tabliqat-text > header:has-text(تبلیغات متنی):upward(section.tabliqat-text)
+!#if env_mobile
+konkur.in##.mobileBottomAd
+!#endif
 @@||dl.konkur.in/image/ads/G-logo.jpg^$image,~third-party
 @@||dl.konkur.in/image/ads/Tlogo.png^$image,~third-party
 @@||dl.konkur.in/image/ads/gold.png^$image,~third-party
@@ -1465,6 +1468,8 @@ lahzeakhar.com#%#//scriptlet('ubo-set.js', 'customnotify', 'noopFunc')
 ||lahzeakhar.com/ShowAds
 ! ||lahzeakhar.com/sw.js
 ! >> M <<
+! To counter Online Malicious URL Blocklist
+||mehtikahrizi.ir^$badfilter
 musickhone.com$$script[tag-content="window.open"][max-length="262144"]
 !#if !cap_html_filtering
 musickhone.com#%#//scriptlet('ubo-nowoif.js')
@@ -2335,6 +2340,10 @@ taknaz.ir##.ads120000
 tamin.ir#@#.ads2
 @@||tamin.ir/content/ads/
 ! >> U <<
+! To counter Online Malicious URL Blocklist
+||uploadkon.ir^$badfilter
+||uploadkon.ir/styles/UploadKon/assets/img/ad.png^$image,~third-party
+uploadkon.ir##.ad-link
 uploadgoogle.ir#%#//scriptlet('ubo-nowoif.js')
 uptrack.ir##[href*="b2n.ir"]
 uptrack.ir##.aside_box:has(.aside_box_title:has-text(لینک های ویژه))
