@@ -2175,7 +2175,7 @@ emojiszumkopieren.de,technikshavo.de,indibit.de,audiovision.de,ratgeber-umschulu
 !
 ! cmpbox cookies
 ! ###cmpbox
-noizz.rs,median-kliniken.de,eventim.pl,wyspagier.pl,autopay.pl,vkplay.ru,olympia-einkaufszentrum.de,satellite.me,heilpraxisnet.de,hrt.hr,bosnainfo.ba,broststiftung.ruhr,deka.de,der-rollenshop.de,travelcharme.com,industrie.de,bm-online.de,fenster24.de,mioga.de,ankerkraut.de,voltimum.de,borek.de,azubi.de,denk-keramik.de,aquarienpflanzen-shop.de,deutschesee.de,bluray-disc.de,medpex.de,eventim.de,teekanne.de,mdm.de,traunsteiner-tagblatt.de,westlotto.de,kalledaskabel.de,dastelefonbuch.de,telefonbuch.de,swm.de,ptaheute.de,nivea.*,nw.de,absolventa.de,porzellanhandel24.de,blastbrigade.com,blic.rs,queer.de,inqa.de,bmas.de,mail.ru###cmpbox
+gothaer.de,noizz.rs,median-kliniken.de,eventim.pl,wyspagier.pl,autopay.pl,vkplay.ru,olympia-einkaufszentrum.de,satellite.me,heilpraxisnet.de,hrt.hr,bosnainfo.ba,broststiftung.ruhr,deka.de,der-rollenshop.de,travelcharme.com,industrie.de,bm-online.de,fenster24.de,mioga.de,ankerkraut.de,voltimum.de,borek.de,azubi.de,denk-keramik.de,aquarienpflanzen-shop.de,deutschesee.de,bluray-disc.de,medpex.de,eventim.de,teekanne.de,mdm.de,traunsteiner-tagblatt.de,westlotto.de,kalledaskabel.de,dastelefonbuch.de,telefonbuch.de,swm.de,ptaheute.de,nivea.*,nw.de,absolventa.de,porzellanhandel24.de,blastbrigade.com,blic.rs,queer.de,inqa.de,bmas.de,mail.ru###cmpbox
 ! ##div[class^="cmpbox"]
 gelbeseiten.de,gasag.de##div[class^="cmpbox"]
 ! ##div[id^="cmpbox"]
@@ -12135,7 +12135,7 @@ numerama.com#%#//scriptlet('trusted-click-element', '#sd-cmp button + div[class]
 dailymail.co.uk#%#//scriptlet('trusted-click-element', 'div[data-project="mol-fe-cmp"] div[class^="footer_"] > div[class^="controls_"] > button[class*="primary_"]')
 profm.ro#%#//scriptlet('set-cookie-reload', 'cmp_level2', '5')
 intercars.*#%#//scriptlet("set-cookie","closedX","1")
-cdn.privacy-mgmt.com#%#AG_onLoad(function(){if(window.self!==window.top&&document.referrer.startsWith('https://www.pcgamer.com/')){var a=new MutationObserver(function(){var b=document.querySelector('button[title="AGREE"]');b&&(a.disconnect(),b.click())});a.observe(document,{childList:!0,subtree:!0});setTimeout(function(){a.disconnect()},1E4)}});
+cdn.privacy-mgmt.com#%#AG_onLoad(function(){const a=["pcgamer.com","cinemablend.com"].some(b=>document.referrer.includes(b));if(window.self!==window.top&&a){var b=new MutationObserver(function(){var c=document.querySelector('button[title="AGREE"]');c&&(b.disconnect(),c.click())});b.observe(document,{childList:!0,subtree:!0}),setTimeout(function(){b.disconnect()},1E4)}});
 bhaskar.com#%#//scriptlet("trusted-set-local-storage-item", "HAS_ACCEPTED_PRIVACY_POLICY", "true")
 shop.snapticket.de#%#//scriptlet('trusted-set-local-storage-item', 'cookies-denie', 'true')
 shop.snapticket.de#%#//scriptlet('trusted-set-local-storage-item', 'cookies-denie-6303836804bb746cef24e923', 'true')
@@ -13370,6 +13370,8 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/147362
+@@||cdn.privacy-mgmt.com^$domain=cinemablend.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147326
 simoncuchillerias.com#@#.gdprModal__placeholder
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146996
@@ -35101,6 +35103,8 @@ instagram.com#?#div[style*="opacity"] > div > div[class]:has(> div[class] > div[
 !
 ! End: Instagram.com
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/147168
+lanacion.com.ar##.sidebar__main > .sticky-mobile
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146873
 ||ppstatic.pl/assets/nsk/v*/js/compiled/atoms/article/top-sticky-video-mobile.js
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146970
@@ -39811,7 +39815,7 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
-tripadvisor.*#?##lithium-root > div[style^="bottom:"][class]:has(> div[class] > h3[class]:contains(Unlock the best))
+tripadvisor.*#?##lithium-root > div[style^="bottom:"]:has(> div[class] span > svg[viewBox="0 0 24 24"])
 dedutcoatheng.monster##.notifyjs-corner
 gab.com#?#div[tabindex="-1"] ~ div > div:has(span[data-text="Help keep Gab online"])
 mall.hr###above-header
