@@ -2,13 +2,16 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2023-04-03
+! Last modified: 2023-04-04
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
 ! مشارکت: https://github.com/MasterKia/PersianBlocker/pulls
 !  لیستی برای برگرداندن آزادی کاربران، چون هر کاربر این آزادی را دارد که چه چیزی وارد مرورگرش می‌شود و چه چیزی وارد نمی‌شود
 !-------------------------v Experimental Generic Filters v-----------------------!
+! meliyat.ir, aftabnews.ir, eghtesadgardan.ir, entekhab.ir, nabzefanavari.ir, boursenews.ir, snn.ir,
+!! basirat.ir, khootoot.ir
+/files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com
 ! digiro.ir, gahar.ir, jobsacademy.ir, mihand.ir, modirnameh.ir, pedal.ir, softsaaz.ir, technet24.ir
 /wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com
 ! https://publicwww.com/websites/%22var+socketAccess+%3D%22/
@@ -45,7 +48,6 @@
 *###kaprila_linktable
 !#endif
 ###kaprila_linktable
-! /files/adv/*
 ! /statics/*$xhr
 ! .ir/ads/
 ! /admin-ajax.php?action=adwised
@@ -408,7 +410,6 @@ androidparsi.ir##.app_ads_banner
 avaz-kurd.ir##.page-body > .post:not(article) > .yn-bnr:empty:upward(.post)
 avaz-kurd.ir##.page-body > .post:not(article) > [id^="pos-article-"]:empty:upward(.post)
 avaz-kurd.ir##.sidebar-right > .box > .title:has-text(لینک های مفید):upward(.box)
-||asrkhabar.com/files/adv^
 ||analytics.asiatech.ir^$all
 ||192.168.10.113^$all,domain=airport.ir
 artmusics.top#%#//scriptlet('ubo-nowoif.js')
@@ -522,9 +523,8 @@ abipic.com##.ads-text-sid
 ||1abzar.com/ads^$image,~third-party
 1abzar.com##.ads-post
 1abzar.com##.link-paeen
-||aftabnews.ir/files/adv/
+aftabnews.ir##.adv_l
 aftabnews.ir##.adv_r_news2
-aftabnews.ir##.adv_l_inner5
 alaatv.com#%#//scriptlet('ubo-acis.js', 'watermarkAdData')
 ||nodes.alaatv.com/upload/vast/xml/
 ||ads.alaatv.com^
@@ -579,9 +579,7 @@ bils.ir##div[style]:nth-of-type(3)
 ! https://github.com/MasterKia/PersianBlocker/issues/145
 behmusic.com##.mpbb_ads img:upward(.mp_box_x1)
 @@||blogfa.com/static/ads/$image,~third-party
-||bultannews.com/files/adv/
 bultannews.com##.parent_txt_adv_container2
-||boursenews.ir/files/adv/
 ||boursenews.ir/fa/generate/userid
 binanews.ir#%#//scriptlet('ubo-set.js', 'openTelegram', 'noopFunc')
 ! https://github.com/MasterKia/PersianBlocker/issues/31
@@ -899,7 +897,6 @@ etemadonline.com##.zxc
 ! https://github.com/MasterKia/PersianBlocker/issues/60
 eghtesademeli.com##.sidebar-home:has(.ads_0)
 ! https://github.com/MasterKia/PersianBlocker/issues/59
-||eghtesadgardan.ir/files/adv^
 eghtesadgardan.ir#$#.container { width: 95% !important; }
 ! https://github.com/MasterKia/PersianBlocker/issues/58
 ||okcs.com^$domain=eghtesadepooya.ir
@@ -910,8 +907,6 @@ econews.ir##.advertise-place
 econews.ir##.province-advertise
 econews.ir##main > div:has([href*="/advertising/"])
 econews.ir#$#.container { width: 95% !important; }
-! https://github.com/MasterKia/PersianBlocker/issues/55
-||eghtesaad24.ir/files/adv^
 ! https://github.com/MasterKia/PersianBlocker/issues/50
 ||ejiga.com/content/player/js/rmp-vast.js^$script,~third-party
 ||ejiga.com/content/player/css/rmp-vast.css^$stylesheet,~third-party
@@ -932,7 +927,6 @@ ezp30.com###ynpos-10831
 e-teb.com##.ads
 brain.be-teb.com##.medicaldirectory-sidebar:nth-of-type(5) > .claims.sidebar-content > .cbp-l-project-details-title > span
 ravan.e-teb.com##div.medicaldirectory-sidebar:nth-of-type(6) > .claims.sidebar-content > .cbp-l-project-details-title > span
-||entekhab.ir/files/adv^
 entekhab.ir##.attention > header:has-text(وبگردی):upward(.attention)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/104314
 ||eghtesadnews.com^$removeparam=rssRedirect
@@ -1030,7 +1024,6 @@ fardanews.com##.zxc-stik
 fardanews.com##.others_media
 fardanews.com##.sticky_notify2
 fardanews.com#$#.n-first-col-left { width: 100% !important; }
-||fararu.com/files/adv^
 fararu.com##.news_slider_sec2
 fararu.com##.webgardi_adv
 ||filcin.com/site/show-adv
@@ -1186,8 +1179,6 @@ iranstar.com#%#//scriptlet('ubo-ra.js', 'onselectstart|oncopy|oncontextmenu', 'b
 iranstar.com#%#//scriptlet('ubo-acis.js', 'jQuery', 'Drupal')
 iranstar.com##.ads-div-block
 iranstar.com###floating-region-zone
-! https://github.com/MasterKia/PersianBlocker/issues/56
-||iraneconomist.com/files/adv^
 ! https://github.com/MasterKia/PersianBlocker/issues/50
 ||ifilo.net^$removeparam=/^utm_/
 ifilo.net#$#.si.au._m0.sd.vb { max-height: 100% !important; }
@@ -1587,18 +1578,16 @@ myhastidl.cam##center:nth-of-type(2)
 myhastidl.cam##.col-xs-12.col-md-6.main-sidebar > center
 ! >> N <<
 ! https://github.com/MasterKia/PersianBlocker/issues/148
-||nabzefanavari.ir/files/adv^$image,~third-party
 nabzefanavari.ir##.txt-box:has(> .txt_adv_content)
 ||namayesh.com/assets/ads^$image
-! ^ no $1p, because it's used by mihanvideo.com
-||namayesh.com/configuration/v1/video/*/lazyads^$xmlhttprequest,~third-party
-||namayesh.com/configuration/v1/video/*/log^$xmlhttprequest,~third-party
+||namayesh.com/configuration/v1/video/*/lazyads^$xmlhttprequest
+||namayesh.com/configuration/v1/video/*/log^$xmlhttprequest
 namayesh.com###advertise
 namayesh.com###promotion
+! Example: mihanvideo.com
 nab-music.com#%#//scriptlet('ubo-aopr.js', 'vc_url')
 ! https://github.com/MasterKia/PersianBlocker/issues/72
 ! https://github.com/MasterKia/PersianBlocker/pull/81
-||niniban.com/files/adv/*.gif
 niniban.com##[href*="l.24d.ir"]
 niniban.com##.fixed_box_adv
 niniban.com##.box:has(a[href*="/ads/redirect"])
@@ -1831,7 +1820,6 @@ rahnamato.ir##.c-advertisement
 rasm.io##[class^="RequireAuth_mainBox"]
 rasm.io#$#[class*="hsCode_LimitedItem"] { -webkit-filter: none !important; filter: none !important; pointer-events: auto !important; }
 ! https://github.com/MasterKia/PersianBlocker/issues/52
-||rouydad24.ir/files/adv^
 rouydad24.ir##.tabligh-logo
 !#if !env_mobile
 rouydad24.ir#$#.container, .main { width: 95% !important; }
@@ -1868,7 +1856,6 @@ rouzegar.com##.widget_better-ads
 rouzegar.com##.adloc-is-banner
 rouzegar.com##.widget_text.widget.primary-sidebar-widget.w-t.h-i
 ||rooziato.com/wp-content/plugins/duracelltomi-google-tag-manager/js/analytics-talk-content-tracking
-||roozno.com/files/adv/
 roozno.com##.adv-box
 ||rondbaz.com/js/analytics.js
 ||rond.ir/Content/SimBannerFile/Files/
@@ -1941,7 +1928,7 @@ shahraranews.ir##[href*="/fa/ads/"]
 shahraranews.ir##.ads
 ||serveriran.net/wp-content/plugins/wccp-pro
 ! https://github.com/MasterKia/PersianBlocker/issues/25
-||sedayiran.com/files/adv/
+sedayiran.com##div[style="margin-bottom:10px"]:has(> .txt_adv_content)
 sedayiran.com##.adv_top
 searchline.ir#%#//scriptlet('ubo-acis.js', 'document.oncontextmenu')
 searchline.ir#$#* { -webkit-touch-callout: default !important; -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; }
@@ -1970,7 +1957,6 @@ smusic.ir##.sidebar-right > div.box:nth-of-type(1)
 shirazsong.in##.no-mobile.out-container:nth-of-type(3)
 ||samatak.com/ads
 ||shop-theme.ir/code/popup
-||snn.ir/files/adv^
 snn.ir##.adv_mobile
 ||sourceiran.com^$removeparam=/^utm_/
 ||sourceiran.com/wp-content/plugins/layered-popups/js/ads
@@ -2236,13 +2222,11 @@ timecity.ir##.sidebar-banners
 timecity.ir##.inner-wrapper-sticky > .mb-3
 ! https://github.com/MasterKia/PersianBlocker/pull/12
 tabnak.ir#%#//scriptlet('ubo-acis.js', 'document.write', 'renderAds')
-||tabnak.ir/files/adv^
 tabnak.ir##.film_box:has-text(مدرسه آنلاین)
 tabnak.ir##.stitle_box:has(.top_title:has-text(وب گردی))
 tabnak.ir##.box:has(.top_title:has-text(نیازمندیها))
 tabnak.ir###cycle_adv_tabnak
 ! https://github.com/MasterKia/PersianBlocker/issues/24
-||tabnakjavan.com/files/adv/
 tabnakjavan.com#@#.top_adv
 ! ||checks.telewebion.com
 ||adengine.telewebion.com
@@ -2467,7 +2451,6 @@ webgoo.ir##.left-block-top
 xip.li#%#//scriptlet('ubo-set.js', 'count', '0')
 ! >> Y <<
 ! https://github.com/MasterKia/PersianBlocker/issues/36
-||yektapress.com/files/adv^
 !#if !env_mobile
 yektapress.com#$#.col-2 { width: 60% !important; }
 yektapress.com#$#.no-padd-1st-child { width: 40% !important; }

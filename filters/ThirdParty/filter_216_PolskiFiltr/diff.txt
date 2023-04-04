@@ -1,7 +1,5 @@
 ! ||reklamy.sterta.pl/$object-subrequest,domain=patrz.pl is excluded by "$object-subrequest" in exclusions.txt
 ||reklamy.sterta.pl/$object-subrequest,domain=patrz.pl
-! ~biblio.com,~milionczesci.pl,~dizibox.com,~2dehands.be,~ru,~ua,~www.pudelek.pl,~btdb.eu,~ewybory.eu ##[id^="adv-"]:not(#adv-settings) is excluded by "~biblio.com,~milionczesci.pl,~dizibox.com,~2dehands.be,~ru,~ua,~www.pudelek.pl,~btdb.eu,~ewybory.eu ##[id^="adv-"]:not(#adv-settings)" in exclusions.txt
-~biblio.com,~milionczesci.pl,~dizibox.com,~2dehands.be,~ru,~ua,~www.pudelek.pl,~btdb.eu,~ewybory.eu ##[id^="adv-"]:not(#adv-settings)
 ! ||nazwa.pl/a.php?$object-subrequest,domain=rmfon.pl is excluded by "$object-subrequest" in exclusions.txt
 ||nazwa.pl/a.php?$object-subrequest,domain=rmfon.pl
 ! ||nazwa.pl/video/$object-subrequest,media,domain=rmfon.pl is excluded by "$object-subrequest" in exclusions.txt
@@ -28,8 +26,6 @@ napiprojekt.pl##+js(insert-iframe, 1, honeypot, https://www.napiprojekt.pl/napis
 ppe.pl##+js(ac, active, #m_hot_1)
 ! ppe.pl##+js(ac, box_active, #hot_1) is excluded by "ppe.pl##+js(ac, box_active, #hot_1)" in exclusions.txt
 ppe.pl##+js(ac, box_active, #hot_1)
-! Rule "sport.se.pl##.lead:after" converted to: "sport.se.pl##.lead::after"
-sport.se.pl##.lead:after
 ! Rule "||tkchopin.pl/cams/video_file/*$media,rewrite=abp-resource:blank-mp3,domain=tkchopin.pl" converted to: "||tkchopin.pl/cams/video_file/*$media,redirect=noopmp3-0.1s,domain=tkchopin.pl"
 ||tkchopin.pl/cams/video_file/*$media,rewrite=abp-resource:blank-mp3,domain=tkchopin.pl
 ! Rule "alltube.tv###iframe-container:style(display: block !important;)" converted to: "alltube.tv#$##iframe-container { display: block !important; }"
@@ -582,3 +578,13 @@ powiatowa.info##.latestnews:style(-moz-column-count: 3; -moz-column-gap: 20px; -
 powiatowa.info##.latestnews:style(-moz-column-count: 2; -moz-column-gap: 20px; -webkit-column-count: 2; -webkit-column-gap: 20px; column-count: 2 ;column-gap: 20px;)
 ! Rule "filmy69.pl##+js(acis, document.querySelectorAll, popMagic)" converted to: "filmy69.pl#%#//scriptlet('ubo-acis.js', 'document.querySelectorAll', 'popMagic')"
 filmy69.pl##+js(acis, document.querySelectorAll, popMagic)
+! Error: Invalid selector: ':xpath("//div[count(*)=3][img[@class][@src]][*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=0]]")' -- Invalid argument of :xpath() pseudo-class: '"//div[count(*)=3][img[@class][@src]][*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=0]]"' in rule:
+~www.wp.pl,wp.pl##:xpath("//div[count(*)=3][img[@class][@src]][*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=0]]")
+! Error: Invalid selector: ':xpath("//div[count(*)=1][*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=0]]")' -- Invalid argument of :xpath() pseudo-class: '"//div[count(*)=1][*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=0]]"' in rule:
+parenting.pl##:xpath("//div[count(*)=1][*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=0]]")
+! Error: Invalid selector: ':xpath("//div[count(*)=1][*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=0]]")' -- Invalid argument of :xpath() pseudo-class: '"//div[count(*)=1][*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=0]]"' in rule:
+parenting.pl##:xpath("//div[count(*)=1][*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=1]/*[count(*)=0]]")
+! Error: Invalid selector: ':xpath('//*[@align="center"][contains(text(),"reklama")]')' -- Invalid argument of :xpath() pseudo-class: ''//*[@align="center"][contains(text(),"reklama")]'' in rule:
+elka.pl,miedziowe.pl##:xpath('//*[@align="center"][contains(text(),"reklama")]')
+! Error: Invalid selector: ':xpath('//*[@align="center"]/*[@id][contains(text(),"REKLAMA")]')' -- Invalid argument of :xpath() pseudo-class: ''//*[@align="center"]/*[@id][contains(text(),"REKLAMA")]'' in rule:
+stooq.pl,stooq.com##:xpath('//*[@align="center"]/*[@id][contains(text(),"REKLAMA")]')

@@ -2,6 +2,8 @@
 opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/):others()
 ! xip.li##.form-inline:others() is excluded by "xip.li##.form-inline:others()" in exclusions.txt
 xip.li##.form-inline:others()
+! Rule "/files/adv^$image,1p,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com" converted to: "/files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com"
+/files/adv^$image,1p,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com
 ! Rule "/wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com" converted to: "/wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com"
 /wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com
 ! Rule "||websocket.*/?u=*&s=$websocket,1p,strict3p" converted to: "||websocket.*/?u=*&s=$websocket,~third-party,strict3p"
@@ -434,12 +436,10 @@ mybia4music.com##^script:has-text(pa_vc_url)
 mybia4music.com##+js(acis, pa_vc_url)
 ! Rule "myhastidl.cam##+js(set, needpop, 0)" converted to: "myhastidl.cam#%#//scriptlet('ubo-set.js', 'needpop', '0')"
 myhastidl.cam##+js(set, needpop, 0)
-! Rule "||nabzefanavari.ir/files/adv^$image,1p" converted to: "||nabzefanavari.ir/files/adv^$image,~third-party"
-||nabzefanavari.ir/files/adv^$image,1p
-! Rule "||namayesh.com/configuration/v1/video/*/lazyads^$xhr,1p" converted to: "||namayesh.com/configuration/v1/video/*/lazyads^$xmlhttprequest,~third-party"
-||namayesh.com/configuration/v1/video/*/lazyads^$xhr,1p
-! Rule "||namayesh.com/configuration/v1/video/*/log^$xhr,1p" converted to: "||namayesh.com/configuration/v1/video/*/log^$xmlhttprequest,~third-party"
-||namayesh.com/configuration/v1/video/*/log^$xhr,1p
+! Rule "||namayesh.com/configuration/v1/video/*/lazyads^$xhr" converted to: "||namayesh.com/configuration/v1/video/*/lazyads^$xmlhttprequest"
+||namayesh.com/configuration/v1/video/*/lazyads^$xhr
+! Rule "||namayesh.com/configuration/v1/video/*/log^$xhr" converted to: "||namayesh.com/configuration/v1/video/*/log^$xmlhttprequest"
+||namayesh.com/configuration/v1/video/*/log^$xhr
 ! Rule "nab-music.com##+js(aopr, vc_url)" converted to: "nab-music.com#%#//scriptlet('ubo-aopr.js', 'vc_url')"
 nab-music.com##+js(aopr, vc_url)
 ! Rule "niniban.com##.col-xs-36.col-md-24:not(:has(.gutter_xs)):style(width: 83% !important;)" converted to: "niniban.com#$?#.col-xs-36.col-md-24:not(:has(.gutter_xs)) { width: 83% !important; }"
