@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-04-03 20:28:32 CEST
+! Last modified: 2023-04-05 08:36:06 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -44,6 +44,7 @@ aftonbladet.se##main > section > div[class^="css-"]:first-child:has(img[src*="cl
 aftonbladet.se##p:has-text(/^PRESENTERAS AV$/):upward(1)
 aftonbladet.se##section > div:has(h2:has-text(/^annons/i))
 aftonbladet.se##span:has-text(/^annons/i):upward(a)
+aftonbladet.se##span:has-text(ANNONS):upward(3)
 aftonbladet.se##strong:has-text(/ANNONS/i):upward(p)
 aftonbladet.se,allas.se,baaam.se,bulletin.nu,cgi.com,elle.se,femina.se,fof.se,folkofolk.se,frida.se,hant.se,inredningsarkitektur.se,kollega.se,lchfarkivet.se,mabra.com,motherhood.se,residencemagazine.se,skyscanner.se,svenskdam.se,xlbygg.se#$#body { overflow:initial!important }
 airam.fi#$#.body-fixed { position: unset !important; }
@@ -536,8 +537,8 @@ proffs.se#$#*::-webkit-scrollbar { display: unset !important; }
 !#if !env_chromium
 temadagar.se$$script[tag-content="__ez"][max-length="262144"]
 branschkoll.se,datormagazin.se,kimura.se,polistidningen.se,rocknytt.net,samnytt.se,upphandling24.se,villalivet.se$$script[tag-content="advads"][max-length="262144"]
+|http://vimedbarn.se^$csp=upgrade-insecure-requests
 ||fast.fonts.net/lt/1.css$domain=arkitekt.se
-||vimedbarn.se^$csp=upgrade-insecure-requests
 !#endif
 !#if !env_mobile
 /assets/js/modules/plugins/smoothPageScroll
@@ -592,8 +593,8 @@ home2tiny.se#%#//scriptlet('ubo-aeld.js', '/mousewheel|DOMMouseScroll/')
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1857,7 +1858,7 @@ epochtimes.se##img[alt*="casino"]
 esportare.se##a[href*="utm_campaign"]
 etc.se##[data-controller="ad-container"], .bg-gradient-white
 etn.se,uppsalanyheter.se##.banneritem
-ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se###wsfb-container, .share-buttons
+ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se###wsfb-container, .share-buttons, .ad-space
 ettgottskratt.se,humorbibeln.se,newsner.com,sportbibeln.se##.inline-share-buttons
 eventeffect.se###secondary > .widget:nth-child(2)
 eventeffect.se,executiveeffect.se,saleseffect.se##.partnerartikel, #sidebar-ads-right, #nyhetsbrev-pp-wrapper__container
@@ -2004,7 +2005,6 @@ jaktjournalen.se##.activate-notifications-container.shown
 jaktojagare.se##div.cookie-warning-container, .mb-adarea
 jaktplay.se##.jaktplay-ad
 javligtgott.se##.jet-popup
-jusek.se##.l-advertisement, .m-adform, .m-splash
 kalender.se##.day-nav ~ a:not([href*="kalender.se"]), a:not([href*="kalender.se"]) img, div[style^="height:340px"], div[style^="height:110px"]
 kalmar.nu,se.moyens.net###rb-cookie
 kamerabild.se,mobil.se##.storan, .Partner, aside .pane-custom
@@ -2223,7 +2223,6 @@ swedroid.se##div[id$="_ad"], div[id$="_ad_mobile"], .externalTopMobile, a[href^=
 swehockey.se##[class*="-reklam"], .sif-sponsorer, .teaserblock, .commonblock a:not([href^="/"], [href*="/swehockey.se"])
 sydnarkenytt.se##.abann_wrapper, #hspalt_s1
 synonymer.se##.create-account-banner, .buy-premium-banner, div[class*="pb-"] > div.text-center
-sysidan.se##.adscolumn
 tabyallehanda.se##section[id^="Panorama"]
 tandlakartidningen.se##[class^="ad-container"], [class^="adbox-single"]
 tasteline.com##.article.related > a[href*="&utm"][target="_blank"]
@@ -2231,7 +2230,7 @@ tasteline.com##.popup-overlay
 techmag.se##.popup-overlay
 tekniksmart.se##.code-block, main > div:last-child:not(:only-child), #uid_08313ba73, #uid_ab3738b5a, .jeg_header_wrapper .jeg_midbar
 testfakta.se##.row-uppdragstest
-thelocal.se##.ad-container-section, .article-sponsored
+thelocal.se##.ad-container-section, .article-sponsored, div[data-hasbanner="yes"]
 thepattayanews.se##a.td_single_image_bg:not([href*="thepattayanews.se"])
 tidningen.djurskyddet.se##.ai-track
 tidningen.se##.sidebar .widget_widget_code
