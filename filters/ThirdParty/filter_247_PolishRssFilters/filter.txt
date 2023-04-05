@@ -4,8 +4,8 @@
 ! Codename: PASS
 ! Description: Filtry blokujące i ukrywające elementy RSS oraz resztki po ukrytych newsletterach złączonych z elementami społecznościowymi na polskojęzycznych stronach.
 ! Używanie listy „Polski Antyirytujący Dodatek Specjalny" jest jednoznaczne ze świadomością, co do jej zawartości (co blokuje itp.) a twórcy nie ponoszą odpowiedzialności za niewiedzę użytkownika.
-! Last modified: Sun, 26 Mar 2023, 18:10 UTC+02:00
-! OriginalVersion: 2023.3.6
+! Last modified: Wed, 05 Apr 2023, 00:28 UTC+02:00
+! OriginalVersion: 2023.4.0
 ! Expires: 7 days
 ! Support:
 !   Github => https://github.com/FiltersHeroes/PolishAntiAnnoyingSpecialSupplement/issues
@@ -46,6 +46,7 @@ amu.edu.pl,telewizjazary.pl##a[href$="/rss"]
 anetaduk.com,bialogard.info,epremki.com,olgasmile.com,omediach.info,przedsiebiorcy.eu,radio.opole.pl,szczecinek.com,tvpolsat.info##.fa-rss
 angela.pl##a[href="rss.php"]
 angielski-przedszkole.pl,nowyzmigrod.eu##.dd-rss-tag-icon
+annopol.info##a[href*="/rss"]
 antyweb.pl#?#.post-content > p:last-of-type:-abp-has(a[href*="news.google.com/publications/"])
 anyforum.pl,skyup.pl##.rs.sicon
 arimr.gov.pl##.soc-rss
@@ -622,7 +623,8 @@ pl##li > a > .icon-rss
 !
 !
 ! Dodatkowe reguły dla uBO & AG
-!#if (!adguard_ext_android_cb && !adguard_app_ios)
+!#if !adguard_ext_android_cb
+!#if !adguard_app_ios
 30minut.pl#$#.gora_ikony { background: #00adef !important; padding: 0 0 3px 0; }
 30minut.pl#$#.gora_ikony_rss { visibility: hidden !important; }
 antyweb.pl##.post-content > p > a[href^="https://news.google.com/publications/"]:upward(p)
@@ -648,4 +650,5 @@ wsqn.pl#$#.extralight-border { border: none !important; }
 www.lenovo.com#$#.footerForumsIcon:lang(pl) > a::before { color: white !important; content: "Z"; font-size: 18pt; font-weight: 700; position: relative; top: -3px; left: 10px; }
 www.lenovo.com#$#.footerForumsIcon:lang(pl):hover { background: #e1140a !important; }
 www.lenovo.com#$#.footerForumsIcon:lang(pl) { background: #7f7f7f !important; }
+!#endif
 !#endif
