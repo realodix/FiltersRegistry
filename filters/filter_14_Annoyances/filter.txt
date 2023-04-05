@@ -2233,6 +2233,9 @@ freundin.de,utopia.de,mein-schoener-garten.de,eveningnews24.co.uk,rollingstone.d
 !
 ! NOTE: Regular rules
 !
+candela.com#$##cliSettingsPopup { display: none !important; }
+candela.com#$#.cli-modal-backdrop { display: none !important; }
+candela.com#$#.cli-barmodal-open { overflow: auto !important; }
 fpinternational.com##.privacypolicies-com---nb-interstitial-overlay
 eshop.elkov.cz##body > div[style="bottom:0;z-index:999;"]
 cofidis.cz###cookieLB
@@ -13395,6 +13398,11 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ||geolocation.onetrust.com/cookieconsentpub/*/geo/location$xmlhttprequest,redirect-rule=noopjson
 !
 !
+! blackout with scroll locked
+!#if (adguard_ext_android_cb)
+candela.com#@##cookie-law-info-bar
+candela.com#@##cliSettingsPopup
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147417
 all4running.be#@##notice-cookie-block
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147087
@@ -19927,6 +19935,7 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+sex.com###newSite
 deli-fuzoku.jp###footerFixedBannerDiv
 dmm.co.jp###handle-name-popup
 freevpnplanet.com#%#//scriptlet('set-local-storage-item', 'showModal', 'true')
@@ -27084,6 +27093,7 @@ jiji.com,edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,
 !
 ! SECTION: Subscriptions - Regular rules
 !
+bringatrailer.com##.bat-theme-widget-constant-contact
 worldbank.org#?#.parsys > div.supergrid:has(> div.full-row-gray-components div.parsys > div.remove-padding-grid > div.redesign_newsletter)
 trans.info#?#.article-content__body p:has(> a[href="https://t.me/transinforu"])
 thesaurus.com##.crb-sailthtru-subscribe_wrapper
@@ -39884,6 +39894,8 @@ theguardian.com##.contributions__adblock
 !
 ! SECTION: Self-promo - Regular rules
 !
+w3schools.com##.showcasebootcamp
+w3schools.com##.showcasefullaccess
 unsplash.com#?#div:has(> div[class^="_"] > span > div > a[href^="/plus?referrer"])
 unsplash.com#?#div:not([class]):has(> a[href^="/plus?referrer="] > div:contains(Unsplash+))
 netaemon.com##a[href^="https://amzn.to/"]
