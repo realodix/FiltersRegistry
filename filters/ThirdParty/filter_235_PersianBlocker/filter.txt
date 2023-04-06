@@ -2,13 +2,15 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 2023-04-04
+! Last modified: 1402-01-17
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
 ! مشارکت: https://github.com/MasterKia/PersianBlocker/pulls
 !  لیستی برای برگرداندن آزادی کاربران، چون هر کاربر این آزادی را دارد که چه چیزی وارد مرورگرش می‌شود و چه چیزی وارد نمی‌شود
 !-------------------------v Experimental Generic Filters v-----------------------!
+! rouydad24.ir
+/files/fa/adv^$image,~third-party,domain=ir|asriran.com
 ! meliyat.ir, aftabnews.ir, eghtesadgardan.ir, entekhab.ir, nabzefanavari.ir, boursenews.ir, snn.ir,
 !! basirat.ir, khootoot.ir
 /files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com
@@ -430,7 +432,6 @@ abadis.ir##x
 ! https://github.com/AdguardTeam/AdguardFilters/issues/96707
 asriran.com#%#//scriptlet('ubo-no-xhr-if.js', '/fa/generate/userid')
 ! ||asriran.com/fa/generate/userid^
-||asriran.com/files/fa/adv^
 ||asriran.com/media/jwplayer//vast.js^
 ||asriran.com/media/vendors/videojs/js/videojs-preroll.js^
 ||asriran.com/media/vendors/videojs/css/videojs-preroll.css^
@@ -695,6 +696,11 @@ click.ir##.clads-inner
 ||caffecinema.com/media/banners/
 @@||caffecinema.com/media/banners/telegram-$image,~third-party
 ! >> D <<
+! https://github.com/MasterKia/PersianBlocker/issues/169
+^utm_source=dehlinks^$document,removeparam=/^utm_/
+||dehlinks.ir/image/*.gif^$image,~third-party
+dehlinks.ir###kaprila_linktable
+dehlinks.ir###mediaad-vFkp
 ! https://github.com/MasterKia/PersianBlocker/issues/140
 dailymobile.ir$$script[tag-content="vc_url"][max-length="262144"]
 !#if !cap_html_filtering
@@ -928,6 +934,7 @@ e-teb.com##.ads
 brain.be-teb.com##.medicaldirectory-sidebar:nth-of-type(5) > .claims.sidebar-content > .cbp-l-project-details-title > span
 ravan.e-teb.com##div.medicaldirectory-sidebar:nth-of-type(6) > .claims.sidebar-content > .cbp-l-project-details-title > span
 entekhab.ir##.attention > header:has-text(وبگردی):upward(.attention)
+entekhab.ir##.news-web
 ! https://github.com/AdguardTeam/AdguardFilters/issues/104314
 ||eghtesadnews.com^$removeparam=rssRedirect
 eghtesadnews.com##[href^="/advertisements/"]
@@ -1652,6 +1659,12 @@ opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/) > p
 !#endif
 omidnamehnews.ir##.adspanel
 ! >> P <<
+! https://github.com/MasterKia/PersianBlocker/issues/168
+||i1.payamekhabar.ir/dbox/photos^$image,~third-party
+payamekhabar.ir##.weblink
+!#if !env_mobile
+payamekhabar.ir#$#section.main_c { width: 76% !important; }
+!#endif
 ! https://github.com/MasterKia/PersianBlocker/issues/156
 !#if !cap_html_filtering
 public-psychology.ir#%#//scriptlet('ubo-acis.js', 'document.oncontextmenu', '', '/^data:/')
@@ -1820,7 +1833,7 @@ rahnamato.ir##.c-advertisement
 rasm.io##[class^="RequireAuth_mainBox"]
 rasm.io#$#[class*="hsCode_LimitedItem"] { -webkit-filter: none !important; filter: none !important; pointer-events: auto !important; }
 ! https://github.com/MasterKia/PersianBlocker/issues/52
-rouydad24.ir##.tabligh-logo
+! https://github.com/MasterKia/PersianBlocker/issues/163
 !#if !env_mobile
 rouydad24.ir#$#.container, .main { width: 95% !important; }
 !#endif

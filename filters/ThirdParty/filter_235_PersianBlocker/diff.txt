@@ -2,6 +2,8 @@
 opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/):others()
 ! xip.li##.form-inline:others() is excluded by "xip.li##.form-inline:others()" in exclusions.txt
 xip.li##.form-inline:others()
+! Rule "/files/fa/adv^$image,1p,domain=ir|asriran.com" converted to: "/files/fa/adv^$image,~third-party,domain=ir|asriran.com"
+/files/fa/adv^$image,1p,domain=ir|asriran.com
 ! Rule "/files/adv^$image,1p,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com" converted to: "/files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com"
 /files/adv^$image,1p,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com
 ! Rule "/wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com" converted to: "/wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com"
@@ -232,6 +234,10 @@ coffeeapps.ir##+js(acis, disableSelection, reEnable)
 coffeeapps.ir##style:has-text(@media print):remove()
 ! Rule "@@||caffecinema.com/media/banners/telegram-$image,1p" converted to: "@@||caffecinema.com/media/banners/telegram-$image,~third-party"
 @@||caffecinema.com/media/banners/telegram-$image,1p
+! Rule "^utm_source=dehlinks^$doc,removeparam=/^utm_/" converted to: "^utm_source=dehlinks^$document,removeparam=/^utm_/"
+^utm_source=dehlinks^$doc,removeparam=/^utm_/
+! Rule "||dehlinks.ir/image/*.gif^$image,1p" converted to: "||dehlinks.ir/image/*.gif^$image,~third-party"
+||dehlinks.ir/image/*.gif^$image,1p
 ! Rule "dailymobile.ir##^script:has-text(vc_url)" converted to: "dailymobile.ir$$script[tag-content="vc_url"][max-length="262144"]"
 dailymobile.ir##^script:has-text(vc_url)
 ! Rule "dailymobile.ir##+js(acis, vc_url)" converted to: "dailymobile.ir#%#//scriptlet('ubo-acis.js', 'vc_url')"
@@ -454,6 +460,10 @@ netgasht.com##+js(set, needpop, 0)
 98oldmusics.site##+js(nowoif)
 ! Rule "opizo.me##+js(aeld, blur)" converted to: "opizo.me#%#//scriptlet('ubo-aeld.js', 'blur')"
 opizo.me##+js(aeld, blur)
+! Rule "||i1.payamekhabar.ir/dbox/photos^$image,1p" converted to: "||i1.payamekhabar.ir/dbox/photos^$image,~third-party"
+||i1.payamekhabar.ir/dbox/photos^$image,1p
+! Rule "payamekhabar.ir##section.main_c:style(width: 76% !important;)" converted to: "payamekhabar.ir#$#section.main_c { width: 76% !important; }"
+payamekhabar.ir##section.main_c:style(width: 76% !important;)
 ! Unable to convert rule to AdGuard syntax: public-psychology.ir##^script[src^="data:text/javascript;base64,ZG9jdW"][src$="hdWx0KCl9fQ=="]
 public-psychology.ir##^script[src^="data:text/javascript;base64,ZG9jdW"][src$="hdWx0KCl9fQ=="]
 ! Rule "public-psychology.ir##+js(acis, document.oncontextmenu, , /^data:/)" converted to: "public-psychology.ir#%#//scriptlet('ubo-acis.js', 'document.oncontextmenu', '', '/^data:/')"
