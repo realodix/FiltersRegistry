@@ -79,6 +79,8 @@
 ! Bad: example.org###rek (should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/147672
+biedronka.pl#%#//scriptlet('remove-class', 'async-hide', 'html')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147282
 avclub.com,clickhole.com,deadspin.com,gizmodo.com,jalopnik.com,jezebel.com,kotaku.com,lifehacker.com,splinternews.com,theinventory.com,theonion.com,theroot.com,thetakeout.com#%#//scriptlet('set-constant', 'ga', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146571
@@ -342,6 +344,8 @@ biteki.com#$?#.slick-slide > div[id] + script:upward(1)  { remove: true; }
 ! Good: example.org#?#main > div.row:has(> div.ad)
 ! Bad: example.org##main > div.ad (should be in specific.txt)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/147644
+gendai.media#?#.elementSectionHeadingsWithSuffix:has(+ div[id^="taboola-below-article-thumbnails-gendai_biz-desktop"])
 ! https://github.com/AdguardTeam/AdguardFilters/issues/146864
 blog.jp#?#.plugin-memo > div.side > div > div[id^="blz_rss"]:upward(3)
 ! https://github.com/AdguardTeam/AdguardFilters/issues/79878
@@ -5553,6 +5557,7 @@ nethunt.com/api/v1/track/email/$image
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+||ads-dmp-collect.*.karrotmarket.com^
 ||uplog.inews.qq.com^
 ||log1.wtlogin.qq.com^
 ||tp.content-score.com^
@@ -41533,6 +41538,10 @@ inapps.appsflyersdk.com^
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/147672
+||googletagmanager.com/gtm.js$script,redirect=googletagmanager-gtm,domain=biedronka.pl
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||googletagmanager.com/gtm.js$domain=biedronka.pl
 ! https://github.com/AdguardTeam/AdguardFilters/issues/144978
 @@||geoloc.hurriyet.com.tr/api/country$domain=kanald.com.tr
 ! fix DL https://www.undawn.game/en/download/community/
