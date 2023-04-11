@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0411.0
+! OriginalVersion: 2023.0411.3
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -968,7 +968,6 @@ sonagitv.live##.blocks-gallery-item img[src*="/sonagi_me/sites/"]
 ||mdjournal.kr/banner/
 ||nts.go.kr/images/ad/lgnm/popup/popup_img_openinfo_high.jpg
 ||dogdrip.net/addons/ddnetspt/js/ddnetspt_ad.js
-||noonnu.cc/ad_banners/$document
 ||allyearcdn.com/img/guanggo/new/
 ||ppomppu.co.kr/inform_ad_click.php$document
 ||dogdrip.net/common/dload.php
@@ -1267,6 +1266,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+noonnu.cc##div[data-controller="font"] > .hidden
 www.dt.co.kr##iframe[src*="//io1.innorame.com/"] + .bk40
 www.dt.co.kr##center + .bk40
 www.dt.co.kr##ins[data-aiinad-inv] + .bk40
@@ -2782,9 +2782,9 @@ meeco.kr#@#.adsbygoogle
 !#if (adguard_ext_safari)
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=meeco.kr
 !#endif
+meeco.kr#%#//scriptlet('set-constant', 'adsBlocked', 'noopFunc')
 meeco.kr#$#.xe_content { opacity: 1 !important; }
 meeco.kr#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
-meeco.kr#%#//scriptlet('abort-current-inline-script', '$', '.adsbygoogle')
 meeco.kr#?#.adsbygoogle:remove()
 ! Umanle S.R.L
 @@||arca.live^$generichide
