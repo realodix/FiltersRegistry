@@ -79,6 +79,8 @@
 ! Bad: example.org###rek (should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/147936
+lightrun.com#%#//scriptlet('set-constant', 'gtag', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147672
 biedronka.pl#%#//scriptlet('remove-class', 'async-hide', 'html')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147282
@@ -40065,6 +40067,7 @@ conversions.appsflyersdk.com^
 gcdsdk.appsflyersdk.com^
 -launches.appsflyersdk.com^
 cdn-settings.appsflyersdk.com^
+dlsdk.appsflyersdk.com^
 ||adrevenue.appsflyer.com^
 ||af-event-logger.appsflyer.com^
 ||api.appsflyer.com^
@@ -40886,6 +40889,11 @@ inapps.appsflyersdk.com^
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/147936
+!#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+@@||googletagmanager.com/gtm.js$domain=lightrun.com
+@@||googletagmanager.com/gtag/js$domain=lightrun.com
+!#endif
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147872
 @@||googletagmanager.com/gtm.js$domain=computerhoy.com
 ! https://github.com/tofukko/filter/issues/83
