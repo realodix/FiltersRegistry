@@ -5550,6 +5550,10 @@ nethunt.com/api/v1/track/email/$image
 ! Blocking piwik analytics subdomain(for DNS filtering)
 |piwik.
 !
+! TODO: Move to the regular rules if there are no problems before 01.05.23
+||analytics.s3.amazonaws.com^
+||analyticsengine.s3.amazonaws.com^
+!
 ||lake.joongang.co.kr^
 ||dsas.danawa.com^
 ||t.apkpure.net^
@@ -40909,6 +40913,10 @@ inapps.appsflyersdk.com^
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/147807
+||ab.blogs.es/abtest.png?editorialRecommendations$image,redirect=2x2-transparent.png,domain=applesfera.com
+!+ PLATFORM(ios, ext_android_cb, ext_safari)
+@@||ab.blogs.es/abtest.png?editorialRecommendations$domain=applesfera.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/148203
 @@||cdn.clerk.io/clerk.js$domain=apotera.no
 ! https://github.com/AdguardTeam/AdguardFilters/issues/148089
