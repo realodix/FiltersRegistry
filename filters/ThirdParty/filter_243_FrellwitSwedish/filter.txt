@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-04-16 07:28:57 CEST
+! Last modified: 2023-04-16 16:23:59 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -299,6 +299,7 @@ kokaihop.se#$#body { overflow-y: auto !important; }
 koket.se##[class*="carousel_sponsored"]:upward([class*="carousel_item"])
 koket.se##[class*="sponsorLabel"]:upward([class*="mosaic_item_wrapper"])
 komponentkoll.se##.content > .wrap:has-text(/affiliate-samarbete/i)
+kritiker.se#%#//scriptlet('ubo-set.js', 'checkAdblocker', 'noopFunc')
 kritiker.se#%#//scriptlet('ubo-set.js', 'ispremium', 'trueFunc')
 kultwatch.se#$#.js-preloader > .document, .js-preloader > .hero-section { opacity: 1 !important; visibility: visible !important; }
 kvinnatillkvinna.se#$#html,body { scrollbar-width:initial!important }
@@ -526,6 +527,7 @@ youplay.se#%#//scriptlet('ubo-aeld.js', 'loadstart')
 ||widget.playoncenter.com/newplayer/js/pb_$redirect=noopjs,script
 ||youbora.com^*/sp.min.js$important,domain=aftonbladet.se|godare.se|svd.se|wellness.se
 ||youplay.se/*.js*ap=true$removeparam=/^ap/,script
+||youtube.com/embed/*autoplay$removeparam=autoplay,subdocument,domain=kritiker.se
 !#if env_chromium
 proffs.se#$#*::-webkit-scrollbar-thumb { background: #5e5e5e !important; border: 64px none #ffffff !important; border-radius: 0px !important; }
 proffs.se#$#*::-webkit-scrollbar { display: unset !important; }
@@ -593,8 +595,8 @@ home2tiny.se#%#//scriptlet('ubo-aeld.js', '/mousewheel|DOMMouseScroll/')
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
