@@ -4,8 +4,8 @@
 ! Codename: PASS
 ! Description: Filtry blokujące i ukrywające elementy RSS oraz resztki po ukrytych newsletterach złączonych z elementami społecznościowymi na polskojęzycznych stronach.
 ! Używanie listy „Polski Antyirytujący Dodatek Specjalny" jest jednoznaczne ze świadomością, co do jej zawartości (co blokuje itp.) a twórcy nie ponoszą odpowiedzialności za niewiedzę użytkownika.
-! Last modified: Sun, 09 Apr 2023, 00:55 UTC+02:00
-! OriginalVersion: 2023.4.1
+! Last modified: Sun, 16 Apr 2023, 20:52 UTC+02:00
+! OriginalVersion: 2023.4.2
 ! Expires: 7 days
 ! Support:
 !   Github => https://github.com/FiltersHeroes/PolishAntiAnnoyingSpecialSupplement/issues
@@ -175,6 +175,7 @@ fundacjawolnosci.org###menu-item-2756
 gazeo.pl##.rss-blue
 gazeta-mosina.pl###short_code_si_icon > a[href*="/rss"]
 gazetabaltycka.pl##.share > ul > li:nth-of-type(13)
+gazetaprawna.pl##.newsButton
 gazetaprawna.pl,naszemiasto.pl,snobka.pl##a[href$="/rss/"]
 gb.pl,wsieciprawdy.pl##.xy.socIco
 gbpizs.gov.pl##.ikona-menu.bip-rss
@@ -624,30 +625,30 @@ pl##li > a > .icon-rss
 ! Dodatkowe reguły dla uBO & AG
 !#if !adguard_ext_android_cb
 !#if !adguard_app_ios
-30minut.pl#$#.gora_ikony { background: #00adef !important; padding: 0 0 3px 0; }
-30minut.pl#$#.gora_ikony_rss { visibility: hidden !important; }
+30minut.pl#$#.gora_ikony { background: #00adef !important; padding: 0 0 3px 0 }
+30minut.pl#$#.gora_ikony_rss { visibility: hidden !important }
 antyweb.pl##.post-content > p > a[href^="https://news.google.com/publications/"]:upward(p)
 biznesinfo.pl,domekiogrodek.pl,goniec.pl,pacjenci.pl,rolnikinfo.pl,swiatgwiazd.pl,swiatsportu.pl,swiatzwierzat.pl,techgame.pl,turysci.pl,wawainfo.pl,wtv.pl,zdrogi.pl##.chakra-portal
-biznesinfo.pl,domekiogrodek.pl,goniec.pl,pacjenci.pl,rolnikinfo.pl,swiatgwiazd.pl,swiatsportu.pl,swiatzwierzat.pl,techgame.pl,turysci.pl,wawainfo.pl,wtv.pl,zdrogi.pl#$#html > body { position: static !important; overflow: auto !important; margin-right: 0 !important; }
-fcmarket.com.pl#$##container { margin-right: auto !important; }
-fcmarket.com.pl#$#.bdy { overflow: auto !important; }
+biznesinfo.pl,domekiogrodek.pl,goniec.pl,pacjenci.pl,rolnikinfo.pl,swiatgwiazd.pl,swiatsportu.pl,swiatzwierzat.pl,techgame.pl,turysci.pl,wawainfo.pl,wtv.pl,zdrogi.pl#$#html > body { position: static !important; overflow: auto !important; margin-right: 0 !important }
+fcmarket.com.pl#$##container { margin-right: auto !important }
+fcmarket.com.pl#$#.bdy { overflow: auto !important }
 fcmarket.com.pl##.newsletter_background, .nt.newsletter_toggle
 lkslodz.pl###modal, .modal-backdrop
-lkslodz.pl#$#.modal-open { overflow: auto !important; padding-right: 0 !important; }
-markoweobuwie.com.pl#$##social_block { visibility: hidden !important; }
-oknonawagrowiec.pl#$#.theiaStickySidebar > div[id^="penci-social-counter-"] { display: none !important; }
-powiatkwidzynski.pl#$#a[href*="/index.php?format=feed&type=rss"], img[src="/portal/images/wyglad/RSS-Icon.png"] { visibility: hidden !important; }
-rootblog.pl#$#a[href*="news.google.com/publications/"] b::after:matches-media((min-width: 1200px)) { content: "Chcesz być na bieżąco?..." !important; font-weight: bold; position: absolute; left: 19%; color: var(--cs-color-site-background); background: var(--cs-color-site-background); visibility: visible !important; }
-rootblog.pl#$#a[href*="news.google.com/publications/"]:matches-media((min-width: 1200px)) { visibility: hidden !important; }
+lkslodz.pl#$#.modal-open { overflow: auto !important; padding-right: 0 !important }
+markoweobuwie.com.pl#$##social_block { visibility: hidden !important }
+oknonawagrowiec.pl#$#.theiaStickySidebar > div[id^="penci-social-counter-"] { display: none !important }
+powiatkwidzynski.pl#$#a[href*="/index.php?format=feed&type=rss"], img[src="/portal/images/wyglad/RSS-Icon.png"] { visibility: hidden !important }
+rootblog.pl#$#a[href*="news.google.com/publications/"] b::after:matches-media((min-width: 1200px)) { content: "Chcesz być na bieżąco?..." !important; font-weight: bold; position: absolute; left: 19%; color: var(--cs-color-site-background); background: var(--cs-color-site-background); visibility: visible !important }
+rootblog.pl#$#a[href*="news.google.com/publications/"]:matches-media((min-width: 1200px)) { visibility: hidden !important }
 rootblog.pl#$#@media all and (min-width: 1200px) { a[href*="news.google.com/publications/"] b { content: "Chcesz być na bieżąco?..." !important; font-weight: bold; position: absolute; left: 19%; color: var(--cs-color-site-background); background: var(--cs-color-site-background); visibility: visible !important; } }
 rootblog.pl#$#@media all and (min-width: 1200px) { a[href*="news.google.com/publications/"] { visibility: hidden !important; } }
-twoj-kleszczow.pl#$##rss > p::after { content: "| Subkrybuj kanał" !important; position: relative !important; left: -89px; margin-right: -90px; color: #ededed;background: #ededed; }
+twoj-kleszczow.pl#$##rss > p::after { content: "| Subkrybuj kanał" !important; position: relative !important; left: -89px; margin-right: -90px; color: #ededed;background: #ededed }
 um.kielce.pl#%#//scriptlet('ubo-ra.js', 'href|title', 'map > area[alt="RSS"]', 'stay')
 um.kielce.pl#$?#map > area[alt="RSS"] { remove: true; }
 um.kielce.pl$$map area[alt="RSS"]
-wsqn.pl#$#.extralight-border { border: none !important; }
-www.lenovo.com#$#.footerForumsIcon:lang(pl) > a::before { color: white !important; content: "Z"; font-size: 18pt; font-weight: 700; position: relative; top: -3px; left: 10px; }
-www.lenovo.com#$#.footerForumsIcon:lang(pl):hover { background: #e1140a !important; }
-www.lenovo.com#$#.footerForumsIcon:lang(pl) { background: #7f7f7f !important; }
+wsqn.pl#$#.extralight-border { border: none !important }
+www.lenovo.com#$#.footerForumsIcon:lang(pl) > a::before { color: white !important; content: "Z"; font-size: 18pt; font-weight: 700; position: relative; top: -3px; left: 10px }
+www.lenovo.com#$#.footerForumsIcon:lang(pl):hover { background: #e1140a !important }
+www.lenovo.com#$#.footerForumsIcon:lang(pl) { background: #7f7f7f !important }
 !#endif
 !#endif
