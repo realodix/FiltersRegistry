@@ -2805,7 +2805,6 @@ us6odtasve.ru
 ||123fvd.com^$third-party
 ||1bestgoods.com^$third-party
 ||1biznes.net$third-party
-||covivado.club^$third-party
 ||1pop.ru^$third-party
 ||1rtl.info^$third-party
 ||newdomain.center^$third-party
@@ -6150,6 +6149,7 @@ all-episodes.one,all-episodes.club#%#//scriptlet("abort-on-property-read", "perR
 ! sdamgia.ru - adb detection
 sdamgia.ru#$#.googlead.pub_300x250.pub_300x250m.pub_728x90.text-ad.textAd.text_ad.text_ads.text-ads.text-ad-links { display: block !important; }
 !#if (adguard_ext_safari || adguard_app_ios || adguard_ext_android_cb)
+@@||yandex.ru/ads/system/context.js$domain=vpr.sdamgia.ru
 sdamgia.ru#@#.googlead
 sdamgia.ru#@#.pub_300x250
 sdamgia.ru#@#.pub_300x250m
@@ -7626,6 +7626,8 @@ fishki.net,hronika.info,meta.ua$$script[tag-content="window.AD_DOMAIN_URL_SYS"][
 !------- JS ------------
 !-----------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/148496
+viks.tv#%#//scriptlet('prevent-window-open')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/141785
 !+ NOT_PLATFORM(windows, mac, android)
 e.mail.ru,octavius.mail.ru#%#//scriptlet('trusted-replace-xhr-response', '/\[{"json":{"result":{"status":200\,"body":{"direct".+/', '/\[{"json":{"result":{"status":200\,"body":{"direct":{}}}}}\]/', '/api/v1')
@@ -9516,6 +9518,7 @@ delo-vcusa.ru,tolknews.ru,gorodche.ru,smartpress.by,raenza.ru,eadaily.com,zakon.
 !
 !
 !
+||yandex.ru/ads/system/context.js$script,xmlhttprequest,redirect-rule=noopjs
 itc.ua##.course-widget-new
 dumskaya.net#?#body > div.hideprint:has(> div > noindex > a[href^="/ad/"])
 .ru/br/$domain=kushva-online.ru|motorpage.ru
