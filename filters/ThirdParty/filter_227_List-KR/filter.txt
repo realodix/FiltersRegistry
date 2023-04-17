@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0417.7
+! OriginalVersion: 2023.0417.11
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -447,6 +447,9 @@ sonagitv.live##.blocks-gallery-item img[src*="/sonagi_me/sites/"]
 /data/banner.json?
 /ad-manager.min.js
 !
+/^https?:\/\/adsenseforum[0-9]*\.co\.kr\/skin\/board\/WS_Board_QA.+\.png$/$match-case,domain=adsenseforum.co.kr|adsenseforum2.co.kr
+||avdbs.com/*/img/banner/
+||avdbs.com/*/img/aashop/
 ||live.afreecatv.com/api/get_ad.php
 /^https:\/\/soxak\.com\/system\/covers\/[0-9]+\/[0-9]+\/[0-9]+\/[a-z0-9]+\/original_/$domain=soxak.com,image
 /^https:\/\/soxak\.com\/images\/([a-z]+_)?banner(_[a-z_]+)?\./$domain=soxak.com
@@ -1624,7 +1627,7 @@ m.diningcode.com##div[class$="-ad"] ~ .section.naver
 diningcode.com##.MapMain > #map ~ div[class]:not([id]):not([style])
 koya-culture.com##div[itemprop="articleBody"] ~ div[style]
 eroun.net##body > div[style]:not([class]):not([id])
-ilemonde.com,mjmedi.com,eroun.net###layer-popups
+digitaltoday.co.kr,ilemonde.com,mjmedi.com,eroun.net###layer-popups
 hogaeng.co.kr##div[id^="container_"] .slide_box
 shopping.interpark.com##.contentsWrap #idRecommendWrap
 zdnet.co.kr##div[class*="_bn_"][style]
@@ -2826,6 +2829,7 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
 !
+avdbs.com#%#//scriptlet('abort-on-property-read', 'ad_blk')
 genshin.gamedot.org#%#//scriptlet('prevent-setTimeout', 'blockCheck2022')
 @@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=search.shopping.naver.com
 @@||ssl.pstatic.net/tveta/libs/glad/prod/*/gfp-sdk.js$script,domain=search.shopping.naver.com
@@ -2951,6 +2955,7 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+avdbs.com#@#.ad-btn
 @@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=search.shopping.naver.com
 @@||ssl.pstatic.net/tveta/libs/glad/prod/*/gfp-sdk.js$script,domain=search.shopping.naver.com
 @@||gfp.veta.naver.com/call?u=pc_nshop_ch1$xmlhttprequest,domain=search.shopping.naver.com
