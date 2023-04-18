@@ -79,6 +79,9 @@
 ! Bad: example.org###rek (should be in specific.txt)
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/148618
+cerbahealthcare.it#%#//scriptlet('set-constant', 'pa', 'emptyObj')
+cerbahealthcare.it#%#//scriptlet('set-constant', 'pa.setConfigurations', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147936
 lightrun.com#%#//scriptlet('set-constant', 'gtag', 'noopFunc')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147672
@@ -46620,6 +46623,9 @@ inapps.appsflyersdk.com^
 !#endif
 !
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/148618
+!+ PLATFORM(ios, ext_safari, ext_android_cb)
+@@||tag.aticdn.net/piano-analytics.js$domain=cerbahealthcare.it
 ! https://github.com/AdguardTeam/AdguardFilters/issues/148591
 @@||adobe.tt.omtrdc.net/rest/v1/delivery?client=adobe&sessionId=$domain=acrobat.adobe.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147807
