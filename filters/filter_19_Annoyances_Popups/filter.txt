@@ -3435,6 +3435,9 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+skoob.com.br#$#.modal[style^="z-index:"] { display: none !important; }
+skoob.com.br#$#.modal-backdrop { display: none !important; }
+skoob.com.br#$#body.modal-open { overflow: auto !important; }
 snabi.jp##.float-banner
 orfogrammka.ru###cabinet-static-notification-dialog
 tiktok.com##.tiktok-bu8whx-DivBannerContainer
@@ -9388,7 +9391,14 @@ metrolyrics.com###videoContainer
 ! NOTE: Mobile sites only end ⬆️
 ! !SECTION: Popups - Mobile sites only
 !
-
+!
+! Special rules for AdGuard websites' test pages. The only purpose of these
+! rules is to make test pages work so that users could verify that AdGuard
+! is properly working.
+!
+!+ NOT_OPTIMIZED
+adguard.com,adguard.app##.hello_from_adguard_annoyances_popups
+!
 !
 ! This section contains the list of rules that fix the problems caused by incorrect blocking of in-page popups.
 ! At the bottom of this file, you can find the allowlist that fixes issues caused by the rules from this file.
@@ -10637,6 +10647,8 @@ jiji.com,edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,
 !
 ! SECTION: Subscriptions - Regular rules
 !
+baby.ru##a[href^="https://t.me/babyrutelegram?"]
+businessinsider.com.pl##.newsletterHeader
 office-watch.com##.mo-has-email
 office-watch.com##.slide-in-container
 fashionsnap.com#?#div[id^="sideTop_"] ~ div[class]:has(> section > h2 > span[class]:contains(NEWS LETTER))

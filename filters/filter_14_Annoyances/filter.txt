@@ -5652,7 +5652,7 @@ bremerhaven.de#$#body { overflow: auto !important; }
 bremerhaven.de#$#.cookie-banner ~ div.modal-backdrop { display: none !important; }
 bremerhaven.de#$#.cookie-banner:not(body):not(html) { display: none !important; }
 vr.com.br##.lumis-service-privacyterm
-marisa.com.br##.container-lgpd
+skoob.com.br,marisa.com.br##.container-lgpd
 divan.tv##.privacy-policy-message__wrapper
 10bis.co.il,just-eat.ch,just-eat.dk,just-eat.es,just-eat.fr,just-eat.ie,just-eat.it,just-eat.no,just-eat.uk,lieferando.at,lieferando.de,menulog.au,menulog.nz,pyszne.pl,takeaway.com,thuisbezorgd.nl##div[data-qa="privacy-settings"]
 lojasrenner.com.br##div[class^="ReactFooterCivilMark_notification"]
@@ -13479,7 +13479,14 @@ m.timesofindia.com,m-timesofindia-com.cdn.ampproject.org$$amp-consent
 ! NOTE: Specific rules (replace) end ⬆️
 ! !SECTION: Cookies - Specific rules (replace)
 !
-
+!
+! Special rules for AdGuard websites' test pages. The only purpose of these
+! rules is to make test pages work so that users could verify that AdGuard
+! is properly working.
+!
+!+ NOT_OPTIMIZED
+adguard.com,adguard.app##.hello_from_adguard_annoyances_cookies
+!
 !
 ! This section contains the list of rules that fix incorrect blocking of cookie notifications by generic rules. Rules should be domain-specific.
 !
@@ -20072,6 +20079,9 @@ sanalkurs.net###toast-container > .toast-error[aria-live="assertive"]
 !
 ! SECTION: Popups - Regular rules
 !
+skoob.com.br#$#.modal[style^="z-index:"] { display: none !important; }
+skoob.com.br#$#.modal-backdrop { display: none !important; }
+skoob.com.br#$#body.modal-open { overflow: auto !important; }
 snabi.jp##.float-banner
 orfogrammka.ru###cabinet-static-notification-dialog
 tiktok.com##.tiktok-bu8whx-DivBannerContainer
@@ -26025,7 +26035,14 @@ metrolyrics.com###videoContainer
 ! NOTE: Mobile sites only end ⬆️
 ! !SECTION: Popups - Mobile sites only
 !
-
+!
+! Special rules for AdGuard websites' test pages. The only purpose of these
+! rules is to make test pages work so that users could verify that AdGuard
+! is properly working.
+!
+!+ NOT_OPTIMIZED
+adguard.com,adguard.app##.hello_from_adguard_annoyances_popups
+!
 !
 ! This section contains the list of rules that fix the problems caused by incorrect blocking of in-page popups.
 ! At the bottom of this file, you can find the allowlist that fixes issues caused by the rules from this file.
@@ -27274,6 +27291,8 @@ jiji.com,edp24.co.uk,technologyreview.com,inews.co.uk,nordbayern.de,thelocal.ch,
 !
 ! SECTION: Subscriptions - Regular rules
 !
+baby.ru##a[href^="https://t.me/babyrutelegram?"]
+businessinsider.com.pl##.newsletterHeader
 office-watch.com##.mo-has-email
 office-watch.com##.slide-in-container
 fashionsnap.com#?#div[id^="sideTop_"] ~ div[class]:has(> section > h2 > span[class]:contains(NEWS LETTER))
@@ -35394,7 +35413,14 @@ trilltrill.jp#$#.header-W2ABanner ~ header { height: 50px !important; }
 ! NOTE: Mobile sites only end ⬆️
 ! !SECTION: Mobile apps - Mobile sites only
 !
-
+!
+! Special rules for AdGuard websites' test pages. The only purpose of these
+! rules is to make test pages work so that users could verify that AdGuard
+! is properly working.
+!
+!+ NOT_OPTIMIZED
+adguard.com,adguard.app##.hello_from_adguard_annoyances_mobileappbanners
+!
 !
 ! This section contains the list of rules that fix incorrect blocking of mobile app banners. Rules should be domain-specific.
 !
@@ -38591,7 +38617,14 @@ instiz.net#$?#.backlogo { background-image: none !important; }
 ! NOTE: Other annoyances - Social end ⬆️
 ! !SECTION: Other annoyances - Social
 !
-
+!
+! Special rules for AdGuard websites' test pages. The only purpose of these
+! rules is to make test pages work so that users could verify that AdGuard
+! is properly working.
+!
+!+ NOT_OPTIMIZED
+adguard.com,adguard.app##.hello_from_adguard_annoyances_other
+!
 !
 ! This is section contains the list of rules that block websites' own banners at our discretion.
 !
@@ -44199,6 +44232,8 @@ blog.livedoor.jp##div[id^="shitarss_title_"]
 !
 ! NOTE: Blogroll third-party sites
 !
+kimootoko.net###custom_html-61
+kimootoko.net###custom_html-61 + hr
 news30over.com##.topbox
 news30over.com##.toptitle
 kininaru-geinou-m.blog.jp##.baaa
@@ -45895,4 +45930,11 @@ hromadske.ua#$#body { overflow: visible !important; }
 ! NOTE: Widgets - Another end ⬆️
 ! !SECTION: Widgets - Another
 !
-
+!
+! Special rules for AdGuard websites' test pages. The only purpose of these
+! rules is to make test pages work so that users could verify that AdGuard
+! is properly working.
+!
+!+ NOT_OPTIMIZED
+adguard.com,adguard.app##.hello_from_adguard_annoyances_widgets
+!

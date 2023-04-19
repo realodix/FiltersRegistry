@@ -8042,6 +8042,8 @@ disk.yandex.*#%#//scriptlet('remove-class', 'has-fullscreen-banner','.public__ro
 !------- CSS -----------
 !-----------------------
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/148768
+baby.ru#$#.promo-background { padding-top: 0 !important; }
 ! https://github.com/AdguardTeam/AdguardFilters/issues/147317
 dostfilms.site#$#body { background: none !important; }
 dostfilms.site#$#header.header { margin-top: 0 !important; }
@@ -9622,6 +9624,12 @@ kadrovik01.com.ua,kom-dir.ru,gd.ru,buhsoft.ru,dirklinik.ru,fd.ru,business.ru,pro
 !
 !
 !
+baby.ru##div[class*="rennab-"]
+baby.ru###post-promo
+baby.ru##.format_video_comment
+baby.ru##.adfox-video-desk
+baby.ru##.grid > div[style^="height: 250px;"]
+yapx.ru##a[href^="https://amazing-online.com/"]
 ktv-ray.ru##.container-adr
 ktv-ray.ru##.br-slideshow
 ktv-ray.ru##.squad-br
@@ -19721,12 +19729,13 @@ liveresult.ru##iframe[src^="https://static.liveresult.ru/files/fonbet/"]
 ||static.liveresult.ru/files/fonbet/
 ||avatars.mds.yandex.net/get-adfox-content/$domain=liveresult.ru
 !
-2ip.ru##li:has(> a[href="https://finevpn.org/"])
-2ip.ru##a[href="https://finevpn.org/"]
-2ip.ru##.ip-links-container > div[class*=" "]:not(.ip-links_speed)
-2ip.io##li:has(> a[href="https://vpn.rent"])
-2ip.io##a[href="https://vpn.rent"]
-2ip.io##a[href^="https://2ip.io/?area=adBanner"]
+2ip.io,2ip.ru##.data_table > div.data_item a.alert-link
+2ip.io,2ip.ru##li:has(> a[href="https://finevpn.org/"])
+2ip.io,2ip.ru##a[href="https://finevpn.org/"]
+2ip.io,2ip.ru##.ip-links-container > div[class*=" "]:not(.ip-links_speed)
+2ip.io,2ip.ru##li:has(> a[href="https://vpn.rent"])
+2ip.io,2ip.ru##a[href="https://vpn.rent"]
+2ip.io,2ip.ru##a[href^="https://2ip.io/?area=adBanner"]
 2ip.io,2ip.ru##div[id^=div-gpt-ad]
 ||2ip.ru/banners/
 2ip.io,2ip.ru##.ip-links > div.ip-links_item:first-child
@@ -21176,7 +21185,14 @@ rg.ru##main div[class^="Section_sectionContent"] > div[class^="EditorialPageArti
 rg.ru##.page_article
 rg.ru##div[class^="NewsFeedList_banner"]
 !
-
+!
+! Special rules for AdGuard websites' test pages. The only purpose of these
+! rules is to make test pages work so that users could verify that AdGuard
+! is properly working.
+!
+!+ NOT_OPTIMIZED
+adguard.com,adguard.app##.hello_from_adguard_russian
+!
 !-------------------------------------------------------------------------------!
 !------------------ Content replacement rules ----------------------------------!
 !-------------------------------------------------------------------------------!
@@ -22900,8 +22916,6 @@ i.ua$$script[tag-content="var branding"][max-length="2000"]
 !
 !
 sport.novyny.live##.fund
-2ip.ua##a[href^="//hidemy.name/"]
-2ip.ua##.ipblockmap > div[class^="ip"] > div[class^="ip"][class*=" ip"]:not(.ip, .ipv6)
 rozetka.com.ua##.layout > rz-widget-goods
 unian.ua##div[style^="min-height: 250px;"]
 unian.ua##div[style^="height:260px;"]
@@ -23043,7 +23057,6 @@ gazeta.ua##.w-zerna-pravdy
 glavcom.ua##.banner_news
 unian.ua##.article  > div.bordered-block
 okino.ua##.preload-banner
-2ip.ua##.hmi-mini
 segodnya.ua##.advertising__container
 2ip.ua##.menu_banner
 womo.ua##.partners-news-box
@@ -24292,7 +24305,14 @@ obs.in.ua##.bannergroup
 24tv.ua##div[class^="b_reklama"]
 24tv.ua##.inner-wrap > section[class="nav-additional"]
 kafa-info.com.ua,konkurent.in.ua,niknews.mk.ua,novosti.dn.ua###banner
-
+!
+! Special rules for AdGuard websites' test pages. The only purpose of these
+! rules is to make test pages work so that users could verify that AdGuard
+! is properly working.
+!
+!+ NOT_OPTIMIZED
+adguard.com,adguard.app##.hello_from_adguard_ukrainian
+!
 !
 ! This section contains the list of the content replacement rules that block ads. Rules must be domain-specific.
 !
