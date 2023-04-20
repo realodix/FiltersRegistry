@@ -4,8 +4,8 @@ opizo.me##.text-left:has-text(/ثانیه|رد تبلیغ/):others()
 xip.li##.form-inline:others()
 ! Rule "/files/fa/adv^$image,1p,domain=ir|asriran.com|parsine.com" converted to: "/files/fa/adv^$image,~third-party,domain=ir|asriran.com|parsine.com"
 /files/fa/adv^$image,1p,domain=ir|asriran.com|parsine.com
-! Rule "/files/adv^$image,1p,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com" converted to: "/files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com"
-/files/adv^$image,1p,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com
+! Rule "/files/adv^$image,1p,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com|khordad.news" converted to: "/files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com|khordad.news"
+/files/adv^$image,1p,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com|khordad.news
 ! Rule "/wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com" converted to: "/wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com"
 /wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com
 ! Rule "||websocket.*/?u=*&s=$websocket,1p,strict3p" converted to: "||websocket.*/?u=*&s=$websocket,~third-party,strict3p"
@@ -190,6 +190,10 @@ aftabir.com##.carousel-inner > .item > .row > .col-md-8:has(article > a[href*="a
 alaatv.com##+js(acis, watermarkAdData)
 ! Rule "apktops.ir##.apktops-slider-section ul > li:not(:has(a[href="https://t.me/+UgVXT9YqXOs0MQTy"])):remove()" converted to: "apktops.ir#$?#.apktops-slider-section ul > li:not(:has(a[href="https://t.me/+UgVXT9YqXOs0MQTy"])) { remove: true; }"
 apktops.ir##.apktops-slider-section ul > li:not(:has(a[href="https://t.me/+UgVXT9YqXOs0MQTy"])):remove()
+! Rule "||bazimag.com/images/*.gif^$image,1p" converted to: "||bazimag.com/images/*.gif^$image,~third-party"
+||bazimag.com/images/*.gif^$image,1p
+! Rule "||bazimag.com/images/Advertise^$image,1p" converted to: "||bazimag.com/images/Advertise^$image,~third-party"
+||bazimag.com/images/Advertise^$image,1p
 ! Rule "bandmoviez.one##^script:has-text(protoUrl)" converted to: "bandmoviez.one$$script[tag-content="protoUrl"][max-length="262144"]"
 bandmoviez.one##^script:has-text(protoUrl)
 ! Rule "bandmoviez.one##+js(acis, document.onclick, checkCookie)" converted to: "bandmoviez.one#%#//scriptlet('ubo-acis.js', 'document.onclick', 'checkCookie')"
@@ -446,6 +450,8 @@ mybia4music.com##^script:has-text(pa_vc_url)
 mybia4music.com##+js(acis, pa_vc_url)
 ! Rule "myhastidl.cam##+js(set, needpop, 0)" converted to: "myhastidl.cam#%#//scriptlet('ubo-set.js', 'needpop', '0')"
 myhastidl.cam##+js(set, needpop, 0)
+! Rule "*$script,3p,domain=nex11music.ir" converted to: "*$script,third-party,domain=nex11music.ir"
+*$script,3p,domain=nex11music.ir
 ! Rule "||namayesh.com/configuration/v1/video/*/lazyads^$xhr" converted to: "||namayesh.com/configuration/v1/video/*/lazyads^$xmlhttprequest"
 ||namayesh.com/configuration/v1/video/*/lazyads^$xhr
 ! Rule "||namayesh.com/configuration/v1/video/*/log^$xhr" converted to: "||namayesh.com/configuration/v1/video/*/log^$xmlhttprequest"

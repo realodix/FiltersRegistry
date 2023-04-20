@@ -2,7 +2,7 @@
 ! Title: PersianBlocker
 ! Description: سرانجام، یک لیست بهینه و گسترده برای مسدودسازی تبلیغ ها و ردیاب ها در سایت های پارسی زبان!
 ! Expires: 2 days
-! Last modified: 1402-01-25
+! Last modified: 1402-01-31
 ! Homepage: https://github.com/MasterKia/PersianBlocker
 ! License: AGPLv3 (https://github.com/MasterKia/PersianBlocker/blob/main/LICENSE)
 ! مشکل/پیشنهاد: https://github.com/MasterKia/PersianBlocker/issues
@@ -13,7 +13,7 @@
 /files/fa/adv^$image,~third-party,domain=ir|asriran.com|parsine.com
 ! meliyat.ir, aftabnews.ir, eghtesadgardan.ir, entekhab.ir, nabzefanavari.ir, boursenews.ir, snn.ir,
 !! basirat.ir, khootoot.ir
-/files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com
+/files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com|khordad.news
 ! digiro.ir, gahar.ir, jobsacademy.ir, mihand.ir, modirnameh.ir, pedal.ir, softsaaz.ir, technet24.ir
 /wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com
 ! https://publicwww.com/websites/%22var+socketAccess+%3D%22/
@@ -546,6 +546,11 @@ apktops.ir##.post-article > .content > .row .entry-content:has-text(اسپاتی
 apktops.ir##[id^="linkcat"] > ul > li:not(:has(a[href*="apktops.ir"]))
 apktops.ir##.asiatech
 ! >> B <<
+! https://github.com/MasterKia/PersianBlocker/issues/173
+||bazimag.com/images/*.gif^$image,~third-party
+||bazimag.com/images/Advertise^$image,~third-party
+bazimag.com###middlead
+bazimag.com###yt_spotlight3 .klatest-items-div > .modtitle:has-text(تبلیغات متنی):upward(.klatest-items-div)
 ! https://github.com/MasterKia/PersianBlocker/issues/123
 blogsazan.com###macy-container > article > .articlebox > a[href*="/blogsazan.com/mag/reportage"]:upward(article)
 ! https://github.com/MasterKia/PersianBlocker/issues/124
@@ -856,7 +861,8 @@ digikala.com##[class*="VerticalProductCard"]:has(.mr-auto.text-caption.ai-center
 digikala.com##[class*="ProductContent"]:has(.mr-auto.text-caption.ai-center)
 !#if env_mobile
 digikala.com##.flex-wrap > .border-b:has(.mr-auto.text-caption.ai-center)
-digikala.com##[class*="BaseLayoutStaticFooterAppInstall"]
+digikala.com##div[class^="product-list_ProductList__item"] .text-caption.mr-auto:upward(div[class^="product-list_ProductList__item"])
+digikala.com##div[class*="BaseLayoutStaticFooterAppInstall"]
 !#endif
 ! digikala.com##[class*="fakeBadge"]:style(font-size: 1.4rem !important;)
 ! digikala.com##.text-caption-strong:has-text(غیراصل):style(font-size: 1.9rem !important; border-radius: 12px !important; color: var(--color-hint-text-caution) !important; background-color: rgba(var(--color-hint-object-caution-rgb),.2); padding-right: calc(2 * var(--spacing-base)) !important; padding-left: calc(2 * var(--spacing-base)) !important; margin-bottom: calc(1 * var(--spacing-base)) !important;)
@@ -886,6 +892,9 @@ download.ir##.parsi-ads:upward(.widget)
 download.ir##aside > .widget .textwidget-title:has-text(تبلیغات):upward(.widget)
 download.ir##aside img[alt="جایگاه تبلیغات"]
 ! >> E <<
+! https://github.com/MasterKia/PersianBlocker/issues/174
+emojo.ir##.emojo-ad
+emojo.ir##.pzbkcvuqrn
 ! https://github.com/MasterKia/PersianBlocker/issues/122
 ||elmevarzesh.com/loader.js^$script
 elmevarzesh.com###middle a > img[title*="تبلیغات"]
@@ -1588,6 +1597,9 @@ myhastidl.cam#%#//scriptlet('ubo-set.js', 'needpop', '0')
 myhastidl.cam##center:nth-of-type(2)
 myhastidl.cam##.col-xs-12.col-md-6.main-sidebar > center
 ! >> N <<
+||oscaranimation.in^$all
+*$script,third-party,domain=nex11music.ir
+nex11music.ir##.side_left > .side > .title:has-text(تبلیغات متنی):upward(.side)
 ! https://github.com/MasterKia/PersianBlocker/issues/148
 nabzefanavari.ir##.txt-box:has(> .txt_adv_content)
 ||namayesh.com/assets/ads^$image
