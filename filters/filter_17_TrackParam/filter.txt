@@ -502,7 +502,7 @@ $removeparam=afid,domain=123chat.jp|kanochat.jp|live.fc2.com
 ||shopee.ph^$removeparam=stm_medium
 ||shopee.ph^$removeparam=stm_source
 ! https://github.com/AdguardTeam/AdguardFilters/issues/131093
-||adguard.com^$removeparam=clid
+||adguard.$removeparam=clid
 ! Cognativex
 ||campaigns-serving.cognativex.com^$xmlhttprequest,removeparam=history_postids
 ||campaigns-serving.cognativex.com^$xmlhttprequest,removeparam=device_code
@@ -1146,6 +1146,9 @@ $removeparam=a_aid,domain=expressvpn.com|vpnarea.com
 ! ||amazon.*$removeparam=ie
 ! https://github.com/AdguardTeam/AdguardFilters/issues/89163
 ! ||amazon.*/message-us$removeparam=origRef
+! https://github.com/AdguardTeam/AdguardFilters/issues/148958
+! Breaks navigation and removes choosed seller id on the item's page
+! ||amazon.*$removeparam=smid
 !
 ! ||amazon.*$removeparam=sr - breaks automatic jump to review details
 ! ||amazon.*$removeparam=s - breaks URLs which includes it to sort
@@ -1187,7 +1190,6 @@ $removeparam=a_aid,domain=expressvpn.com|vpnarea.com
 ||amazon.*$removeparam=qid
 ||amazon.*$removeparam=rdc
 ||amazon.*$removeparam=refRID
-||amazon.*$removeparam=smid
 ||amazon.*$removeparam=tag
 ||amazon.*$removeparam=ts_id
 ||amazon.*$removeparam=visitId
