@@ -1,7 +1,7 @@
 !
 ! Title: Frellwit's Swedish Filter
 ! Expires: 4 days (update frequency)
-! Last modified: 2023-04-19 08:02:57 CEST
+! Last modified: 2023-04-21 09:46:22 CEST
 ! Homepage: https://github.com/lassekongo83/Frellwit-s-filter-lists
 ! Description: A filter for uBlock Origin that aims to remove regional Swedish ads, tracking, annoyances, scams + badware, and unnecessary bloat.
 ! License: GPLv3
@@ -83,6 +83,7 @@ arkitektur.se##.Entry-sponsored:upward(article)
 arvikamagasinet.se,barometern.se,blt.se,bt.se,cafe.se,kalmarposten.se,klt.nu,kristianstadsbladet.se,lokalti.se,meraosterlen.se,mitti.se,nsk.se,olandsbladet.se,praktisktbatagande.se,smp.se,sydostran.se,trelleborgsallehanda.se,ut.se,vasterastidning.se,vaxjobladet.se,viivilla.se,vxonews.se,ystadsallehanda.se#%#//scriptlet('ubo-aeld.js', 'scroll', 'helpers.scroll(id)')
 aurumforum.se##span:has-text(Annons):upward(2)
 autonytt.se##.label:has-text(/sponsrad/i):upward(a)
+autonytt.se##a[href*="casino"]:upward(.sidebar_content)
 bandyfeber.com##.slide-entry-excerpt:has-text(/annons:/i):upward(.avia-content-slider)
 bandyfeber.com##a[href*="/annons-"]:upward(article)
 barnistan.se##.label:has-text(/sponsra/i):upward(.post-teaser)
@@ -540,7 +541,7 @@ proffs.se#$#*::-webkit-scrollbar { display: unset !important; }
 temadagar.se$$script[tag-content="__ez"][max-length="262144"]
 branschkoll.se,datormagazin.se,kimura.se,polistidningen.se,rocknytt.net,samnytt.se,upphandling24.se,villalivet.se$$script[tag-content="advads"][max-length="262144"]
 |http://vimedbarn.se^$csp=upgrade-insecure-requests
-||fast.fonts.net/lt/1.css$domain=arkitekt.se
+||fast.fonts.net/lt/1.css$domain=arkitekt.se|axess.se
 !#endif
 !#if !env_mobile
 /assets/js/modules/plugins/smoothPageScroll
@@ -595,8 +596,8 @@ home2tiny.se#%#//scriptlet('ubo-aeld.js', '/mousewheel|DOMMouseScroll/')
 ###cookiejar
 ###cookielawwarning
 ###cookieMsgBlock
-###CookieNotice
 ###cookieNotice
+###CookieNotice
 ###cookies-acceptance .alert.bottom
 ###cookiesInfo
 ###dialog-eu-cookie-law
@@ -1243,8 +1244,8 @@ home2tiny.se#%#//scriptlet('ubo-aeld.js', '/mousewheel|DOMMouseScroll/')
 /news55-ga.js
 /noview.$script,domain=gofm.se|trafikdirekt.se|trafikradion.se
 /nyhetsspalt_banner_js
-/omniture/s_code.js$domain=~atgplay.se
-/OneSignalSDK.js$domain=samnytt.se
+/omniture/s_code.js
+/OneSignalSDK.js$domain=arvikamagasinet.se|samnytt.se
 /OneSignalSDKWorker$script
 /packs/consent$domain=hemnet.se
 /pagead$domain=horoskoptid.se|vilaser.se
@@ -1701,7 +1702,6 @@ arbetet.se,fastighetsfolket.se,handelsnytt.se,ka.se,malarnasfacktidning.se,sekot
 arjeplognytt.se##.metaslider
 arjeplognytt.se,autopower.se,lindenytt.com,poolforum.se,varmepumpsforum.com##a[target="_blank"] img[alt]
 arkenzoo.se,mustijamirri.fi,petenkoiratarvike.com,vetzoo.se##div.privacy_headsup_overlay
-arkitekt.se##.Cookie
 arkitekten.se##div[id^="consent-"]
 arkitekten.se,chef.se,elinstallatoren.se,natursidan.se,svd.se,svenskfarmaci.se,vvsforum.se##.Ad
 arkitektur.se##[class*="panorama"]
@@ -1710,8 +1710,6 @@ arvikamagasinet.se##.sticky-sidebar .widget_media_image, #text-4, #block-121
 arvikanyheter.se,dalslanningen.se,filipstadstidning.se,fryksdalsbygden.se,hjotidning.se,kt-kuriren.se,kt.se,mariestadstidningen.se,nkp.se,nlt.se,nwt.se,provinstidningen.se,saffletidningen.se,sla.se,vf.se##[data-testid="ad-area"], footer + div.shadow-lg.fixed
 assistanskoll.se###annons
 atl.nu,landlantbruk.se###didomi-host, a[href*="/atl-tv-annons/"], [class^="Ad_"]
-atvmag.se,snowmobile.se##.location-header_before
-atvmag.se,snowmobile.se##.more-stories
 autolife.se###Banners
 automation.se,batliv.se,borattforum.se,brollopsmagasinet.se,bussmagasinet.se,elinor.se,em-fotboll.se,fotbollsresultat.com,globalpolitics.se,husbyggaren.se,nyhetersto.se,svenskbyggtidning.se,vildmarken.se,vm-fotboll.se##a.gofollow[data-track]
 automation.se,metalcentral.net,transportnytt.se,verkstadstidningen.se##.bannergroup
@@ -2198,6 +2196,8 @@ skyltat.se##.sidebar
 skyscanner.se###modal-container
 smartsenior.se##.ss-modal, .modal-mobile-app
 smhi.se##.polopolyNotification
+snowmobile.se##.location-header_before
+snowmobile.se##.more-stories
 so-rummet.se##.block-rr
 spelagratis.se##.sidebar-right, .ad_header + p
 spelo.se##.banner-container
@@ -2364,7 +2364,6 @@ zeromagazine.nu##div[id^="ads"]
 ||assets.tumblr.com/share-button.js$third-party
 ||assets.voyado.com/jsfiles/analytics
 ||assistanskoll.se/images/banner
-||atgplay.se^*/stat$xmlhttprequest
 ||atl.nu/api/mnews
 ||atmtd.com^$third-party
 ||auction-release.mlpapi.com/site/LoadPluginSite
@@ -2463,7 +2462,7 @@ zeromagazine.nu##div[id^="ads"]
 ||cookieconsent.popupsmart.com^$third-party
 ||cookieinformation.com^$domain=folkofolk.se|minbostad.se|viivilla.se
 ||cookieinfoscript.com^$third-party
-||cookielaw.org^$domain=arbetet.se|atgplay.se|booli.se|cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|hm.com|ikea.com|ilikeradio.se|infotorgjuridik.se|internetkunskap.se|internetstiftelsen.se|ka.se|kokaihop.se|koket.se|livetochdiabetes.se|malarnasfacktidning.se|manpower.se|motesplatsen.se|mtv.se|natgeotv.com|nok.se|nvp.se|nyamitten.se|placera.se|recept.se|se.trustpilot.com|sekotidningen.se|spisa.nu|sv.bab.la|svenskarnaochinternet.se|sydkusten.es|thelocal.se|tidningenelektrikern.se|tripadvisor.se|tv4.se|voister.se|yelp.se
+||cookielaw.org^$domain=arbetet.se|booli.se|cartoonnetwork.se|fastighetsfolket.se|findit.se|flashscore.se|fotbollskanalen.se|gaffa.se|handelsnytt.se|hastnet.se|hm.com|ikea.com|ilikeradio.se|infotorgjuridik.se|internetkunskap.se|internetstiftelsen.se|ka.se|kokaihop.se|koket.se|livetochdiabetes.se|malarnasfacktidning.se|manpower.se|motesplatsen.se|mtv.se|natgeotv.com|nok.se|nvp.se|nyamitten.se|placera.se|recept.se|se.trustpilot.com|sekotidningen.se|spisa.nu|sv.bab.la|svenskarnaochinternet.se|sydkusten.es|thelocal.se|tidningenelektrikern.se|tripadvisor.se|tv4.se|voister.se|yelp.se
 ||cookienotice.co^$third-party
 ||cookiepolicy.peytz.dk^$third-party
 ||cookiepro.com^$domain=aktiespararna.se|birthday.se|djurskyddet.se|fiskejournalen.se|foretagande.se|friendsarena.se|fz.se|hastnet.se|havet.nu|spela.se|svenskfast.se|sweclockers.com
@@ -2892,6 +2891,7 @@ zeromagazine.nu##div[id^="ads"]
 ||seonify.com^$third-party
 ||serenitycandles.com.se^
 ||servg1.net^$third-party
+||service.force.com^$domain=allabolag.se
 ||service.survio.se^*/registerhit?$image
 ||sesamy.com^$domain=kvartal.se|nyheter24.se
 ||sexapp.me^

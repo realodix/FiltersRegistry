@@ -6,8 +6,8 @@ xip.li##.form-inline:others()
 /files/fa/adv^$image,1p,domain=ir|asriran.com|parsine.com
 ! Rule "/files/adv^$image,1p,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com|khordad.news" converted to: "/files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com|khordad.news"
 /files/adv^$image,1p,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com|khordad.news
-! Rule "/wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com" converted to: "/wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com"
-/wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com
+! Rule "/wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com|bazicenter.com|avalnews.com|gamefa.com" converted to: "/wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com|bazicenter.com|avalnews.com|gamefa.com"
+/wp-content/uploads/*.gif^$image,1p,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com|bazicenter.com|avalnews.com|gamefa.com
 ! Rule "||websocket.*/?u=*&s=$websocket,1p,strict3p" converted to: "||websocket.*/?u=*&s=$websocket,~third-party,strict3p"
 ||websocket.*/?u=*&s=$websocket,1p,strict3p
 ! Rule "/wp-admin/admin-ajax.php?postviews_id=$xhr,1p" converted to: "/wp-admin/admin-ajax.php?postviews_id=$xmlhttprequest,~third-party"
@@ -314,6 +314,8 @@ gostaresh.news##.right_col:style(width: 95% !important;)
 gostaresh.news##.page_first_clm:style(width: 70% !important;)
 ! Rule "gostaresh.news##.page_second_clm:style(width: 30% !important;)" converted to: "gostaresh.news#$#.page_second_clm { width: 30% !important; }"
 gostaresh.news##.page_second_clm:style(width: 30% !important;)
+! Rule "gamefa.com##:not(:matches-path(/author/post/)) #posts-body > .posts > .box > .d-block > .border-bottom .row .image > span.text-white:has-text(رپرتاژ آگهی):upward(.d-block)" converted to: "[$path=/^((?!author/post).)*$/]gamefa.com## #posts-body > .posts > .box > .d-block > .border-bottom .row .image > span.text-white:has-text(رپرتاژ آگهی):upward(.d-block)"
+gamefa.com##:not(:matches-path(/author/post/)) #posts-body > .posts > .box > .d-block > .border-bottom .row .image > span.text-white:has-text(رپرتاژ آگهی):upward(.d-block)
 ! Rule "gadgetnews.net##.ads-top:style(visibility: hidden !important;)" converted to: "gadgetnews.net#$#.ads-top { visibility: hidden !important; }"
 gadgetnews.net##.ads-top:style(visibility: hidden !important;)
 ! Rule "gadgetnews.net##.logo:style(position: static !important;)" converted to: "gadgetnews.net#$#.logo { position: static !important; }"
