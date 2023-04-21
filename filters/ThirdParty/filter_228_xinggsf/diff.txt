@@ -110,6 +110,8 @@ yy.com,le.com##+js(nowebrtc)
 ||tracker.$xhr,websocket,script,ping
 ! Rule "||p2p.$xhr,websocket,ping,domain=~huya.com|~binance.com" converted to: "||p2p.$xmlhttprequest,websocket,ping,domain=~huya.com|~binance.com"
 ||p2p.$xhr,websocket,ping,domain=~huya.com|~binance.com
+! Rule "m.youku.com,v.youku.com##+js(m3u-prune,'',/^https:\/\/[\w\.]+ott\.cibntv\.net.+?\.m3u8\?/)" converted to: "m.youku.com,v.youku.com#%#//scriptlet('ubo-m3u-prune.js', '', '/^https:\/\/[\w\.]+ott\.cibntv\.net.+?\.m3u8\?/')"
+m.youku.com,v.youku.com##+js(m3u-prune,'',/^https:\/\/[\w\.]+ott\.cibntv\.net.+?\.m3u8\?/)
 ! Rule "||cibntv.net/youku/$media,mp4" converted to: "||cibntv.net/youku/$media,redirect=noopmp4-1s"
 ||cibntv.net/youku/$media,mp4
 ! Rule "iqiyi.com##+js(set, Object.prototype.parseXML, noopFunc)" converted to: "iqiyi.com#%#//scriptlet('ubo-set.js', 'Object.prototype.parseXML', 'noopFunc')"
@@ -178,5 +180,3 @@ netflix.mom,netflixya.com,yanetflix.com##+js(aopw,document.onkeydown)
 www.sbdm.net##.ads_all:remove()
 ! Rule "yatu.tv,yhdm15.com##+js(set,document.oncontextmenu,trueFunc)" converted to: "yatu.tv,yhdm15.com#%#//scriptlet('ubo-set.js', 'document.oncontextmenu', 'trueFunc')"
 yatu.tv,yhdm15.com##+js(set,document.oncontextmenu,trueFunc)
-Error: "Unknown pseudo-class ':\/\/' in selector: '+js(m3u-prune,'',/^https:\/\/[\w\.]+ott\.cibntv\.net.+?\.m3u8\?/)'" in the rule: "m.youku.com,v.youku.com##+js(m3u-prune,'',/^https:\/\/[\w\.]+ott\.cibntv\.net.+?\.m3u8\?/)"
-m.youku.com,v.youku.com##+js(m3u-prune,'',/^https:\/\/[\w\.]+ott\.cibntv\.net.+?\.m3u8\?/)
