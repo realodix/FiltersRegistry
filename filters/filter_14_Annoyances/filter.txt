@@ -16775,6 +16775,8 @@ dehn.de#@#.cookie-layer
 !   SECTION: Anti-adblock - Yandex direct
 !   NOTE: Yandex
 !
+! Yandex Games
+[$path=/games]yandex.ru#%#//scriptlet('json-prune', 'rtb rtbAuctionInfo')
 ! main page
 yandex.*##._size_big > div.card-wrapersome
 ! turbopages
@@ -16791,6 +16793,7 @@ afisha.yandex.ru##div[style="width:100%;height:240px;display:block"]
 yandex.ru##div[class*="-R-A-"]
 yandex.ru##.stack > div[class^="sticky-"]
 ! Yandex.Weather
+[$path=/pogoda]yandex.*##div[class*="Advert_fullScreenContainer__"]
 [$path=/weather]yandex.*#%#//scriptlet('abort-on-property-read', 'Object.prototype.renderDirect')
 [$path=/pogoda]yandex.*#%#//scriptlet('abort-on-property-read', 'Object.prototype.renderDirect')
 [$path=/pogoda]yandex.*#%#//scriptlet('prevent-eval-if', 'Id":"R-I')
@@ -35587,8 +35590,6 @@ instagram.com#?#div[style*="opacity"] > div > div[class]:has(> div[class] > div[
 !
 ! End: Instagram.com
 !
-! https://github.com/AdguardTeam/AdguardFilters/issues/146492
-[$path=/games]yandex.ru#%#//scriptlet('json-prune', 'rtb rtbAuctionInfo')
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149165
 creepypasta.com###media_image-2
 ! https://github.com/AdguardTeam/AdguardFilters/issues/149118
