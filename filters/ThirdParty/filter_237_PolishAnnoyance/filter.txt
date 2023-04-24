@@ -5,8 +5,8 @@
 ! Description: Filtry ukrywające i blokujące wyskakujące okienka, widgety, newslettery, powiadomienia push, strzałki, otagowane linki wewnętrzne, które są nie na temat artykułów (np. link do pracy w Bydgoszczy w artykule o pogodzie) i inne drażniące elementy (Polskie Filtry RODO-Ciasteczkowe oryginalnie stworzone przez MajkiIT są już w nich zawarte).
 ! Required: Do poprawnego działania wymagana jest lista lub rozszerzenie I don't care about cookies!
 ! Expires: 2 days
-! Last modified: Fri, 21 Apr 2023, 23:35 UTC+02:00
-! OriginalVersion: 2023.4.21.2
+! Last modified: Mon, 24 Apr 2023, 21:30 UTC+02:00
+! OriginalVersion: 2023.4.24.1
 ! Najnowsza wersja zawsze na: https://github.com/FiltersHeroes/PolishAnnoyanceFilters
 ! Zgłoszenia:
 !   Formularz (nie wymaga rejestracji) => https://polishannoyancefilters.netlify.app/issues
@@ -15,7 +15,7 @@
 ! Homepage: https://polishannoyancefilters.netlify.app
 ! Creator: blocker999
 ! Maintainer: Filters Heroes
-! Aktualizacja: pią, 21 kwi 2023, 23:35 UTC+02:00
+! Aktualizacja: pon, 24 kwi 2023, 21:30 UTC+02:00
 !
 !
 ! Newslettery (nie popupy)
@@ -3325,6 +3325,7 @@ allani.pl,domodi.pl##div[id*="FakePromptContainer"]
 andzela.com##.kb-cs-notify-container
 at-outlet.pl###WebPushAddSubscription
 autocentrum.pl##.web-push-box
+best.aliexpress.com,pl.aliexpress.com#?#body > div ~ script ~ div:nth-last-of-type(-n+3):nth-last-child(-n+3) > div:nth-child(1):-abp-has(div:-abp-contains(Zezwalaj na powiadomienia))
 bnpparibas.pl,eneba.com,estyl.pl,semahead.pl###ue_push_dialog
 boardpc.pl,forum.dobreprogramy.pl,forum.manjaro.pl,hub.filterlists.com##.alert-info.alert.consent_banner
 boop.pl###smart_push_smio_window
@@ -3352,7 +3353,6 @@ ogrodosfera.pl##.bell-container
 onet.pl##.notificationPrompt
 pilot.wp.pl##.notification-container
 pl,typeofweb.com###onesignal-popover-dialog
-pl.aliexpress.com#?#body div ~ script ~ div:nth-last-of-type(2):nth-last-child(3) > div:nth-child(1):-abp-has(div:-abp-contains(Zezwalaj na powiadomienia))
 pl.oriflame.com,prawo.vulcan.edu.pl###bhr-iframe-consent-form
 pl.oriflame.com,prawo.vulcan.edu.pl##.bhr-web-push-consent-form
 pl.waterdrop.com##.pushowl-widget-node
@@ -11656,7 +11656,7 @@ tpa-group.pl###PopupModal, .modal-backdrop
 truphone.com#$#.blur-out { filter: none !important }
 ttv.pl###specialPopupModal
 tvokazje.pl###tvo-newsletter-popup-new-year, .modal-backdrop
-twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#$#html { overflow: unset !important }
+twitter.com,twitter3e4tixl4xyajtrzo62zg5vztmjuricljdp2c5kshju4avyoid.onion#$#html { overflow: unset !important; margin-right: 0 !important; padding-right: 0 !important }
 twojekwiaty.pl###exitPopup
 ubraniadooddania.pl###popup-dialog, .modal-backdrop
 ubraniadooddania.pl#%#//scriptlet('ubo-ra.js', 'class|style', 'body[class="modal-open"][style^="padding-right: "][style$="px;"]:not([style*="; "])', 'stay')
@@ -11984,7 +11984,7 @@ polishannoyancefilters.netlify.app,polishannoyancefilters.netlify.com#%#//script
 2x45.info,agmar.biz.pl,airdron-polska.pl,awans-bhp.pl,boczkinabok.pl,brzeszcze.pl,caso-germany.pl,ceneo.pl,cukierniabezowa.pl,devdesign.pl,domkorkowy.com,e-marcom.pl,e.ziebice.pl,fury-zone.com,grajewo.net.pl,intibs.pl,ironsky.pl,komputerytriton.pl,kuradomowa.net,minecraft.net,mojaholandia.nl,mokrenosy.pl,narcyz.com.pl,nuty-zapachowe.pl,oliwowo.pl,otop.org.pl,paralympic.org.pl,passion.pl,piaseckigagala.pl,promodor.pl,psi.wroc.pl,rsrh-radom.pl,sanier.pl,sendbean.pl,softwaresystem.pl,techmlek.com.pl,timberwolf.pl,twojsezam.pl,wdrozenia-magento.pl,wsparciemagento.pl,www.consil.com.pl##div[id^="ascrail"]:not([id$="-hr"])
 2x45.info,agmar.biz.pl,airdron-polska.pl,awans-bhp.pl,boczkinabok.pl,brzeszcze.pl,caso-germany.pl,ceneo.pl,cukierniabezowa.pl,devdesign.pl,domkorkowy.com,e-marcom.pl,e.ziebice.pl,fury-zone.com,grajewo.net.pl,intibs.pl,ironsky.pl,komputerytriton.pl,kuradomowa.net,minecraft.net,mojaholandia.nl,mokrenosy.pl,narcyz.com.pl,nuty-zapachowe.pl,oliwowo.pl,otop.org.pl,paralympic.org.pl,passion.pl,piaseckigagala.pl,promodor.pl,psi.wroc.pl,rsrh-radom.pl,sanier.pl,sendbean.pl,softwaresystem.pl,techmlek.com.pl,timberwolf.pl,twojsezam.pl,wdrozenia-magento.pl,wsparciemagento.pl,www.consil.com.pl#$#html[style*="overflow"] { overflow-y: auto !important }
 4mats.pl#$#html, body { overflow-y: auto !important }
-360studio.org,accounts.spotify.com,aidcom.eu,amfetamina.promo,amooco.com,annopol.info,arhn.eu,aternos.org,brandbank.com,certyficate.it,colian.com,dariusz.wieckiewicz.org,defence24.com,dotspice.com,dzwola.eu,e-polion.com,edrone.me,empik.com,eneba.com,energetyka24.com,freshmail.io,giacomo-design.com,goodram.com,greasyfork.org,it-manuals.info,justtag.com,lebork24.info,login.teamviewer.com,lwowecki.info,matbau.com,meczelive.tv,meczenazywo.tv,media-press.tv,mgr.farm,misterminit.eu,moje-ip.eu,niebieski.net,niezlasztuka.net,oddslivesport.com,odkrywamyzakryte.com,piroart.eu,~pl,pl.blogpascher.com,pl.fotolia.com,pl.genesis-zone.com,planeta.fm,play.google.com,pokrowce.net,poldruk.com,polski.fm,przegladpiaseczynski.pl,ristorio.com,sempre.eu.com,sledcza24.tv,sohost.com,stawiszynski.org,strajk.eu,strimeo.tv,telewizja-cyfrowa.com,themoviedb.org,thunderbird.net,trofeasportowe.com,walerystasiak.com,webskill.group,whois.eurid.eu,wodbud.eu,wphouse.eu,x-lander.com,zacznijprogramowac.net,zakpol.eu,zrobtosam24.eu#$#.grecaptcha-badge:lang(pl) { visibility: hidden !important }
+360studio.org,accounts.spotify.com,aidcom.eu,amfetamina.promo,amooco.com,annopol.info,arhn.eu,aternos.org,brandbank.com,certyficate.it,colian.com,defence24.com,dotspice.com,dzwola.eu,e-polion.com,edrone.me,empik.com,eneba.com,energetyka24.com,freshmail.io,giacomo-design.com,goodram.com,greasyfork.org,it-manuals.info,justtag.com,lebork24.info,login.teamviewer.com,lwowecki.info,matbau.com,meczelive.tv,meczenazywo.tv,media-press.tv,mgr.farm,misterminit.eu,moje-ip.eu,niebieski.net,niezlasztuka.net,oddslivesport.com,odkrywamyzakryte.com,piroart.eu,~pl,pl.blogpascher.com,pl.fotolia.com,pl.genesis-zone.com,planeta.fm,play.google.com,pokrowce.net,poldruk.com,polski.fm,przegladpiaseczynski.pl,ristorio.com,sempre.eu.com,sledcza24.tv,sohost.com,stawiszynski.org,strajk.eu,strimeo.tv,telewizja-cyfrowa.com,themoviedb.org,thunderbird.net,trofeasportowe.com,walerystasiak.com,webskill.group,whois.eurid.eu,wodbud.eu,wphouse.eu,x-lander.com,zacznijprogramowac.net,zakpol.eu,zrobtosam24.eu#$#.grecaptcha-badge:lang(pl) { visibility: hidden !important }
 allegro.pl#$?##search-results section:has(> button[title*="SORTUJ BEZ DOPASOWANIA" i]):matches-media((min-width: 1200px)) { position: absolute !important; z-index: 2147483647 !important; top: 240px !important; background: white !important }
 allegro.pl#$?##search-results section:has(> div > button[title*="SORTUJ BEZ DOPASOWANIA" i]):matches-media((min-width: 1200px)) { position: absolute !important; z-index: 2147483647 !important; top: 240px !important; background: white !important }
 allegro.pl#$?##search-results:has(section > button[title*="SORTUJ BEZ DOPASOWANIA" i]):matches-media((min-width: 1200px)) { margin-top: 90px !important }
