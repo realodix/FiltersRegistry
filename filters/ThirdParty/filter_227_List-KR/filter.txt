@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0425.7
+! OriginalVersion: 2023.0426.1
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -453,6 +453,7 @@ sonagitv.live##.blocks-gallery-item img[src*="/sonagi_me/sites/"]
 /data/banner.json?
 /ad-manager.min.js
 !
+||t1.daumcdn.net/tistory_admin/promotion/
 ||geojejournal.co.kr/script/ad.control.js
 ||geojejournal.co.kr/banner/
 ||s-econ.kr/Files/*/Template/
@@ -1301,6 +1302,7 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+tistory.com##.StoryBanner
 joynews24.com,inews24.com##header ~ container[class*="-"]
 allaboutshaving.kr###secondary > aside#search-4 ~ aside
 eomisae.co.kr##center > div[style*="background-color:"]
@@ -2326,6 +2328,7 @@ x86.co.kr#@#.download_ad
 !#endif
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+t.hi098123.com#$#article { top: 0px !important; }
 www.donga.com#$##journalist_card li { width: 100% !important; }
 heraldpop.com#$#.article_area .article_left { width: 100% !important; }
 chaoscube.co.kr#$#.container .contents > .subcontents:nth-child(1) { margin-top: 0px !important; }
@@ -2845,6 +2848,18 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
 !
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=t.hi098123.com
+@@||pagead2.googlesyndication.com/pagead/managed/$script,domain=t.hi098123.com
+||googleads.g.doubleclick.net/pagead/ads$subdocument,redirect=noopframe,domain=t.hi098123.com
+!#if (adguard_app_ios || adguard_ext_android_cb || adguard_ext_safari)
+@@||googleads.g.doubleclick.net/pagead/ads$subdocument,domain=t.hi098123.com
+!#endif
+!#safari_cb_affinity(privacy)
+@@||googletagmanager.com/gtag/$script,domain=t.hi098123.com
+!#safari_cb_affinity
+t.hi098123.com#@#ins.adsbygoogle
+t.hi098123.com#$#.tabad { height: 1px !important; }
+t.hi098123.com###hi-notice
 avdbs.com#%#//scriptlet('abort-on-property-read', 'ad_blk')
 genshin.gamedot.org#%#//scriptlet('prevent-setTimeout', 'blockCheck2022')
 @@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=search.shopping.naver.com
@@ -2972,6 +2987,12 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+t.hi098123.com###hi-notice
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=t.hi098123.com
+@@||pagead2.googlesyndication.com/pagead/managed/$script,domain=t.hi098123.com
+||googleads.g.doubleclick.net/pagead/ads$subdocument,redirect=noopframe,domain=t.hi098123.com
+t.hi098123.com#@#ins.adsbygoogle
+@@||googletagmanager.com/gtag/$script,domain=t.hi098123.com
 avdbs.com#@#.ad-btn
 @@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=search.shopping.naver.com
 @@||ssl.pstatic.net/tveta/libs/glad/prod/*/gfp-sdk.js$script,domain=search.shopping.naver.com
