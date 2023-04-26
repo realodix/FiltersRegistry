@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0426.1
+! OriginalVersion: 2023.0426.6
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -453,6 +453,8 @@ sonagitv.live##.blocks-gallery-item img[src*="/sonagi_me/sites/"]
 /data/banner.json?
 /ad-manager.min.js
 !
+||cdn.news.unn.net/image/banner/
+||ddaily.co.kr/data/banner/
 ||t1.daumcdn.net/tistory_admin/promotion/
 ||geojejournal.co.kr/script/ad.control.js
 ||geojejournal.co.kr/banner/
@@ -1274,7 +1276,7 @@ mediatoday.co.kr,newsworker.co.kr##div[id^="AD"]
 ! ##div[class^="Banner"]
 moyoplan.com##div[class^="Banner"]
 ! ##div[class*="_ad"]
-medicaltimes.com,yes24.com,kpanews.co.kr,donga.com,busan.com,fnnews.com,m.munhwa.com,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
+kyeonggi.com,medicaltimes.com,yes24.com,kpanews.co.kr,donga.com,busan.com,fnnews.com,m.munhwa.com,m.kmib.co.kr,m.clien.net##div[class*="_ad"]
 ! ##div[id*="Banner"]
 evape.kr,e-himart.co.kr,kin.naver.com##div[id*="Banner"]
 ! ##div[class*="_AD"]
@@ -1302,6 +1304,9 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+news.unn.net##header > .header-space
+news.unn.net###sticky_variable_area
+seoul.co.kr##table[id*="Ad"]
 tistory.com##.StoryBanner
 joynews24.com,inews24.com##header ~ container[class*="-"]
 allaboutshaving.kr###secondary > aside#search-4 ~ aside
@@ -1801,7 +1806,6 @@ tgd.kr###header-top-notice
 tgd.kr###main-menu div[style][align]
 hunnek.tistory.com##a[href^="https://www.panel.co.kr/user/join/etcpath/"]
 m.seoul.co.kr,m.nownews.seoul.co.kr###contentsBodyDiv > table[width]
-seoul.co.kr###articleContent > table[width][height][border]
 soccerline.kr##div[class$="Bann"]
 e-himart.co.kr##input ~ .searchRolling
 m.11st.co.kr##section#cts:not(.main) .ctg_loc ~ section.list_bx.hotclick
@@ -2083,9 +2087,6 @@ segyebiz.com,segye.com##div[id^="wps_layout"][data-desc*="광고"][data-box-file
 avjamak.net##.widget-box.widget-img
 kmib.co.kr##.mn_ad
 hankookilbo.com##.side-ad-box
-nownews.seoul.co.kr##.naside > div[style*="width:"][style*="height:"]
-nownews.seoul.co.kr##.naside > div[style].Rad
-nownews.seoul.co.kr##.ncontent > div[style]:not([class])
 en.seoul.co.kr##[style]#withpang_p
 seoul.co.kr##iframe[src^="/ad/"]
 realty.chosun.com##iframe[src*="//realty.chosun.com/RealtyCommon/Promotion"][src$=".html"]
@@ -2328,6 +2329,7 @@ x86.co.kr#@#.download_ad
 !#endif
 !#endif
 !#if (adguard && !adguard_ext_android_cb)
+news.unn.net#$#header > .header-body { width: 100% !important; }
 t.hi098123.com#$#article { top: 0px !important; }
 www.donga.com#$##journalist_card li { width: 100% !important; }
 heraldpop.com#$#.article_area .article_left { width: 100% !important; }
