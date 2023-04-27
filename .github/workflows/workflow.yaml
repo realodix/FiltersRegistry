@@ -1,7 +1,12 @@
 name: Build Filters Registry
 
 on:
-  push
+  push:
+    paths-ignore:
+      # do not trigger build on changes to the following files.
+      # it is needed to avoid pull request merge blocking
+      # as compiler does not use the updated config during the build.
+      - 'optimization_config.json'
 
 jobs:
   build:
