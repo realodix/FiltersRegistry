@@ -15,7 +15,7 @@
 !! basirat.ir, khootoot.ir
 /files/adv^$image,~third-party,domain=ir|asrkhabar.com|bultannews.com|yektapress.com|roozno.com|fararu.com|iraneconomist.com|khordad.news
 ! digiro.ir, gahar.ir, jobsacademy.ir, mihand.ir, modirnameh.ir, pedal.ir, softsaaz.ir, technet24.ir
-/wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com|bazicenter.com|avalnews.com|gamefa.com
+/wp-content/uploads/*.gif^$image,~third-party,domain=ir|bazdeh.org|charbzaban.com|chetor.com|dlfox.com|filmin.info|ghatar.com|itresan.com|konkur.info|learnparsi.com|movienama.com|netpaak.com|parsfootball.com|p30konkor.com|rozmusic.com|shanbemag.com|sakhtafzar.com|techrato.com|bazicenter.com|avalnews.com|gamefa.com|takskin.com
 ! https://publicwww.com/websites/%22var+socketAccess+%3D%22/
 ! websocket.eghtesadonline.com, websocket.ilna.ir, websocket.khanefootball.com, websocket.55online.news, websocket.sobhtazeh.news, websocket.varandaz.com
 ! applicationha.com, androidgozar.com, downloadkral.com, gold-team.org, iranecar.com, icoff.ee, koolakmag.ir,
@@ -106,6 +106,7 @@
 ||abzarfa.com/services/onlineusres^$script
 ||abzarfa.com/tools/ip^$script
 ! >> B <<
+||backlink.ir^$all
 ||boorantech.com^$all
 ! https://github.com/MasterKia/PersianBlocker/issues/123
 blogsazan.com##.ads_link8
@@ -304,11 +305,11 @@ anaj.ir,salamatnews.com#%#//scriptlet('ubo-set.js', 'document.referrer', 'undefi
 ||tapsell.ir^$all
 ||toppopup.com^$all
 ||counter.toolsir.com^$all
-||takskin.com/tools/online/
-||takskin.com/tools/show-ip/
-||takskin.com/abzar/norightclick/
-||tool.4tools.ir/tools/click-c/click-c.js
-||tool.4tools.ir/tools/click-l/click-l.js
+||takskin.com/tools/online^$script,third-party
+||takskin.com/tools/show-ip^$script,third-party
+||takskin.com/abzar/norightclick/norightclick.js^$script,third-party
+||tool.4tools.ir/tools/click-c/click-c.js^$script,third-party
+||tool.4tools.ir/tools/click-l/click-l.js^$script,third-party
 ! >> U <<
 ||userfriendly.ir^$all
 ! ^ Used by bils.ir
@@ -339,8 +340,6 @@ anaj.ir,salamatnews.com#%#//scriptlet('ubo-set.js', 'document.referrer', 'undefi
 ! >> Z <<
 ||zarpop.com^$all
 ||zarpop.ir^$all
-||zanboor.net^$all
-! TODO: Remove zanboor.net, but some websites still link to it
 !-------------------------^ Persian Ads/Trackers/Annoyances Filters ^-----------------------!
 !-------------------------v Non-Persian Ads/Trackers/Annoyances Filters Used In Persian Websites v-----------------------!
 ! >> A <<
@@ -2342,8 +2341,7 @@ tarafdari.com##.column-side > .block > .block-title:has-text(وبگردی):upwar
 talab.org##.Topadver
 taktemp.com##.link-ads
 taktemp.com##.topbanners
-||backlink.ir^$image,domain=takskin.com
-takskin.com##div.style-1.colored.box:nth-of-type(6)
+takskin.com##div.col-md-3 > .box.style-1 > .box-header:has-text(/تبلیغات رپورتاژ|لوگو اسپانسر/):upward(.box)
 taknaz.ir##.Topadver
 taknaz.ir##.leftads
 taknaz.ir##div.Relement.Bstyle.RBC:nth-of-type(5)

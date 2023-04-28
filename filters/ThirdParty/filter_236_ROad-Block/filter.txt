@@ -41,7 +41,6 @@
 ||criteo.com^
 ||doubleclick.net^
 ||adform.net^$third-party
-||i401xox.com^
 ||ads1-adnow.com^
 ||ads2-adnow.com^
 ||ads3-adnow.com^
@@ -582,6 +581,7 @@ agrointel.ro#?#.textwidget:-abp-contains(PUBLICITATE)
 ziuaconstanta.ro###optional_banner
 ziuaconstanta.ro##[class^="custom_module add"]
 ||ziuaconstanta.ro/images/banners/$image
+ziuaconstanta.ro###pa_inarticle_placeholder
 gazetaromaneasca.com##.rm-skin
 ||ido.ro/i/a/160.php$subdocument,domain=vremea.ido.ro
 ||ido.ro/i/a/300.php$subdocument,domain=vremea.ido.ro
@@ -1022,6 +1022,7 @@ napocanews.ro##[href="http://www.coralimpex.ro/"]
 napocanews.ro##[href="http://www.rosal.ro/"]
 napocanews.ro##[href="http://www.trcj.ro"]
 ||napocanews.ro/*Banner$image
+napocanews.ro###pa_inarticle_placeholder
 ciutacu.ro#?#.widget:-abp-contains(Reclame)
 ! banner
 ||anime-kage.eu/media/affiliate/$image
@@ -1082,6 +1083,7 @@ bankingnews.ro##[href^="https://www.brd.ro/"]
 bankingnews.ro###text-49
 ||i0.wp.com/r3media.ro/*/banner$image
 r3media.ro##iframe[src*="feature=oembed"]
+r3media.ro###pa_inarticle_placeholder
 parerimagazin.ro#?#.widget_custom_html:-abp-has([src*="pagead"])
 aproapemasini.com#?#.widget_text:has([href*="utm_source=aff"])
 i-car.ro##.banners
@@ -1313,6 +1315,33 @@ anunturigarla.ro#?#.recl:not([href="#"])
 ||anunturigarla.ro/banners/*.gif$image
 anunturi66.ro##.ads
 anunturi66.ro##.ads-vizualizare
+marketingportal.ro##.bannerDFP
+mytex.ro#?#.container-wrapper:-abp-has([src*=".mgid.com"])
+||bzb.ro/files/banner$image
+bzb.ro##.banners
+||info1tv.ro/*.gif$image
+info1tv.ro##[href="http://www.april91.ro/"]
+info1tv.ro#?#[id^="custom_html"]:-abp-has([alt^="Agentie"])
+info1tv.ro##.widget_custom_html.side-widget.widget_text
+stiriardeal.ro##.custom-html-widget.textwidget
+stiriardeal.ro##.widget-title
+actualdecluj.ro##.custom-html-widget.textwidget
+mesagerulhunedorean.ro##.widget_media_image
+mesagerulhunedorean.ro#?#.textwidget:-abp-has(.adsbygoogle)
+politik24.ro##.td_spot_img_all
+politik24.ro##.tdi_153
+politik24.ro###tdi_195
+mangalianews.ro#?#.td_block_template_1:-abp-has(.td_single_image_bg)
+mangalianews.ro#?#.td_block_template_1:-abp-has([class^="td-adspot"])
+manager.ro###FixedDivContainer
+manager.ro###fixedDiv
+jamilacuisine.ro##.td-a-rec-id-custom-spot
+ziarmedical.ro##.td-a-rec-id-custom-spot
+videotutorial.ro#?#.widget-wrap:-abp-has(.adsbygoogle)
+||ziarulsanatatea.ro/*banner$image
+ziarulsanatatea.ro##.vc_raw_html.td_block_wrap.wpb_wrapper
+ziarulsanatatea.ro##.td-a-rec-id-content_bottom.td-a-rec
+ziarulsanatatea.ro##[href^="http://www.spitalbunavestire.ro/"]
 ! Title: Romanian specific uBO filters
 ! Expires: 3 days
 ! Issue tracker: https://github.com/tcptomato/ROad-Block/issues
@@ -1351,3 +1380,7 @@ posturi.live#%#//scriptlet('ubo-acs.js', 'setTimeout', 'admc')
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=divahair.ro,redirect=google-ima3,important
 ||sputniknews.*^$all
 filmeserialegratis.*,fsplayer.*#%#//scriptlet('ubo-nowoif.js')
+cinemagia.ro###banner_container_top
+cinemagia.ro#$##header { position:static!important; top: 0 !important; }
+cinemagia.ro#$##main_container { padding-top: 0 !important; }
+cinemagia.ro#$#.header_nav { position:static !important; }

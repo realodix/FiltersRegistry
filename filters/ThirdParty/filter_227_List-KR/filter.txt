@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0426.6
+! OriginalVersion: 2023.0427.2
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -453,6 +453,7 @@ sonagitv.live##.blocks-gallery-item img[src*="/sonagi_me/sites/"]
 /data/banner.json?
 /ad-manager.min.js
 !
+/^https:\/\/te31\.com\/m\/[a-z]+[0-9]*\.jpg/$domain=te31.com
 ||cdn.news.unn.net/image/banner/
 ||ddaily.co.kr/data/banner/
 ||t1.daumcdn.net/tistory_admin/promotion/
@@ -1304,6 +1305,13 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+te31.com##.content > .nextbr ~ div[style^="min-height:"]
+te31.com###content > div[style*="width:"]
+te31.com##.touch_none ~ div[style^="min-height:"].bd_back
+te31.com##div[id^="dont"][style] ~ table[style^="width"]
+te31.com##div[id^="dont"][style]
+te31.com###honey > table[style*="border-left:"][width]
+te31.com##div[style^="margin-top:"]#menu_right
 news.unn.net##header > .header-space
 news.unn.net###sticky_variable_area
 seoul.co.kr##table[id*="Ad"]
@@ -1708,7 +1716,7 @@ themomstory.co.kr##.ezoic-ad
 eegosa.com##section[id^="block-"].widget_block
 jobkorea.co.kr##.grand_banner_wrap li.item_adagency
 jobkorea.co.kr##.byWd div[id^="bl_"]
-meeco.kr##.adsbygoogle
+te31.com,meeco.kr##.adsbygoogle
 www.clien.net##.section_list.hongbo
 m.joynews24.com##hr[style].blank
 joynews24.com,inews24.com##ad
@@ -1835,9 +1843,7 @@ ohli24.net##nav ~ .at-title
 aagag.com##.la
 m.nocutnews.co.kr###pnlContainer .con_b >.ct_box:not([style])
 fmkorea.com###sidebar div[style^="height:"]:not(.li)
-te31.com##table.adsbygoogle ~ table #honey > div[style^="background-color:"]:not([class])
 te31.com###contentmemo ~ .adsbygoogle > div[style^="background-color:"]
-te31.com###menu_right.adsbygoogle
 te31.com##table.adsbygoogle ~ table[style^="min-height:"]
 te31.com###bbs > table[style^="color:#"] ~ div[style*="padding:"][style*="border-left"]
 mksports.co.kr###container_right > div[id^="slot"]
