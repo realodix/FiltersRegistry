@@ -463,7 +463,7 @@ linkedin.com#$?#html { overflow: auto !important; }
 linkedin.com#$?#body { overflow: auto !important; }
 !#if ext_ublock
 ! Title: 💊 Dandelion Sprout's Anti-Malware List
-! OriginalVersion: 17April2023v1
+! OriginalVersion: 28April2023v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -1784,6 +1784,12 @@ get.adobe.com###offersInformationPane
 ||wix.cm^$document
 ||199.59.243.222^$document
 |http://ww01.$document
+||14d.us^$all
+||173.208.96.42^$all
+||173.208.96.43^$all
+||173.208.96.44^$all
+||173.208.96.45^$all
+||173.208.96.46^$all
 ! ——— Carried over from "Anti-'Asset Flip Shovelware' List" in response to Microsoft Store's non-existent quality control ———
 www.microsoft.com##a[data-pfns][href*=imposter]
 www.microsoft.com##a[data-pfns][href*=impostor]
@@ -2192,7 +2198,7 @@ www.microsoft.com##a[data-pfns][href*=pac-men]
 !#endif
 !#if adguard
 ! Title: 💊 Dandelion Sprout's Anti-Malware List (for AdGuard)
-! OriginalVersion: 17April2023v1
+! OriginalVersion: 28April2023v1
 ! Expires: 2 days
 ! Description: This list goes the extra kilometer to prevent more malware than other mainstream anti-malware lists. It blocks heavily abused top-level domains (and even search engine results for them), blocks domains used in malware redirection trains and in domain parking schemes, blocks sponsored Windows PUP nags on PC guide articles, uses mass blocking of domains belonging to bad IPs, and has many other subcategories that give it a solid advantage over similar lists out there.
 ! For other security-specific lists I've made, check out https://github.com/DandelionSprout/adfilt/tree/master/Special%20security%20lists
@@ -15968,6 +15974,12 @@ get.adobe.com###offersInformationPane
 ||wix.cm^$document
 199.59.243.222$network
 |http://ww01.$document
+||14d.us^$all
+173.208.96.42$network
+173.208.96.43$network
+173.208.96.44$network
+173.208.96.45$network
+173.208.96.46$network
 ! ——— Carried over from "Anti-'Asset Flip Shovelware' List" in response to Microsoft Store's non-existent quality control ———
 www.microsoft.com##a[data-pfns][href*=imposter]
 www.microsoft.com##a[data-pfns][href*=impostor]
@@ -16838,7 +16850,7 @@ fileinfo.com#?#.top:has(a[href*="/windows_file_viewer"])
 ! Description: Are you tired of being nagged on by websites, that say "Log in to read more"? With this list, you'll be much less nagged on from now own.
 ! Homepage: https://github.com/DandelionSprout/adfilt/blob/master/Wiki/General-info.md#-english
 ! This is an extension file, not an independent list.
-! Extension file's version: 27April2023v1-Extension
+! Extension file's version: 28April2023v1-Extension
 ! Experts Exchange 📛📠
 experts-exchange.com#$#.accepted.answer { display: block !important }
 experts-exchange.com##.solutionIntertitialWrapper.body
@@ -16939,6 +16951,7 @@ segmentfault.com#$#.modal-open [style]:is([data-padding-right], [data-margin-rig
 tumblr.com#$?#style:has-text(/^body /):has(use[href*=logo-tumblr]) { remove: true; }
 !!! tumblr.com#?##glass-container:has(use[href*=logo-tumblr]) - https://github.com/DandelionSprout/adfilt/issues/845
 !!! tumblr.com#?##glass-container:has(use[href$=_google-logo]) - https://github.com/DandelionSprout/adfilt/issues/845
+tumblr.com#?##glass-container:has(p + p):has(a[href^="/auth/google?"])
 !! The same prompt 6 months later:
 tumblr.com#?##glass-container > div[role^=dialog]:has(#g-recaptcha):has(a[href*=terms-of-service])
 !! Floaty on bottom

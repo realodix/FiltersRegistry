@@ -1,7 +1,7 @@
 !
 ! Title: List-KR for AdGuard
 ! Description: List-KR for AdGuard. Maintained by the adblock community and AdGuard.
-! OriginalVersion: 2023.0427.3
+! OriginalVersion: 2023.0429.0
 ! Expires: 12 hours
 ! Homepage: https://github.com/List-KR/List-KR
 ! Support: https://github.com/List-KR/List-KR/issues/223
@@ -1305,6 +1305,9 @@ sports.donga.com##div[id*="_AD"]
 ! ##div[id$="_Ad"]
 yes24.com##div[id$="_Ad"]
 !
+coolenjoy.net##div[id^="carousel_"] a[target="_blank"]
+te31.com##div[style^="width:"][class="adsbygoogle"]
+m.search.naver.com##._shopAdRoot
 te31.com##.content > .nextbr ~ div[style^="min-height:"]
 te31.com###content > div[style*="width:"]
 te31.com##.touch_none ~ div[style^="min-height:"].bd_back
@@ -1716,7 +1719,7 @@ themomstory.co.kr##.ezoic-ad
 eegosa.com##section[id^="block-"].widget_block
 jobkorea.co.kr##.grand_banner_wrap li.item_adagency
 jobkorea.co.kr##.byWd div[id^="bl_"]
-te31.com,meeco.kr##.adsbygoogle
+meeco.kr##.adsbygoogle
 www.clien.net##.section_list.hongbo
 m.joynews24.com##hr[style].blank
 joynews24.com,inews24.com##ad
@@ -1925,7 +1928,6 @@ compuzone.co.kr##.cpz_inner .recommend_wrap > .recommend_list
 poro.gg###__layout > div:not([class]) > [class]:not(footer) > div[class]:not([sm]):not(.page-container)
 mathbang.net##.sidebar_book
 thecall.co.kr##[class^="adsense"]
-coolenjoy.net###sidebar > .tab
 m.bobaedream.co.kr##.wrap > div[style$="height:100px;"]:not([class])
 login.11st.co.kr##.login_banner
 m.inven.co.kr,quasarzone.com##[class^="banner-"]
@@ -2186,8 +2188,6 @@ edu.donga.com,dt.co.kr,m.etoday.co.kr,mnews.sbs.co.kr,mbn.co.kr,cgv.co.kr,mmzone
 2cpu.co.kr##a[href*="./bbs/banner_link.php?"]
 ruliweb.com##div[id^="adsense_"]
 mlbpark.donga.com##div[class*="naver_power"]
-coolenjoy.net##.simple_banner_wrap
-coolenjoy.net##img[src^="https://photo.coolenjoy.co.kr/banner/"]
 quasarzone.com##*:not(footer) > div[class^="main-"][class$="-banner"]
 koreatimes.net,phdkim.net,nongmin.com,hankookilbo.com##div[class^="banner-"]
 etoland.co.kr##ul.board_list > li.subject.ad_subject
@@ -2855,8 +2855,17 @@ meeco.kr#?#.adsbygoogle:remove()
 @@||namu.news/$subdocument,script,domain=namu.wiki
 @@||namu.wiki/$subdocument,script,domain=namu.wiki
 !#endif
+! SPOTVNOW
+!#if (adguard_app_ios)
+@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=spotvnow.co.kr
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$xmlhttprequest,domain=spotvnow.co.kr
+!#endif
+spotvnow.co.kr#%#//scriptlet('prevent-xhr', 'imasdk.googleapis.com/js/sdkloader/ima3.js')
+spotvnow.co.kr#%#//scriptlet('prevent-fetch', 'imasdk.googleapis.com/js/sdkloader/ima3.js')
+spotvnow.co.kr#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+spotvnow.co.kr#%#//scriptlet('prevent-fetch', 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
 !
-||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.search.naver.com,redirect=noopjs
+m.search.naver.com#%#//scriptlet('prevent-element-src-loading', 'script', 'ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js')
 !#if (adguard_app_ios || adguard_ext_safari)
 @@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.search.naver.com
 !#endif
@@ -2885,9 +2894,6 @@ search.shopping.naver.com#$#iframe[id^="powerlink-div"] { height: 80px !importan
 errornight.com#$#ins.adsbygoogle { display: none !important; }
 !#endif
 errornight.com#%#//scriptlet('abort-on-stack-trace', 'alert', 'chk_adBlock')
-!#if (adguard_app_ios)
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$xmlhttprequest,domain=spotvnow.co.kr
-!#endif
 ||ssl.pstatic.net/tveta/libs/ssp-video/prod/ssp.web.sdk_$script,redirect=noopjs,domain=m.sports.naver.com
 !#if (adguard_app_ios || adguard_ext_safari)
 @@||ssl.pstatic.net/tveta/libs/ssp-video/prod/ssp.web.sdk_$script,domain=m.sports.naver.com
@@ -2929,18 +2935,22 @@ sogirl.so#%#//scriptlet('set-constant', 'DHAntiAdBlocker', 'true')
 @@||ad.smartmediarep.com/NetInsight/video/smr$domain=programs.sbs.co.kr|allclip.sbs.co.kr|mplay.mk.co.kr|static.cloud.sbs.co.kr
 @@||op.gg^$generichide
 ||adimg.nate.com/img/*?n=$redirect=2x2-transparent.png,domain=tv.nate.com
-spotvnow.co.kr,noonnu.cc#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
+noonnu.cc#%#//scriptlet('prevent-xhr', 'pagead2.googlesyndication.com/pagead/js/adsbygoogle.js')
 @@||t1.daumcdn.net/adfit/static/kp.js$domain=laftel.net
 @@||asset.laftel.net/static/assets/googleads-advertisement.js$domain=laftel.net
 ||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=google-ima3,domain=laftel.net
 focuskr.tistory.com#%#//scriptlet('abort-current-inline-script', 'addEventListener', 'fuckadblock.min.js')
 singingdalong.blogspot.com#%#//scriptlet('abort-current-inline-script', '$', '#ad_center')
-||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=nooptext,domain=spotvnow.co.kr
-@@||googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=op.gg
 stockinfo7.com#%#//scriptlet('prevent-setTimeout', 'ad.innerHTML.replace')
 ||cdn.kollhong.com/wp-content/custom-js/fuckadblock.min.js
-||imasdk.googleapis.com/js/sdkloader/ima3.js$redirect=noopjs,domain=game.hotsharegames.com
-||www3.doubleclick.net/|$redirect=nooptext,domain=blackkiwi.net
+game.hotsharegames.com#%#//scriptlet('prevent-element-src-loading', 'script', 'imasdk.googleapis.com/js/sdkloader/ima3.js')
+!#if (adguard_app_ios)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=game.hotsharegames.com
+!#endif
+blackkiwi.net#%#//scriptlet('prevent-fetch', 'www3.doubleclick.net')
+!#if (adguard_app_ios)
+@@||www3.doubleclick.net/|$xmlhttprequest,domain=blackkiwi.net
+!#endif
 persnacons.tistory.com#@#.topAD
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=ff14angler.com
 uda1004.tistory.com,exey.io,ff14angler.com#@#ins.adsbygoogle
@@ -2999,6 +3009,7 @@ te31.com#@#.textAd
 te31.com#@#.text_ad
 te31.com#@#.text_ads
 !
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$xmlhttprequest,domain=spotvnow.co.kr
 @@||ssl.pstatic.net/tveta/libs/glad/prod/gfp-core.js$script,domain=m.search.naver.com
 t.hi098123.com###hi-notice
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=t.hi098123.com
@@ -3075,7 +3086,7 @@ meeco.kr#@#.adsbygoogle
 stockinfo7.com#@#ins.adsbygoogle
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=stockinfo7.com
 ||cdn.kollhong.com/wp-content/custom-js/fuckadblock.min.js
-@@||www3.doubleclick.net/|$domain=blackkiwi.net
+@@||www3.doubleclick.net/|$xmlhttprequest,domain=blackkiwi.net
 @@||x86.co.kr^$generichide
 @@||tistory.com^$generichide
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,domain=noonnu.cc
